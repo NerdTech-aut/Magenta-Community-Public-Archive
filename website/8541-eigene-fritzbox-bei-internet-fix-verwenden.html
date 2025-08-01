@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Eigene Fritzbox bei Internet fix verwenden
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Eigene Fritzbox bei Internet fix verwenden
+  </h1>
+  <span class="author">
+   hackerd
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-02-16T17:38:43Z" title="2023-02-16 17:38 ">
+   Februar 16, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe Internet Fix auf DSL Basis und von Magenta eine Fritzbox 7530 als Router.  Bin eigentlich sehr zufrieden damit ( bis auf die Software Version, jetzt ist eigentlich 7.50 aktuell). Ich habe mir vor einiger Zeit eine Fritzbox 7590 besorgt und habe diese ins Netz gehängt. Im Zusammenhang mit den hohen Strompreisen wollte ich Strom sparen und die 7590 statt der Magenta 7530 gleich an die DSL Leitung hängen. Ich habe daher wie auf der AVL Homepage beschrieben die Konfiguration der 7530 gesichert und dann auf der 7590 importiert und diese dann an die DSL Leitung gehängt. Laut AVM sollte das so funktionieren. Hat aber leider nicht geklappt, bekam keine Verbindung.
+   </p>
+   <p>
+    Ich habe dann bei der Hotline angerufen. Dort sagte man mir, dass fremde Fritzboxen nicht zugelassen werden.
+   </p>
+   <p>
+    Kann mir jemand erklären, warum Magenta das verhindert ? Wollen sie ihre Hotline vor Überlastung schützen ? Gibt es andere, technische Gründe ?
+   </p>
+   <p>
+    Ich kann natürlich meine eigene 7590 weiter im LAN wie bisher betreiben. Aber selbst wenn sie nur 10 Watt verbraucht,  sind das im Jahr 90 kW und bei derzeitigen Strompreisen 20-50 € mehr. Hat jemand einen Rat ? Geht das gar nicht ? Oder gibt es wie beim Software-Upgrade einen Trick  ?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Maverick
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-02-17T06:25:38Z" title="2023-02-17 06:25 ">
+   Februar 17, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/79645-hackerd/?do=hovercard" data-mentionid="79645" href="https://community.magenta.at/profile/79645-hackerd/" rel="">
+     @hackerd
+    </a>
+    , da hat dir wohl AVM einen "Bären" aufgebunden, den die Fritzbox 7590 und 7530 haben unterschiedliche Konfigurationen, das kann einfach nicht klappen.
+   </p>
+   <p>
+    Ob deine Eigene Fritzbox 7590 (mit AX Wifi 6, oder Ohne) für den Österreichischen Markt zugelassen ist, sollte erkennbar sein an der Bezeichnung "
+    <strong>
+     AT/CH
+    </strong>
+    " für Österreich/Schweiz  oder "Int" für International.
+   </p>
+   <p>
+    Auch wenn die Soft/Firmware nun für AT/CH, Int und DE identisch sind, so ist dennoch ein Unterschied in der Konfiguration.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Wenn deine "Box" eine AT/CH oder "International" ist, schaue mal im Fritzbox Interface nach ob du eine Dienstanbieterliste siehst, den der Mitstreiter A1 ist darin gelistet und lässt sich auch auswählen und nutzen.
+    </strong>
+   </p>
+   <p>
+    <strong>
+     Ob Magenta AT da auch schon gelistet ist, müsste auch in dieser Liste ersichtlich sein, und wenn ja, einfach den Anbieter auswählen.
+    </strong>
+   </p>
+   <p>
+   </p>
+   <p>
+    PS: Magenta AT hat allerdings noch keine Eigene Infrastruktur für DSL Anschlüsse, und nutzt derzeit wohl diese von Mitstreiter A1.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hoffe du kannst mit dieser Info was anfangen.
+   </p>
+   <p>
+    Der Anschluss müsste bei dir auch so aussehen, wie auf dem Bild.
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Postanschluss.jpg.07c70d8cdf47fb78196470fd78cc98dd.jpg">
+     <img alt="Postanschluss.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="4553" src="images/uploads/Postanschluss.thumb.jpg.5f3a089bff603925505e44318c20ec8b.jpg"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2023-02-17T07:19:39Z" title="2023-02-17 07:19 ">
+      Februar 17, 2023
+     </time>
+     von Rasputin
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   hackerd
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-02-20T15:28:03Z" title="2023-02-20 15:28 ">
+   Februar 20, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    @Rasputin, danke für die Tips.
+   </p>
+   <p>
+    DIe 7590 hat aufgedruckt Edition A/CH. Ich habe für meine 7590 einen Factory reset gemacht und es nochmal probiert.
+   </p>
+   <p>
+    Ich habe die 7590 auf Deutsch und Österreich konfiguriert und dann bei der Internet-Einrichtung "Magenta" ausgewählt.
+   </p>
+   <p>
+    ( Bei der Magente 7530 ist auch als Anbieter "Magenta" ausgewählt ).
+   </p>
+   <p>
+    Ich habe das Anschlusskabel von der 7530 auf die 7590 umgesteckt. Obwohl die DSL-Verbindung stabil und ohne Probleme mit derselben Datenrate von 40 Megabit läuft, kommt keine Internet Verbindung zu Magenta zustande.
+   </p>
+   <p>
+    Im Ereignismonitor der 7590 finde ich:
+   </p>
+   <p>
+    "DSL ist verfügbar.(DSL-Synchronisierung besteht mit 39725/9441 kbit/s)".
+   </p>
+   <p>
+    "Internetverbindung ist fehlgeschlagen: Fehlergrund:2 (DHCPv4 no Answer on Discover)".
+   </p>
+   <p>
+    Auf der 7530 kommt an dieser Stelle stattdessen "Internetverbindung ist hergestellt.."
+   </p>
+   <p>
+   </p>
+   <p>
+    Also scheint Magenta doch die Verbindung mit "fremden" Fritzboxen abzulehnen.
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Clipboard.jpg.381c561378fa9668ac3aa07a327a5d49.jpg">
+     <img alt="Clipboard.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="4588" src="images/uploads/Clipboard.thumb.jpg.bdf56215ac953bd3757064ff7f5fdfeb.jpg"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Maverick
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-02-21T06:42:14Z" title="2023-02-21 06:42 ">
+   Februar 21, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/79645-hackerd/?do=hovercard" data-mentionid="79645" href="https://community.magenta.at/profile/79645-hackerd/" rel="">
+     @hackerd
+    </a>
+    , du schreibst, dass die Fritzbox 7590 eine AT/CH ist und demnach für den Österreichischen Markt zugelassen ist.
+   </p>
+   <p>
+    Dann sollte schon die 7590 dafür vor konfiguriert sein, und für die Österreichischen Betreiber auch nutzbar sein.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wichtig allerdings ist dabei, dass du nicht die Deutsche Konfiguration nimmst, da auch darin wohl Magenta gelistet ist, die im Österreichischen Netz nicht funktioniert.
+   </p>
+   <p>
+    Stelle mal die 7590 auf die Österreichische vor Konfiguration, und wähle darin aus der Liste den "Magenta" aus falls in dieser Liste auch A1 gelistet ist.
+   </p>
+   <p>
+    Den dann sollte es sich um die Konfiguration von Magenta AT handeln, und auch anwendbar sein.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Nur als Hinweis!
+    </strong>
+   </p>
+   <p>
+    Wie schon auch erwähnt, nutzt Magenta AT zur Zeit die Infrastruktur vom Mitstreiter A1, da kann es auch schon mal sein, dass eine Fritzbox sich nicht konfigurieren lassen.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Verkabelung!
+    </strong>
+   </p>
+   <p>
+    Nachdem die Fritzbox 7590 eine AT/CH ist, sollte diese auch im Netz von Magenta möglich sein falls in der Liste aus wählbar. aber nutze die Verbindungskabel die der 7590 beigelegt sind.
+   </p>
+   <p>
+    Den im unteren Bild weist der Hinweis darin auf, dass eine Falsche Verkabelung genutzt wurde.
+   </p>
+   <p>
+    Bei dieser Box ist auch ein Ypsilon Kabel (Grau/Grün) bei gelegt, wenn ja, stecke nur den Grauen Teil in die Richtige Buchse der Fritzbox 7590 und lasse den Grünen weg, oder direkt mit dem Schwarzen Kabel von der Dose weg.
+   </p>
+   <p>
+    Lan Kabel von Lan1 zum PC, dass sollte klappen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hier mal die Handbücher zur 7590 und 7530 AT
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink" href="//community.magenta.at/applications/core/interface/file/attachment.php?id=4593">
+     fritzbox-7590_man_de_AT.pdf
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink" href="//community.magenta.at/applications/core/interface/file/attachment.php?id=4594">
+     fritzbox-7530_man_de_AT.pdf
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/63f46b8a0a3ee_Fritzbox7590.jpg.cf4f65e352042c3697f9736fc08e0791.jpg">
+     <img alt="Fritzbox 7590.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="4595" src="images/uploads/63f46b8a0a3ee_Fritzbox7590.jpg.cf4f65e352042c3697f9736fc08e0791.jpg"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/63f46b98313f0_Fritzbox7530.jpg.45862fc1b9e47e422a8e232c64ef58bf.jpg">
+     <img alt="Fritzbox 7530.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="4596" src="images/uploads/63f46b98313f0_Fritzbox7530.jpg.45862fc1b9e47e422a8e232c64ef58bf.jpg"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2023-02-21T06:58:34Z" title="2023-02-21 06:58 ">
+      Februar 21, 2023
+     </time>
+     von Rasputin
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   hackerd
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-02-21T14:36:48Z" title="2023-02-21 14:36 ">
+   Februar 21, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51974" data-ipsquote-contentid="8541" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676961734" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
+    <div class="ipsQuote_citation">
+     vor 7 Stunden schrieb Rasputin:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/79645-hackerd/?do=hovercard" data-mentionid="79645" href="https://community.magenta.at/profile/79645-hackerd/" rel="">
+       @hackerd
+      </a>
+      , du schreibst, dass die Fritzbox 7590 eine AT/CH ist und demnach für den Österreichischen Markt zugelassen ist.
+     </p>
+     <p>
+      Dann sollte schon die 7590 dafür vor konfiguriert sein, und für die Österreichischen Betreiber auch nutzbar sein.
+     </p>
+     <p>
+     </p>
+     <p>
+      Wichtig allerdings ist dabei, dass du nicht die Deutsche Konfiguration nimmst, da auch darin wohl Magenta gelistet ist, die im Österreichischen Netz nicht funktioniert.Stelle mal die 7590 auf die Österreichische vor Konfiguration, und wähle darin aus der Liste den "Magenta" aus falls in dieser Liste auch A1 gelistet ist.
+     </p>
+     <p>
+      Den dann sollte es sich um die Konfiguration von Magenta AT handeln, und auch anwendbar sein.
+     </p>
+     <p>
+      <strong>
+       Das ist so eingestellt, erneut probiert, auf Werkseinstellungen zurückgesetzt, Deutsch als Sprache, Land Österreich
+      </strong>
+     </p>
+     <p>
+      <strong>
+       ausgewählt, dann in der Liste aus A1,drei.at... Magenta ausgewählt: DSL-Verbindung kommt, Internet bleibt tot. Die DSL-Verbindung bis zum Wählamt steht. Die 7590 versucht dann eine Ip-Adresse zu bekommen, aber offenbar antwortet Magenta nicht auf den DHCP request der 7590.
+      </strong>
+     </p>
+     <p>
+      <img alt="grafik.png.f38071baf8fe5229eedd8876c4a74082.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4598" src="images/uploads/grafik.png.f38071baf8fe5229eedd8876c4a74082.png"/>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    <img alt="grafik.png.e826448d3daf2b0704048ee2bffa233e.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4601" src="images/uploads/grafik.png.e826448d3daf2b0704048ee2bffa233e.png"/>
+   </p>
+   <p>
+    <img alt="grafik.png.eddbc8bc2cf8db47b6d3e2ce358f637f.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4603" src="images/uploads/grafik.png.eddbc8bc2cf8db47b6d3e2ce358f637f.png"/>
+    <img alt="grafik.png.43d2928ad0c5f0a62ee0582ccfe2bf1f.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4605" src="images/uploads/grafik.png.43d2928ad0c5f0a62ee0582ccfe2bf1f.png"/>
+    <img alt="grafik.png.15a3aa9fe7c359330b8fd4c5ae7b1917.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4607" src="images/uploads/grafik.png.15a3aa9fe7c359330b8fd4c5ae7b1917.png"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4611" href="images/uploads/grafik.png.d18c1fe502235bc82219f04151b2f250.png" rel="">
+     <img alt="grafik.thumb.png.a877c5793f2d7dba3f6f0d2301db1ff0.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4611" src="images/uploads/grafik.thumb.png.a877c5793f2d7dba3f6f0d2301db1ff0.png"/>
+    </a>
+    <br/>
+   </p>
+   <p>
+    <strong>
+     Ich habe danach nochmals meinen ursprünglichen Schritt durchgeführt, nämlich beim Setup anstelle einer Neukonfigurierung die Konfiguration von der Sicherung der 7530 herunterzuladen. Ich habe alle meine Einstellungen der 7530 bis zum letzten Telefonbucheintrag dann auf der 7590, nur auch da funktioniert das Internet nicht.
+    </strong>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4612" href="images/uploads/grafik.png.5fe71bdc1bedea4e230e4be563657089.png" rel="">
+     <img alt="grafik.thumb.png.184fa93151efc4f2c644614021e8379d.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4612" src="images/uploads/grafik.thumb.png.184fa93151efc4f2c644614021e8379d.png"/>
+    </a>
+   </p>
+   <p>
+    <img alt="grafik.png.6e0611ea97f1c40b42f036d119d5fff0.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4615" src="images/uploads/grafik.png.6e0611ea97f1c40b42f036d119d5fff0.png"/>
+   </p>
+   <p>
+    <img alt="grafik.png.bbeec9740459d2eec57fceadf35aaa9f.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4617" src="images/uploads/grafik.png.bbeec9740459d2eec57fceadf35aaa9f.png"/>
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     vor 7 Stunden schrieb Rasputin:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      <strong>
+       Nur als Hinweis!
+      </strong>
+     </p>
+     <p>
+      Wie schon auch erwähnt, nutzt Magenta AT zur Zeit die Infrastruktur vom Mitstreiter A1, da kann es auch schon mal sein, dass eine Fritzbox sich nicht konfigurieren lassen.
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       Verkabelung!
+      </strong>
+     </p>
+     <p>
+      Nachdem die Fritzbox 7590 eine AT/CH ist, sollte diese auch im Netz von Magenta möglich sein falls in der Liste aus wählbar. aber nutze die Verbindungskabel die der 7590 beigelegt sind.
+     </p>
+     <p>
+      Den im unteren Bild weist der Hinweis darin auf, dass eine Falsche Verkabelung genutzt wurde.
+     </p>
+     <p>
+      <strong>
+       DIeser HInweis kommt bei der 7530 auch, nur etwas später. Liegt vermutlich daran, dass im Haus das Kabel über mehrere Dosen läuft, dazwischen Steckverbindungen. Ist aber total irreführend. Ich habe Internet fix 40, DSL wird mit 39800 verbunden, die angeblich 7000 kilobit fehlen mir also nicht. Wäre vermutlich bei höheren Speeds problemetisch.
+      </strong>
+     </p>
+     <p>
+      Bei dieser Box ist auch ein Ypsilon Kabel (Grau/Grün) bei gelegt, wenn ja, stecke nur den Grauen Teil in die Richtige Buchse der Fritzbox 7590 und lasse den Grünen weg, oder direkt mit dem Schwarzen Kabel von der Dose weg.
+     </p>
+     <p>
+      Lan Kabel von Lan1 zum PC, dass sollte klappen.
+     </p>
+     <p>
+      <strong>
+       Habe ich ausprobiert, aber mit dem Kabel der 7590 bekomme ich gar keine DSL-Verbindung. Mit dem Kabel der 7530 hingegen
+      </strong>
+     </p>
+     <p>
+      <strong>
+       steht die DSL-Verbindung sofort, aber das Internet kommt nicht. Es liegt nicht an den Kabeln, ansonsten käme doch überhaupt keine DSL-Verbindung zustande.
+      </strong>
+     </p>
+     <p>
+      Hier mal die Handbücher zur 7590 und 7530 AT
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink" data-fileid="4593" href="https://community.magenta.at/applications/core/interface/file/attachment.php?id=4593" rel="">
+       fritzbox-7590_man_de_AT.pdf
+      </a>
+     </p>
+     <p>
+      <a class="ipsAttachLink" data-fileid="4594" href="https://community.magenta.at/applications/core/interface/file/attachment.php?id=4594" rel="">
+       fritzbox-7530_man_de_AT.pdf
+      </a>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4595" href="images/uploads/63f46b8a0a3ee_Fritzbox7590.jpg.cf4f65e352042c3697f9736fc08e0791.jpg" rel="">
+       <img alt="Fritzbox 7590.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="4595" src="images/uploads/63f46b8a0a3ee_Fritzbox7590.jpg.cf4f65e352042c3697f9736fc08e0791.jpg"/>
+      </a>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4596" href="images/uploads/63f46b98313f0_Fritzbox7530.jpg.45862fc1b9e47e422a8e232c64ef58bf.jpg" rel="">
+       <img alt="Fritzbox 7530.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="4596" src="images/uploads/63f46b98313f0_Fritzbox7530.jpg.45862fc1b9e47e422a8e232c64ef58bf.jpg"/>
+      </a>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/grafik.png.ae7ea051a02fa704001c5af0915f2801.png">
+     <img alt="grafik.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4599" src="images/uploads/grafik.png.ae7ea051a02fa704001c5af0915f2801.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/grafik.png.2a3fca1cb2d380c37addeb98af007e22.png">
+     <img alt="grafik.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4600" src="images/uploads/grafik.png.2a3fca1cb2d380c37addeb98af007e22.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/grafik.png.a589124c549298fae6950d9634efb014.png">
+     <img alt="grafik.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4602" src="images/uploads/grafik.png.a589124c549298fae6950d9634efb014.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/grafik.png.0632403ab1d6bcca321b2ac6338f3b51.png">
+     <img alt="grafik.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4604" src="images/uploads/grafik.png.0632403ab1d6bcca321b2ac6338f3b51.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/grafik.png.93867cb3c40b39a789cd12998a1c0f66.png">
+     <img alt="grafik.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4606" src="images/uploads/grafik.png.93867cb3c40b39a789cd12998a1c0f66.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/grafik.png.1e4415622fe1510f5434227e673bc641.png">
+     <img alt="grafik.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4608" src="images/uploads/grafik.thumb.png.6624e7cda3e1a379028888a6d719b3be.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/grafik.png.67e683b8bc190778e12c648b64ef6ae7.png">
+     <img alt="grafik.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4609" src="images/uploads/grafik.thumb.png.f387fc879752e51943135a91eddfd21e.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/grafik.png.80c29350e25b8824e2f668729fa39341.png">
+     <img alt="grafik.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4610" src="images/uploads/grafik.thumb.png.ddefa04f0ad6427b5b3bcdf6a7cb6a19.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/grafik.png.4f2801d4bcb631ead0143deeef0df560.png">
+     <img alt="grafik.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4613" src="images/uploads/grafik.thumb.png.e4617b3c90d041cff3ed5191c73ca0d3.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/grafik.png.ba62fe059ac4f93d07fc8430573dc90a.png">
+     <img alt="grafik.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4614" src="images/uploads/grafik.png.ba62fe059ac4f93d07fc8430573dc90a.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/grafik.png.e494a5105ac03ff71d7139ea14fd61d1.png">
+     <img alt="grafik.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4616" src="images/uploads/grafik.png.e494a5105ac03ff71d7139ea14fd61d1.png"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Maverick
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-02-22T06:34:18Z" title="2023-02-22 06:34 ">
+   Februar 22, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51993" data-ipsquote-contentid="8541" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676990208" data-ipsquote-userid="79645" data-ipsquote-username="hackerd">
+    <div class="ipsQuote_citation">
+     vor 16 Stunden schrieb hackerd:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      <strong>
+       DIeser HInweis kommt bei der 7530 auch, nur etwas später. Liegt vermutlich daran, dass im Haus das Kabel über mehrere Dosen läuft, dazwischen Steckverbindungen.
+      </strong>
+      Ist aber total irreführend. Ich habe Internet fix 40, DSL wird mit 39800 verbunden, die angeblich 7000 kilobit fehlen mir also nicht. Wäre vermutlich bei höheren Speeds problemetisch.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Darin könnte es sich Spießen, den wenn sonst alles richtig eingestellt und Konfiguriert wurde, müsste auch eine Internet Verbindung stehen.
+   </p>
+   <p>
+    FRAGE: Von wem wurden die Mehr Dosen Anschlüsse und Steckverbindungen verlegt, vom Techniker oder eigen Regie?
+   </p>
+   <p>
+    Da könnte eventuell eine der Dosen falsch oder Fehlerhaft angeschlossen sein, (währe jetzt meine Vermutung).
+   </p>
+   <p>
+   </p>
+   <p>
+    Da bleibt wohl nur eine Anfrage bei der Technikline 0676 200 7777, ob diese aus der Ferne die Leitungswerte checken könnten.
+   </p>
+   <p>
+    Kann dir aber nicht berichten, ob dieses Problem auch von der Magenta Technik gelöst werden kann, oder dies doch über A1 läuft.
+   </p>
+   <p>
+   </p>
+   <p>
+    PS: Die Konfigurationsoptionen wie im Bild mit den Betreibern dargestellt würden passen, da kann es tatsächlich an der Verkabelung liegen.
+   </p>
+   <p>
+   </p>
+   <p>
+    EDIT: Schaue auch mal unter "Netzwerk" rein wie auf dem Bild, und gehe da auf Status der Verbindung, und was dir da angezeigt wird
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4618" href="images/uploads/Netzwerk2.jpg.d3eecf08bed74c88ab2a719bd5a12861.jpg" rel="">
+     <img alt="Netzwerk2.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="4618" src="images/uploads/Netzwerk2.jpg.d3eecf08bed74c88ab2a719bd5a12861.jpg"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2023-02-22T06:50:53Z" title="2023-02-22 06:50 ">
+      Februar 22, 2023
+     </time>
+     von Rasputin
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   hackerd
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-02-22T12:52:42Z" title="2023-02-22 12:52 ">
+   Februar 22, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo @Rasputin
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Kabel wurden 1990 beim Hausbau als Telefonverkabelung installiert und laufen üner einen Verteiler im Keller zu diversen TAED-Dosen in Zimmern inklusive Abzweigung für externe Klingel. Aber es hat nichts mit den Kabeln zu tun, meine Vermutung stimmt, wenn die DSL-Verbindung steht, müsste auch die Internet-Verbindung funktionieren. Magente verhindert die Verbindungsaufnahme.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe nochmal bei der Technik-Hotline angerufen. Ter Techniker dort hat mir sinngemäss folgendes erklärt: "
+    <strong>
+     Ein fremder Router kann bei uns nicht funktionieren. Alle unsere eigenen Fritzboxen sind in unserer Datenbank eingepflegt, für einen fremden Router gibt es keine Eintragungsmöglichkeit. Deswegen bieten wir auch nicht die Wahlmöglichkeit zwischen eigenem Router und Mietgerät. Wenn ein Gerät, das nicht in unserer Datenbank ist, einen Verbindungsversuch macht, erhält der DHCP-Call des Routers keine IPV4 Internetadresse
+    </strong>
+    ."
+   </p>
+   <p>
+   </p>
+   <p>
+    Schade, dass Magenta dies nicht explizit in den FAQ oder sonstwo ausgeführt hat. Sie und ich hätten uns viel Zeit und Mühe erspart. Nochmals danke für ihre Bemühungen
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2023-02-22T12:53:43Z" title="2023-02-22 12:53 ">
+      Februar 22, 2023
+     </time>
+     von hackerd
+    </strong>
+    <br>
+     aktualisiert
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Maverick
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-02-22T13:15:25Z" title="2023-02-22 13:15 ">
+   Februar 22, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="52023" data-ipsquote-contentid="8541" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1677070362" data-ipsquote-userid="79645" data-ipsquote-username="hackerd">
+    <div class="ipsQuote_citation">
+     vor 16 Minuten schrieb hackerd:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich habe nochmal bei der Technik-Hotline angerufen. Ter Techniker dort hat mir sinngemäss folgendes erklärt: "
+      <strong>
+       Ein fremder Router kann bei uns nicht funktionieren. Alle unsere eigenen Fritzboxen sind in unserer Datenbank eingepflegt, für einen fremden Router gibt es keine Eintragungsmöglichkeit. Deswegen bieten wir auch nicht die Wahlmöglichkeit zwischen eigenem Router und Mietgerät. Wenn ein Gerät, das nicht in unserer Datenbank ist, einen Verbindungsversuch macht, erhält der DHCP-Call des Routers keine IPV4 Internetadresse
+      </strong>
+      ."
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/79645-hackerd/?do=hovercard" data-mentionid="79645" href="https://community.magenta.at/profile/79645-hackerd/" rel="">
+     @hackerd
+    </a>
+    , dass ist in der Tat schade das sich Magenta dahingehend sträubt, auch eigene (DSL) Router im Magenta Netz zu dulden.
+   </p>
+   <p>
+    Kurioserweise kann man aber beim Mitstreiter A1 sehr wohl einen Eigenen (DSL) Router nutzen.
+   </p>
+   <p>
+   </p>
+   <p>
+    PS: Magenta könnte dies in der Tat auch besser kommunizieren das keine Eigenen Router möglich sind.
+   </p>
+   <p>
+    Aber wenigstens steht es jetzt hier in der Community, falls jemand sich dazu mit dem Gedanken spielt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   ben
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-07T15:44:41Z" title="2023-06-07 15:44 ">
+   Juni 7, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    ah... LOL...
+    <br>
+     na dann spare ich mir mal den Versuch meinen gestern bestellten eigenen Router anzuschließen
+     <img alt="xD" data-emoticon="" height="20" src="images/emoticons/tma_party-o.png" srcset="images/emoticons/tma_party-o@2x.png 2x" title="xD" width="20"/>
+     <br>
+      zum glück kostete der nur €40
+      <br>
+       folgend, meine schockierte meinung zu fb7530 von magenta. is ja, in deren konfiguration, völlig unbrauchbar/ur viel extra aufwand...
+      </br>
+     </br>
+    </br>
+   </p>
+   <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed7090497130" scrolling="no" src="8809-fritzbox-7530-nur-schlecht-bis-gar-nicht-in-bestehendem-heimnetzwerk-integrierbar.html" style="height:255px;max-width:502px;">
+   </iframe>
+   <p>
+    ab gehts -&gt; zu A1, bye magenta
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2023-06-07T15:45:32Z" title="2023-06-07 15:45 ">
+      Juni 7, 2023
+     </time>
+     von ben
+    </strong>
+   </span>
+  </div>
+  <hr/>
+ </body>
+</html>

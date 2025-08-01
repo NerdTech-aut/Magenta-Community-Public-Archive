@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Webseite über Bonding-Server nicht erreichbar
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Webseite über Bonding-Server nicht erreichbar
+  </h1>
+  <span class="author">
+   Kirdock
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-08-09T12:39:49Z" title="2019-08-09 12:39 ">
+   August 9, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Servus,
+   </p>
+   <p>
+    hat jemand eine Idee, warum meine Webseite bzw. NAS nicht über den Bonding-Server von Magenta erreichbar ist?
+   </p>
+   <p>
+    Handy (Magenta) und Freunde, die bei A1 sind, kommen drauf, aber Magenta-Hybrid-Kunden (also die, die über den Bonding-Server gehen) haben keinen Zugriff. Kann mir das jemand erklären?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-08-13T07:13:04Z" title="2019-08-13 07:13 ">
+   August 13, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe nur den Verdacht, das ein paar Firewalls falsch konfiguriert sind. Hast du es über v6 probiert?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Kirdock
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-08-13T15:55:04Z" title="2019-08-13 15:55 ">
+   August 13, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="30735" data-ipsquote-contentid="5189" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1565680384" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 8 Stunden schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich habe nur den Verdacht, das ein paar Firewalls falsch konfiguriert sind. Hast du es über v6 probiert?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Noch nicht bzw. kann nicht. Kenne nur einen, der bei Magenta einen Hybrid-Vertrag hat und dieser hat IPv6 deaktiviert.
+   </p>
+   <p>
+    Ob das bei mir selbst gleich ist, weiß ich nicht. Ich selbst kann auch nicht auf die Website zugreifen, weiß aber nicht, ob das auch mit dem Problem zusammenhängt. Ich selbst komme auch nicht über IPv6 auf meine Website bzw. NAS (lokal naturlicherweise schon).
+   </p>
+   <p>
+    Aber wie gesagt: über das mobile Netz und Freunde, die nicht Hybrid besitzen, kommen auf meine NAS ohne Probleme.
+   </p>
+   <p>
+   </p>
+   <p>
+    Sonst könntest du bzw. die Community das mal testen: kirdock.synology.me:5000
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MrG0ku
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-08-14T18:06:49Z" title="2019-08-14 18:06 ">
+   August 14, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="30743" data-ipsquote-contentid="5189" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1565711704" data-ipsquote-userid="77828" data-ipsquote-username="Kirdock">
+    <div class="ipsQuote_citation">
+     Am 13.8.2019 um 17:55 schrieb Kirdock:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Noch nicht bzw. kann nicht. Kenne nur einen, der bei Magenta einen Hybrid-Vertrag hat und dieser hat IPv6 deaktiviert.
+     </p>
+     <p>
+      Ob das bei mir selbst gleich ist, weiß ich nicht. Ich selbst kann auch nicht auf die Website zugreifen, weiß aber nicht, ob das auch mit dem Problem zusammenhängt. Ich selbst komme auch nicht über IPv6 auf meine Website bzw. NAS (lokal naturlicherweise schon).
+     </p>
+     <p>
+      Aber wie gesagt: über das mobile Netz und Freunde, die nicht Hybrid besitzen, kommen auf meine NAS ohne Probleme.
+     </p>
+     <p>
+     </p>
+     <p>
+      Sonst könntest du bzw. die Community das mal testen: kirdock.synology.me:5000
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Konnte es mal kurz testen von einem Magenta Hybrid Zugang aus - Seite (kirdock.synology.me:5000) konnte problemlos aufgerufen werden.
+   </p>
+   <p>
+    Der Zugang hier, hat eine dynamische PublicIP im Bonding aktiv(beginnen z.B. mit 212.). Hat diese dein Bekannter auch aktiv? Wär interessant zu wissen.
+   </p>
+   <p>
+    LG///MrG0ku
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Kirdock
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-08-15T19:50:09Z" title="2019-08-15 19:50 ">
+   August 15, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="30776" data-ipsquote-contentid="5189" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1565806009" data-ipsquote-userid="77894" data-ipsquote-username="MrG0ku">
+    <div class="ipsQuote_citation">
+     Am 14.8.2019 um 20:06 schrieb MrG0ku:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+      Konnte es mal kurz testen von einem Magenta Hybrid Zugang aus - Seite (kirdock.synology.me:5000) konnte problemlos aufgerufen werden.
+     </p>
+     <p>
+      Der Zugang hier, hat eine dynamische PublicIP im Bonding aktiv(beginnen z.B. mit 212.). Hat diese dein Bekannter auch aktiv? Wär interessant zu wissen.
+     </p>
+     <p>
+      LG///MrG0ku
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    ja, der hat auch eine PublicIP.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

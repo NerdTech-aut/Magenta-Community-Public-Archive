@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   MESH WLAN und Zugriff LAN Gerät
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   MESH WLAN und Zugriff LAN Gerät
+  </h1>
+  <span class="author">
+   danielnoest
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-05-23T05:54:45Z" title="2023-05-23 05:54 ">
+   Mai 23, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe mir von einem Technischen Support Mitarbeiter das Mesh WLAN empfehlen lassen. Da ich das gleiche WLAN bis in den Garten hinaus möchte. Soweit so gut. Jedoch habe ich jetzt gelesen das man bei Mesh Wlan nicht auf Geräte zugreifen kann, die per LAN an den Router angeschlossen sind. Da dies andere IP Bereiche sind.
+   </p>
+   <p>
+    Stimmt dies? Gibt es hierfür schon Lösungen?
+   </p>
+   <p>
+   </p>
+   <p>
+    Denn sonst ist das MESH Wlan nicht zu gebrauchen für mich, da ich dann nicht auf meine Smart Home Zentrale zugreifen kann. Da diese per LAN ans netz angeschlossen ist.  Es handelt sich um ein CCU3 von Homematic.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   FabianMK4
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-05-23T09:16:42Z" title="2023-05-23 09:16 ">
+   Mai 23, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/97362-danielnoest/?do=hovercard" data-mentionid="97362" href="https://community.magenta.at/profile/97362-danielnoest/" rel="">
+      @danielnoest
+     </a>
+    </span>
+    Mit dem Mesh-System von Magenta habe ich leider keine Erfahrungen. Aber mit den Cudy M1200 funktioniert das, was du gerne hättest. Ich habe einen Mesh-Beacon per LAN an einen Router meiner Wahl (sei es die Flex Box AX3000 oder ne FritzBox) angeschlossen und ne fixe IP vergeben und den/die anderen Mesh-Beacon per Web-Interface des Main-Mesh von Cudy kabellos verbunden und diesen dann ebenfalls im Router per DHCP ne Statische IP vergeben. Die damit verbundenen Endgeräte (Notebook, Handys, Smart-Home Glühbirnen etc.) bekommen ebenfalls eine "normale" IP Adresse des DHCP-Servers des Routers (FritzBox oder welchen ich auch immer verwende). zugewiesen. Wenn ich jetzt mit dem Notebook direkt per LAN oder WLAN (WLAN könnte man in meinem Fall auf der FritzBox deaktivieren, damit nicht so viele WLANS auf einem Haufen funken/senden) mit meiner FritzBox verbunden bin und nen Gast-Notebook im WLAN der Mesh-Beacons ist (diese haben ein eigenes WLAN-Netz mit eigener SSID) ist, kann ich problemlos per Windows RDP/MSTSC darauf zugreifen. Auch auf die FritzNAS kann ich vom Mesh-WLAN aus zugreifen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Kostenpunkt für das 2er-Pack der von mir verwendeten Mesh-Beacons auf Amazon aktuell 45€ (haben aber nur 100Mbit/s LAN-Anschlüsse Übertragungsrate des WLAN im 5GHZ knapp über 800Mbit/s).
+   </p>
+   <p>
+    Kosten für ein 2er-Pack der Besseren Beacons mit 1000Mbit/s LAN auf Amazon aktuell 72€.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bin überaus zufrieden mit den Produkten und das Web-Interface der Cudy-Geräte (sei es LTE-Router oder Mesh-Beacons) ist sehr übersichtlich gestaltet und meiner Meinung nach auch für Personen mit nicht so viel Ahnung/Erfahrung in diesem Bereich relativ easy zu bedienen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Grüße
+   </p>
+   <p>
+    Fabian
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-05-23T11:38:08Z" title="2023-05-23 11:38 ">
+   Mai 23, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/97362-danielnoest/?do=hovercard" data-mentionid="97362" href="https://community.magenta.at/profile/97362-danielnoest/" rel="">
+     @danielnoest
+    </a>
+    <br>
+     Ja, mit dem Nokia/Magenta Mesh W-Lan kann auf kabelgebundene Geräte zugegriffen werden, auch wenn diese mit am vorgeschalteten Router angeschlossen sind, da bei diesem System standardmäßig derselbe IP-Bereich des Routers mitverwendet wird und kein eigener. Es gibt auch die Option, dass das Mesh W-Lan einen eigenen IP-Bereich verwendet (dies ist in deinem Fall aber sowieso nicht erwünscht).
+    </br>
+   </p>
+   <p>
+    LG NTM
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2023-05-23T11:39:56Z" title="2023-05-23 11:39 ">
+      Mai 23, 2023
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+ </body>
+</html>

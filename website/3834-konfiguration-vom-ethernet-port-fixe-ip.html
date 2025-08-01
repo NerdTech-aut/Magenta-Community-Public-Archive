@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Konfiguration vom Ethernet-Port (fixe IP)
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Konfiguration vom Ethernet-Port (fixe IP)
+  </h1>
+  <span class="author">
+   fastkunde
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-08-08T09:37:33Z" title="2017-08-08 09:37 ">
+   August 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+    ich befinde mich gerade in der Testphase und möchte an mein BESTEHENDES Netzwerk mit IPs von 10.0.0.xxx den Webcube von Huawei der HomeNet LTE anschließen. Dazu würde ich den Cube per Ethernet an einen Switch (D-Link, no config) anschließen und an diesen weitere Geräte. Diese Geräte sollten dann Internetzugriff über LTE des Webcubes haben.
+   </p>
+   <p>
+    Ich habe aber in der Konfig unter 192.168.1.1 des Cubes keine Möglichkeit gefunden, dem Ethernet-Port eine IP zuzuweisen, ohne PPPoE mit Passwort anzugeben.
+   </p>
+   <p>
+    Wie wird das Ding konfiguriert? Zusätzlich suche ich auch ein Benutzerhandbuch dafür.
+   </p>
+   <p>
+    Intern werde ich immer mit statischen Adressen arbeiten - daher ist DHCP ein NOGO.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-08-08T09:46:27Z" title="2017-08-08 09:46 ">
+   August 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/71794-fastkunde/?do=hovercard" data-mentionid="71794" href="https://community.magenta.at/profile/71794-fastkunde/" rel="">
+     @fastkunde
+    </a>
+    ,
+    <br/>
+    Na mit Benutzerhandbüchern hats Huawei leider nicht so
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+    Ich glaube da suche ich schon Ewigkeiten.
+   </p>
+   <p>
+    Ich vermute mal, dass du von der 192.168 nicht wegkommen wirst. Schaue mal unter WLAN =&gt; DHCP. Dort siehst du, dass du nur alles nach 192.168 ändern kannst
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+   </p>
+   <p>
+    Und damit vermute ich, dass es auch für den LAN Port nicht anders gehen wird. Oder hat du irgendwelche Screenshots die uns vielleicht weiterhelfen
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   fastkunde
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-08-08T12:10:59Z" title="2017-08-08 12:10 ">
+   August 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es gibt unterm Menüpunkt Ethernet keine Möglichkeit, die IP zu konfigurieren - nut wenn man im DropDown eine PPPoE-Variante wählt - aber das macht ja keinen Sinn. Es wird dann zwingend Login und Passwort des ISP gefordert - und das gibt's ja nicht.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-08-08T17:42:45Z" title="2017-08-08 17:42 ">
+   August 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Genau PPPoE ist nicht der richtige Ansatzpunkt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   fastkunde
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-08-08T20:17:48Z" title="2017-08-08 20:17 ">
+   August 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Also:Es gibt im Menüpunkt Ethernet-Einstellungen folgende 6 Verbindungsmodi zur auswahl:
+   </p>
+   <p>
+    Automatisch;
+   </p>
+   <p>
+    PPPoE + Dynamische IP;
+   </p>
+   <p>
+    PPPoE;
+   </p>
+   <p>
+    Dynamische IP; (Infotext: Das System bezieht automatisch die IP-Adresse)
+   </p>
+   <p>
+    Statische IP; (Infotext: Das System verwendet die IP-Adresse, die Sie von Ihrem ISP erhalten haben, um sich mit dem Netz zu verbinden.)
+   </p>
+   <p>
+    Nur LAN; (Infostext: Das System verwendet ein 3G- oder LTE-Netzwerk, um sich mit dem Netz zu verbinden.)
+   </p>
+   <p>
+    Bei den ersten 3 Punkten werden ISP-Logindaten gefordert ... für PPPoE - sind also nicht verwendbar für mich.
+   </p>
+   <p>
+    Vergebe ich bei Statischer IP eine Adresse, die in meinem LAN liegt, kommt die Meldung
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Die IP-Adresse und die LAN IP-Adresse dürfen nicht zu demselben Subnetz gehören.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Darüber steht zur Info:
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das System verwendet die IP-Adresse, die Sie von Ihrem ISP erhalten haben, um sich mit dem Netz zu verbinden.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    ... Hier fehlt gänzlich eine Erklärung, was das überhaupt für eine Statische IP ist ... da es unter Ethernet-Einstellungen ist, muss ich davon ausgehen, dass es sich um die EINZUSTELLENDE, am Ethernet-Port anliegende Adsresse handelt, über die dann die restliche Teilnehmer, die dort anschließen das Internet über den Gateway vom Cube erreichen können.
+   </p>
+   <p>
+    ABER die Einstellungsapplikation weigert sich eine richtige Adresse zu nehmen!
+   </p>
+   <p>
+    Im weiteren Menüpunkt Etherne-Status steht allerdings bei IP-Adresse:
+    <strong>
+     Unbekannt
+    </strong>
+    - obwohl bei Verbindungsmodus
+    <strong>
+     Nur LAN
+    </strong>
+    und bei Verbindungsstatus
+    <strong>
+     Verbunden
+    </strong>
+    steht.
+   </p>
+   <p>
+    Direkt ans Ethernet vom Cube angesteckt kann ich im Internet surfen - komme aber nicht auf die Seite mit den Einstellungen. (Zur Info - fürs WLAN habe ich den DHCP-Range von 10.0.0.125 bis 10.0.0.250 erlaubt und ich habe automatisch auch per Ethernet angesteckt 10.0.0.125 zugewiesen bekommen)
+   </p>
+   <p>
+    Irgendwo muss ja ein Handbuch sein, das Licht in die Sache bringt. Ich investiere Stunden in die Suche nach irgendwelchen Einstellungen ... sowas ist wirklich ärgerlich. Letztendlich wird man dann auf die kostenpflichtige Servicehotline verwiesen. Wenn ich da um 10 Uhr vormittags wieder 15 Minuten warten muss, bis sich jemand meldet, der mich weiterleitet an wen, der vielleicht mehr versteht ... na danke.
+   </p>
+   <p>
+    Zurück zum Thema:  Ich kann keine Einstellungen vornehmen, die Sinn machen.
+   </p>
+   <p>
+    Dynamische IP: Kein Internet vorhanden (auch nicht per WLAN)
+   </p>
+   <p>
+    Statische IP: Lässt mich keine fixe IP im LAN zuweisen (Subnetmask 255.255.255.0).
+   </p>
+   <p>
+    Nur LAN: Kann nur mit einem Endgerät am Ethernetport surfen, kein Internet über WLAN.
+   </p>
+   <p>
+    Automatisch, und beide PPPoE-Einstellungen aus Mangel an Logindaten des ISPs nicht nutzbar. - der ISP ist hier ja T-Mobile.
+   </p>
+   <p>
+    ratlos.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-08-08T21:12:23Z" title="2017-08-08 21:12 ">
+   August 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich fürchte, dass du dein Problem nur mit der Box nicht lösen kannst
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   fastkunde
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-08-08T21:41:04Z" title="2017-08-08 21:41 ">
+   August 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Workaround:
+   </p>
+   <p>
+    Ethernet-Einstellungen -&gt; Nur LAN
+   </p>
+   <p>
+    Fixe IPs(10.0.0.xxx/16) am Switch:
+   </p>
+   <p>
+    Defaultgateway 10.0.0.1, DNS: 10.0.0.1, Subnet 255.255.255.0
+   </p>
+   <p>
+    Hatte 10.0.0.254 bzw. 255 als Gateway im Ethernet-Adapter nachdem ich direkt angesteckt hatte ... das stimmt so nicht mit dem Setup - es muss tatsächlich 10.0.0.1 sein -
+   </p>
+   <p>
+    Beim Standardsetup wäre das dann 192.168.1.1 statt 10.0.0.1.
+   </p>
+   <p>
+    Und als Fixe IPs müste man 192.168.1.xx/16 vergeben.
+   </p>
+   <p>
+    Ich habe jetzt Inderentt auf allen Geräten damit ermöglicht.
+   </p>
+   <p>
+    Auch das WLAN funktioniert noch vom Cube Huawei E5170s-22
+   </p>
+   <p>
+    Handbuch muss man selber schreiben ...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-08-09T08:52:51Z" title="2017-08-09 08:52 ">
+   August 9, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Puh, ziemlich aufwendig
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+    Aber super, dass es funktioniert - kann man auf jeden Fall als Referenz verwenden, für alle die ein ähnliches Setup brauchen
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Home Box Fiber + gigakraft gaming 300 - latency is too high
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Home Box Fiber + gigakraft gaming 300 - latency is too high
+  </h1>
+  <span class="author">
+   MOCTuK
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-05T16:40:58Z" title="2023-08-05 16:40 ">
+   August 5, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Good afternoon!
+   </p>
+   <p>
+   </p>
+   <p>
+    I have installed Home Box Fiber (Docsis 3.1) router in my apartment (Vienna, Austria). I subscribed to gigakraft gaming 300.
+   </p>
+   <p>
+    I did a test and found that latency is too high.
+   </p>
+   <p>
+   </p>
+   <p>
+    Magenta Home Box Fiber (Wired Macbook connected 1Gbit/s Ethernet)
+   </p>
+   <p>
+   </p>
+   <p>
+    mpmost@iMax-MB-Pro16 ~ % traceroute wien.gv.at
+   </p>
+   <p>
+    traceroute to wien.gv.at (217.149.229.10), 64 hops max, 52 byte packets
+   </p>
+   <p>
+    1  192.168.0.1 (192.168.0.1)  1.941 ms  0.890 ms  1.284 ms &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Home Box Fiber
+   </p>
+   <p>
+    2  at-vie03c-rt01.as8412.net (217.25.120.4)  8.241 ms  8.293 ms  8.304 ms &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  Magenta's AS
+   </p>
+   <p>
+    3  at-vie03c-rc01.as8412.net (217.25.122.252)  9.382 ms  9.837 ms  9.665 ms
+   </p>
+   <p>
+    4  217-25-123-47.static.upcbusiness.at (217.25.123.47)  9.973 ms  8.881 ms  10.028 ms
+   </p>
+   <p>
+    5  as6720-iec.vix.at (193.203.0.58)  9.032 ms  8.808 ms  9.208 ms &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Vienna Internet eXchange (VIX)
+   </p>
+   <p>
+   </p>
+   <p>
+    Free in building Internet (Wireless Macbook connected, 5Ghz, 802.11ax)
+   </p>
+   <p>
+   </p>
+   <p>
+    mpmost@iMax-MB-Pro16 ~ % traceroute wien.gv.at
+   </p>
+   <p>
+    traceroute to wien.gv.at (217.149.229.10), 64 hops max, 52 byte packets
+   </p>
+   <p>
+    1  192.168.49.254 (192.168.49.254)  3.057 ms  1.474 ms  1.394 ms
+   </p>
+   <p>
+    2  83-65-117-233.static.upcbusiness.at (83.65.117.233)  2.018 ms  2.213 ms  1.798 ms
+   </p>
+   <p>
+    3  213-229-52-177.static.upcbusiness.at (213.229.52.177)  3.044 ms  2.964 ms  2.619 ms
+   </p>
+   <p>
+    4  at-vie09c-rc01.as8412.net (217.25.122.163)  2.845 ms  3.404 ms  2.634 ms &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Magenta's AS
+   </p>
+   <p>
+    5  at-vie09c-ri01.as8412.net (217.25.123.5)  3.009 ms  3.410 ms  2.796 ms
+   </p>
+   <p>
+    6  as6720-iec.vix.at (193.203.0.58)  2.501 ms  2.711 ms  2.563 ms  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Vienna Internet eXchange (VIX)
+   </p>
+   <p>
+   </p>
+   <p>
+    With a free in a building WiFi I have a latency near 3ms and with Home Box Fiber + gaming tariff I have a latency 9ms.
+   </p>
+   <p>
+    Already next hop to my router introduces most of the latency. I guess that probably my router is connected not to Docsis 3.1
+   </p>
+   <p>
+    equipment in my building or a port is configured not properly.
+   </p>
+   <p>
+   </p>
+   <p>
+    Any ideas?
+   </p>
+   <p>
+   </p>
+   <p>
+    Thanks a lot in advance!
+   </p>
+   <p>
+   </p>
+   <p>
+    --
+   </p>
+   <p>
+    Maxim
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Roman Schreiber
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-07T14:43:14Z" title="2023-08-07 14:43 ">
+   August 7, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi, what does a traceroute to www.google.at look like? Have you ever made a speed test here:
+    <a href="https://www.magenta.at/internet/speedtest?" rel="external nofollow">
+     https://www.magenta.at/internet/speedtest?
+    </a>
+    Please share a screenshot of the results here. Regards, RS.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MOCTuK
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-07T17:26:52Z" title="2023-08-07 17:26 ">
+   August 7, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi Roman,
+   </p>
+   <p>
+    Most of the latency is introduced on a first hop (which includes Docsis segment):
+   </p>
+   <p>
+   </p>
+   <p>
+    mpmost@iMax-MB-Pro16 ~ % traceroute -a -I www.google.com
+   </p>
+   <p>
+    traceroute to www.google.com (142.251.36.196), 64 hops max, 72 byte packets
+   </p>
+   <p>
+    1  [AS0] 192.168.0.1 (192.168.0.1)  2.547 ms  1.269 ms  0.976 ms &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; My router ~ 1ms
+   </p>
+   <p>
+    2  [AS0] at-vie03c-rt01.as8412.net (217.25.120.4)  11.741 ms  12.193 ms  9.843 ms &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Magenta's first hop &gt;  10ms
+   </p>
+   <p>
+    3  [AS8412] at-vie03c-rc01.as8412.net (217.25.122.252)  8.400 ms  14.932 ms  9.607 ms
+   </p>
+   <p>
+    4  [AS8412] at-vie03c-ri01.as8412.net (217.25.123.7)  8.796 ms  14.056 ms  8.522 ms
+   </p>
+   <p>
+    5  * * *
+   </p>
+   <p>
+    6  [AS15169] 172.253.78.209 (172.253.78.209)  15.033 ms  15.421 ms  15.762 ms
+   </p>
+   <p>
+    7  [AS15169] 142.251.68.119 (142.251.68.119)  13.729 ms  13.669 ms  13.535 ms
+   </p>
+   <p>
+    8  [AS15169] muc12s12-in-f4.1e100.net (142.251.36.196)  14.903 ms  13.777 ms  14.372 ms
+   </p>
+   <p>
+   </p>
+   <p>
+    Speedtest is OK with down/up link speed.. But latency is measured as 8ms.
+   </p>
+   <p>
+    I guess my router is connected to Magenta's in a building equipment not capable of Docsis 3.1 or the
+   </p>
+   <p>
+    port is not properly configured.
+   </p>
+   <p>
+   </p>
+   <p>
+    Thank you for your reply!
+   </p>
+   <p>
+   </p>
+   <p>
+    ---
+   </p>
+   <p>
+    Maxim
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Screenshot2023-08-07at19_10_42.png.8893b7d3310104d9ff80af26f60280f2.png">
+     <img alt="Screenshot 2023-08-07 at 19.10.42.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5011" data-ratio="71.5" src="images/uploads/Screenshot2023-08-07at19_10_42.thumb.png.73f1c1ead91f1239eacc839a0409595f.png" width="1000"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Roman Schreiber
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-08T09:10:25Z" title="2023-08-08 09:10 ">
+   August 8, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Thanks for response. The speed and ping looks good to me. Magenta technicians can quickly find out if you are correctly connected to DOCSIS 3.1 by calling 0676 200 7777. Is the best way to call them. Br RS.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MOCTuK
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-08T16:20:00Z" title="2023-08-08 16:20 ">
+   August 8, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi Roman,
+   </p>
+   <p>
+   </p>
+   <p>
+    Thank you for your recommendation. I will try to reach Magenta‘s network engineers by a phone.
+   </p>
+   <p>
+   </p>
+   <p>
+    —
+   </p>
+   <p>
+    Maxim
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Roman Schreiber
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-09T11:25:32Z" title="2023-08-09 11:25 ">
+   August 9, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54753" data-ipsquote-contentid="8937" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1691511600" data-ipsquote-userid="97814" data-ipsquote-username="MOCTuK">
+    <div class="ipsQuote_citation">
+     Am 8.8.2023 um 18:20 schrieb MOCTuK:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Thank you for your recommendation. I will try to reach Magenta‘s network engineers by a phone.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ok. Please share here how and if you were able to receive assistance. Thx RS.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MOCTuK
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-10T04:00:51Z" title="2023-08-10 04:00 ">
+   August 10, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi Roman,
+   </p>
+   <p>
+   </p>
+   <p>
+    I finally reached English speaking customer service representative. He by my request contacted layer 2 support engineer.
+   </p>
+   <p>
+    Docsis 3.1 is confirmed for my link. Unfortunately it's Docsis 3.1 pure setup without a latency optimization. Because of that an average 10ms round trip latency is what can be achieved. To get a lower latency, Low Latency Docsis 3.1 (LLD)  should be implemented.
+   </p>
+   <p>
+   </p>
+   <p>
+    --
+   </p>
+   <p>
+    Maxim
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Roman Schreiber
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-10T11:43:14Z" title="2023-08-10 11:43 ">
+   August 10, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54772" data-ipsquote-contentid="8937" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1691640051" data-ipsquote-userid="97814" data-ipsquote-username="MOCTuK">
+    <div class="ipsQuote_citation">
+     Am 10.8.2023 um 06:00 schrieb MOCTuK:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Because of that an average 10ms round trip latency is what can be achieved.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hey, thank you for your information to this topic. I hope you can still utilize the internet for your purposes despite this latency. Best regards, RS.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Cartman117
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-17T08:24:39Z" title="2023-08-17 08:24 ">
+   August 17, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54772" data-ipsquote-contentid="8937" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1691640051" data-ipsquote-userid="97814" data-ipsquote-username="MOCTuK">
+    <div class="ipsQuote_citation">
+     On 8/10/2023 at 6:00 AM, MOCTuK said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hi Roman,
+     </p>
+     <p>
+     </p>
+     <p>
+      I finally reached English speaking customer service representative. He by my request contacted layer 2 support engineer.
+     </p>
+     <p>
+      Docsis 3.1 is confirmed for my link. Unfortunately it's Docsis 3.1 pure setup without a latency optimization. Because of that an average 10ms round trip latency is what can be achieved. To get a lower latency, Low Latency Docsis 3.1 (LLD)  should be implemented.
+     </p>
+     <p>
+     </p>
+     <p>
+      --
+     </p>
+     <p>
+      Maxim
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    did you manage to solve this problem with Magenta Support?
+   </p>
+   <p>
+    I would like to reduce my latency as well, on gigakraft gaming 300 with FritzBox 6660
+   </p>
+   <p>
+    latency to first HOP in network is 11-17ms
+   </p>
+   <p>
+   </p>
+   <p>
+    google search "Low Latency Docsis 3.1 (LLD)":
+   </p>
+   <p>
+    <em>
+     Low Latency DOCSIS is added to the DOCSIS 3.1 specification to handle this problem. It will keep the round trip time around 1 millisecond (for specific services), even under heavy load.
+    </em>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-08-17T08:25:46Z" title="2023-08-17 08:25 ">
+      August 17, 2023
+     </time>
+     von Cartman117
+    </strong>
+   </span>
+  </div>
+  <hr/>
+ </body>
+</html>

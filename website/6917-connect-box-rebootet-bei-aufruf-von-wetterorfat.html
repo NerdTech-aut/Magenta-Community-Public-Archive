@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Connect-Box rebootet bei Aufruf von wetter.orf.at
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Connect-Box rebootet bei Aufruf von wetter.orf.at
+  </h1>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-16T15:38:23Z" title="2021-05-16 15:38 ">
+   Mai 16, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das Szenario ist folgendes:
+    <strong>
+     Connect-Box CH7465LG-LC
+    </strong>
+    im
+    <strong>
+     IPv6 DS-Lite Modus
+    </strong>
+    , ein Windows 10 v20H2 PC über
+    <strong>
+     Ethernet
+    </strong>
+    angeschlossen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Am PC laufen unterschiedliche Webbrowser, einer davon
+    <strong>
+     Microsoft Edge Beta 91.0.864.27
+    </strong>
+    (das ist die derzeit am 16.05.2021 aktuelle Version).
+   </p>
+   <p>
+   </p>
+   <p>
+    Fakt ist: Wenn ich
+    <strong>
+     <a href="https://wetter.orf.at/oes/" rel="external nofollow">
+      https://wetter.orf.at/oes/
+     </a>
+    </strong>
+    aufrufe bricht die Internet-Verbindung ab (WebSite lädt bereits nicht mehr fertig, einige Grafiken fehlen noch) und
+    <strong>
+     einen Moment später rebootet das Modem
+    </strong>
+    .
+   </p>
+   <p>
+   </p>
+   <p>
+    Im Modem-Log findet sich danach lediglich
+    <strong>
+     Cable Modem Reboot - due to power reset
+    </strong>
+    , keine sonstigen Hinweise.
+   </p>
+   <p>
+   </p>
+   <p>
+    Gut, nun könnte man annehmen das Modem wäre defekt, aber nun kommts: Ich habe das Modem bereits ausgetauscht, habe nun das gleiche Modell wieder (Connect-Box CH7465LG-LC, diesmal mit "T"-Logo statt UPC-Logo an der Gehäusefront) erhalten. Problem weiterhin vorhanden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Mit anderen Browsern wie Chrome, Firefox, Microsoft Edge Stable (also nicht Beta) etc... tritt das Problem nicht auf.
+   </p>
+   <p>
+    Nun da ich endlich draufgekommen bin was das Problem auslöst kann ich es einfach vermeiden - muss ja nicht mit Edge Beta 91.0.864.27 auf der ORF-Website das Wetter anschauen, aber da kommt man nun mal nicht so schnell drauf was die Ursache ist. Ich dachte ja tagelang bis zum Modem-Tausch es muss sich um ein Hardware-Problem am Modem handeln, erst als das Problem mit neuem Modem wieder auftrat ist mir der Zusammenhang mit dem ORF-Wetter aufgefallen und habe dies dann zahlreiche male verifiziert - hätte ich nicht für möglich gehalten. Andere problematische Website-Aufrufe sind mir noch nicht aufgefallen - solange ich nicht das ORF-Wetter abrufe läuft alles stabil und Modem-Signalwerte sowie Speedtest alles im optimalen Bereich.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ausschalten der IPv6 Firewall am Modem sowie U-PNP deaktivieren ändert nichts am Verhalten.
+   </p>
+   <p>
+    Modem-Firmware-Update hat das Problem nicht behoben, ursprünglich war CH7465LG-NCIP-6.12.18.25-2p6-NOSH drauf, nach Update auf CH7465LG-NCIP-6.12.18.26-3p7-1-NOSH aber immer noch das gleiche Verhalten.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ein Wireshark-Dump hat mich bei der Analyse bislang auch nicht weiter gebracht. Ich gehe angesichts dieser Erkenntnisse davon aus, dass es sich hier um ein Firmware-Problem des Modems bei der Analyse von IPv6 Traffic handeln muss.
+   </p>
+   <p>
+   </p>
+   <p>
+    Also, wenn euer Modem auch plötzlich rebootet und sich im Log nur "Cable Modem Reboot - due to power reset" findet, dann behaltet mal im Auge ob das mit den gleichen Website-Aufrufen die ihr unmittelbar vor dem Reboot geladen habt vielleicht auch reproduzierbar ist.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-16T20:06:16Z" title="2021-05-16 20:06 ">
+   Mai 16, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Würde das Netzteil mit getauscht?
+   </p>
+   <p>
+    Ich hatte heute erst wieder eine Leitung, wo irgendwie ein nicht passendes Netzteil im Einsatz war.
+   </p>
+   <p>
+   </p>
+   <p>
+    Es hört sich auf jeden Fall sehr spannend an
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-16T20:45:43Z" title="2021-05-16 20:45 ">
+   Mai 16, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja, Netzteil ist auch getauscht - das erhaltene Modem und Netzteil war originalverpackt. Auch das RJ45-Kabel habe ich schon getauscht.
+   </p>
+   <p>
+    Auch einen Einfluss der Stromversorgung schließe ich aus - andere Steckdose bereits versucht.
+   </p>
+   <p>
+   </p>
+   <p>
+    Und wie gesagt: Um das zu demonstrieren muss ich nichts anderes tun, als einfach nur die o.a. URL des ORF-Wetters mit Edge Beta aufzurufen. Frisch gebootetes Modem, ich rufe einfach nur diese URL auf und zack, Modem rebootet. Solange ich diese URL nicht aufrufe kein Problem, 5 Stunden lang Internet-Nutzung (surfen, Streamen) - alles stabil, dann ein Zugriff mit Edge-Beta auf o.a. URL und wieder zack, reboot.
+   </p>
+   <p>
+   </p>
+   <p>
+    Habe noch etwas gegoogelt und Fehlerberichte gefunden, dass Leute mit dem Modem keine größeren GIT-Push-Vorgänge mehr zustande bekommen, selber Effekt - Modem reboot.
+    <a href="https://itectec.com/superuser/router-restarts-after-big-git-push-or-big-file-upload/" rel="external nofollow">
+     Als Lösung wurde genannt:
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    <em>
+     It's faulty firmware, this did not happen with CH7465LG-NCIP-6.12.18.24-5p4-NOSH. This issue is causing router restart when hairpin or loopback is being performed. With this error, you cannot use public IP or domain name inside your local network, because that is what causes reboot. It is couple of month now and still not fixed. You can ask your ISP to remotely downgrade to CH7465LG-NCIP-6.12.18.24-5p4-NOSH but the router updates itself anyway and ISP cannot stop it from doing so, so we are all screwed.
+    </em>
+   </p>
+   <p>
+   </p>
+   <p>
+    Wobei bei Zugriff auf die genannte Site definitiv kein Hairpinning im Spiel ist, Source (mein PC) und Destination (die Hosts die den ORF-Content ausliefern) kommunizieren beide über öffentliche IPv6-Adressen, meine Wireshark-Aufzeichnung zeigt zum betreffenden Zeitpunkt auch keinen anderen IPv4-Verkehr an - somit dürfte das Problem anders gelagert sein.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-05-16T20:48:28Z" title="2021-05-16 20:48 ">
+      Mai 16, 2021
+     </time>
+     von gunnar
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-19T18:28:44Z" title="2021-05-19 18:28 ">
+   Mai 19, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nachtrag: Tritt nicht nur mit der wetter.orf.at Seite auf, sondern auch mit anderen orf.at Nachrichten-Inhalten.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-05-19T18:29:13Z" title="2021-05-19 18:29 ">
+      Mai 19, 2021
+     </time>
+     von gunnar
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-22T13:48:05Z" title="2021-05-22 13:48 ">
+   Mai 22, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich kann das Problem inzwischen auf beliebigen Windows-Geräten und auch unter Linux jederzeit zeigen, in meinem Blog-Beitrag beschreibe ich die Hintergründe und nötige Konfigurationsänderung:
+   </p>
+   <p>
+    <strong>
+     <a href="https://hitco.at/blog/magenta-connect-box-rebootet/" rel="external nofollow">
+      UPC/Magenta Connect-Box rebootet bei Aufruf von wetter.orf.at – Blog von Gunnar Haslinger (hitco.at)
+     </a>
+    </strong>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="3143" href="images/uploads/wetter_orf.at-Zugriff-Beitragsbild-Connnectbox.jpg.9de9150cc7bead8959d5fd9b7da7cd13.jpg" rel="">
+     <img alt="wetter.orf.at-Zugriff-Beitragsbild-Connnectbox.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3143" src="images/uploads/wetter_orf.at-Zugriff-Beitragsbild-Connnectbox.jpg.9de9150cc7bead8959d5fd9b7da7cd13.jpg"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-05-22T21:34:25Z" title="2021-05-22 21:34 ">
+      Mai 22, 2021
+     </time>
+     von gunnar
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-23T05:28:18Z" title="2021-05-23 05:28 ">
+   Mai 23, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Mach doch mal einen Hotspot von deinem Handy o.ä. und teste das wieder.
+    <br/>
+    Ich hätte jetzt klar das Modem getauscht aber wenn du das schon gemacht hast und es klappt immer noch nicht, ist das mehr als interessant.
+    <br/>
+    Im Prinzip aber läuft es ja mit allen anderen Browsern, evtl. ist in der Beta Version des einen Browsers echt ein heftiger Bug drinnen.
+    <br/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-23T07:27:40Z" title="2021-05-23 07:27 ">
+   Mai 23, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/70315-christian_e/?do=hovercard" data-mentionid="70315" href="https://community.magenta.at/profile/70315-christian_e/" rel="">
+     @Christian_E
+    </a>
+    für den Vorschlag, den ich aber freilich längst geprüft habe.
+   </p>
+   <p>
+    Mit anderen Internet-Zugängen (Handy-Hotspots auf Android 11 oder iOS 14.5) tritt das Problem freilich nicht auf - es ist ein Modem-Firmware-Fehler der Connect-Box CH7465LG-LC.
+   </p>
+   <p>
+   </p>
+   <p>
+    Getriggert - wie in meinem
+    <a href="https://hitco.at/blog/magenta-connect-box-rebootet/" rel="external nofollow">
+     ausführlichen Blog-Post erläutert
+    </a>
+    - durch die rasche Wieder-Verwendung von niedrigen (1024, 1025, ...) TCP-Source-Port-Nummern beim Aufbau von HTTPS-Verbindungen. Das Problem ist - wie ich
+    <a href="https://hitco.at/blog/magenta-connect-box-rebootet/#linux" rel="external nofollow">
+     am Ende meines Blog-Artikels zeige
+    </a>
+    - auch mit einem kleinen Linux-Shell-Script gezielt demonstrierbar.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich kann keinen Bug darin erkennen wenn man erstens Source-Ports ab 1024 wählt, und zweitens diese nach Abbau der TCP-Verbindung sofort für eine neue wiederverwendet, mir ist kein RFC bekannt dem dies widersprechen würde, bin aber für Hinweise diesbezüglich offen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-23T10:02:39Z" title="2021-05-23 10:02 ">
+   Mai 23, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Alles klar. Da hast eh schon super Analysen gemacht.
+    <br>
+     Aber wie dramatisch ist es für dich? Handelt sich ja im Moment nur um ein Problem mit dem Beta Browser vom Edge.
+     <br>
+      Wird natürlich interessant zu sehen, ob die finale Version dann wieder läuft.
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-23T10:16:21Z" title="2021-05-23 10:16 ">
+   Mai 23, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es geht in diesem Thread hier nicht darum meine persönliche Situation zu lösen. Ich selbst kenne die Hintergründe ja mittlerweile und weiß mir zu helfen. Aber vielen anderen Kunden geht es möglicherweise nicht so wie mir, die können sich nicht selbst helfen, bemerken lediglich das ihr Modem rebootet und wissen nicht warum. Denen soll dieser Thread und mein Blog-Post Hilfestellung bieten zu prüfen, ob sie auch von dieser Problematik betroffen sind. Und wenn ja können sie mit dieser Anleitung eine geänderte Konfiguration herstellen um das Problem erst mal zu umgehen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Aber eigentlich ist Magenta jetzt am Zug und muss handeln und diesen Bug in der Firmware beheben (lassen).
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-23T10:29:53Z" title="2021-05-23 10:29 ">
+   Mai 23, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja gut aber noch mal - es handelt sich um ein Problem mit nur einem Browser, der sich im Beta Stadium befindet.
+    <br>
+     Alle anderen funktionieren und selbst der Edge "stable" funktioniert.
+     <br>
+      Ob da Magenta gleich losläuft? Oder eher mal die stable Version abwartet.
+      <br>
+       <br>
+        Aber ich verstehe schon deinen Ansatz - proaktiv da eine Lösung zu finden, bevor es ein Massenthema wird, wäre in jedem Fall die richtige Vorgehensweise.
+        <br>
+         In jedem Fall aber Danke für deine Recherche und vor allem für die Info hier in der Community!
+         <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+        </br>
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-23T11:39:56Z" title="2021-05-23 11:39 ">
+   Mai 23, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/70315-christian_e/?do=hovercard" data-mentionid="70315" href="https://community.magenta.at/profile/70315-christian_e/" rel="">
+     @Christian_E
+    </a>
+    Deine Einschätzung zur Dringlichkeit und hinsichtlich der Auswirkungen teile ich nicht.
+   </p>
+   <p>
+   </p>
+   <p>
+    1. Es geht nicht nur um einen Browser, sondern um zwei (Google Chrome, Microsoft Edge)
+   </p>
+   <p>
+    2. Der Verbreitungsgrad dieser beiden Browser ist hoch.
+   </p>
+   <p>
+    3. Google Chrome v91 ist nicht mehr in einer frühen Beta-Phase, sondern v91 ist bereits finalisiert und wird am 25.05.2021 (also schon in wenigen Tagen!) per Auto-Update ausgerollt. Daran ist jetzt auch gar nichts mehr zu ändern. Ich prophezeie schon jetzt, dass die Magenta-Hotline dann vermutlich ein paar Anrufe zu verzeichnen haben wird.
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-23T11:47:46Z" title="2021-05-23 11:47 ">
+   Mai 23, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42316" data-ipsquote-contentid="6917" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1621179503" data-ipsquote-userid="89625" data-ipsquote-username="gunnar">
+    <div class="ipsQuote_citation">
+     Am 16.5.2021 um 17:38 schrieb gunnar:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+     </p>
+     <p>
+      Mit anderen Browsern wie Chrome, Firefox, Microsoft Edge Stable (also nicht Beta) etc... tritt das Problem nicht auf.
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Aha - ich dachte mit Chrome läuft es, wie du im Anfangspost geschrieben hast?
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-05-23T11:48:29Z" title="2021-05-23 11:48 ">
+      Mai 23, 2021
+     </time>
+     von Christian_E
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-23T11:49:47Z" title="2021-05-23 11:49 ">
+   Mai 23, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    OK - nochmal gelesen.
+    <br>
+     Die neue Version von Chrome wird also auch Probleme machen.
+     <br>
+      Gut dann wird das definitiv ein gröberes Thema.
+      <br>
+       Ja dann kann ich auch nur hoffen, dass Magenta da mitliest....
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-25T19:44:25Z" title="2021-05-25 19:44 ">
+   Mai 25, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Also, Status-Update: Google Chrome 91.0.4472.77 ist nun dem Beta-Stadium entwachsen, wird seit 25.05.2021 21:00 als reguläres Google Chrome Online-Update verteilt. Problem damit - wie befürchtet - vorhanden. Könnte ab morgen also mehr Anwender geben, die mit dem Problem kämpfen. Microsoft Edge v91 ist auch noch für diese Woche angekündigt.
+    <br>
+     <br>
+      Magenta hat sich heute bei mir gemeldet und mitgeteilt "wir schauen uns das an". Seitdem keine Rückmeldung mehr.
+     </br>
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    Habe meinen
+    <a href="https://hitco.at/blog/magenta-connect-box-rebootet/" rel="external nofollow">
+     Blog-Post
+    </a>
+    mit den neuen Informationen aktualisiert.
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-05-25T19:46:02Z" title="2021-05-25 19:46 ">
+      Mai 25, 2021
+     </time>
+     von gunnar
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-26T04:52:35Z" title="2021-05-26 04:52 ">
+   Mai 26, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke für deinen Update!
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-27T06:31:51Z" title="2021-05-27 06:31 ">
+   Mai 27, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo @ Gunnar,
+   </p>
+   <p>
+   </p>
+   <p>
+    danke für deine vielen Infos zu diesem Thema. Unsere Technikerinnen und Techniker haben die Infos an den Modemhersteller weitergeleitet. Ich bitte dich in diesem Fall auch ein Feedback an die Anbieter der Browser zu richten, damit auch diese der Ursache auf den Grund gehen können. Halte uns hier gerne zu dem Thema am Laufenden. Liebe Grüße, Jonathan
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-27T16:41:05Z" title="2021-05-27 16:41 ">
+   Mai 27, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
+     @Jonathan Dorian
+    </a>
+    für das Status-Update.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich weiß zwar nicht, warum Magenta denkt ich wäre dafür zuständig das an die Browser-Hersteller zu reporten, aber weil ich ein guter Mensch bin habe ich den betreffenden Change im Chromium-Projekt für euch herausgesucht und Kontakt mit dem Entwickler hergestellt. Die Diskussion ist öffentlich im Chromium-Source-Code-Repo nachvollziehbar, der
+    <span>
+     Link dorthin ist in meinem Blog-Post im Abschnitt
+    </span>
+    <em>
+     <a href="https://hitco.at/blog/magenta-connect-box-rebootet/#chromium" rel="external nofollow">
+      Welcher Chromium-Change verursacht diese Verhaltensänderung?
+     </a>
+    </em>
+    <span>
+     ergänzt
+    </span>
+    .
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-29T13:22:59Z" title="2021-05-29 13:22 ">
+   Mai 29, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wie meinem
+    <a href="https://hitco.at/blog/magenta-connect-box-rebootet/#winsock" rel="external nofollow">
+     aktualisierten Blog-Post
+    </a>
+    zu entnehmen ist, wird basierend auf meinen Erkenntnissen nun Microsoft auch das Verhalten der Winsock-API anpassen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Davon unabhängig ist nun jedoch Magenta/Compal in der Pflicht den Firmware-Bug zu beheben und ein Update bereitzustellen.
+   </p>
+   <p>
+   </p>
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
+     @Jonathan Dorian
+    </a>
+    darf ich in der Sache um ein Status-Update ersuchen? Gibt es schon einen Zeithorizont hierfür seitens Compal?
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-31T11:11:51Z" title="2021-05-31 11:11 ">
+   Mai 31, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/89625-gunnar/?do=hovercard" data-mentionid="89625" href="https://community.magenta.at/profile/89625-gunnar/" rel="">
+     @gunnar
+    </a>
+    ,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe soeben nachgefragt, ob es schon News dazu gibt. Sobald ich etwas weiß, gebe ich natürlich Bescheid. Liebe Grüße, Jonathan
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   nämo
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-10T08:01:17Z" title="2021-06-10 08:01 ">
+   Juni 10, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    It's not a bug, it's a feature ?
+   </p>
+   <p>
+   </p>
+   <p>
+    Mal angenommen, daß das so gewollt ist. Vermutlich gibt es irgendeine Möglichkeit das Modem nicht nur von zu Hause aus, sondern auch von Außerhalb zu rebooten, um z.B. eine Fernwartung durch den Eigentümer des Modems, also den Internetanbieter, durchzuführen. Was macht dann ein halbwegs intelligenter Konfigurator einer Firewall, um z.B. das Wetter auf orf.at nicht von irgendjemandem unbefugten übers Internet ändern zu lassen ? Er integriert den Befehl zum Modemreboot in seine Firewall, wenn bestimmte Ports angesprochen werden und das Wetter bleibt, wie es ist und der vermeintliche Angreifer ärgert sich. War nur so eine Hypothese. Hat der ORF irgendwas dazu zu kommentieren ?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-10T08:04:08Z" title="2021-06-10 08:04 ">
+   Juni 10, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Interessanter Ansatz
+    <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+    <br>
+     <br>
+      Aber ist sowieso schräg, denn ich hab mit dem neuen Chroma nichts an Problemen mitbekommen. Bei mir läuft alles.
+      <br>
+       Und wenn da wirklich ein Problem wäre, dann müsste das schon einen ordentlichen Aufschrei in Österreich gegeben haben aber da war m.W. nichts bisher.
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-10T08:31:05Z" title="2021-06-10 08:31 ">
+   Juni 10, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <span>
+     <span>
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/88558-n%C3%A4mo/?do=hovercard" data-mentionid="88558" href="https://community.magenta.at/profile/88558-n%C3%A4mo/" rel="">
+       @nämo
+      </a>
+     </span>
+    </span>
+   </p>
+   <p>
+    Jemand der autorisiert ist das Modem von außen per Fernwartung zu rebooten nutzt hierzu SNMP (der Provider) oder gibt das WebInterface hierfür von außen frei (berechtigter Nutzer des Modems). Der Provider braucht für einen Reboot von außen hierfür freilich keinen WebInterface-Zugriff und auch keinen "kreativen Workaround" wie hier offenbar vermutet. Beides hat mit diesem Issue den ich beschreibe nichts zu tun und hinterlässt im Log auch einen entsprechenden Eintrag der sich hiervon klar unterscheidet.
+   </p>
+   <p>
+   </p>
+   <p>
+    <span>
+     <span>
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/70315-christian_e/?do=hovercard" data-mentionid="70315" href="https://community.magenta.at/profile/70315-christian_e/" rel="">
+       @Christian_E
+      </a>
+     </span>
+    </span>
+   </p>
+   <p>
+    Das Problem lässt sich - wie von mir beschrieben, wenn die Konfiguration der dynamic-Ports in Windows wie von mir erläutert vorgenommen wurde - auch mit Chrome 91 demonstrieren. Den "Aufschrei" gibt es deshalb nicht, weil die erläuterte Windows-Konfiguration keine Default-Konfiguration ist, und weil selbst jene bei denen das wie von mir erläutert konfiguriert ist vermutlich den Zusammenhang tagelang/wochenlang gar nicht erkennen.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-06-10T08:36:23Z" title="2021-06-10 08:36 ">
+      Juni 10, 2021
+     </time>
+     von gunnar
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-10T08:44:55Z" title="2021-06-10 08:44 ">
+   Juni 10, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    OK, danke noch für dein Feedback.
+    <br>
+     Damit wir es sich aber um einen relativ geringen Prozentanteil an Anwendern handeln, die da betroffen sind.
+     <br>
+      Aber natürlich - wenn man betroffen ist, dann wird dein Beitrag sicher dazu beitragen, hier Licht ins Dunkle rein zu bringen.
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-10T09:24:34Z" title="2021-06-10 09:24 ">
+   Juni 10, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wegen Reboot über Fernwartung. Keine Ahnung wie es konkret bei Magenta abläuft, aber SNMP sollte schon am Abstellgleis stehen. TR069 wir mittlerweile sehr häufig für Fernwartung genutzt, welches auch remote Reboot und ähnliches unterstützt. (SNMP steht im Docsis Standard, wodurch es die Connect Box können müsste aber vermutlich wird die Box auch TR069 können.)
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-10T11:20:27Z" title="2021-06-10 11:20 ">
+   Juni 10, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    SNMP auch in den späteren Versionen (V2) ist schon klar ein Sicherheitsthema.
+    <br>
+     Haben wir in der Firma schon komplett deaktiviert.
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-15T17:34:59Z" title="2021-06-15 17:34 ">
+   Juni 15, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
+     @Jonathan Dorian
+    </a>
+    Du wolltest uns ja am Laufenden halten ... was hat sich denn in den letzten 3 Wochen diesbezüglich getan?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-16T15:38:23Z" title="2021-05-16 15:38 ">
+   Mai 16, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das Szenario ist folgendes:
+    <strong>
+     Connect-Box CH7465LG-LC
+    </strong>
+    im
+    <strong>
+     IPv6 DS-Lite Modus
+    </strong>
+    , ein Windows 10 v20H2 PC über
+    <strong>
+     Ethernet
+    </strong>
+    angeschlossen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Am PC laufen unterschiedliche Webbrowser, einer davon
+    <strong>
+     Microsoft Edge Beta 91.0.864.27
+    </strong>
+    (das ist die derzeit am 16.05.2021 aktuelle Version).
+   </p>
+   <p>
+   </p>
+   <p>
+    Fakt ist: Wenn ich
+    <strong>
+     <a href="https://wetter.orf.at/oes/" rel="external nofollow">
+      https://wetter.orf.at/oes/
+     </a>
+    </strong>
+    aufrufe bricht die Internet-Verbindung ab (WebSite lädt bereits nicht mehr fertig, einige Grafiken fehlen noch) und
+    <strong>
+     einen Moment später rebootet das Modem
+    </strong>
+    .
+   </p>
+   <p>
+   </p>
+   <p>
+    Im Modem-Log findet sich danach lediglich
+    <strong>
+     Cable Modem Reboot - due to power reset
+    </strong>
+    , keine sonstigen Hinweise.
+   </p>
+   <p>
+   </p>
+   <p>
+    Gut, nun könnte man annehmen das Modem wäre defekt, aber nun kommts: Ich habe das Modem bereits ausgetauscht, habe nun das gleiche Modell wieder (Connect-Box CH7465LG-LC, diesmal mit "T"-Logo statt UPC-Logo an der Gehäusefront) erhalten. Problem weiterhin vorhanden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Mit anderen Browsern wie Chrome, Firefox, Microsoft Edge Stable (also nicht Beta) etc... tritt das Problem nicht auf.
+   </p>
+   <p>
+    Nun da ich endlich draufgekommen bin was das Problem auslöst kann ich es einfach vermeiden - muss ja nicht mit Edge Beta 91.0.864.27 auf der ORF-Website das Wetter anschauen, aber da kommt man nun mal nicht so schnell drauf was die Ursache ist. Ich dachte ja tagelang bis zum Modem-Tausch es muss sich um ein Hardware-Problem am Modem handeln, erst als das Problem mit neuem Modem wieder auftrat ist mir der Zusammenhang mit dem ORF-Wetter aufgefallen und habe dies dann zahlreiche male verifiziert - hätte ich nicht für möglich gehalten. Andere problematische Website-Aufrufe sind mir noch nicht aufgefallen - solange ich nicht das ORF-Wetter abrufe läuft alles stabil und Modem-Signalwerte sowie Speedtest alles im optimalen Bereich.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ausschalten der IPv6 Firewall am Modem sowie U-PNP deaktivieren ändert nichts am Verhalten.
+   </p>
+   <p>
+    Modem-Firmware-Update hat das Problem nicht behoben, ursprünglich war CH7465LG-NCIP-6.12.18.25-2p6-NOSH drauf, nach Update auf CH7465LG-NCIP-6.12.18.26-3p7-1-NOSH aber immer noch das gleiche Verhalten.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ein Wireshark-Dump hat mich bei der Analyse bislang auch nicht weiter gebracht. Ich gehe angesichts dieser Erkenntnisse davon aus, dass es sich hier um ein Firmware-Problem des Modems bei der Analyse von IPv6 Traffic handeln muss.
+   </p>
+   <p>
+   </p>
+   <p>
+    Also, wenn euer Modem auch plötzlich rebootet und sich im Log nur "Cable Modem Reboot - due to power reset" findet, dann behaltet mal im Auge ob das mit den gleichen Website-Aufrufen die ihr unmittelbar vor dem Reboot geladen habt vielleicht auch reproduzierbar ist.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-15T18:59:58Z" title="2021-06-15 18:59 ">
+   Juni 15, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Dieser Post ist nur für den Seite Umbruch
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-06-15T19:01:00Z" title="2021-06-15 19:01 ">
+      Juni 15, 2021
+     </time>
+     von IT-Freak
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Doris676
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-16T09:20:10Z" title="2021-06-16 09:20 ">
+   Juni 16, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/89625-gunnar/?do=hovercard" data-mentionid="89625" href="https://community.magenta.at/profile/89625-gunnar/" rel="">
+      @gunnar
+     </a>
+    </span>
+    bisher liegen uns noch keine neuen Informationen vor. Sobald wir welche haben, melden wir uns. Liebe Grüße, Doris
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-18T07:42:42Z" title="2021-06-18 07:42 ">
+   Juni 18, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/89625-gunnar/?do=hovercard" data-mentionid="89625" href="https://community.magenta.at/profile/89625-gunnar/" rel="">
+     @gunnar
+    </a>
+    ich habe mittlerweile das selbe/ ein ähnliches Problem mit Chrome. Jedoch kommt bei mir dann nur, Connection Timed out. Wobei ich einen anderen ISP an dem Standort haben und somit auch andere Hardware.
+   </p>
+   <p>
+    Nur mit dem Unterschied, dass ich keine Sonderkonfiguration betreibe und der Fehler bei Port 1024, 1025, 1028.
+   </p>
+   <p>
+    Mal sehen, ob der Fehler irgendwo bei mir im Netzwerk ist oder auf ISP seite.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-07-19T15:16:28Z" title="2021-07-19 15:16 ">
+   Juli 19, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
+     @Jonathan Dorian
+    </a>
+    und
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/87729-doris676/?do=hovercard" data-mentionid="87729" href="https://community.magenta.at/profile/87729-doris676/" rel="">
+     @Doris676
+    </a>
+    wie ist denn nun der aktuelle Status betreffend dieser Problem-Behebung? Inzwischen sind zwei Monate vergangen, da könnte man ja annehmen das wäre genug Zeit um das Problem zu beheben und eine neue Firmware bereitzustellen?!
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Ralf M
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-07-20T12:47:57Z" title="2021-07-20 12:47 ">
+   Juli 20, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="43204" data-ipsquote-contentid="6917" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1626707788" data-ipsquote-userid="89625" data-ipsquote-username="gunnar">
+    <div class="ipsQuote_citation">
+     vor 21 Stunden schrieb gunnar:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
+       @Jonathan Dorian
+      </a>
+      und
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/87729-doris676/?do=hovercard" data-mentionid="87729" href="https://community.magenta.at/profile/87729-doris676/" rel="">
+       @Doris676
+      </a>
+      wie ist denn nun der aktuelle Status betreffend dieser Problem-Behebung? Inzwischen sind zwei Monate vergangen, da könnte man ja annehmen das wäre genug Zeit um das Problem zu beheben und eine neue Firmware bereitzustellen?!
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    das würde ich auch gern wissen. ich hab das problem mit einem production build von chrome, und das ändern des portbereichs hat bei mir keinen nachhaltigen effekt. vom telefonsupport wurde ich im wesentlichen für dumm erklärt ("der experte hat mit den schultern gezuckt") und auf die frage ob ich jetzt noch irgendwelche optionen hätte glattweg mit "nein" geantwortet.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Karo
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-07-22T06:20:48Z" title="2021-07-22 06:20 ">
+   Juli 22, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo zusammen,
+   </p>
+   <p>
+    die Herstellerfirma des Modems arbeitet daran. Ein größeres Update bzw. News können wir aktuell noch nicht geben. LG Karo
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   stargacer
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-07-25T16:19:30Z" title="2021-07-25 16:19 ">
+   Juli 25, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    ganz herzlichen Dank an die ausgezeichnete Analyse von
+    <span>
+     <span>
+      @
+     </span>
+    </span>
+    gunnar - ich konnte dieses Problem genau so reproduzieren! Hatte zuvor beim surfen teilweise mehrere Ausfälle des Internets pro Tag, die empfohlene Änderung der Dynamic Port Range hat geholfen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hoffe auf einen raschen Fix der Firmware!
+   </p>
+   <p>
+   </p>
+   <p>
+    PS: hab mir extra für dieses Feedback einen Account erstellt
+    <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-08-16T22:34:49Z" title="2021-08-16 22:34 ">
+   August 16, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Weitere 4 Wochen sind seit meiner letzten Rückfrage vergangen, Magenta kann sich seit Mai immer noch nicht zu einer möglichen Lösung äußern und das Problem ist 3 Monate später weiterhin vorhanden. Letzte Woche hat mich sogar jemand extra angerufen um sich zu bedanken, weil Google ihn zu meinem Blog-Post geführt hat und er endlich einen Workaround für das Problem auf meiner Website gefunden hat. Mir wurde geschildert der Magenta Support hat ihm zuvor mehrfach Techniker geschickt und Modem getauscht und mit keinem Wort diese Problematik erwähnt. Liebe Moderatoren
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77323-karo/?do=hovercard" data-mentionid="77323" href="https://community.magenta.at/profile/77323-karo/" rel="">
+     @Karo
+    </a>
+    ,
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/87729-doris676/?do=hovercard" data-mentionid="87729" href="https://community.magenta.at/profile/87729-doris676/" rel="">
+     @Doris676
+    </a>
+    ,
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
+     @Jonathan Dorian
+    </a>
+    , ist euch das eigentlich gar nicht peinlich für ein Unternehmen zu arbeiten, das so agiert?
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2021-08-17T14:41:37Z" title="2021-08-17 14:41 ">
+      August 17, 2021
+     </time>
+     von gunnar
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Karo
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-08-17T06:11:29Z" title="2021-08-17 06:11 ">
+   August 17, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="43716" data-ipsquote-contentid="6917" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1629153289" data-ipsquote-userid="89625" data-ipsquote-username="gunnar">
+    <div class="ipsQuote_citation">
+     vor 7 Stunden schrieb gunnar:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Weitere 4 Wochen sind seit meiner letzten Rückfrage vergangen, Magenta kann sich seit Mai immer noch nicht zu einer möglichen Lösung äußern und das Problem ist 3 Monate später weiterhin vorhanden. Letzte Woche hat mich sogar jemand extra angerufen um sich zu bedanken, weil Google ihn zu meinem Blog-Post geführt hat und er endlich einen Workaround für das Problem auf meiner Website gefunden hat. Mir wurde geschildert der Magenta Support hat ihm zuvor mehrfach Techniker geschickt und Modem getauscht und mit keinem Wort diese Problematik erwähnt. Liebe Moderatoren
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77323-karo/?do=hovercard" data-mentionid="77323" href="https://community.magenta.at/profile/77323-karo/" rel="">
+       @Karo
+      </a>
+      ,
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/87729-doris676/?do=hovercard" data-mentionid="87729" href="https://community.magenta.at/profile/87729-doris676/" rel="">
+       @Doris676
+      </a>
+      ,
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
+       @Jonathan Dorian
+      </a>
+      , ist euch das eigentlich gar nicht peinlich für ein Unternehmen zu arbeiten, dass so agiert?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Wir verstehen, dass du eine rasche Lösung möchtest. Wie bereits geschrieben, wird daran gearbeitet. Ein genaues Zeitfenster können wir dir nicht nennen. LG Karo
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   harvey g
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-08-21T10:26:03Z" title="2021-08-21 10:26 ">
+   August 21, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Bei mir (und auch bei einem Bekannten) wurde letzte Woche (ungefähr um den 13.8.2021 herum) plötzlich der Anschluss von IPv6 ds-light auf IPv4 umgestellt. Bis dahin gab es eigentlich keine Probleme, dieser hier beschriebene Bug hat uns offenbar nicht betroffen. Es klingt aber bisschen danach als ob Magenta ärgere Probleme mit IPv6 hat und das den Kunden langsam abdreht.
+    <br/>
+    <br/>
+    Der Support meinte ich hätte schon seit Jahren kein IPv6 (was ich widerlegen kann), und dass die Umstellung auf IPv6 zurück irgendwie nicht geht, da sie bei mir in die passenden Menüs gar nicht erst rein kämen. Ticket an die Techniker ist seit einer Woche offen und bisher keine Rückmeldung bekommen.
+    <br/>
+    <br>
+     Bin jetzt am überlegen auf einen Tarif mit DOCSIS 3.1 umzusteigen, da gibt es ja ein anderes Modem. Funktioniert das vielleicht besser, irgendwelche Erfahrungen dazu? Ich hätte nämlich schon gerne wieder ein funktionierendes IPv6.
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   wolfgangh
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-08-31T09:03:54Z" title="2021-08-31 09:03 ">
+   August 31, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke für die ausgezeichnete Analyse &amp; Problembeschreibung.
+   </p>
+   <p>
+    Bei mir tritt genau dieses Problem auch seit ca. 2 Monaten auf. (Cable Modem Reboot - due to power reset)
+   </p>
+   <p>
+   </p>
+   <p>
+    Modem wurde vollständig inkl. aller Komponenten (Stromversorgung, Kabel) ausgetauscht. Ich habe zudem die Steckdose gewechselt (Magenta-Support meint, es könnte an 50Hz-Schwankung liegen - was extrem unwahrscheinlich - und hiermit ausgeschlossen - ist).
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Gojo
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-09-22T13:01:16Z" title="2021-09-22 13:01 ">
+   September 22, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="43717" data-ipsquote-contentid="6917" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1629180689" data-ipsquote-userid="77323" data-ipsquote-username="Karo">
+    <div class="ipsQuote_citation">
+     Am 17.8.2021 um 08:11 schrieb Karo:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Wir verstehen, dass du eine rasche Lösung möchtest. Wie bereits geschrieben, wird daran gearbeitet. Ein genaues Zeitfenster können wir dir nicht nennen. LG Karo
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77323-karo/?do=hovercard" data-mentionid="77323" href="https://community.magenta.at/profile/77323-karo/" rel="">
+     @Karo
+    </a>
+    dieses Problem tritt bei mir auch seit einiger Zeit auf und ist wirklich mehr als störend. Bis wann können wir hier mit einer Lösung rechnen?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Karo
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-09-23T07:03:36Z" title="2021-09-23 07:03 ">
+   September 23, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/90807-gojo/?do=hovercard" data-mentionid="90807" href="https://community.magenta.at/profile/90807-gojo/" rel="">
+     @Gojo
+    </a>
+    , das ist wirklich schwer zu sagen. Sei aber versichert, dass daran gearbeitet wird. LG Karo
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Gojo
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-09-23T13:54:33Z" title="2021-09-23 13:54 ">
+   September 23, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77323-karo/?do=hovercard" data-mentionid="77323" href="https://community.magenta.at/profile/77323-karo/" rel="">
+     @Karo
+    </a>
+    , danke. Ich hoffe, dass sich da bald was tut! Die häufigen Reboots sind wirklich mehr als nervig! 🙏 lg
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2021-09-23T13:55:00Z" title="2021-09-23 13:55 ">
+      September 23, 2021
+     </time>
+     von Gojo
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   interessierter_user
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-10T11:10:10Z" title="2021-10-10 11:10 ">
+   Oktober 10, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo allerseits,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich darf mich an dieser Stelle mit einem kurzen Erfahrungsbericht beteiligen:
+   </p>
+   <p>
+   </p>
+   <p>
+    Seit ca. Juni hatte ich hier mit täglichen unregelmäßigen Internetausfällen zu kämpfen. Nach (gefühlt hunderten) ca. 25 Support-Konversationen über den Zeitraum von mehreren Monaten mit dem technischen Kundenservice ist folgende Historie entstanden:
+   </p>
+   <ol>
+    <li>
+     Erste paar Anrufe nach 10 Ausfällen: Ich soll das mal weiter Beobachten und mich nochmals melden.
+    </li>
+    <li>
+     Nach weiteren Ausfällen: Sie starten eine Analyse und ich bekomme ich 3-5 Tagen eine Rückmeldung.
+    </li>
+    <li>
+     Rückmeldung des "Technischen Experten": Alles in Bester Ordnung, Verbindung ideal.
+    </li>
+    <li>
+     Nach weiteren Ausfällen: Ein paar sinnlose Telefonate und dann die Conclusio, dass ich das Modem im nächsten Magenta Shop ausgetauscht bekomme.
+    </li>
+    <li>
+     Nach Austausch des Modems, weiteren Ausfällen und weiteren Telefonaten: Techniker kommt vorbei.
+    </li>
+    <li>
+     Techniker war da: COAX Stichleitung von Stiegenhaus zum Anschlusspunkt in Wohnung ist alt und stellt definitiv das Problem dar. Kosten Austausch: ca. 100€.
+    </li>
+    <li>
+     <em>
+      Nach Austausch der COAX Stichleitung (durch lokales IT / Elektrounternehmen) und weiteren Problemen: Massive Diskussion mit Kundenservice: Mit meinem "eigenen" neuen Kabel geht das nicht, ich muss die (gerade durch Experten getauschte) Leitung jetzt nochmal durch Magenta austauschen lassen, ansonsten wird mir nicht mehr weiter geholfen. Der Kundenservice-Mitarbeiter hat mir definitiv versichern können, dass seine Analyse zeigt, dass mein COAX Kabel schuld ist.
+     </em>
+    </li>
+    <li>
+     Danach hat es mir gereicht, habe im Internet recherchiert, bin irgendwann auf die Log Files vom Router gestoßen und habe nach weiterer Suche mit der Fehlermeldung diesen Thread gefunden.
+    </li>
+   </ol>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Conclusio: Nach dem Workaround, der im Blog top beschrieben ist funktioniert es ausgezeichnet. Vielen Dank dafür. Ich weiß nicht wieso diese Werte bei meinem PC nicht den "Standard" Werten entsprechen, Visual Studio habe ich jedenfalls keins.
+    </strong>
+   </p>
+   <p>
+   </p>
+   <p>
+    Licht am Ende des Tunnels: Anscheinend hat das Chromium Team das problematische Release zurückgerollt - in der
+    <u>
+     aktuellen daily Version von Chromium ist das Problem behoben
+    </u>
+    - damit hoffentlich auch im nächsten (größeren ?) Release von Edge und Chrome.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Apell an Magenta: Bitte gebt Euren Kundendienstmitarbeitern die Info an die Hand, wie dieses Problem zu lösen ist - da hätten sich viele Leute viel unnötige Arbeitszeit (und damit Geld...) sparen können. Besonders die Support-Aussage in Punkt 7 finde ich absolut unhaltbar für einen technischen Support von Magenta.
+    </strong>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-10T17:38:20Z" title="2021-10-10 17:38 ">
+   Oktober 10, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke für das ausführliche Feedback. 👍👍👍
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Gojo
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-11T05:53:36Z" title="2021-10-11 05:53 ">
+   Oktober 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/91027-interessierter_user/?do=hovercard" data-mentionid="91027" href="https://community.magenta.at/profile/91027-interessierter_user/" rel="">
+     @interessierter_user
+    </a>
+    leider funktioniert die im Blogpost von Gunnar beschriebene Lösung bei mir zumindest nicht. Die dynamischen Ports sind bereits auf Highports konfiguriert und mein Modem startet trotzdem mehrmals am Tag neu. Das kann wie hier erwähnt mit dem Aufruf von wetter.orf.at jederzeit provoziert werden.
+    <br>
+     <br>
+      Jetzt ist mMn bald mal eine Lösung durch Magenta bereitzustellen. Das kann ja nicht Monate dauern bis sich da etwas tut!
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-11T06:34:34Z" title="2021-10-11 06:34 ">
+   Oktober 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/90807-gojo/?do=hovercard" data-mentionid="90807" href="https://community.magenta.at/profile/90807-gojo/" rel="">
+     @Gojo
+    </a>
+    interessant, dass es bei Dir nicht wirkt. Welches Betriebssystem / Version, welcher Browser / Version?
+   </p>
+   <p>
+   </p>
+   <p>
+    Im Chromium Projekt wurde der SO_RANDOMIZE_PORT Change übrigens am 31. August 2021 wieder reverted:
+   </p>
+   <p>
+    <a href="https://chromium-review.googlesource.com/c/chromium/src/+/3129902/1..4" rel="external nofollow">
+     https://chromium-review.googlesource.com/c/chromium/src/+/3129902/1..4
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Allerdings dauert das noch eine Weile bis es in der Stable-Release ab Chrome v95 ankommt:
+   </p>
+   <p>
+    <a href="https://chromiumdash.appspot.com/commits?commit=1ce4b7bcd754c7fbff5af8b6ad31e3641e0614f5&amp;platform=Windows" rel="external nofollow">
+     https://chromiumdash.appspot.com/commits?commit=1ce4b7bcd754c7fbff5af8b6ad31e3641e0614f5&amp;platform=Windows
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    <img alt="image.png.33c1b32490253b2fa5553d866361e7b9.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3453" src="images/uploads/image.png.33c1b32490253b2fa5553d866361e7b9.png"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Wobei das nun mittlerweile nur noch ein paar Tage dauert, um den 19. Oktober ist v95 zum Rollout vorgesehen. Als Chrome Beta oder als Microsoft Edge Beta kannst Du v95 jetzt schon testen - bin gespannt ob das die Problematik (zumindest durch den Browser getriggert, der Firmware-Bug bleibt ja weiterhin bestehen) etwas entschärft.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Gojo
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-11T06:58:21Z" title="2021-10-11 06:58 ">
+   Oktober 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/89625-gunnar/?do=hovercard" data-mentionid="89625" href="https://community.magenta.at/profile/89625-gunnar/" rel="">
+     @gunnar
+    </a>
+    ,
+    <br>
+     Ich nutze Windows 10 Enterprise (Version    10.0.19043 Build 19043)
+     <br>
+      Browser ist Edge Chromium 94.0.992.38
+      <br>
+       <br>
+        Ich habe jetzt mal die angesprochene Beta runtergeladen und dort scheint das Problem nicht aufzutreten (zumindest kann ich dort problemlos die wetter.orf.at Seite aufrufen)
+        <br>
+         <br>
+          Dann werde ich inzwischen die Beta Version des Browsers verwenden, solange die v95 noch nicht für alle released wurde.
+          <br>
+           <br>
+            Danke auf alle Fälle für deine Bemühungen 👍!
+           </br>
+          </br>
+         </br>
+        </br>
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-11T07:03:12Z" title="2021-10-11 07:03 ">
+   Oktober 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Win10 Build 19043 ist 21H1, entspricht also auch der Version mit der ich getestet habe. Vielleicht doch nochmal die konfigurierte Dynamic-Port-Range prüfen (
+    <a href="https://hitco.at/blog/magenta-connect-box-rebootet/" rel="external nofollow">
+     wie in meinem Blog-Post erläutert
+    </a>
+    ), ob diese wirklich wie folgt konfiguriert ist:
+   </p>
+   <p>
+    <img alt="image.png.bb0f43882005382db0b7dedba0307915.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3454" src="images/uploads/image.png.bb0f43882005382db0b7dedba0307915.png"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Gojo
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-11T07:10:10Z" title="2021-10-11 07:10 ">
+   Oktober 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das ist bei mir eingestellt. Sollte so passen...
+    <br>
+     <img alt="image.png.97dbbb7c50cf93666485a526df92d407.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3455" src="images/uploads/image.png.97dbbb7c50cf93666485a526df92d407.png"/>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Ralf M
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-11T07:11:03Z" title="2021-10-11 07:11 ">
+   Oktober 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    hi gunnar et al,
+   </p>
+   <p>
+   </p>
+   <p>
+    wie schon mal erwähnt geht's mir gleich wie
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/90807-gojo/?do=hovercard" data-mentionid="90807" href="https://community.magenta.at/profile/90807-gojo/" rel="">
+      @Gojo
+     </a>
+    </span>
+    . zwar kann ich mit setzen der niedrigeren portrange erzwingen, dass das modem praktisch jedesmal wenn ich auf orf.at F5 drücke crasht; aber selbst in der hohen portrange passiert das 1-2x täglich. nachdem sich firmwareseitig ja nix tut hoffe ich jetzt auch auf die neue chrome release. danke nochmal für die analyse, immerhin hab ich vermeiden können die stichleitung tauschen lassen .......
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

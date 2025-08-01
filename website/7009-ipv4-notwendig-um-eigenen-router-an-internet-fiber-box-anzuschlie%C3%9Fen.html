@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   IPv4 notwendig um eigenen Router an Internet Fiber Box anzuschließen?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   IPv4 notwendig um eigenen Router an Internet Fiber Box anzuschließen?
+  </h1>
+  <span class="author">
+   DSchneider
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-29T11:17:58Z" title="2021-06-29 11:17 ">
+   Juni 29, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo zusammen,
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich bin neu bei Magenta und hätte folgende Frage.
+   </p>
+   <p>
+    Bis dato hatte ich mein HomeNetzwerk wie folgt aufgebaut:
+   </p>
+   <p>
+   </p>
+   <p>
+    "DSL Modem vom InternetAnbieter XY"  --&gt; " TP-Link Archer C80 Router" --&gt; via LAN / WLAN verbinden sich die einzelnen Devices
+   </p>
+   <p>
+   </p>
+   <p>
+    Nun lese ich, wenn man ein derartiges Setup möchte ( d.h die ConnectBox nicht aus Router nutzen) muss man a) die ConnectBox in den Modem Modus versetzen und b) sich auf IPv4 umstellen lassen.
+   </p>
+   <p>
+    Wenn ich aber einfach meinen Router (TP-Link Archer C80 Router) nehme, den WAN Port mittels Ethernet Kabel an die ConnectBox anschließe, im C80 Router die IP Adressen in das 10.0.0.x Segment lege (um keinen Konflikt mit den Default Adressen der Connect Box zu haben 192.168.0.X) gelange ich ebenfalls ins Internet obwohl die ConnectBox NICHT im Modem Modus betrieben wird und auch nicht auf IPv4 umgestellt worden ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    Kann mir das jemand erklären was nun die richtige Vorgehensweise ist?
+   </p>
+   <p>
+   </p>
+   <p>
+    lG
+    <br/>
+    Dieter
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-29T11:38:41Z" title="2021-06-29 11:38 ">
+   Juni 29, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Die Connect Box hat doch einen LAN Anschluss oder?
+    <br/>
+    Warum gehst du da einfach nicht weiter von LAN auf LAN und dann soll dein Router weiter verteilen.
+    <br/>
+    Wichtig ist, dass du den DHCP Server nur auf dem Modem oder deinen Router aktivierst - auf keinen Fall 2 DHCP Server laufen lassen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   DSchneider
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-29T11:47:18Z" title="2021-06-29 11:47 ">
+   Juni 29, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42905" data-ipsquote-contentid="7009" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1624966721" data-ipsquote-userid="70315" data-ipsquote-username="Christian_E">
+    <div class="ipsQuote_citation">
+     vor 2 Minuten schrieb Christian_E:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Die Connect Box hat doch einen LAN Anschluss oder?
+     </p>
+     <p>
+      Warum gehst du da einfach nicht weiter von LAN auf LAN und dann soll dein Router weiter verteilen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ja hat sie - dort würde ich ein LAN Kabel an den WAN Port meines Routers anstecken.
+   </p>
+   <p>
+    Der Router (also mein privater Router) macht dann das eigentliche Heimnetzwerk. An seinen LAN Ports hängen alle kabelgebundenen Devices und er wird auch ein eigenes WLAN erzeugen.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Wichtig ist, dass du den DHCP Server nur auf dem Modem oder deinen Router aktivierst - auf keinen Fall 2 DHCP Server laufen lassen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Muss ich nun die ConnectBox in den Modem Modus versetzen - wenn ja dann wäre ja der DHCP eh von Haus aus deaktiviert auf der ConnectBox? Und wenn ich die ConnectBox in den Modem Modus versetze dann muss ich meinen Anschluss auch auf IPv4 ändern - korrekt?
+   </p>
+   <p>
+   </p>
+   <p>
+    Ziel soll sein, dass nur mein Router als DHCP Server dient - auf dem hab ich auch Portforwarding eingerichtet dass ich mich von remote via VPN einwählen kann. Das sollte ja auch funktionieren wenn ich die ConnectBox vom ursprünglichen Router Modus in den Modem Modus versetze.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich verstehe nur nicht, wieso ich explizit bei Magenta anrufen muss, dass mein Anschluss auf IPv4 umgestellt wird ?!
+   </p>
+   <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed399816918" scrolling="no" src="5743-wlan-modem.html" style="height:250px;max-width:502px;">
+   </iframe>
+   <p>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   E5170 -  Nach Deaktivierung des DHCP-Servers hat der Cube keine/falsche IP-Adresse
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   E5170 -  Nach Deaktivierung des DHCP-Servers hat der Cube keine/falsche IP-Adresse
+  </h1>
+  <span class="author">
+   Hansjörg Rainer
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-05-17T20:12:27Z" title="2017-05-17 20:12 ">
+   Mai 17, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Bei meinem
+    <span style="color:rgb(0,0,0);font-family:Arial, Helvetica, sans-serif, '宋体';font-size:12px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+     E5170
+    </span>
+    hab ich folgendes Problem:
+    <br/>
+    Da ich den DHCP-Server auf meiner Synology-NAS laufen lassen möchte, hab ich dort den DHCP-Server konfiguriert und am
+    <span style="color:rgb(0,0,0);font-family:Arial, Helvetica, sans-serif, '宋体';font-size:12px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+     E5170
+    </span>
+    abgedreht. Sobald der Würfel nun durchgestartet wird, ist seine eigene IP-Adresse weg - zumindest komme ich nicht mehr hin (von einem PC aus, welcher eine statische IP-Adresse hat). Auch ein Anpingen ist nicht mehr möglich.
+    <br/>
+    Auf der NAS am neuen DHCP-Server sehe ich, dass der MAC-Adresse des Routers eine dynamische IP zugewiesen wurde - welche aber interessanterweise auch nicht anpingbar ist.
+   </p>
+   <p>
+    Ich komme gar nicht mehr hin - nur mittels Reset kann ich dann erst wieder drauf und alles neu einstellen.
+   </p>
+   <p>
+    Nach meinem Verständnis sollte beim Deaktivieren des DHCP-Servers die dort eingetragene IP-Adresse (inkl. Subnetmask) trotzdem noch funktionieren, oder? - Eine dynamische Gatewayadresse macht ja keinen Sinn....
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-05-18T10:28:53Z" title="2017-05-18 10:28 ">
+   Mai 18, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi!
+   </p>
+   <p>
+    Also kurz gesagt, ja du hast recht.
+   </p>
+   <p>
+    Sobald du den DHCP am Router deaktivierst, und dem Router eine IP + Subnetmask gibst, sollten diese Einstellungen auch entsprechend gespeichert bleiben und er Router mittels dieser IP erreichbar sein.
+   </p>
+   <p>
+    Welche IP Range verwendest du im Netzwerk?
+   </p>
+   <p>
+    Ist der Router direkt mit dem NAS Verbunden oder über einen Switch?
+   </p>
+   <p>
+    LGFW
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Hansjörg Rainer
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-05-18T11:45:56Z" title="2017-05-18 11:45 ">
+   Mai 18, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Vielen Dank für die rasche Antwort:
+   </p>
+   <p>
+    Gateway-IP: 192.168.8.1/255.255.255.0
+   </p>
+   <p>
+    dhcp-Server deaktivert (früher: 192.168.8.10 - 192.168.8.99)
+    <br/>
+    statische IP-Adressen hab ich ab 100 aufwärts
+    <br>
+     die NAS hat 192.168.8.100 und hängt über einen Gigabit-Switch am Router (bzw. Netzwerk)
+     <br>
+      Mein PC hat ebenfalls eine statische IP-Adresse (192.168.8.101) und hängt auch am Switch.
+     </br>
+    </br>
+   </p>
+   <p>
+    Drucker, Raspi, Fernseher sind statisch.
+    <br>
+     Handys, Notebooks, etc. sind dynamisch.
+     <br/>
+     DNS-Server liegt ebenfalls am NAS
+    </br>
+   </p>
+   <p>
+    Wenn ich die Einstellungen so (wie unten angeführt) übernehme und durchstarte, ist die Box nicht mehr erreichbar!
+   </p>
+   <p>
+    <img alt="dhcp.png" class="ipsImage ipsImage_thumbnailed" data-fileid="390" src="images/uploads/dhcp.png.8637cff4bf534fd830e0ed2a608de8dc.png"/>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="8 yr" datetime="2017-05-18T12:25:06Z" title="2017-05-18 12:25 ">
+      Mai 18, 2017
+     </time>
+     von Hansjörg Rainer
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-05-18T19:53:44Z" title="2017-05-18 19:53 ">
+   Mai 18, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Die statischen IP Adressen sollen über die Box gehen und die dynamischen über DHCP? Ich verstehe den Sinn des Setups noch nicht ganz.
+   </p>
+   <p>
+    Generell kann man ja auch statische IP Adressen vergeben, obwohl man DHCP aktiviert hat...
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="8 yr" datetime="2017-05-18T20:05:12Z" title="2017-05-18 20:05 ">
+      Mai 18, 2017
+     </time>
+     von MarioM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-05-19T08:16:15Z" title="2017-05-19 08:16 ">
+   Mai 19, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich nehme an er will einfach die Box als reines Modem nutzen und hat ihr somit eine statische IP zugewiesen. Die restlichen IPs werden vom DHCP am NAS vergeben.
+   </p>
+   <p>
+    Mein Setup ist relativ ähnlich, allerdings hab ich damit keine Probleme. Ich nutze IP Adressen im 192.168.88.x Bereich.
+   </p>
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/71194-hansjoerg-rainer/?do=hovercard" data-mentionid="71194" href="https://community.magenta.at/profile/71194-hansjoerg-rainer/" rel="">
+     @Hansjörg Rainer
+    </a>
+    - hast du testweise mal eine andere Range versucht einzurichten? also statt dem 8.1er Netz ein z.B. 2.1er? Ich weiß, maybe ein recht "seltsamer" Ansatz... aber aus meinen Erfahrungen eine recht gute Testmöglichkeit.
+   </p>
+   <p>
+    LGFW
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Hansjörg Rainer
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-05-19T08:36:34Z" title="2017-05-19 08:36 ">
+   Mai 19, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    @Fichtlwichtl: Ja genau so ist es - dhcp und (internen) dns übernimmt die NAS. die Box ist nur Router und Gateway.
+    <br>
+     Ich werde die Box nochmals resetten und dann als einzige Änderung DHCP deaktivieren - dann sollte der Router auf jeden Fall über 192.168.1.1 erreichbar sein.
+    </br>
+   </p>
+   <p>
+    Danke vorerst mal für den Tipp.
+   </p>
+   <p>
+    lg
+    <br>
+     Hansjörg
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-05-19T09:11:35Z" title="2017-05-19 09:11 ">
+   Mai 19, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Was hast du denn für einen Switch dazwischen hängen? Schon mal die Konfiguration von dem Switch gecheckt?
+   </p>
+   <p>
+    Welche Geräte kannst du denn alle pingen? Alle außer die Box?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Hansjörg Rainer
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-05-22T06:05:13Z" title="2017-05-22 06:05 ">
+   Mai 22, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo!
+    <br>
+     Ich hab am Wochenende mal einen Reset der Box gemacht und dann nur das DHCP abgedreht.
+     <br>
+      Dann funktioniert der Zugriff ganz normal (natürlich nur von den Geräten mit statischen Adressen).
+     </br>
+    </br>
+   </p>
+   <p>
+    Sobald ich den DHCP-Server auf der NAS aufdrehe, holt sich die Box nach einem Restart eine dynamische Adresse des DHCP-Servers - was sie eigentlich nicht tun sollte.
+   </p>
+   <p>
+    Muss ich auf der Box noch was einstellen, so dass die Adresse statisch bleibt?
+   </p>
+   <p>
+    Eventuell liegt das Problem vielleicht doch am DHCP-Server der NAS. Ich werde auch noch versuchen, dass ich am DHCP-Server die Box mittels der MAC-Adresse auf eine immer gleich bleibende IP-Adresse binden kann. Das wäre zumindest ein Workaround.
+   </p>
+   <p>
+    lg
+   </p>
+   <p>
+    Hansjörg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-05-23T14:41:50Z" title="2017-05-23 14:41 ">
+   Mai 23, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi Hansjörg,
+   </p>
+   <p>
+    nein mir ist hier keine Einstellung bekannt, die man noch ändern könnte.
+   </p>
+   <p>
+    Bitte gib uns kurz Bescheid, ob dein Workaround funktioniert, würde mich sehr interessieren!
+   </p>
+   <p>
+    Hast bzw. hattest du eventuell die Möglichkeit rein mal Testweise ein anderes Gerät als DHCP Server zu konfigurieren um zu schauen wie sich die Box mit dem anderen DHCP Server verhält?
+   </p>
+   <p>
+    LGFW
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Chris177
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-07-01T06:15:19Z" title="2017-07-01 06:15 ">
+   Juli 1, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+    ich darf mich seit gestern, daweil noch, stolzer Besitzer einer Internet Box nennen
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+    Huawai E5071S-22
+   </p>
+   <p>
+    Nur habe ich ein ähnliches Problem so wie schon oben beschrieben; ich habe bei mir im Netzwerk alles auf den Bereich 10.0.0.XXX aufgebaut. Das Netzwerk schaut wie folgt aus ...
+   </p>
+   <p>
+    Internet Box verbunden mit einer Fritz Box und an der Fritzbox hängen 2 Tp link Wlan Router einer fürs OG einer fürs EG
+   </p>
+   <p>
+    Da ich für diverse Geräte, Backofen, IP Cam, NAS, Smart Home ... usw statische IP Adressen benötige habe ich mir das alles auf der FritzBox so eingestellt. Diese EInstellungen möchte ich wenn möglich behalten.
+   </p>
+   <p>
+    Somit wollte/möchte ich die Internetbox nur als "Modem" verwenden und habe den DHCP Server deaktiviert und der Internetbox eine IP Adresse im statischen Bereich der 10.0.0.XX gegeben.
+   </p>
+   <p>
+    Fakt ist seit dem ist die Box nicht mehr anwähl bar. Nach ca 15 Resets der Internetbox wo bei ich alle möglichen Bereich und Zusammenstellungen ausprobiert habe, stehe ich mit meinem Wissen an.
+   </p>
+   <p>
+    Habt Ihr vll eine Idee??
+   </p>
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/71194-hansjoerg-rainer/?do=hovercard" data-mentionid="71194" href="https://community.magenta.at/profile/71194-hansjoerg-rainer/" rel="">
+     @Hansjörg Rainer
+    </a>
+    wie hast du dein Problem gelöst??
+   </p>
+   <p>
+    Danke für eure Hilfe
+   </p>
+   <p>
+    lg CHRIS
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-07-01T12:42:32Z" title="2017-07-01 12:42 ">
+   Juli 1, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/71484-chris177/?do=hovercard" data-mentionid="71484" href="https://community.magenta.at/profile/71484-chris177/" rel="">
+      @Chris177
+     </a>
+    </span>
+   </p>
+   <p>
+    <span>
+     Ich verstehe nicht ganz, warum du den DHCP Server der Box abdrehen willst und die IP ändern? Wenn du eh einen Router dahinter hängen hast, der ALLES andere verwaltet.
+    </span>
+    <br>
+     <br>
+      Alles was bis zur Fritzbox geht, muss ja nicht zwingend ein 10er Netz sein ...
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Chris177
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-07-02T09:50:54Z" title="2017-07-02 09:50 ">
+   Juli 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Mario,
+   </p>
+   <p>
+    ich habe jetzt die Internetbox auf 192.168.1.1 eingestellt und ihr einen DHCP Bereich von 2 - 3 gegeben. Mir kommt es so vor dass sich einige Geräte in diesen Bereich einwählen und dass diese immer zwischen den 2 Bereich von Fritzbox und Internetbox herumhüpfen.
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-07-03T07:12:03Z" title="2017-07-03 07:12 ">
+   Juli 3, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Also wenn die Geräte im WLAN oder LAN der Fritzbox hängen, dann sollten sie die IP Adresse auch von dort beziehen
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+    Das siehst du aber eh in der Admin Oberfläche - wenn dort alle Geräte drinnen sind, die du so hast, dann funktioniert das einwandfrei
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+   <p>
+    Nicht dass sich ein Gerät vielleicht mit dem WLAN der HomeNet Box verbindet
+    <img alt=":P" data-emoticon="" height="20" src="images/emoticons/tma_tounge-o.png" srcset="images/emoticons/tma_tounge-o@2x.png 2x" title=":P" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Chris177
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-07-04T17:49:44Z" title="2017-07-04 17:49 ">
+   Juli 4, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Also bis jetzt hatte ich keine Probleme dass ein Gerät von der LTE Box eine IP bekommten hätte, ABER jetzt ist ein neues Problem aufgetreten und zwar würde ich gerne einen Port weiterleiten.
+   </p>
+   <p>
+    Habe mich durch gegoogelt - APN auf
+    <span style="color:rgb(44,44,44);font-family:'Open Sans', Helvetica, Arial, sans-serif;font-size:14.6667px;font-style:normal;font-weight:normal;letter-spacing:normal;text-align:left;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
+     business.gprsinternet
+    </span>
+    und nun wollte ich im Menü "Virtueller Server" den Port weiterleiten. Nur da es sich um eine IP Adresse handelt die die LTE Box nicht kennt lässt Sie mich nicht weiter.
+   </p>
+   <p>
+    Weiteres Problem meine Sonos Lautsprecher hängen auch im 10.0.0XX Bereich und bekommen keine Internet-Verbindung.
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-07-04T21:59:22Z" title="2017-07-04 21:59 ">
+   Juli 4, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Naja normal musst du nur den Port von der HomeNet Box auf die FritzBox und von der FritzBox weiter auf dein Gerät weiterleiten - sprich du musst es auf beiden Geräten eintragen, sonst wird das natürlich nie funktionieren.
+   </p>
+   <p>
+    Nur die Sonos Lautsprecher, oder auch noch andere Geräte?
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Chris177
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-07-05T14:04:31Z" title="2017-07-05 14:04 ">
+   Juli 5, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ist irgendwie klar was du da schreibst
+    <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+    Geht trotzdem nicht weil, die HomeNet Box nur IP Adressen im Bereich 192.168.1.XX zulässt also in Ihrem DHCP Bereich.
+   </p>
+   <p>
+    das Gerät, bei welchen ich den Port weiterleiten will hat die IP 10.0.0.3 der Router hat 10.0.0.6 und die Box hat 192.168.1.1
+   </p>
+   <p>
+    habe auch Fotos angehängt, Bitte um Hilfe.
+   </p>
+   <p>
+    Bei den Sonos Lautsprechern funktioniert zwar der Zugriff auf den Musikserver (NAS) aber nicht auf die Internetradios egal ob der Sonos fix verkabelt ist oder im Wlan hängt.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/595cf1e4d0d25_fritzboxPort.PNG.bfe324f2a7b8514e0e308861cfb3e222.PNG">
+     <img alt="fritzbox Port.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="406" src="images/uploads/595cf1e4d0d25_fritzboxPort.PNG.bfe324f2a7b8514e0e308861cfb3e222.PNG"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/595cf1e671d8f_HomeNetBoxport.PNG.6d5c1c47599aefd05bc0b8d977e70e6c.PNG">
+     <img alt="HomeNet Box port.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="407" src="images/uploads/595cf1e671d8f_HomeNetBoxport.PNG.6d5c1c47599aefd05bc0b8d977e70e6c.PNG"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-07-06T07:31:17Z" title="2017-07-06 07:31 ">
+   Juli 6, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ehm, wenn du den Router an der Box ansteckst, dann musst der einen IP Adresse im DHCP Bereich der HomeNet Box bekommen
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+    Sonst hast du irgendwas falsch angesteckt ...
+   </p>
+   <p>
+    Was steht denn auf der FritzBox bei der WAN Verbindung? Dort solltest du vermutlich von der HomeNetBox eine IP Adresse bekommen und alle anderen Geräte hinter der FritzBox haben dann natürlich die 10er Adresse
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gs1969
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-05T12:04:32Z" title="2018-05-05 12:04 ">
+   Mai 5, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ein Jahr später zu Doku-Zwecken für Hilfesuchende.
+   </p>
+   <p>
+    Ich hatte exakt dasselbe Problem mit der E5170 Box wie von Hansjörg im Eingangspost beschrieben. Sobald DHCP deaktiviert, war das Ding nicht mehr erreichbar.
+    <br>
+     <br>
+      Mir unverständlich ist auch, warum der Menüpunkt für DHCP unter "WLAN" untergebracht ist, der Würfel hat ja auch einen Ethernet-Anschluß und lässt sich auch ohne WLAN betreiben. Ich habe mir damit geholfen, einen zusätzlichen Firewall-Router mit Ethernet und WLAN an den E5170 zu stöpseln. An diesem hängen nun alle Clients in einem eigenen Netz, für das ein Raspberry Pi stromsparend DHCP und DNS macht.
+      <br>
+       <br>
+        Konfiguration:
+        <br>
+         E5170:  dyn. public IP am WAN interface, 192.168.0.1/24 am LAN interface
+         <br>
+          Router: 192.168.0.2/24 am WAN interface, 192.168.1.1/24 am LAN interface
+         </br>
+        </br>
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+   <p>
+    Durch die Netzaufteilung kann ich den DHCP auf der E5170 Box laufen lassen, so kratzt das keine der anderen Geräte.
+   </p>
+   <p>
+    Für die Public IP brauchts übrigens nach wie vor (05/2018) den APN "business.gprsinternet", Benutzername "t-mobile", Passwort "tm".
+    <br>
+     Einzutragen unter "Verbindungsaufbau" -&gt; "Profilverwaltung".
+     <br>
+      <br>
+       Cheers,
+       <br/>
+       Gerfried
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-20T04:11:33Z" title="2018-05-20 04:11 ">
+   Mai 20, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26160" data-ipsquote-contentid="3727" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1525521872" data-ipsquote-userid="76199" data-ipsquote-username="gs1969">
+    <div class="ipsQuote_citation">
+     Am 5/5/2018 um 14:04 schrieb gs1969:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Mir unverständlich ist auch, warum der Menüpunkt für DHCP unter "WLAN" untergebracht ist, der Würfel hat ja auch einen Ethernet-Anschluß und lässt sich auch ohne WLAN betreiben
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Nachdem du nur einen Port hast macht DHCP irgendwie keinen Sinn oder?
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26160" data-ipsquote-contentid="3727" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1525521872" data-ipsquote-userid="76199" data-ipsquote-username="gs1969">
+    <div class="ipsQuote_citation">
+     Am 5/5/2018 um 14:04 schrieb gs1969:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich habe mir damit geholfen, einen zusätzlichen Firewall-Router mit Ethernet und WLAN an den E5170 zu stöpseln
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Das rate ich auch immer wieder - erspart viele Troubles und bringt viele Vorteile
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

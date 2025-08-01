@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   PCIe WLan Modul - keine Verbindung zu 5 GHz der Connect Box möglich
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   PCIe WLan Modul - keine Verbindung zu 5 GHz der Connect Box möglich
+  </h1>
+  <span class="author">
+   DaSto
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-03T18:57:05Z" title="2021-06-03 18:57 ">
+   Juni 3, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Magenteraner/innen,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich wurde vor kurzem vom alten UPC 75mbit auf das neue Internet Fiber 150 umgestuft. Bisher hab ich meinen Stand-PC via PowerLine am LAN gehabt und bin eigentlich immer gut auf die Bandbreite gekommen. Seit der Umstellung hat sich die PowerLine Connection bei ~55mbit eingependelt (prinzipiell OK). Alle WLAN Geräte (Handys, Notebooks) sind easy mit der 5 GHz Frequenz verbunden und schöpfen die neue 150mbit Bandbreite voll ab. Damit ich das auch auf meine PC nutzen kann, hab ich mir vor kurzem den
+    <a href="https://www.amazon.de/PCE-AX3000-PCIe-Karte-Bluetooth-Dual-Band-Antennen/dp/B07VWXKHTY?th=1" rel="external nofollow">
+     ASUS AX3000 Dual Band Wi-Fi 6 PCI-E Adapter
+    </a>
+    gegönnt und eingebaut. Seltsamerweise schafft der es um die Burg
+    <strong>
+     NICHT
+    </strong>
+    sich mit 5 GHz zu verbinden (keine gültige IP) - 2.4 GHz aber kein Problem, da aber nur mit max. 33mbit unterwegs. Ich habe unter anderem folgendes erfolglos Versucht:
+   </p>
+   <p>
+   </p>
+   <ul>
+    <li>
+     dem PC eine statische IP zuweisen (inkl. DNS, Subnetz, Gateway)
+    </li>
+    <li>
+     5 GHz bevorzugen am Adapter einstellen
+    </li>
+    <li>
+     5 GHz statt 802.11ax auf 802.11ac am Adapter einstellen
+    </li>
+    <li>
+     Getrennte SSID's nach Frequenz (auch neue PW / alle sonstigen Frequenz-Konfigurationen der Connect Box sind im Standardzustand)
+    </li>
+   </ul>
+   <p>
+   </p>
+   <p>
+    Erfolgreich getestet hab ich hingegen u.a.:
+   </p>
+   <p>
+   </p>
+   <ul>
+    <li>
+     Neue Geräte mit Connect Box und 5 GHz verbinden (z.B. Arbeits-Notebook - absolut problemlos mit voller Bandbreite sofort verbunden)
+    </li>
+    <li>
+     Neuen PCI-E Adapter mit meinem mobilen 5 GHz Hotspot verbunden (absolut problemlos - hier halt nur 42mbit download)
+    </li>
+    <li>
+     Neuen PCI-E Adapter mit mobilem 5 GHz Hotspot eines anderen Handys verbunden (absolut problemlos - hier halt nur 38mbit download)
+    </li>
+   </ul>
+   <p>
+   </p>
+   <p>
+    Ich komme hier irgendwie zu dem Schluss, dass meine Connect Box meinen Adapter nicht mag. Am Wi-Fi 6 und 802.11ax sollts nicht liegen, sonst könnt ich mich mit keinem anderen 5 GHz (Wi-Fi 5) verbinden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Was kann ich hier noch tun zur Fehlerfindung/-behebung? Wäre enorm schade wenn ich auf meinem PC auf die volle Bandbreite verzichten müsste.
+    <br/>
+    <br/>
+    Vielen Dank und schönen Abend,
+   </p>
+   <p>
+    DaSto
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Rexalius2000
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-03T20:02:21Z" title="2021-06-03 20:02 ">
+   Juni 3, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/89800-dasto/?do=hovercard" data-mentionid="89800" href="https://community.magenta.at/profile/89800-dasto/" rel="">
+      @DaSto
+     </a>
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    <span>
+     Hast du schon versucht den 5 GHz Wlan Kanal zu ändern?
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   DaSto
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-06T08:42:41Z" title="2021-06-06 08:42 ">
+   Juni 6, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42534" data-ipsquote-contentid="6956" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1622750541" data-ipsquote-userid="77193" data-ipsquote-username="Rexalius2000">
+    <div class="ipsQuote_citation">
+     Am 3.6.2021 um 22:02 schrieb Rexalius2000:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo
+      <span>
+       <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/89800-dasto/?do=hovercard" data-mentionid="89800" href="https://community.magenta.at/profile/89800-dasto/" rel="">
+        @DaSto
+       </a>
+      </span>
+     </p>
+     <p>
+     </p>
+     <p>
+      <span>
+       Hast du schon versucht den 5 GHz Wlan Kanal zu ändern?
+      </span>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Was im speziellen soll ich ändern? Modus, Kanal, Kanalbreite? Wie gesagt, sogar mobilen Hotspot mit gleichen Settings (Kanal 44, Breite 40MHz) bekomm ich in einer Sekunde fehlerfrei verbunden. Nur die Connect Box eben nicht - da erhalte ich unter 5GHz keine gültige IP, daher auch kein Netzwerk und kein Internet.
+    <br/>
+    <br>
+     Bei LAN oder 2.4GHz erhalte ich die "normale" 192.168.X.X IP zugewiesen, bei 5GHz erhalte ich plötzlich eine 169.254.X.X IP. Anscheinend unter 5 GHz der DNS nicht erreichbar und daher die Win IP erhalten? Ich checks nicht warum ich einfach nicht ins 5 GHz komme.......
+    </br>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-06-06T09:19:58Z" title="2021-06-06 09:19 ">
+      Juni 6, 2021
+     </time>
+     von DaSto
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-06T12:00:03Z" title="2021-06-06 12:00 ">
+   Juni 6, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Die 192.168.X.X IP-Adressen vergeben sich die Geräte selber z.B. wenn der DHCP Server (hier in der Connect Box eingebaut) nicht antwortet und keine statische IP-Adresse konfiguriert ist.
+   </p>
+   <p>
+    In dieser Asus PCIe Karte steckt ein Intel WiFi 6 Modul.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich konnte erst vor kurzem erst Erfahrungen mit einem Intel WiFi 6 Modul in Kombination mit der Connect Box machen.
+   </p>
+   <p>
+    Es gab bei diesem Setup auch Verbindungsprobleme. Diese konnten Großteils durch die Konfiguration einer statischen IP-Adresse am PC behoben werden.
+    <br>
+     In den Standardeinstellungen der Connect Box (siehe
+     <a href="http://files.customersaas.com/files/xBMHkAY6yrr4RAWmtuj6dMdY.pdf" rel="external nofollow">
+      Handbuch Seite 43 links
+     </a>
+     ) belieben die Adressen beginnend mit 192.168.0.2 bis inkl. 192.168.0.9 frei.
+    </br>
+   </p>
+   <p>
+    Um eine Statische IP-Adresse unter Windows zu setzten, stelle zuerst eine Verbindung mit dem betreffenden W-Lan her. Dann gehe zu Einstellungen -&gt; Netwerk und Internet -&gt; Eigenschaften -&gt; scrolle runter zu IP-Einstellungen -&gt; Bearbeiten -&gt; statt Automatisch (DHCP), Manuell auswählen -&gt; IPv4 einschalten.
+   </p>
+   <p>
+    Bei IP-Adresse eine IP von 192.168.0.2 bis inkl. 192.168.0.9 eintragen.
+   </p>
+   <p>
+    Als Subnetzpräfixlänge 24 und als Gateway die Connect Box unter mit 192.168.0.1
+   </p>
+   <p>
+    Als DNS Kannst du entweder die Connect Box (192.168.0.1) eintragen oder einen alternativen, wie den Google DNS oder 1Dot von Cloudflare.
+   </p>
+   <p>
+   </p>
+   <p>
+    Versuche dies Mal und berichte, ob es damit funktioniert.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-06-06T12:01:03Z" title="2021-06-06 12:01 ">
+      Juni 6, 2021
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   DaSto
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-06-06T16:00:15Z" title="2021-06-06 16:00 ">
+   Juni 6, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42586" data-ipsquote-contentid="6956" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1622980803" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 3 Stunden schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Die 192.168.X.X IP-Adressen vergeben sich die Geräte selber z.B. wenn der DHCP Server (hier in der Connect Box eingebaut) nicht antwortet und keine statische IP-Adresse konfiguriert ist.
+     </p>
+     <p>
+      In dieser Asus PCIe Karte steckt ein Intel WiFi 6 Modul.
+     </p>
+     <p>
+     </p>
+     <p>
+      ....
+     </p>
+     <p>
+      Versuche dies Mal und berichte, ob es damit funktioniert.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Danke für deine genaue Analyse und deine Hinweise. Ich habs mit statischer IP bereits versucht, jetzt aber auch deine Anmerkungen einfließen lassen. Auch hier Ende ich leider immer im "Modus" mit dem "nicht identifizierbares Netzwerk".
+   </p>
+   <p>
+   </p>
+   <p>
+    <img alt="image.png.22a9a79e22c82735d1a60b2306c1ff52.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3153" src="images/uploads/image.png.22a9a79e22c82735d1a60b2306c1ff52.png"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hab nun meinen Windows Event Log ein wenig durchforstet und bekomme bei 5 GHz Verbindungsversuchen immer die selben 3 Fehler:
+   </p>
+   <ul>
+    <li>
+     Quelle - Netwtw08; event-id - 5007; Beschreibung - TX/CMD timeout (TfdQueue hanged)
+    </li>
+    <li>
+     Quelle - Netwtw08; event-id - 5005; Beschreibung - Intel(R) Wi-Fi 6 AX200 160MHz : Interner Fehler aufgetreten.
+    </li>
+    <li>
+     Quelle - Netwtw08; event-id - 5002; Beschreibung - Intel(R) Wi-Fi 6 AX200 160MHz : Fehlfunktion des Netzwerkadapters wurde ermittelt.
+    </li>
+   </ul>
+   <p>
+    Ich hab speziell nach dem 5007er gegoogelt und nun die Kanalbreite im PCI-E Modul statt auf "Auto" auf "20 MHz" eingestellt. Jetzt hab ich mal eine halbwegs stabile Verbindung zur 5 GHz Frequenz. Diese ist, selbst als einziges WLAN Gerät, aber aktuell mit max. 90mbit gedeckelt (statt 150mbit). Andere Kanalbreiten kann ich leider am PCI-E Modul nicht einstellen. Offene Frage bleibt - liegt das jetzt am PCI-E Modul oder an der Connect Box, dass nur diese statische Kanalbreite funktioniert? Lt. Connect Box gehen ja 3 verschiedene MHz Einstellungen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke an Leser und Kommentare.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

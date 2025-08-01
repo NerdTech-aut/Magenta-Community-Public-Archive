@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Mit welchen Masten ist mein Router verbunden?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Mit welchen Masten ist mein Router verbunden?
+  </h1>
+  <span class="author">
+   MarkusPetzke
+  </span>
+  <br/>
+  <time class="Feb 27" datetime="2025-02-27T13:23:08Z" title="2025-02-27 13:23 ">
+   Februar 27
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo.
+    <br/>
+    Ich wollte fragen, wie ich herausfinden kann, mit welchen Masten mein Router verbunden ist. Da direkt vor meiner Haustür ein Masten steht, der auch laut
+    <strong>
+     Cellmapper
+    </strong>
+    bei Magenta ist, aber der Support meinte, ich sei mit einem anderen (schlechteren) Masten verbunden. Zusätzlich meinte der Support der Masten vor meiner Tür sei gar nicht von Magenta
+    <br/>
+    <br/>
+    Ich habe den
+    <strong>
+     Router
+    </strong>
+    : Xiaomi 5G CPE Pro (CB0401V2)
+    <br>
+     mit der aktuellsten
+     <strong>
+      Version
+     </strong>
+     : MiWiFi 3.0.6
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    Zusätzlich wollte ich fragen ob jemand kontrollieren könnte ob der Masten (vor meiner Tür) mit der Nummer,
+    <strong>
+     eNB ID 71501
+    </strong>
+    bei Magenta ist oder nicht? der schlechtere Masten ist,
+    <strong>
+     eNB ID 71501
+    </strong>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="Feb 27" datetime="2025-02-27T16:16:30Z" title="2025-02-27 16:16 ">
+   Februar 27
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/84485-markuspetzke/?do=hovercard" data-mentionid="84485" href="https://community.magenta.at/profile/84485-markuspetzke/" rel="">
+     @MarkusPetzke
+    </a>
+   </p>
+   <p>
+    mir ist aufgefallen, dass du zwei Mal dieselbe eNB ID geschrieben hast. Kannst du dies nochmal prüfen, dann versuche ich dir gerne zu helfen.
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarkusPetzke
+  </span>
+  <br/>
+  <time class="Feb 27" datetime="2025-02-27T17:14:43Z" title="2025-02-27 17:14 ">
+   Februar 27
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+     @NTM
+    </a>
+    aja, mein Fehler: der Masten vor meiner Tür ist
+    <strong>
+     eNB ID 71508
+    </strong>
+    und der schlechtere (weiter weg)
+    <strong>
+     eNB ID 71501
+    </strong>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="Feb 27" datetime="2025-02-27T23:44:28Z" title="2025-02-27 23:44 ">
+   Februar 27
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Einmal grundsätzlich es handelt sich bei den beiden um Sender von Magenta. Bei Cellmapper kann es vorkommen, dass Einträge teils dem falschen Netzbetreiber zugeordnet werden, sieht aber in diesem Fall nicht danach aus. Auch aus der Perspektive vom Senderkataster (Stand Juni 2024) mit dem fehlenden UMTS für diese Einträge sieht es gut aus. Wobei das Fehlen von UMTS auch zum aktuellen Datenstand nicht immer heißt, dass es sich um einen Magenta Masten handelt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Der Eintrag für den Sender eNB ID 71508 war auf Cellmapper nicht ganz an der richtigen Stelle eingetragen, sondern dieser ist um ca 108 Meter westlich und damit am Rand vom Gewerbegebiet und damit näher an den Wohnhäusern. Der Mast an sich gehört der TOWERS Infra Austria GmbH eine hundert-prozentige Tochter der DFMG Deutsche Funkturm GmbH, welche zu 49% der Deutsche Telekom AG gehört. Von den eingesetzten Frequenzen dürfte dieser für 4G mit Band 20, 8, 3 &amp; 1 ganz gut ausgestattet sein. 5G wird es entweder in Form von Band n1 DSS oder Band n28 geben. Sollte der Router n78 verwenden, dann kommt dieses Signal von einem anderen Standort.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bei dem Router kannst du zwar sehen welche Bänder verbunden sind, aber Signalstärke wird nur textuell statt numerisch angegeben und Daten wie Cell-ID oder eNB-ID gibt es für den Benutzer nicht. Du könntest die SIM in ein anderes Gerät geben, welches Daten zur Mobilfunkverbindung eher zugänglich macht wie Android Handys mit Apps wie Cellmapper oder G-Mon Pro.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich nehme mal an, dass die Bandbreite, welche du über deine Mobilfunkverbindung erreichst, nicht ganz zufriedenstellend ist?
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

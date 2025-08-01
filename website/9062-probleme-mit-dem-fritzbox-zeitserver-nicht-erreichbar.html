@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Probleme mit dem FRITZ!Box Zeitserver -  Nicht erreichbar
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Probleme mit dem FRITZ!Box Zeitserver -  Nicht erreichbar
+  </h1>
+  <span class="author">
+   DeepDiver86
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-29T17:26:54Z" title="2023-08-29 17:26 ">
+   August 29, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Liebe Community,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe seit ca. Juni das Problem, dass meine Fritz!Box 7530 keinen NTP-Server mehr erreichen kann. Habe bereits diverse durchprobiert. Dadurch kann ich über mein MyFritz! Konto nicht mehr auf die Fritz!Box zugreifen. Habe bereits am 07. August Magenta per E-Mail kontaktiert (Auftragsnummer XXXXXX), aber bis heute leider keine Antwort erhalten.
+   </p>
+   <p>
+   </p>
+   <p>
+    Im Juli habe ich bereits das Supportteam von AVM kontaktiert und folgende Antwort erhalten:
+   </p>
+   <p>
+    <em>
+     Nach Überprüfung der eingesandten Support-Daten gehen wir von einem Fehler in der Netzarchitektur bei Ihrem Anbieter aus.
+    </em>
+   </p>
+   <p>
+    <em>
+     Um das Fehlerbild zu lösen, empfehlen wir Ihnen, sich mit Ihrem Internetanbieter in Verbindung zu setzen und ihn darüber zu informieren, dass er die NTP-Konfiguration in seinen Autokonfigurationsserver (ACS) aktiviert und darüber auf der FRITZ!Box eine seperate logische Netzverbindung eingerichtet ist.
+    </em>
+   </p>
+   <p>
+    <em>
+     Über diese gemanagte Verbindung sind jedoch öffentliche NTP-Server im Internet nicht auflösbar oder erreichbar, sowie kein anbieterseitiger lokaler NTP-Dienst verfügbar.
+    </em>
+   </p>
+   <p>
+   </p>
+   <p>
+    <em>
+     Ihr Anbieter müsste nun dafür sorgen, dass er entweder einen eigenen NTP-Dienst innerhalb des ACS über diese Verbindung einrichtet oder über diese Verbindung externe NTP-Server zugänglich macht.
+    </em>
+   </p>
+   <p>
+   </p>
+   <p>
+    <em>
+     Alternativ kann Ihnen Ihr Anbieter eventuell als vorübergehende Lösung einen plattformeigenen NTP-Server mitteilen, welcher in seinem Netz erreichbar wäre.
+    </em>
+   </p>
+   <p>
+   </p>
+   <p>
+    Scheint also ein Problem bei Magenta zu sein. Habe die Fritz!Box auch schon versuchsweise auf die Werkseinstellung zurückgesetzt, hat aber leider auch nichts gebracht.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Manuel
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-09-01T11:32:48Z" title="2023-09-01 11:32 ">
+      September 1, 2023
+     </time>
+     von Jonathan Dorian
+    </strong>
+    <br>
+     Datenschutz
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   nickbeat76
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-01T00:21:23Z" title="2023-09-01 00:21 ">
+   September 1, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich hab bei meiner 7530 auch das gleiche Problem.
+    <br/>
+    Kein eingegebener NTP-Server ist laut Ereignis-Log erreichbar.
+    <br/>
+    Das komische allerdings ist, das im Ereignis-Log Datum und Uhrzeit richtig angezeigt werden,
+    <br/>
+    jedoch eine WLAN-Zeitsteuerung und Verbindung zum MyFritz!-Konto mit dem Fehler "Keine gültige Uhrzeit" abgebrochen werden.
+    <br/>
+    Neustart und Reset auf Werkseinstellungen der 7530 bringen auch nichts...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-01T03:46:28Z" title="2023-09-01 03:46 ">
+   September 1, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Die sauberste Lösung seitens Magenta wäre vermutlich den internen ntp Server irgendwie bekannt zu machen. (DHCP?)
+   </p>
+   <p>
+   </p>
+   <p>
+    Vermutlich ist da irgendwas schiefgegangen, sonst würde man von dem Problem schon länger hören
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-01T11:43:28Z" title="2023-09-01 11:43 ">
+   September 1, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55068" data-ipsquote-contentid="9062" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1693539988" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     Am 1.9.2023 um 05:46 schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Die sauberste Lösung seitens Magenta wäre vermutlich den internen ntp Server irgendwie bekannt zu machen. (DHCP?)
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo zusammen, ich habe soeben nachgefragt, wie wir da eine Lösung anbieten können.... to be continued.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-04T07:27:25Z" title="2023-09-04 07:27 ">
+   September 4, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo zusammen,
+   </p>
+   <p>
+   </p>
+   <p>
+    laut unseren Expert:innen, handelt es sich um eine individuelle Ursache und sollte mit dem Zurücksetzen des Modems auf Werkseinstellung behoben sein. Wenn das funktioniert, bitte hier um kurze Rückmeldung.
+   </p>
+   <p>
+   </p>
+   <p>
+    Liebe Grüße, JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Filostrato
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-05T19:25:51Z" title="2023-09-05 19:25 ">
+   September 5, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe eine Fritz!Box 7583 VDSL und ein Firmware-Upgrade auf die neueste Version 7.57 gemacht.
+    <br>
+     Der gleiche Fehler tritt auch bei mir auf.
+     <br>
+      Zurücksetzen auf die Werkseinstellungen hat leider nichts geändert.
+      <br>
+       Ein Recovery Image vom Hersteller AVM lässt sich auch nicht einspielen, mit dem Verweis, dass dieses eventuell mit der Magenta Konfiguration nicht kompatibel sein könnte.
+       <br>
+        Die Magenta Technikhotline hat den Austausch des Routers empfohlen.
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-09-05T19:29:05Z" title="2023-09-05 19:29 ">
+      September 5, 2023
+     </time>
+     von Filostrato
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   enks
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-05T20:00:57Z" title="2023-09-05 20:00 ">
+   September 5, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hatte nach dem Firmware-Upgrade der Fritzbox 7530 das gleiche Problem:
+   </p>
+   <p>
+    Keine der von mir probierten externen NTP-Server waren erreichbar und Neustart der Fritzbox schaffte keine Abhilfe.
+   </p>
+   <p>
+    Lösung für mich ist aktuell die Nutzung meines Unraid-Servers als NTP-Server für die Fritzbox durch Eintragung der lokalen IP des Servers in das entsprechende Feld.
+   </p>
+   <p>
+    Wenn ihr also selbst ein Gerät in eurem Netzwerk besitzt welches als NTP-Server fungieren kann dann könnt ihr dieses zur Synchronisation der Systemzeit eurer Fritzbox verwenden, zumindest bis Magenta selbst das Problem mit den externen NTP-Servern löst
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   nickbeat76
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-06T18:09:39Z" title="2023-09-06 18:09 ">
+   September 6, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Werksreset der 7530 bringt bei mir keinerlei Erfolg...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Filostrato
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-06T20:11:08Z" title="2023-09-06 20:11 ">
+   September 6, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55162" data-ipsquote-contentid="9062" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1694023779" data-ipsquote-userid="97894" data-ipsquote-username="nickbeat76">
+    <div class="ipsQuote_citation">
+     Am 6.9.2023 um 20:09 schrieb nickbeat76:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Werksreset der 7530 bringt bei mir keinerlei Erfolg...
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Aktuell hilft bei Magenta Fritz!Boxen leider nur ein Downgrade auf eine unsichere Firmware Release.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   nickbeat76
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-06T20:27:27Z" title="2023-09-06 20:27 ">
+   September 6, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Kleines Update:
+    <br>
+     Meine FritzBox läuft am aktuellen FritzOS 7.57.
+     <br>
+      Nachdem auch ein Reset auf Werkseinstellungen nichts gebracht hat, hab ich was ausprobiert.
+      <br>
+       Hab einen RasPi als NTP-Server konfiguriert und seine IP in der FritzBox als Zeitserver eingetragen.
+       <br>
+        Funktioniert...
+        <br>
+         Der NTP-Server im LAN kann sich ganz normal übers Internet synchronisieren und auch von der FritzBox angesprochen werden, über WAN kann die FritzBox selbst KEINE Verbindung zu irgendeinem Zeitserver herstellen.
+         <br/>
+         Konfiguration von MAGENTA fehlerhaft????
+        </br>
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-09-06T20:38:38Z" title="2023-09-06 20:38 ">
+      September 6, 2023
+     </time>
+     von nickbeat76
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   miss_kytah
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-07T09:12:41Z" title="2023-09-07 09:12 ">
+   September 7, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+    kurzes Update: Mit Version 7.29 sollte es funktionieren. Problem ist, dass das FritzOS 7.57 noch nicht freigegeben ist für Magenta Kunden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ein Reset des Modems wird da nicht helfen. Es muss explizit wieder Version 7.29 drauf sein
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Filostrato
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-07T10:39:10Z" title="2023-09-07 10:39 ">
+   September 7, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55173" data-ipsquote-contentid="9062" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1694077961" data-ipsquote-userid="97049" data-ipsquote-username="miss_kytah">
+    <div class="ipsQuote_citation">
+     Am 7.9.2023 um 11:12 schrieb miss_kytah:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Es muss explizit wieder Version 7.29 drauf sein
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Mit Version 7.50 gibt es auch keine Probleme mit der Erreichbarkeit von NTP-Servern im WAN.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-09-07T10:39:34Z" title="2023-09-07 10:39 ">
+      September 7, 2023
+     </time>
+     von Filostrato
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Stefanel
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-09T11:51:59Z" title="2023-09-09 11:51 ">
+   September 9, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+   </p>
+   <p>
+    habe seit dem Update auf 7.56 am 8. august das gleiche problem. dachte vielleicht löst das nächste update das problem von selbst.
+   </p>
+   <p>
+    heute habe ich 7.57 installiert und trotzdem ist das problem noch vorhanden.
+   </p>
+   <p>
+   </p>
+   <p>
+    auch mit den gleichen "fehlern", fritzbox meldet unter den ereignissen das die "zeitserver nicht erreichbar" sind und dadurch schlägt auch die kommunikation mit myfritz fehl. sehr schade.
+   </p>
+   <p>
+   </p>
+   <p>
+    hatte vor dem update auf 7.56, die version 7.55 drauf, da hat alles noch funktioniert.
+   </p>
+   <p>
+    leider bekommt man diese version nirgends mehr, auf den ftp-server von avm natürlich schon lange nicht mehr, habe überlegt ein downgrade auf 7.55 zu machen.
+   </p>
+   <p>
+    hat jemand einen link oder die version für die fritzbox 7530 noch irgendwo herum liegen?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Roman Schreiber
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-11T13:57:50Z" title="2023-09-11 13:57 ">
+   September 11, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55178" data-ipsquote-contentid="9062" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1694083150" data-ipsquote-userid="97911" data-ipsquote-username="Filostrato">
+    <div class="ipsQuote_citation">
+     Am 7.9.2023 um 12:39 schrieb Filostrato:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Mit Version 7.50 gibt es auch keine Probleme mit der Erreichbarkeit von NTP-Servern im WAN.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Das klingt vielversprechend. Ansonsten einfach die 7.29 nutzen, welche von Magenta bereitgestellt wird.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG RS.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   i34r83hiu3wh8iu3
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-13T18:31:26Z" title="2023-09-13 18:31 ">
+   September 13, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe leider genau das gleiche Problem. Nach dem Update auf 7.56 bzw. nun 7.57 funktioniert kein einziger NTP-Server mehr.
+   </p>
+   <p>
+    Ist ein Downgrade auf 7.50 safe durchführbar nach dem selben Ablauf wie man sonst upgraded (DSL-Connection trennen, Werksreset etc.)?
+   </p>
+   <p>
+   </p>
+   <p>
+    Wer es testen will: ich habe das alte 7.50 Image damals aufgehoben und hier hochgeladen
+   </p>
+   <p>
+   </p>
+   <p>
+    <a href="https://schicks.digital/download/f5377379-fff4-4674-85f5-7e1744044e31#KqlrNck6QZFlyQbgC9xLuw%3D%3D" rel="external nofollow">
+     https://schicks.digital/download/f5377379-fff4-4674-85f5-7e1744044e31#KqlrNck6QZFlyQbgC9xLuw%3D%3D
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    passwort zum download: magentantp
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-09-13T18:53:49Z" title="2023-09-13 18:53 ">
+      September 13, 2023
+     </time>
+     von i34r83hiu3wh8iu3
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Carlos Magnusen
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-14T17:50:26Z" title="2023-09-14 17:50 ">
+   September 14, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55268" data-ipsquote-contentid="9062" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1694629886" data-ipsquote-userid="97936" data-ipsquote-username="i34r83hiu3wh8iu3">
+    <div class="ipsQuote_citation">
+     Am 13.9.2023 um 20:31 schrieb i34r83hiu3wh8iu3:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+      Wer es testen will: ich habe das alte 7.50 Image damals aufgehoben und hier hochgeladen
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Vielen Dank für die Bereitstellung, habe genau dasselbe Problem - Zurücksetzen auf Werkseinstellungen ohne Erfolg. Leider lässt sich meine Fritz!Box jetzt auch nicht mehr downgraden, ich erhalte die Fehlermeldung "Die angegebene Datei enthält eine Firmware-Version, die älter ist als die momentan aktive Firmware". Oder muss ich zuerst auf 7.56, um dann auf 7.50 downgraden zu können?
+   </p>
+   <p>
+   </p>
+   <p>
+    Von der Magenta Technikhotline wurde ich leider nur zum AVM Support weitergeleitet, der verweist wiederum auf den Internetanbieter.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Filostrato
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-15T06:49:40Z" title="2023-09-15 06:49 ">
+   September 15, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55289" data-ipsquote-contentid="9062" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1694713826" data-ipsquote-userid="97944" data-ipsquote-username="Carlos Magnusen">
+    <div class="ipsQuote_citation">
+     Am 14.9.2023 um 19:50 schrieb Carlos Magnusen:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Vielen Dank für die Bereitstellung, habe genau dasselbe Problem - Zurücksetzen auf Werkseinstellungen ohne Erfolg. Leider lässt sich meine Fritz!Box jetzt auch nicht mehr downgraden, ich erhalte die Fehlermeldung "Die angegebene Datei enthält eine Firmware-Version, die älter ist als die momentan aktive Firmware". Oder muss ich zuerst auf 7.56, um dann auf 7.50 downgraden zu können?
+     </p>
+     <p>
+     </p>
+     <p>
+      Von der Magenta Technikhotline wurde ich leider nur zum AVM Support weitergeleitet, der verweist wiederum auf den Internetanbieter.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    <br>
+     Vielleicht hilft Dir diese Anleitung wenn das zweite Boot-Image auf der Box noch eine funktionierende Versionsnummer hat:
+     <a href="https://github.com/PeterPawn/modfs/blob/master/BOOTSELECTION.ger" rel="external nofollow">
+      https://github.com/PeterPawn/modfs/blob/master/BOOTSELECTION.ger
+     </a>
+    </br>
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-09-15T07:42:52Z" title="2023-09-15 07:42 ">
+      September 15, 2023
+     </time>
+     von Filostrato
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-15T08:49:37Z" title="2023-09-15 08:49 ">
+   September 15, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wenn Magenta den Austausch der Box anbieten am besten annehmen. Magenta kann theoretisch, wenn die Box physisch vorliegt, wieder eine passende Firmware aufspielen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Carlos Magnusen
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-21T17:06:03Z" title="2023-09-21 17:06 ">
+   September 21, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Leider funktioniert es bei mir nicht von 7.57 auf eine ältere Version downzugraden - hat das vielleicht schon jemand geschafft? Das Recovery Image von AVM lässt sich wegen des Magenta Brandings ebenfalls nicht einspielen. Ein anderes Gerät zur Einrichtung eines NTP-Servers habe ich leider nicht.
+   </p>
+   <p>
+   </p>
+   <p>
+    Von AVM selbst bekam ich exakt die selbe Antwort wie in Beitrag #1.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hilft sonst wohl nur Abwarten bis Magenta das Problem für die aktuellen Versionen löst oder einen plattformeigenen NTP-Server bekannt gibt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   biznizläuft
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-25T13:18:14Z" title="2023-09-25 13:18 ">
+   September 25, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    es kommt bewegung in die sache.
+   </p>
+   <p>
+    technisch gelöst ist es.
+   </p>
+   <p>
+   </p>
+   <p>
+    weiß noch nicht wieviel kommuniziert werden kann. gehe im moment davon aus das alle boxen großteils automatisch funktionieren werden.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-09-25T13:19:49Z" title="2023-09-25 13:19 ">
+      September 25, 2023
+     </time>
+     von biznizläuft
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-25T16:12:42Z" title="2023-09-25 16:12 ">
+   September 25, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Welcher Lösungsweg wurde gewählt?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian1030
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-25T18:56:31Z" title="2023-09-25 18:56 ">
+   September 25, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Habe auch seit dem UD auf 7.57 keine funktionierenden Web Zeitserver und habe einfach die IP einer meiner Synology NAS eingetragen und läuft wunderbar. Die NAS bezieht die Zeitsynchr. selber und kann diese im Netzwerk bereitstellen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Filostrato
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-26T07:09:57Z" title="2023-09-26 07:09 ">
+   September 26, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Habe gestern bei der Magenta Technik-Hotline nachgefragt bis wann Magenta aktuelle Firmware-Releases für seine Fritz!Boxen Online stellen wird.
+    <br>
+     <br>
+      Man konnte mir keinen Termin nennen, mein Hinweis bezüglich einer Sicherheitslücke würde an die entsprechende Stelle weitergeleitet werden .....
+      <br>
+       <br>
+        Vodafone beispielsweise hat seine Kunden schon vor zwei Wochen mit Updates versorgt.
+        <br>
+         <br>
+          Wenn Magenta seine Kunden schon bei den DSL-Zugängen/Fritz!Boxen auf eine providerspezifische Zwangskonfiguration einengt, dann sollten diese auch zügig mit Sicherheits- und Funktionsupdates versorgt werden.
+         </br>
+        </br>
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   DeepDiver86
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-26T19:38:08Z" title="2023-09-26 19:38 ">
+   September 26, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55469" data-ipsquote-contentid="9062" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1695647894" data-ipsquote-userid="81628" data-ipsquote-username="biznizläuft">
+    <div class="ipsQuote_citation">
+     Am 25.9.2023 um 15:18 schrieb biznizläuft:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      es kommt bewegung in die sache.
+     </p>
+     <p>
+      technisch gelöst ist es.
+     </p>
+     <p>
+     </p>
+     <p>
+      weiß noch nicht wieviel kommuniziert werden kann. gehe im moment davon aus das alle boxen großteils automatisch funktionieren werden.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Habe gerade meine Fritz!Box neugestartet. Bei mir kann ich leider noch keine Besserung feststellen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   r00t
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-27T07:21:36Z" title="2023-09-27 07:21 ">
+   September 27, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Vom AVM Support:
+   </p>
+   <p>
+   </p>
+   <p>
+    Nach Überprüfung der eingesandten Support-Daten gehen wir von einem Fehler in der Netzarchitektur bei Ihrem Anbieter aus.
+    <br>
+     <br>
+      Um das Fehlerbild zu lösen, empfehlen wir Ihnen, sich mit Ihrem Internetanbieter in Verbindung zu setzen und ihn darüber zu informieren, dass er die NTP-Konfiguration in seinen Autokonfigurationsserver (ACS) aktiviert und und darüber auf der FRITZ!Box eine separate logische Netzverbindung eingerichtet ist. Über diese gemanagte Verbindung sind jedoch öffentliche NTP-Server im Internet nicht auflösbar oder erreichbar, sowie kein anbieterseitiger lokaler NTP-Dienst verfügbar .
+      <br>
+       <br>
+        Ihr Anbieter müsste nun dafür sorgen, dass er entweder einen eigenen NTP-Dienst innerhalb des ACS  über diese Verbindung einrichtet oder über diese Verbindung externe NTP-Server zugänglich macht.
+        <br>
+         <br>
+          Alternativ kann Ihnen Ihr Anbieter eventuell als vorübergehende Lösung einen plattformeigenen NTP-Server mitteilen, welcher in seinem Netz erreichbar wäre, der dann in die FRITZ!Box wie folgt eingetragen werden kann:
+          <br>
+          </br>
+         </br>
+        </br>
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+   <p>
+    Klicken Sie in der Benutzeroberfläche der FRITZ!Box auf "Heimnetz"
+   </p>
+   <p>
+    Klicken Sie im Menü "Heimnetz" auf "Netzwerk".
+   </p>
+   <p>
+    Tragen Sie im Abschnitt "Zeitsynchronisation" den Zeitserver Ihres Internetanbieters ein. (bei NetCologne z.B. ntp.netcologne.de).
+   </p>
+   <p>
+    Aktivieren Sie die Option "FRITZ!Box als Zeitserver im Heimnetz bereitstellen".
+   </p>
+   <p>
+    Klicken Sie zum Speichern der Einstellungen auf "Übernehmen".
+   </p>
+   <p>
+    <br>
+     Es handelt sich hierbei nicht um einen Fehler der FRITZ!Box.
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Carlos Magnusen
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-29T08:46:52Z" title="2023-09-29 08:46 ">
+   September 29, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich konnte nun die Registrierung zum MyFritz!-Konto abschließen, indem ich meinen PC als lokalen NTP-Server eingerichtet habe (Anleitung unter
+    <a href="https://maxpabel.de/?p=566" rel="external nofollow">
+     https://maxpabel.de/?p=566
+    </a>
+    ) und anschließend die IP-Adresse des PCs in den Netzwerkeinstellungen der Fritz!Box eingetragen habe.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ist natürlich keine dauerhafte Lösung, aber reicht fürs Erste, um alle MyFritz!-Funktionen zu nutzen. Weiß jemand, in welchen Abständen die Zeit seitens Fritz!Box synchronisiert werden muss, bis man eine Fehlermeldung erhält?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   DeepDiver86
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-29T17:26:54Z" title="2023-08-29 17:26 ">
+   August 29, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Liebe Community,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe seit ca. Juni das Problem, dass meine Fritz!Box 7530 keinen NTP-Server mehr erreichen kann. Habe bereits diverse durchprobiert. Dadurch kann ich über mein MyFritz! Konto nicht mehr auf die Fritz!Box zugreifen. Habe bereits am 07. August Magenta per E-Mail kontaktiert (Auftragsnummer XXXXXX), aber bis heute leider keine Antwort erhalten.
+   </p>
+   <p>
+   </p>
+   <p>
+    Im Juli habe ich bereits das Supportteam von AVM kontaktiert und folgende Antwort erhalten:
+   </p>
+   <p>
+    <em>
+     Nach Überprüfung der eingesandten Support-Daten gehen wir von einem Fehler in der Netzarchitektur bei Ihrem Anbieter aus.
+    </em>
+   </p>
+   <p>
+    <em>
+     Um das Fehlerbild zu lösen, empfehlen wir Ihnen, sich mit Ihrem Internetanbieter in Verbindung zu setzen und ihn darüber zu informieren, dass er die NTP-Konfiguration in seinen Autokonfigurationsserver (ACS) aktiviert und darüber auf der FRITZ!Box eine seperate logische Netzverbindung eingerichtet ist.
+    </em>
+   </p>
+   <p>
+    <em>
+     Über diese gemanagte Verbindung sind jedoch öffentliche NTP-Server im Internet nicht auflösbar oder erreichbar, sowie kein anbieterseitiger lokaler NTP-Dienst verfügbar.
+    </em>
+   </p>
+   <p>
+   </p>
+   <p>
+    <em>
+     Ihr Anbieter müsste nun dafür sorgen, dass er entweder einen eigenen NTP-Dienst innerhalb des ACS über diese Verbindung einrichtet oder über diese Verbindung externe NTP-Server zugänglich macht.
+    </em>
+   </p>
+   <p>
+   </p>
+   <p>
+    <em>
+     Alternativ kann Ihnen Ihr Anbieter eventuell als vorübergehende Lösung einen plattformeigenen NTP-Server mitteilen, welcher in seinem Netz erreichbar wäre.
+    </em>
+   </p>
+   <p>
+   </p>
+   <p>
+    Scheint also ein Problem bei Magenta zu sein. Habe die Fritz!Box auch schon versuchsweise auf die Werkseinstellung zurückgesetzt, hat aber leider auch nichts gebracht.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Manuel
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-09-01T11:32:48Z" title="2023-09-01 11:32 ">
+      September 1, 2023
+     </time>
+     von Jonathan Dorian
+    </strong>
+    <br>
+     Datenschutz
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Rips
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-10-02T08:46:32Z" title="2023-10-02 08:46 ">
+   Oktober 2, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hatte selbiges Problem auf der Fritzbox 7583 mit der Firmware 7.57, am besten unter...
+   </p>
+   <p>
+   </p>
+   <p>
+    Fritzbox &gt; Heimnetz &gt; Netzwerk &gt; Netzwerkeinstellungen &gt; Zeitsynchronisation
+   </p>
+   <p>
+    (evtl. ganz unten weitere Einstellungen ausklappen!)
+   </p>
+   <p>
+   </p>
+   <p>
+    Zeitserver: 91.118.89.8 eintragen und unten "übernehmen".
+   </p>
+   <p>
+   </p>
+   <p>
+    Mit einer zukünftigen Firmware solls auch dann wieder mit Standard-Eintragung "2.europe.pool.ntp.org" funktionieren.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-10-02T09:15:10Z" title="2023-10-02 09:15 ">
+      Oktober 2, 2023
+     </time>
+     von Rips
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Wolf73
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-10-06T13:38:31Z" title="2023-10-06 13:38 ">
+   Oktober 6, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es gibt mittlerweile einen workaround für das Problem (funktioniert bei mir Fritz Box 7530 mit Firmware 7.57 bestens)
+   </p>
+   <p>
+    "Wir haben bezüglich der Fritz Box Thematik und des Zeitserver bereits die Informationen weitergegeben und arbeiten an einer schnellstmöglichen Lösung. In dringenden Fällen könnten Sie einen Zeitserver selbst eintragen mit folgender IP Adresse: 91.118.89.8. Liebe Grüße, Ihr Magenta Kundenservice"
+    <br/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   lenny
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-06-29T10:20:06Z" title="2024-06-29 10:20 ">
+   Juni 29, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich hatte dasselbe Problem mit meiner Fritz!Box 6660 und erfolglos die vorgeschlagenen Server durchprobiert.
+    <strong>
+     at.pool.ntp.org
+    </strong>
+    hat letztendlich geholfen.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

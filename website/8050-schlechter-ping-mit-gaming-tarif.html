@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Schlechter Ping mit Gaming Tarif
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Schlechter Ping mit Gaming Tarif
+  </h1>
+  <span class="author">
+   constantin_r
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-09-10T21:51:40Z" title="2022-09-10 21:51 ">
+   September 10, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe zwar stabile 300mbit download, aber für einen Gaming Tarif durchweg schlechte Latenz. Dies unabhängig davon, auf welchen deutschen, englischen, holländischen, etc. Servern spiele.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hier ein Beispiel:
+   </p>
+   <p>
+   </p>
+   <p>
+    tracert 109.230.224.189
+   </p>
+   <p>
+    Routenverfolgung zu 109.230.224.189 über maximal 30 Hops
+   </p>
+   <p>
+    1     1 ms     1 ms     1 ms  192.168.1.1
+    <br/>
+    2    10 ms     8 ms     9 ms  at-vie09c-rt01.as8412.net [217.25.120.3]
+    <br/>
+    3     9 ms     8 ms    10 ms  at-vie09c-rc01.as8412.net [217.25.122.250]
+    <br/>
+    4     9 ms     8 ms     9 ms  at-vie09c-ri01.as8412.net [217.25.123.5]
+    <br>
+     5     9 ms    10 ms     9 ms  80-241-24-27.static.upcbusiness.at [80.241.24.27]
+     <br>
+      6     *        *        *     Zeitüberschreitung der Anforderung.
+      <br>
+       7     *        *        *     Zeitüberschreitung der Anforderung.
+       <br>
+        8    46 ms    46 ms    49 ms  de-fra02a-rc1-ae-14-0.aorta.net [84.116.130.149]
+        <br/>
+        9    40 ms    39 ms    39 ms  de-fra05a-ri1-ae-4-0.aorta.net [84.116.137.202]
+        <br/>
+        10    31 ms    33 ms    33 ms  se-sto01a-ra2-ge-0-1-0-5.aorta.net [213.46.176.38]
+        <br/>
+        11     *        *        *     Zeitüberschreitung der Anforderung.
+        <br/>
+        12  3657 ms  1317 ms   439 ms  ae1-edge2.core2.ffm3.de [45.138.175.94]
+        <br/>
+        13     *        *        *     Zeitüberschreitung der Anforderung.
+        <br/>
+        14    31 ms    31 ms    33 ms  45.11.18.142
+        <br/>
+        15    29 ms    27 ms    27 ms  109.230.224.189
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+   <p>
+    Ablaufverfolgung beendet.
+   </p>
+   <p>
+   </p>
+   <p>
+    Was kann ich tun, damit ich einem gaming Tarif entsprechend einen niedrigen Ping bekomme?
+   </p>
+   <p>
+   </p>
+   <p>
+    Nachtrag:
+   </p>
+   <p>
+    Heute am 12.09.2022 ist es auch besonders "schön":
+   </p>
+   <p>
+   </p>
+   <p>
+    Routenverfolgung zu 109.230.224.189 über maximal 30 Hops
+   </p>
+   <p>
+    1    &lt;1 ms     1 ms     1 ms  arrisatom [192.168.1.1]
+    <br/>
+    2    13 ms     9 ms     9 ms  at-vie09c-rt01.as8412.net [217.25.120.3]
+    <br/>
+    3    12 ms    14 ms     9 ms  at-vie09c-rc01.as8412.net [217.25.122.250]
+    <br/>
+    4    13 ms    12 ms    12 ms  at-vie09c-ri01.as8412.net [217.25.123.5]
+    <br/>
+    5     9 ms     9 ms     9 ms  80-241-24-27.static.upcbusiness.at [80.241.24.27]
+    <br/>
+    6     *        *        *     Zeitüberschreitung der Anforderung.
+    <br/>
+    7     *        *        *     Zeitüberschreitung der Anforderung.
+    <br/>
+    8    43 ms    41 ms    40 ms  de-fra02a-rc1-ae-14-0.aorta.net [84.116.130.149]
+    <br/>
+    9    41 ms    42 ms    40 ms  de-fra05a-ri1-ae-4-0.aorta.net [84.116.137.202]
+    <br/>
+    10    32 ms    33 ms    29 ms  se-sto01a-ra2-ge-0-1-0-5.aorta.net [213.46.176.38]
+    <br/>
+    11    38 ms    33 ms    33 ms  unn-84-17-33-185.cdn77.com [84.17.33.185]
+    <br/>
+    12    37 ms    40 ms    34 ms  ae1-edge2.core2.ffm3.de [45.138.175.94]
+    <br/>
+    13   451 ms    90 ms   159 ms  ae34-ffm32.core1.ffm2.de [45.138.175.102]
+    <br/>
+    14    31 ms    31 ms    28 ms  45.11.18.142
+    <br/>
+    15    37 ms    29 ms    30 ms  109.230.224.189
+   </p>
+   <p>
+    Ablaufverfolgung beendet.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2022-09-12T17:28:37Z" title="2022-09-12 17:28 ">
+      September 12, 2022
+     </time>
+     von constantin_r
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-09-13T07:14:41Z" title="2022-09-13 07:14 ">
+   September 13, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94223-constantin_r/?do=hovercard" data-mentionid="94223" href="https://community.magenta.at/profile/94223-constantin_r/" rel="">
+     @constantin_r
+    </a>
+    ,
+   </p>
+   <p>
+   </p>
+   <p>
+    wie sieht den ein mehrstündiger Ping-Test zu einem Google-Server aus? Wie du einen solchen Ping-Test machst, steht
+    <a href="https://community.magenta.at/blogs/entry/116-was-ist-eigentlich-ein-ping/" rel="">
+     hier
+    </a>
+    . Weitere Infos rund um das Thema Ping findest du auch
+    <a href="https://blog.magenta.at/2021/04/26/high-ping-vermeiden/" rel="external nofollow">
+     hier
+    </a>
+    .
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

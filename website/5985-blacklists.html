@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Blacklists
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Blacklists
+  </h1>
+  <span class="author">
+   Pedro aus Wien
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-29T06:54:09Z" title="2020-07-29 06:54 ">
+   Juli 29, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Leute,
+    <br/>
+    <br/>
+    Beim Senden von Mails an eine spezielle Adresse erhalte ich die Meldung ...
+    <br/>
+    "The mail system host said: refused. Your IP address ist listed in the RBL at bl.spamcop.net".
+    <br>
+     <br>
+      Der Domain Provider domaintechnik.at wies mich darauf hin, dass meine Magenta IP 62.178.246.xx lt. mxtoolbox.com auf 3 von 87 Blacklists aufscheint.
+      <br>
+       Habt ihr schon ähnliche Erfahrungen gemacht?
+       <br>
+        <br/>
+        LG Pedro
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-29T16:12:45Z" title="2020-07-29 16:12 ">
+   Juli 29, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Betreibst du einen eigenen Mail Server/Dienst?
+   </p>
+   <p>
+   </p>
+   <p>
+    Mir ist mittlerweile der ganze Spaß mit IPs, rDNS, Signaturen etc. zu aufwendig geworden und setze bei den meisten Anwendungen auf ein SMTP Relay.  In meinem Fall auf Mailjet. Ich schreibe so wenige E-Mails, dass ich da bei meinen Anwendungen mit dem Testpaket auskomme.
+   </p>
+   <p>
+    Bei zwei Anwendungen gehen die E-Mails ohne Relay raus, aber da geht es an 2 fixe E-Mail Adressen und da ist die E-Mail Adresse bei den Mailkonten auf der Whitelist.
+   </p>
+   <p>
+    (Das eine ist Office 365, worüber die 2. Adresse läuft weiß ich nicht. Mit Google klappt es meistens auf, dass man die E-Mail Adresse auf die Whitelist setzt, aber da darf die E-Mail nicht schon vorher durch irgendetwas abgefangen werden.)
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Pedro aus Wien
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-29T16:40:23Z" title="2020-07-29 16:40 ">
+   Juli 29, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nein, einen eigenen Mail-Server/-Dienst betreibe ich nicht.
+    <br>
+     <br>
+      Der Fehler tritt aber nur auf, wenn ich die bei all-inkl.com gehostete Mailadresse verwende. Und auch nur beim Senden an die Adressen bestimmter Domains. Die Hosting Provider beider Domains verweisen darauf, dass lt. Meldung meine IP "refused" wird und sie somit nichts mit der Sache zutun hätten. Vorerst lässt sich die Sache gut umgehen - schlimmer sollts halt nicht werden ...
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-29T18:27:17Z" title="2020-07-29 18:27 ">
+   Juli 29, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hast du in deinem E-Mail Client all inkl als SMTP Server eingetragen?
+   </p>
+   <p>
+    Wenn ja, dann ist es ein Problem von all-inkl
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Pedro aus Wien
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-30T02:20:43Z" title="2020-07-30 02:20 ">
+   Juli 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja, im E-Mail Client ist vxxxxxx.kasserver.com als SMTP Server eingetragen. Der all-inkl.com Support antwortete mir gestern "Es handelt sich hierbei nicht um die IP unseres Servers, sondern vermutlich um Ihre Einfach-IP Ihres Zugangsproviders." Die IP Adresse, welche "refused" wird ist meine IP Adresse, somit ich in letzter Konsequenz beim Magenta Support landen würde ...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-30T10:20:09Z" title="2020-07-30 10:20 ">
+   Juli 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <s>
+     Welcher E-Mail Client wird verwendet?
+    </s>
+   </p>
+   <p>
+    OK, ich wollte glauben, dass man nicht den Namen und die IP des Rechners sieht, von dem man die Mail verfasst.
+   </p>
+   <p>
+    Das war ein großer Irrtum.
+   </p>
+   <p>
+    Jetzt ist der Punkt erreicht, wo es nicht mehr lustig ist.
+   </p>
+   <p>
+    Das heißt aber auch, dass mir keine Lösung für dieses Problem gibt, außer IP zu wechseln.
+   </p>
+   <p>
+    Probiere es einmal aus über den Hotspot eines Mobiltelefon ob da das Problem auch vorhanden ist. Das Telefon sollte eine andere IP haben als das Fixed Internet.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Pedro aus Wien
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-30T17:08:11Z" title="2020-07-30 17:08 ">
+   Juli 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke für den Tipp. Wenn ich über den Hotspot verbunden bin tritt das Problem tatsächlich nicht auf. Jetzt bleibt nur noch die Frage, wie ich bei meinem Magenta Kabel Produkt am einfachsten Weg zu einer neuen IP Adresse komme ...
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

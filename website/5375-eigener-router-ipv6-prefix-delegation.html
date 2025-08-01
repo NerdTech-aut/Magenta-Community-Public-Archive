@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Eigener Router + IPv6 prefix-delegation
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Eigener Router + IPv6 prefix-delegation
+  </h1>
+  <span class="author">
+   honk
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-10-28T12:22:29Z" title="2019-10-28 12:22 ">
+   Oktober 28, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Im Router-Mode der Compal Connect-Box bekomme ich nur einen /64 Prefix assigned, aber keine IPv6 Prefix-Delegation.
+   </p>
+   <p>
+    Da antwortet mir der DHCPv6 Server trocken:
+   </p>
+   <p>
+    "Status Code: NoPrefixAvail (6)
+   </p>
+   <p>
+    Status Message: Server support for prefix delegation is not enabled. Sorry buddy."
+   </p>
+   <p>
+    Der Support empfiehlt mir daraufhin den Bridge-Modus.
+   </p>
+   <p>
+    Um den Bridge-Mode aktivieren zu können muss man mich auf Legacy IP (v4) umstellen. OK. Gesagt. Getan.
+   </p>
+   <p>
+    Im Bridge-Mode bekomme ich nun gar keine Antwort mehr auf Router-Solicitation bzw. DHCPv6 Requests. Klar, ich wurde ja auch auf Legacy IP umgestellt und bekomme deshalb über DHCPv4 "nur" eine IPv4 Adresse assigned.
+   </p>
+   <p>
+    Wie komme ich jetzt an meine versprochene IPv6 Prefix-Delegation? Wieder auf IPv6 zurückstellen lassen, aber im Bridge-Mode bleiben? Geht das überhaupt? Oder ganz was anderes?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   TheCableGuy
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-10-28T13:07:08Z" title="2019-10-28 13:07 ">
+   Oktober 28, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo, willkommen in der Magenta Community Ipv6 wird bei uns über DS Lite realisiert  so fern du auf IPv4 zurückgestellt wurdest verfügt dein Modem über keine IPv6 Konnektivität nach außen. Was genau möchtest du den in deinem Netzwerk machen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   honk
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-10-28T13:51:40Z" title="2019-10-28 13:51 ">
+   Oktober 28, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich möchte, daß mein Router vom DHCPv6 Server eine Prefix-Delegation (irgendetwas größeres als /64) bekommt, damit ich meinen internen VLANs wiederum /64er Prefixes weitergeben kann. Im DS-Lite Modus bekam ich allerdings nur direkt ein einziges /64 zugewiesen und der DHCPv6 Server hat meine Prefix Solicitations wie oben erwähnt abschlägig beantwortet:
+   </p>
+   <p>
+    "Status Code: NoPrefixAvail (6)
+   </p>
+   <p>
+    Status Message: Server support for prefix delegation is not enabled. Sorry buddy."
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   TheCableGuy
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-11-06T13:28:27Z" title="2019-11-06 13:28 ">
+   November 6, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hm derzeit gibt es keine Möglichkeit eine größere Prefix Delegation zu bekommen. Ist ja mehr oder weniger noch immer das ursprüngliche Designe mit dem es damals eingeführt wurde. Hast du eine bestimmte Herausforderung die sich dadurch nicht lösen lässt?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-11-07T11:26:31Z" title="2019-11-07 11:26 ">
+   November 7, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77911-thecableguy/?do=hovercard" data-mentionid="77911" href="https://community.magenta.at/profile/77911-thecableguy/" rel="">
+     @TheCableGuy
+    </a>
+   </p>
+   <p>
+    Für jedes VLAN braucht man ein eigenes /64 sonst kommen gewissen Clients nicht mit dem Netz zurecht.
+   </p>
+   <p>
+    (Gewisse Clients können sich nur selbst die IP zuweisen und haben akzeptieren DHCPv6 nicht)
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   honk
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-11-07T17:17:23Z" title="2019-11-07 17:17 ">
+   November 7, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="31867" data-ipsquote-contentid="5375" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1573125991" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 5 Stunden schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77911-thecableguy/?do=hovercard" data-mentionid="77911" href="https://community.magenta.at/profile/77911-thecableguy/" rel="">
+       @TheCableGuy
+      </a>
+     </p>
+     <p>
+      Für jedes VLAN braucht man ein eigenes /64 sonst kommen gewissen Clients nicht mit dem Netz zurecht.
+     </p>
+     <p>
+      (Gewisse Clients können sich nur selbst die IP zuweisen und haben akzeptieren DHCPv6 nicht)
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Völlig richtig. Allerdings vergibt Euer DHCPv6 Server wie oben erwähnt keine Prefix-Delegations:
+   </p>
+   <p>
+    "Status Code: NoPrefixAvail (6)
+   </p>
+   <p>
+    Status Message: Server support for prefix delegation is not enabled. Sorry buddy."
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   TheCableGuy
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-11-11T12:49:06Z" title="2019-11-11 12:49 ">
+   November 11, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hm, sofern du keine Workaround im lokalen Netzwerk findest würde ich auf reines IPv4 wechseln solange das noch möglich ist. Da bleiben einem dann alle Optionen im lokalen Netzwerk offen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-11-11T19:32:41Z" title="2019-11-11 19:32 ">
+   November 11, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Fallst du es noch nicht kennst, sieh dir einmal Hurricane Electric an:
+   </p>
+   <p>
+    <a href="https://tunnelbroker.net/" rel="external nofollow">
+     https://tunnelbroker.net/
+    </a>
+   </p>
+   <p>
+    Die Bieten IPv6 über einen Tunnel an, jedoch bieten die IP Ranges für Tunnel Nachteile. Chrome bevorzugt dann leider IPv4, wenn es die Wahl zwischen einer IPv4 IP hat oder einer IPv6 von einem Tunnel Dienst.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   vh133
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-07-11T09:25:13Z" title="2021-07-11 09:25 ">
+   Juli 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo zusammen, ich weiß das Thema ist aus 2019. Aber ich wollte an dieser Stelle fragen ob es hier (2021) News gibt?!
+   </p>
+   <p>
+    Ich pers. würde es auch begrüßen wenn ich Prefixe delegieren kann..
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Workarounds mit IPv4 only bzw. im Bridge-Mode und HE Tunnelbroker sind halt nur Workarounds und nicht das gelbe vom Ei.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn ich hier bei "wünsch dir was" wäre, wäre mein Wunsch folgender:
+   </p>
+   <p>
+    - Router-Mode und Möglichkeit von prefix-delegation
+   </p>
+   <p>
+    - Bridge-Mode und dann natives v4 und v6 bzw. Möglichkeit von DS-Lite anstelle von IPv4 only
+   </p>
+   <p>
+    - ODER einfach die Möglichkeit mein eigenes Kabelmodem verwenden zu können (vgl. Deutschland) dann würde mir ein /64 bisher reichen
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich freu mich auf Antworten. Viele Grüße
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-07-11T09:51:05Z" title="2021-07-11 09:51 ">
+   Juli 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Aktuell ist mir nicht bekannt, dass sich hier etwas getan hat.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   colo
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-03-30T11:53:41Z" title="2022-03-30 11:53 ">
+   März 30, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Anders gefragt: Wann wird sich hier etwas tun? Ich finde es extrem schade, dass ich mich entweder fuer Legacy-Only-Internet via IPv4, oder aber die alleinige Verwendung des fuer meine Zwecke unzureichenden UPC-Endgeraets als Router entscheiden muss.
+   </p>
+   <p>
+   </p>
+   <p>
+    Es waere wirklich hoch an der Zeit, Magenta-Kunden die Moeglichkeit des echten Dual-Stack-Betriebs einzuraeumen - oder *zumindest* IPv6 mit Prefix-Delegation freizuschalten.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   honk
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-03-30T15:03:49Z" title="2022-03-30 15:03 ">
+   März 30, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Tja, der Wunschliste kann ich mich nur vollumfänglich anschließen.
+    <br/>
+    Aber: Wenns Home-Anschlüsse gäbe, wo ECHTES Internet rausfällt, könnten sie ja keine teuren Business-Anschlüsse mehr verkaufen ...
+    <br/>
+    Naja, vielleicht geschehen irgendwann noch Zeichen und Wunder.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   colo
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-03-31T09:34:46Z" title="2022-03-31 09:34 ">
+   März 31, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Gibt es denn ueberhaupt einen Business-Tarif fuer Internetzugang via DOCSIS/Kabel, der dieses Problem nicht hat, bzw. mit dem richtiger Dual-Stack-Betrieb mit eigenem Router/Gateway moeglich ist?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   honk
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-03-31T10:55:21Z" title="2022-03-31 10:55 ">
+   März 31, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Individuelle Lösungen bekommst du als Businesskunde immer - wenn du sie bezahlst.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Doris676
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-03-31T14:09:03Z" title="2022-03-31 14:09 ">
+   März 31, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/92809-colo/?do=hovercard" data-mentionid="92809" href="https://community.magenta.at/profile/92809-colo/" rel="">
+      @colo
+     </a>
+     und
+     <span>
+      <span>
+       <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/80544-honk/?do=hovercard" data-mentionid="80544" href="https://community.magenta.at/profile/80544-honk/" rel="">
+        @honk
+       </a>
+      </span>
+     </span>
+    </span>
+    , uns liegen folgende Informationen vor: Bei mobilem Internet vergeben wir aktuell ein IPv6 Präfix mit der Länge /64. Eine Vergabe eines Delegats mit einer Präfix Länge kleiner /64 ist aktuell nicht vorgesehen. Liebe Grüße, Doris
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   equinox_01
+  </span>
+  <br/>
+  <time class="Jul 17" datetime="2024-07-17T21:36:19Z" title="2024-07-17 21:36 ">
+   Juli 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="47132" data-ipsquote-contentid="5375" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1648735743" data-ipsquote-userid="87729" data-ipsquote-username="Doris676">
+    <div class="ipsQuote_citation">
+     Am 31.3.2022 um 16:09 schrieb Doris676:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo
+      <span>
+       <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/92809-colo/?do=hovercard" data-mentionid="92809" href="https://community.magenta.at/profile/92809-colo/" rel="">
+        @colo
+       </a>
+       und
+       <span>
+        <span>
+         <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/80544-honk/?do=hovercard" data-mentionid="80544" href="https://community.magenta.at/profile/80544-honk/" rel="">
+          @honk
+         </a>
+        </span>
+       </span>
+      </span>
+      , uns liegen folgende Informationen vor: Bei mobilem Internet vergeben wir aktuell ein IPv6 Präfix mit der Länge /64. Eine Vergabe eines Delegats mit einer Präfix Länge kleiner /64 ist aktuell nicht vorgesehen. Liebe Grüße, Doris
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Wann kommt denn Magenta da endlich im Jahre 2024 an bzw. hält sich an die Empfehlungen ein /56 bereitzustellen?
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

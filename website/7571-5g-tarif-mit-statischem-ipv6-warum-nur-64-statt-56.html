@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   5G-Tarif mit statischem IPv6 -  Warum nur /64 statt /56?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   5G-Tarif mit statischem IPv6 -  Warum nur /64 statt /56?
+  </h1>
+  <span class="author">
+   tmw
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-09T08:49:51Z" title="2022-02-09 08:49 ">
+   Februar 9, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Liebes Magenta Team, liebe Community.
+   </p>
+   <p>
+   </p>
+   <p>
+    nach tagelangem herumtelefonieren, versuche ich es jetzt auf diesem Weg...
+   </p>
+   <p>
+   </p>
+   <p>
+    Es ist schön dass man heute zu einem 5G internet Tarif - der durchwegs als Ersatz für einen Festnetzanschluss in weiten Teilen sehr gut mithalten kann
+   </p>
+   <p>
+    und für mich aus Ermangelung eines Festnetzanschlusses die einzige Lösung ist -  eine Option "IP-Service v6 static" hinzubuchen kann.
+   </p>
+   <p>
+    Nur dass dieses Service dann /64 bit prefix hat anstatt die üblichen und von allen Seiten empfohlenen /56 entzieht sich irgendwie meinem
+   </p>
+   <p>
+    Verständnis.
+   </p>
+   <p>
+   </p>
+   <p>
+    Falls dies (hoffentlich) irgendwer liest der etwas ändern kann:
+   </p>
+   <p>
+    Bitte bringt eueren IPv6 support in die Neuzeit und gebt euren mobile Internet Benutzern eines euer 134 Millionen /56 Subnetze.
+   </p>
+   <p>
+    Nicht nur in Zeiten von Homeoffice, sondern weil es einfach an der Zeit ist - 24 Jahre nach der Geburt von ipv6.
+   </p>
+   <p>
+   </p>
+   <p>
+    vielen Dank!
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-09T11:45:22Z" title="2022-02-09 11:45 ">
+   Februar 9, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Mir ist es bis jetzt noch bei keinem Anbieter in Österreich untergekommen, dass man ein eigenes /56 bekommt.
+   </p>
+   <p>
+    Ich kenne es nur bei einem kleinen DSL Anbieter der /60er Netze anbietet. Bei Bedarf auch statisch.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tmw
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-09T12:23:05Z" title="2022-02-09 12:23 ">
+   Februar 9, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo IT-Freak, vielen Dank für Deine Antwort!
+   </p>
+   <p>
+   </p>
+   <p>
+    Umso mehr ein Grund dass jemand mal anfängt das richtige zu tun...
+   </p>
+   <p>
+    siehe best current practices hier:
+    <a href="https://www.ripe.net/publications/docs/ripe-690" rel="external nofollow">
+     https://www.ripe.net/publications/docs/ripe-690
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    man kann natürlich selbst Tunneln (über HE und andere), etc... aber ich versteh's
+   </p>
+   <p>
+    einfach nicht warum ein normaler Enduser keine /56 delegiert bekommt.
+   </p>
+   <p>
+    (eine Frage der Adressen kann's nicht sein)
+   </p>
+   <p>
+   </p>
+   <p>
+    wenn's mir wer erklären kann woran's hapert - jederzeit!
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-02-09T12:25:41Z" title="2022-02-09 12:25 ">
+      Februar 9, 2022
+     </time>
+     von tmw
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   sebawern
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-23T14:43:36Z" title="2022-02-23 14:43 ">
+   Februar 23, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich hab vor ein paar Tagen diese Antwort bekommen:
+   </p>
+   <p>
+    Hallo Sebastian, wir haben nun folgende Informationen erhalten: Bei mobilem Internet vergeben wir aktuell ein IPv6 Präfix mit der Länge /64. Eine Vergabe eines Delegat mit einer Präfix Länge kleiner /64 ist aktuell nicht vorgesehen."
+   </p>
+   <p>
+   </p>
+   <p>
+    /56 wäre wirklich super, oder auch ein /60er. Hauptsache Prefix Delegation wird ermöglicht.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   equinox_01
+  </span>
+  <br/>
+  <time class="Jul 17" datetime="2024-07-17T21:36:42Z" title="2024-07-17 21:36 ">
+   Juli 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wann kommt denn Magenta da endlich im Jahre 2024 an bzw. hält sich an die Empfehlungen ein /56 bereitzustellen?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="Dez 3" datetime="2024-12-03T12:18:04Z" title="2024-12-03 12:18 ">
+   Dezember 3, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99260-equinox_01/?do=hovercard" data-mentionid="99260" href="https://community.magenta.at/profile/99260-equinox_01/" rel="">
+     @equinox_01
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Hallo,
+    <span class="ipsEmoji">
+     👋
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    danke für deine Frage! Ich verstehe deinen Wunsch nach einem /56-Präfix und die Erwartung, dass sich Anbieter an die gängigen Empfehlungen halten. IPv6 ist ein wichtiges Thema, und viele von uns wünschen sich, dass hier schneller Fortschritte gemacht werden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich werde dein Feedback intern weitergeben, damit die zuständigen Teams wissen, wie wichtig dir (und sicher auch vielen anderen) dieses Thema ist. Transparenz und Weiterentwicklung sind uns allen wichtig, und ich hoffe, dass wir hier bald Neuigkeiten in deinem Sinne haben.
+   </p>
+   <p>
+    Falls du noch Fragen oder Anregungen hast, lass es uns wissen – wir sind immer offen für dein Feedback!
+    <span class="ipsEmoji">
+     😊
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Liebe Grüße, LG JD.
+    <span class="ipsEmoji">
+     🌻
+    </span>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

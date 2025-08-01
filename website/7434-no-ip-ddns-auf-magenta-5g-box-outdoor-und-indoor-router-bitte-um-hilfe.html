@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   No-IP DDNS auf Magenta 5G Box Outdoor und Indoor Router - Bitte um Hilfe!
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   No-IP DDNS auf Magenta 5G Box Outdoor und Indoor Router - Bitte um Hilfe!
+  </h1>
+  <span class="author">
+   IK66
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-01T15:18:57Z" title="2022-01-01 15:18 ">
+   Januar 1, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Leute,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich hatte damals mein Internet bei A1 auf einem Hybrid Router und dort ging mein DDNS von no-ip ohne Probleme. Nach der Portweiterleitung hat alles funktioniert.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bei meiner Magenta 5G Outdoor + Inside Box kann ich keine Verbindung herstellen:
+   </p>
+   <p>
+    <img alt="image.png.fbd9821f6026cccad4853935bcd365c8.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3611" src="images/uploads/image.png.fbd9821f6026cccad4853935bcd365c8.png"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielleicht habe ich auch die Portweiterleitung falsch eingestellt.. bei Magenta ist die etwas komisch meiner Meinung nach (kenne ich so nicht). Wie stelle ich diese richtig ein? Was ist hier die Ziel-IP? Die IP-Adresse vom Router?
+   </p>
+   <p>
+   </p>
+   <p>
+    <img alt="image.png.35ee8994ad0fd42ea39ae16821a4c353.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3613" src="images/uploads/image.png.35ee8994ad0fd42ea39ae16821a4c353.png"/>
+    (192.168.1.1 ist der Inside Router)
+   </p>
+   <p>
+   </p>
+   <p>
+    IP-Adressen von Magenta (whatsyourip) und no-ip sind ident. Habe ich aktualisiert.
+   </p>
+   <p>
+   </p>
+   <p>
+    Produkt, welches gemeint ist:
+    <a href="https://www.magenta.at/internet/5g-box-outdoor" rel="external nofollow">
+     https://www.magenta.at/internet/5g-box-outdoor
+    </a>
+   </p>
+   <p>
+    Vertrag: gigakraft 5G 250 (mbits)
+   </p>
+   <p>
+   </p>
+   <p>
+    Mit freundlichen Grüßen,
+   </p>
+   <p>
+    IK
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-01-01T15:29:15Z" title="2022-01-01 15:29 ">
+      Januar 1, 2022
+     </time>
+     von IK66
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Robert T.
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-04T05:52:13Z" title="2022-01-04 05:52 ">
+   Januar 4, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Bekomme ebenfalls keine Verbindung. Bei mir handelt es sich um DynDNS.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IK66
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-04T16:04:43Z" title="2022-01-04 16:04 ">
+   Januar 4, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45832" data-ipsquote-contentid="7434" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641275533" data-ipsquote-userid="64364" data-ipsquote-username="Robert T.">
+    <div class="ipsQuote_citation">
+     vor 10 Stunden schrieb Robert T.:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Bekomme ebenfalls keine Verbindung. Bei mir handelt es sich um DynDNS.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Gibt es jemanden, der hier weiterhelfen kann? Ist ja nicht normal das no-ip und DynDNS nicht funktionieren??
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-04T17:50:53Z" title="2022-01-04 17:50 ">
+   Januar 4, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es wird wahrscheinlich funktionieren, wenn ihr die Outdooreinheit in den Bridge Mode umschaltet.
+   </p>
+   <p>
+    Mit dem Bridge Mode würde die IP-Adresse des Anschlusses an der Indooreinheit anliegen.
+   </p>
+   <p>
+    Habt ihr außerdem die Business APN auf der Outdooreinheit eingetragen?
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe zwar keine 5G Box Outdoor, aber hier gibt es ein Thema dazu:
+    <a href="7432-magenta-5g-box-outdoor-zugriff-konfigurationsoberfl%C3%A4che/" rel="">
+     7432-magenta-5g-box-outdoor-zugriff-konfigurationsoberfläche/
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Robert T.
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-04T18:32:27Z" title="2022-01-04 18:32 ">
+   Januar 4, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45848" data-ipsquote-contentid="7434" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641318653" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 39 Minuten schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Es wird wahrscheinlich funktionieren, wenn ihr die Outdooreinheit in den Bridge Mode umschaltet.
+     </p>
+     <p>
+      Mit dem Bridge Mode würde die IP-Adresse des Anschlusses an der Indooreinheit anliegen.
+     </p>
+     <p>
+      Habt ihr außerdem die Business APN auf der Outdooreinheit eingetragen?
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich habe zwar keine 5G Box Outdoor, aber hier gibt es ein Thema dazu:
+      <a href="7432-magenta-5g-box-outdoor-zugriff-konfigurationsoberfl%C3%A4che/" rel="">
+       7432-magenta-5g-box-outdoor-zugriff-konfigurationsoberfläche/
+      </a>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Die Business APN habe ich aktiv, das verschafft keine Abhilfe. Den Rest sehe ich mir morgen an. Danke
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Robert T.
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-05T05:42:04Z" title="2022-01-05 05:42 ">
+   Januar 5, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45848" data-ipsquote-contentid="7434" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641318653" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 12 Stunden schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Es wird wahrscheinlich funktionieren, wenn ihr die Outdooreinheit in den Bridge Mode umschaltet.
+     </p>
+     <p>
+      Mit dem Bridge Mode würde die IP-Adresse des Anschlusses an der Indooreinheit anliegen.
+     </p>
+     <p>
+      Habt ihr außerdem die Business APN auf der Outdooreinheit eingetragen?
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich habe zwar keine 5G Box Outdoor, aber hier gibt es ein Thema dazu:
+      <a href="7432-magenta-5g-box-outdoor-zugriff-konfigurationsoberfl%C3%A4che/" rel="">
+       7432-magenta-5g-box-outdoor-zugriff-konfigurationsoberfläche/
+      </a>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich habe mit 2 Rechnern und einem Laptop versucht auf die ODU zuzugreifen (192.168.0.1), keine Verbindung möglich. Auch nach unzähligen Versuchen, etlichen ODU Resets und Deaktivierung sämtlicher Firewalls und sonstigen Schutzmechanismen. Die ODU hat nachgewiesen 192.168.0.1
+   </p>
+   <p>
+   </p>
+   <p>
+    Leider ist die Hardware nicht ausgereift. In 30 Jahren Hardware Erfahrung habe ich solche Sachen noch nicht oft erlebt....
+   </p>
+   <p>
+   </p>
+   <p>
+    Positiv: Die 5G Speed ist sehr gut! Komme auf 300-450 Mbit/s
+   </p>
+   <p>
+   </p>
+   <p>
+    Was ich möchte? Die ODU in den Bridge Modus bringen / DynDNS zum Laufen bringen / der ODU eine andere Adresse zuweisen können.
+   </p>
+   <p>
+   </p>
+   <p>
+    <img alt="magenta5g.png" class="ipsImage" height="248" src="https://trichtl.at/magenta5g.png" width="749"/>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-01-05T05:52:00Z" title="2022-01-05 05:52 ">
+      Januar 5, 2022
+     </time>
+     von Robert T.
+    </strong>
+    <br>
+     Ergänzung Bild
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Robert T.
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-10T11:41:37Z" title="2022-01-10 11:41 ">
+   Januar 10, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    der Zugriff auf die ODU klappt mit einem https:// davor. Einfach die IP nimmt er nicht...
+   </p>
+   <p>
+   </p>
+   <p>
+    Da es mit den DDNS ja nicht klappt, habe ich mir eine statische IP dazu genommen. Aber welch Wunder: Auch hier gibt es keine Erreichbarkeit. Die ODU blockt fast alles....
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IK66
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-10T18:25:57Z" title="2022-01-10 18:25 ">
+   Januar 10, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45971" data-ipsquote-contentid="7434" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641814897" data-ipsquote-userid="64364" data-ipsquote-username="Robert T.">
+    <div class="ipsQuote_citation">
+     vor 6 Stunden schrieb Robert T.:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      der Zugriff auf die ODU klappt mit einem https:// davor. Einfach die IP nimmt er nicht...
+     </p>
+     <p>
+     </p>
+     <p>
+      Da es mit den DDNS ja nicht klappt, habe ich mir eine statische IP dazu genommen. Aber welch Wunder: Auch hier gibt es keine Erreichbarkeit. Die ODU blockt fast alles....
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Hallo Robert, wie bist du in den Bridgemodus gekommen? Wie hast du diesen eingestellt?
+   </p>
+   <p>
+    Bei mir sind jetzt zwei Profile, jedoch bleibt er immer im PDN-Profil PDN1... oder ist das egal?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Robert T.
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-10T18:44:21Z" title="2022-01-10 18:44 ">
+   Januar 10, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45976" data-ipsquote-contentid="7434" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641839157" data-ipsquote-userid="91939" data-ipsquote-username="IK66">
+    <div class="ipsQuote_citation">
+     vor 14 Minuten schrieb IK66:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+      Hallo Robert, wie bist du in den Bridgemodus gekommen? Wie hast du diesen eingestellt?
+     </p>
+     <p>
+      Bei mir sind jetzt zwei Profile, jedoch bleibt er immer im PDN-Profil PDN1... oder ist das egal?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Leider habe ich keine Ahnung. Mir geht es wie dir. Man sieht auch nicht welches Profil aktiv ist. Obwohl der Speed ein Traum ist, werde ich wahrscheinlich vom Vertrag zurücktreten da die Hardware leider unausgereift ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    Schade, bin besseres von Magenta gewöhnt. 😟
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IK66
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-10T19:27:35Z" title="2022-01-10 19:27 ">
+   Januar 10, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45977" data-ipsquote-contentid="7434" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641840261" data-ipsquote-userid="64364" data-ipsquote-username="Robert T.">
+    <div class="ipsQuote_citation">
+     vor 39 Minuten schrieb Robert T.:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+      Leider habe ich keine Ahnung. Mir geht es wie dir. Man sieht auch nicht welches Profil aktiv ist. Obwohl der Speed ein Traum ist, werde ich wahrscheinlich vom Vertrag zurücktreten da die Hardware leider unausgereift ist.
+     </p>
+     <p>
+     </p>
+     <p>
+      Schade, bin besseres von Magenta gewöhnt. 😟
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Also ehrlich gesagt finde ich, dass ist eine Frechheit.
+   </p>
+   <p>
+    Wenn ich den Bridgemodus aktiv habe, dann bin ich nur noch local unterwegs und komme nicht mehr ins Internet. Da muss irgendwas falsch sein.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe beim Support angerufen, dort kennen sich die Techniker auch nicht aus. Man kann eine fixe IP-Adresse nehmen, die kostet jedoch 4,99€ pro Monat. Nächste Frechheit.
+   </p>
+   <p>
+   </p>
+   <p>
+    Im anderen Thread hat
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/91933-gschwandtner/?do=hovercard" data-mentionid="91933" href="https://community.magenta.at/profile/91933-gschwandtner/" rel="">
+     @gschwandtner
+    </a>
+    gemeint, dass es bei ihm geklappt hat. Könntest du eine Anleitung machen, wie man das macht?
+   </p>
+   <p>
+    Ansonsten hab ich keine Ahnung mehr.
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Robert T.
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-10T19:37:44Z" title="2022-01-10 19:37 ">
+   Januar 10, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45979" data-ipsquote-contentid="7434" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641842855" data-ipsquote-userid="91939" data-ipsquote-username="IK66">
+    <div class="ipsQuote_citation">
+     vor 7 Minuten schrieb IK66:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+      Also ehrlich gesagt finde ich, dass ist eine Frechheit.
+     </p>
+     <p>
+      Wenn ich den Bridgemodus aktiv habe, dann bin ich nur noch local unterwegs und komme nicht mehr ins Internet. Da muss irgendwas falsch sein.
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich habe beim Support angerufen, dort kennen sich die Techniker auch nicht aus. Man kann eine fixe IP-Adresse nehmen, die kostet jedoch 4,99€ pro Monat. Nächste Frechheit.
+     </p>
+     <p>
+     </p>
+     <p>
+      Im anderen Thread hat
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/91933-gschwandtner/?do=hovercard" data-mentionid="91933" href="https://community.magenta.at/profile/91933-gschwandtner/" rel="">
+       @gschwandtner
+      </a>
+      gemeint, dass es bei ihm geklappt hat. Könntest du eine Anleitung machen, wie man das macht?
+     </p>
+     <p>
+      Ansonsten hab ich keine Ahnung mehr.
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Ich habe eine statische IP. Bringt aber nichts, da ich auch die nicht erreiche. Gleiches Problem wie mit einem DDNS.
+   </p>
+   <p>
+   </p>
+   <p>
+    Und du hast recht, die Techniker an der Hotline sind mit sowas schwer überfordert.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IK66
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-10T19:52:57Z" title="2022-01-10 19:52 ">
+   Januar 10, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45980" data-ipsquote-contentid="7434" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641843464" data-ipsquote-userid="64364" data-ipsquote-username="Robert T.">
+    <div class="ipsQuote_citation">
+     vor 9 Minuten schrieb Robert T.:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+      Ich habe eine statische IP. Bringt aber nichts, da ich auch die nicht erreiche. Gleiches Problem wie mit einem DDNS.
+     </p>
+     <p>
+     </p>
+     <p>
+      Und du hast recht, die Techniker an der Hotline sind mit sowas schwer überfordert.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Ja statische IP wird hier glaub ich nichts nutzen, da diese im Netzwerk ja dann nur statisch ist, oder? Das Außengerät bekommt die IP-Adresse von Magenta, jedoch ist der Router dann auf der 192er (private) IP, die mir aber fürs DDNS nichts bringt. Nach dem Bridgemodus, krieg ich zwar eine andere IP-Adresse, jedoch funktioniert nichts mehr... Ich denke, hier ist irgendwo der Hacken...
+   </p>
+   <p>
+   </p>
+   <p>
+    Bist du im Bridgemodus auch unerreichbar von außerhalb?
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Robert T.
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-12T07:17:13Z" title="2022-01-12 07:17 ">
+   Januar 12, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45981" data-ipsquote-contentid="7434" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641844377" data-ipsquote-userid="91939" data-ipsquote-username="IK66">
+    <div class="ipsQuote_citation">
+     Am 10.1.2022 um 20:52 schrieb IK66:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+      Ja statische IP wird hier glaub ich nichts nutzen, da diese im Netzwerk ja dann nur statisch ist, oder? Das Außengerät bekommt die IP-Adresse von Magenta, jedoch ist der Router dann auf der 192er (private) IP, die mir aber fürs DDNS nichts bringt. Nach dem Bridgemodus, krieg ich zwar eine andere IP-Adresse, jedoch funktioniert nichts mehr... Ich denke, hier ist irgendwo der Hacken...
+     </p>
+     <p>
+     </p>
+     <p>
+      Bist du im Bridgemodus auch unerreichbar von außerhalb?
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Abgesehen das ich nicht sehen kann welches PDN Profil aktiv ist, bin ich nicht erreichbar von außerhalb.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   HollaM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-12T17:57:05Z" title="2022-01-12 17:57 ">
+   Januar 12, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wenn der Bridgemode nicht funktioniert dann müsste die Portweiterleitung zusätzlich auf der Outdoor Einheit konfiguriert werden (wenn möglich).
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   GBE
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-12-14T20:25:33Z" title="2023-12-14 20:25 ">
+   Dezember 14, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+   </p>
+   <p>
+    Ich möchte das Problem nochmal aufgreifen.
+   </p>
+   <p>
+    Gibt es mittlerweilen jemanden bei dem das DDNS bei einer 5G Box Outdoor funktioniert?
+   </p>
+   <p>
+    Ich habe mal zustandegebracht das ich mit meiner no-ip von außen auf meine interne Hardware zugreifen kann.
+   </p>
+   <p>
+    Allerdings nur wenn ich die IP Adresse der ODU auf der Homepage von no-ip händisch eintrage.
+   </p>
+   <p>
+   </p>
+   <p>
+    Was nicht funktioniert ist eine automatische Aktualisierung bei einer Neuvergabe der IP in der ODU.
+   </p>
+   <p>
+   </p>
+   <p>
+    Kann da jemand weiterhelfen?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-12-15T16:42:16Z" title="2023-12-15 16:42 ">
+   Dezember 15, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56147" data-ipsquote-contentid="7434" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1702585533" data-ipsquote-userid="98376" data-ipsquote-username="GBE">
+    <div class="ipsQuote_citation">
+     Am 14.12.2023 um 21:25 schrieb GBE:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Kann da jemand weiterhelfen?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo,
+   </p>
+   <p>
+   </p>
+   <p>
+    nach meinen Recherchen funktioniert DDNS bei der Magenta 5G Box Outdoor derzeit noch nicht zuverlässig. Es gibt Berichte von Nutzern, bei denen DDNS zwar funktioniert, jedoch nur dann, wenn die IP-Adresse der ODU unverändert bleibt. Bei einer Neuvergabe der IP-Adresse durch die ODU wird der DDNS-Eintrag nicht aktualisiert, wodurch der externe Zugriff auf die interne Hardware nicht mehr möglich ist.
+   </p>
+   <p>
+    Magenta hat das Problem bisher noch nicht behoben. Es besteht die Möglichkeit, dass das Problem in einem zukünftigen Firmware-Update gelöst wird.
+   </p>
+   <p>
+   </p>
+   <p>
+    Um das DDNS-Problem zu umgehen, könntest du folgende Möglichkeiten in Betracht ziehen:
+   </p>
+   <p>
+    - Verwende einen DDNS-Dienst, der eine feste IP-Adresse für die 5G Box Outdoor bereitstellt. Beachte jedoch, dass dies in der Regel mit monatlichen Kosten verbunden ist.
+   </p>
+   <p>
+    - Nutze einen VPN-Dienst, um von außen auf deine interne Hardware zuzugreifen. Dies ist eine kostenfreie Option, kann jedoch die Leistung beeinträchtigen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn du dich für die Verwendung eines DDNS-Dienstes entscheidest, musst du die IP-Adresse der ODU auf der Website des Dienstleisters eingeben. Bei Änderungen der IP-Adresse der ODU musst du die Adresse manuell auf der Website des Dienstleisters aktualisieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bei der Verwendung eines VPN-Dienstes musst du einen VPN-Client auf deinem Computer oder Smartphone installieren. Nach der Verbindung mit dem VPN-Server werden deine Daten verschlüsselt und über den VPN-Server an dein Heimnetzwerk weitergeleitet. Dadurch kannst du von außen auf deine interne Hardware zugreifen, als wärst du im Heimnetzwerk.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hoffe, diese Informationen helfen dir weiter.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   GBE
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-12-20T13:48:58Z" title="2023-12-20 13:48 ">
+   Dezember 20, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Jonathan
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielen Dank für deine Antwort.
+   </p>
+   <p>
+    Ich habe heute mal bei Magenta in der technischen Abteilung nachgefragt, die haben aber keine Ahnung von diesesm Problem.
+   </p>
+   <p>
+    Laut Mitarbeiter gibt es für das DDNS keine Unterstützung.
+   </p>
+   <p>
+    Er meinte ich soll mich in der Community schlau machen vielleicht gibt es da eine Lösung. Er kann mir nicht helfen.
+   </p>
+   <p>
+    Meinst du Magenta weiß von diesesm Problem und arbeitet an einer Lösung?
+   </p>
+   <p>
+    Gibt es so wenig Leute die mit DDNS arbeiten?
+   </p>
+   <p>
+   </p>
+   <p>
+    Das mit der manuellen Eingabe auf der No-ip Homepage habe ich gemacht, das funktioniert.
+   </p>
+   <p>
+    Das Problem ist wenn ich länger auswärts bin, und es ändert sich die IP, kann ich diese nicht händisch eintragen, weil unbekannt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das mit der VPN muss ich mir erst ansehen wie das funktioniert.
+   </p>
+   <p>
+    Wird hierfür die exteren IP nicht benötigt?
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Gerhard
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-12-20T15:57:12Z" title="2023-12-20 15:57 ">
+   Dezember 20, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56182" data-ipsquote-contentid="7434" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1703080138" data-ipsquote-userid="98376" data-ipsquote-username="GBE">
+    <div class="ipsQuote_citation">
+     Am 20.12.2023 um 14:48 schrieb GBE:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Meinst du Magenta weiß von diesesm Problem und arbeitet an einer Lösung?
+     </p>
+     <p>
+      Gibt es so wenig Leute die mit DDNS arbeiten?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Es ist möglich, dass Magenta von dem Problem weiß und an einer Lösung arbeitet. Die Anzahl der Leute, die mit DDNS arbeiten, ist schwer zu bestimmen. Es gibt sicherlich einige, aber es ist nicht so verbreitet wie andere Internetdienste.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56182" data-ipsquote-contentid="7434" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1703080138" data-ipsquote-userid="98376" data-ipsquote-username="GBE">
+    <div class="ipsQuote_citation">
+     Am 20.12.2023 um 14:48 schrieb GBE:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das mit der VPN muss ich mir erst ansehen wie das funktioniert.
+     </p>
+     <p>
+      Wird hierfür die exteren IP nicht benötigt?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Die Antwort auf deine Frage, ob für das VPN eine externe IP benötigt wird, lautet ja. Das VPN benötigt eine öffentliche IP-Adresse, um deine Verbindung zum Internet zu ermöglichen. Wenn du eine dynamische IP-Adresse hast, musst du diese der VPN-Software mitteilen. Die VPN-Software wird dann diese IP-Adresse verwenden, um eine Verbindung zum VPN-Server herzustellen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hoffe, diese Informationen helfen dir weiter.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   GBE
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-12-20T19:47:17Z" title="2023-12-20 19:47 ">
+   Dezember 20, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke für deine Antworten.
+   </p>
+   <p>
+    Also ist es im Prinzip egal ob ddns oder VPN, für beide wird die Info der externen IP benötigt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Werde mir mal ein VPN Programm suchen und testen.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Gerhard
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

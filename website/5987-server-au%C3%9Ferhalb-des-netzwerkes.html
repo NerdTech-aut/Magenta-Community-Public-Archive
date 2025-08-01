@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Server außerhalb des Netzwerkes
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Server außerhalb des Netzwerkes
+  </h1>
+  <span class="author">
+   SebastianH
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-30T13:50:04Z" title="2020-07-30 13:50 ">
+   Juli 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Abend,
+   </p>
+   <p>
+    Ich versuche einen kleinen privaten Server aufzubauen auf dem ich mit Freunden zum Beispiel minecraft oder andere spiele und eine Website erstellen kann.
+    <br/>
+    Das ganze funktioniert lokal auch ohne Probleme, nur kann ich nicht von außerhalb des Netzwerkes darauf zugreifen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe die verwendeten Ports als virtuelle Server angegeben und versuche über die WAN IP Adresse darauf zuzugreifen.
+   </p>
+   <p>
+   </p>
+   <p>
+    APN habe ich auf business.gprsinternet gestellt und meinem Gerät sogar eine fixe interne IP Adresse zugewiesen. Langsam gehen mir die Ideen aus, wie ich das Ganze zum Laufen bringen könnte.
+   </p>
+   <p>
+   </p>
+   <p>
+    ich hab noch ein paar screenshots gemacht vielleicht helfen die weiter.
+   </p>
+   <p>
+   </p>
+   <p>
+    mit freundlichen Grüßen
+   </p>
+   <p>
+    Sebastian
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2309" href="images/uploads/APN.png.27f7b5e9e888b0feb1c3cdc92a58c5d1.png" rel="">
+     <img alt="APN.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2309" src="images/uploads/APN.thumb.png.0897749b1d1ea74100281849e4588ee8.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2310" href="images/uploads/5f22cfd2c14ca_IPAdresse.png.f89f72fffce732b9b371605bfd327424.png" rel="">
+     <img alt="IP Adresse.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2310" src="images/uploads/5f22cfd35f35c_IPAdresse.thumb.png.c5f804184833c871de9e76c94c81f7af.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2311" href="images/uploads/5f22cfd3b2560_IPAdresse2.png.bb0b9ee5854352e85be61ad570aa309f.png" rel="">
+     <img alt="IP Adresse2.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2311" src="images/uploads/5f22cfd40101d_IPAdresse2.thumb.png.263592ca989064d84a968eb08e943261.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2312" href="images/uploads/5f22cfd48dc02_PortForwarding.png.4658b5cfaf6535070a1018d72d8e7fde.png" rel="">
+     <img alt="Port Forwarding.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2312" src="images/uploads/5f22cfd5558f0_PortForwarding.thumb.png.d92e3a263d2303e517e94503814c6de9.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2314" href="images/uploads/5f22d0ca0e14a_InkedAdressenichterreichbar.png.a97074fe0870d53b222b121ebf34061b.png" rel="">
+     <img alt="InkedAdresse nicht erreichbar.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2314" src="images/uploads/5f22d0caf3771_InkedAdressenichterreichbar.thumb.png.079eb29f275bbcbae03a39f1aca28617.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/5f22d17d42d34_InkedAdressenichterreichbar2.png.4c6091fa1da0c335d1b0329520a4ad3a.png">
+     <img alt="InkedAdresse nicht erreichbar 2.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2315" src="images/uploads/5f22d17da51fe_InkedAdressenichterreichbar2.thumb.png.be9267c15b534f205bb40882893c3bbd.png"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2020-07-30T13:56:30Z" title="2020-07-30 13:56 ">
+      Juli 30, 2020
+     </time>
+     von SebastianH
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-30T14:43:25Z" title="2020-07-30 14:43 ">
+   Juli 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Der erste Klassiker wäre die Windows Firewall, der zweite fehlendes NAT Loopback.
+   </p>
+   <p>
+    Um zweitens zu testen, versuche einmal von außerhalb deines Netzwerkes auf den Server zuzugreifen. Z.B. über das Smartphone.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   SebastianH
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-30T14:54:57Z" title="2020-07-30 14:54 ">
+   Juli 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="35588" data-ipsquote-contentid="5987" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1596120205" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 5 Minuten schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Der erste Klassiker wäre die Windows Firewall, der zweite fehlendes NAT Loopback.
+     </p>
+     <p>
+      Um zweitens zu testen, versuche einmal von außerhalb deines Netzwerkes auf den Server zuzugreifen. Z.B. über das Smartphone.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Bei der Firewall lasse ich die verwendeten Ports durch.
+   </p>
+   <p>
+    Wenn ich versuche mich vom Smartphone aus zu verbinden, bekomme ich die Fehlermeldung "ERR_CONNECTION_TIMED_OUT"
+   </p>
+   <p>
+   </p>
+   <p>
+    beides ohne Erfolg?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-30T19:55:03Z" title="2020-07-30 19:55 ">
+   Juli 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Dann sieh dir einmal den Traffic auf deinem PC mit Wireshark an?
+   </p>
+   <p>
+    War das Smartphone wirklich nicht mit dem WLAN verbunden?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   SebastianH
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-30T20:23:11Z" title="2020-07-30 20:23 ">
+   Juli 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="35592" data-ipsquote-contentid="5987" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1596138903" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 21 Minuten schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Dann sieh dir einmal den Traffic auf deinem PC mit Wireshark an?
+     </p>
+     <p>
+      War das Smartphone wirklich nicht mit dem WLAN verbunden?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich kenne mich mit Wireshark leider nicht wirklich aus, aber ich habe mal einen screenshot davon gemacht und die Adresse gefunden. Es ist schwarz hinterlegt, das ist glaub ich kein gutes Zeichen :D.
+   </p>
+   <p>
+    Ich weiß nur leider echt nicht was oder ob ich da was zensieren soll. ich vertraue einfach mal auf die magenta community und zensiere nichts. Die ip hat sich ohnehin heute schon gefühlt 10 mal geändert.
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2316" href="images/uploads/5f232c0b15408_Anmerkung2020-07-30222228.png.644bce999589ba676c7ba3054416e915.png" rel="">
+     <img alt="5f232c0bc2a7f_Anmerkung2020-07-30222228.thumb.png.30229f41536c68d9d067822b945b8c78.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2316" src="images/uploads/5f232c0bc2a7f_Anmerkung2020-07-30222228.thumb.png.30229f41536c68d9d067822b945b8c78.png"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Nein mit dem Handy habe ich mit deaktiviertem WLAN und aktivierten mobilen Daten versucht auf die öffentliche IP zuzugreifen. Das hat nicht funktioniert.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-31T08:08:42Z" title="2020-07-31 08:08 ">
+   Juli 31, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Stammt der Screenshot von Wireshark von dem selben PC wo der Dienst läuft?
+   </p>
+   <p>
+    Wenn ja, dann passen die IPs nicht mit dem Screenshot vom Router zusammen.
+   </p>
+   <p>
+    Wireshark -&gt; 192.168.8.20
+   </p>
+   <p>
+    Router -&gt; 192.168.8.10
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   SebastianH
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-31T09:07:10Z" title="2020-07-31 09:07 ">
+   Juli 31, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="35600" data-ipsquote-contentid="5987" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1596182922" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 52 Minuten schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Stammt der Screenshot von Wireshark von dem selben PC wo der Dienst läuft?
+     </p>
+     <p>
+      Wenn ja, dann passen die IPs nicht mit dem Screenshot vom Router zusammen.
+     </p>
+     <p>
+      Wireshark -&gt; 192.168.8.20
+     </p>
+     <p>
+      Router -&gt; 192.168.8.10
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Achso nein, der screenshot war von einem anderen PC der auch im Netzwerk war. hier ein screenshot vom Laptop auf dem der Server läuft. Wenn ich mich über localhost verbinde funktioniert es, mit der öffentlichen ip nicht.
+   </p>
+   <p>
+   </p>
+   <p>
+    192.168.8.10 ist mein Laptop auf dem der Server läuft
+   </p>
+   <p>
+    192.168.8.20 ist der andere PC mit dem ich unter anderem versuche mich zu verbinden
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Wireshark.png.4f67d39639cf7aef103ea737820d026a.png">
+     <img alt="Wireshark.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2320" src="images/uploads/Wireshark.thumb.png.97062810cb3aa2255a755336cf7cf4ae.png"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-31T15:55:12Z" title="2020-07-31 15:55 ">
+   Juli 31, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Welche Router hast du, mit welcher Firmware?
+   </p>
+   <p>
+    Wie lange ist der schon in verwendung?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   SebastianH
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-31T16:27:25Z" title="2020-07-31 16:27 ">
+   Juli 31, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Seit 3 Tagen bin ich bei Magenta und habe den HUAWEI 5G CPE Pro 2 bekommen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hardware-Version: WL1H122M
+   </p>
+   <p>
+    Software-Version: 10.0.5.13(H612SP1C1217)
+   </p>
+   <p>
+    Weboberflächen-Version: WEBUI 10.0.5.1(W2SP4C1217)
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-31T17:00:02Z" title="2020-07-31 17:00 ">
+   Juli 31, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich kann da keinen Fehler erkennen. Wenn zufällig noch ein anderer Router herum liegt, dann versuche es einmal damit.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   SebastianH
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-07-31T19:07:16Z" title="2020-07-31 19:07 ">
+   Juli 31, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="35614" data-ipsquote-contentid="5987" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1596214802" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 1 Stunde schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich kann da keinen Fehler erkennen. Wenn zufällig noch ein anderer Router herum liegt, dann versuche es einmal damit.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    hab ich auch schon leider ohne Erfolg. Deshalb glaube ich dass ich irgendwo einen Fehler gemacht habe aber ich weiß nicht wo oder was... ich bin verschiedenen Anleitungen gefolgt und hab es bis jetzt nicht zum laufen gebracht.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   revmal
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-10T08:37:13Z" title="2020-08-10 08:37 ">
+   August 10, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe exakt dasselbe Problem. Alles lt. Anleitungen eingestellt, APN business.gprsinternet, Virtuelle Server eingetragen, ebenfalls eine 46.124.x.x IP Adresse usw. aber ich bekomme von extern keine Verbindung zusammen. Mit dem B535 Modem funktioniert es mit den Einstellungen, mit dem Huawai CPE Pro 2 mit derselben Firmware Version wie oben von SebastianH nicht.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2020-08-10T08:39:14Z" title="2020-08-10 08:39 ">
+      August 10, 2020
+     </time>
+     von revmal
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Fi Sh
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-13T09:26:12Z" title="2020-08-13 09:26 ">
+   August 13, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe das idente Problem, mein Heimsystem ist nur mit dem B525 Router erreichbar, jedoch spackt der CPE Pro 2.
+   </p>
+   <p>
+    Ich habe mit der Hotline telefoniert, die meinten sie schauen sichs an und werden mich kontaktieren... bin mal gespannt
+    <img alt=":P" data-emoticon="" height="20" src="images/emoticons/tma_tounge-o.png" srcset="images/emoticons/tma_tounge-o@2x.png 2x" title=":P" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   SebastianH
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-14T18:26:02Z" title="2020-08-14 18:26 ">
+   August 14, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="35827" data-ipsquote-contentid="5987" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1597310772" data-ipsquote-userid="85312" data-ipsquote-username="Fi Sh">
+    <div class="ipsQuote_citation">
+     Am 13.8.2020 um 11:26 schrieb Fi Sh:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich habe das idente Problem, mein Heimsystem ist nur mit dem B525 Router erreichbar, jedoch spackt der CPE Pro 2.
+     </p>
+     <p>
+      Ich habe mit der Hotline telefoniert, die meinten sie schauen sichs an und werden mich kontaktieren... bin mal gespannt
+      <img alt=":P" data-emoticon="" height="20" src="images/emoticons/tma_tounge-o.png" srcset="images/emoticons/tma_tounge-o@2x.png 2x" title=":P" width="20"/>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich hab leider auch noch keine Lösung. Sag bitte Bescheid wenn du eine Lösung hast
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fi Sh
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-14T20:04:09Z" title="2020-08-14 20:04 ">
+   August 14, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Was ich sagen ist, der Support bei Huawei meinte, die Basissoftware mit welchen die Modems ausgeliefert werden, verfügen über kein Portforwarding. D.h. es liegt jetzt an Magenta dies korrekt umzusetzen.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2020-08-14T20:04:34Z" title="2020-08-14 20:04 ">
+      August 14, 2020
+     </time>
+     von Fi Sh
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   revmal
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-16T04:00:51Z" title="2020-08-16 04:00 ">
+   August 16, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich hab auch den Bridge Mode probiert, aber da bekomme ich keine IP Adresse am Router hinter dem Huawai. Aus dem Modus werde ich auch nicht schlau ...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fi Sh
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-26T08:27:34Z" title="2020-08-26 08:27 ">
+   August 26, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Seit heute funktioniert Portwarding bei mir ohne Problem. Ich habe weder eine neue Firmware noch ein etwas anderes getan.
+   </p>
+   <p>
+    Der Support hat mir auch noch nicht geantwortet, jedenfalls läuft alles wie es soll mit dem CPE5pro im 5G Netz.
+   </p>
+   <p>
+    Irgendwer hat irgendwas bei Magenta gemacht, aber keiner verrät etwas.
+   </p>
+   <p>
+   </p>
+   <p>
+    Jetzt wäre es nur noch nett zu wissen, warum die Verbindung jedentag des öfteren einfach abkackt.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-26 09:28:19
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-26 09:28:15
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-26 07:16:16
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-26 07:16:12
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-26 07:16:02
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-26 07:15:59
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-26 00:28:19
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-26 00:28:15
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-25 08:32:56
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-25 08:32:15
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-25 08:31:36
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-25 08:31:33
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-25 08:31:19
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-24 21:27:53
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-24 22:27:48
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-24 21:59:54
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-24 19:42:41
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-24 20:42:35
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-24 19:20:39
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-24 20:20:33
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-24 17:07:23
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-24 17:07:18
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 failed
+     </p>
+     <p>
+      2020-08-24 17:07:07
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-24 09:07:29
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-24 07:22:53
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-24 08:22:46
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-24 08:12:33
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-24 07:12:32
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-24 08:12:26
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-24 02:51:14
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-24 02:51:10
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-24 02:01:10
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-24 01:49:05
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-23 22:55:14
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-23 22:55:10
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-23 22:20:00
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-23 22:19:51
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-23 21:16:12
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-23 22:16:06
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-23 22:04:16
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-23 22:04:08
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-23 21:57:09
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-23 21:57:01
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-23 18:06:21
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-23 17:53:51
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-23 11:02:54
+     </p>
+     <p>
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 connected
+     </p>
+     <p>
+      2020-08-23 11:50:46
+     </p>
+     <p>
+      WAN connection INTERNET_R_UMTS1:IPv4 disconnected
+     </p>
+     <p>
+      2020-08-23 11:25:24
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2020-08-26T08:28:14Z" title="2020-08-26 08:28 ">
+      August 26, 2020
+     </time>
+     von Fi Sh
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   revmal
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-11T16:39:11Z" title="2020-09-11 16:39 ">
+   September 11, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Heute umgesteckt, funktioniert bei mir auch mit 4G.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-12T17:40:37Z" title="2020-09-12 17:40 ">
+   September 12, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es könnte ein Firmware Update oder eine Umstellung im Netz gewesen sein.
+   </p>
+   <p>
+   </p>
+   <p>
+    Es ist Mal wo eine Meldung aufgetaucht, dass es im 5G Netz ein Problem mit öffentlichen IPs gab/gibt. Vielleicht hat es damit was zu tun.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   mKaymen
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-10-12T12:41:37Z" title="2020-10-12 12:41 ">
+   Oktober 12, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe leider auch dasselbe Problem. Magenta kann mir leider auch nicht helfen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   SebastianH
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-11-27T15:35:16Z" title="2020-11-27 15:35 ">
+   November 27, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Abend,
+   </p>
+   <p>
+    ich habe das Problem immer noch.
+    <br/>
+    Ich habe schon alles mögliche Versucht - ohne Erfolg.
+   </p>
+   <p>
+    Gibt es noch irgendwelche verrückten Vorschläge die ich versuchen könnte um meine Ports zu öffnen?
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke und schönes Wochenende
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Ma Rio
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-11-28T12:33:44Z" title="2020-11-28 12:33 ">
+   November 28, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo!
+   </p>
+   <p>
+    Bei Magenta zahlt man die Servicepauschale jährlich leider nicht für einen guten Service.
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Port Freigabe funktioniert teilweise bei mir. Hab immer wieder Ausfälle. Liegt whs am APN.
+   </p>
+   <p>
+   </p>
+   <p>
+    Die meisten hier werden wahrscheinlich  ein LoopBack Problem haben. Die Ports sind über externe Netzwerke erreichbar aber nicht im eigenen. Da das nicht gerootet wir. (Kein LoopBack). Kann also nur von extern erreicht werden mit der externen IP. Und intern nur mit der internen IP.
+   </p>
+   <p>
+   </p>
+   <p>
+    hoffe dass hilft einige.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Mit freundlichen Grüßen
+    <br/>
+    MK
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

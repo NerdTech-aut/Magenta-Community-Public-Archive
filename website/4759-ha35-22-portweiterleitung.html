@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   HA35-22 Portweiterleitung
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   HA35-22 Portweiterleitung
+  </h1>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-16T12:23:26Z" title="2018-11-16 12:23 ">
+   November 16, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Liebes Forum,
+   </p>
+   <p>
+    ich habe seit 2 Tagen einen HA35-22 Hybridrouter von Huawei. Eine öffentliche IP habe ich beantragt und bekommen (beginnt mit 213.-.-.-). Der DSL-Anschluss wurde hergestellt und funktioniert.
+   </p>
+   <p>
+    Nun habe ich den Route mit nach Hause genommen habe also kein DSL sondern nur LTE.
+   </p>
+   <p>
+    Nachdem ich eine Portweiterleitung für Port 22 eingerichtet habe kann ich trotzdem meinen dahinterliegenden Server nicht erreichen (ssh: connect to host 213.x.x.x port 22: Operation timed out). Mit einem anderen Router (Fritzbox) über eine A1-Leitung ist der Server aber sehr wohl erreichbar.
+   </p>
+   <p>
+    Den Server habe ich im HA35 in die DMZ gelegt.
+   </p>
+   <p>
+    Hat jemand vielleicht eine Idee?
+   </p>
+   <p>
+    Danke
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Port22.png.1b1dd02efc2a9aa91aadc323aabc13fe.png">
+     <img alt="Port22.png" class="ipsImage ipsImage_thumbnailed" data-fileid="1188" src="images/uploads/Port22.png.1b1dd02efc2a9aa91aadc323aabc13fe.png"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-16T13:36:36Z" title="2018-11-16 13:36 ">
+   November 16, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Portweiterleitungen gehen nur mit DSL und LTE.
+   </p>
+   <p>
+    Bitte teste mit can you See me oder über einen anderen Anschluss oder vom Smartphone.
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-17T02:50:31Z" title="2018-11-17 02:50 ">
+   November 17, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke für den Hinweis. D.h. bei Ausfall von DSL sind meine Server dahinter nicht mehr erreichbar. Nicht gut.
+   </p>
+   <p>
+    Kann es sein, dass DDNS auch nur im Verbund DSL/LTE funktioniert?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-17T12:39:08Z" title="2018-11-17 12:39 ">
+   November 17, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    kann sein, jedoch kann ich es nicht testen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bekommst du intern IPv6  adresssen?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-17T15:07:55Z" title="2018-11-17 15:07 ">
+   November 17, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja. Im Bonding Tunnel wird eine IPv4 und eine IPv6 Adresse angezeigt. In der Internet&gt;Internetverbindung&gt;Mobile wird auch eine IPv6 Adresse angezeigt. Allerdings steht der IPv4-Status auf "Nicht verbunden".
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="1189" href="images/uploads/IPv6.png.28b929a734b07f589a98692c7ef537be.png" rel="">
+     <img alt="IPv6.png" class="ipsImage ipsImage_thumbnailed" data-fileid="1189" src="images/uploads/IPv6.png.28b929a734b07f589a98692c7ef537be.png"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2018-11-17T15:08:45Z" title="2018-11-17 15:08 ">
+      November 17, 2018
+     </time>
+     von Waldemar
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-17T17:49:08Z" title="2018-11-17 17:49 ">
+   November 17, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich meinte auf dem Geråt auf das du zugreifen möchtest.
+   </p>
+   <p>
+    unter umstaenden könnte man direkt auf die IPv6  adresse zugreifen und so den dienst nutzen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Was sagt canyouseeme, wenn die Box über dsl und LTE verbunden ist?
+   </p>
+   <p>
+    (Oder der test von extern über die DSL und Tunnel IP)
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-17T20:17:27Z" title="2018-11-17 20:17 ">
+   November 17, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    DSL und LTE habe ich zusammen noch nicht genutzt da ich davon ausgegangen bin, dass beide Dienste unabhängig voneinander funktionieren (basierend auf einer Aussage eines T-Mobile Service-Technikers).
+   </p>
+   <p>
+    IPv6 auf dem Client muss ich erst testen. Ich werde berichten.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-19T06:02:16Z" title="2018-11-19 06:02 ">
+   November 19, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Habe heute nur mit LTE ohne einer DSL-Verbindung eine IPv6 Verbindung mittels SSH zu meinem Server herstellen können.
+   </p>
+   <p>
+    Für SSH über IPv4 muss ich zuerst DSL anschließen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-19T12:03:13Z" title="2018-11-19 12:03 ">
+   November 19, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das verhalten hört sich nachvollziehbar an.
+   </p>
+   <p>
+    Das IPv4 von extern nur über DSL möglich ist, könnte die Architektur etwas vereinfachen.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2018-11-19T12:03:54Z" title="2018-11-19 12:03 ">
+      November 19, 2018
+     </time>
+     von IT-Freak
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-19T13:07:15Z" title="2018-11-19 13:07 ">
+   November 19, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich frage mich warum die Techniker von T-Mobile darüber keine Auskunft erteilen können und ich mich als Businesskunde über ein Forum - danke für die Hilfe an diesr Stelle - schlau machen muss. Noch dazu haben wir einen Premium-Support Vertrag abgeschlossen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Andrea_
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-19T13:17:16Z" title="2018-11-19 13:17 ">
+   November 19, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   Hallo Waldemar,
+
+danke für deinen Beitrag.
+Darf ich fragen, wann du diese Frage unserer Technikhotline gestellt hast, die dir kostenlos zur Verfügung steht?
+Hier sind wir ausschließlich moderierend unterwegs. Denn die Community ist kein Servicekanal, sondern verfolgt das Ziel, dass Kundinnen sich gegenseitig unterstützen. 
+
+LG Andrea
+  </div>
+  <hr/>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-19T13:25:27Z" title="2018-11-19 13:25 ">
+   November 19, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Andrea.
+   </p>
+   <p>
+    Ich habe den HA35-22 vor ca. 14 Tagen bekommen, die DSL-Leitung wurde erfolgreich am 14.11.2018 hergestellt. Seit dem 14.11. habe ich insgesamt vier Mal mit der Technik telefoniert.
+   </p>
+   <p>
+    Was bitte soll Deine Aussage "Hier sind wir ausschließlich moderierend unterwegs. Denn die Community ist kein Servicekanal [...]"?
+   </p>
+   <p>
+    Die Community hier ist mein letzter Rettungsanker bevor ich den Router zurückschicke und von meinem Rücktrittsrecht gebrauch mache.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Andrea_
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-19T13:40:07Z" title="2018-11-19 13:40 ">
+   November 19, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   Hallo Waldemar,
+
+das tut mir sehr leid zu hören, dass du über unsere Technikhotline nicht zu dem gewünschten Ergebnis gekommen bist.
+Wenn dich HomeNet Hybrid nicht überzeugt und du noch in der Testphase bist, dann ist es wahrscheinlich ratsam, das Rückgaberecht in Anspruch zu nehmen, als sich durch eine Bindefrist zu quälen. 
+Das klingt sicher drastisch für dich, aber genau darum haben wir das Rücktrittsrecht eingeführt. Man kann den Vertrag auf Herz und Nieren testen. Ist man nicht überzeugt, kann man ihn zurückgeben.
+
+Ich empfehle dir, solltest du noch unsicher sein, die Testphase auszunutzen, um dir ein ganzheitliches Bild des Vertrags zu machen.
+
+LG Andrea
+  </div>
+  <hr/>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-23T16:24:42Z" title="2018-11-23 16:24 ">
+   November 23, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Update: Habe heute den Router an DSL und LTE angeschlossen. Das Port 22 inst nach obigem Schema geöffnet. Die SSH-Verbindung über IPv6 hat sofort funktioniert, die IPv4 dagegen nicht. Nicht mit der vergebenen IP-Adresse (bezogen über wieistmeineip.at) und nicht mit der korrekt geupdateten DDNS. Meldung: "operation timed out".
+   </p>
+   <p>
+    Nach Rücksprache mit der T-Mobile TEchnik wurde mir gesagt, dass der HA35-22 nur für den Home-Consumer Markt konzipiert wurde und daher Portweiterleitung "wahrscheinlich [sic]" nicht funktionieren werde. Allerdings wurde mir an anderer Stelle von der Technikhotline mitgeteilt, dass der USB-Port auf der Rückseite nicht zur Verfügung steht und nur ein Dummy-Anschluß wäre. Das hat sich definitiv als falsch herausgestellt.
+   </p>
+   <p>
+    Ich habe den Eindruck, dass die Portweiterleitung schon funktioniert, allerdings eine Andere Einstellung im Router noch vorgenommen werden muss. Fragt sich nur welche. Ein Router ohne Portweiterleitung ist sogar im Heimbereich eine Krücke.
+   </p>
+   <p>
+    Warum das Produkt dann als business Produkt beworben und verkauft wird erschließt sich mir nicht.
+   </p>
+   <p>
+    Ich gebe mir noch bis Dienstag, wenn sich bis dahin keine Lösung anbietet geht der Router zurück und ich wende mich an den Platzhirschen, auch wenn´s teurer wird.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-24T10:14:41Z" title="2018-11-24 10:14 ">
+   November 24, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hast du am Bonding Tunnel eine öffentliche IPv4 Adresse?
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-24T17:11:18Z" title="2018-11-24 17:11 ">
+   November 24, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja, die habe ich auch über "wieistmeineip.at" ausgelesen. Die ist auch bei No-IP hinterlegt. Die scheint auch im Bonding Tunnel auf ("Status: aktiv").
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

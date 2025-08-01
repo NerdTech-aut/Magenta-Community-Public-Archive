@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Magenta 5G Box Outdoor - Zugriff Konfigurationsoberfläche
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Magenta 5G Box Outdoor - Zugriff Konfigurationsoberfläche
+  </h1>
+  <span class="author">
+   gschwandtner
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-01T10:17:44Z" title="2022-01-01 10:17 ">
+   Januar 1, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+    ich habe mit der Magenta 5G Box Outdoor einige Probleme: ich habe die ODU auf Brückenmodus konfiguriert (über den Zugriff auf die Konfigurationsseite per 192.168.0.1); seit dem kann ich nicht mehr auf die Konfigurationsseite zugreifen. Lediglich über die App (mit Bluetooth) kann noch zugegriffen werden, aber auch hier hilft das Rücksetzen auf Werkseinstellungen nicht weiter.
+   </p>
+   <p>
+    Auch bekommt der nachfolgende Router keine IP via DHCP zugewiesen, daher der Versuch der Rücksetzung.
+   </p>
+   <p>
+   </p>
+   <p>
+    Warum der ganze Aufwand? Ich möchte letztendlich auf die Inneneinheit verzichten und das Gerät im Brückenmodus betreiben, als Router soll ein UniFi USG-4-Pro dienen (funktioniert mit einem Netgear LTE Modem im Brückenmodus bereits tadellos).
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielen Dank für jedwede Antwort!
+   </p>
+   <p>
+   </p>
+   <p>
+    Update: Zugriff auf die Konfigurationsseite funktioniert - nach unzähligen Rücksetzvorgängen - wieder soweit. Bleibt das Problem mit der Zuweisung einer IP via DHCP von der 5G Box Outdoor/ODU an das USG; blöderweise funktioniert die Zuweisung der IP bei Verwendung eines Laptops problemlos. Möglicherweise ein UniFi USG Problem?
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-01-01T15:03:05Z" title="2022-01-01 15:03 ">
+      Januar 1, 2022
+     </time>
+     von gschwandtner
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Weidimanson
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-01T16:43:06Z" title="2022-01-01 16:43 ">
+   Januar 1, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo gschwandtner darf ich fragen wie du den Bridgemodus eingestellt hast bei mir ist das Feld ausgegraut?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gschwandtner
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-01T18:18:22Z" title="2022-01-01 18:18 ">
+   Januar 1, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+    die Änderung des Modus ist über die Anlage eines zweiten MPDN-Profils möglich.
+   </p>
+   <p>
+   </p>
+   <p>
+    Lösung für mein Problem war die Verwendung eines anderen POE-Injektors (oder längere Wartezeit bei Gerätewechsel): aufgrund von MAC-Locking wird ansonsten keine IP zugewiesen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Weidimanson
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-01T20:27:42Z" title="2022-01-01 20:27 ">
+   Januar 1, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke für die Antwort hab jetzt genau das selbe Problem das ich keine Ip zugewiesen bekomme.
+   </p>
+   <p>
+    Darf ich fragen welchen POE-Injektor in Verwendung ist ?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Inkognito
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-02T20:52:58Z" title="2022-01-02 20:52 ">
+   Januar 2, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo, ich habe ein ähnliches Problem, ich möchte auch die ODU im Bridge-Mode verwenden um dahinter mein bestehenden ASUS Router mit VPN Server weiter zu betreiben. Ich habe ein zweites MPDN Profil im Bückenmodus konfiguriert, jedoch bekommt mein ASUS Router immer nur eine interne IP zugewiesen (192.168…….) Ich bräuchte aber die öffentliche IP auf meinem Router. Habt ihr das Problem schon gelöst? Muss noch was anderes konfiguriert werden?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IK66
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-08T14:15:12Z" title="2022-01-08 14:15 ">
+   Januar 8, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wie komme ich in den Bridge-Modus? Ist ja richtig mühsam, nirgends gibt es eine Anleitung (von magenta) -.-
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Robert T.
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-10T09:19:09Z" title="2022-01-10 09:19 ">
+   Januar 10, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45800" data-ipsquote-contentid="7432" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641156778" data-ipsquote-userid="91953" data-ipsquote-username="Inkognito">
+    <div class="ipsQuote_citation">
+     Am 2.1.2022 um 21:52 schrieb Inkognito:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo, ich habe ein ähnliches Problem, ich möchte auch die ODU im Bridge-Mode verwenden um dahinter mein bestehenden ASUS Router mit VPN Server weiter zu betreiben. Ich habe ein zweites MPDN Profil im Bückenmodus konfiguriert, jedoch bekommt mein ASUS Router immer nur eine interne IP zugewiesen (192.168…….) Ich bräuchte aber die öffentliche IP auf meinem Router. Habt ihr das Problem schon gelöst? Muss noch was anderes konfiguriert werden?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Liebes Magenta Team! Eine Lösung wäre nett! Keine Lust 800 Euro für einen Fritz 5G Router auszugeben der es ohne umhermurksen kann.
+   </p>
+   <p>
+   </p>
+   <p>
+    Zum Zugriff auf die ODU
+   </p>
+   <p>
+    Ich habe es so geschafft: explizit https://192.168.0.1 davor. http:// wird die ODU nicht erreicht. Etwas eigenartig...
+   </p>
+   <p>
+   </p>
+   <p>
+    Habe mir noch zusätzlich eine statische IP dazu genommen. Jedoch blockiert die ODU so ziemlich alles was versucht auf meine Ports zuzugreifen. Portforwarding mit der ODU ist ja wohl etwas in die Hose gegangen. Sagt bei bestehenden IPs das sie ungültig sind....
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-01-10T11:38:26Z" title="2022-01-10 11:38 ">
+      Januar 10, 2022
+     </time>
+     von Robert T.
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Weidimanson
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-11T07:35:07Z" title="2022-01-11 07:35 ">
+   Januar 11, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Habt ihr auch zuerst die Verbindung zum Internet abgeschaltet?
+   </p>
+   <p>
+    Denn sonst stellt die Odu nicht um, und der Router muss auch die Einstellung Internet Über Wan verfügen.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45788" data-ipsquote-contentid="7432" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641061102" data-ipsquote-userid="91933" data-ipsquote-username="gschwandtner">
+    <div class="ipsQuote_citation">
+     Am 1.1.2022 um 19:18 schrieb gschwandtner:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+    </div>
+   </blockquote>
+  </div>
+  <hr/>
+  <span class="author">
+   cnu
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-31T07:05:19Z" title="2022-01-31 07:05 ">
+   Januar 31, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi, ich habe dieses Wochenende sehr viel Zeit in die ODU gesteckt, wegen Bridge/Router Mode. Meine Lösung:
+   </p>
+   <p>
+    Für die Trennung der Profile in der ODU verwende ich die VLAN Option.
+   </p>
+   <p>
+   </p>
+   <p>
+    MPADN:
+   </p>
+   <p>
+    1.) VLAN einschalten und einen VLAN ID vergeben
+   </p>
+   <p>
+    2.) Ein neues Profil anlegen, dieses erhält automatisch den Bridge Mode, dort eine weitere ID konfigurieren.
+   </p>
+   <p>
+    3.) Danach ein "Apply" und das Modem startet durch.
+   </p>
+   <p>
+    4.) Bei der Firewall (USG, pfsense, opnsense, ....) auf der WAN Seite die VLAN ID konfigurieren.
+   </p>
+   <p>
+    5.) Je nach ausgewählter ID erhält man die Private IP-Adresse (192.168.0.xxx) oder die Public IP
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Wichtig: Wenn sich das Endgerät an der ODU (andere MAC Adresse) ändert, muss die ODU stromlos gemacht werden.
+   </p>
+   <p>
+    Ohne VLAN wüsste ich nicht, wie die ODU entscheiden  kann, welcher Mode (Bridge/Router) an das Endgerät weitergeben werden soll.
+   </p>
+   <p>
+   </p>
+   <p>
+    Noch eine Eigenheit, die ODU hat dürfte sehr energieeffizient sein ;-). Wenn man den Stromstecker vom PoE Adapter abzieht, hat man noch eine gefühlte Ewigkeit einen Link.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-02-01T13:59:50Z" title="2022-02-01 13:59 ">
+      Februar 1, 2022
+     </time>
+     von cnu
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   tmw
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-01T07:58:45Z" title="2022-02-01 07:58 ">
+   Februar 1, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+   </p>
+   <p>
+    mit ein bisschen Hilfe des "web inspectors" im browser geht der Bridge Mode auch mit einem Einzelnen PDN profile.
+   </p>
+   <p>
+   </p>
+   <p>
+    folgenden text suchen und disabled="" entfernen.
+   </p>
+   <p>
+    &lt;select name="op_mode0" id="op_mode0"
+    <strong>
+     disabled=""
+    </strong>
+    &gt;
+   </p>
+   <p>
+   </p>
+   <p>
+    (und wer ein bisschen rumsucht kann vor allem im haupmenü noch so einiges entdecken...)
+   </p>
+   <p>
+   </p>
+   <p>
+    lg
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-02-01T17:28:55Z" title="2022-02-01 17:28 ">
+      Februar 1, 2022
+     </time>
+     von tmw
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   cnu
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-01T16:53:25Z" title="2022-02-01 16:53 ">
+   Februar 1, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Absolut genial, ich dachte der inspector ist nur für read .... wieder was gelernt
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Isak
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-01T20:21:34Z" title="2022-02-01 20:21 ">
+   Februar 1, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46315" data-ipsquote-contentid="7432" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1643702325" data-ipsquote-userid="92302" data-ipsquote-username="tmw">
+    <div class="ipsQuote_citation">
+     vor 12 Stunden schrieb tmw:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      mit ein bisschen Hilfe des "web inspectors" im browser geht der Bridge Mode auch mit einem Einzelnen PDN profile.
+     </p>
+     <p>
+     </p>
+     <p>
+      folgenden text suchen und disabled="" entfernen.
+     </p>
+     <p>
+      &lt;select name="op_mode0" id="op_mode0"
+      <strong>
+       disabled=""
+      </strong>
+      &gt;
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo. Ich klink mich da mal ein. Habs mit dieser Erklärung nach langem probieren endlich geschafft, den NAT Typ 2 auf meiner PS5 zu bekommen. Dadurch ergibt sich aber neues Problem. Ich hab eine sehr schlechte Verbindung. Von 220mbit Download Geschwindigkeit mit NAT Typ 3 auf  massiv schwankende mbit unter 100... habs versucht in Call of Duty eine Runde zu machen, dort schwankt der Ping bei 250 - 400
+    <img alt="O.o" data-emoticon="" height="20" src="images/emoticons/tma_confused-o.png" srcset="images/emoticons/tma_confused-o@2x.png 2x" title="O.o" width="20"/>
+   </p>
+   <p>
+    woran liegt das? Die Indoor Einheit steht bei mir im Keller, da sich dort mein Gaming Raum befindet - über das Kellerfenster nach draußen mit der Outdoor Einheit verbunden.
+   </p>
+   <p>
+    Liebe Grüße
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   cnu
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-02T11:27:56Z" title="2022-02-02 11:27 ">
+   Februar 2, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi, da kann ich leider nicht weiterhelfen. Ich verwende das Indoor Modem gar nicht mehr. Bei mir ist die ODU direkt mit meiner Firewall verbunden und dahinter ist mein restliches Netzwerk.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das Verhalten mit den Pingzeiten hatte ich auch zweimal, ich startete einfach die ODU durch und danach passte es wieder. Ich musste aber die ODU min. 1min stromlos machen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Zusätzlich hat Magenta Probleme:
+   </p>
+   <p>
+    <a href="https://www.derstandard.at/story/2000133011519/aktuelle-stoerung-beim-internet-von-magenta-telekom" rel="external nofollow">
+     https://www.derstandard.at/story/2000133011519/aktuelle-stoerung-beim-internet-von-magenta-telekom
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielleicht genau den richtigen/falschen Zeitpunkt erwischt. LG
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Andy123
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-10T15:37:10Z" title="2023-08-10 15:37 ">
+   August 10, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hat sich zu dem Thema schon etwas getan? Habe auch das Problem dass ich von extern mit ODU solo an einer USG nicht die externe IP durchgereicht bekomme sondern entweder die Interne von DHCP der ODU oder eine komische 10.110.XXX.XXX (Beispiel) die aber auch nicht extern ist.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-08-10T15:38:00Z" title="2023-08-10 15:38 ">
+      August 10, 2023
+     </time>
+     von Andy123
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   tom040264
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-23T22:06:35Z" title="2024-01-23 22:06 ">
+   Januar 23, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45778" data-ipsquote-contentid="7432" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641032264" data-ipsquote-userid="91933" data-ipsquote-username="gschwandtner">
+    <div class="ipsQuote_citation">
+     Am 1.1.2022 um 11:17 schrieb gschwandtner:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo,
+     </p>
+     <p>
+      ich habe mit der Magenta 5G Box Outdoor einige Probleme: ich habe die ODU auf Brückenmodus konfiguriert
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Servus!
+   </p>
+   <p>
+   </p>
+   <p>
+    Es ist ein altes Thema, aber ich habe noch keine Antwort gefunden. Seit dem ich die Magenta 5G outdoor Lösung verwende, erreiche meinen Web-Server aus dem Internet nicht mehr. Mit ping komme ich auch nicht durch. Ich bilde mir ein, dass es im Bridge Modus möglicherweise funktionieren könnte. Leider ist diese Option gesperrt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich bin für jeden Hinweis dankbar
+   </p>
+   <p>
+    T.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-24T09:25:20Z" title="2024-01-24 09:25 ">
+   Januar 24, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56456" data-ipsquote-contentid="7432" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1706047595" data-ipsquote-userid="98142" data-ipsquote-username="tom040264">
+    <div class="ipsQuote_citation">
+     Am 23.1.2024 um 23:06 schrieb tom040264:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Leider ist diese Option gesperrt.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hey,
+   </p>
+   <p>
+   </p>
+   <p>
+    es ist möglich, dass das Problem mit der Magenta 5G Outdoor Lösung im Bridge-Modus tatsächlich behoben werden könnte. Im Bridge-Modus übernimmt der Router nur die Aufgabe der Verbindung zum Internet und leitet alle Datenpakete ungefiltert an den dahinter liegenden Router weiter. Dies würde auch die Firewall-Einstellungen des Routers umgehen, die möglicherweise den Zugriff auf deinen Web-Server blockieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    Leider ist es nicht möglich, die Bridge-Modus-Option selbst zu aktivieren. Du kannst jedoch einen Techniker von Magenta kontaktieren (unter 0676 200 7777), der dir dabei hilft.
+   </p>
+   <p>
+   </p>
+   <p>
+    Alternativ kannst du auch versuchen, die Ursache des Problems an anderer Stelle zu finden. Dazu solltest du die folgenden Schritte durchführen:
+   </p>
+   <p>
+    - Vergewissere dich, dass deine 5G Outdoor Box ordnungsgemäß mit dem Netzwerk verbunden ist und alle Verbindungen stabil sind. Du kannst dies tun, indem du die LEDs auf der Box überprüfst.
+   </p>
+   <p>
+    - Überprüfe die IP-Konfiguration deines Web-Servers. Stelle sicher, dass du die richtigen IP-Einstellungen für die statische IP-Adresse konfiguriert hast, einschließlich Subnetzmaske, Gateway und DNS-Server. 3. Überprüfe die Portweiterleitungen im Router. Stelle sicher, dass die Ports, die für deinen Web-Server benötigt werden, weitergeleitet werden.
+   </p>
+   <p>
+    - Prüfe die Firewall-Einstellungen auf deinem Router und auf dem Gerät, auf das du zugreifen möchtest. Stelle sicher, dass keine Einstellungen die Verbindung blockieren könnten. 5. Versuche vorübergehend, von einer dynamischen IP-Adresse aus auf dein Netzwerk zuzugreifen. Dies kann helfen festzustellen, ob das Problem spezifisch mit der statischen IP zusammenhängt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hoffe, das hilft dir.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-05-25T12:28:03Z" title="2024-05-25 12:28 ">
+   Mai 25, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56456" data-ipsquote-contentid="7432" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1706047595" data-ipsquote-userid="98142" data-ipsquote-username="tom040264">
+    <div class="ipsQuote_citation">
+     Am 23.1.2024 um 23:06 schrieb tom040264:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Servus!
+     </p>
+     <p>
+     </p>
+     <p>
+      Es ist ein altes Thema, aber ich habe noch keine Antwort gefunden. Seit dem ich die Magenta 5G outdoor Lösung verwende, erreiche meinen Web-Server aus dem Internet nicht mehr. Mit ping komme ich auch nicht durch. Ich bilde mir ein, dass es im Bridge Modus möglicherweise funktionieren könnte. Leider ist diese Option gesperrt.
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich bin für jeden Hinweis dankbar
+     </p>
+     <p>
+      T.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hey klar geht das mit Eruda oder mit der console
+   </p>
+   <p>
+   </p>
+   <p>
+    Weiß nicht warum immer Dorian sagt Techniker von Magenta kontaktieren (unter 0676 200 7777) von 3700 Posts davon 3000 Ruf die Hotline an - eventuell kann er nur das sagen schrieben
+    <span class="ipsEmoji">
+     😀
+    </span>
+    hehe
+   </p>
+   <p>
+   </p>
+   <p>
+    Ne es geht mit bischen spielen oder schaue meine Posts mit Ca Infos etc da geht noch mehr damit
+   </p>
+   <p>
+   </p>
+   <p>
+    Aber im Bridge Modus verlierst du den Speed mit Magenta Outdoor leider
+    <span class="ipsEmoji">
+     😄
+    </span>
+    ! Mfg
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-05-25T12:28:47Z" title="2024-05-25 12:28 ">
+      Mai 25, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   max-buero36
+  </span>
+  <br/>
+  <time class="Nov 13" datetime="2024-11-13T10:49:23Z" title="2024-11-13 10:49 ">
+   November 13, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Community,
+   </p>
+   <p>
+   </p>
+   <p>
+    nachdem ich mit der 5G Outdoor Box einige Probleme hatte und ich auf diesen Thread gestoßen bin möcht ich meine Lösungen hier kurz posten, vielleicht hilft es anderen.
+   </p>
+   <p>
+   </p>
+   <p>
+    1. Problem Statische IP
+   </p>
+   <p>
+   </p>
+   <p>
+    Mir wurde bei zwei Anrufen der Hotline nicht gesagt dass ich für die statische IP eine eigene APN eingeben muss, erst beim Dritten Versuch über 3 Support Levels wurde dann ein Ticket an die Technik geschrieben und nach ca. 2 Stunden bekam ich eine Antwort mit der Lösung:
+   </p>
+   <p>
+   </p>
+   <p>
+    In der Outdoor Box in Einstellungen - Einwahl - MPDN Management bei APN Name -&gt; Andere -&gt; staticIP eingeben
+   </p>
+   <p>
+    PAP
+   </p>
+   <p>
+    Benutzer: t-mobile
+   </p>
+   <p>
+    passwort: tm
+   </p>
+   <p>
+   </p>
+   <p>
+    Es hat erst bei der Dritten Eingabe sprich nach 3 Neustarts wirklich staticIP übernommen, vorher ist es immer zurück auf businessgprs gesprungen.
+   </p>
+   <p>
+   </p>
+   <p>
+    2. Problem Contentfilter sprich Internetschutz Basic
+   </p>
+   <p>
+   </p>
+   <p>
+    Bei mir wurden sehr viele Seiten geblockt wie zb
+    <a href="https://nordcheckout.com" rel="external nofollow">
+     https://nordcheckout.com
+    </a>
+    - ich sah dass Zertifikatsdaten wie tech.t-mobile.at auch beim Einrichten einer Box bei Raidboxes gleiches Problem, in der 5G Outdoor Box hatte ich die Firewall bereits komplett deaktiviert. Dann erinnerte ich mich dass Bei Magenta 1 ein kostenloses Internetschutz Paket dabei war. Bei der Umstellung auf die statische IP hat sich auch dieses Problem gelöst, ich denke weil beides vom Support in einem Ticket gelöst wurde. Mehrere Support Mitarbeiter konnten den Internetschutz nicht deaktivieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    Auch im Unifi Cloud Gateway Ultra funktionierte dann endlich die die Anzeige dass eine Internetverbindung besteht da die pings nun durchgingen.
+   </p>
+   <p>
+   </p>
+   <p>
+    3. Problem Nichterreichbarkeit der Outdoor Box
+   </p>
+   <p>
+   </p>
+   <p>
+    Meist funktioniert es wenn man sich direkt mit dem Laptop an die Box hängt, sprich an den POE Injector und sich selbst die IP 192.168.0.2 zuweist, Subnetzmaske 255.255.255.0 und Gateway 192.168.0.1 und dann im Browser 192.168.0.1 aufruft. Zugangsdaten stehen unten auf der Indoor Einheit.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hatte zB den DHCP der Box deaktiviert und kam dann über das unifi cloud gateway ultra nicht mehr auf die Outdoor box. Obiges hat geholfen, ich habe dann gemerkt dass sich mit dem Reset Knopf an der Outdoor Box leider nichts resettet, mehrmals vergeblich versucht. Aber durch direktes dranhängen konnte ich den dhcp wieder aktivieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hoffe das hilft jemandem weiter und spart Stunden der Fehlersuche.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="Nov 13" datetime="2024-11-13T12:07:10Z" title="2024-11-13 12:07 ">
+      November 13, 2024
+     </time>
+     von max-buero36
+    </strong>
+    <br>
+     Korrekturen an vielen Textstellen
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="Nov 14" datetime="2024-11-14T14:14:09Z" title="2024-11-14 14:14 ">
+   November 14, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hä ? Was ? Ich nutze die normale apn bzw ja mit Public wird viel geblockt ! Aber du kommst immer auf die odu mit HTTPS davor nicht http 192.168.0.1 sondern https und Firefox geht es immer bzw siehe da wenn du Static hast und DHCP aus hast müsstest du WLAN löschen zum Beispiel bei Android dann IP vergeben und das Getaway da es dann klar ist ohne DHCP wird es nicht erreicht !
+   </p>
+   <p>
+   </p>
+   <p>
+    Also wenn du jetzt DHCP aus machst und angenommen eine ipv4 setzt zum Beispiel 192.168.0.22 dann bei WLAN Android erweitern dann IP zum Beispiel 192.168.0.3 und Getaway auf 192.168.0.22 vorher auf static dann WLAN verbinden speichern und auf webif jetzt https://192.168.0.22
+   </p>
+   <p>
+   </p>
+   <p>
+    Bzw so wie da ca ohne DHCP vom AC Point
+   </p>
+   <p>
+   </p>
+   <p>
+    <a href="9704-speedport-smart-4-geheim-men%C3%BC-%C3%B6ffnen/" rel="">
+     9704-speedport-smart-4-geheim-menü-öffnen/
+    </a>
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="Nov 14" datetime="2024-11-14T14:15:06Z" title="2024-11-14 14:15 ">
+      November 14, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="Nov 14" datetime="2024-11-14T17:40:24Z" title="2024-11-14 17:40 ">
+   November 14, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    P.s. noch was mit der businessgprs apn hast nur ipv4 und mit der normalen T-Mobile hast auch ipv6 dabei zumindest bei mir bei sbudget aber da geht apn von T-Mobile und die andere also habe 4 x Möglichkeiten von der apn her ! Aber ich nutze die normale von T-Mobile wegen ipv6 zusätzlich! Mfg
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

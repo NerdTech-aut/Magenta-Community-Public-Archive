@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Fritzbox Cable 6660 Portforwarding
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Fritzbox Cable 6660 Portforwarding
+  </h1>
+  <span class="author">
+   pootch
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-23T20:27:39Z" title="2023-06-23 20:27 ">
+   Juni 23, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe auf Grund eines Tarifswechsel nun eine Fritzbox 6660 als Modem/Router.
+   </p>
+   <p>
+    An der Fritzbox ist ein NAS angeschlossen. Dazu würde ich gerne den Port des Webfrontend des NAS weiterleiten.
+   </p>
+   <p>
+    Wie gehe ich hier vor da es anscheinend über IPv4 Portforwarding nicht mehr funktioniert.
+   </p>
+   <p>
+    Davor hatte ich eine Connect Box (im Bridge Mode) und dahinter eine Fritzbox 7530. Hier hat das Portforwarding funktioniert auf der Fritzbox.
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Public IPv4 habe ich ganz normal bei meinem Domain Anbieter als A-Record eingetragen.
+   </p>
+   <p>
+    Zusätlich auch die IPv6 Adresse als AAAA-Record. Trotzdem ist mein NAS über zb mydomain.nas.net:9456 nicht erreichbar
+   </p>
+   <p>
+   </p>
+   <p>
+    Muss hier etwas anderes beachtet werden?
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-24T11:41:25Z" title="2023-06-24 11:41 ">
+   Juni 24, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/91813-pootch/?do=hovercard" data-mentionid="91813" href="https://community.magenta.at/profile/91813-pootch/" rel="">
+     @pootch
+    </a>
+   </p>
+   <p>
+    Standardmäßig bekommen Kabelanschlüsse keine öffentliche IPv4 Adresse. Wenn du IPv4 verwenden möchtest, müsstest du anrufen und den Anschluss auf IPv4 (only) umstellen lassen. Für den Bridge Mode muss auf eine öffentliche IPv4 Adresse ungestellt werden, weswegen es mit deinem vorherigen Setup funktioniert hat.
+   </p>
+   <p>
+    <br>
+     Hast du für die IPv6 Adresse der NAS auf der
+     <a href="https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-6360/845_IPv6-Freigaben-in-FRITZ-Box-einrichten/" rel="external nofollow">
+      Fritz!Box eine Freigabe
+     </a>
+     eingerichtet und die IPv6 der NAS als AAAA-Record angelegt?
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    Wobei es auch nicht verkehrt wäre den NAS-Zugriff mit der VPN-Server Funktion der Fritz!Box zu lösen, damit die WebUI der NAS nicht für jeden erreichbar ist.
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   pootch
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-24T12:05:30Z" title="2023-06-24 12:05 ">
+   Juni 24, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54230" data-ipsquote-contentid="8821" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1687606885" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 17 Minuten schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hast du für die IPv6 Adresse der NAS auf der
+      <a href="https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-6360/845_IPv6-Freigaben-in-FRITZ-Box-einrichten/" rel="external nofollow">
+       Fritz!Box eine Freigabe
+      </a>
+      eingerichtet und die IPv6 der NAS als AAAA-Record angelegt?
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo.
+   </p>
+   <p>
+    Danke für deine Antwort.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ja mein NAS hat auch eine ipV6 Adresse via DHCP von der Fritzbox. Den zugehörigen AAAA Eintrag habe ich bei meinem Hoster gesetzt.
+   </p>
+   <p>
+    Die Namensauflösung funktioniert auch korrekt über die Fritzbox.
+   </p>
+   <p>
+    Es wird die korrekte IPv6 Adresse aufgelöst für die zugehörige Domäne.
+   </p>
+   <p>
+    Zusätzlich wird aber auch eine Ipv4 Adresse aufgelöst, obwohl die Fritzbox ja via DS-Lite Tunnel mit dem Internet verbunden ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    Was mir auch aufgefallen ist:
+   </p>
+   <p>
+   </p>
+   <p>
+    Starte ich die Fritzbox und das Internetkabel steckt dran, dann rebootet die Fritzbox ständig.
+   </p>
+   <p>
+    Stecke ich das Cable ab, bootet die Fritzbox korrekt. Anschließend kann ich dann das Internet Kabel anstecken und die Verbindung zum Internet wird hergestellt.
+   </p>
+   <p>
+    <strong>
+     Könnte hier ein Problem bei der Fritzbox selbst vorliegen oder wurde hier seitens Magenta irgendwas nicht korrekt konfiguriert?
+    </strong>
+   </p>
+   <p>
+    Firmware ist die 7.29, welche ja von Magenta zur Verfügung gestellt wird.
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/6496dbe10c70a_Screenshot2023-06-24140438.jpg.a3dcb418de1a747d996c5bb293a2db28.jpg">
+     <img alt="Screenshot 2023-06-24 140438.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="4973" src="images/uploads/6496dbe10c70a_Screenshot2023-06-24140438.jpg.a3dcb418de1a747d996c5bb293a2db28.jpg"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-24T12:38:38Z" title="2023-06-24 12:38 ">
+   Juni 24, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54232" data-ipsquote-contentid="8821" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1687608330" data-ipsquote-userid="91813" data-ipsquote-username="pootch">
+    <div class="ipsQuote_citation">
+     vor 23 Minuten schrieb pootch:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Zusätzlich wird aber auch eine Ipv4 Adresse aufgelöst, obwohl die Fritzbox ja via DS-Lite Tunnel mit dem Internet verbunden ist.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Du hast geschrieben, dass du beim Hoster einen A-Eintrag für eine öffentliche IP-Adresse angelegt hast. Bei DS-Lite hat dein Anschluss eben keine eigene öffentliche IPv4 Adresse.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54227" data-ipsquote-contentid="8821" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1687552059" data-ipsquote-userid="91813" data-ipsquote-username="pootch">
+    <div class="ipsQuote_citation">
+     vor 16 Stunden schrieb pootch:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Die Public IPv4 habe ich ganz normal bei meinem Domain Anbieter als A-Record eingetragen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54232" data-ipsquote-contentid="8821" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1687608330" data-ipsquote-userid="91813" data-ipsquote-username="pootch">
+    <div class="ipsQuote_citation">
+     vor 28 Minuten schrieb pootch:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Starte ich die Fritzbox und das Internetkabel steckt dran, dann rebootet die Fritzbox ständig.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Könnte sein, dass das Netzteil nicht mit dem Energiebedarf während des Boot-Vorgangs in Kombination mit der Kanalsuche klarkommt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   pootch
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-24T16:16:54Z" title="2023-06-24 16:16 ">
+   Juni 24, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Den A-Eintrag habe ich im DNS des Hosters bereits gelöscht, damit der AAAA Eintrag des NAS funktioniert.
+   </p>
+   <p>
+    Trotzdem bekomme ich das Portforarding nicht hin.
+   </p>
+   <p>
+    Irgendetwas blockiert hier noch auf  bei der Fritzbox.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   pootch
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-25T09:28:45Z" title="2023-06-25 09:28 ">
+   Juni 25, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe nun auch mal getestet ob ich die Fritzbox 6660 von außen erreiche. Diese Option kann man ja im Webinterface der Fritzbox aktivieren.
+   </p>
+   <p>
+    Auch das ist NICHT möglich. Irgendwas passt hier so gar nicht bei den Internet Einstellungen der Fritzbox.
+   </p>
+   <p>
+    Nach Außen soll ich lt. Fritzbox einen ipv6 Adresse haben. Mach ich aber einen IPv6 Test, wird mir eine IPv4 Adresse angezeigt und dass ich keine IPv6 Adresse  habe.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   pootch
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-25T18:02:57Z" title="2023-06-25 18:02 ">
+   Juni 25, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54233" data-ipsquote-contentid="8821" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1687610318" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 24.6.2023 um 14:38 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Bei DS-Lite hat dein Anschluss eben keine eigene öffentliche IPv4 Adresse.
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Kann man das über den tech. Support umstellen lassen? Dass man nur über IPv4 rausgeht und nicht das "pseudo" IPv6, das auch kein richtiges IPv6 ist?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   pootch
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-25T18:37:58Z" title="2023-06-25 18:37 ">
+   Juni 25, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a href="https://schroederdennis.de/tutorial-howto/ds-lite-ipv6-tunnel-port-forwarding-nat-wireguard-vpn/" rel="external nofollow">
+     https://schroederdennis.de/tutorial-howto/ds-lite-ipv6-tunnel-port-forwarding-nat-wireguard-vpn/
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Hier wird genau die Problematik erklärt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   pootch
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-26T09:32:55Z" title="2023-06-26 09:32 ">
+   Juni 26, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Der Magenta Support hat mich nun auf ipv4 only umgestellt.
+   </p>
+   <p>
+    Besten Dank dafür.
+   </p>
+   <p>
+    Alternativ wäre auch richtiges Dual-Stack möglich gewesen. Bei DS-Lite gibts entsprechende Probleme beim Port Forwarding und man muss über ein Relay gehen (zb Universal Portmapper von deine-feste-ip)
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

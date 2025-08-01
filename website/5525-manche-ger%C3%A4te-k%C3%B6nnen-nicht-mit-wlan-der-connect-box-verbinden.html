@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Manche Geräte können nicht mit WLAN der Connect Box verbinden
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Manche Geräte können nicht mit WLAN der Connect Box verbinden
+  </h1>
+  <span class="author">
+   slint
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-01-17T23:23:39Z" title="2020-01-17 23:23 ">
+   Januar 17, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Community,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich frag hier nach, weil ich mit meinem Latein langsam am Ende bin (sollte ich das falsche Unterforum erwischt haben, bitte ich um Verzeihung und ggf. Verschiebung):
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich bin seit Ewigkeiten Kabelinternet-Kunde der ehemaligen UPC, und "durfte" heute den alten Technicolor-Router im Shop gegen die neue Connect Box tauschen. Seitdem hab ich enorme Probleme mit (manchen) WLAN-Verbindungen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Nach Start und Einrichtung der Box hab ich meine kabelgebundenen Geräte überprüft und war sofort problemlos online. Mein Laptop, auf dem Kubuntu läuft, konnte sich auch anstandslos mit dem WLAN verbinden.
+   </p>
+   <p>
+    Unsere Handys und das Surface 4 Pro-Notebook mit Windows10 bekomme ich seitdem jedoch einfach nicht ans kabellose Netz.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bei den Handys (beides Android-Geräte; verschiedene Hersteller; weniger als 3 Jahre alt; mit allen aktuellem Updates versehen) wird das Passwort zwar akzeptiert und gespeichert, Verbindung wird jedoch keine hergestellt. In der WIFI-Auswahl steht "Saved" unter der SSID, ein erneuter Verbindungsversuch führt zu einem Authentifizierungsstart, jedoch ohne Erfolg.
+   </p>
+   <p>
+   </p>
+   <p>
+    Beim Windows10-Laptop klappt die Verbindung sogar, jedoch steht dann "Kein Internet, gesichert" im Netzwerkstatus, er scheint auch nicht in der Web-Oberfläche der Connect Box unter "Verbundene Geräte" auf.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hab inzwischen etliches probiert, unter anderem:
+   </p>
+   <p>
+   </p>
+   <ul>
+    <li>
+     Factory Reset der Connect Box
+    </li>
+    <li>
+     Tausch der Kabel zur/von der Connect Box
+    </li>
+    <li>
+     Austausch der Connect Box im Shop (!)
+    </li>
+    <li>
+     2.4GHz einzeln (mit allen erdenklichen Kombinationen aus Authentifizierungsmethode, Channels, WLAN-Modi, Kanalbreite, Sicherheitsmodi etc.)
+    </li>
+    <li>
+     5Ghz einzeln (mit allen erdenklichen Kombinationen aus Authentifizierungsmethode, Channels, WLAN-Modi, Kanalbreite, Sicherheitsmodi etc.)
+    </li>
+    <li>
+     2.4 und 5GHz zusammen (wieder mit allen erdenklichen Kombinationen - ich spiel das Spiel seit inzwischen über sieben Stunden..)
+    </li>
+    <li>
+     2.4 und 5GHz zusammen, aber mit verschiedenen SSID
+    </li>
+    <li>
+     Verbindung manuell / Verbindung per WPS
+    </li>
+    <li>
+     Factory Reset eines Android-Geräts (!!)
+    </li>
+    <li>
+     UPC Wi-Free de-/aktiviert
+    </li>
+    <li>
+     Update der Windows-Netzwerktreiber
+    </li>
+    <li>
+     manuelles Hinzufügen der Verbindungsdaten zu Android
+    </li>
+    <li>
+     Hinzufügen der Hardwareadressen der Geräte zur MAC-Whitelist
+    </li>
+    <li>
+     verschiedenste Firewall-Einstellungsmöglichkeiten der Connect Box
+    </li>
+    <li>
+     alle möglichen Schmähs unter Android und Windows10 (beim Thema WLAN-Probleme gibt es ja endlos Google-Ergebnisse...)
+    </li>
+   </ul>
+   <p>
+   </p>
+   <p>
+    Ich weiß wirklich nicht mehr weiter. Die Menschen der Magenta-Hotline sind auch überfragt bis desinteressiert und pochen darauf, dass es an meinen Endgeräten liegen muss. Möglich, aber meines Erachtens unwahrscheinlich - alle anderen WLANs haben sie bislang noch problemlos gepackt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Weiß jemand Rat? Oder zumindest eine Stoßrichtung, in die ich nachforschen könnte?
+   </p>
+   <p>
+    Vielen Dank im Voraus!
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    /Nachtrag vom Folgetag: Ich hab heute endlich einen wirklich kompetenten, freundlichen und interessierten Mitarbeiter der Serviceline an den Apparat bekommen, der sich mein Problem angehört und es mit mir verifiziert bzw. etliche meiner Lösungsversuche wiederholt und eigene angestellt hat. Nach Rücksprache seinerseits mit dem 2nd-Level-Support wurde entschieden, dass offenbar auch das getauschte Modem ein Problem hat (u.a. konnte das Gerät von seiner Seite aus gepingt werden, eine tatsächliche Verbindung konnte er jedoch nicht herstellen).
+    <br/>
+    Nachdem es leider auch damit nicht besser wurde, hat man mir ein anderes Modem angeboten (v/o "Arris" - ich glaube im Normalfall Gigabitkunden vorbehalten?), und siehe da: Mein Problem war sofort von selbst verschwunden!
+    <br/>
+    <br/>
+    Ich kann also nicht sagen, ob es letztendlich an einer defekten Herstellungscharge, der Firmware oder ähnlichem lag, aber ich bin wieder online, und das nach nur wenigen Stunden in der Hotline-Warteschleife und am Weg zum/vom Shop.
+    <br>
+     <br>
+      Die Frage kann also als gelöst betrachtet werden. Danke!
+     </br>
+    </br>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="5 yr" datetime="2020-01-18T14:23:52Z" title="2020-01-18 14:23 ">
+      Januar 18, 2020
+     </time>
+     von slint
+    </strong>
+    <br/>
+    gelöst
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-01-19T08:30:47Z" title="2020-01-19 08:30 ">
+   Januar 19, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Auf alle Fälle - DANKE für dein umfangreiches Feedback!!!!
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-01-22T14:01:48Z" title="2020-01-22 14:01 ">
+   Januar 22, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="32990" data-ipsquote-contentid="5525" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1579303419" data-ipsquote-userid="81788" data-ipsquote-username="slint">
+    <div class="ipsQuote_citation">
+     On 1/18/2020 at 12:23 AM, slint said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich kann also nicht sagen, ob es letztendlich an einer defekten Herstellungscharge, der Firmware oder ähnlichem lag, aber ich bin wieder online, und das nach nur wenigen Stunden in der Hotline-Warteschleife und am Weg zum/vom Shop.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Vielleicht eine Kombination aus defekter Hardware und schlechter Firmware?
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+    ...
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf jeden Fall gut, dass es bei dir nun funktioniert
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+   <p>
+    Vielen Dank für die auswührliche Antwort
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Peter1965
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-02-27T02:57:31Z" title="2020-02-27 02:57 ">
+   Februar 27, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Slint
+   </p>
+   <p>
+    Ich bin auch emaliger UPC Kunde.
+   </p>
+   <p>
+    Seit dem ich damals auf den GB Tarif gewechselt habe gibt es nur Probleme mit meiner Wlan Geschwindigkeit.
+   </p>
+   <p>
+    Ich hatte den Tarif mit 300mb download. Mit den Modem von UPC kam ich mit Lan auf 280-290 MB und Wlan zwischen 230-250 MB.
+   </p>
+   <p>
+    Sogar nach der Umstellung und noch mit den alten Modem bin ich im Wlan auf 300-350 mb gekommen.
+   </p>
+   <p>
+    Ich hab dann nur das alte Modem gegen das neue ersetzt. Und seit dem ist mein Wlan im Keller. Lan funkt super mit 900-950 Mb. Aber Wlan ist unter aller Sau. 80-120 Mb wenn ich viel Glück habe.
+   </p>
+   <p>
+    Nach Anruf bei Magenta und tausch des Modems,hat sich rein gar nichts geändert.
+   </p>
+   <p>
+    Wenn man bei Magenta dann anruft kommt natürlich dann immer der gleiche Satz. " Es liegt nicht bei ihnen sonder ich mach was falsch oder meine Geräte sind schuld daran".  Ich bin sicher kein Profi habe aber natürlich mit den Kanälen versucht was zu ändern auch wider auf Werkseinstellung zurück gesetzt aber es tut sich rein gar nichts.
+   </p>
+   <p>
+    Leider muss ich auch immer wider feststellen das man wirklich so wie du echt Glück haben muss einen kompetenten Mitarbeiter ans Telefon zu bekommen.
+   </p>
+   <p>
+    Das geht oft von keine Ahnung bis zum völligen Desinteresse von meinen Problem.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hänge mal ein Foto an und vielleicht kann mir ja jemand sagen ob ich mit meinen verdacht richtig liege.
+   </p>
+   <p>
+    Wenn ich auf Status Wlan geh und mir dort die Übertragungsrate ansehe nehm ich mal an das die Geschwindigkeit eigentlich toll wäre.
+   </p>
+   <p>
+    Oder täusch ich mich da und das hat nichts damit zu tun ?
+   </p>
+   <p>
+    Hoffe es kann mir wär einen Tipp geben,den ich bin echt schon genervt.
+   </p>
+   <p>
+    <img alt="Status.jpg.4f65505f7386d1e6d8579606f4c1ff72.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="2025" src="images/uploads/Status.jpg.4f65505f7386d1e6d8579606f4c1ff72.jpg"/>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-02-27T10:12:35Z" title="2020-02-27 10:12 ">
+   Februar 27, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33559" data-ipsquote-contentid="5525" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1582772251" data-ipsquote-userid="77710" data-ipsquote-username="Peter1965">
+    <div class="ipsQuote_citation">
+     7 hours ago, Peter1965 said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Und seit dem ist mein Wlan im Keller.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Egal mit welchen Geräten? Die frage ist auch ob deine Geräte die Geschwindigkeit unterstützen? ... Sprich die WLAN Adapter, etc ...
+   </p>
+   <p>
+    Der Windows Anzeige würde ich sowieso nie trauen
+    <img alt=":D" data-emoticon="" height="20" src="images/emoticons/tma_laughing-o.png" srcset="images/emoticons/tma_laughing-o@2x.png 2x" title=":D" width="20"/>
+    ...
+   </p>
+   <p>
+   </p>
+   <p>
+    Aber eventuell liegt es auch wirklich an der Hardware. Hast du einen anderen Router, den du zum Testen dahinter hängen kannst?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Peter1965
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-02-28T02:16:26Z" title="2020-02-28 02:16 ">
+   Februar 28, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33563" data-ipsquote-contentid="5525" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1582798355" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor 15 Stunden schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Egal mit welchen Geräten? Die frage ist auch ob deine Geräte die Geschwindigkeit unterstützen? ... Sprich die WLAN Adapter, etc ...
+     </p>
+     <p>
+      Der Windows Anzeige würde ich sowieso nie trauen
+      <img alt=":D" data-emoticon="" height="20" src="images/emoticons/tma_laughing-o.png" srcset="images/emoticons/tma_laughing-o@2x.png 2x" title=":D" width="20"/>
+      ...
+     </p>
+     <p>
+     </p>
+     <p>
+      Aber eventuell liegt es auch wirklich an der Hardware. Hast du einen anderen Router, den du zum Testen dahinter hängen kannst?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ja egal mit welchen Gerät. Sind 3 Surface Geräte. Und wie auch schon in meinen Artikel beschrieben beim alten Modem bin ich genau mit den selben Geräten auf fast 400Mb gekommen. Ich wär schön glücklich würde ich das jetzt auch erreichen. Ich habe natürlich mit den Lapi dann auch bei einen Freund getestet der auch eine sehr gute Leitung hat und bin dort ohne Probleme auf 300Mb gekommen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-02-28T07:37:53Z" title="2020-02-28 07:37 ">
+   Februar 28, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33569" data-ipsquote-contentid="5525" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1582856186" data-ipsquote-userid="77710" data-ipsquote-username="Peter1965">
+    <div class="ipsQuote_citation">
+     5 hours ago, Peter1965 said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ja egal mit welchen Gerät. Sind 3 Surface Geräte. Und wie auch schon in meinen Artikel beschrieben beim alten Modem bin ich genau mit den selben Geräten auf fast 400Mb gekommen. Ich wär schön glücklich würde ich das jetzt auch erreichen. Ich habe natürlich mit den Lapi dann auch bei einen Freund getestet der auch eine sehr gute Leitung hat und bin dort ohne Probleme auf 300Mb gekommen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Naja dann liegt es aber eventuell wirklich an der Hardware
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+    Vorallem, wenn es via LAN funktioniert ...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Peter1965
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-02-29T06:43:54Z" title="2020-02-29 06:43 ">
+   Februar 29, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33571" data-ipsquote-contentid="5525" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1582875473" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor 23 Stunden schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Naja dann liegt es aber eventuell wirklich an der Hardware
+      <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+      Vorallem, wenn es via LAN funktioniert ...
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Nach zirka einer Stunde Telefonieren mit der Hotline und nach Optimierungen des Modems von Magenta aus, bekomme ich jetzt das dritte mal ein neues Modem:-(  Mal sehen ob es diesmal dann funkt. Wie sagt man so schön "Alle guten Dinge sind drei". Naja dann sehen wir mal.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-03-03T09:16:40Z" title="2020-03-03 09:16 ">
+   März 3, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33588" data-ipsquote-contentid="5525" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1582958634" data-ipsquote-userid="77710" data-ipsquote-username="Peter1965">
+    <div class="ipsQuote_citation">
+     On 29.2.2020 at 7:43 AM, Peter1965 said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Nach zirka einer Stunde Telefonieren mit der Hotline und nach Optimierungen des Modems von Magenta aus, bekomme ich jetzt das dritte mal ein neues Modem:-(  Mal sehen ob es diesmal dann funkt. Wie sagt man so schön "Alle guten Dinge sind drei". Naja dann sehen wir mal.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Oh zum dritten Mal nun schon
+    <img alt=":O" data-emoticon="" height="20" src="images/emoticons/tma_wow-o.png" srcset="images/emoticons/tma_wow-o@2x.png 2x" title=":O" width="20"/>
+    ... wir sind gespannt, halte uns bitte am Laufenden ob es mit dem neuen Modem schlussendlich besser funktioniert
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Peter1965
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-03-23T06:50:14Z" title="2020-03-23 06:50 ">
+   März 23, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi Mario
+   </p>
+   <p>
+   </p>
+   <p>
+    Halte euch natürlich gern am laufenden.
+   </p>
+   <p>
+    Habe jetzt das dritte mal ein neues Modem bekommen. Nur fühl ich mich jetzt vollkommen ***********t.
+   </p>
+   <p>
+    Da ich ja den Gb Tarif habe gibt es ja nur das eine Modem das auch damit zurecht kommt. Und wie schon geschrieben beim Lan hatte ich auch nie ein Problem.
+   </p>
+   <p>
+    Und jetzt wird es lustig. Sie haben mir einfach das andere Modem geschickt das ja laut Technik Hotline und Shop Mitarbeiter mit den 1 GB gar nicht zurecht kommt.
+   </p>
+   <p>
+    Das Positive daran ist das ich jetzt auch den Beweis habe das weder meine Gräte noch ich Schuld daran sind.
+   </p>
+   <p>
+    Ich komme jetzt beim Wlan auf 500Mb. Nur leider komm ich bein Lan auch nur auf 500MB, wo ich ja beim anderen Modem beim Lan immer zwischen 900-960 MB gekommen bin.
+   </p>
+   <p>
+    Ich werde mich jetzt in den nächsten Tagen mit der Hotline noch mal in Verbindung setzten und mal sehen was die dazu sagen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-03-24T09:18:00Z" title="2020-03-24 09:18 ">
+   März 24, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33869" data-ipsquote-contentid="5525" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1584946214" data-ipsquote-userid="77710" data-ipsquote-username="Peter1965">
+    <div class="ipsQuote_citation">
+     On 23.3.2020 at 7:50 AM, Peter1965 said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Und jetzt wird es lustig. Sie haben mir einfach das andere Modem geschickt das ja laut Technik Hotline und Shop Mitarbeiter mit den 1 GB gar nicht zurecht kommt.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Das ist aber auch heftig
+    <img alt=":O" data-emoticon="" height="20" src="images/emoticons/tma_wow-o.png" srcset="images/emoticons/tma_wow-o@2x.png 2x" title=":O" width="20"/>
+    einfach ein Gerät zu senden, dass 1GB gar nicht unterstützt ...
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33869" data-ipsquote-contentid="5525" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1584946214" data-ipsquote-userid="77710" data-ipsquote-username="Peter1965">
+    <div class="ipsQuote_citation">
+     On 23.3.2020 at 7:50 AM, Peter1965 said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich werde mich jetzt in den nächsten Tagen mit der Hotline noch mal in Verbindung setzten und mal sehen was die dazu sagen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich hoffe du bekommst die richtige Hardware im Endeffekt doch noch ..
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Peter1965
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-03-24T09:39:54Z" title="2020-03-24 09:39 ">
+   März 24, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33900" data-ipsquote-contentid="5525" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1585041480" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor 3 Minuten schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das ist aber auch heftig
+      <img alt=":O" data-emoticon="" height="20" src="images/emoticons/tma_wow-o.png" srcset="images/emoticons/tma_wow-o@2x.png 2x" title=":O" width="20"/>
+      einfach ein Gerät zu senden, dass 1GB gar nicht unterstützt ...
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich hoffe du bekommst die richtige Hardware im Endeffekt doch noch ..
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Gestern angerufen.
+   </p>
+   <p>
+    Tzja was soll ich sagen. Ausreden nur Ausreden.
+    <br/>
+    Ich hab den Herrn am Tel gesagt das das  ich mit den Wlan jetzt eigentlich zufrieden bin nur das ich eben beim Lan jetzt nicht mehr auf die beim anderen Modem erreichte Geschwindigkeit komme.  Seine Antwort darauf"Dann tauschen wir das Modem nochmal" Ich darauf" naja und dann hab ich beim Lan wieder meine Geschwindigkeit aber eben nicht beim Wlan". Dann nur noch ausreden, naja beim Wlan muss man vieles beachten und sollte es so sein soll ich anrufen und wir machen alle möglichen Tests. Obwohl ich gesagt und auch bewiesen habe das es weder an mir noch an meinen Geräten liegt,den mit den jetzigen Modem bin ich ja bei Wlan mit 500 mb zufrieden.
+   </p>
+   <p>
+    Ich sagte dann auch ok lassen wir es so wie es ist,vielleicht kann man sich ja beim finanziellen einigen da ich ja für das GB Paket bezahle.
+   </p>
+   <p>
+    Er hat das nicht mal in erwegung gezogen.
+   </p>
+   <p>
+    Ich hab echt die Schnauze langsam voll(sorry wegen diesen ausdruck)
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

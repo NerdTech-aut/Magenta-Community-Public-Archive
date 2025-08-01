@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Datengeschwindigkeit seit ~2 Wochen sehr niedrig
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Datengeschwindigkeit seit ~2 Wochen sehr niedrig
+  </h1>
+  <span class="author">
+   dominik_P
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-30T20:19:00Z" title="2022-04-30 20:19 ">
+   April 30, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+   </p>
+   <p>
+    habe seit ~2 Wochen Probleme mit der Downloadgeschwindigkeit und dem Ping meines Routers.
+   </p>
+   <p>
+    Performance ist wechselnd, abends das übliche niedrige Downloadgeschwindigkeit / hoher Ping. Manchmal ist der Ping normal.
+   </p>
+   <p>
+    Habe etwas hier im Forum gelesen , aber hauptsächlich Tipps zu den weiter verbreiteten Huawei B535 Routern gelesen.
+    <br/>
+    Habe selbst seit Oktober 2020 eine ZTE "Internet Mobil Flex Box" (genaues Modell steht nicht, S/N 320706296953).
+   </p>
+   <p>
+   </p>
+   <p>
+    Ging eigentlich recht gut bislang, nur wie gesagt seit ca 2 Wochen hakt es.
+   </p>
+   <p>
+    Habe gelesen LTE Band einstellen hilft, nur die Anleitung via "LTE Manager" App scheint nicht zu funktionieren.
+   </p>
+   <p>
+    Speedtests von heute Abend anbei, SIM Status aus der Konfig Oberfläche ebenfalls. Ping scheint okay, Download ist recht niedrig (70 / 15 ist die im Vertrag geregelte Geschwindigkeit. Upload entspricht dem, Download ist unter 10% davon, technisch gehen die 70 an meinem Standort)
+   </p>
+   <p>
+    Nächste Zelle laut Cellmapper.at ist 70881 (Band 1, 3).
+   </p>
+   <p>
+   </p>
+   <p>
+    Irgendwelche Idee was man tun könnte, damit es wieder besser läuft?
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Dominik
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/magenta_SIM_status.jpg.b39bd057e14f6b39ab717ab298f1ad6c.jpg">
+     <img alt="magenta_SIM_status.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3856" src="images/uploads/magenta_SIM_status.jpg.b39bd057e14f6b39ab717ab298f1ad6c.jpg"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/magenta_speed.jpg.4219227508b9c9aca7150b4a441f4110.jpg">
+     <img alt="magenta_speed.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3857" src="images/uploads/magenta_speed.jpg.4219227508b9c9aca7150b4a441f4110.jpg"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-30T22:38:41Z" title="2022-04-30 22:38 ">
+   April 30, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/93077-dominik_p/?do=hovercard" data-mentionid="93077" href="https://community.magenta.at/profile/93077-dominik_p/" rel="">
+      @dominik_P
+     </a>
+     <br/>
+     Ich denke du meinst den
+     <a href="https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-flex/box-mf289d" rel="external nofollow">
+      ZTE MF289D
+     </a>
+     . Leider gibt es für die ZTE Geräte keine Tools, wie es sie für Huawei Geräte gibt.
+    </span>
+   </p>
+   <p>
+    <span>
+     Laut der Zellen-ID im Screenshot verbindet sich der Router jedoch mit einem anderen Sendemast (
+    </span>
+    75552).
+   </p>
+   <p>
+    Solltest du direkt in der Ortschaft wohnen, in welcher der Sendemast 70881 steht, würde ich mal von einer Störung des Sendemasts ausgehen.
+   </p>
+   <p>
+    Falls die Möglichkeit besteht, würde ich aber dennoch mal versuchen den Router auf den Sendemasten 70881 auszureichen, oder in gegenteiliger Richtung zum Sendemasten 75552 zu platzieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    Zumindest der ZTE MC801A hat die Option das Gerät auf einen bestimmten Sendemast zu sperren. Ob dies auch beim ZTE MF289D möglich ist weiß ich leider nicht, aber du könntest versuchen, ob die betreffende Seite aufrufbar ist. Melde dich dazu im Browser beim Router an und öffne danach diesen Link:
+    <a href="http://192.168.1.1/index.html#debug_page" rel="">
+     http://192.168.1.1/index.html#debug_page
+    </a>
+   </p>
+   <p>
+    Sollte die Seite aufrufbar sein, sollte die Option ganz am Ende der Seite zu finden sein.
+   </p>
+   <p>
+    LG NTM
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-05-01T00:28:45Z" title="2022-05-01 00:28 ">
+      Mai 1, 2022
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   dominik_P
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-02T07:03:30Z" title="2022-05-02 07:03 ">
+   Mai 2, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo NTM,
+   </p>
+   <p>
+   </p>
+   <p>
+    danke für die Antwort.
+   </p>
+   <p>
+    Wie sehe ich mit welchem Masten der Router gerade verbunden ist?
+   </p>
+   <p>
+    Der genannte 75552 ist laut cellmapper ziemlich weit weg.
+    <br/>
+    Heute geht es wieder ganz gut (
+    <a href="https://www.netztest.at/de/Verlauf?dcfdb552-ed22-456e-988d-d4dc5fcbf89d" rel="external nofollow">
+     https://www.netztest.at/de/Verlauf?dcfdb552-ed22-456e-988d-d4dc5fcbf89d
+    </a>
+    ), ist aber natürlich auch eine andere Uhrzeit.
+   </p>
+   <p>
+    Auf http://192.168.1.1/index.html#debug_page habe ich keinen Zugriff (automatischer redirect aufs #home)
+    <br>
+     Bislang hat ein Router Neustart alle paar Tage geholfen, seit einer Woche eben nicht mehr ganz. Vielleicht hatte der Masten ein Problem, werde es weiter beobachten und antworte gegebenenfalls nochmals
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Dominik
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-02T09:33:21Z" title="2022-05-02 09:33 ">
+   Mai 2, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="47438" data-ipsquote-contentid="7723" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1651475010" data-ipsquote-userid="93077" data-ipsquote-username="dominik_P">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb dominik_P:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Wie sehe ich mit welchem Masten der Router gerade verbunden ist?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Zellen-ID (hier 19341333) auf
+    <a href="https://www.cellmapper.net/enbid" rel="external nofollow">
+     https://www.cellmapper.net/enbid
+    </a>
+    eingeben und die resultierende eNB ID (hier 75552) ist die Kennung des Sendemasts, wie sie in der Karte angezeigt wird.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

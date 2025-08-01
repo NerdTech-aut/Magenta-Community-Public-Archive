@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Huawei B535-232 externer Zugang &amp; Port Forwarding
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Huawei B535-232 externer Zugang &amp; Port Forwarding
+  </h1>
+  <span class="author">
+   MatEns
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-11T21:00:51Z" title="2020-08-11 21:00 ">
+   August 11, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Schönen guten Abend,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich will gerade meinen Raspberry Pi per port forwarding extern verfügbar machen, allerdings stoße ich auf ein paar Probleme.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe bereits ddns eingerichtet, dieses funktioniert auch und will jetzt port 443 weiterleiten. Allerdings komme ich direkt auf das Webinterface des Routers. Da ich in den Einstellungen keine Option finde, dieses abzuschalten ist das zum Einen recht unsicher und zum anderen extrem störend, weil ich weder einen externen Zugang zum Router brauche/will, noch auf einen anderen tls port ausweichen will.
+   </p>
+   <p>
+    Selbstverständlich ist es möglich, dass ich ganz einfach die entsprechende Option übersehe, falls dies der Fall ist, wäre eh kein Problem an der ganzen Sache.
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielen Dank im Vorhinein und noch einen schönen Abend,
+   </p>
+   <p>
+    Mat
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-12T07:24:51Z" title="2020-08-12 07:24 ">
+   August 12, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Welchen Router hast du denn? Grundsätzlich ist das bei vielen Routern so dass Port 80 &amp; 443 auf das Interface des Routers gehen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Warum verwendest du für deinen Raspberry Pi nicht einen anderen Port?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MatEns
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-12T10:00:07Z" title="2020-08-12 10:00 ">
+   August 12, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="35789" data-ipsquote-contentid="6016" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1597217091" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Welchen Router hast du denn? Grundsätzlich ist das bei vielen Routern so dass Port 80 &amp; 443 auf das Interface des Routers gehen.
+     </p>
+     <p>
+     </p>
+     <p>
+      Warum verwendest du für deinen Raspberry Pi nicht einen anderen Port?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Vielen Dank für die Antwort,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe aktuell den B535-232
+   </p>
+   <p>
+   </p>
+   <p>
+    Bei meinem alten b593s-22 konnte ich den externen Zugang zumindest deaktivieren.
+   </p>
+   <p>
+    Mir geht es hauptsächlich darum, dass ich keine Geräte offen zugänglich machen will,  auf die ich nichtmal per shell Zugang hab.
+   </p>
+   <p>
+   </p>
+   <p>
+    Außerdem will ich einfach einen halbwegs sauberen Zugangspunkt für meinen Reverse Proxy haben - auch wenn es technisch möglich ist einen anderen Port zu verwenden, ist es einfach nicht mehr zeitgemäß von Herstellerseite Zugänge freizulassen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-12T11:52:18Z" title="2020-08-12 11:52 ">
+   August 12, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="35802" data-ipsquote-contentid="6016" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1597226407" data-ipsquote-userid="85291" data-ipsquote-username="MatEns">
+    <div class="ipsQuote_citation">
+     1 hour ago, MatEns said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Vielen Dank für die Antwort,
+     </p>
+     <p>
+     </p>
+     <p>
+      ich habe aktuell den B535-232
+     </p>
+     <p>
+     </p>
+     <p>
+      Bei meinem alten b593s-22 konnte ich den externen Zugang zumindest deaktivieren.
+     </p>
+     <p>
+      Mir geht es hauptsächlich darum, dass ich keine Geräte offen zugänglich machen will,  auf die ich nichtmal per shell Zugang hab.
+     </p>
+     <p>
+     </p>
+     <p>
+      Außerdem will ich einfach einen halbwegs sauberen Zugangspunkt für meinen Reverse Proxy haben - auch wenn es technisch möglich ist einen anderen Port zu verwenden, ist es einfach nicht mehr zeitgemäß von Herstellerseite Zugänge freizulassen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Naja, reservierte Ports wirst du aber nicht einfach ändern können
+    <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Sobald du einen Port aufmachst, und sei es auch nur 80 oder 443 hast du schon etwas öffentlich zugänglich gemacht
+    <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+    Demnach wäre es egal, ob du einen anderen Port nimmst oder nicht.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MatEns
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-13T00:26:42Z" title="2020-08-13 00:26 ">
+   August 13, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="35805" data-ipsquote-contentid="6016" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1597233138" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor 12 Stunden schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Naja, reservierte Ports wirst du aber nicht einfach ändern können
+      <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+     </p>
+     <p>
+     </p>
+     <p>
+      Sobald du einen Port aufmachst, und sei es auch nur 80 oder 443 hast du schon etwas öffentlich zugänglich gemacht
+      <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+      Demnach wäre es egal, ob du einen anderen Port nimmst oder nicht.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    So funktionieren Ports nicht.
+   </p>
+   <p>
+    Ein well-known port ist nicht gleich reserviert. Und wenn irgendein Drittanbieter-Gerät von außen erreichbar ist, ohne dass ich irgendwas dagegen machen kann, dann ist das nix anderes als eine Sicherheitsschwachstelle.
+   </p>
+   <p>
+    Wenn ich selbst irgendwas erreichbar schalte kann ich sichergehen welche SSL Zertifikate verwendet werden sollen und sichergehen, dass immer die neueste Software installiert ist. Wenn mein Router an sich schon eine Blackbox ist, von der ich nur hoffen kann, dass sie nicht in einem botnet landet, dann ist das nicht egal ob ich einen anderen port nehme oder nicht.
+   </p>
+   <p>
+   </p>
+   <p>
+    Da wird nicht nur Kontrolle weggenommen, sondern auch künstlich Schwachstellen erzeugt ohne gutem Grund.
+   </p>
+   <p>
+   </p>
+   <p>
+    Aber ja, war eigentlich eh klar, dass das hier in einer Grundsatzdebatte endet. Ich probiers eif beim technischen support und am Ende werd ich die Firmware selbst umschreiben dürfen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-13T06:39:05Z" title="2020-08-13 06:39 ">
+   August 13, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="35821" data-ipsquote-contentid="6016" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1597278402" data-ipsquote-userid="85291" data-ipsquote-username="MatEns">
+    <div class="ipsQuote_citation">
+     6 hours ago, MatEns said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ein well-known port ist nicht gleich reserviert.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Habe ich nicht gesagt, nur wenn der Hersteller es vorsieht, was willst du dagegen tun? ...
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="35821" data-ipsquote-contentid="6016" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1597278402" data-ipsquote-userid="85291" data-ipsquote-username="MatEns">
+    <div class="ipsQuote_citation">
+     6 hours ago, MatEns said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Und wenn irgendein Drittanbieter-Gerät von außen erreichbar ist, ohne dass ich irgendwas dagegen machen kann, dann ist das nix anderes als eine Sicherheitsschwachstelle.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Dafür entscheidest du dich aber selbst, wenn du eine öffentliche IP Adresse anforderst und im Zweifelsfall musst du dir halt eine eigenen Hardware kaufen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Godi
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-21T20:47:17Z" title="2020-08-21 20:47 ">
+   August 21, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/85291-matens/?do=hovercard" data-mentionid="85291" href="https://community.magenta.at/profile/85291-matens/" rel="">
+     @MatEns
+    </a>
+    ! Hast du zufällig schon eine Lösung gefunden? Ich werde auch immer auf die Weboberfläche geleitet.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   helig
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-09T11:03:21Z" title="2021-05-09 11:03 ">
+   Mai 9, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Würd' mich auch interessieren, ob man dem Huawei B535-232 beibringen kann, sein Webinterface (Port 80/443) nicht über die WAN-Seite anzubieten.
+    <br/>
+    Ich werde sicher nie meinen Router von dieser Seite managen wollen (von der LAN-Seite reicht völlig), und wer anders schon gar nicht...
+    <br/>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

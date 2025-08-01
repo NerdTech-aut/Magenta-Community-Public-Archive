@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Homenetbox Portfreigabe fur VPN
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Homenetbox Portfreigabe fur VPN
+  </h1>
+  <span class="author">
+   Manu.
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-05-20T22:00:00Z" title="2016-05-20 22:00 ">
+   Mai 20, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo, ich bekomme es nicht hin, übers Internet auf den PC zuzugreifen.
+    <br/>
+    <br/>
+    Zum Test wollte ich auf dem Twonky Server durchs Internet zugreifen (Port 9000)
+   </p>
+   <p>
+    Unter "Profilverwaltung" ist folgendes eingetragen:
+    <br/>
+    <strong>
+     Profilname:
+    </strong>
+    business.gprsinternet(default)
+    <br>
+     <strong>
+      Benutzername:
+     </strong>
+     t-mobile
+     <br>
+      <strong>
+       Passwort:
+      </strong>
+      tm
+      <br/>
+      APN statisch
+      <br/>
+      <strong>
+       business.gprsinternet
+      </strong>
+     </br>
+    </br>
+   </p>
+   <p>
+    Unter "Virtueller Server" ist folgendes eingetragen:
+    <br/>
+    <strong>
+     Name:
+    </strong>
+    1
+    <br/>
+    <strong>
+     WAN-Port:
+    </strong>
+    9000
+    <br/>
+    <strong>
+     LAN-IP-Adresse:
+    </strong>
+    192.168.1.121
+    <br/>
+    <strong>
+     LAN-Port:
+    </strong>
+    9000
+    <br/>
+    <strong>
+     Protokoll:
+    </strong>
+    TCP/UDP
+    <br/>
+    <strong>
+     Status:
+    </strong>
+    An
+   </p>
+   <p>
+    Wenn ich jetzt 78.132.81.x in die Adresszeile eingebe, lande ich beim Router unter 192.168.1.1
+    <br/>
+    Wenn ich 78.132.81.x:9000 eingebe, erscheint die Meldung "Diese Website ist nicht erreichbar, 78.132.81.x hat die Verbindung abgelehnt."
+   </p>
+   <p>
+    LG
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-05-22T22:00:00Z" title="2016-05-22 22:00 ">
+   Mai 22, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Verwendest du nur die HomeNet Box oder hast du noch einen Router dahinter?
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Manu.
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-05-22T22:00:00Z" title="2016-05-22 22:00 ">
+   Mai 22, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nur die Box (ist übrigens up-to-date)
+    <br>
+     An deren LAN Port ist der NAS mit einer fixen IP angeschlossen.
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-05-23T22:00:00Z" title="2016-05-23 22:00 ">
+   Mai 23, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Okay, und am NAS laufen alle Dienste, die du verwenden möchtest?
+   </p>
+   <p>
+    Hast du auch die richtigen Ports freigeschaltet? Welchen VPN Verbindungstyp verwendest du denn?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Manu.
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-05-23T22:00:00Z" title="2016-05-23 22:00 ">
+   Mai 23, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Der NAS ist ein Windows 10 PC. Wollte die Windows Interne VPN funktion nutzen, aber die verbindung klappt nicht. Deshalb habe ich den Twonky Server zum Testen der Verbindung am laufen. Den kann man auch nicht übers internet erreichen ... Egal ob Firewall an oder aus
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-05-23T22:00:00Z" title="2016-05-23 22:00 ">
+   Mai 23, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Schau dir mal das Tutorial hier an:
+   </p>
+   <p>
+    <a href="http://www.computerwoche.de/a/windows-10-als-vpn-client-oder-vpn-server-einrichten,3280163,2" target="_blank">
+     http://www.computerwoche.de/a/windows-10-als-vpn-client-oder-vpn-server-einrichten,3280163,2
+    </a>
+   </p>
+   <p>
+    Auch beim Twonky Server musst du die richtigen Ports freischalten, sonst geht da gar nichts. Wenn steht, dass die Verbindung abgelehnt wurde, is das ein guter Hinweis darauf, dass die Ports nicht offen sind.
+   </p>
+   <p>
+    Die beste möglichkeit das zu Testen ist, wenn du einen simplen Webserver installierst und schaust, ob du von außen drauf zugreifen kannst, wenn du die Ports dafür freischaltest.
+   </p>
+   <p>
+    Aufpassen, wenn du von außen drauf zugreifen willst, muss du wirklich in einem anderen Netzwerk sein - z.B.: Handy
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Manu.
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-05-25T22:00:00Z" title="2016-05-25 22:00 ">
+   Mai 25, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Okey habe es soweit hinbekommen dass es mit Twonky funktioniert.
+    <br>
+     <br>
+      Jedoch die VPN Verbindung klappt noch immer nicht. Kann es sein, dass die Box das GRE Protokoll nicht unterstützt?
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Manu.
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-06-21T22:00:00Z" title="2016-06-21 22:00 ">
+   Juni 21, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Kann es sein, dass 3 diese Funktion blockiert?
+    <br>
+     Denn wenn ich mich im eigenen Netz über 192.168.1.125 verbinde, werden auch LAN Geräte angezeigt.
+    </br>
+   </p>
+   <p>
+    Werde es morgen mal mit einem A1 Hotspot probieren.
+   </p>
+   <p>
+    Übrigens: Das aufklappen der Kommentare ist sehr lästig.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-06-25T22:00:00Z" title="2016-06-25 22:00 ">
+   Juni 25, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wie kommst du jetzt auf 3? Dachte du verwendest T-Mobile?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Manu.
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-06-26T22:00:00Z" title="2016-06-26 22:00 ">
+   Juni 26, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Beides.
+    <br>
+     3 am Handy und TM für Internet.
+     <br>
+      <br>
+       Mann muss ja in einem anderen Netz verbunden sein, wenn die Verbindung klappen soll, oder nicht?
+       <br>
+        <br>
+         Auch mit einem A1 hotspot kann ich mich verbinden, sehe aber keine lokalen Geräte oder habe zugriff darauf.
+        </br>
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-06-27T22:00:00Z" title="2016-06-27 22:00 ">
+   Juni 27, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Okay, also am Provider sollte es nicht liegen, die blockieren prinzipiell nichts. Liegt sicher immer noch an der Konfiguration.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   HTC 5G Hub - Online Gaming - PS4
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   HTC 5G Hub - Online Gaming - PS4
+  </h1>
+  <span class="author">
+   Hofi133
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-17T17:58:59Z" title="2020-05-17 17:58 ">
+   Mai 17, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Community, hoffe es kann mir jemand helfen....
+   </p>
+   <p>
+   </p>
+   <p>
+    Verwende seit Kurzem den HTC 5G Hub samt Tarif gigakraft 5G 250. Derzeit arbeitet das Gerät einwandfrei im LTE 4G Betrieb und erreicht auch gute Bandbreiten.
+   </p>
+   <p>
+    Ich habe jedoch anscheinend Probleme mit dem Port Forwarding. An der PS4 Konsole z.B. im COD (Call of Duty) erscheint NAT Typ "strikt". Bei anderen Games gibt es Probleme beim Verbinden zu Online Servern.
+   </p>
+   <p>
+    Habe als APN "business.gprsinternet" eingestellt. Am HTC Hub unter Portweiterleitung sind alle relevanten Ports eingetragen, auch die statische IP der Konsole wurde richtig hinterlegt.
+   </p>
+   <p>
+    Es scheint jedoch so als ob diese Portweiterleitung überhaupt nichts bringt und die Ports nach wie vor blockiert werden. Bzw. ev. werden diese von Magenta 1 Ebene darüber weiterhin noch gesperrt....
+   </p>
+   <p>
+   </p>
+   <p>
+    Was kann ich tun?
+   </p>
+   <p>
+   </p>
+   <p>
+    Beim noch vor kurzem verwendeten 3 neo mit Drei LTE Paket konnte man beim Provider die sog. "open internet" Funktion aktivieren. Dann gab es diese Probleme nicht mehr.
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke für Eure Hilfe!
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-17T18:38:53Z" title="2020-05-17 18:38 ">
+   Mai 17, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/84109-hofi133/?do=hovercard" data-mentionid="84109" href="https://community.magenta.at/profile/84109-hofi133/" rel="">
+     @Hofi133
+    </a>
+    <br/>
+    Der "business.gprsinternet" APN macht das gleiche die die "Open Internet" Einstellung, und zwar die Zuteilung einer öffentlichen IP-Adresse.
+   </p>
+   <p>
+    Beim HTC 5G Hub ist der "business.gprsinternet" APN etwas kompilierter einzurichten, als sonnst.
+   </p>
+   <p>
+    Hat dein Router denn eine öffentliche IP-Adresse? Lade dir direkt
+    <u>
+     am Router
+    </u>
+    die
+    <a href="https://play.google.com/store/apps/details?id=at.alladin.rmbt.android" rel="external nofollow">
+     RTR-Netztest App
+    </a>
+    herunter und schau, ob bei IPv4 die vier Quadrate grün sind oder gelb (es sollte so sein, wie auf folgendem Screenshot).
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2020_05/Screenshot_20200204-164625.png.43b581ca8c9de1584ddc58eb2bd1cdc2.png" rel="external nofollow">
+     <img alt="Screenshot_20200204-164625.thumb.png.d3aa349e82ecb377d4bf8922b69ee733.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2191" src="images/uploads/Screenshot_20200204-164625.thumb.png.d3aa349e82ecb377d4bf8922b69ee733.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Hofi133
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-18T17:42:56Z" title="2020-05-18 17:42 ">
+   Mai 18, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo NTM, Danke für Deine sehr schnelle Antwort!
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn ich diesen Test mit der RTR App direkt am HTC Hub durchführe bekomme ich bei iPv6 alles rot und bei iPv4 leider 4 gelbe Quadrate.
+   </p>
+   <p>
+    Die Testergebnisse sind fast alle grün bis auf folgende die ROT sind:
+   </p>
+   <p>
+   </p>
+   <p>
+    TCP Ports 16/18:
+   </p>
+   <p>
+    Test#1 Webseiten-Protokoll (HTTP alternativ, TCP-Port 8080 eingehend)
+   </p>
+   <p>
+    Test#2 Sichere Steuerung von Kommunikationssitzungen (SIP über TLS, TCP-Port 5061 eingehend)
+   </p>
+   <p>
+   </p>
+   <p>
+    TCP Ports 11/13:
+   </p>
+   <p>
+    Test#1 Übertragung/Streaming audiovisueller Daten (RTP, UDP-Port 5004 eingehend)
+   </p>
+   <p>
+    Test#2 Microsoft Terminal Server (RDP, UDP-Port 3389 eingehend)
+   </p>
+   <p>
+   </p>
+   <p>
+    Kannst Du hiermit etwas anfangen? Hat das ev. damit zu tun? Bin etwas ratlos....
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke!
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+   <p>
+    Hofi133
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-18T18:45:43Z" title="2020-05-18 18:45 ">
+   Mai 18, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Also die vier gelben Quadrate bei IPv4 ist schlecht, kein Wunder, das es nicht funktioniert.
+   </p>
+   <p>
+    Also ist der business.gprsinternet wirklich ausgewählt?
+   </p>
+   <p>
+    Hast du beim business.gprsinternet APN auch den Nutzernamen "t-mobile" und das Passwort "tm" eingetragen?
+   </p>
+   <p>
+    Wenn du beide Fragen mit ja beantworten kannst, dann:
+   </p>
+   <p>
+    Ganz unten beim Standard APN sind zwei Felder mit vielen Werten ausgefüllt, kopiere diese und füge sie beim "business.gprsinternet" APN ein
+   </p>
+   <p>
+    Solltest du die Felder nicht finden brächte ich Screenshots vom Standard APN, welcher voreingestellt war (wirklich alle Felder), weil ich die Screenshots die ich kenne, nicht mehr finde.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Hofi133
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-18T19:56:19Z" title="2020-05-18 19:56 ">
+   Mai 18, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo NTM,
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich liste Dir einmal alle Settings auf:
+   </p>
+   <p>
+    Ausgehend vom HTC Hub Hauptmenü -&gt; Einstellungen -&gt; Netzwerk &amp; Internet -&gt; Mobilfunknetz -&gt; Zugangspunkte:
+   </p>
+   <p>
+    ...hab dort den voreingestellten "internet.t-mobile.at" und den von mir ergänzten "business.gprsinternet".
+   </p>
+   <p>
+   </p>
+   <p>
+    <u>
+     Beim
+     <strong>
+      "business.gprsinternet" APN
+     </strong>
+     habe ich nun folgende Settings:
+    </u>
+   </p>
+   <p>
+    Name: T-mobile A Internet
+   </p>
+   <p>
+    APN: business.gprsinternet
+   </p>
+   <p>
+    Proxy: nicht definiert
+   </p>
+   <p>
+    Port: nicht definiert
+   </p>
+   <p>
+    Nutzername: t-mobile
+   </p>
+   <p>
+    Passwort: tm
+   </p>
+   <p>
+    Server: nicht definiert
+   </p>
+   <p>
+    MMSC: nicht definiert
+   </p>
+   <p>
+    MMS-Proxy: nicht definiert
+   </p>
+   <p>
+    MMS-Port: nicht definiert
+   </p>
+   <p>
+    MCC: 232
+   </p>
+   <p>
+    MNC: 3
+   </p>
+   <p>
+    Authentifizierungstyp: PAP (alternativ gäbe es zur Auswahl: Keiner, CHAP, PAP oder CHAP)
+   </p>
+   <p>
+    APN-Typ: default,supl
+   </p>
+   <p>
+    APN-Protokoll: IPv4 (alternativ gäbe es zur Auswahl: IPv6, IPv4/IPv6)
+   </p>
+   <p>
+    APN-Roaming-Protokoll: IPv4 (alternativ gäbe es zur Auswahl: IPv6, IPv4/IPv6)
+   </p>
+   <p>
+    APN aktivieren/deaktivieren: APN aktiviert (diese Einstellung ist grau und lässt sich nicht ändern)
+   </p>
+   <p>
+    Träger: keine Angabe (alternativ gäbe es zur Auswahl: LTE, HSPAP, HSPA, HSUPA, HSDPA, UMTS, EDGE, GPRS, eHRPD, EVDO_B, EVDO_A, EVDO_0, 1xRTT, IS95B, IS95A)
+   </p>
+   <p>
+    MVNO-Typ: Keiner (alternativ gäbe es zur Auswahl: SPN, IMSI, GID)
+   </p>
+   <p>
+    MVNO-Wert: nicht definiert (diese Einstellung ist grau und lässt sich nicht ändern)
+   </p>
+   <p>
+   </p>
+   <p>
+    <u>
+     Beim voreinstellten
+     <strong>
+      Standard APN
+     </strong>
+     sind nur folgende Dinge anders als oben aufgelistet:
+    </u>
+   </p>
+   <p>
+    APN: internet.t-mobile.at
+   </p>
+   <p>
+    Nutzername: T
+   </p>
+   <p>
+    APN-Typ: default,hipri,dun,supl
+   </p>
+   <p>
+    APN-Protokoll: iPv4/iPv6
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn ich zwischen den beiden APNs wechlse habe ich definitv eine andere IP Adresse:
+   </p>
+   <p>
+    Beim Standard voreingestellten APN bekomme ich 212.xxx
+   </p>
+   <p>
+    Beim business.gprsinternet APN bekomme ich 46.xxx bzw. war einmal glaube ich auch eine 78.xxx dabei
+   </p>
+   <p>
+   </p>
+   <p>
+    Soll ich Dir von bestimmten Bereichen Screenshots hochladen?
+   </p>
+   <p>
+   </p>
+   <p>
+    Bin echt dankbar für Deine Hilfe und Geduld mit mir!
+    <img alt=":glad:" data-emoticon="" height="20" src="images/emoticons/tma_glad-o.png" srcset="images/emoticons/tma_glad-o@2x.png 2x" title=":glad:" width="20"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+   <p>
+    Hofi133
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-18T20:08:53Z" title="2020-05-18 20:08 ">
+   Mai 18, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Mach mal bei Authentifizierung PAP oder CHAP.
+   </p>
+   <p>
+    Nur IPv4 passt.
+   </p>
+   <p>
+    Übernimm mal was beim "Standard" APN unter "APN-Typ" steht in den "business.gprsinternet" APN.
+   </p>
+   <p>
+    Eine 46.xxx oder 78.xxx IP sollte eigentlich passen.
+    <img alt="&gt;:)" data-emoticon="" height="20" src="images/emoticons/tma_eyebrow-o.png" srcset="images/emoticons/tma_eyebrow-o@2x.png 2x" title="&gt;:)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Hofi133
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-18T20:16:56Z" title="2020-05-18 20:16 ">
+   Mai 18, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo NTM,
+   </p>
+   <p>
+   </p>
+   <p>
+    hab deutlichen Fortschritt gemacht. Habe jetzt beim
+    <strong>
+     "business.gprsinternet" APN
+    </strong>
+    folgende Änderungen gemacht:
+   </p>
+   <p>
+   </p>
+   <p>
+    Nutzername: T
+   </p>
+   <p>
+    APN-Typ: default,hipri,dun,supl
+   </p>
+   <p>
+    Restliche Settings wie vorhin oben angeführt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Jetzt hab ich am HTC Hub mit der RTR App bei iPv4
+    <strong>
+     alle 4 Quadrate Grün
+    </strong>
+    ! Es kommen nach dem Test zwar die gleichen rot geblockten ports...
+   </p>
+   <p>
+   </p>
+   <p>
+    TCP Ports 16/18:
+   </p>
+   <p>
+    Test#1 Webseiten-Protokoll (HTTP alternativ, TCP-Port 8080 eingehend)
+   </p>
+   <p>
+    Test#2 Sichere Steuerung von Kommunikationssitzungen (SIP über TLS, TCP-Port 5061 eingehend)
+   </p>
+   <p>
+    UDP Ports 11/13:
+   </p>
+   <p>
+    Test#1 Übertragung/Streaming audiovisueller Daten (RTP, UDP-Port 5004 eingehend)
+   </p>
+   <p>
+    Test#2 Microsoft Terminal Server (RDP, UDP-Port 3389 eingehend)
+   </p>
+   <p>
+   </p>
+   <p>
+    ...aber die PS4 im COD zeigt jetzt NAT Type
+    <strong>
+     MITTEL
+    </strong>
+    !
+    <img alt=":glad:" data-emoticon="" height="20" src="images/emoticons/tma_glad-o.png" srcset="images/emoticons/tma_glad-o@2x.png 2x" title=":glad:" width="20"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    NAT Type offen werde ich wahrscheinlich sowieso nicht hinbekommen wie damals beim 3 neo Router, oder?
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich versuchs jetzt noch mit "PAP oder CHAP".
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf jeden Fall schon ein großer Schritt. Meeega!
+   </p>
+   <p>
+    Herzlichen Dank! Du bist echt ein Profi!
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+   <p>
+    Hofi133
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-19T05:46:07Z" title="2020-05-19 05:46 ">
+   Mai 19, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja, NAT Type offen wirst du so nicht erreichen (die Switch meint zwar einen offenen NAT zu haben bei Magenta Mobil Anschlüssen, das ist aber eher ein Anzeigefehler), es sollte aber mit einem moderaten/mittleren NAT auch alles funktionieren.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Hofi133
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-19T07:11:09Z" title="2020-05-19 07:11 ">
+   Mai 19, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Vielen Dank NTM! Somit ist dieser Fall gelöst. Super!
+    <img alt=":glad:" data-emoticon="" height="20" src="images/emoticons/tma_glad-o.png" srcset="images/emoticons/tma_glad-o@2x.png 2x" title=":glad:" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Hofi133
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-26T05:29:09Z" title="2020-05-26 05:29 ">
+   Mai 26, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo NTM nochmal! Habe noch etwas herausgefunden....
+   </p>
+   <p>
+   </p>
+   <p>
+    Habe testweise einen LR77 v2 Libratum LTE Router verwendet, dort alle notwendigen Ports freigegeben und siehe da.... habe damit NAT OFFEN bei der PS4 im COD. Wenn ich die gleichen Ports oder sogar mehr als diese am HTC HUB aktiviere bekomme ich wieder NAT MITTEL.
+   </p>
+   <p>
+   </p>
+   <p>
+    Jetzt habe ich hin und her probiert und bin zur Erkenntnis gekommen, dass der HTC HUB überhaupt keine Ports freigibt. Die Einstellung im Menü Portweiterleitung ist völlig wirkungslos. Auch wenn ich alle Weiterleitungen abschalte habe ich auch noch NAT MITTEL. Wenn ich gezielt Ports öffne sind die trotzdem nicht durchlässig. Entweder ist die Software total Müll oder es gibt irgendwo noch eine Barriere die man als Benutzer nicht umgehen kann. An der SIM bzw. Verbindung zum LTE Masten liegt es definitiv nicht, sonst hätte ich mit dem Testrouter ja nicht so schnell und einfach NAT OFFEN bekommen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Der HTC HUB ist zwar schick aber bin sehr enttäuscht von der Funktionalität. Habe jetzt mal an HTC geschrieben und werde parallel auch mit der Magenta Technik Hotline nochmal telefonieren. Ev. kann ich diesen Router gegen einen anderen eintauschen wo zumindest die Portweiterleitung richtig funktioniert.
+   </p>
+   <p>
+   </p>
+   <p>
+    Weißt Du ev. welche LTE Cat. bei Magenta ausreichend ist? Fährt Magenta beim Download mit Carrier Aggregation 3 oder 4, also wäre LTE Router Cat11 oder eher Cat16 sinnvoll?
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke!
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+   <p>
+    Hofi133
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   meoP90
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-30T10:23:26Z" title="2020-08-30 10:23 ">
+   August 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Nachbarn!
+    <img alt=":glad:" data-emoticon="" height="20" src="images/emoticons/tma_glad-o.png" srcset="images/emoticons/tma_glad-o@2x.png 2x" title=":glad:" width="20"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Seit kurzem auch Besitzer eines 5g Hub von HTC. Hier in der Schweiz wird der Hub von dem Anbieter Sunrise angeboten.
+   </p>
+   <p>
+   </p>
+   <p>
+    Nun sind Informationen zu diesem Gerät recht rar, und da bin ich zu euch gestossen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke im voraus für euren Beitrag, habe versucht alles so weit wie möglich nachzumachen, jedoch bekomme ich beim
+   </p>
+   <p>
+    RTR-Netztest App noch immer die IPv4 Gelben Quadrate.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich Glaube das es mit dieser *Business.gprsinternet* APN zutun hat.
+   </p>
+   <p>
+    Ist diese universal oder Provider spezifisch?
+   </p>
+   <p>
+   </p>
+   <p>
+    Hier meine Standart APN Einstellung;
+   </p>
+   <p>
+   </p>
+   <p>
+    Name
+   </p>
+   <p>
+    Sunrise Internet
+   </p>
+   <p>
+   </p>
+   <p>
+    APN
+   </p>
+   <p>
+    Internet
+   </p>
+   <p>
+   </p>
+   <p>
+    Proxy
+   </p>
+   <p>
+    Nicht definiert
+   </p>
+   <p>
+   </p>
+   <p>
+    Port
+   </p>
+   <p>
+    Nicht definiert
+   </p>
+   <p>
+   </p>
+   <p>
+    Nutzername
+   </p>
+   <p>
+    Nicht definiert
+   </p>
+   <p>
+   </p>
+   <p>
+    Passwort
+   </p>
+   <p>
+    Nicht definiert
+   </p>
+   <p>
+   </p>
+   <p>
+    Server
+   </p>
+   <p>
+    Nicht definiert
+   </p>
+   <p>
+   </p>
+   <p>
+    MMS-Proxy
+   </p>
+   <p>
+    Nicht definiert
+   </p>
+   <p>
+   </p>
+   <p>
+    MCC
+   </p>
+   <p>
+    228
+   </p>
+   <p>
+   </p>
+   <p>
+    MNC
+   </p>
+   <p>
+    2
+   </p>
+   <p>
+   </p>
+   <p>
+    Authentifizierungstyp
+   </p>
+   <p>
+    default,hipri,dun,supl
+   </p>
+   <p>
+   </p>
+   <p>
+    APN-Protokoll
+   </p>
+   <p>
+    IPv4/IPv6
+   </p>
+   <p>
+   </p>
+   <p>
+    APN-Roaming-Protokoll
+   </p>
+   <p>
+    IPv4
+   </p>
+   <p>
+   </p>
+   <p>
+    APN aktiven/deaktivieren
+   </p>
+   <p>
+    APN aktiviert
+   </p>
+   <p>
+   </p>
+   <p>
+    Träger
+   </p>
+   <p>
+    Keine Angabe
+   </p>
+   <p>
+   </p>
+   <p>
+    MVNO-Typ
+   </p>
+   <p>
+    Keiner
+   </p>
+   <p>
+   </p>
+   <p>
+    MVNO-Wert
+   </p>
+   <p>
+    Nicht definiert
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ports die ich erweitern wollte auf dem Bild (ist das richtig so?)
+   </p>
+   <p>
+   </p>
+   <p>
+    Habe auch mit dem Provider gesprochen, der hatte aber leider keine Ahnung...
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2353" href="images/uploads/75C5965A-B18B-4611-A2E3-CED502519944.jpeg.142145f71c9e1e092e3f4ea70d155781.jpeg" rel="">
+     <img alt="75C5965A-B18B-4611-A2E3-CED502519944.jpeg" class="ipsImage ipsImage_thumbnailed" data-fileid="2353" src="images/uploads/75C5965A-B18B-4611-A2E3-CED502519944.thumb.jpeg.f33be2cbfcbc2135c73cfd9a16ce91d9.jpeg"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2354" href="images/uploads/976E2D22-F511-4A27-A22C-70AC8F8B6BFE.jpeg.28e6d04a4bad3099c427266055b54ef8.jpeg" rel="">
+     <img alt="976E2D22-F511-4A27-A22C-70AC8F8B6BFE.jpeg" class="ipsImage ipsImage_thumbnailed" data-fileid="2354" src="images/uploads/976E2D22-F511-4A27-A22C-70AC8F8B6BFE.thumb.jpeg.95cd240f11dbb3cb4bb43a26ce08f7b4.jpeg"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/FA3D4CFD-BD2D-40F5-81A8-BCB158D3DDD6.jpeg.99179532f439490c3abf4a438ef6f3a5.jpeg">
+     <img alt="FA3D4CFD-BD2D-40F5-81A8-BCB158D3DDD6.jpeg" class="ipsImage ipsImage_thumbnailed" data-fileid="2355" src="images/uploads/FA3D4CFD-BD2D-40F5-81A8-BCB158D3DDD6.thumb.jpeg.789eedbdd49358a9433cd5d65f49af67.jpeg"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2020-08-30T10:35:20Z" title="2020-08-30 10:35 ">
+      August 30, 2020
+     </time>
+     von meoP90
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-30T10:43:29Z" title="2020-08-30 10:43 ">
+   August 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="35988" data-ipsquote-contentid="5830" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1598783006" data-ipsquote-userid="85501" data-ipsquote-username="meoP90">
+    <div class="ipsQuote_citation">
+     vor 7 Minuten schrieb meoP90:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo Nachbarn!
+      <img alt=":glad:" data-emoticon="" height="20" src="images/emoticons/tma_glad-o.png" srcset="images/emoticons/tma_glad-o@2x.png 2x" title=":glad:" width="20"/>
+     </p>
+     <p>
+     </p>
+     <p>
+      Seit kurzem auch Besitzen eines 5g Hub von HTC. Hier in der Schweiz wird der Hub von dem Anbieter Sunrise angeboten.
+     </p>
+     <p>
+     </p>
+     <p>
+      Nun sind Informationen zu diesem Gerät recht rar, und da bin ich zu euch gestossen.
+     </p>
+     <p>
+     </p>
+     <p>
+      Danke im voraus für euren Beitrag, habe versucht alles so weit wie möglich nachzumachen, jedoch bekomme ich beim
+     </p>
+     <p>
+      RTR-Netztest App noch immer die IPv4 Gelben Quadrate.
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich Glaube das es mit dieser *Business.gprsinternet* APN zutun hat.
+     </p>
+     <p>
+      Ist diese universal oder Provider spezifisch?
+     </p>
+     <p>
+     </p>
+     <p>
+      Hier meine Standart APN Einstellung;
+     </p>
+     <p>
+     </p>
+     <p>
+      Name
+     </p>
+     <p>
+      Sunrise Internet
+     </p>
+     <p>
+     </p>
+     <p>
+      APN
+     </p>
+     <p>
+      Internet
+     </p>
+     <p>
+     </p>
+     <p>
+      Proxy
+     </p>
+     <p>
+      Nicht definiert
+     </p>
+     <p>
+     </p>
+     <p>
+      Port
+     </p>
+     <p>
+      Nicht definiert
+     </p>
+     <p>
+     </p>
+     <p>
+      Nutzername
+     </p>
+     <p>
+      Nicht definiert
+     </p>
+     <p>
+     </p>
+     <p>
+      Passwort
+     </p>
+     <p>
+      Nicht definiert
+     </p>
+     <p>
+     </p>
+     <p>
+      Server
+     </p>
+     <p>
+      Nicht definiert
+     </p>
+     <p>
+     </p>
+     <p>
+      MMS-Proxy
+     </p>
+     <p>
+      Nicht definiert
+     </p>
+     <p>
+     </p>
+     <p>
+      MCC
+     </p>
+     <p>
+      228
+     </p>
+     <p>
+     </p>
+     <p>
+      MNC
+     </p>
+     <p>
+      2
+     </p>
+     <p>
+     </p>
+     <p>
+      Authentifizierungstyp
+     </p>
+     <p>
+      default,hipri,dun,supl
+     </p>
+     <p>
+     </p>
+     <p>
+      APN-Protokoll
+     </p>
+     <p>
+      IPv4/IPv6
+     </p>
+     <p>
+     </p>
+     <p>
+      APN-Roaming-Protokoll
+     </p>
+     <p>
+      IPv4
+     </p>
+     <p>
+     </p>
+     <p>
+      APN aktiven/deaktivieren
+     </p>
+     <p>
+      APN aktiviert
+     </p>
+     <p>
+     </p>
+     <p>
+      Träger
+     </p>
+     <p>
+      Keine Angabe
+     </p>
+     <p>
+     </p>
+     <p>
+      MVNO-Typ
+     </p>
+     <p>
+      Keiner
+     </p>
+     <p>
+     </p>
+     <p>
+      MVNO-Wert
+     </p>
+     <p>
+      Nicht definiert
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+     <p>
+      Ports die ich erweitern wollte auf dem Bild (ist das richtig so?)
+     </p>
+     <p>
+     </p>
+     <p>
+      Habe auch mit dem Provider gesprochen, der hatte aber leider keine Ahnung...
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2353" href="images/uploads/75C5965A-B18B-4611-A2E3-CED502519944.jpeg.142145f71c9e1e092e3f4ea70d155781.jpeg" rel="">
+       <img alt="75C5965A-B18B-4611-A2E3-CED502519944.jpeg" class="ipsImage ipsImage_thumbnailed" data-fileid="2353" src="images/uploads/75C5965A-B18B-4611-A2E3-CED502519944.thumb.jpeg.f33be2cbfcbc2135c73cfd9a16ce91d9.jpeg"/>
+      </a>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2354" href="images/uploads/976E2D22-F511-4A27-A22C-70AC8F8B6BFE.jpeg.28e6d04a4bad3099c427266055b54ef8.jpeg" rel="">
+       <img alt="976E2D22-F511-4A27-A22C-70AC8F8B6BFE.jpeg" class="ipsImage ipsImage_thumbnailed" data-fileid="2354" src="images/uploads/976E2D22-F511-4A27-A22C-70AC8F8B6BFE.thumb.jpeg.95cd240f11dbb3cb4bb43a26ce08f7b4.jpeg"/>
+      </a>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Der APN ist für jeden Anbieter anders. In Österreich ist Magenta auch der einzige Anbieter, welcher es über den APN löst. Ob das in der Schweiz auch einer macht, kann ich leider nicht sagen.
+   </p>
+   <p>
+    Ich habe auf die schnelle nichts dazu gefunden, wie Sunrise das Thema löst. Es könnte per APN, Einstellung über das My Sunrise/Sunrise Cockpit Portal bzw Kundenservice sein, oder kostenpflichtige Zusatzoption. Beziehungsweise könnte eine öffentliche IP auch gar nicht verfügbar sein. Zumindest Österreich hat jeder Internet-Anschluss das Recht auf eine öffentliche dynamische IP-Adresse (wobei egal ob v4 oder v6), ob es so eine Regelung auch in der Schweiz gibt ist die Frage. Kontaktiere am besten Sunrise direkt, ob eine öffentliche IP-Adresse möglich ist. Wahrscheinlich würde dir eine dynamische reichen, sollte diese kostenlos bzw. günstiger sein, als eine fixe.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   meoP90
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-30T12:17:58Z" title="2020-08-30 12:17 ">
+   August 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke für deine rasche Antwort!
+   </p>
+   <p>
+    Werde mich weiter bemühen um eine Lösung zu finden
+    <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Hofi133
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-30T15:55:16Z" title="2020-08-30 15:55 ">
+   August 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo meoP90,
+   </p>
+   <p>
+   </p>
+   <p>
+    kann hier auch noch etwas ergänzen. Mir hat NTM damals super weitergeholfen mit dem business APN (d.h. damit habe ich jetzt eine public IP), und den richtigen APN settings. Mit diesen Änderungen schaffte ich den Sprung von STRIKT auf Moderat/Mittel. Bin ja selbst auch PS4 Benutzer und stehe hier auch vor dem NAT Problem bzw. der Notwendigkeit von einigen offenen Ports.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe jetzt nun seit Monaten (!!) mit Magenta (mein Provider) und HTC selbst Kontakt um das Port Problem zu lösen. An Magenta dürfte es nicht liegen, so wie es aussieht liegt es
+    <u>
+     eindeutig
+    </u>
+    am HTC Gerät. HTC selbst ist leider nicht wirklich fähig die Problematik überhaupt zu verstehen und verweist immer auf den Provider, das Problem liegt aber am HTC Hub. Du kannst in den Port Forwarding Einstellungen machen was Du möchtest, diese
+    <u>
+     Ports werden einfach nicht geöffne
+    </u>
+    t. Diese Option in diesem HTC Android Hub ist also völlig wirkungslos.
+   </p>
+   <p>
+    D.h. als PS4 Nutzer und wenn Du offene Ports haben möchtest (NAT Offen) ist der HTC Hub total ungeeignet, er ist zwar schick und hochwertig verarbeitet, beherrscht aber nicht mal die einfachsten Setting wie Huawei Router die bereits ein paar Jahre alt sind.
+   </p>
+   <p>
+   </p>
+   <p>
+    Magenta hat diesen HTC Hub mittlerweile aus dem Programm genommen, warum wohl?
+   </p>
+   <p>
+    Mittlerweile bietet Magenta einen 5G Huawei Router an, der all das beherrscht was man eigentlich braucht.
+   </p>
+   <p>
+   </p>
+   <p>
+    Habe mir von Magenta einen Huawei B310s als Leihgerät geholt, und alternativ dazu auch einen industriellen Router getestet. Auf beiden funktioniert das Port Weiterleiten und damit Öffnen von bestimmten Ports
+    <strong>
+     EINWANDFREI
+    </strong>
+    und sofort auf Anhieb.
+   </p>
+   <p>
+    Sim Karte zurück in den HTC Hub gesteckt und sofort wieder die gleichen Probleme, dass eben KEIN Port Forwarding funktioniert, ganz egal was man einstellt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Zusammengefasst:
+    <strong>
+     HTC 5G Hub
+    </strong>
+    , schickes Teil, Akkufunktion nett, sonst
+    <strong>
+     für Advanced User oder Gamer absolut ungeeignet
+    </strong>
+    . Finger weg davon!!!
+   </p>
+   <p>
+   </p>
+   <p>
+    Fazit zu HTC Support: Sehr mangelhaft, "Call Center" nur per Email erreichbar, übersetzen Fragen und Antworten recht stümperhaft ins Deutsche. Anscheinend kommuniziert hier das Support Team mit der HTC Zentrale in Asien. Mein Wunsch einer Telekonferenz damit ich in Englischer Sprache die Problematik erklären kann wurde mehrfach abgelehnt. Komisch oder? Software am HUB fehlerhaft bzw. Port Forwarding zwar auswählbar aber
+    <u>
+     ohne Funktion
+    </u>
+    !
+   </p>
+   <p>
+    (Frage an HTC: Wieso baut ihr diese Funktion dann ein? Dann könnt ihr das Port Forwarding doch gleich deaktivieren oder diesen Menüpunkt weglassen.)
+   </p>
+   <p>
+   </p>
+   <p>
+    Hoffe diese Infos helfen Dir etwas weiter.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+   <p>
+    Hofi133
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   meoP90
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-08-30T17:16:39Z" title="2020-08-30 17:16 ">
+   August 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hofi
+    <span style="font-weight:900;">
+     Danke
+    </span>
+    für deine ausführliche Antwort!
+    <br/>
+    Sehr deprimierend der Support von HTC, das man solch ein Gerät auf den Markt bringt, und dazu hier einen auf „next-Gen“ macht...
+    <img alt="9_9" data-emoticon="" height="20" src="images/emoticons/tma_roll-eyes-o.png" srcset="images/emoticons/tma_roll-eyes-o@2x.png 2x" title="9_9" width="20"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Da bleibt und nur zu hoffen das da bald ein Update kommt!
+    <img alt=":glad:" data-emoticon="" height="20" src="images/emoticons/tma_glad-o.png" srcset="images/emoticons/tma_glad-o@2x.png 2x" title=":glad:" width="20"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Halt mich bitte auf dem laufenden
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Gruss Romeo
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   meoP90
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-20T16:47:33Z" title="2020-09-20 16:47 ">
+   September 20, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hier noch eine Antwort von HTC, die ich letztes Kontaktiert habe;
+   </p>
+   <p>
+   </p>
+   <p>
+    Sehr geehrter Herr P.
+    <br/>
+    <br>
+     vielen Dank für Ihre E-Mail.
+     <br>
+      <br>
+       <br>
+        Der 5G-Hub ist ein Gerät und kein Router. Die einzige verfügbare und einstellbare Einstellung wird direkt über die 5G-Hub-Einstellung angezeigt. Dies ist eine Trägerbeschränkung und kein Fehler am Gerät. Einige Netzbetreiber erlauben keine Portweiterleitung / Änderungen des NAT-Typs / Änderung des Bridge-Modus / DMZ.
+        <br>
+         <br>
+          Bei weiteren Fragen zögern Sie bitte nicht, sich an unser Support-Team zu wenden.
+          <br>
+           <br>
+            <br>
+             Mit freundlichen Grüßen
+             <br>
+              <br>
+               Maria
+               <br>
+                <br>
+                 HTC technischer Kundensupport
+                 <br>
+                  <br>
+                   Sie erhalten eine weitere E-Mail mit einer Umfrage, um unseren Service zu bewerten. Wir würden es sehr schätzen, wenn Sie sich die Zeit nehmen, um an der Umfrage teilzunehmen. Dies gibt Ihnen auch die Gelegenheit, Kommentare zu hinterlassen, die uns helfen, unseren Service für Sie zu verbessern.
+                  </br>
+                 </br>
+                </br>
+               </br>
+              </br>
+             </br>
+            </br>
+           </br>
+          </br>
+         </br>
+        </br>
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Hofi133
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-24T08:41:09Z" title="2020-09-24 08:41 ">
+   September 24, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo meoP90,
+   </p>
+   <p>
+   </p>
+   <p>
+    Ja das was HTC schreibt ist absoluter Schwachsinn.
+   </p>
+   <p>
+   </p>
+   <p>
+    1) Es liegt nicht an Magenta, denn wenn man einen anderen Router mit der selben SIM verwendet funktioniert die Port Weiterleitung einwandfrei.
+   </p>
+   <p>
+    2) HTC redet sich da in einen Strudel, war bei mir auch so. "5G Hub ist kein Router", "unterstütz kein Port Forwarding",... wenn das so ist dann soll HTC doch diese Port Weiterleitung im Einstellungsmenü entfernen oder deaktivieren. Im Moment hat HTC hier im Android 9 Settings Menü aber sogar einen eigenen Punkt mit Port Weiterleitung wo man dann alles eingeben kann wie auch bei anderen Geräten. HTC kennt anscheinend Ihr eigenes Produkt nicht. Es ist zwecklos mit denen zu diskutieren, die vom Support kennen sich überhaupt nicht aus.
+   </p>
+   <p>
+   </p>
+   <p>
+    Nicht ohne Grund hat Magenta dieses Gerät schon wieder aus dem Programm genommen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das schlimme an der Sache.... HTC hat hier ein Gerät verkauft (direkt oder eben über Provider) mit der augenscheinlichen Funktion einer Port Weiterleitung. Es erfüllt diese Funktion aber nicht. Ist aus meiner Sicht auch rechtlich zu hinterfragen....
+   </p>
+   <p>
+    Ich hoffe das Magenta das auch so einsieht und für die betroffenen Kunden (einschließlich mich selbst) eine Ersatzlösung (anderer Router) anbietet.
+   </p>
+   <p>
+   </p>
+   <p>
+    Für mich ganz klar: Nie wieder HTC!!
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-25T11:09:22Z" title="2020-09-25 11:09 ">
+   September 25, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Die Use Cases für das Ding ist ein Router für 60 GHz VR Gear und als VPN Gateway für Firmen.
+   </p>
+   <p>
+    Als Home Router war das Ding nicht designed. Der Hub hat viele nützliche Anwendungen, nur halt nicht als Router.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Hofi133
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-25T11:25:14Z" title="2020-09-25 11:25 ">
+   September 25, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo IT-Freak,
+   </p>
+   <p>
+   </p>
+   <p>
+    Glaub ich Dir gerne ab Magenta hat das Gerät jedoch als 5G Device verkauft ohne irgendwelche Hinweise auf spezielle Benutzung nur für VR etc.
+   </p>
+   <p>
+    Weiters hat der Hersteller HTC die Portforwarding Funktion ja augenscheinlich ins Gerät eingebaut, sonst gäbe es diesen Menüpunkt ja gar nicht. Und damit sollte das auch funktionieren -&gt; das ist was mich daran stört. Wenn das Teil kein Port Forwarding können soll dann hat der Menüpunkt in den Settings nichts verloren.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+   <p>
+    Hofi133
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-25T11:34:44Z" title="2020-09-25 11:34 ">
+   September 25, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich kann den Ärger gut verstehen. Ich sehe auch das Problem bei HTC, da dieses Gerät auf den ersten Blick wie ein Router vermarktet wurde. (Es hat ja auch einen GBit LAN Port)
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   rene650
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-25T14:23:44Z" title="2020-09-25 14:23 ">
+   September 25, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Liebe Community.
+   </p>
+   <p>
+   </p>
+   <p>
+    Jetzt geb ich hier auch mal meinen Senf dazu.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich quäle mich ebenso wie Hofi133 seit circa Magenta 5G Marktstart mit diesem HTC Spielzeug rum. Das Gerät ist jedoch leider absolut nicht geeignet für Internet Zuhause (als was es mir verkauft wurde)!!! Schlechtes, altes, langsames, unbrauchbares WLAN. Maximal 20 Geräte. Kein Bridge Mode. Und eine nicht funktionierende Portweiterleitung. Ebenfalls eine nicht zufriedenstellende 5G Performance.
+   </p>
+   <p>
+   </p>
+   <p>
+    OK. Nun investiert man ca 500€ in vernünftiges WLAN. Verbindet das HTC und hat dann doppeltes NAT im Netzwerk. Tja. Nicht brauchbar. Man kann hier leider keinen Bridge Mode aktivieren. Der erste Router der mir unterkommt, der das nicht kann. Merkwürdig. Ich schaff auch die Konfig nicht mit der fehlerhaften Portweiterleitung am HTC. Also selbst ein LTE Modem angeschafft. Ich zahle zwar für 5G, aber vielleicht funktioniert dann ja dann wenigstens mal das Netzwerk vernünftig. Fehlanzeige. Einen Versuch noch. Ein weiteres LTE Modem angeschafft. Läuft alles, nur etwa ein Drittel der Downloadgeschwindigkeit des HTC. Komisch. Ein reines 5G Modem gibt es leider noch nicht.
+   </p>
+   <p>
+   </p>
+   <p>
+    Nun beginnt hier allerdings mein Spießroutenlauf mit dem Magenta Kundenservice. Jetzt bin ich ja schon eine Weile selbst im Kundenservice tätig, zufällig in der IT Branche. Was ich hier erlebt hab, ist mir allerdings noch nie und nirgendwo passiert!!!
+    <br>
+     <br>
+      Es wurde mir mehrmals an der Hotline zugesichert, dass das HTC Modem im Shop gegen das Huawei getauscht bekomme! Spitze! Kurz recherchiert - Bridge Mode - PERFEKT! Noch dazu eine fortgeschrittene 5G Technologie im Vergleich zum HTC.
+      <br>
+       PERFEKT. Vielleicht kommen wir dann auch IN RICHTUNG VERSPROCHENER BANDBREITE.
+      </br>
+     </br>
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    Es folgten 4 Tage Odysee - die Kurzfassung:
+    <br>
+     374 Minuten an der Hotline, etwa 23 Magenta Mitarbeiter. 160 Minuten Fahrzeit, 3,5 Stunden im Shop. Kein Modem, keine vernünftige Auskunft. Die Hotline verweist mich an den Shop, der Shop an die Hotline.
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hatte von etwa 20 Magenta Mitarbeitern genau drei am Telefon, die wirklich freundlich und bemüht um mein Anliegen waren, leider nicht zu meinem Gunsten entscheiden DURFTEN und mir somit nicht helfen konnten. Der Rest war unfreundlich, inkompetent UND unfreundlich!
+   </p>
+   <p>
+   </p>
+   <p>
+    Seit 2 Wochen warte ich nun auf den versprochenen Rückruf!
+   </p>
+   <p>
+   </p>
+   <p>
+    Eine Kündigung ist leider nicht mehr möglich, da mein Vertrag seit ca 3 Monaten besteht. Für die nächsten 2 Jahre. ?
+   </p>
+   <p>
+   </p>
+   <p>
+    PS: In der Zeit in der ich den Vertrag noch auflösen konnte wollte ich bereits gegen das Huawei tauschen, da wurde mir gesagt dieses sei nicht lieferbar. Jetzt hab ich hier ein Produkt, welches nicht ordentlich funktioniert und bin massiv enttäuscht darüber wie man mit mir umspringt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   meoP90
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-25T20:41:16Z" title="2020-09-25 20:41 ">
+   September 25, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    so schade das es einfach nicht klappen will!! alles was wir brauchen ist die Porterweiterung-Bridgemode-Dmz
+   </p>
+   <p>
+   </p>
+   <p>
+    <img alt=":sick:" data-emoticon="" height="20" src="images/emoticons/tma_sick-o.png" srcset="images/emoticons/tma_sick-o@2x.png 2x" title=":sick:" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   meoP90
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-26T10:13:14Z" title="2020-09-26 10:13 ">
+   September 26, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Gibt es denn keine „Jailbreak“ für das teil, wo mal sowas forcieren könnte?
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2020-09-26T10:14:17Z" title="2020-09-26 10:14 ">
+      September 26, 2020
+     </time>
+     von meoP90
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   rene650
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-26T10:57:48Z" title="2020-09-26 10:57 ">
+   September 26, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p style="text-align:justify;">
+    Solche Tüfteleien KÖNNEN nicht beim User liegen! Magenta als Provider MUSS gewährleisten, dass solche Dinge funktionieren, Support leisten oder es sein lassen! Als Dienstleister sollte man sich um zufriedene Kunden bemühen! Mit solch einem Verhalten fällt eine Weiterempfehlung leider schwer.
+   </p>
+   <p style="text-align:justify;">
+   </p>
+   <p style="text-align:justify;">
+    Ebenso kann ich darauf schliessen, dass wir im Business Bereich Magenta nicht in Betracht ziehen, noch es weiterhin an unseren Kunden empfehlen. Es gibt ja Gott sei Dank auch noch Konkurrenz.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

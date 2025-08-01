@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   PS5 TP-LINK Lan-Verbindung Nat Typ ändern
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   PS5 TP-LINK Lan-Verbindung Nat Typ ändern
+  </h1>
+  <span class="author">
+   Leon285
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-15T17:26:55Z" title="2022-05-15 17:26 ">
+   Mai 15, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi, ich habe das Problem das ich seit mehreren Jahren NAT Typ 3 habe. Ich habe bereits versucht eine eigene IP einzurichten und bei der DNS etwas zu ändern und jetzt fällt mir keine andere Lösung, als hier nach einer lösung zu fragen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-15T20:21:07Z" title="2022-05-15 20:21 ">
+   Mai 15, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/93199-leon285/?do=hovercard" data-mentionid="93199" href="https://community.magenta.at/profile/93199-leon285/" rel="">
+     @Leon285
+    </a>
+   </p>
+   <p>
+    Handelt es sich beim TP-Link Router um einen Mobilfunkrouter (mit Sim-Karten Slot) oder ist der TP-Link Router an ein anderes Gerät von Magenta (ehem. T-Mobile oder UPC) angeschlossen? Es wäre in jedem Fall hilfreich zu wissen was für einen TP-Link Router du hast (da es viele verschiedene Modelle gibt) und sollte noch ein anderes Gerät im Spiel sein, was für ein Gerät dies ist. Modellbezeichnungen sind typisch auf einem Aufkleber an der Rückseite oder der Unterseite des Gerätes zu finden.
+   </p>
+   <p>
+    Wenn es klar ist, worum es sich handelt, können konkrete Lösungsansätze vorgeschlagen werden.
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Leon285
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-16T13:17:17Z" title="2022-05-16 13:17 ">
+   Mai 16, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="47542" data-ipsquote-contentid="7748" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1652646067" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 16 Stunden schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hey
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/93199-leon285/?do=hovercard" data-mentionid="93199" href="https://community.magenta.at/profile/93199-leon285/" rel="">
+       @Leon285
+      </a>
+     </p>
+     <p>
+      Handelt es sich beim TP-Link Router um einen Mobilfunkrouter (mit Sim-Karten Slot) oder ist der TP-Link Router an ein anderes Gerät von Magenta (ehem. T-Mobile oder UPC) angeschlossen? Es wäre in jedem Fall hilfreich zu wissen was für einen TP-Link Router du hast (da es viele verschiedene Modelle gibt) und sollte noch ein anderes Gerät im Spiel sein, was für ein Gerät dies ist. Modellbezeichnungen sind typisch auf einem Aufkleber an der Rückseite oder der Unterseite des Gerätes zu finden.
+     </p>
+     <p>
+      Wenn es klar ist, worum es sich handelt, können konkrete Lösungsansätze vorgeschlagen werden.
+     </p>
+     <p>
+      LG NTM
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo, erstmal Danke für die Rückmeldung, bei dem Router handelt es sich um den TP link MR600 mit SIM-Karte, allerdings steckt der Router nicht direkt an der Konsole, sondern wird vom Router ins Haus umgeleitet und kommt bei mir im Zimmer aus einem Stecker in die Konsole
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-16T20:23:15Z" title="2022-05-16 20:23 ">
+   Mai 16, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/93199-leon285/?do=hovercard" data-mentionid="93199" href="https://community.magenta.at/profile/93199-leon285/" rel="">
+      @Leon285
+     </a>
+    </span>
+    <br/>
+    Hast du beim TP-Link Router den Business APN eingerichtet?
+    <br/>
+    Wenn nicht, kannst du dies, wie
+    <a href="https://static.tp-link.com/manual/2021/202106/20210610/1910012928_Archer%20MR600(EU)_UG_REV2.0.0_V4.pdf" rel="external nofollow">
+     in der Anleitung in Kapitel 4.2 (Seite 13-14)
+    </a>
+    beschreiben, erledigen.
+    <br/>
+    <br>
+     Als Daten musst du folgendes eintragen:
+    </br>
+   </p>
+   <p>
+    Profilname: Public IP
+   </p>
+   <p>
+    APN: business.gprsinternet
+   </p>
+   <p>
+    Benutzername: t-mobile
+   </p>
+   <p>
+    Passwort: tm
+   </p>
+   <p>
+    Authentifizierungstyp: PAP
+   </p>
+   <p>
+    PDP Typ: IPv4
+   </p>
+   <p>
+   </p>
+   <p>
+    Prüfe außerdem, ob UPnP am Router aktiv ist, wie in
+    <a href="https://static.tp-link.com/manual/2021/202106/20210610/1910012928_Archer%20MR600(EU)_UG_REV2.0.0_V4.pdf" rel="external nofollow">
+     Kapitel 10.5 der Anleitung (Seite 45)
+    </a>
+    beschrieben.
+   </p>
+   <p>
+   </p>
+   <p>
+    Starte den Router danach am besten neu.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="47546" data-ipsquote-contentid="7748" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1652707037" data-ipsquote-userid="93199" data-ipsquote-username="Leon285">
+    <div class="ipsQuote_citation">
+     vor 7 Stunden schrieb Leon285:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      allerdings steckt der Router nicht direkt an der Konsole, sondern wird vom Router ins Haus umgeleitet und kommt bei mir im Zimmer aus einem Stecker in die Konsole
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich schätze du verwendest PowerLine Adapter bzw. auch dLAN genannt?
+   </p>
+   <p>
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Leon285
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-19T05:30:01Z" title="2022-05-19 05:30 ">
+   Mai 19, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="47551" data-ipsquote-contentid="7748" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1652732595" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 16.5.2022 um 22:23 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hey
+      <span>
+       <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/93199-leon285/?do=hovercard" data-mentionid="93199" href="https://community.magenta.at/profile/93199-leon285/" rel="">
+        @Leon285
+       </a>
+      </span>
+      <br>
+       Hast du beim TP-Link Router den Business APN eingerichtet?
+       <br>
+        Wenn nicht, kannst du dies, wie
+        <a href="https://static.tp-link.com/manual/2021/202106/20210610/1910012928_Archer%20MR600(EU)_UG_REV2.0.0_V4.pdf" rel="external nofollow">
+         in der Anleitung in Kapitel 4.2 (Seite 13-14)
+        </a>
+        beschreiben, erledigen.
+        <br>
+         <br>
+          Als Daten musst du folgendes eintragen:
+         </br>
+        </br>
+       </br>
+      </br>
+     </p>
+     <p>
+      Profilname: Public IP
+     </p>
+     <p>
+      APN: business.gprsinternet
+     </p>
+     <p>
+      Benutzername: t-mobile
+     </p>
+     <p>
+      Passwort: tm
+     </p>
+     <p>
+      Authentifizierungstyp: PAP
+     </p>
+     <p>
+      PDP Typ: IPv4
+     </p>
+     <p>
+     </p>
+     <p>
+      Prüfe außerdem, ob UPnP am Router aktiv ist, wie in
+      <a href="https://static.tp-link.com/manual/2021/202106/20210610/1910012928_Archer%20MR600(EU)_UG_REV2.0.0_V4.pdf" rel="external nofollow">
+       Kapitel 10.5 der Anleitung (Seite 45)
+      </a>
+      beschrieben.
+     </p>
+     <p>
+     </p>
+     <p>
+      Starte den Router danach am besten neu.
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich schätze du verwendest PowerLine Adapter bzw. auch dLAN genannt?
+     </p>
+     <p>
+     </p>
+     <p>
+      LG NTM
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Werde das was du geschrieben hast am Nachmittag probieren und mein vater meinte das im keller ne switch ist und in meinem zimmer die sind nicht programmiert
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Leon285
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-19T17:46:22Z" title="2022-05-19 17:46 ">
+   Mai 19, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="47551" data-ipsquote-contentid="7748" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1652732595" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 16.5.2022 um 22:23 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hey
+      <span>
+       <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/93199-leon285/?do=hovercard" data-mentionid="93199" href="https://community.magenta.at/profile/93199-leon285/" rel="">
+        @Leon285
+       </a>
+      </span>
+      <br>
+       Hast du beim TP-Link Router den Business APN eingerichtet?
+       <br/>
+       Wenn nicht, kannst du dies, wie
+       <a href="https://static.tp-link.com/manual/2021/202106/20210610/1910012928_Archer%20MR600(EU)_UG_REV2.0.0_V4.pdf" rel="external nofollow">
+        in der Anleitung in Kapitel 4.2 (Seite 13-14)
+       </a>
+       beschreiben, erledigen.
+       <br/>
+       <br/>
+       Als Daten musst du folgendes eintragen:
+      </br>
+     </p>
+     <p>
+      Profilname: Public IP
+     </p>
+     <p>
+      APN: business.gprsinternet
+     </p>
+     <p>
+      Benutzername: t-mobile
+     </p>
+     <p>
+      Passwort: tm
+     </p>
+     <p>
+      Authentifizierungstyp: PAP
+     </p>
+     <p>
+      PDP Typ: IPv4
+     </p>
+     <p>
+     </p>
+     <p>
+      Prüfe außerdem, ob UPnP am Router aktiv ist, wie in
+      <a href="https://static.tp-link.com/manual/2021/202106/20210610/1910012928_Archer%20MR600(EU)_UG_REV2.0.0_V4.pdf" rel="external nofollow">
+       Kapitel 10.5 der Anleitung (Seite 45)
+      </a>
+      beschrieben.
+     </p>
+     <p>
+     </p>
+     <p>
+      Starte den Router danach am besten neu.
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich schätze du verwendest PowerLine Adapter bzw. auch dLAN genannt?
+     </p>
+     <p>
+     </p>
+     <p>
+      LG NTM
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Danke das hat direkt funktioniert du hast mir richtig weitergeholfen kann ich dich hier irgendwie bewerten?
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

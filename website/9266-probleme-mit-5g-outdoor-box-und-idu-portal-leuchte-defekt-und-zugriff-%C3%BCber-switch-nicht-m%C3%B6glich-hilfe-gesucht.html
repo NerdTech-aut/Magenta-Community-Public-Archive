@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Probleme mit 5G Outdoor Box und IDU Portal - Leuchte defekt und Zugriff über Switch nicht möglich. Hilfe gesucht!
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Probleme mit 5G Outdoor Box und IDU Portal - Leuchte defekt und Zugriff über Switch nicht möglich. Hilfe gesucht!
+  </h1>
+  <span class="author">
+   LatenzLeopold
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-13T13:27:58Z" title="2023-11-13 13:27 ">
+   November 13, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Gott zum Gruße!
+   </p>
+   <p>
+    Seit Kurzem bin ich 'Internet 5G M' Kunde und habe zwei Unstimmigkeiten mit der 5G Outdoor Box und der Indoor Box. Die Outdoor Box stand ca. 3 Wochen in meinem Wohnzimmer und hatte sowohl 4G als auch 5G. Ich habe die Box heute auf mein Dach montiert und in Richtung des nächsten Funkmasten gedreht, der in einer Entfernung von ca. 650 m steht. Im Grunde steht die Box genauso wie im Wohnzimmer. Leider leuchtet die 5G Leuchte nicht auf. Sie wird hin und wieder kurz Rot, und dreht sich dann wieder ab. Im ODU Portal unter http://192.168.1.1/ werden jedoch 5G angezeigt und auch die Geschwindigkeiten mit ca. 260/25 passen. Ist evt. die Leuchte kaputt?
+   </p>
+   <p>
+   </p>
+   <p>
+    Das zweite Problem ist, dass ich das Portal für die IDU unter http://192.168.0.1/ nicht erreichen kann. Ich glaube, dass es an meinem gemanaged Zyxel GS1900-24 Switch liegt. Laut Google ist dessen Interface auch unter http://192.168.0.1/ zu finden. Habt ihr eine Idee, wie ich das lösen könnte?
+   </p>
+   <p>
+   </p>
+   <p>
+    Mit besten Grüßen,
+   </p>
+   <p>
+   </p>
+   <p>
+    Leopold
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5206" href="images/uploads/odu.png.95adaab5fb5fd1049e37a5af87a5b803.png" rel="">
+     <img alt="odu.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5206" data-ratio="39.34" src="images/uploads/odu.png.95adaab5fb5fd1049e37a5af87a5b803.png" width="544"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/idu.png.975b61ac9484e0e2022d04ec696fd324.png">
+     <img alt="idu.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5208" data-ratio="64.4" src="images/uploads/idu.thumb.png.7394c9c778d8d9dfbc5d8a39bdb4dc49.png" width="1000"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-11-13T13:30:16Z" title="2023-11-13 13:30 ">
+      November 13, 2023
+     </time>
+     von LatenzLeopold
+    </strong>
+    <br>
+     Ich habe bessere Screenshots hochgeladen.
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-15T16:54:51Z" title="2023-11-15 16:54 ">
+   November 15, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55955" data-ipsquote-contentid="9266" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1699882078" data-ipsquote-userid="98224" data-ipsquote-username="LatenzLeopold">
+    <div class="ipsQuote_citation">
+     Am 13.11.2023 um 14:27 schrieb LatenzLeopold:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Habt ihr eine Idee, wie ich das lösen könnte?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hi, ich versuche mal hier etwas zu helfen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Zur ersten Frage:
+   </p>
+   <p>
+    Es ist möglich, dass die 5G Leuchte kaputt ist. Wenn die Box jedoch 5G empfängt und die Geschwindigkeiten passen, ist das eigentlich nicht so wichtig. Die Leuchte dient nur zur Information.
+   </p>
+   <p>
+    Um die Leuchte zu testen, kannst du versuchen, die Box in eine andere Richtung zu drehen. Wenn die Leuchte dann aufleuchtet, liegt das Problem wahrscheinlich an der Ausrichtung der Box.
+   </p>
+   <p>
+    Wenn die Leuchte auch in einer anderen Richtung nicht aufleuchtet, kannst du versuchen, die Box neu zu starten. Dazu schaltest du die Box einfach für 30 Sekunden aus und wieder ein.
+   </p>
+   <p>
+    Wenn das auch nicht hilft, solltest du dich an den unsere Techniker:innen unter 0676 200 7777 wenden
+   </p>
+   <p>
+   </p>
+   <p>
+    Zur zweiten Frage:
+   </p>
+   <p>
+    Es ist möglich, dass der Switch die IP-Adresse 192.168.0.1 blockiert. Um das zu überprüfen, kannst du versuchen, den Switch auf eine andere IP-Adresse umzustellen. Dazu findest du in der Dokumentation des Switches die entsprechenden Informationen.
+   </p>
+   <p>
+    Wenn du den Switch nicht auf eine andere IP-Adresse umstellen möchtest, kannst du versuchen, den Router so einzurichten, dass er die IP-Adresse 192.168.0.1 für den Switch freigibt. Dazu findest du in der Dokumentation des Routers die entsprechenden Informationen.
+   </p>
+   <p>
+    Hier sind die Schritte, die du befolgen kannst, um den Router so einzurichten, dass er die IP-Adresse 192.168.0.1 für den Switch freigibt:
+   </p>
+   <p>
+    Melde dich in der Router-Konfiguration an.
+   </p>
+   <p>
+    Finde die Einstellung für die IP-Adressen-Vergabe.
+   </p>
+   <p>
+    Wähle die Option "Statische IP-Adressen".
+   </p>
+   <p>
+    Gib die IP-Adresse 192.168.0.1 für den Switch ein.
+   </p>
+   <p>
+    Speichere die Einstellungen.
+   </p>
+   <p>
+    Wenn du diese Schritte befolgst, sollte der Router die IP-Adresse 192.168.0.1 für den Switch freigeben und du solltest das IDU-Portal unter http://192.168.0.1/ erreichen können.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hoffe, diese Infos helfen dir weiter. Liebe Grüße, JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   LatenzLeopold
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-15T20:58:22Z" title="2023-11-15 20:58 ">
+   November 15, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
+      @Jonathan Dorian
+     </a>
+     Danke für die Infos! Ich werde mich am Wochenende damit spielen.
+    </span>
+   </p>
+   <p>
+    <span>
+     Heute hatte ich zwei komische Ausfälle bei denen das Internet auf allen Geräten im Haus nur bedingt funktioniert hat. Seiten wie Discord, Reddit, uvm. waren unerreichbar, während z.B. Facebook oder Google problemlos funktioniert haben. MS Teams und mein FireStick waren auch nicht verwendbar. In beiden Fällen musste ich meinen Netzwerkschrank vom Strom nehmen. Könnte der Switch das Problem sein?
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-17T13:33:13Z" title="2023-11-17 13:33 ">
+   November 17, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55973" data-ipsquote-contentid="9266" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1700081902" data-ipsquote-userid="98224" data-ipsquote-username="LatenzLeopold">
+    <div class="ipsQuote_citation">
+     Am 15.11.2023 um 21:58 schrieb LatenzLeopold:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Könnte der Switch das Problem sein?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ja, das ist durchaus möglich. Ein Switch ist ein Netzwerkgerät, das Datenpakete zwischen verschiedenen Netzwerkgeräten weiterleitet. Wenn der Switch nicht richtig funktioniert, kann es zu Problemen mit der Internetverbindung kommen.
+   </p>
+   <p>
+   </p>
+   <p>
+    In deinem Fall ist es auffällig, dass nur bestimmte Websites und Anwendungen nicht funktioniert haben. Das könnte darauf hindeuten, dass der Switch bestimmte IP-Adressen oder Domänen nicht richtig weiterleitet.
+   </p>
+   <p>
+   </p>
+   <p>
+    Um dies zu überprüfen, könntest du versuchen, den Switch auf die Werkseinstellungen zurückzusetzen. Die entsprechenden Anweisungen dazu findest du in der Bedienungsanleitung deines Switches.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hier sind einige weitere Dinge, die du überprüfen kannst, um das Problem zu lokalisieren:
+   </p>
+   <p>
+    - Überprüfe die Einstellungen deiner Router-Firewall. Es ist möglich, dass die Firewall bestimmte Websites oder Anwendungen blockiert.
+   </p>
+   <p>
+    - Überprüfe die Netzwerkkabel. Es könnte sein, dass ein Kabel beschädigt ist oder nicht richtig angeschlossen wurde.
+   </p>
+   <p>
+    - Überprüfe die Einstellungen deiner Geräte. Es ist möglich, dass die Geräte bestimmte Einstellungen haben, die die Internetverbindung beeinträchtigen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Liebe Grüße, JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   LatenzLeopold
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-17T21:18:32Z" title="2023-11-17 21:18 ">
+   November 17, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
+     @Jonathan Dorian
+    </a>
+    Mir ist nach langer Suche folgendes aufgefallen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Meine Outdoor Box hat die IP 0.1
+   </p>
+   <p>
+    Meine Indoor Box hat die IP 1.1
+   </p>
+   <p>
+    Mein Switch hat die IP 1.165
+   </p>
+   <p>
+    Mein PC hat die IP 0.12
+   </p>
+   <p>
+    Mein Access Point die IP 0.17
+   </p>
+   <p>
+    Mein Handy die IP 1.132
+   </p>
+   <p>
+   </p>
+   <p>
+    Von meinem PC (0.12) kann ich NUR das Webinterface der Outdoor Box (0.1) erreichen. Die Indoor Box (1.1) ist unerreichbar.
+   </p>
+   <p>
+    Von meinem Handy (1.132) kann ich NUR das Webinterface der Indoor Box (1.1) erreichen, wobei das Handy mit dem AP (0.17) verbunden ist. Die Outdoor Box (0.1) ist unerreichbar. Mein Switch (1.165) ist ebenfalls nur vom Handy aus erreichbar.
+   </p>
+   <p>
+   </p>
+   <p>
+    Was geht hier ab?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   LatenzLeopold
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-18T09:44:58Z" title="2023-11-18 09:44 ">
+   November 18, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe den DHCP in der Outdoor Box deaktiviert, alle Geräte hatten nach Reboot eine 192.168.1.X IP, aber die meisten Webseiten waren unerreichbar. Google, Wikipedia und YouTube haben funktioniert, GitHub und Magenta Community z.B. waren unerreichbar. Ich habe den DHCP wieder aktiviert und das Spiel ist jetzt invertiert. Meine LAN Geräte haben 1.X IPs und meine WiFi Geräte haben 0.X IPs.
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Outdoor Box ist im Bridgemodus, ich habe das im Interface gecheckt. Ich habe bei Megenta angerufen und die meinten ich soll eine Business APN einstellen. Das Problem ist, ich komme nicht in das Indoor Interface. Ich logge mich ein, sehe das Dashboard für eine halbe Sekunde und lande wieder auf der Loginseite. Bin am verweifeln.
+   </p>
+   <p>
+   </p>
+   <p>
+    PS: Der Magenta Verkäufer meinte, 5G läuft bei mir super. Der Techniker meinte, das es bei mir kein 5G gibt und LTE auch ausgelastet ist. Er war über meine Geschwindigkeiten verwundert.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-11-18T09:47:28Z" title="2023-11-18 09:47 ">
+      November 18, 2023
+     </time>
+     von LatenzLeopold
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   LatenzLeopold
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-18T10:20:21Z" title="2023-11-18 10:20 ">
+   November 18, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe die Indoor Box resettet. Jetzt haben ALLE Geräte im Netzwerk eine 0.X IP und die ODU als Gateway - mit Ausnahme der IDU natürlich. Jetzt meine Frage - wie kann ich auf das Web Interface der IDU zugreifen? 192.168.1.1 gibt mir einen Timeout, weil ich ja im 0.X Netz bin. Und ist es normal, dass das Netzwerk die ODU als Gateway nimmt? Brauche ich die IDU überhaupt?
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-11-18T10:42:03Z" title="2023-11-18 10:42 ">
+      November 18, 2023
+     </time>
+     von LatenzLeopold
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   LatenzLeopold
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-18T10:57:43Z" title="2023-11-18 10:57 ">
+   November 18, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ok, bitte den gesamten Thread löschen.
+   </p>
+   <p>
+    Anscheinend fehlt mir doch eine erstaunliche Anzahl an Gehirnzellen.
+   </p>
+   <p>
+    Ich habe nochmal die Anleitung gelesen und siehe da, die ODU gehört in den WAN Port der IDU. Das war der Fehler.
+   </p>
+   <p>
+    Gute Nacht, ich gehe mich eingraben.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   LatenzLeopold
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-18T11:24:45Z" title="2023-11-18 11:24 ">
+   November 18, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es funktioniert nun alles, bis auf das Webinterface der Indoor unit.
+   </p>
+   <p>
+    Ich logge mich ein, sehe das Dashboard für eine Sekunde und werde wieder ausgeloggt. Problem besteht auch nach Neustart und Reset.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-21T13:52:02Z" title="2023-11-21 13:52 ">
+   November 21, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55993" data-ipsquote-contentid="9266" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1700306685" data-ipsquote-userid="98224" data-ipsquote-username="LatenzLeopold">
+    <div class="ipsQuote_citation">
+     Am 18.11.2023 um 12:24 schrieb LatenzLeopold:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich logge mich ein, sehe das Dashboard für eine Sekunde und werde wieder ausgeloggt.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Nutze einmal einen anderen Browser und lösche vorher den Cache deinen Browsers (Strg+Shift+Entf). Habe gelesen, dass es mit anderen Browsern funktioniert.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55992" data-ipsquote-contentid="9266" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1700305063" data-ipsquote-userid="98224" data-ipsquote-username="LatenzLeopold">
+    <div class="ipsQuote_citation">
+     Am 18.11.2023 um 11:57 schrieb LatenzLeopold:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Gute Nacht, ich gehe mich eingraben.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    LOL
+    <span class="ipsEmoji">
+     😂
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Liebe Grüße, JD.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

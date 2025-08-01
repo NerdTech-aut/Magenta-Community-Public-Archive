@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   B315s Homenet Router Zugriff von Außen, Portweiterleitung
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   B315s Homenet Router Zugriff von Außen, Portweiterleitung
+  </h1>
+  <span class="author">
+   Fa. G.
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-01-17T23:00:00Z" title="2016-01-17 23:00 ">
+   Januar 17, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Forumsmitglieder!
+   </p>
+   <p>
+    Ich ärgere mich nun auch seit einigen Tagen mit dem B315s und vor allem den miesen Einstellungsmöglichkeiten im Vergleich zur Original-FW. Mittlerweile habe ich sämtliche einschlägige Beiträge hier und in anderen Foren (zB LTE-Forum.at) durchstöbert, ohne eine Lösung für mein Problem zu finden. Hinter meinem neuen T-Mobile Router soll ein Raspberry pi am LAN hängen, über den ein VPN-Tunnel von einem anderen Raspi aufgebaut werden soll. Die VPN-Verbindung benötige zur Steuerung der Heizung und der Hausautomation in unserem Ferienhaus; dort steht übrigens auch ein Huawei-Router  (UMTS B863) mit Orignal-FW und unzähligen EInstellungsmöglichkeiten. Die VPN-Verbindung funktioniert seit Monaten ohne Probleme über die Fritzbox meines bisherigen (gekündigten) Providers.
+   </p>
+   <p>
+    Beim neuen B315s habe ich bei den Verbindungseinstellungen bereits auf "business.gprsinternet" umgestellt. Mein Raspi hat eine fixe IP erhalten (außerhalb des DHCP-Bereichs). Mit dem Raspi kann ich ins Internet, ich kann ihn im Heimnetz anpingen -alles funktioniert. Bei den Portweiterleitung habe ich den WAN-Port und LAN-Port 8088 angegeben und natürlich die LAN-IP-Adresse des Raspi eingefügt; Beim Protokoll habe ich alle Varianten durchprobiert (TCP, UDP, TCP/UDP). DDNS über No-ip ist auch eingerichtet und funktioniert.
+   </p>
+   <p>
+    Wenn ich über  ping.eu einen Port-Check mache, ist der Port 8088 immer geschlossen. Auch wenn ich den Port bei den Einstellungen ändere, ist ein Zugriff nicht möglich. Langsam zweifle ich, ob ich wirklich eine von außen erreichbare IP habe. In einem anderem Beitrag habe ich gelesen, dass man eine erreichbare t-mobile-IP daran erkennt, dass sie mit 78.***.***.*** beginnt. Kann das wer bestätigen? Meine IP beginnt manchmal mit 78.***, manchmal mit 213.***. Ist 213.***.***.*** auch eine von außen erreichbare IP?.
+   </p>
+   <p>
+    Findet jemand einen Fehler bei meinen Portweiterleitung-Einstellungen? Muss WAN-Port und LAN-Port wirklich immer ident sein? Oder hat jemand noch eine Idee, wo der Fehler liegen könnte? Ich bin mit meinem Latein am Ende...
+   </p>
+   <p>
+    Vielen Dank für Eure Hilfe!
+   </p>
+   <p>
+    Gerhard
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-01-18T23:00:00Z" title="2016-01-18 23:00 ">
+   Januar 18, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Die privaten IP Adressen erkennst du daran, dass sie in den folgenden Bereichen liegen:
+   </p>
+   <ul>
+    <li>
+     <p>
+      10.0.0.0 bis 10.255.255.255
+     </p>
+    </li>
+    <li>
+     <p>
+      172.16.0.0 bis 172.31.255.255
+     </p>
+    </li>
+    <li>
+     <p>
+      192.168.0.0 bis 192.168.255.255
+     </p>
+    </li>
+   </ul>
+   <p>
+    Läuft auf deinem Raspi auf Port 8088 überhaupt etwas? Oder läuft das was du ansprechen möchtest vielleicht auf einem anderen Port?
+   </p>
+   <p>
+    Aufpassen, denn LAN und WAN Port sind dann nicht ident, wenn auf deinem Raspi eine Anwendung auf dem Port 8080 läuft und von außen die Anwendung aber über den Port 8088 ansprechbar sein sollte.
+   </p>
+   <p>
+    Du willst das ganze ohne VPN zugänglich machen, sehe ich das richtig?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fa. G.
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-01-18T23:00:00Z" title="2016-01-18 23:00 ">
+   Januar 18, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Mario!
+   </p>
+   <p>
+    Vielen Dank! Du hast mich einen großen Schritt weitergebracht. Also: Ich habe auf meinem B315-s definitiv eine öffentliche IP; die mehrfache Aussage hier im Forum, eine öffentliche IP beginne mit 78.*** hat mich total verwirrt.
+   </p>
+   <p>
+    Die Portweiterleitung am B315-s funktioniert grundsätzlich. Ich habe eine LAN-Überwachungskamera angeschlossen, eine Portweiterleitung eingerichtet und kann von Außen (über meinen noch vorhandenen DSL-Anschluss) auf ide Kamera greifen.
+   </p>
+   <p>
+    Das Problem liegt also beim Raspi, der zukünftig als OpenVPN-Server agieren soll. Mein Raspi im Ferienhaus (dort hat habe ich leider keine öffentliche IP, sondern 10.***) baut derzeit einen VPN-Tunnel zu meiner DSL-Fritzbox auf - funktioniert problemlos. Da der B315s keine VPN-Funktion hat, soll der Raspi hier als VPN-Server dienen. Ich habe mir auch überlegt, die Fritzbox zu behalten und hinter das B315-s-Modem zu schalten. Bei dieser Konstellation scheint aber das VPN bei der Fritzbox nicht mehr zu funktionieren...
+   </p>
+   <p>
+    Nochmals vielen Dank!
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-01-19T23:00:00Z" title="2016-01-19 23:00 ">
+   Januar 19, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+    <br/>
+    gerne doch.
+   </p>
+   <p>
+    Dein Problem klingt ziemlich kompliziert...
+   </p>
+   <p>
+    Wenn ich das richtig verstehe, willst du einen Port von der T-Mobile Box auf den Raspi weiterleiten (Der der als VPN Server fungieren soll)?
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

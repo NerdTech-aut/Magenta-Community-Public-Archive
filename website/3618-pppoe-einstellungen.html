@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   PPPoE-Einstellungen
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   PPPoE-Einstellungen
+  </h1>
+  <span class="author">
+   Max M.
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-27T12:06:29Z" title="2017-02-27 12:06 ">
+   Februar 27, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo allerseits,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich suche Informationen bzgl. einer funktionierenden PPPoE-Einstellung auf meiner T-Mobile HomeNet Box (Huawei E5170s-22). Vorweg: die technische Serviceline hat mir nicht bis ans Ziel weiterhelfen können. Mein Ziel ist es, eine funktionierende Ethernet-Verbindung aufzubauen.
+   </p>
+   <div>
+    <div>
+     <div>
+      <div>
+       <div>
+        <div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <p>
+    Die bisher gesetzten Einstellungen sind folgende:
+   </p>
+   <p>
+    APN:
+    <strong>
+     business.gprsinternet
+    </strong>
+    mit den Zugangsdaten
+    <strong>
+     t-mobile
+    </strong>
+    und
+    <strong>
+     tm
+    </strong>
+    als Passwort.
+   </p>
+   <p>
+    In den Ethernet-Einstellungen habe ich den Verbindungsmodus zur Zeit auf
+    <strong>
+     Automatisch
+    </strong>
+    (habe PPPoE und PPPoE + dynamische IP auch schon versucht). Einwahlmodus auf Automatisch, MTU-Size standardmäßig (1500). User und Passwort sind hier dieselben wie bei den APN-Einstellungen.
+   </p>
+   <p>
+    Mit diesen Einstellungen funktioniert die Verbindung leider nicht. Der Ethernet-Verbindungsstatus steht nach wie vor auf
+    <strong>
+     Unterbrochen
+    </strong>
+    . Kann mir jemand weiterhelfen? Habe ich was übersehen bzw. fehlt noch was? In den bisherigen Beiträgen zu diesem Thema im T-Mobile-Forum wurde ich leider nicht fündig.
+   </p>
+   <p>
+   </p>
+   <p>
+    Vorab Danke und Grüße,
+   </p>
+   <p>
+    Max
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-27T14:35:49Z" title="2017-02-27 14:35 ">
+   Februar 27, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi Max,
+   </p>
+   <p>
+    was genau ist denn dein Ziel dieser Konfiguration wenn ich mal so fragen darf? bzw. wozu dient die Konfiguration in deinem Netzwerk/was möchtest du damit erreichen?
+   </p>
+   <p>
+    wäre echt spitze genauere Infos zu bekommen, dann wissen wir auch wo wir genau ansetzen müssen um gemeinsam eine Lösung zu finden.
+   </p>
+   <p>
+    LGFW
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Max M.
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-27T15:21:26Z" title="2017-02-27 15:21 ">
+   Februar 27, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Fichtlwichtl,
+   </p>
+   <p>
+    Mein Ziel ist es, einen Switch anzuschließen, um nicht alle Geräte über WLAN ins Netz hängen zu müssen. Ursprünglich nahm ich an, dass das Out-of-the-box möglich wäre, dem war aber nicht so. Nach meiner Recherche bin ich darauf gekommen, dass ich wahrscheinlich einen PPPoE-Zugang benötige. Ich hoffe, mein Anliegen ist jetzt verständlich
+    <img alt=":$" data-emoticon="" height="20" src="images/emoticons/tma_blushing-o.png" srcset="images/emoticons/tma_blushing-o@2x.png 2x" title=":$" width="20"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Grüße,
+   </p>
+   <p>
+    Max
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-01T07:46:51Z" title="2017-03-01 07:46 ">
+   März 1, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Max,
+    <br/>
+    du willst nach deiner HomeNet Box einen Switch dahinterstellen, damit du daran andere Geräte anschließen kannst? Sehe ich das richtig?
+   </p>
+   <p>
+    Wenn ja, dann musst du einfach nur den Switch an den Ethernet Port anhängen. Mit PPPoE bist du hier dann ganz falsch, weil das nichts mit dem internen Zusammenschluss von Geräte zu tun hat.
+   </p>
+   <p>
+    Lg
+    <br/>
+    Mario
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Max M.
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-01T10:11:52Z" title="2017-03-01 10:11 ">
+   März 1, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Mario,
+   </p>
+   <p>
+    Genau, das siehst du richtig.
+   </p>
+   <p>
+    Einfach nur den Switch anzuhängen funktioniert nicht. Wie oben erläutert, gibts da zur Zeit keinen Datenverkehr.
+   </p>
+   <p>
+    PPPoE hat sehr wohl mit dem internen Datenverkehr zu tun. Ich bin so frei, Wikipedia zu diesem Thema zu zitieren: "
+    <b style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);">
+     PPP over Ethernet
+    </b>
+    <span style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+     <span>
+     </span>
+     (
+    </span>
+    <b style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);">
+     PPPoE
+    </b>
+    <span style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+     ) ist die Verwendung des
+     <span>
+     </span>
+    </span>
+    <a href="https://de.wikipedia.org/wiki/Netzwerkprotokoll" rel="external nofollow" style="text-decoration:none;color:rgb(11,0,128);background:rgb(255,255,255) none;font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;" title="Netzwerkprotokoll">
+     Netzwerkprotokolls
+    </a>
+    <span style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+     <span>
+     </span>
+    </span>
+    <a href="https://de.wikipedia.org/wiki/Point-to-Point_Protocol" rel="external nofollow" style="text-decoration:none;color:rgb(11,0,128);background:rgb(255,255,255) none;font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;" title="Point-to-Point Protocol">
+     Point-to-Point Protocol
+    </a>
+    <span style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+     <span>
+     </span>
+     (PPP) über eine
+     <span>
+     </span>
+    </span>
+    <a href="https://de.wikipedia.org/wiki/Ethernet" rel="external nofollow" style="text-decoration:none;color:rgb(11,0,128);background:rgb(255,255,255) none;font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;" title="Ethernet">
+     Ethernet
+    </a>
+    <span style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+     -Verbindung. Das Protokoll definiert zwei Phasen: PPPoE Discovery und PPP Session. In der ersten Phase
+     <span>
+     </span>
+    </span>
+    <b style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);">
+     <a href="https://de.wikipedia.org/wiki/PPP_over_Ethernet#PPPoED" rel="external nofollow" style="text-decoration:none;color:rgb(11,0,128);background:none;">
+      PPPoE Discovery
+     </a>
+    </b>
+    <span style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+     <span>
+     </span>
+     wird die MAC-Adresse eines
+     <span>
+     </span>
+    </span>
+    <a href="https://de.wikipedia.org/wiki/DSL-AC" rel="external nofollow" style="text-decoration:none;color:rgb(11,0,128);background:rgb(255,255,255) none;font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;" title="DSL-AC">
+     Access Concentrators
+    </a>
+    <span style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+     <span>
+     </span>
+     ermittelt. Danach werden in der zweiten Phase
+     <span>
+     </span>
+    </span>
+    <b style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);">
+     PPP Session
+    </b>
+    <span style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+     <span>
+     </span>
+     Daten nach PPP ausgetauscht."
+    </span>
+   </p>
+   <p>
+    <span style="color:rgb(37,37,37);font-family:sans-serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+     LG, Max
+    </span>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="8 yr" datetime="2017-03-01T10:12:52Z" title="2017-03-01 10:12 ">
+      März 1, 2017
+     </time>
+     von Max M.
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-01T12:06:40Z" title="2017-03-01 12:06 ">
+   März 1, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Max,
+    <br/>
+    Wikipedia gibt die schon die richtigen Informationen, nur sollte man diese auch richtig interpretieren und verstehen.
+   </p>
+   <p>
+    Das is leider nur ein Teil davon - siehe:
+    <a href="http://www.searchnetworking.de/definition/PPPoE-Point-to-Point-Protocol-over-Ethernet" rel="external nofollow">
+     http://www.searchnetworking.de/definition/PPPoE-Point-to-Point-Protocol-over-Ethernet
+    </a>
+    <br>
+     Also generell ist das eine Einwahltechnik die von Providern verwendet wird, hat also in deinem Fall keine Notwendigkeit, bzw. wie schon gesagt ist der falsche Ansatz.
+    </br>
+   </p>
+   <p>
+    Du solltest vielleicht ganz wo anders ansetzen und zwar an der Konfiguration des Switches. Welche Switch hast du denn? Du hast die HomeNet Box, d.h das Stromkabel muss unten (neben dem Ethernetanschluss) angesteckt sein. Kannst du da mal einen anderen PC anschließen und schauen, ob dieser Internet hat, um auszuschließen, dass der Ethernetanschluss kaputt ist.
+   </p>
+   <p>
+    Wenn das funktioniert, dann musst du dir den Switch anschauen. Das kann nicht so schlimm sein, diesen zu konfigurieren - im besten Fall einfach alles auf automatisch. Also wie gesagt, die Box stellt die Verbindung zum Internet her und der Switch tut den Rest (und wählt sich nicht ein) sondern bezieht die Informationen vom Ethernet Anschluss.
+   </p>
+   <p>
+    Lg
+    <br>
+     Mario
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Max M.
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-02T09:48:10Z" title="2017-03-02 09:48 ">
+   März 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Mario,
+   </p>
+   <p>
+    danke für deine Aufklärung. In dem Fall war meine Annahme falsch, da wurde ich durch andere Foren wohl fehlgeleitet.
+   </p>
+   <p>
+    Ich hab einen neuen, unkonfigurierbaren D-Link-Switch verwendet. Da kann ich nicht viel machen. Ich hab den Router auch direkt mit meinem Rechner verbunden, da gabs auch keinen Link. Strom war durchgehend angeschlossen. Das heißt, augenscheinlich muss echt der Port das Problem sein?
+   </p>
+   <p>
+    LG und danke, Max
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-02T09:53:40Z" title="2017-03-02 09:53 ">
+   März 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="21235" data-ipsquote-contentid="3618" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1488448090" data-ipsquote-userid="68697" data-ipsquote-username="Max M.">
+    <div class="ipsQuote_citation">
+     vor 4 Minuten schrieb Max M.:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo Mario,
+     </p>
+     <p>
+      danke für deine Aufklärung. In dem Fall war meine Annahme falsch, da wurde ich durch andere Foren wohl fehlgeleitet.
+     </p>
+     <p>
+      Ich hab einen neuen, unkonfigurierbaren D-Link-Switch verwendet. Da kann ich nicht viel machen. Ich hab den Router auch direkt mit meinem Rechner verbunden, da gabs auch keinen Link. Strom war durchgehend angeschlossen. Das heißt, augenscheinlich muss echt der Port das Problem sein?
+     </p>
+     <p>
+      LG und danke, Max
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo Max,
+    <br>
+     und der Stromanschluss war am unteren Stecker, sprich neben dem Ethernetanschluss angesteckt? Ich frage nur zur Sicherheit, weil sonst geht das auch nicht
+     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+    </br>
+   </p>
+   <p>
+    Lg
+    <br>
+     Mario
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Max M.
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-02T09:56:10Z" title="2017-03-02 09:56 ">
+   März 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Mario,
+   </p>
+   <p>
+    ja genau, der Stromanschluss steckt im unteren Stecker, neben dem Ethernetport und der blauen LED
+    <img alt=":$" data-emoticon="" height="20" src="images/emoticons/tma_blushing-o.png" srcset="images/emoticons/tma_blushing-o@2x.png 2x" title=":$" width="20"/>
+   </p>
+   <p>
+    LG, Max
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-02T09:58:52Z" title="2017-03-02 09:58 ">
+   März 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Und am PC an dem du die Box direkt angeschlossen hast, hast du in den LAN Einstellungen alle auf automatisch gehabt? Und die LAN Verbindung auch aktiviert? Und WLAN (falls du das auch hast) abgedreht?
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+   <p>
+    LG
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Max M.
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-02T10:00:08Z" title="2017-03-02 10:00 ">
+   März 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja, alles genauso wie du sagst.
+   </p>
+   <p>
+    LG, Max
+   </p>
+   <p>
+   </p>
+   <p>
+    EDIT: Neben dem Ethernetport am Router ist auch eine LED, die ist durchgehend dunkel.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="8 yr" datetime="2017-03-02T10:02:07Z" title="2017-03-02 10:02 ">
+      März 2, 2017
+     </time>
+     von Max M.
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-02T10:01:19Z" title="2017-03-02 10:01 ">
+   März 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Okay, dann ist vielleicht wirklich der Ethernet Port deiner Box kaputt. Klingt zumindest sehr danach.
+   </p>
+   <p>
+    Ich wüsste auch nicht, dass man im Menü der Box irgendwas einstellen könnte - kann ich dir aber ggf. noch nachschauen am Nachmittag.
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-02T10:07:06Z" title="2017-03-02 10:07 ">
+   März 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="21239" data-ipsquote-contentid="3618" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1488448808" data-ipsquote-userid="68697" data-ipsquote-username="Max M.">
+    <div class="ipsQuote_citation">
+     vor 6 Minuten schrieb Max M.:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ja, alles genauso wie du sagst.
+     </p>
+     <p>
+      LG, Max
+     </p>
+     <p>
+     </p>
+     <p>
+      EDIT: Neben dem Ethernetport am Router ist auch eine LED, die ist durchgehend dunkel.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Die LED sollte leuchten sobald du eine Aktivität zu verzeichnen hast.
+   </p>
+   <p>
+    Was sagt denn die Ethernet Verbindung am Computer? Sagt er LAN Kabel gar nicht erst angeschlossen? Oder nur nicht erkanntes Netzwerk?
+   </p>
+   <p>
+    Lg
+    <br>
+     Mario
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Max M.
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-02T10:11:41Z" title="2017-03-02 10:11 ">
+   März 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hmm, das wäre echt doof... leider kenne ich niemanden, der auch so eine Box hat, um das testen zu können. Das wäre echt nett von dir, ich bezweifle aber auch, dass man da was machen kann. Ich hänge mal Screenshots von meinem Interface an, vllt hilft das weiter.
+   </p>
+   <p>
+    Danke, Max
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/box1.JPG.d8f09358768184311a2492e80f3bc9ce.JPG">
+     <img alt="box1.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="188" src="images/uploads/box1.thumb.JPG.b7adb0da0e9adfd121651cb2f2538277.JPG"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/box2.JPG.fa72b1aa3f9342b7c08ac2eb66659352.JPG">
+     <img alt="box2.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="189" src="images/uploads/box2.thumb.JPG.5dbf3826d9ef1a10ef03266cfc8d01a0.JPG"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-02T10:15:10Z" title="2017-03-02 10:15 ">
+   März 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="21242" data-ipsquote-contentid="3618" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1488449501" data-ipsquote-userid="68697" data-ipsquote-username="Max M.">
+    <div class="ipsQuote_citation">
+     vor 2 Minuten schrieb Max M.:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hmm, das wäre echt doof... leider kenne ich niemanden, der auch so eine Box hat, um das testen zu können. Das wäre echt nett von dir, ich bezweifle aber auch, dass man da was machen kann. Ich hänge mal Screenshots von meinem Interface an, vllt hilft das weiter.
+     </p>
+     <p>
+      Danke, Max
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileid="188" href="images/uploads/box1.JPG.d8f09358768184311a2492e80f3bc9ce.JPG" rel="external nofollow">
+       <img alt="box1.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="188" src="images/uploads/box1.thumb.JPG.b7adb0da0e9adfd121651cb2f2538277.JPG"/>
+      </a>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileid="189" href="images/uploads/box2.JPG.fa72b1aa3f9342b7c08ac2eb66659352.JPG" rel="external nofollow">
+       <img alt="box2.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="189" src="images/uploads/box2.thumb.JPG.5dbf3826d9ef1a10ef03266cfc8d01a0.JPG"/>
+      </a>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Passt schaue ich mir am Nachmittag an und ich melde mich dann am Abend. Schaue mal wie das bei mir aussieht.
+   </p>
+   <p>
+    Und wie gesagt, die eine Frage noch, was sagt dein PC? LAN Kabel gar nicht erst angeschlossen, oder sagt er Kabel schon angeschlossen, aber keine Verbindung?
+   </p>
+   <p>
+    Lg
+    <br>
+     Mario
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Max M.
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-02T10:22:15Z" title="2017-03-02 10:22 ">
+   März 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Whow... ich habe das jetzt alles nochmal wie besprochen rekonstruiert, jetzt läufts! Ich hatte komischerweise eine statische IP ohne Gateway eingetragen, die hab ich entfernt und auf DHCP gestellt, jetzt funktioniert alles wie gewünscht. Mein Rechner bekommt jetzt Netz über das Kabel, jetzt werde ich das mit dem Switch nochmal testen. Ich weiß nicht, wieso das bisher nicht getan hat, ich hab das auf jeden Fall schon mit dynamischer IP getestet.
+   </p>
+   <p>
+    Auf jeden Fall klappts jetzt, vielen Dank!
+    <img alt=":$" data-emoticon="" height="20" src="images/emoticons/tma_blushing-o.png" srcset="images/emoticons/tma_blushing-o@2x.png 2x" title=":$" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-02T10:25:27Z" title="2017-03-02 10:25 ">
+   März 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="21244" data-ipsquote-contentid="3618" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1488450135" data-ipsquote-userid="68697" data-ipsquote-username="Max M.">
+    <div class="ipsQuote_citation">
+     vor 2 Minuten schrieb Max M.:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Whow... ich habe das jetzt alles nochmal wie besprochen rekonstruiert, jetzt läufts! Ich hatte komischerweise eine statische IP ohne Gateway eingetragen, die hab ich entfernt und auf DHCP gestellt, jetzt funktioniert alles wie gewünscht. Mein Rechner bekommt jetzt Netz über das Kabel, jetzt werde ich das mit dem Switch nochmal testen. Ich weiß nicht, wieso das bisher nicht getan hat, ich hab das auf jeden Fall schon mit dynamischer IP getestet.
+     </p>
+     <p>
+      Auf jeden Fall klappts jetzt, vielen Dank!
+      <img alt=":$" data-emoticon="" height="20" src="images/emoticons/tma_blushing-o.png" srcset="images/emoticons/tma_blushing-o@2x.png 2x" title=":$" width="20"/>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Perfekt
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+    Super, dass wir es doch noch hinbekommen haben - oftmals muss man einfach nur nochmal drüber schauen - manchmal übersieht man auch Kleinigkeiten.
+   </p>
+   <p>
+    Lg
+    <br>
+     Mario
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Max M.
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-02T10:40:16Z" title="2017-03-02 10:40 ">
+   März 2, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das stimmt wohl
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+    Der Switch funktioniert! Vielen Dank nochmal!
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="8 yr" datetime="2017-03-02T11:19:09Z" title="2017-03-02 11:19 ">
+      März 2, 2017
+     </time>
+     von Max M.
+    </strong>
+   </span>
+  </div>
+  <hr/>
+ </body>
+</html>

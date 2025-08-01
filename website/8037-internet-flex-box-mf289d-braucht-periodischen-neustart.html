@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Internet Flex Box MF289D braucht periodischen Neustart
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Internet Flex Box MF289D braucht periodischen Neustart
+  </h1>
+  <span class="author">
+   Martin Dallinger
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-09-04T17:24:57Z" title="2022-09-04 17:24 ">
+   September 4, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nach einigen Stunden Betrieb blinkt die oberste LED des Routers nur noch, das Management-Portal zeigt "Eingeschränkter Service" und bei Signalstärke "--" wie auch bei LTE-Frequenzband und WAN-IP. Der Router wurde erst gestern in Betrieb genommen und ist somit recht neu.
+   </p>
+   <p>
+   </p>
+   <p>
+    Nach einem Neustart funktioniert die Verbindung wieder für ein paar (ca. 12) Stunden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das Log-File konnte ich tatsächlich zum Zeitpunkt des "Disconnects" ergattern, wobei ab Zeile 2002 die erste Failed-Message auftritt und davor vom Zeitpunkt her tatsächlich alles funktionierte:
+    <a href="https://gist.github.com/S0urC10ud/cde717fce875583f16f39293b549a8f6" rel="external nofollow">
+     https://gist.github.com/S0urC10ud/cde717fce875583f16f39293b549a8f6
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Sind Gründe für solches Fehlverhalten bekannt?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-09-05T13:29:09Z" title="2022-09-05 13:29 ">
+   September 5, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94177-martin-dallinger/?do=hovercard" data-mentionid="94177" href="https://community.magenta.at/profile/94177-martin-dallinger/" rel="">
+     @Martin Dallinger
+    </a>
+    ,
+   </p>
+   <p>
+   </p>
+   <p>
+    am besten schließt du die Ursache nach für nach aus. Hast du das Modem schon mal an einer anderen Stelle platziert? Stecke es auch mal an eine andere Stomsteckdose an - oftmals können Stromschwankungen ein Grund sein. Hast du auch schon mal getestet, ob ein anderer APN Abhilfe schafft? Schau mal
+    <a href="https://www.magenta.at/faq/entry/~technische-anfrage~smartphone~funktionen%26dienste/~Internet_APN~master" rel="external nofollow">
+     hier
+    </a>
+    .
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Martin Dallinger
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-09-09T09:14:04Z" title="2022-09-09 09:14 ">
+   September 9, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="48716" data-ipsquote-contentid="8037" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1662384549" data-ipsquote-userid="77318" data-ipsquote-username="Jonathan Dorian">
+    <div class="ipsQuote_citation">
+     Am 5.9.2022 um 15:29 schrieb Jonathan Dorian:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94177-martin-dallinger/?do=hovercard" data-mentionid="94177" href="https://community.magenta.at/profile/94177-martin-dallinger/" rel="">
+       @Martin Dallinger
+      </a>
+      ,
+     </p>
+     <p>
+     </p>
+     <p>
+      am besten schließt du die Ursache nach für nach aus. Hast du das Modem schon mal an einer anderen Stelle platziert? Stecke es auch mal an eine andere Stomsteckdose an - oftmals können Stromschwankungen ein Grund sein. Hast du auch schon mal getestet, ob ein anderer APN Abhilfe schafft? Schau mal
+      <a href="https://www.magenta.at/faq/entry/~technische-anfrage~smartphone~funktionen%26dienste/~Internet_APN~master" rel="external nofollow">
+       hier
+      </a>
+      .
+     </p>
+     <p>
+     </p>
+     <p>
+      LG JD.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Folgendes hab' ich probiert:
+    <br/>
+    - Andere Steckdose/anderer Stromkreis: Kein Erfolg, scheint auch nicht das Problem zu sein, da das Gerät lokal immer erreichbar ist
+    <br/>
+    - Andere Stelle: Kein Erfolg - grundsätzlich bekomme ich bis auf die Ausfälle überall eine stabile 4G-Verbindung zusammen
+    <br/>
+    - Andere APN: Ich bin quasi zur business.gprsinternet-APN gezwungen, da ich eine eigene Public-IPv4-Adresse für meine eigenen Services mit DynDNS benötige
+    <br>
+     <br>
+      Gibt es ansonsten irgendwelche Möglichkeiten herauszufinden, warum das Gerät nicht zuverlässig funktioniert?
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-09-13T06:23:21Z" title="2022-09-13 06:23 ">
+   September 13, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94177-martin-dallinger/?do=hovercard" data-mentionid="94177" href="https://community.magenta.at/profile/94177-martin-dallinger/" rel="">
+     @Martin Dallinger
+    </a>
+    ,
+   </p>
+   <p>
+   </p>
+   <p>
+    hmm.....es könnte durchaus auch am Modem selbst liegen oder an der SIM Karte. Eine neue SIM Karte bekommst du kostenfrei in einem unserer Magenta Shops.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   DanielPoschinger
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-10-07T21:27:19Z" title="2022-10-07 21:27 ">
+   Oktober 7, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe derzeit genau das gleiche Problem. Martin, hat eine neue SIM-Karte dein Problem gelöst oder hast du etwas anderes rausgefunden? Bin für jede Hilfe dankbar.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Martin Dallinger
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-12-20T20:49:08Z" title="2022-12-20 20:49 ">
+   Dezember 20, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49101" data-ipsquote-contentid="8037" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1665178039" data-ipsquote-userid="94492" data-ipsquote-username="DanielPoschinger">
+    <div class="ipsQuote_citation">
+     Am 7.10.2022 um 23:27 schrieb DanielPoschinger:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich habe derzeit genau das gleiche Problem. Martin, hat eine neue SIM-Karte dein Problem gelöst oder hast du etwas anderes rausgefunden? Bin für jede Hilfe dankbar.
+     </p>
+     <p>
+     </p>
+     <p>
+      LG.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Habe das Gerät inzwischen 2x zur Reparatur einschicken lassen, ist jeweils mit der Meldung "Softwareupdate" an mich retourniert worden. Der Fehler wurde dabei aber leider nicht behoben - ein Support-Mitarbeiter von Magenta meinte telefonisch darauf, dass manche Kunden ihr Gerät 3+ mal einschicken müssen. Aktuell habe ich mir somit einfach einen (Achtung, sowas gibt es bei Magenta scheinbar selten:) normalen, funktionierenden Router im Internet bestellt und überlege deshalb zukünftig einen anderen Anbieter zu wählen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ein anderer Ansatz wäre, der mir ebenfalls von einem Support-Mitarbeiter geraten wurde, das Gerät so oft einzuschicken, bis es endlich möglicherweise vollkommen getauscht wird, doch das scheint mir ein exzessiv nerviger Prozess zu sein.
+   </p>
+   <p>
+   </p>
+   <p>
+    Zur SIM-Karte: Habe diese mit zwei verschiedenen neuen Geräten getestet, funktioniert ohne Verbindungsabbrüche...
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2022-12-20T20:51:32Z" title="2022-12-20 20:51 ">
+      Dezember 20, 2022
+     </time>
+     von Martin Dallinger
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   DanielPoschinger
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-12-20T21:08:57Z" title="2022-12-20 21:08 ">
+   Dezember 20, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="50287" data-ipsquote-contentid="8037" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1671569348" data-ipsquote-userid="94177" data-ipsquote-username="Martin Dallinger">
+    <div class="ipsQuote_citation">
+     vor 15 Minuten schrieb Martin Dallinger:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Habe das Gerät inzwischen 2x zur Reparatur einschicken lassen, ist jeweils mit der Meldung "Softwareupdate" an mich retourniert worden. Der Fehler wurde dabei aber leider nicht behoben - ein Support-Mitarbeiter von Magenta meinte telefonisch darauf, dass manche Kunden ihr Gerät 3+ mal einschicken müssen. Aktuell habe ich mir somit einfach einen (Achtung, sowas gibt es bei Magenta scheinbar selten:) normalen, funktionierenden Router im Internet bestellt und überlege deshalb zukünftig einen anderen Anbieter zu wählen.
+     </p>
+     <p>
+     </p>
+     <p>
+      Ein anderer Ansatz wäre, der mir ebenfalls von einem Support-Mitarbeiter geraten wurde, das Gerät so oft einzuschicken, bis es endlich möglicherweise vollkommen getauscht wird, doch das scheint mir ein exzessiv nerviger Prozess zu sein.
+     </p>
+     <p>
+     </p>
+     <p>
+      Zur SIM-Karte: Habe diese mit zwei verschiedenen neuen Geräten getestet, funktioniert ohne Verbindungsabbrüche...
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Mein Gerät wurde auch eingeschickt, nach über 6 Wochen!! Hab ich es zurückerhalten ebenfalls mit einem „Softwareupdate“ danach hat es knapp eine Woche funktioniert und jetzt wieder das gleiche Problem. Mit dem Ersatzgerät, das ich beim Einschicken erhalten habe, ist übrigens in den 6 Wochen kein einziges Mal ein Problem aufgetreten.
+    <br>
+     Bin echt ziemlich genervt und enttäuscht und werde beim nächsten ‚einschicken‘ auf jeden Fall auf einen kompletten Austausch bestehen.
+    </br>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

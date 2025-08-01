@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Websites im Heimnetzwerk sperren?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Websites im Heimnetzwerk sperren?
+  </h1>
+  <span class="author">
+   SoraSora
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-08-31T17:24:47Z" title="2019-08-31 17:24 ">
+   August 31, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo!
+   </p>
+   <p>
+    Ich habe eine UPC ConnectBox, und möchte gerne eine Kindersicherung einrichten - gewisse Websites sollen auf manchen (nicht allen) Geräten im Heimnetzwerk gesperrt werden. Ich kenne mich leider relativ wenig mit dem Konfigurieren von Routern etc. aus, daher weiß ich nicht, wie ich das anstellen soll.
+   </p>
+   <p>
+    Ich habe gegoogelt, welche Möglichkeiten es gibt. Das Sinnvollste schien mir OpenDNS zu sein, allerdings kann ich die DNS am Router nicht ändern - scheinbar von UPC so gewollt aus Sicherheitsgründen.
+   </p>
+   <p>
+    Auch hier im Forum habe ich mich etwas umgesehen, ohne etwas zu finden, das mir weiterhilft.
+   </p>
+   <p>
+    Ich sehe, dass ich eine Möglichkeit für IP/Portfilterung habe, ist es das, was ich suche? Hier verstehe ich eben nicht ganz, was ich hier eingeben müsste. Ich nehme an, Protokoll ist TCP oder beide, die Quell-IP ist das Gerät, dessen Zugriff ich sperren möchte und Ziel ist die IP der zu sperrenden Seite? Oder umgekehrt? Und dann ist natürlich die Frage, woher ich die IP der zu sperrenden Seite bekomme, wie zB facebook. Meines Wissens nach haben doch gerade diese großen Seiten nicht eine einzige, sondern mehrere IPs? Sind die alle in einem Bereich? Und auch wichtig, würde dadurch auch der Zugriff auf die facebook-App gesperrt werden?
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hoffe, ich habe mein Problem verständlich gemacht und jemand hier kann weiterhelfen.
+   </p>
+   <p>
+    Vielen Dank im Voraus
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/ipfilter.png.ee8232589aea6fa54872096a18de94e6.png">
+     <img alt="ipfilter.png" class="ipsImage ipsImage_thumbnailed" data-fileid="1678" src="images/uploads/ipfilter.png.ee8232589aea6fa54872096a18de94e6.png"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Rand
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-09-02T13:54:39Z" title="2019-09-02 13:54 ">
+   September 2, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/79650-sorasora/?do=hovercard" data-mentionid="79650" href="https://community.magenta.at/profile/79650-sorasora/" rel="">
+     @SoraSora
+    </a>
+    ,
+   </p>
+   <p>
+   </p>
+   <p>
+    Ein Jugendschutz ist aktuell leider über die Internet Fiber Box nicht möglich.
+   </p>
+   <p>
+    Der IP und Port Filter ist da tatsächlich auch nur eine suboptimale Lösung. Wie du bereits festgehalten hast, greift dieser nur auf einzelne IP Adressen und z.B. nicht auf URLs. Bei Seiten die über mehrere IP Adressen erreichbar sind, muss somit jede einzelne über diesen Weg gefiltert werden. Wenn neue IP Adressen dazu kommen oder diese eventuell gewechselt werden, muss der Filter erneut eingerichtet werden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Mein Tipp wäre hier aktuell entweder eine eigene Firewall zu verwenden oder es direkt auf dem jeweiligen Endgerät entsprechend einzurichten (z.B. über ein Adimistratorprofil).
+   </p>
+   <p>
+   </p>
+   <p>
+    Rand
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

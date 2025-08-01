@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Fritz!Box 6850 5G - IPv6 Einstellungen
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Fritz!Box 6850 5G - IPv6 Einstellungen
+  </h1>
+  <span class="author">
+   gerdriese
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-12-10T12:34:52Z" title="2022-12-10 12:34 ">
+   Dezember 10, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hat schon jemand die korrekten Einstellungen für IPv4v6 (Duals Stack) auf der FritzBox 6850 / 5G gefunden? Egal was ich probiere, es funktioniert einfach nicht.
+   </p>
+   <p>
+    Die vielversprechendste Einstellung wäre die Native IPv4-Anbindung verwenden mit 3GP Release 8 - denn da bekommt das Modem sowohl IPv6 als auch IPv6 Adressen - aber dann geht im Netzwerk nix mehr - weder per ipv4 noch per IPv6...
+   </p>
+   <p>
+    IPv4 alleine funktioniert einwandfrei... aber wäre doch mal an der Zeit sich etwas mit IPv6 zu spielen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich möchte den Post allerdings noch etwas ergänzen: Natürlich könnte ich mich auch mit dem ZTE Modem und IPv6 "spielen". ABER hinter dem ZTE Modem hängt eine Firewall... D.h. leider fahre ich für IPv4 derzeit TrippleNAT und verzichte auf IPv6 komplett. Warum?
+   </p>
+   <p>
+   </p>
+   <p>
+    Ganz simpel: Ich hab testhalber eine virtuelle Linux Maschine aufgesetzt und diese direkt an den ZTE MC801A angeschlossen. Sie hat damit sofort eine IPv6 Adresse bekommen. Und der Rechner war aus dem Internet über IPv6 1:1 erreichbar... D.h. jedes Gerät am Netz wäre mit seiner öffentlichen IPv6 automatisch komplett und ohne Firewall im Internet exposed. (Schneller Test für die Linux mit Ping, SSH und HTTP).
+   </p>
+   <p>
+    Und die "Firewall" im ZTE spottet jeder Beschreibung. Sollte jemand wissen wie ich da Filter für eingehende IPv6 Pakete definieren kann wäre ich sehr dankbar... Anleitung hätte ich keine gefunden!
+   </p>
+   <p>
+   </p>
+   <p>
+    -&gt; Geräte, die am LAN oder WLAN hängen sind sind somit aus dem Internet auffindbar. (Ja das Scannen der IPv6 Bereiche dauert etwas länger als das der IPv4 - aber es ist nicht unmöglich) Es werden immer mehr Geräte, die am Netzwerk hängen... Smart Home lässt grüßen. (Fernseher, Heizungssteuerung, Netzwerkkameras,...) - und Hand aufs Herz - wer ändert wirklich alle Standardpasswörter?
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/ipv6_offen.png.daf2f28214472b88559f4da15a30e012.png">
+     <img alt="ipv6_offen.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4328" src="images/uploads/ipv6_offen.thumb.png.203279970c0461d17fce70ae02651026.png"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2022-12-10T15:55:38Z" title="2022-12-10 15:55 ">
+      Dezember 10, 2022
+     </time>
+     von gerdriese
+    </strong>
+    <br>
+     Bild ersetzt
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   gerdriese
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-12-17T18:12:54Z" title="2022-12-17 18:12 ">
+   Dezember 17, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nun funktioniert es bei mir endlich... Eigentlich haben die Einstellungen gepasst, aber naja... EDV halt... (Ewig Drohendes Versagen und Ende Der Vernunft...)
+   </p>
+   <p>
+    Bei Internet -&gt; Zugangsdaten -&gt; IPv6:
+   </p>
+   <p>
+    <img alt="image.png.3016c74a5003e01473dd94a5447b36c7.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4345" src="images/uploads/image.png.3016c74a5003e01473dd94a5447b36c7.png"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Heimnetz -&gt; Netzwerk -&gt; Netzwerkeinstellungen -&gt; IPv6 Einstellungen:
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4346" href="images/uploads/image.png.6459747231caff1870e1a6c8f5b6d8a0.png" rel="">
+     <img alt="image.thumb.png.4556d72fa1ab4cb27291852b524797ad.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4346" src="images/uploads/image.thumb.png.4556d72fa1ab4cb27291852b524797ad.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4347" href="images/uploads/image.png.9b2f629a44be0171a2af2194a8a1c711.png" rel="">
+     <img alt="image.thumb.png.bbbcba0b4d623604e5f19d5b74c1d062.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4347" src="images/uploads/image.thumb.png.bbbcba0b4d623604e5f19d5b74c1d062.png"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Sofern keine Freigaben geplant sind reicht es Nur DNS-Server zuweisen.
+   </p>
+   <p>
+    Freigaben sind dann über Internet -&gt; Freigaben -&gt; Portfreigaben möglich. Einfach ein Gerät für Freigaben hinzufügen und dann IPv6 entsprechend konfigurieren: (Hier darauf achten, dass die Interface ID am Gerät fix ist und mit der Freigabe übereinstimmt - im Zweifelsfall hier DHCPv6 verwenden - IA_PD und IA_NA)
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4349" href="images/uploads/image.png.9e800b79460bfe74d4b2ba0e3bfee9c7.png" rel="">
+     <img alt="image.thumb.png.ae5dc073cf9dbb88bd0805a3da4c1bdc.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4349" src="images/uploads/image.thumb.png.ae5dc073cf9dbb88bd0805a3da4c1bdc.png"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    <img alt="image.png.52eee729e4692045cd0bde2d1e2c2920.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4348" src="images/uploads/image.png.52eee729e4692045cd0bde2d1e2c2920.png"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    und wenn der Host nicht freigegeben ist:
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4350" href="images/uploads/image.png.dbb7e9743faeb703f91b63d2e2b3f725.png" rel="">
+     <img alt="image.thumb.png.b084b824dc2bf2877fda1755c469fbd9.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4350" src="images/uploads/image.thumb.png.b084b824dc2bf2877fda1755c469fbd9.png"/>
+    </a>
+   </p>
+   <p>
+    blockt die Fritz!box brav.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   paul1508
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-05-25T18:12:57Z" title="2023-05-25 18:12 ">
+   Mai 25, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ist die Anleitung noch aktuell und funktioniert die auch mit dem business.gprsinternet APN?
+   </p>
+   <p>
+   </p>
+   <p>
+    Bei mir steht bei denselben Einstellungen noch im Online-Monitor noch "Internet, IPv6 nicht verbunden"
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-05-26T13:28:23Z" title="2023-05-26 13:28 ">
+   Mai 26, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/97382-paul1508/?do=hovercard" data-mentionid="97382" href="https://community.magenta.at/profile/97382-paul1508/" rel="">
+     @paul1508
+    </a>
+    , willkommen in unserer Community.
+   </p>
+   <p>
+   </p>
+   <p>
+    Solltest du hier keine Antwort bekommen, frage mal bei unseren Techniker*innen unter 0676 200 7777 nach. Lass dich ggf. von einem Expert zu diesem Thema zurückrufen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Magentastische Grüße JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   pootch
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-25T18:25:55Z" title="2023-06-25 18:25 ">
+   Juni 25, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe auch Probleme mit dem Portsharing über Ipv6.
+   </p>
+   <p>
+    Vermutlich geschuldet am DS-Lite der Fritzbox 6660.
+   </p>
+   <p>
+    Nach außen hin scheint man eine ipv4 Adresse zu haben, die Fritzbox meldet aber eine IPv6 Adresse. Damit funktioniert das Portforwarding nicht über ipv5 bzw. Portsharing über ipv6.
+   </p>
+   <p>
+    Die oben gennante stettings habe ich probiert, leider ohne Erfolg. Den Punkt IPv6 Unterstützung gibts bei der Fritzbox Cable 6660 sowieso nicht. (Dual-Stack).
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich muss wohl hoffen dass mich der Support auf IPv4 only umstellt mit einer richtigen öffentlichen IP.
+   </p>
+   <p>
+   </p>
+   <p>
+    <a href="https://schroederdennis.de/tutorial-howto/ds-lite-ipv6-tunnel-port-forwarding-nat-wireguard-vpn/" rel="external nofollow">
+     https://schroederdennis.de/tutorial-howto/ds-lite-ipv6-tunnel-port-forwarding-nat-wireguard-vpn/
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Hier wird genau die Problematik erklärt.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2023-06-25T18:38:21Z" title="2023-06-25 18:38 ">
+      Juni 25, 2023
+     </time>
+     von pootch
+    </strong>
+   </span>
+  </div>
+  <hr/>
+ </body>
+</html>

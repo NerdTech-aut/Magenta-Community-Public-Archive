@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   B529s macht nach einigen Minuten dicht (von aussen)
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   B529s macht nach einigen Minuten dicht (von aussen)
+  </h1>
+  <span class="author">
+   roddick
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-01-09T05:53:27Z" title="2019-01-09 05:53 ">
+   Januar 9, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo zusammen
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+   <p>
+    Ich habe meinen Vertrag bei A1 (Hybrid Power 40) Vertrag gekündigt da die Zellenauslastung bei mir am Standort zu hoch ist und ich keinen Geschwindigkeitsvorteil mehr durch HP bekam..
+   </p>
+   <p>
+    Nun zum eigentlichen Thema..  Ich habe 2 IP Cams (statische IP, No-ip.com, Ports 88 und 89)
+   </p>
+   <p>
+   </p>
+   <p>
+    Nun habe ich seit gestern die Home Net Box (B529s) mit dem Turbo Tarif.
+   </p>
+   <p>
+    Also brav die IP Adressen der Cams von auf den 192.168.8.xxx Bereich geändert, DynDns Dienst in der Routeroberfläche eingetragen, Portweiterleitung konfiguriert und natürlich den APN auf bussines.gprsinternet eingestellt.
+   </p>
+   <p>
+    Bekam auch sofort die 78er IP... Zugriff von aussen war dann auch gleich da...
+   </p>
+   <p>
+   </p>
+   <p>
+    ABER: die ganze Verbindung hält dann so zwischen 2 und 4 Minuten, danach scheint der Router dicht zu machen, ich muss dann im Routermenü den APN wieder erneut aktivieren und dann gehts wieder für ein paar Minuten...
+   </p>
+   <p>
+    Das gleiche Phänomen hatte ich die letzten Wochen bereits bei einem mobilen Telering Router und der Telering LTE Box.. Ein Mitarbeiter der 0900er Servicehotline verwieß mich dann auf T-Mobile da Telering für meine Anforderungen wohl nicht das richtige bieten kan...
+   </p>
+   <p>
+   </p>
+   <p>
+    Deshalb bin ich nun bei T-Mobile gelandet...
+   </p>
+   <p>
+   </p>
+   <p>
+    P.S.: Kann der B529s kein NAT Loopack?  In den paar Minuten wo ich Verbindung habe funktioniert es nicht im Heimnetzwerk....  (Das konnte mein A1 Hybrid Router)..
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke für eure Hilfe
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2019-01-09T05:54:05Z" title="2019-01-09 05:54 ">
+      Januar 9, 2019
+     </time>
+     von roddick
+    </strong>
+    <br>
+     Rechtschreibfehler
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-01-09T13:41:03Z" title="2019-01-09 13:41 ">
+   Januar 9, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi,
+   </p>
+   <p>
+    das Verhalten hatte ich bei meinem B529 nicht.
+   </p>
+   <p>
+    Wie sieht es denn aus, wenn du DynDNS mal am Router deaktivierst und den Zugriff direkt über die PublicIP durchführst? nur mal zum testen.
+   </p>
+   <p>
+    Vielleicht kann man das dadurch etwas eingrenzen.
+   </p>
+   <p>
+    LGFW
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   roddick
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-01-10T07:14:50Z" title="2019-01-10 07:14 ">
+   Januar 10, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Morgen,
+   </p>
+   <p>
+    hab den Fehler gefunden...  es war tatsächlich der Dyndns Diesnt schult (hatte auf dem alten A1 Receiver ebenfalls noch DynDNS aktiviert und das funkte dazwischen...
+   </p>
+   <p>
+   </p>
+   <p>
+    Jetzt habe ich nur noch das Problem mit dem NAT Loopback...
+    <span>
+     @Fichtlwichtl, funktioniert das bei dir?  (Zugriff wenn du im Heimnetzwerk bist)
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-01-10T08:00:30Z" title="2019-01-10 08:00 ">
+   Januar 10, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich befürchte, dass der B529s (so wie viele andere Router) kein NAT Loopback unterstützen
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2019-01-10T08:00:45Z" title="2019-01-10 08:00 ">
+      Januar 10, 2019
+     </time>
+     von MarioM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-01-10T08:05:01Z" title="2019-01-10 08:05 ">
+   Januar 10, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="28082" data-ipsquote-contentid="4800" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1547107230" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor 3 Minuten schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich befürchte, dass der B529s (so wie viele andere Router) kein NAT Loopback unterstützen
+      <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    jep, so dürfts sein. Hab es auch vermisst...
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-01-10T08:06:30Z" title="2019-01-10 08:06 ">
+   Januar 10, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="28083" data-ipsquote-contentid="4800" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1547107501" data-ipsquote-userid="61502" data-ipsquote-username="Fichtlwichtl">
+    <div class="ipsQuote_citation">
+     vor 1 Minute schrieb Fichtlwichtl:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      jep, so dürfts sein. Hab es auch vermisst...
+      <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich finde es schade, dass das mittlerweile nicht schon Standard ist bei einem Router ... Kann ja nicht sooo viel mehr kosten das Feature hinzuzufügen ...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   roddick
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-01-10T08:37:54Z" title="2019-01-10 08:37 ">
+   Januar 10, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ok, Danke - das ist natürlich sehr bitter...
+    <br/>
+    Alternative wäre auf Hybrid umzusteigen?     -   dort bekommt man den Huawei HA 35-22 (der ja baugleich mit dem A1 Hybridrouter ist)...
+   </p>
+   <p>
+    Dieser kann (zumindest bei A1) NAT Loopback....
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-01-10T08:52:33Z" title="2019-01-10 08:52 ">
+   Januar 10, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wäre natürlich eine Alternative - würde aber trotzdem vorher nachfragen ob der Router auch NAT Loopback unterstützt. Muss ja nicht sein, dass beide Provider auch die gleiche Firmware raufspielen ...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-01-10T09:40:37Z" title="2019-01-10 09:40 ">
+   Januar 10, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Tmobile setzt eine andere Firmware ein.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   roddick
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-01-10T09:48:44Z" title="2019-01-10 09:48 ">
+   Januar 10, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Okay dann muss ich mal im Chat nachfrage, viell bekomm ich da eine Info..
+   </p>
+   <p>
+    Es gäbe noch die Option einen freien LTE Router der dies beherrscht zu verwenden oder?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-01-10T18:42:42Z" title="2019-01-10 18:42 ">
+   Januar 10, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="28090" data-ipsquote-contentid="4800" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1547113724" data-ipsquote-userid="77241" data-ipsquote-username="roddick">
+    <div class="ipsQuote_citation">
+     vor 8 Stunden schrieb roddick:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Es gäbe noch die Option einen freien LTE Router der dies beherrscht zu verwenden oder?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Jupp, die Option gibt es auch noch
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

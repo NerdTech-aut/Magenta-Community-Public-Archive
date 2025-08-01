@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   B525s-23a, Tenda Nova MW6 Mesh und MacOS X Catalina - unterschiedliche Speeds für Mac und Smartphone
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   B525s-23a, Tenda Nova MW6 Mesh und MacOS X Catalina - unterschiedliche Speeds für Mac und Smartphone
+  </h1>
+  <span class="author">
+   PrincipeAzzurro
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-01-14T13:52:48Z" title="2020-01-14 13:52 ">
+   Januar 14, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Liebe Leute,
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich bin hier in Niederösterreich mit einem LTE Turbo ziemlich gut vernetzt, zwei Masten liefern ziemlich stabil und zu jeder Uhrzeit fast 65Mbps im Download und 16/17Mpbs im Upload. Drei weiße Tenda Nova MW6 Cubes verteilen das WiFi bis in die letzte Ecke unseres Hofes hier, praktisch bekomme ich überall Internet und das auch zu fast 100% der Geschwindigkeit.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bisher war alles gut - bis zum letzten Mac-Systemupdate vor zwei Wochen auf MacOS X 15.2 (Catalina). Denn Seitdem beobachte ich ein extrem seltsames Phänomen:
+   </p>
+   <p>
+   </p>
+   <p>
+    - im von den Tenda Nova MW6 Cubes aufgebauten WiFi-Netz sind alle unsere Macs (wir sind eine kleine Filmproduktion und haben ausschließch Macs, davon 7 Stück) reduziert auf nur noch 12 bis 14Mpbs im Download, die Upload-Speeds sind ok / gleich geblieben.
+   </p>
+   <p>
+   </p>
+   <p>
+    - über das (normalerweise und bisher immer ausgeschaltete weil nicht gebrauchte) "Wlan" des B525s-23a sind die Speeds normal
+   </p>
+   <p>
+   </p>
+   <p>
+    - wenn ich die Macs im "Safe Boot" Modus starte - also das System ohne die meisten Extensions - sind die Speeds auch im Tenda Nova MW6 Wifinetz normal.
+   </p>
+   <p>
+   </p>
+   <p>
+    - Smartphones egal welchen Herstellers haben normale Speeds in allen Netzen (also sowohl im Wlan der B525s-23a als auch im Wifi der Tenda Nova MW6)
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe so ziemlich alles versucht, u.a. auch die Tenda Novas über Bridge oder statisch zu verbinden, mithilfe des GoogleChrome F12 Hacks die externe DSN des B525s-23a zu verändern… aber nichts hilft. Da bis vor 2 Wochen alles super war, kann eigentlich nur das letzte geänderte Element im Zusammenspiel der Komponenten die Verantwortung haben - also die neue Software. Oder was meint ihr?
+   </p>
+   <p>
+    Danke für geniale Ideen…
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="5 yr" datetime="2020-01-14T15:48:07Z" title="2020-01-14 15:48 ">
+      Januar 14, 2020
+     </time>
+     von PrincipeAzzurro
+    </strong>
+    <br>
+     Präzisierung
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   MrG0ku
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-01-20T16:16:39Z" title="2020-01-20 16:16 ">
+   Januar 20, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi PrincipeAzzurro,
+    <br/>
+    <br/>
+    gibt´s schon Neuigkeiten zu dem Thema bzw. hast du es zwischenzeitlich lösen können?
+   </p>
+   <p>
+    Hab auch schon öfter gelesen, dass dieses Update WLAN Performanceprobleme verursacht hat...
+   </p>
+   <p>
+    eine Lösung wüsst ich allerdings keine.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG///MrG0ku
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   PrincipeAzzurro
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-01-20T17:26:29Z" title="2020-01-20 17:26 ">
+   Januar 20, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Abend,
+   </p>
+   <p>
+    Es liegt offenbar (noch ist es nicht 100%) nicht an der Hardware sondern am letzten Update von MacOS X Catalina, 10.15.2, und an einem bestimmten Systemprozess names mDNSResponder. Ich habe einen Eintrag auf dem Apple-Forum und ein "Case" beim Support - und werde berichten sobald es etwas neues gibt.
+   </p>
+   <p>
+   </p>
+   <p>
+    In der Zwischenzeit habe ich für mich eine funktionierende Notlösung gefunden: im "Activity Monitor" (sorry meine Systeme sind immer auf Englisch) nach "mDNSResolver" suchen, den Prozess force-quitten, der ensteht nach 5 Sekunden wieder neu und das WiFi läuft tadellos und mit fast 100% der Leistung...
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="5 yr" datetime="2020-01-20T17:28:10Z" title="2020-01-20 17:28 ">
+      Januar 20, 2020
+     </time>
+     von PrincipeAzzurro
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   PrincipeAzzurro
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-03-19T21:46:31Z" title="2020-03-19 21:46 ">
+   März 19, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das Catalina Update 10.15.3 löst das Problem komplett. Ich habe keine Probleme mehr.
+   </p>
+   <p>
+    Salüh…
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-03-20T08:00:51Z" title="2020-03-20 08:00 ">
+   März 20, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33816" data-ipsquote-contentid="5516" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1584654391" data-ipsquote-userid="70063" data-ipsquote-username="PrincipeAzzurro">
+    <div class="ipsQuote_citation">
+     10 hours ago, PrincipeAzzurro said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das Catalina Update 10.15.3 löst das Problem komplett. Ich habe keine Probleme mehr.
+     </p>
+     <p>
+      Salüh…
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Sehr gut
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

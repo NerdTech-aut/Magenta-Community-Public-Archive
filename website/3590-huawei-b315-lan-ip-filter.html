@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Huawei B315 LAN IP Filter
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Huawei B315 LAN IP Filter
+  </h1>
+  <span class="author">
+   crazy_iwan
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-08T08:09:22Z" title="2017-02-08 08:09 ">
+   Februar 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+    ich würde gerne einen Client im lokalen Netz den Zugriff auf das Internet bzw. zu bestimmten Websiten blockieren, sprich eine Kindersicherung einrichten. Dazu sollte sich laut Anleitung die Firewall des Routers mittels Lan IP Filter eignen. Leider funktioniert die Firewall nicht, ich kann vom Computer die gesperrten Seiten trotzdem aufrufen. Folgende Schritte habe ich durchgeführt:
+   </p>
+   <p>
+    <a rel="external nofollow">
+     <span>
+      Am
+     </span>
+    </a>
+    Huawei B315:
+   </p>
+   <p>
+    Einstellungen –Firewall Filter Schalten – Filter“IP-Adresse“ aktivieren Haken gesetzt – übernehmen
+   </p>
+   <p>
+    LAN-IP-Filter – Filtermodus Liste unerw. Teiln. (Blacklist) – Filter IP-Adresse hinzugefügt: LAN-IP-Adresse: IPv4 Adresse vom Computer, LAN-Port: 80, WAN-IP-Adresse zB. Facebook.com
+    <a rel="external nofollow">
+     <span>
+      31.13.84.36
+     </span>
+    </a>
+    , WAN-Port: 80, Protokoll: TCP/UPD, Status: An, Option: ok – übernehmen
+   </p>
+   <p>
+    Ich habe auch Port 443 bzw. gesamten Port Wertbereich 1-65535 getestet auch ohne Erfolg.
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="180" href="images/uploads/LANIPFilter.PNG.b112b2188263a730785c3f61352daff1.PNG" rel="external nofollow">
+     <img alt="LANIPFilter.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="180" src="images/uploads/LANIPFilter.PNG.b112b2188263a730785c3f61352daff1.PNG"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/589ad145c2b5b_Gerteinfo_Huawei.PNG.0fa889ba9a170288cdf06be8a6d9191d.PNG">
+     <img alt="Geräteinfo_Huawei.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="181" src="images/uploads/589ad145c2b5b_Gerteinfo_Huawei.PNG.0fa889ba9a170288cdf06be8a6d9191d.PNG"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="8 yr" datetime="2017-02-08T08:10:02Z" title="2017-02-08 08:10 ">
+      Februar 8, 2017
+     </time>
+     von crazy_iwan
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-08T14:07:14Z" title="2017-02-08 14:07 ">
+   Februar 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+    <br/>
+    Facebook wird nicht nur eine IP Adresse verwenden.
+   </p>
+   <p>
+    Das könnte eventuell ein Problem sein. Versuch mal eine kleine lokale Webseite, such dir die IP dazu raus, und schau ob das funktioniert.
+   </p>
+   <p>
+    Es funktioniert nicht, heißt, du kannst www.facebook.com trotzdem aufrufen? Oder du kannst die Ip aufrufen und es geht trotzdem? Diese zwei Optionen würde ich auch noch in Erwägung ziehen.
+   </p>
+   <p>
+    Lg
+    <br/>
+    Mario
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="8 yr" datetime="2017-02-08T14:08:20Z" title="2017-02-08 14:08 ">
+      Februar 8, 2017
+     </time>
+     von MarioM
+    </strong>
+    <br>
+     Genauere Antwort
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-08T14:18:01Z" title="2017-02-08 14:18 ">
+   Februar 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi,
+   </p>
+   <p>
+    hatte letztens diesen Router auch in Verwendung.
+   </p>
+   <p>
+    Wenn mich nicht alles täuscht, hat der Router auch einen Domain Namensfilter. Jedoch weiss ich gerade nicht ob dieser dann für alle LAN/WLAN Clients greift, was natürlich deinen gewollten Einsatzzweck verfehlen würde.
+   </p>
+   <p>
+    Eventuell mal diesen versuchen...
+   </p>
+   <p>
+    LGFW
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   crazy_iwan
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-08T14:59:58Z" title="2017-02-08 14:59 ">
+   Februar 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+    danke mal für die Antworten.
+   </p>
+   <p>
+    Kleine lokale Websites hab ich auch versucht, www.dieschmids.at und www.tz-com.at werden auch nicht blockiert. Im Wireshark kommen die Post und Get Packet auch durch.
+   </p>
+   <p>
+    Domain Namensfilter hab ich auch gerade getestet, blockiert auch nichts
+    <img alt="O:)" data-emoticon="" height="20" src="images/emoticons/tma_angel-o.png" srcset="images/emoticons/tma_angel-o@2x.png 2x" title="O:)" width="20"/>
+   </p>
+   <p>
+    EDIT: Domain Namensfilter funktioniert doch, aber erst nach ca. 15 Minuten.
+   </p>
+   <p>
+   </p>
+   <p>
+    Eigentlich möcht ich ja einen Client komplett vom I-Net trennen... wird mit dem Gerät (Firmware) wahrscheinlicht nichts.
+   </p>
+   <p>
+    Gruß
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="8 yr" datetime="2017-02-08T15:28:15Z" title="2017-02-08 15:28 ">
+      Februar 8, 2017
+     </time>
+     von crazy_iwan
+    </strong>
+    <br>
+     EDIT
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-08T15:18:01Z" title="2017-02-08 15:18 ">
+   Februar 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Naja wenn du einen Client direkt vom Internet trennen willst, dann ist der Router der falsche Ansatzpunkt.
+   </p>
+   <p>
+    Mach das doch direkt am Client mit einer Software? Du bist Admin, der Benutzer den du vom Internet trennen willst dem gibts du eingeschränkte Rechte.
+   </p>
+   <p>
+    Damit fährst du vermutlich besser und es ist einfacher zu kontrollieren
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   crazy_iwan
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-08T15:27:26Z" title="2017-02-08 15:27 ">
+   Februar 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Domain Namensfilter funktioniert doch, aber erst nach ca. 15 Minuten.
+   </p>
+   <p>
+    Beim Client handelt es sich um eine Kamera die nicht nach Hause telefonieren soll, im lokalen Netz aber verfügbar sein soll.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-08T17:40:14Z" title="2017-02-08 17:40 ">
+   Februar 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Achso eine Kamera ist da. Alles klar.
+   </p>
+   <p>
+    Ja der DNS Server braucht immer eine gewisse Zeit das ist normal.
+   </p>
+   <p>
+    Super, dass es jetzt funktioniert.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   crazy_iwan
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-08T20:10:46Z" title="2017-02-08 20:10 ">
+   Februar 8, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hm naja, Namens Domain wie Facebook.com kann ich zwar sperren, aber IP Adressen zu Server geschweigeden kompletten I-net Zugriff kann ich nicht blockieren.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="8 yr" datetime="2017-02-08T21:01:41Z" title="2017-02-08 21:01 ">
+      Februar 8, 2017
+     </time>
+     von crazy_iwan
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-09T07:45:26Z" title="2017-02-09 07:45 ">
+   Februar 9, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="21089" data-ipsquote-contentid="3590" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1486584646" data-ipsquote-userid="70455" data-ipsquote-username="crazy_iwan">
+    <div class="ipsQuote_citation">
+     vor 11 Stunden schrieb crazy_iwan:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hm naja, Namens Domain wie Facebook.com kann ich zwar sperren, aber IP Adressen zu Server geschweigeden kompletten I-net Zugriff kann ich nicht blockieren.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Gut das ist auch mit dem LAN Filter mühsam bzw. eigentlich nicht der richtige Ansatzpunkt - aber leider hast du eben keine andere Möglichkeiten. Dafür bräuchtest du am besten einen "gscheiten" Router hinter dem jetzigen stehen. Damit hättest du auch mehr Konfigurationsmöglichkeiten.
+   </p>
+   <p>
+    Dadurch wird es eben aber auch aufwendiger zu konfigurieren
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-09T12:10:28Z" title="2017-02-09 12:10 ">
+   Februar 9, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hab mir auch einige Ansätze überlegt, aber im Endeffekt wär ein Router wie Mario schon sagte, mit mehr Konfigmöglichkeiten die idealste Lösung. Firewalls sind wieder relativ mühsam im Vergleich was die Konfiguration betrifft und meist auch erheblich teurer.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   crazy_iwan
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-02-09T18:14:56Z" title="2017-02-09 18:14 ">
+   Februar 9, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich werde wenn ich die Kamera bekomme keinen Gateway einzutragen und dann schauen ob alles funktioniert und nichts rausgeht ansonsten wird es wohl eine Fritzbox anstatt des Huawei werden.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

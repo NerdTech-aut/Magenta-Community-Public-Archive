@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   IP-Adresse Geolocation nicht eindeutig
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   IP-Adresse Geolocation nicht eindeutig
+  </h1>
+  <span class="author">
+   JEEK
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-14T16:30:14Z" title="2023-08-14 16:30 ">
+   August 14, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Meine IP-Adresse aus dem Netz ist aus dem Bereich 84.115.208.0 - 84.115.253.255, wurde mir vor rund 30 Tagen zugewiesen. Das sich etwas geändert hatte, merkte ich sofort, weil sich Netflix sofort beschwerte, ich wäre nicht mehr im gleichen Netz.
+    <br/>
+    Eine Recherche, zu der ich erst jetzt kam, hat ergeben, dass das Netz (laut WHOIS-Datenbank)
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      inetnum:        84.115.208.0 - 84.115.253.255
+      <br/>
+      netname:        UPC
+      <br/>
+      descr:          UPC Vorarlberg
+      <br>
+       country:        AT
+       <br>
+        admin-c:        TMA5-RIPE
+        <br>
+         tech-c:         TMA5-RIPE
+         <br/>
+         status:         ASSIGNED PA
+         <br/>
+         mnt-by:         AT-INODE-DOM
+         <br/>
+         created:        2015-05-06T09:39:59Z
+         <br/>
+         last-modified:  2021-12-14T08:58:16Z
+         <br/>
+         source:         RIPE
+        </br>
+       </br>
+      </br>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    ein Vorarlberger Netz sein soll.
+    <br/>
+    Der Verdacht liegt nahe, dass die hinterlegt Geolocation für das Netz in Vorarlberg hinterlegt ist und die Magenta die IPs munter in Wien liegende Netze verwendet bzw. Netze herum schiebt, ja nach Notwendigkeit ... Eine Überprüfung etwa auf
+    <a href="https://www.iplocation.net/ip-lookup" rel="external nofollow">
+     https://www.iplocation.net/ip-lookup
+    </a>
+    zeigt, dass die verschiedenen Geo-Loc-Dienst mal Wien, mal Bregenz als Standort ansehen. Ich weiß ja nicht, was Netflix gerade verwendet, aber offenbar einen, der wohl Bregenz ausgibt, sonst hätte es vor 30 Tagen nicht gekracht.
+    <span>
+     <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+     <br/>
+     Ich hoffe nur, die IP-Adressen sind nicht wirklich gemischt an beiden Orten "aktiv" (sollte aus Routing-Sicht eigentlich nicht sein).
+    </span>
+    <br/>
+   </p>
+   <p>
+    <span>
+     Ein Telefonat mit dem technischen Service war nicht sonderlich hilfreich. Ich konnte mit Mühe die Lage erklären. Dann fragte der Service-Mitarbeiter nach, und nach paar Minuten kam dann die Rückmeldung "der Experte sagt, das sei unmöglich". Ich fürchte, der Mitarbeiter hat es dem Experten einfach falsch erklärt, was auch aus dem Gespräch heraus zu hören war.  Er wollte mich einfach damit abspeisen, dass man da nicht machen könne ... Ich meinte nämlich nicht, dass die Geolocation (für die gleiche IP) sich ständig ändert, sondern nach der Änderung der IP ich nun die Range eine andere Geolocation bekommen hat, was für Streaming-Dienste wie Netflix natürlich essenziell ist. Gut, nochmal ausführt. UPC
+     <strong>
+      muss
+     </strong>
+     als Provider sicherstellen, dass die IP-Adresse dort lokalisiert ist, wo die Anschlüsse auch tatsächlich installiert sind. Sonst funktioniert das alles nicht.
+     <br/>
+     Einen Teamleiter des Service verlangt. Gibt es, aber man könne mit der Person nicht reden.
+     <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+     <br/>
+     Dann bat ich wenigstens, den Fall der Technikabteilung weiterzugeben, das Gespräch haben sie ja auch aufzeichnen dürfen und erklärt hab ich es auch zig-mal, da ja das "Service" hier klarerweise nichts machen kann. Aber das Weitergeben, könne er machen, allerdings ohne Garantie, dass sich hier etwas ändert. Das war natürlich nicht sehr vertrauensbildend ... dann werde der Service eben öfter von mir hören.
+     <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+    </span>
+    <br/>
+    <br/>
+    Ich erklärte auch, dass das vermutlich eine Sache sei, wo sich Benutzer eher an Netflix statt an Magenta wenden, diesen Zusammenhang gar nicht sehen. Ich hab einen zweiten Fall in meinem Umfeld zum Anlass genommen, das nun eingehender zu untersuchen.
+    <br/>
+    <br/>
+    Wer hat da auch schon ähnliche Probleme beobachtet und etwa bei Netflix den neuen Standort anmelden müssen? Hat man sich hier nur an Netflix gewendet? Was haben andere hier gemacht?
+    <br/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Roman Schreiber
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-17T09:03:30Z" title="2023-08-17 09:03 ">
+   August 17, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54866" data-ipsquote-contentid="9000" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1692030614" data-ipsquote-userid="97846" data-ipsquote-username="JEEK">
+    <div class="ipsQuote_citation">
+     Am 14.8.2023 um 18:30 schrieb JEEK:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Wer hat da auch schon ähnliche Probleme beobachtet und etwa bei Netflix den neuen Standort anmelden müssen? Hat man sich hier nur an Netflix gewendet? Was haben andere hier gemacht?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hi, ich hatte mit Netflix nie irgendwelche Probleme. Um dein Anliegen zu lösen, empfehle ich dir, dass du deinen Text hernimmst, dich via Live-Chat in der MeinMagenta App meldest, dich zu den Techniker:innen weiterverbinden lässt und dort dann deinen Text reinkopierst. So kann der Mitarbeiter alles in ein Ticket kopieren und weiterleiten. Dann kann dein Anliegen auch nicht missverständlich weitergegeben werden. Das wäre halt mal mein Lösungsanatz. Gib Bescheid, ob das so geklappt hat. LG RS.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   JEEK
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-18T15:56:43Z" title="2023-08-18 15:56 ">
+   August 18, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54894" data-ipsquote-contentid="9000" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1692263010" data-ipsquote-userid="95650" data-ipsquote-username="Roman Schreiber">
+    <div class="ipsQuote_citation">
+     Am 17.8.2023 um 11:03 schrieb Roman Schreiber:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hi, ich hatte mit Netflix nie irgendwelche Probleme. Um dein Anliegen zu lösen, empfehle ich dir, dass du deinen Text hernimmst, dich via Live-Chat in der MeinMagenta App meldest, dich zu den Techniker:innen weiterverbinden lässt und dort dann deinen Text reinkopierst. So kann der Mitarbeiter alles in ein Ticket kopieren und weiterleiten. Dann kann dein Anliegen auch nicht missverständlich weitergegeben werden. Das wäre halt mal mein Lösungsanatz. Gib Bescheid, ob das so geklappt hat. LG RS.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Ja, ist mal ein Lösungsansatz ... schade, dass man irgendwie an die Technik zu gelangen, das Forum (für einen Ratschlag) braucht, eine Handy-App installieren muss und das Vehikel eines Chats bemühen muss, um schließlich so etwas Simples wie ein Ticket zu eröffnen.
+    <br>
+     Es wäre ja so einfach per E-Mail ... die Panik, die hier Firmen vor einer solchen Möglichkeit schieben kann ich nicht nachvollziehen (bin selber im Support bei einer nicht gerade kleinen Institution tätig).
+     <br>
+      Im Web wird man fein im Kreis geschickt und auf der Technik-Hotline - dem First-Level - ist man von jemandem, der sich mit der Technik zu hat, erfolgreich abgeschottet.
+      <br/>
+      Bei xxxx@magenta.at hat sich bislang niemand gemeldet. Ob nicht gelesen, überarbeitet oder nicht interessiert, kann man somit nicht sagen.
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Roman Schreiber
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-22T12:21:05Z" title="2023-08-22 12:21 ">
+   August 22, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54924" data-ipsquote-contentid="9000" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1692374203" data-ipsquote-userid="97846" data-ipsquote-username="JEEK">
+    <div class="ipsQuote_citation">
+     Am 18.8.2023 um 17:56 schrieb JEEK:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Es wäre ja so einfach per E-Mail .
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Die Sache ist die: wenn du deinen Text via Kontaktformular (
+    <a href="https://www.magenta.at/hilfe-service/services/kontaktformular" rel="external nofollow">
+     https://www.magenta.at/hilfe-service/services/kontaktformular
+    </a>
+    ) schickst, kommt nur zurück dann du dich telefonisch unter 0676 200 7777 melden sollst, wo du nach deiner Beschreibung nach nicht richtig verstanden wirst und widerrum Fehlauskünfte bekommst....ist alles nicht so einfach. Gib Bescheid, sobald du News hast. LG RS.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   DynDNS mit der Connect Box
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   DynDNS mit der Connect Box
+  </h1>
+  <span class="author">
+   Leo1404
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-29T09:49:03Z" title="2019-06-29 09:49 ">
+   Juni 29, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Zusammen,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich stehe vor folgendem Problem:
+    <br/>
+    Ich versuche vergeblich DynDNS auf der ConnectBox (noch von UPC) zu aktivieren. Leider kann ich dort keine geeignete Einstellungsmöglichkeit finden. Nach einem Telefonat mit dem Support sollte das kein problem sein, wenn mir die Einstellungen freigegeben werden. Diese wurden wurden mir auch umgehend freigeschalten, jedoch ist dort auch nix dabei.
+   </p>
+   <p>
+    Kann mir jemand sagen, ob das überhaupt möglich ist oder was ich für Alternativen habe, DynDNS wieder einstellen zu können?
+   </p>
+   <p>
+   </p>
+   <p>
+    Verwendungszweck: Gebraucht wird DynDNS für eine Synology Diskstation, die als BackUp Server für eine andere DS dient. Alles läuft über DynDNS, daher ist ein anderer Weg aktuell keine Option.
+   </p>
+   <p>
+    Geräte: Connect Box, Konform zur Standardspezifikation:DOCSIS 3.0 , Hardware Version:5.01 , Software Version:CH7465LG-NCIP-6.12.18.25-2p3-NOSH , Kabelmodem Seriennummer:DEAP8XXXXXXX.
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke und Grüße
+   </p>
+   <p>
+    Leo
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-29T10:34:08Z" title="2019-06-29 10:34 ">
+   Juni 29, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/78685-leo1404/?do=hovercard" data-mentionid="78685" href="https://community.magenta.at/profile/78685-leo1404/" rel="">
+     @Leo1404
+    </a>
+   </p>
+   <p>
+    Die Fiber Box 1 (Connect Box) bietet keinen DynDNS Client.
+   </p>
+   <p>
+    An sich würde ja auch die Synology NAS selber DynDNS beherrschen.
+   </p>
+   <p>
+    Eine andere Möglichkeit wäre die Fiber Box 1 in den Modem-Modus zu degradieren und einen eigenen Router dahinter zu hängen und an diesen die Diskstation.
+   </p>
+   <p>
+    In beiden Fällen bräuchtest halt eine eine öffentliche IPv4 (ohne würde der Modem-Modus der Fiber Box 1 nicht gehen) und wenn die andere Synology NAS nicht an einem Magenta Kabelanschluss hängt würdest mit der Standardmäßigen öffentlichen IPv6 + privaten CG-NAT IPv4 nicht weit kommen. Auf die öffentliche IPv4 kannst du deinen Anschluss über den Support umstellen lassen.
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Leo1404
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-07-10T18:15:48Z" title="2019-07-10 18:15 ">
+   Juli 10, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+     @NTM
+    </a>
+    <br/>
+    danke für die Antwort. Leider bin ich nicht so fit was das Thema angeht. Habe auf der DS ja auch DynDNS eingerichtet, benötige jedoch das auf dem Router auch damit es reibungsfrei funktioniert oder?
+   </p>
+   <p>
+    Kann ich bei der Variante mit dem Modem+Router dann die DynDNS auf dem Router konfigurieren?
+    <br/>
+    Die andere NAS ist aktuell mit DynDNS am laufen.
+    <br>
+     Danke und LG
+     <br>
+      Leo
+     </br>
+    </br>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="5 yr" datetime="2019-07-10T18:18:27Z" title="2019-07-10 18:18 ">
+      Juli 10, 2019
+     </time>
+     von Leo1404
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-07-11T07:12:38Z" title="2019-07-11 07:12 ">
+   Juli 11, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/78685-leo1404/?do=hovercard" data-mentionid="78685" href="https://community.magenta.at/profile/78685-leo1404/" rel="">
+      @Leo1404
+     </a>
+    </span>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="30218" data-ipsquote-contentid="5097" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1562782548" data-ipsquote-userid="78685" data-ipsquote-username="Leo1404">
+    <div class="ipsQuote_citation">
+     vor 12 Stunden schrieb Leo1404:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Habe auf der DS ja auch DynDNS eingerichtet, benötige jedoch das auf dem Router auch damit es reibungsfrei funktioniert oder?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Einmal DynDNS sollte reichen. Also entweder auf der DS oder Router.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="30218" data-ipsquote-contentid="5097" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1562782548" data-ipsquote-userid="78685" data-ipsquote-username="Leo1404">
+    <div class="ipsQuote_citation">
+     vor 12 Stunden schrieb Leo1404:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Kann ich bei der Variante mit dem Modem+Router dann die DynDNS auf dem Router konfigurieren?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    <span>
+     Wenn du einen Router kaufst der DynDSN kann dann ja.
+    </span>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="30218" data-ipsquote-contentid="5097" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1562782548" data-ipsquote-userid="78685" data-ipsquote-username="Leo1404">
+    <div class="ipsQuote_citation">
+     vor 12 Stunden schrieb Leo1404:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Die andere NAS ist aktuell mit DynDNS am laufen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    <span>
+     Wenn du dies im Bezug auf die IP Adressen Problematik geschrieben hast:
+    </span>
+   </p>
+   <p>
+    <span>
+     DnyDNS vergibt zu einer IP Adresse einen "schöneren" bzw leichter zu merkenden Namen. Im Hintergrund wird weiterhin mit IP Adressen gearbeitet. Und wie gesagt, es müssen bei beiden Internet Anschlüssen entweder eine öffentliche IPv6 oder bei beiden eine öffentliche IPv4 vorhanden sein, damit es funktioniert.
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    <span>
+     Wie wurde denn DynDNS bei der anderen DS eingerichtet und funktioniert Fernzugriff auf diese?
+    </span>
+   </p>
+   <p>
+    <span>
+     LG NTM
+    </span>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

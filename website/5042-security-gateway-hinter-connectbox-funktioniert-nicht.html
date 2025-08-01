@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Security-Gateway hinter ConnectBox funktioniert nicht
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Security-Gateway hinter ConnectBox funktioniert nicht
+  </h1>
+  <span class="author">
+   Santamaria13
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-14T09:32:57Z" title="2019-06-14 09:32 ">
+   Juni 14, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Community,
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich möchte mein „altes“ Telekabel Koax-Kabel wieder reaktivieren und habe dafür bei Magenta ein Kabel-Internet Produkt (Internet100/20) bestellt.
+   </p>
+   <p>
+    Voraussetzung für mich ist, das der gelieferte Router (die Connect Box) als reines Modem vor meinem Ubiquiti Security-Gateway USG 4p arbeiten kann.
+   </p>
+   <p>
+   </p>
+   <p>
+    Leider funktioniert es noch nicht und ich ersuche um eure Unterstützung; die Magenta-Technik-Hotline hilft mir hier nicht weiter, weil es kein Standard-Fall sei; im schlimmsten Fall muß ich die Bestellung stornieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Details:
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Connect Box als Router funktioniert, Bandbreite 100 MBit/s wird erreicht.
+   </p>
+   <p>
+    Habe dann bei der Hotline um die Umstellung auf IPv4 ersucht, wurde erledigt.
+   </p>
+   <p>
+    Dann die CB auf Modem-Modus umgestellt; die Kontroll-Leuchte ist seitdem grün; bei der CB Diagnose kommt ein Fehler „Checking Broadband Service -&gt; Your home network has a few Problems“ -&gt; das technische Serie von Magenta meint, ich kann das ignorieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    Im USG ein Netzwerk an der WAN Schnittstelle mit IPv4 DHCP eingerichtet; IPv6 deaktiviert. Mehr ist hier nicht zu machen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Leider bekomme ich keine Internet-Verbindung zustande; sehr wohl aber kann ich das WEB-Interface der CB aus meinem Netz über die Adresse 192.168.100.1 erreichen, was eigentlich nicht gehen sollte, da ich dieses Subnetz nicht eingerichtet habe.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hat jemand eine Lösung oder Idee?
+   </p>
+   <p>
+    Lg Karl
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="1512" href="images/uploads/5d03698b9cff0_USG4pnetworks.png.f943d019108800b1f7ddd3a89efbca34.png" rel="">
+     <img alt="USG4p networks.png" class="ipsImage ipsImage_thumbnailed" data-fileid="1512" src="images/uploads/5d03698be37a2_USG4pnetworks.thumb.png.9c84361231b0a564aa75ac6a8a01f5bb.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="1513" href="images/uploads/5d03699d239a9_USG4pWAN1.png.fee738d6d0febf35e294448a29264baf.png" rel="">
+     <img alt="USG4p WAN1.png" class="ipsImage ipsImage_thumbnailed" data-fileid="1513" src="images/uploads/5d03699da3cb3_USG4pWAN1.thumb.png.5b63cce778dad97d28deec2eda80664e.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="1514" href="images/uploads/5d0369a54cd2a_USG4pLAN.png.107a76bf0ec85f1bd731539f5fde0b45.png" rel="">
+     <img alt="USG4p LAN.png" class="ipsImage ipsImage_thumbnailed" data-fileid="1514" src="images/uploads/5d0369a5b53da_USG4pLAN.thumb.png.b202fad8297984e87ff7b45d67c1c998.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="1515" href="images/uploads/5d0369b36253a_CBdiagnostic.png.2d6332285172be49bdbb1fc72929a764.png" rel="">
+     <img alt="CB diagnostic.png" class="ipsImage ipsImage_thumbnailed" data-fileid="1515" src="images/uploads/5d0369b3c9140_CBdiagnostic.thumb.png.bbdb87236eec5a6a3858580794a8d14b.png"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2019-06-14T09:35:44Z" title="2019-06-14 09:35 ">
+      Juni 14, 2019
+     </time>
+     von Santamaria13
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-17T06:34:41Z" title="2019-06-17 06:34 ">
+   Juni 17, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <strong>
+     Santamaria13
+    </strong>
+    , frage bitte mal beim Hersteller des  - Security-Gateway USG 4p  - nach woran es liegen könnte. Möglicherweise hilft es auch einmal, wenn du das Gerät - sprich den  Router Ubiquiti Security-Gateway USG 4p - auf Werkseinstellung zurücksetzt. LG, Jonathan
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Santamaria13
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-18T17:23:53Z" title="2019-06-18 17:23 ">
+   Juni 18, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Jonathan,
+   </p>
+   <p>
+   </p>
+   <p>
+    danke für deinen Beitrag.
+   </p>
+   <p>
+    Ich habe - nachdem ich diesen Beitrag geschrieben habe - einen weiteren Tag gewartet und es Samstag mit exakt denselben Einstellungen nochmals versucht - jetzt funktioniert es - 100/20 MBit/s wie vereinbart.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich kann es mir nur so erklären, dass das provisioning des IPv4 Flags bei T-Mobile eben drei Tage gedauert hat; ist prinzipiell auch kein Beinbruch, ärgerlich ist nur, dass alle Agents - und ich habe oft angerufen :-(( - mir immer versichert haben, dass es gleich passiert, bzw schon längst passiert ist. Ich hätte mir einigen Stress und viel Arbeit erspart.
+   </p>
+   <p>
+   </p>
+   <p>
+    lg Karl
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

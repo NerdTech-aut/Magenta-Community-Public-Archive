@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   VPN mit Hawei B529s-23a verwenden
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   VPN mit Hawei B529s-23a verwenden
+  </h1>
+  <span class="author">
+   kerschi99
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-23T08:46:02Z" title="2019-06-23 08:46 ">
+   Juni 23, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich möchte folgendes machen:
+   </p>
+   <p>
+   </p>
+   <p>
+    VPN Verbindung mit meiner Synology Diskstation aufbauen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Meine Verbindung würde folgendermaßen aussehen. Mobilgerät bzw. Notbook (außen) --&gt; Huawei B529s-23a --&gt; Netgearrouter --&gt; Switch --&gt; Diskstation
+   </p>
+   <p>
+    VPN Server auf Diskstation ist eingerichtet mit L2TP
+   </p>
+   <p>
+    Portweiterleitung auf Netgearouter für Prots 500, 4500 und 1701 ist eingerichtet
+   </p>
+   <p>
+    Portweiterleitung auf Huawei B529s-23a funktioniert leider nicht (wie schon im Forum bekannt). Ich kann mir auch nicht erklären warum Magenta das sperrt!!!
+   </p>
+   <p>
+   </p>
+   <p>
+    Welche Möglichkeiten habe ich noch? Kann mir jemand helfen, bin schon am verzweifeln :-(
+   </p>
+   <p>
+    Bringt mir der VPN Client etwas am Huwei Router?
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke und lG
+   </p>
+   <p>
+    Martin
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-23T09:13:44Z" title="2019-06-23 09:13 ">
+   Juni 23, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nimm bitte kein L2TP, da dies meistens über IPSEC läuft, was man eigentlich nicht weiterleiten kann.
+   </p>
+   <p>
+   </p>
+   <p>
+    Nimm bitte OpenVPN oder ein anderes 'SSL VPN'
+   </p>
+   <p>
+    Hast du das APN auf Business umgestellt?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   kerschi99
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-23T09:19:47Z" title="2019-06-23 09:19 ">
+   Juni 23, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ah ok, ich bin der Anleitung von iDomiX gefolgt und dieser meinte (so habe ich es verstanden) dass L2TP mit IPSEC die sicherste Variante wäre.
+   </p>
+   <p>
+    Scheitert es nur an meinem Magenta Router oder habe ich was falsch gemacht?
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf APN Business hatt ich bereits umgestellt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Was kannst du mir empfehlen? Open VPN?
+   </p>
+   <p>
+   </p>
+   <p>
+    Schon mal besten Dank
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-23T09:33:06Z" title="2019-06-23 09:33 ">
+   Juni 23, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    OpenVPN
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Anleitungen von iDomiX kann man leider nicht so 1:1 in Österreich umsetzen. Wobei bei IPSEC zwischen AT und DE eigentlich kein unterschied ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Anleitung bezieht sich auf eine Fritz Box als Router und diese kann IPSEC auf die discstation weiterleiten. Das können aber nur wenige Router.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   kerschi99
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-23T11:06:35Z" title="2019-06-23 11:06 ">
+   Juni 23, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+    vielen Dank für deine hilfe und deine ausführlichen Erklärungen.
+   </p>
+   <p>
+    In diesem Fall werde ich mich an Open VPN machen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Schönen Sonntag noch ...
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   VPN Verbindung
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   VPN Verbindung
+  </h1>
+  <span class="author">
+   kdip
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-02T12:29:32Z" title="2021-10-02 12:29 ">
+   Oktober 2, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo an alle,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich würde gerne eine VPN Verbindung in mein Heimnetzwerk aufbauen, um auf Daten und PCs zugreifen zu können wenn ich beruflich unterwegs bin.
+   </p>
+   <p>
+   </p>
+   <p>
+    Aktuell habe ich eine Internet Flex Box ZTE MF 289D die den LTE Empfang übernimmt, und daran ein Kabel welches im WAN Port einer Fritz Box 4040 steckt. Nach Einrichtung der VPN Verbindungen in der Fritz Box Oberfläche konnte ich jedoch keine Verbindung aufbauen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich vermutete, dass es daran liegt, dass die Flex Box keinen Bridge Modus hat und somit meine Verbindungsanfrage gar nicht bis zur Fritz Box kommt, aber eventuell hat ja jemand von euch eine Idee wie ich es mit dieser Geräte Konstellation trotzdem zum Laufen bringen könnte.
+   </p>
+   <p>
+   </p>
+   <p>
+    Meine zweite Idee war direkt einen Router (wie z. B. Fritz Box 6890) zu kaufen, der direkt den LTE Empfang übernimmt und somit eine öffentliche IP Adresse beziehen kann.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich bin über jede Hilfe dankbar und wünsche euch einstweilen ein schönes Wochennde!
+   </p>
+   <p>
+    (Info: Ich bin zwar Techniker, aber was Netzwerke betrifft eher mäßig aufgestellt…)
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-02T20:22:38Z" title="2021-10-02 20:22 ">
+   Oktober 2, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/90927-kdip/?do=hovercard" data-mentionid="90927" href="https://community.magenta.at/profile/90927-kdip/" rel="">
+      @kdip
+     </a>
+     <br/>
+     Für MyFritz und den dazugehörigen VPN Dienst muss die Fritz!Box die öffentliche IP bekommen.
+    </span>
+   </p>
+   <p>
+    <span>
+     Ein Huawei B535 ohne Magenta Branding hätte einen Bridge Mode und wäre gebraucht ab 50€ erhältlich. Allerdings könntest du bei diesem Gerät etwas Datenrate einbüßen, da bei diesem Huawei nur ein CAT7 (bis zu 300MHz mit max zwei 4G Bänder gleichzeitig bis 64QAM) Modem statt einem CAT12 (bis zu 600 Mbit/s mit max drei 4G Bänder gleichzeitig bis 256QAM) Modem beim ZTE verbaut ist.
+    </span>
+   </p>
+   <p>
+    <span>
+     Auch bei der Fritz!Box 6890 LTE könnten die Datenraten, welche du derzeit erreichst, sinken, da diese ein CAT6 Modem (bis zu 300MHz mit max zwei 4G Bänder gleichzeitig bis 64QAM) verbaut hat. Der Unterschied zwischen CAT6 und CAT7 ist im Upload, aber bei Magenta unrelevant.
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    <span>
+     Es kommt darauf an, wie viele 4G Bänder Magenta bei dir zur Verfügung stellt. Dafür könntest du z.B. mal auf
+     <a href="https://www.cellmapper.net/map" rel="external nofollow">
+      Cellmapper
+     </a>
+     schauen.
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    <span>
+     Es gibt auch Router welche bessere Modems verbaut haben, wie der Huawei B818 mit Bridge Mode (gebraucht ab 125€) oder die Fritz!Box 6850 5G.
+    </span>
+   </p>
+   <p>
+    <span>
+     LG NTM
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   kdip
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-03T11:39:55Z" title="2021-10-03 11:39 ">
+   Oktober 3, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+     @NTM
+    </a>
+    ,
+   </p>
+   <p>
+   </p>
+   <p>
+    vielen Dank für deine ausführliche Antwort.
+   </p>
+   <p>
+    Sprich mit der aktuellen Gerätekonstellation werde ich es nicht schaffen, ich muss auf jeden Fall die Hardware ändern.
+   </p>
+   <p>
+   </p>
+   <p>
+    @Fritz Box 6850 / 6890: Ich hätte eh nichts dagegen etwas weniger als für die 6890 zu zahlen, der Hintergedanke war, dass die 6890 im Gegensatz zur 6850 einen WAN Port besitzt, den ich doch brauche wenn ich nach Ablauf des Magenta Vertrags evtl. auf Kabelinternet umsteigen möchte, oder liege ich da falsch?
+   </p>
+   <p>
+    Laut der Cellmapper Karte stehen mir im schlechtesten Fall 3 Bänder zur Verfügung. Laut der Produktseite von AVM sind bei beiden Modellen fünf Bänder gleichzeitig im LTE Netz angegeben, schaue ich da an einem falschen Ort?
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke und LG
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-03T15:41:26Z" title="2021-10-03 15:41 ">
+   Oktober 3, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Eine günstigere Lösung als den Router zu tauschen, wäre, einen Raspberry PI mit
+    <a href="https://www.pivpn.io/" rel="external nofollow">
+     PIVPN
+    </a>
+    und Wireguard aufzusetzen. Das ist jene Kombi mit der ich eine sehr gute Erfahrung gemacht habe. Aktuell ist jedoch der Markt irgendwie komisch, wodurch die Raspberry's nicht mehr 40 sondern teilweise 60 Euro / Stück ohne Zubehör kosten.
+   </p>
+   <p>
+   </p>
+   <p>
+    Voraussetzung dafür ist, dass man Port Weiterleitungen auf dem LTE Router und FRITZ!Box machen kann sowie das Business APN nutzt.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   kdip
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-04T18:12:59Z" title="2021-10-04 18:12 ">
+   Oktober 4, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/72107-it-freak/?do=hovercard" data-mentionid="72107" href="https://community.magenta.at/profile/72107-it-freak/" rel="">
+     @IT-Freak
+    </a>
+    ,
+   </p>
+   <p>
+    vielen Dank für deine Antwort - werde ich mir auch anschauen!
+   </p>
+   <p>
+    Portweiterleitung wäre kein Problem.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

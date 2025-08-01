@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   TS3 Server betreiben
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   TS3 Server betreiben
+  </h1>
+  <span class="author">
+   knopf
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-04-26T15:13:18Z" title="2018-04-26 15:13 ">
+   April 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Setup:
+   </p>
+   <p>
+    T-Mobile HOMENET mit HUAWEI B525s Router
+   </p>
+   <p>
+    APN: business.gprsinternet
+   </p>
+   <p>
+    alle für TS3 notwendigen Ports an die lokale IP vom TS3-Host weitergeleitet bzw. korrekt eingetragen
+   </p>
+   <p>
+    Problem: der Rechner ist von "außen" trotzdem nicht erreichbar.
+   </p>
+   <p>
+    Kann es sein, dass die Weiterleitung nicht so klappt, wie sie sollte? Oder gibt es sonst noch irgendwelchen geheimen Einstellungen in dem doch recht seltsamen Management?
+   </p>
+   <p>
+    Es wäre wundervoll mal irgendwo eine Antwort von T-Mobile zu bekommen...
+   </p>
+   <p>
+   </p>
+   <p>
+    Beste Grüße
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-04-27T11:10:03Z" title="2018-04-27 11:10 ">
+   April 27, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Die IP Adresse stimmt auch wirklich? Aufpassen, die ändert sich nämlich regelmäßig
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+   <p>
+    Hast du auf dem Teil wo dein TS3 läuft eine Firewall? Ggf auch dort die Ports freigeben?
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   knopf
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-04-27T13:03:30Z" title="2018-04-27 13:03 ">
+   April 27, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Sowohl lokale als auch öffentliche IP stimmen und die Firewall läßt die Verbindung mit Sicherheit durch, da es mit dem Router von der Konkurrenz den ich (noch) habe problemlos funktioniert
+    <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-04-30T09:08:44Z" title="2018-04-30 09:08 ">
+   April 30, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Alles klar
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+   <p>
+    Kannst du mal einen Screenshot deiner Konfiguration hier reinstellen?
+   </p>
+   <p>
+    Danke;
+    <br/>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   knopf
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-02T17:39:36Z" title="2018-05-02 17:39 ">
+   Mai 2, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    bitteschön:
+   </p>
+   <p>
+    <img alt="ts3host.jpg.cda14b0f42708e423313334b533be88f.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="896" src="images/uploads/ts3host.jpg.cda14b0f42708e423313334b533be88f.jpg"/>
+    <img alt="config.JPG.4d4efc5d1cacdfa22bedc5f7efe35a47.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="897" src="images/uploads/config.JPG.4d4efc5d1cacdfa22bedc5f7efe35a47.JPG"/>
+    <img alt="portforward.JPG.074484b41d5854b1391ded527afd7fc6.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="898" src="images/uploads/portforward.JPG.074484b41d5854b1391ded527afd7fc6.JPG"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-03T07:30:33Z" title="2018-05-03 07:30 ">
+   Mai 3, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich bin mir nicht sicher ob z.B.: 9987-9987 funktionioert. Ich glaube du kannst hier keine "Range" angeben. Es sollte reichen, wenn du nur z.b.: 9987 eingibst. Was steht denn in der Beschreibung drüber beim Portforwarding?
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   knopf
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-03T17:02:22Z" title="2018-05-03 17:02 ">
+   Mai 3, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja mir persönlich würde es auch ohne range reichen, aber das System erwartet 2 Werte von mir... ich habe da keine Andere Möglichkeit.
+   </p>
+   <p>
+    edit: und in dem Mini-Heftchen, das mal eine Beschreibung sein möchte wenn es groß ist, steht garnichts über Portweiterleitung. Deswegen bin ich hier... (bitte den sarkastischen Tonfall zu entschuldigen, aber ich doch schon sehr genervt)
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="7 yr" datetime="2018-05-03T17:08:26Z" title="2018-05-03 17:08 ">
+      Mai 3, 2018
+     </time>
+     von knopf
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   knopf
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-10T08:31:51Z" title="2018-05-10 08:31 ">
+   Mai 10, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    push
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-20T04:09:45Z" title="2018-05-20 04:09 ">
+   Mai 20, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wie meinst du dass das System zwei Werte verlangt?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   knopf
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-22T15:35:10Z" title="2018-05-22 15:35 ">
+   Mai 22, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wie im Screenshot zu sehen (und auch von jedem nachzuspielen nehme ich an)... ich MUSS zwei Werte (also eine range) angeben.
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/5b0438a2d2017_2018-05-2217_33_29-MobileBroadband.jpg.436026e4bafece4587bcfd110a5e3b41.jpg">
+     <img alt="2018-05-22 17_33_29-Mobile Broadband.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="922" src="images/uploads/5b0438a2d2017_2018-05-2217_33_29-MobileBroadband.jpg.436026e4bafece4587bcfd110a5e3b41.jpg"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-23T06:51:27Z" title="2018-05-23 06:51 ">
+   Mai 23, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26262" data-ipsquote-contentid="4509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1527003310" data-ipsquote-userid="76144" data-ipsquote-username="knopf">
+    <div class="ipsQuote_citation">
+     vor 15 Stunden schrieb knopf:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Wie im Screenshot zu sehen (und auch von jedem nachzuspielen nehme ich an)... ich MUSS zwei Werte (also eine range) angeben.
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileid="922" href="images/uploads/5b0438a2d2017_2018-05-2217_33_29-MobileBroadband.jpg.436026e4bafece4587bcfd110a5e3b41.jpg" rel="">
+       <img alt="2018-05-22 17_33_29-Mobile Broadband.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="922" src="images/uploads/5b0438a2d2017_2018-05-2217_33_29-MobileBroadband.jpg.436026e4bafece4587bcfd110a5e3b41.jpg"/>
+      </a>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Alles klar, sorry - sieht dann bei dir doch ein wenig anders aus ...
+   </p>
+   <p>
+    Hast du einen Virenschutz/Firewall laufen? Vielleicht dort auch mal schauen ob die Ports freigegeben sind?
+   </p>
+   <p>
+    Lg
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   knopf
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-26T09:53:57Z" title="2018-05-26 09:53 ">
+   Mai 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nein, habe ich nicht bzw ist da alles korrekt eingestellt. Wie gesagt: wenn ich auf den anderen Anbieter umstecke funktioniert es wunderbar. Es muss also an irgendwelchen Einstellungen von T-Mobile liegen...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   baloo1986
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-06-06T19:12:47Z" title="2018-06-06 19:12 ">
+   Juni 6, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das kann auch garnicht funktionieren. Da dein Router keine direkte öffentliche IP bekommt.
+    <br/>
+    <br/>
+    Wie beim Handy, hast du vorher eine 10.x.x.x IP.
+    <br>
+     <br>
+      Das bedeutet nicht dein Router macht das NAT, sondern T-Mobile schon vorher. Ich glaube auch nicht das du eine Fixe IP bekommen kannst ausser man ist Business-Kunde dann zahlt man für eine FIX-IP Monatlich etwas. Soweit ich es in Erinnerung habe.
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   knopf
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-06-07T04:44:57Z" title="2018-06-07 04:44 ">
+   Juni 7, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Fixe IP muss nicht sein, das wäre okay, wenn ich des jedesmal durchgeben muss. Alles was ich will ist, dass das Ding den Port korrekt weiterleitet...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-06-07T10:03:32Z" title="2018-06-07 10:03 ">
+   Juni 7, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26395" data-ipsquote-contentid="4509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1528312367" data-ipsquote-userid="75891" data-ipsquote-username="baloo1986">
+    <div class="ipsQuote_citation">
+     vor 14 Stunden schrieb baloo1986:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das kann auch garnicht funktionieren. Da dein Router keine direkte öffentliche IP bekommt.
+      <br>
+       <br>
+        Wie beim Handy, hast du vorher eine 10.x.x.x IP.
+        <br>
+         <br>
+          Das bedeutet nicht dein Router macht das NAT, sondern T-Mobile schon vorher. Ich glaube auch nicht das du eine Fixe IP bekommen kannst ausser man ist Business-Kunde dann zahlt man für eine FIX-IP Monatlich etwas. Soweit ich es in Erinnerung habe.
+         </br>
+        </br>
+       </br>
+      </br>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Du musst keine fixe IP haben, es reicht, wenn du auf den Business APN umstellst, dann hast du eine öffentlich IP.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   baloo1986
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-06-07T16:47:08Z" title="2018-06-07 16:47 ">
+   Juni 7, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26399" data-ipsquote-contentid="4509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1528365812" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor 6 Stunden schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Du musst keine fixe IP haben, es reicht, wenn du auf den Business APN umstellst, dann hast du eine öffentlich IP.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    OK, das wusste ich nicht. Wieder was dazugelernt
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-06-12T06:17:25Z" title="2018-06-12 06:17 ">
+   Juni 12, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26400" data-ipsquote-contentid="4509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1528390028" data-ipsquote-userid="75891" data-ipsquote-username="baloo1986">
+    <div class="ipsQuote_citation">
+     Am 6/7/2018 um 18:47 schrieb baloo1986:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      OK, das wusste ich nicht. Wieder was dazugelernt
+      <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Öffentlich reicht schon mal damit du via DDNS zu Hause in dein Netzwerk kommst
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

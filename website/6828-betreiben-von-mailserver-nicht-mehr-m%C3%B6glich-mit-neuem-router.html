@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Betreiben von Mailserver nicht mehr möglich mit neuem Router
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Betreiben von Mailserver nicht mehr möglich mit neuem Router
+  </h1>
+  <span class="author">
+   AlBundyFan
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-18T08:40:27Z" title="2021-04-18 08:40 ">
+   April 18, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe mir diese Woche eine neues Kabelmodem holen müssen, weil mein altes sich dauernd ausgeschalten hat von selbst - das ist jetzt natürlich ein anderes Model und nicht mehr das alte von UPC.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe über 10 Jahr einen Mailserver selbst betrieben - damit man Mails von anderen Mailservern empfangen kann, mußte man hier eine Portweiterleitung von Port 25 extern einstellen auf meinen Server.
+   </p>
+   <p>
+    Im neuen Modem ist aber eine Portweiterleitung an dieses Port nicht mehr erlaubt.
+   </p>
+   <p>
+    Und ja - ich kann das interne Port ändern, aber ich kann nicht beeinflussen wie andere Mailserver, von außen, ihre Mails an meinen Mailserver weiterleiten - da ist nun mal das Port 25 der Standard.
+   </p>
+   <p>
+    Ich kann jetzt also weiterhin ganz normal eMails selbst versenden, aber nicht mehr empfangen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Gibt es dafür vielleicht eine Lösung - hat irgendjemand eine Idee?
+   </p>
+   <p>
+    Ich bin leider kein Netzwerkexperte - aber würde es etwas nützen, wenn ich einen eigenen Router kaufe und das Modem von Magenta auf den Bridge-Mode umschalte ....lässt es dann standardmäßig jedes Paket von außen durch und erst mein eigener Router würde prüfen, wie er darauf reagiert oder blockt dann das Kabelmodem trotzdem noch Verkehr?
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Port25.jpg.73363d049cdda8eb58c36a21fb4ace61.jpg">
+     <img alt="Port25.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3065" src="images/uploads/Port25.jpg.73363d049cdda8eb58c36a21fb4ace61.jpg"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-18T17:49:07Z" title="2021-04-18 17:49 ">
+   April 18, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich bin mir nicht sicher ob der Bridge Mode das Problem lösen wird, da einige ISPs bewusst sperren gegen Port 25 haben.
+   </p>
+   <p>
+   </p>
+   <p>
+    Am besten ausprobieren.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   AlBundyFan
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-18T19:11:41Z" title="2021-04-18 19:11 ">
+   April 18, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="41792" data-ipsquote-contentid="6828" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1618768147" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor einer Stunde schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich bin mir nicht sicher ob der Bridge Mode das Problem lösen wird, da einige ISPs bewusst sperren gegen Port 25 haben.
+     </p>
+     <p>
+     </p>
+     <p>
+      Am besten ausprobieren.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    da bin ich mir ziemlich sicher, daß das kein Problem ist, da ich ja, wie gesagt, über 10 Jahre einen Mailserver ohne Probleme betrieben habe mit dem alten Modem. Es liegt ausschliesslich am Modem, daß es nicht mehr geht.
+   </p>
+   <p>
+   </p>
+   <p>
+    Und ausprobieren ist halt teuer - da müßte eich mir ja erst einen eigenen router kaufen .deshalb frage ich ja hier, weil ich hoffe, daß mir jemand schreibt: "ich habe das schon gemacht und es funktioniert"
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-04-18T19:14:38Z" title="2021-04-18 19:14 ">
+      April 18, 2021
+     </time>
+     von AlBundyFan
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-21T08:19:38Z" title="2021-05-21 08:19 ">
+   Mai 21, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wir müssen hier zwei Fragestellungen unterscheiden:
+   </p>
+   <p>
+   </p>
+   <p>
+    1. Ob im Bridge-Modus das Modem auch Port-25 filtert: Ich denke nein, im Bridge-Modus sollten derlei Layer-3/4 Funktionalitäten am Modem deaktiviert sein, es arbeitet als Layer-2-Bridge.
+   </p>
+   <p>
+   </p>
+   <p>
+    2. Ob der Betrieb eines Mailservers an einer ISP-Endkunden-DialUp-IP sinnvoll ist: Nein, das ist für outgoing SMTP (also Mail-Versand vom Home-Mail-Server aus) mittlerweile sinnfrei, da die IP-Ranges von UPC/Magenta wie alle anderen DialUp-IP-Ranges von ISPs von allen seriösen Mailservern blockiert werden. Für incoming Mail (also als MX einer Domain) hingegen sollte das immer noch klappen, da spricht nichts dagegen sofern der Port nicht gefiltert wird.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-05-21T08:22:41Z" title="2021-05-21 08:22 ">
+      Mai 21, 2021
+     </time>
+     von gunnar
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   AlBundyFan
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-21T08:31:20Z" title="2021-05-21 08:31 ">
+   Mai 21, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42403" data-ipsquote-contentid="6828" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1621585178" data-ipsquote-userid="89625" data-ipsquote-username="gunnar">
+    <div class="ipsQuote_citation">
+     vor 12 Minuten schrieb gunnar:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Wir müssen hier zwei Fragestellungen unterscheiden:
+     </p>
+     <p>
+     </p>
+     <p>
+      1. Ob im Bridge-Modus das Modem auch Port-25 filtert: Ich denke nein, im Bridge-Modus sollten derlei Layer-3/4 Funktionalitäten am Modem deaktiviert sein, es arbeitet als Layer-2-Bridge.
+     </p>
+     <p>
+     </p>
+     <p>
+      2. Ob der Betrieb eines Mailservers an einer ISP-Endkunden-DialUp-IP sinnvoll ist: Nein, das ist für outgoing SMTP (also Mail-Versand vom Home-Mail-Server aus) mittlerweile sinnfrei, da die IP-Ranges von UPC/Magenta wie alle anderen DialUp-IP-Ranges von ISPs von allen seriösen Mailservern blockiert werden. Für incoming Mail (also als MX einer Domain) hingegen sollte das immer noch klappen, da spricht nichts dagegen sofern der Port nicht gefiltert wird.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Punkt 1: danke für die Antwort. Das klingt gut.
+   </p>
+   <p>
+   </p>
+   <p>
+    Zum 2.Punkt: Meine IP hat sich seit 15 Jahren nicht geändert. Es stimmt, daß die IP eigentlich eine dynamische ist und die von anderen Mailservern blockiert wird. Dies kann man dadurch umgehen, daß man die Mail über den Magenta-Mailserver schickt. Dort ist es möglich, daß man eine eigene eMail-Adresse verwendet (zb. abc@xy.at) und trotzdem die Mail über den Mailserver von Magenta versendet. Das habe ich bei meinem Mailserver so eingestellt. Die Mails werden dann nicht verworfen, weil der Magenta-Mailserver als der Usprungsserver gilt. (Mail Relay heisst die Funktion)
+   </p>
+   <p>
+    Für empfangene Mails ist es egal.
+   </p>
+   <p>
+    ich habe das &gt; 10 jahre gemacht und es funktioniert ja immer noch.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-05-21T08:32:50Z" title="2021-05-21 08:32 ">
+      Mai 21, 2021
+     </time>
+     von AlBundyFan
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-21T08:37:02Z" title="2021-05-21 08:37 ">
+   Mai 21, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Dein SMTP-Versand-Szenario nennt sich "Mail-Relay über SmartHost".
+   </p>
+   <p>
+   </p>
+   <p>
+    Dass sich die Magenta-Mailserver hierfür derzeit noch "nutzen lassen" ist denke ich auch nur mehr eine Frage der Zeit. Kein seriöser Mailserver-Admin wird auf Dauer ausgehende Mails mit beliebigen Absender-Adressen mehr zulassen (können) ohne unweigerlich auf Blacklists zu landen.
+   </p>
+   <p>
+    Zu viel Zeit würde ich in ein derartiges Setup daher nicht mehr investieren, besser einen kleinen virtuellen Server bei einem Anbieter mit statischer Rechenzentrums-IP und konfigurierbarem PTR/Reverse DNS-Record mieten.
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   AlBundyFan
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-21T08:53:27Z" title="2021-05-21 08:53 ">
+   Mai 21, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42405" data-ipsquote-contentid="6828" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1621586222" data-ipsquote-userid="89625" data-ipsquote-username="gunnar">
+    <div class="ipsQuote_citation">
+     vor 12 Minuten schrieb gunnar:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Dein SMTP-Versand-Szenario nennt sich "Mail-Relay über SmartHost".
+     </p>
+     <p>
+     </p>
+     <p>
+      Dass sich die Magenta-Mailserver hierfür derzeit noch "nutzen lassen" ist denke ich auch nur mehr eine Frage der Zeit. Kein seriöser Mailserver-Admin wird auf Dauer ausgehende Mails mit beliebigen Absender-Adressen mehr zulassen (können) ohne unweigerlich auf Blacklists zu landen.
+     </p>
+     <p>
+      Zu viel Zeit würde ich in ein derartiges Setup daher nicht mehr investieren, besser einen kleinen virtuellen Server bei einem Anbieter mit statischer Rechenzentrums-IP und konfigurierbarem PTR/Reverse DNS-Record mieten.
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    naja - mehr als 10 jahre hat das funktioniert ohne auf einer blacklist zu landen.
+   </p>
+   <p>
+    bei deiner vorgeschlagenen lösung würde es aber monatliche kosten verursachen. so wichtig ist mir der mailserver dann doch nicht.
+   </p>
+   <p>
+   </p>
+   <p>
+    bei einem eigenen router (und bridge modus) wäre das nur ein zusatz, weil seit dem modemtausch auch das WLAN nicht mehr so gut funktioniert wie vorher - ich habe eine 30cm-WLAN-antenne die ich aber am neuen Modem von Magenta nicht mehr anschliessen kann.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

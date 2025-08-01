@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   UPnp Portweiterleitung
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   UPnp Portweiterleitung
+  </h1>
+  <span class="author">
+   MrZett
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-14T10:27:26Z" title="2018-11-14 10:27 ">
+   November 14, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Community,
+   </p>
+   <p>
+    ich spiele seit kurzem ein PC Spiel (WarFrame) und ich bekomme nach dem login eine Meldung:
+   </p>
+   <p>
+    "Strict NAT detected. No UDnP or NAT-PMP detected. Please forward UDP ports 4950 &amp; 4955 to (IP Address)."
+   </p>
+   <p>
+    Nun habe ich versucht im Sicherheitsbereich meines Huawei B529 HomeNet Routers unter Portweiterlung dies zu machen. Leider ohne Erfolg.
+    <br/>
+    Ich habe eine Regel nach dem Muster hier angelegt.
+    <br/>
+    <a href="https://www.t-mobile.at/info-und-support/handyhilfe.php/device/homenet/box-b529s/topic/sicherheit/portweiterleitung-einrichten/9" rel="external nofollow">
+     https://www.t-mobile.at/info-und-support/handyhilfe.php/device/homenet/box-b529s/topic/sicherheit/portweiterleitung-einrichten/9
+    </a>
+   </p>
+   <p>
+    Name: p4950Fwd
+    <br/>
+    WAN: 4950 - 4955
+    <br>
+     IP: die IP meines PCs
+     <br>
+      Protokoll: UPnP oder TCP (weiß ich gerade nicht mehr auswendig)
+      <br/>
+      Status: an
+     </br>
+    </br>
+   </p>
+   <p>
+    OK und übernehmen habe ich auch geklickt und danach den Router rebootet.
+    <br/>
+    Firmware des Routers ist aktuell.
+    <br/>
+    <br/>
+    Was mache ich hier falsch?
+    <br/>
+   </p>
+   <p>
+    LG
+    <br/>
+    Michael
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2018-11-14T10:29:04Z" title="2018-11-14 10:29 ">
+      November 14, 2018
+     </time>
+     von MrZett
+    </strong>
+    <br/>
+    Ergänzung
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-14T11:48:11Z" title="2018-11-14 11:48 ">
+   November 14, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ist das apn auf Business gesetzt?
+   </p>
+   <p>
+    Wenn nicht stellte es auf Business.
+   </p>
+   <p>
+    <a href="https://www.t-mobile.at/info-und-support/handyhilfe.php/device/homenet/box-b529s/topic/sicherheit/apn-andern" rel="external nofollow">
+     https://www.t-mobile.at/info-und-support/handyhilfe.php/device/homenet/box-b529s/topic/sicherheit/apn-andern
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MrZett
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-14T17:44:48Z" title="2018-11-14 17:44 ">
+   November 14, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke, sieht nun gut aus.
+   </p>
+   <p>
+    Was ist da nun anders, wenn ich fragen darf?
+   </p>
+   <p>
+    LG
+    <br/>
+    Michael
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-14T19:50:08Z" title="2018-11-14 19:50 ">
+   November 14, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Da bekommt man eine öffentliche IP anstatt einer privaten IP.
+   </p>
+   <p>
+    (Die private IPs kann man vom Internet aus nicht erreicht, die Gründe warum diese verwendet werden:
+   </p>
+   <p>
+    <a href="https://www.heise.de/newsticker/meldung/IPv4-Adresspool-ausgeschoepft-1181351.html" rel="external nofollow">
+     https://www.heise.de/newsticker/meldung/IPv4-Adresspool-ausgeschoepft-1181351.html
+    </a>
+   </p>
+   <p>
+    <a href="https://www.pcwelt.de/ratgeber/IPv6-Alles-zum-neuen-Web-Standard-517266.html" rel="external nofollow">
+     https://www.pcwelt.de/ratgeber/IPv6-Alles-zum-neuen-Web-Standard-517266.html
+    </a>
+    -&gt; Warum IPv6 jetzt kommen muss)
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

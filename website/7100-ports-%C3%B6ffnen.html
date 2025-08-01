@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Ports öffnen
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Ports öffnen
+  </h1>
+  <span class="author">
+   Sebastian95
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-08-20T11:13:14Z" title="2021-08-20 11:13 ">
+   August 20, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo, ich versuche vergblich den NAT-Typ auf meiner Xbox von strikt auf offen zu bekommen.
+   </p>
+   <p>
+    Ich habe alles probiert APN mit buisness.gprsinternet wurde erstellt und alle nötigen ports wurden freigegeben dennoch ist der NAT-Typ auf strikt hat irgenjemand vl eine lösung für mich?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-08-20T19:10:08Z" title="2021-08-20 19:10 ">
+   August 20, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/90481-sebastian95/?do=hovercard" data-mentionid="90481" href="https://community.magenta.at/profile/90481-sebastian95/" rel="">
+     @Sebastian95
+    </a>
+    <br/>
+    Also du hast als APN "business.gprsinternet", als Benutzername "t-mobile" und als Passwort "tm" eingetragen, richtig?
+   </p>
+   <p>
+    Ansonsten kann es noch an der Sim-Karte liegen. Wenn es eine UPC mobile, tele.ring oder eine ältere T-Mobile Sim ist, sollte ein Tausch Abhilfe schaffen.
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Sebastian95
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-08-21T18:02:47Z" title="2021-08-21 18:02 ">
+   August 21, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ist eine Sim Karte von Magenta, also daran kann es nicht liegen
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+     @NTM
+    </a>
+   </p>
+   <p>
+    LG
+   </p>
+   <p>
+    Sebastian
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-08-21T18:53:18Z" title="2021-08-21 18:53 ">
+   August 21, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Um welchen Router handelt es sich?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Sebastian95
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-08-21T19:35:19Z" title="2021-08-21 19:35 ">
+   August 21, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+     @NTM
+    </a>
+    Huawei B535
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-08-22T08:29:15Z" title="2021-08-22 08:29 ">
+   August 22, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Prüfe noch ob am B535 unter "Erweitert" -&gt; "Sicherheit" -&gt; "NAT-Einstellungen" die Option Cone bzw. Kegel aktiv ist und ob unter "Erweitert" -&gt; "Sicherheit" -&gt; "UPnP-Einstellungen" UPnP aktiv ist.
+   </p>
+   <p>
+    Soltest du damit immer noch einen strikten NAT haben, prüfe Mal, ob die IP-Adresse, welche der Router unter "Erweitert" -&gt; "System" -&gt; "Geräteinformationen" -&gt; WAN-IP-Adresse" angibt, dieselbe ist, wie auf
+    <a href="https://www.whatsmyip.org/" rel="external nofollow">
+     https://www.whatsmyip.org/
+    </a>
+    .
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Sebastian95
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-08-22T10:53:37Z" title="2021-08-22 10:53 ">
+   August 22, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe keine der beiden Einstellungen und die WAN-IP ist eine andere
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

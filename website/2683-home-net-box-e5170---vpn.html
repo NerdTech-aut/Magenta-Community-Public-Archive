@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   home net box e5170 - vpn
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   home net box e5170 - vpn
+  </h1>
+  <span class="author">
+   Thomas H.
+  </span>
+  <br/>
+  <time class="10 yr" datetime="2015-04-28T22:00:00Z" title="2015-04-28 22:00 ">
+   April 28, 2015
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    hallo,
+   </p>
+   <p>
+    ich wuerde folgende einstellungen benoetigen fuer vpn hab aber keine moeglichkeit im webinterface
+   </p>
+   <p>
+    mein lan ist ein 192er und mein vpn server ist im 10er das portforwarding funktioniert und ich komme an den vpn server aber dann nicht auf die anderen maschinen das liegt daran das ich keine route am e5170 anlegen kann die mir alle 10er auf 192er box des vpn server routed - ich konnte mir helfen indem ich einfach all den zielmaschinen diese route gesetzt habe - aber eigentlich moechte ich die nur 1x setzen und nicht auf jeder maschine.
+   </p>
+   <p>
+    wie kann ich das machen?
+   </p>
+   <p>
+    gibt es shell zugang zur box?
+   </p>
+   <p>
+    gibt es moeglichkeit routen zu setzen - wenn ja wie?
+   </p>
+   <p>
+    weiters habe ich auch einen eigenen dns server am laufen und auf der dhcp site fehlt mir die moeglichkeit die dns1/2 zu setzen - hab jetzt die site debugged am wuerfel und im javascript bei
+   </p>
+   <p>
+   </p>
+   <p>
+    function postData() {
+   </p>
+   <p>
+    dhcp_value.PrimaryDns = '0.0.0.0';
+    <br/>
+    dhcp_value.SecondaryDns = '0.0.0.0';
+   </p>
+   <p>
+    gesetzt wie ich sie brauche wieso gibt es diese felder nicht im webinterface?
+   </p>
+   <p>
+    wieso kann der wuerfel kein doppel nat?
+   </p>
+   <p>
+    dh. dyndns adressen gehen nur von aussen und nicht von innen?
+   </p>
+   <p>
+    mfg
+   </p>
+   <p>
+    holli
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Zupporter
+  </span>
+  <br/>
+  <time class="10 yr" datetime="2015-04-29T22:00:00Z" title="2015-04-29 22:00 ">
+   April 29, 2015
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    hallo thomas
+   </p>
+   <p>
+    was du auf alle fälle machen musst ist mal den apn umzustellen auf business.gprsinternet .
+   </p>
+   <p>
+    bei t-mobile bekommst du dann eine öffi Ip adresse und dann kannst tunnel , serverlösungen machen .
+   </p>
+   <p>
+    vg vom zupporter
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Thomas H.
+  </span>
+  <br/>
+  <time class="10 yr" datetime="2015-04-29T22:00:00Z" title="2015-04-29 22:00 ">
+   April 29, 2015
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    hallo,
+   </p>
+   <p>
+    dass ist ja die grund voraussetzung das meine websites und vpn funktionieren aber mir fehlen die einstellmoeglichkeiten am router...
+   </p>
+   <p>
+    mfg
+   </p>
+   <p>
+    holli
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Master66
+  </span>
+  <br/>
+  <time class="10 yr" datetime="2015-05-15T22:00:00Z" title="2015-05-15 22:00 ">
+   Mai 15, 2015
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+    doppel Nat ist soweit ich weiß nicht möglich.
+   </p>
+   <p>
+    Auch gibt es keinen Shell Zugang.
+   </p>
+   <p>
+    Generell ist der Würfel eher für den Otto Normal Internet User gedacht
+   </p>
+   <p>
+    und nicht für solche technischen Dingen ausgelegt.
+   </p>
+   <p>
+    Tut mir leid, dir nichts anderes sagen zu können.
+   </p>
+   <p>
+    LG,
+   </p>
+   <p>
+    Alex
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

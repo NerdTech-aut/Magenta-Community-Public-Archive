@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Ping hoch
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Ping hoch
+  </h1>
+  <span class="author">
+   oida markus
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-14T08:47:28Z" title="2022-05-14 08:47 ">
+   Mai 14, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallöchen alle zusammen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe einen V-Server bei ovh bestellt und eingerichtet. Ovh ist der größe Cloud Provider Europas
+    <a href="https://de.wikipedia.org/wiki/OVH" rel="external nofollow">
+     https://de.wikipedia.org/wiki/OVH
+    </a>
+    <br/>
+    Der Server steht in Frankfurt.
+    <br/>
+    Der Server hat 2 IP adressen, eine IPv4 adresse und eine IPv6 adresse.
+   </p>
+   <p>
+    ipv4: `141.95.101.73`
+    <br/>
+    ipv6: `2001:41d0:701:1000::1b63`
+   </p>
+   <p>
+    wenn ich nun `ping 141.95.101.73` ausführe erhalte ich ~33ms:
+    <br>
+     ```
+     <br/>
+     &gt; ping 141.95.101.73
+     <br/>
+     PING 141.95.101.73 (141.95.101.73) 56(84) bytes of data.
+     <br/>
+     64 bytes from 141.95.101.73: icmp_seq=1 ttl=48 time=33.8 ms
+     <br/>
+     64 bytes from 141.95.101.73: icmp_seq=2 ttl=48 time=32.2 ms
+     <br/>
+     ```
+    </br>
+   </p>
+   <p>
+    traceroute
+    <br/>
+    ```
+    <br/>
+    &gt; sudo traceroute 141.95.101.73
+    <br/>
+    traceroute to 141.95.101.73 (141.95.101.73), 30 hops max, 60 byte packets
+    <br/>
+    1  192.168.1.1 (192.168.1.1)  3.886 ms  3.818 ms  3.796 ms
+    <br/>
+    2  compalhub.home (192.168.0.1)  9.026 ms  9.005 ms  9.460 ms
+    <br/>
+    3  at-vie03c-rt01.as8412.net (217.25.120.4)  28.963 ms  30.924 ms  30.904 ms
+    <br/>
+    4  at-vie03c-rc01.as8412.net (217.25.122.252)  34.941 ms  34.920 ms  34.902 ms
+    <br/>
+    5  80.157.205.57 (80.157.205.57)  38.653 ms 80.157.204.97 (80.157.204.97)  39.718 ms  38.624 ms
+    <br/>
+    6  f-eh4-i.F.DE.NET.DTAG.DE (217.5.94.10)  82.504 ms  54.532 ms  54.495 ms
+    <br/>
+    7  f-eh4-i.F.DE.NET.DTAG.DE (217.5.94.10)  54.478 ms  29.433 ms  33.675 ms
+    <br/>
+    8  fra-5-a9.de.eu (91.121.131.24)  33.639 ms  37.803 ms  37.770 ms
+    <br/>
+    9  * * *
+    <br/>
+    10  * * *
+    <br/>
+    11  * * *
+    <br/>
+    12  fra1-lim1-g1-8k.de.eu (91.121.215.117)  40.210 ms *  47.410 ms
+    <br/>
+    13  * * *
+    <br/>
+    14  * * *
+    <br/>
+    15  * * *
+    <br/>
+    16  * * *
+    <br/>
+    17  * * *
+    <br/>
+    18  * * *
+    <br/>
+    19  * * *
+    <br/>
+    20  141.95.101.73 (141.95.101.73)  32.087 ms  30.335 ms  34.614 ms
+    <br/>
+    ```
+   </p>
+   <p>
+    wenn ich das gleiche für IPv6 wiederhole sieht das ganze viel schlechter aus
+    <br/>
+    ```
+    <br/>
+    &gt; ping 2001:41d0:701:1000::1b63
+    <br/>
+    PING 2001:41d0:701:1000::1b63(2001:41d0:701:1000::1b63) 56 data bytes
+    <br/>
+    64 bytes from 2001:41d0:701:1000::1b63: icmp_seq=1 ttl=40 time=137 ms
+    <br/>
+    64 bytes from 2001:41d0:701:1000::1b63: icmp_seq=2 ttl=40 time=160 ms
+    <br/>
+    ```
+   </p>
+   <p>
+    tracerout:
+    <br/>
+    ```
+    <br/>
+    &gt; sudo traceroute 2001:41d0:701:1000::1b63
+    <br/>
+    traceroute to 2001:41d0:701:1000::1b63 (2001:41d0:701:1000::1b63), 30 hops max, 80 byte packets
+    <br/>
+    1  subtracted4privacy 1.995 ms  2.546 ms  2.519 ms
+    <br/>
+    2  subtracted4privacy  8.104 ms  8.079 ms  9.595 ms
+    <br/>
+    3  subtracted4privacy  29.967 ms  29.937 ms  30.797 ms
+    <br/>
+    4  at-klu-vill-pe01-bundle-ether301-6.v6.aorta.net (2a02:8380:106:8::1)  32.648 ms  32.621 ms  32.595 ms
+    <br/>
+    5  2a02:8386::2:2e:0 (2a02:8386::2:2e:0)  36.460 ms  36.431 ms  37.381 ms
+    <br/>
+    6  2003:0:fe00:400b::1 (2003:0:fe00:400b::1)  39.713 ms * *
+    <br/>
+    7  2003:0:130d:c000::1 (2003:0:130d:c000::1)  53.094 ms  32.001 ms  52.580 ms
+    <br/>
+    8  be102.fra-fr5-pb3-nc5.de.eu (2001:41d0::264a)  203.528 ms * *
+    <br/>
+    9  * * *
+    <br/>
+    10  2001:41d0:aaaa:100::3 (2001:41d0:aaaa:100::3)  203.274 ms 2001:41d0:aaaa:100::5 (2001:41d0:aaaa:100::5)  203.252 ms 2001:41d0:aaaa:100::7 (2001:41d0:aaaa:100::7)  203.273 ms
+    <br/>
+    11  * 2001:41d0:aaaa:100::6 (2001:41d0:aaaa:100::6)  203.159 ms *
+    <br/>
+    12  * * *
+    <br/>
+    13  2001:41d0:0:50::5:f943 (2001:41d0:0:50::5:f943)  307.612 ms  106.806 ms  111.119 ms
+    <br/>
+    14  2001:41d0:0:50::5:3863 (2001:41d0:0:50::5:3863)  117.923 ms 2001:41d0:0:50::5:383b (2001:41d0:0:50::5:383b)  118.872 ms  119.764 ms
+    <br/>
+    15  2001:41d0:0:50::1:f771 (2001:41d0:0:50::1:f771)  117.794 ms 2001:41d0:0:50::1:f76f (2001:41d0:0:50::1:f76f)  106.221 ms 2001:41d0:0:50::1:f773 (2001:41d0:0:50::1:f773)  115.526 ms
+    <br/>
+    16  2001:41d0:0:1:3::4b57 (2001:41d0:0:1:3::4b57)  104.970 ms 2001:41d0:0:1:3::4b5b (2001:41d0:0:1:3::4b5b)  110.185 ms 2001:41d0:0:1:3::4885 (2001:41d0:0:1:3::4885)  109.432 ms
+    <br/>
+    17  2001:41d0:0:1:3::48b1 (2001:41d0:0:1:3::48b1)  111.659 ms 2001:41d0:0:1:3::48af (2001:41d0:0:1:3::48af)  110.724 ms 2001:41d0:0:1:3::48b1 (2001:41d0:0:1:3::48b1)  112.337 ms
+    <br/>
+    18  2001:41d0:0:1:3::4aea (2001:41d0:0:1:3::4aea)  106.160 ms  105.590 ms  106.761 ms
+    <br/>
+    19  * * *
+    <br/>
+    20  2001:41d0:701:1000::1b63 (2001:41d0:701:1000::1b63)  115.775 ms  113.318 ms  110.889 ms
+    <br/>
+    ```
+   </p>
+   <p>
+    wenn diese pings und traceroutes nach 19:00 ausführe, ist der ipv6 ping noch höher und von hohem Datenverlust begleitet.
+    <br/>
+    Mein Wohnsitz ist Klagenfurt und ich hab das feste 250mbit inet.
+    <br/>
+    Wenn ich die gleichen pings von einem anderen Netz ausführe, zB einem Server in Paris, ist die Latenz für ipv4 und ipv6 perfekt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das ganze klingt für mich nach einem Routing Problem? Wenn ja, wo kann ich mich diesbezüglich melden?
+   </p>
+   <p>
+   </p>
+   <p>
+    Liebe Grüße,
+    <br/>
+    Markus
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-16T13:20:27Z" title="2022-05-16 13:20 ">
+   Mai 16, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/93185-oida-markus/?do=hovercard" data-mentionid="93185" href="https://community.magenta.at/profile/93185-oida-markus/" rel="">
+     @oida markus
+    </a>
+    ,
+   </p>
+   <p>
+   </p>
+   <p>
+    Für welche Fragen und Antworten ist die Community geeignet?
+   </p>
+   <p>
+   </p>
+   <p>
+    In der Magenta Community helfen Kunden anderen Kunden bei Fragen, die allgemein beantwortet werden können. Die Expert*innen und Moderator*innen haben aber keinen detaillierten Einblick in deine Vertragsdaten. Ein klassischer Kundenservice ist daher nicht möglich und auch keine Alternative für eine Kontaktaufnahme mit Magenta.
+   </p>
+   <p>
+   </p>
+   <p>
+    In diesem speziellen Fall, empfehlen wir dir als erste Anlaufstelle unser Technikteam (0676 200 7777). Unsere Kolleg*innen beraten dich anschließend zu allen Möglichkeiten.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG, Jonathan.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   802.11ac sehr langsam!?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   802.11ac sehr langsam!?
+  </h1>
+  <span class="author">
+   krahkrah
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-19T19:20:08Z" title="2022-04-19 19:20 ">
+   April 19, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe in meinem PC ein neues Mainboard mit integrierter "MediaTek Wi-Fi 6 MT7921 Wireless LAN Card".
+   </p>
+   <p>
+   </p>
+   <p>
+    Das Kopieren von Dateien von meinem PC auf mein Notebook ist über das WLAN extrem langsam. Es dümpelt mit 100kB/s vor sich hin.
+   </p>
+   <p>
+    Bei einem online Speedtest habe ich bemerkt, dass es beim Upload hakt (250Mbit/s down, 0.5Mbit/s up, was aber bei meinem Magenta Paket eher in Richtung 50Mbit/s gehen sollte).
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn ich beim PC das Protokoll auf 802.11n umschalte, dann funktioniert es schneller. Ich erreiche dann beim Dateienkopieren ungefähr 10MB/s. Das ist zwar besser, aber immer noch langsam.
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+    Außerdem komme ich dann auch nicht mehr auf 250Mbit/s down.
+   </p>
+   <p>
+   </p>
+   <p>
+    An was kann das liegen? Gibt es irgendwelche Einstellungen, die ich ändern muss/kann?
+   </p>
+   <p>
+   </p>
+   <p>
+    In meinem Notebook habe ich einen "Realtek RTL8852AE WiFi 6 802.11ax PCIe Adapter" und der funktioniert bei 802.11ac mit voller Geschwindigkeit (802.11ax kann der Magenta Router nicht).
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-04-19T19:53:05Z" title="2022-04-19 19:53 ">
+      April 19, 2022
+     </time>
+     von krahkrah
+    </strong>
+    <br>
+     Modem -&gt; Router
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-19T21:32:46Z" title="2022-04-19 21:32 ">
+   April 19, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/89382-krahkrah/?do=hovercard" data-mentionid="89382" href="https://community.magenta.at/profile/89382-krahkrah/" rel="">
+      @krahkrah
+     </a>
+    </span>
+    <br/>
+    Nur der PC hat das Problem mit dem langsamen Upload, wenn ich dies richtig verstanden habe?
+    <br/>
+    <br/>
+    Sind die neusten Treiber für die MediaTek W-Lan Karte bereits installiert?
+   </p>
+   <p>
+    Sieh mal nach, ob für die MediaTek W-Lan Karte ein MediaTek Treiber installiert ist und wenn ja welche Version des Treibers im Geräte-Manager gelistet ist. Prüfe danach, ob vielleicht ein neuerer Treiber auf der Herstellerseite verfügbar ist.
+    <br/>
+    Ich hätte gesehen, dass Lenovo, erst Anfang des Monats, einen
+    <a href="https://support.lenovo.com/at/de/downloads/ds552327-mediatek-mt7921-wireless-lan-driver-for-windows-10-version-2004-or-later-thinkpad-l14-gen-2-types-20x5-20x6-l15-gen-2-types-20x7-20x8" rel="external nofollow">
+     neuen Treiber für diese W-Lan Karte auf deren Webseite
+    </a>
+    veröffentlicht hat.
+    <br>
+     <br>
+      Falls vorhanden: Ist die W-Lan Antenne, gut an das Motherboard angeschraubt?
+      <br/>
+     </br>
+    </br>
+   </p>
+   <p>
+    Es wäre außerdem interessant, ob dieses Problem nur bei der Kombination Mediathek W-Lan Karte und Modem auftritt, oder auch mit anderen Geräten als dem Modem. Beliebt das Problem also weiterhin bestehen, wenn du einen Hotspot mit dem Handy macht und den PC damit verbindest?
+    <br/>
+    Sollten sowohl PC als auch Notebook mit Windows 10 oder Windows 11 arbeiten könntest du es auch mit der Umgebungsfreigabe testen. Mit der Umgebungsfreigabe kannst du Daten, mit einer direkten W-Lan-Verbindung, von Gerät zu Gerät übertragen, ohne auf ein vorhandenes W-Lan Netz angewiesen zu sein. Die Umgebungsfreigabe muss in den Windows Einstellungen zuerst aktiviert werden. Mehr Infos dazu auf der
+    <a href="https://support.microsoft.com/de-de/windows/teilen-sie-dinge-mit-ger%C3%A4ten-in-der-n%C3%A4he-in-windows-0efbfe40-e3e2-581b-13f4-1a0e9936c2d9#WindowsVersion=Category" rel="external nofollow">
+     Support Webseite von Microsoft
+    </a>
+    .
+    <br/>
+    <br/>
+    Wobei so wie es aussieht, haben ziemlich viele Probleme mit dieser MediaTek W-Lan Karte.
+    <br/>
+    Ein Lösungsansatz, welchen ich gefunden habe, ist beim Modem die Kanalbreite von 80 MHz auf 40 MHz zu reduzieren. Wobei auch hier die Downloadgeschwindigkeit leiden könnte.
+    <br/>
+    Viele scheinen diese MediaTek W-Lan Karte durch Intel WiFi 6 W-Lan Karten zu ersetzen.
+    <br/>
+    <br/>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   krahkrah
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-20T08:52:21Z" title="2022-04-20 08:52 ">
+   April 20, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Nur der PC hat das Problem mit dem langsamen Upload, wenn ich dies richtig verstanden habe?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Ja, genau! Alle anderen Geräte sind mit dem Magenta Router normal schnell.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+      Sind die neusten Treiber für die MediaTek W-Lan Karte bereits installiert?
+     </p>
+     <p>
+      Sieh mal nach, ob für die MediaTek W-Lan Karte ein MediaTek Treiber installiert ist und wenn ja welche Version des Treibers im Geräte-Manager gelistet ist. Prüfe danach, ob vielleicht ein neuerer Treiber auf der Herstellerseite verfügbar ist.
+      <br>
+       Ich hätte gesehen, dass Lenovo, erst Anfang des Monats, einen neuen Treiber für diese W-Lan Karte auf deren Webseite veröffentlicht hat.
+      </br>
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Ich habe keinen neueren Treiber gefunden. Das Mainboard ist ein "Asus TUF Gaming B550-Plus WiFi II". Aber ich schaue nochmal...
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Falls vorhanden: Ist die W-Lan Antenne, gut an das Motherboard angeschraubt?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Ja! An die Antenne dachte ich auch schon. Ich habe zwei verschiedene ausprobiert, hat aber nicht geholfen. Der Router ist im gleichen Zimmer und nur 3 Meter entfernt.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Beliebt das Problem also weiterhin bestehen, wenn du einen Hotspot mit dem Handy macht und den PC damit verbindest?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Mit meinem (eher älterem) Handy ist der Hotspot anscheinend nur 802.11n und das funktioniert dann sowieso.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Sollten sowohl PC als auch Notebook mit Windows 10 oder Windows 11 arbeiten könntest du es auch mit der Umgebungsfreigabe testen. Mit der Umgebungsfreigabe kannst du Daten, mit einer direkten W-Lan-Verbindung, von Gerät zu Gerät übertragen, ohne auf ein vorhandenes W-Lan Netz angewiesen zu sein. Die Umgebungsfreigabe muss in den Windows Einstellungen zuerst aktiviert werden.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Gute Idee! Ich werde das ausprobieren. Aber es klingt, als ob dann Bluetooth verwendet wird?
+   </p>
+   <p>
+    Für das Kopieren von Dateien auf mein Notebook könnte das ein Workaround sein, aber am PC Sachen ins Internet hochladen würde ich schon gerne direkt über den Router.
+    <img alt=":/" data-emoticon="" height="20" src="images/emoticons/tma_crying-o.png" srcset="images/emoticons/tma_crying-o@2x.png 2x" title=":/" width="20"/>
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Wobei so wie es aussieht, haben ziemlich viele Probleme mit dieser MediaTek W-Lan Karte.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Ja, habe ich auch gelesen. In Linux soll sie besser funktionieren als in Windows.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      <br/>
+      Ein Lösungsansatz, welchen ich gefunden habe, ist beim Modem die Kanalbreite von 80 MHz auf 40 MHz zu reduzieren. Wobei auch hier die Downloadgeschwindigkeit leiden könnte.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Ja, das reduziert die Geschwindigkeit leider ähnlich wie auf 802.11n umzuschalten.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Viele scheinen diese MediaTek W-Lan Karte durch Intel WiFi 6 W-Lan Karten zu ersetzen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Hm... das nächste Mal kaufe ich mir wieder ein Mainboard mit möglichst wenig drauf.
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+    Ist scheinbar doch besser für WLAN eine PCIe Karte zu nehmen.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke für deine Tipps!
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-20T10:25:05Z" title="2022-04-20 10:25 ">
+   April 20, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Der Treiber von Oktober 2021 ist wohl nicht mehr der neuste, auch wenn Asus dies behauptet.
+   </p>
+   <p>
+    Versuche mal einen neueren Treiber von einer anderen vertrauenswürdigen Quelle zu verwenden.
+   </p>
+   <p>
+    Wenn der Router und der PC so nahe beisammen sind, besteht nicht die Möglichkeit ein Lan Kabel zu verwenden?
+   </p>
+   <p>
+    Die Umgebungsfreigabe verwendet Adhoc WiFi. Die Datenübertragung ist deutlich schneller als über Bluetooth.
+   </p>
+   <p>
+    Wenn ein hochwertige W-Lan Karte verbaut ist, dann gibt Hersteller auch gerne das genaue Modell an.
+   </p>
+   <p>
+   </p>
+   <p>
+    So wie es aussieht lässt sich das Gehäuse mit den W-Lan Antennen Anschlüssen auch bei deinem Board entfernen. Darin sollte sich eine austauschbare W-Lan Karte befinden. Sollte Asus hier eine Mini PCIe W-Lan Karte (zwei Schraublöcher) verwenden, statt einer M.2 PCIe W-Lan Karte (ein Schraubloch), ist es etwas schwieriger geeigneten Ersatz zu finden, besonders wenn es eine moderne Karte mit WiFi 6 sein soll. Nachdem sich die Schrauben, des Gehäuses mit den W-Lan Antennen Anschlüssen, auf der Unterseite des Boards befinden, ist es allerdings ziemlich umständlich dieses zu entfernen, wenn das Board in einem Case ist.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   krahkrah
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-20T11:13:43Z" title="2022-04-20 11:13 ">
+   April 20, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+      Der Treiber von Oktober 2021 ist wohl nicht mehr der neuste, auch wenn Asus dies behauptet.
+     </p>
+     <p>
+      Versuche mal einen neueren Treiber von einer anderen vertrauenswürdigen Quelle zu verwenden.
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Kennst du solche Quellen? Direkt bei MediaTek scheint es keine Treiber zu geben?
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Wenn der Router und der PC so nahe beisammen sind, besteht nicht die Möglichkeit ein Lan Kabel zu verwenden?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Doch, aber das Kabel liegt dann halt quer durchs Zimmer. Längerfristig habe ich aber vor Netzwerkdosen und Kabel in der Wand zu verlegen.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      So wie es aussieht lässt sich das Gehäuse mit den W-Lan Antennen Anschlüssen auch bei deinem Board entfernen. Darin sollte sich eine austauschbare W-Lan Karte befinden. Sollte Asus hier eine Mini PCIe W-Lan Karte (zwei Schraublöcher) verwenden, statt einer M.2 PCIe W-Lan Karte (ein Schraubloch), ist es etwas schwieriger geeigneten Ersatz zu finden, besonders wenn es eine moderne Karte mit WiFi 6 sein soll. Nachdem sich die Schrauben, des Gehäuses mit den W-Lan Antennen Anschlüssen, auf der Unterseite des Boards befinden, ist es allerdings ziemlich umständlich dieses zu entfernen, wenn das Board in einem Case ist.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Danke! Das werde ich mir ansehen. Wäre super, wenn es eine standard M.2 PCIe Karte wäre, die man austauschen könnte.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

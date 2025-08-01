@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Die Kunst der Portweiterleitung -  ZTE MC801A, Reverse Proxy und der Zugriff von außen!
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Die Kunst der Portweiterleitung -  ZTE MC801A, Reverse Proxy und der Zugriff von außen!
+  </h1>
+  <span class="author">
+   GruPa
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-03T20:57:46Z" title="2024-01-03 20:57 ">
+   Januar 3, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Abend,
+   </p>
+   <p>
+    aktuell habe ich Schwierigkeiten mit der Portweiterleitung meines ZTE MC801A Routers. Mein Ziel ist es, von außen auf meine internen Anwendungen zuzugreifen, und dazu nutze ich einen Reverse-Proxy. Ich habe bereits einen DynDNS eingerichtet, der auf meine öffentliche IP-Adresse verweist, die ich durch das Umstellen des APN erhalten habe. Dieser funktioniert auch soweit und ich kann extern auf meinen Router zugreifen.
+   </p>
+   <p>
+    Anschließend habe ich das Port-Forwarding für die Ports 443 und 80 aktiviert und auf meinen Reverse Proxy weitergeleitet. Leider ohne Erfolg, da mir nur die Konfigurationsseite des Routers angezeigt wird. Laut
+    <a href="https://www.yougetsignal.com/tools/open-ports/" rel="external nofollow">
+     https://www.yougetsignal.com/tools/open-ports/
+    </a>
+    sind die Ports allerdings beide auf offen gestellt.
+    <br/>
+    Vielen Dank schon im vorraus!
+   </p>
+   <p>
+   </p>
+   <p>
+    Bg
+   </p>
+   <p>
+    Grupa
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    <br/>
+    APN:
+    <br/>
+    <img alt="image.png.43905d74c2ddb568115db8ed79a99ca2.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5286" data-ratio="62.42" src="images/uploads/image.png.43905d74c2ddb568115db8ed79a99ca2.png" width="910"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Port Forwarding:
+    <br>
+     <img alt="image.png.30e9a2ac44edfeb499a397bd416dbe17.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5287" data-ratio="98.54" src="images/uploads/image.png.30e9a2ac44edfeb499a397bd416dbe17.png" width="756"/>
+    </br>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-01-03T21:01:10Z" title="2024-01-03 21:01 ">
+      Januar 3, 2024
+     </time>
+     von GruPa
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-04T12:46:58Z" title="2024-01-04 12:46 ">
+   Januar 4, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56282" data-ipsquote-contentid="9325" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1704315466" data-ipsquote-userid="98465" data-ipsquote-username="GruPa">
+    <div class="ipsQuote_citation">
+     Am 3.1.2024 um 21:57 schrieb GruPa:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Vielen Dank schon im vorraus!
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hey, eine Recherche im Internet brachte folgende Infos hervor:
+   </p>
+   <p>
+   </p>
+   <p>
+    Es gibt ein paar mögliche Ursachen für das Problem mit der Portweiterleitung Ihres ZTE MC801A Routers.
+   </p>
+   <p>
+    - Die Portweiterleitung ist nicht richtig konfiguriert. Stellen Sie sicher, dass Sie die Ports 443 und 80 richtig auf Ihren Reverse Proxy - weitergeleitet haben. Die interne IP-Adresse des Reverse Proxies sollte die IP-Adresse des internen Servers sein, auf den Sie von außen zugreifen möchten.
+   </p>
+   <p>
+    - Der Reverse Proxy ist nicht richtig konfiguriert. Stellen Sie sicher, dass der Reverse Proxy die Anfragen an den internen Server weiterleitet.
+   </p>
+   <p>
+    - Die Firewall Ihres Routers blockiert die Ports. Stellen Sie sicher, dass die Firewall Ihres Routers die Ports 443 und 80 nicht blockiert.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hier sind einige Schritte, die Sie zur Fehlerbehebung ausführen können:
+   </p>
+   <p>
+    - Überprüfen Sie die Konfiguration der Portweiterleitung. Stellen Sie sicher, dass die Ports 443 und 80 richtig auf Ihren Reverse Proxy weitergeleitet sind. Die interne IP-Adresse des Reverse Proxies sollte die IP-Adresse des internen Servers sein, auf den Sie von außen zugreifen möchten.
+   </p>
+   <p>
+    - Überprüfen Sie die Konfiguration des Reverse Proxies. Stellen Sie sicher, dass der Reverse Proxy die Anfragen an den internen Server weiterleitet.
+   </p>
+   <p>
+    - Überprüfen Sie die Firewall Ihres Routers. Stellen Sie sicher, dass die Firewall Ihres Routers die Ports 443 und 80 nicht blockiert.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn Sie alle diese Schritte ausgeführt haben und das Problem immer noch besteht, können Sie sich an den Support von Magenta wenden.
+   </p>
+   <p>
+    Hier sind einige weitere Tipps zur Fehlerbehebung:
+   </p>
+   <p>
+    - Verwenden Sie einen anderen Browser, um die Portweiterleitung zu testen.
+   </p>
+   <p>
+    - Versuchen Sie, von einem anderen Gerät aus auf die Portweiterleitung zuzugreifen.
+   </p>
+   <p>
+    - Starten Sie Ihren Router neu.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hoffe, diese Informationen helfen dir, das Problem zu lösen. LG JD.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

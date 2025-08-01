@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Extrem langsame Verbindung auf bestimmten Routen
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Extrem langsame Verbindung auf bestimmten Routen
+  </h1>
+  <span class="author">
+   flx
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-01-21T00:03:12Z" title="2023-01-21 00:03 ">
+   Januar 21, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Liebe Community,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich wollte mal nachfragen, ob einige von euch das folgende Problem bei der eigenen Verbindung reproduzieren können:
+    <br/>
+    <br/>
+    Mir ist schon in der Vergangenheit ab und zu aufgefallen, dass einige Routen nur mit einer sehr geringen Bandbreite hergestellt werden können (da mir das aber wie gesagt nur vereinzelt aufgefallen ist, waren das wohl meist nur Routen, die ich selten für die Übertragung größerer Datenmengen benutzt habe).
+   </p>
+   <p>
+    Nun muss ich aber häufiger beruflich auf eine Netzwerkressource zugreifen, die On-Premise bei meinem Arbeitgeber gehostet ist.
+   </p>
+   <ul>
+    <li>
+     Die Firma häng über Kabelplus mit Glasfaser (1 Gig) am Internet.
+    </li>
+    <li>
+     Wenn ich von meinem Magenta Gaming 300 Tarif (Kabel) auf den Firmenserver zugreife, klappt das mit 20 bis max 30 Mbit.
+    </li>
+    <li>
+     Ein Kollege von mir (ebenfalls Magenta Gaming 300) hat bei sich zu Hause dasselbe Problem
+    </li>
+    <li>
+     Eine weitere Kollegin (100 Mbit Down von Kabelplus (Kabel)) kann aber problemlos mit den vollen 100 Mbit zugreifen.
+    </li>
+   </ul>
+   <p>
+   </p>
+   <p>
+    Nach unterschiedlichen Tests (iperf3, Filetransfers, etc.) kam ich irgendwann zum Schluss, dass es wohl wirklich am Peering/Routing zwischen Magenta und Kabelplus liegt.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Nach etwas rumprobieren und testen, konnte ich dasselbe Problem auch zu Servern von hetzner.de beobachten:
+    </strong>
+   </p>
+   <p>
+    Download dieser Datei:
+    <a href="https://speed.hetzner.de/10GB.bin" rel="external nofollow">
+     https://speed.hetzner.de/10GB.bin
+    </a>
+    ; Einmal über meinen Magenta-Anschluss und als Kontrolldownload auch über zwei weitere ISPs. Die Tests wurden mehrmals wiederholt (auch unterschiedliche Tageszeiten), mit minimalen Schwankungen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Via Magenta Gaming 300 (300 Down, 50 Up): Durchschnittlich
+    <strong>
+     <u>
+      1,8 MB/s
+     </u>
+    </strong>
+    <br/>
+    <img alt="grafik.png.497a3119e7c4de18053a8196da887913.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4442" src="images/uploads/grafik.png.497a3119e7c4de18053a8196da887913.png"/>
+   </p>
+   <p>
+    (man verzeihe mir, dass ich hier nicht die vollen 2 Stunden gewartet habe)
+   </p>
+   <p>
+   </p>
+   <p>
+    Via Brennercom (ITA; 100 Down, 20 Up): Durchschnittlich
+    <strong>
+     <u>
+      10,1 MB/s
+     </u>
+    </strong>
+   </p>
+   <p>
+    <img alt="grafik.png.2f8794a5c49805346d123b75a0d81665.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4440" src="images/uploads/grafik.png.2f8794a5c49805346d123b75a0d81665.png"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Via Kabelplus 1 Gig (Firmenserver): Durchschnittlich
+    <u>
+     <strong>
+      108 MB/s
+     </strong>
+    </u>
+   </p>
+   <p>
+    <img alt="grafik.png.a4dc8ba6b25c9517f9bc050d846163a2.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4438" src="images/uploads/grafik.png.a4dc8ba6b25c9517f9bc050d846163a2.png"/>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Dass es in meinem Netzwerk aber durchaus auch schneller geht, zeigt der Download einer Datei von tele2.net
+   </p>
+   <p>
+    <img alt="grafik.png.65b19a18de32d98895e6cade15182f96.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4443" src="images/uploads/grafik.png.65b19a18de32d98895e6cade15182f96.png"/>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich würde mich sehr freuen, wenn einige das mal ausprobieren könnten. Vielleicht hat ja jemand eine Idee, wie man dem Problem entgegenwirken kann.
+   </p>
+   <p>
+   </p>
+   <p>
+    Lg
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     PS/Update:
+    </strong>
+    <br>
+     Es gibt das Problem aktuell auch, wenn ich mich zu meinem V-Server bei Strato verbinden will (immer mit der ungefähr selben Geschwindigkeit von 20-30 Mbit). Ich weiß, dass genau dieser Server auch schon mal schneller erreichbar war. Heißt, das Problem gibt es nicht seit jeher.
+    </br>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2023-01-21T00:35:32Z" title="2023-01-21 00:35 ">
+      Januar 21, 2023
+     </time>
+     von flx
+    </strong>
+   </span>
+  </div>
+  <hr/>
+ </body>
+</html>

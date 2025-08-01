@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Modem/Router AF 22 --&gt; Netgear --&gt; NAS Zugriff nicht möglich
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Modem/Router AF 22 --&gt; Netgear --&gt; NAS Zugriff nicht möglich
+  </h1>
+  <span class="author">
+   kerschi99
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-02-11T14:30:21Z" title="2018-02-11 14:30 ">
+   Februar 11, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo liebe Community,
+   </p>
+   <p>
+    ich bin gestern in der Früh bis halb drei gesessen und schon halb verzweifelt.Habe eine NAS bekommen und möchte von extern zugreifen um einige Dienste nützen zu können.
+   </p>
+   <p>
+    Themestellung:
+    <br/>
+    T-Mobile Router AF 22 (Modem und mein Internetzugang)  --&gt; dahinter über ein Netzwerkkabel zum Router (Netgear R7000) auf den WAN Eingang --&gt; daran hängt meine NAS
+   </p>
+   <p>
+    So wie ich nun gelesen habe gibt es zwei Möglichkeiten:
+    <br/>
+    a) den T-mobile Cube nur als Modem nützen (bridge) --&gt; wäre mein Favorit
+    <br/>
+    b) Portweiterleitung (5000-5001 zum Beispiel)
+   </p>
+   <p>
+    Was habe ich bereits probiert (Nach lesen in diesem Forum):
+    <br>
+     a) Bridge Option finde ich keine, so wie ich das gelesen habe düfte es auch nicht sehr einfach werden  :-(
+     <br/>
+     b) Ich habe auf business.gprsinternet gewechselt. Weiters habe ich dann im t-mobile Cube unter Sicherheit-Virtueller Server eine Portweiterleitung durchgeführt (siehe Anhang) und übernommen.
+     <br/>
+     Danach am Netgearrouter unter Portweiterleitung die Ports für das NAS freigegeben.
+    </br>
+   </p>
+   <p>
+    Zur Topologie:
+    <br/>
+    er T-mobile Cube nutzt 192.168.1.xxx (so zeigt es mir zumindest der Netgear Router an)
+    <br/>
+    der Netgear nutzt 10.0.0.xxx
+    <br/>
+    Die NAS hat eine fixe IP am Netgearrouter 10.0.0.xx
+   </p>
+   <p>
+    Ich bekomme einfach keine Verbindung, habe auch versucht durch einen externen Portscanner zu überprüfen ob der Port offen ist, ist er aber leider nicht :-(.
+   </p>
+   <p>
+    Sicherlich stelle ich mich zu blöd an, bin leider ein Laie bei dem Thema.... Wo liegt mein Fehler bzw. meine Fehler?
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/5a804e33ccfec_VirtuelleServer.JPG.1516f4ab1f6acbc84e5386cfbb58887e.JPG">
+     <img alt="Virtuelle Server.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="757" src="images/uploads/5a804e33ccfec_VirtuelleServer.JPG.1516f4ab1f6acbc84e5386cfbb58887e.JPG"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/5a80520b02cd5_PortweiterleitungNetgear.JPG.4f4d55724dc101422e8fe4267092d731.JPG">
+     <img alt="Portweiterleitung Netgear.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="758" src="images/uploads/5a80520c3bffe_PortweiterleitungNetgear.thumb.JPG.23bce90f1b1dd27d29965d59e357b557.JPG"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-02-13T10:28:11Z" title="2018-02-13 10:28 ">
+   Februar 13, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Blöde Frage, aber läuft auf dem Port 5000/5001 auch wirklich etwas? Andernfalls werden dir die Tools auch immer anzeigen, dass der Port zu ist, obwohl die Weiterleitung eingerichtet ist.
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   kerschi99
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-02-14T16:42:00Z" title="2018-02-14 16:42 ">
+   Februar 14, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Mario,
+   </p>
+   <p>
+    vielen Dank für deine Antwort. Ja da läuft was, der Server läuft 24/12 und auch die Anwendungen laufen entsprechend.
+   </p>
+   <p>
+    Ich habe nochmal alles kontrolliert und nochmal einen Portscan gemacht. Was soll ich sagen --&gt; auf einmal hat es geklappt. Ich konnte die Ports weiterleiten wie obe beschrieben.
+   </p>
+   <p>
+    Leider habe ich es nicht geschafft, dem Router DHCP wegzunehmen und aus ihm nur ein Modem zu machen, aber ich bin schon mal zufrieden ...
+   </p>
+   <p>
+    Trotzdem danke an alle
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-02-14T20:35:36Z" title="2018-02-14 20:35 ">
+   Februar 14, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das klingt ja schon mal gut
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+   <p>
+    Hast du bzgl. des DHCP Zeugs auch wirklich alle Einstellungen durchsucht? Ich hab so ein Tei leider nicht bei mir, daher kann ich dir nicht viel über das Menü/Einstellungen sagen
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   kerschi99
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-02-15T05:14:58Z" title="2018-02-15 05:14 ">
+   Februar 15, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    ja, daran liegt es nicht. Der Router (dann eher nur mehr Modem) ist dann einfach nicht mehr erreichbar.
+   </p>
+   <p>
+    Ich bin mir unsicher, müsste ich dem T-Mobile Router/Modem nicht eine Nummer im Nummernkreis des Netgear Routers geben 10.0.....? Sollte er dann immer noch im WAN beim Netgear angesteckt werden oder an einem LAN Stecker? Fixe IP mit Mac Zuordnung auch beim Netgear hinterlegen? Fragen über Fragen ....
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/DHCP.JPG.601e508bea38bb219969992ec6d65a06.JPG">
+     <img alt="DHCP.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="764" src="images/uploads/DHCP.thumb.JPG.9f2cf488f1b3a7780eca6e6dc6ad98b9.JPG"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-02-16T08:42:33Z" title="2018-02-16 08:42 ">
+   Februar 16, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Also wenn du DHCP deaktiverst, dann musst du dem Gerät, dass du am T-Mobile Router ansteckst eine IP Adresse aus dem Bereich des T-Mobile Router geben - sonst wird das nicht funktionieren
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-02-16T09:04:28Z" title="2018-02-16 09:04 ">
+   Februar 16, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hast du die Firewall Einstellungen auf dem Ding mit dem Serverdienst angepasst?
+   </p>
+   <p>
+    Ich hatte da ewig Probleme bei Minecraft unter Windows
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-02-17T15:12:54Z" title="2018-02-17 15:12 ">
+   Februar 17, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25503" data-ipsquote-contentid="4381" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518771868" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     Am 2/16/2018 um 10:04 schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hast du die Firewall Einstellungen auf dem Ding mit dem Serverdienst angepasst?
+     </p>
+     <p>
+      Ich hatte da ewig Probleme bei Minecraft unter Windows
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich versuche gerade zu verstehen wie das das DHCP Problem lösen soll
+    <img alt="O.o" data-emoticon="" height="20" src="images/emoticons/tma_confused-o.png" srcset="images/emoticons/tma_confused-o@2x.png 2x" title="O.o" width="20"/>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Kein Internet mit Huawei AF22 wenn Powerline angeschlossen ist!
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Kein Internet mit Huawei AF22 wenn Powerline angeschlossen ist!
+  </h1>
+  <span class="author">
+   Peppi
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-02-02T17:47:23Z" title="2019-02-02 17:47 ">
+   Februar 2, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Community, ich habe mich wegen dem Thema hier angemeldet, da ich nicht weiterkomme.
+   </p>
+   <p>
+    Ich habe eine Huawei Home Net Box AF22 und einen Powerline Adapter TL-PA4010 von TP-Link.
+    <br/>
+    Sobald ich ein Ethernetkabel an die Home Net Box und den Powerlanadapter anschließe, hat die Home Net Box keinen Internetzugang mehr.
+    <br/>
+    Ethernetkabel ist OK
+    <br/>
+    DHCP ist aktiviert
+    <br>
+     WLAN-Verbindung zum Powerline Adapter ist OK
+     <br>
+      <br>
+       Wenn ich meinen PC via Ethernet Kabel an die Home Net Box anschließe bleibt die Internetverbindung aufrecht (WLAN und Ethernet)
+      </br>
+     </br>
+    </br>
+   </p>
+   <p>
+    Kann mir jemand helfen???
+    <br/>
+    <br/>
+    <br/>
+    MfG
+    <br/>
+    Peppi
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2019-02-02T17:54:44Z" title="2019-02-02 17:54 ">
+      Februar 2, 2019
+     </time>
+     von Peppi
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-02-03T13:00:27Z" title="2019-02-03 13:00 ">
+   Februar 3, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Setze einmal die Powerline Adapter zurück
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2019-02-06T13:05:27Z" title="2019-02-06 13:05 ">
+      Februar 6, 2019
+     </time>
+     von IT-Freak
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-02-04T14:41:35Z" title="2019-02-04 14:41 ">
+   Februar 4, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich hatte noch keinen Powerline Adapter in Verwendung... deswegen die Frage, haben diese Adapter auch einen DHCP Server aktiv?
+   </p>
+   <p>
+    Fall ja, den am besten mal ausschalten und testen. Auf der HomeNet Box ist der Standardmässig ja aktiv...
+   </p>
+   <p>
+    eventuell entsteht dadurch dieses Problem.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-02-04T15:00:21Z" title="2019-02-04 15:00 ">
+   Februar 4, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Er schreibt, dass DHCP aktiv ist aber ich gehe davon aus, dass das die Tmobile Box betrifft.
+    <br>
+     Was ich so auf der Herstellerseite rausgelesen habe, ist das "Plug and Play".
+     <br>
+      Ich gehe mal nicht davon aus, dass das Teil einen DHCP Server hat - das funkt nur weiter.
+      <br>
+       <br/>
+       Gepairt hast du das Ganze?
+       <br/>
+       <br/>
+       LG
+       <br/>
+       Christian
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   sepp_s
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-02-08T10:56:07Z" title="2019-02-08 10:56 ">
+   Februar 8, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi!
+   </p>
+   <p>
+    Ich hatte, bzw. habe das selbe Problem. Die blauen LED für den Internetempfang sind weg, oder?
+   </p>
+   <p>
+    Verbinde dich mal mit einem PC mit dem WLAN vom T-mobile Router. Schau dir deine interne IP Adresse an, die wird sich vermutlich auf 192.168.2.xxx geändert haben.
+   </p>
+   <p>
+    Bei mir funktioniert folgender Workaround:
+   </p>
+   <p>
+    1. T-Mobile Router und alle Powerline Geräte ausstecken / ausschalten. Netzwerkkabel zwischen T-Mobile und Powerline eingesteckt lassen.
+   </p>
+   <p>
+    2. T-Mobile Router in die Steckdose und einschalten.
+   </p>
+   <p>
+    3. Hauptteil (Master) vom Powerline in die Steckdose. Wenn es ganz gestartet ist, den Knopf zum pairen (heisst das so?) drücken.
+   </p>
+   <p>
+    4. Das erste Empfangsteil (Slave) vom Powerline in eine Steckdose im selben Raum und ebenfalls pairen.
+   </p>
+   <p>
+    5. Mit weiteren Slaves wie unter 4. verfahren.
+   </p>
+   <p>
+    6. Wenn du Endgeräte mit statischer IP hast, musst du ggf. schauen dass diese dann wieder für alle Geräte an den ersten 3 Positionen gleich ist. (192. 168.1.xxx bzw. 192.168.2.xxx,...)
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich muss das nach jedem Stromausfall leider immer machen, aber anders habe ich es nicht geschafft. Resetten musste ich die Geräte nicht, bzw. ich habe es nur beim ersten Versuch gemacht.
+   </p>
+   <p>
+    Hoffentlich führt das bei dir auch zum Erfolg!
+   </p>
+   <p>
+    Viel Glück.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-02-08T17:47:49Z" title="2019-02-08 17:47 ">
+   Februar 8, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke. Interessant.
+   </p>
+   <p>
+    Aber die Sache mit einem Stromausfall ist nicht schön.  Ich kann es leider nicht testen, da ich die Geräte nicht kenne.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

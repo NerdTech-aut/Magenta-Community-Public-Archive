@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Hilfe bei Portweiterleitung -  Schwierigkeiten mit Port 4433 (TCP) von extern auf interne LAN-IP weiterzuleiten.
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Hilfe bei Portweiterleitung -  Schwierigkeiten mit Port 4433 (TCP) von extern auf interne LAN-IP weiterzuleiten.
+  </h1>
+  <span class="author">
+   Stephan68
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-02T14:16:57Z" title="2024-01-02 14:16 ">
+   Januar 2, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hat jemand einen Tip wie man die Portweiterleitung zum Laufen bringt. Versuche verzweifelt den Port 4433 für TCP an eine im LAN fix vergebene IP-Adresse von extern weiterzuleiten. Intern (LAN) ist das System über den Port erreichbar. Wenn ich die den Port extern über die WAN-IP des Routers abfrage wird er mir als offen angezeigt. ich schaffe es aber nicht mit dem Port an die interne (LAN) IP-Adresse weitergeleitet zu werden.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-03T16:24:39Z" title="2024-01-03 16:24 ">
+   Januar 3, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56260" data-ipsquote-contentid="9323" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1704205017" data-ipsquote-userid="98457" data-ipsquote-username="Stephan68">
+    <div class="ipsQuote_citation">
+     Am 2.1.2024 um 15:16 schrieb Stephan68:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hat jemand einen Tip wie man die Portweiterleitung zum Laufen bringt.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hey, ich habe folgende Tipps für dich:
+   </p>
+   <p>
+   </p>
+   <p>
+    - Überprüfe die Firewall-Einstellungen des Routers. Es kann sein, dass die Portweiterleitung durch eine Firewall-Regel blockiert wird. Die Firewall-Einstellungen findest du in der Weboberfläche des Routers unter "Sicherheit".
+   </p>
+   <p>
+    - Überprüfe die IP-Adresse des Geräts, an das du die Portweiterleitung weiterleiten möchtest. Die IP-Adresse des Geräts musst du in der Portweiterleitungsregel angeben. Wenn die IP-Adresse falsch ist, wird die Portweiterleitung nicht funktionieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hier sind die Schritte zur Portweiterleitung auf dem Huawei B535-232:
+   </p>
+   <p>
+    - Öffne die Weboberfläche des Routers.
+   </p>
+   <p>
+    - Gehe zu "Sicherheit" &gt; "Portweiterleitung".
+   </p>
+   <p>
+    - Klicke auf "Neue Portweiterleitung".
+   </p>
+   <p>
+    - Gib in den Feldern "Protokoll" und "Port" den gewünschten Port an.
+   </p>
+   <p>
+    - Gib in das Feld "Interne IP-Adresse" die IP-Adresse des Geräts an, an das du die Portweiterleitung weiterleiten möchtest.
+   </p>
+   <p>
+    - Klicke auf "Speichern".
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn du alle diese Schritte überprüft hast und die Portweiterleitung immer noch nicht funktioniert, kannst du dich an unsere Techniker:innen unter 0676 200 7777 wenden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hier sind noch einige zusätzliche Tipps, die dir bei der Portweiterleitung helfen können:
+   </p>
+   <p>
+    - Wenn du die Portweiterleitung für einen VPN-Server einrichtest, musst du den VPN-Protokolltyp in der Portweiterleitungsregel angeben.
+   </p>
+   <p>
+    - Wenn du die Portweiterleitung für einen FTP-Server einrichtest, musst du den FTP-Port in der Portweiterleitungsregel angeben.
+   </p>
+   <p>
+    - Wenn du die Portweiterleitung für einen Webserver einrichtest, musst du den HTTP-Port oder den HTTPS-Port in der Portweiterleitungsregel angeben.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hoffe, diese Tipps helfen dir weiter. LG, JD.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

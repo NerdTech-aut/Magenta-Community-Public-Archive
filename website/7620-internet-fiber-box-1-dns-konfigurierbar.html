@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Internet Fiber Box 1 -  DNS konfigurierbar?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Internet Fiber Box 1 -  DNS konfigurierbar?
+  </h1>
+  <span class="author">
+   David43
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-26T18:09:24Z" title="2022-02-26 18:09 ">
+   Februar 26, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi. Gibt es irgendeine Möglichkeit, bei der Fiber Box 1 den DNS-Server zu konfigurieren? Die UI gibt standardmäßig keine Möglichkeit dafür her. Ich möchte gerne meinen eigenen DNS-Server zuhause über PiHole aufsetzen.
+   </p>
+   <p>
+    Auf eine Mail an den Magenta-Support vor einigen Wochen hab ich bis heute keine Antwort erhalten. Ich habe
+    <a href="7342-zte-mc801-dns-server-%C3%A4ndern/#comment-45549" rel="">
+     diesen Beitrag zum ZTE MC801
+    </a>
+    gefunden, aber ich glaube nicht, dass das hier zutrifft, da ich keinen Internetschutz von Magenta gekauft habe (ich hab nur gigakraft 75 bestellt).
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-26T19:40:51Z" title="2022-02-26 19:40 ">
+   Februar 26, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/92113-david43/?do=hovercard" data-mentionid="92113" href="https://community.magenta.at/profile/92113-david43/" rel="">
+     @David43
+    </a>
+   </p>
+   <p>
+    Du könntest den DHCP Server auf der Fiber Box deaktivieren und stattdessen den DHCP Server von PiHole verwenden.
+   </p>
+   <p>
+    Wie z.B. hier beschrieben:
+   </p>
+   <p>
+    <a href="https://blog.leon-wallis.de/pi-hole-unitymedia-connect-box/" rel="external nofollow">
+     https://blog.leon-wallis.de/pi-hole-unitymedia-connect-box/
+    </a>
+   </p>
+   <p>
+    Wichtig dabei ist auch, dass auf dem Gerät, auf welchem PiHole installiert wird, eine statische IP-Adresse eingerichtet wird (z.B. 192.168.0.2 mit 255.255.255.0 als Maske).
+   </p>
+   <p>
+    Auch kannst du einen größeren Bereich an IP-Adressen von PiHole vergeben lassen. Wenn du 192.168.0.2 für das PiHole Gerät verwendest, könntest du 192.168.0.3 bis 192.168.0.254 als Bereich einstellen.
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   David43
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-27T10:17:09Z" title="2022-02-27 10:17 ">
+   Februar 27, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+     @NTM
+    </a>
+   </p>
+   <p>
+    danke für's Antworten, mir ist aber leider noch nicht ganz klar, wie das Verlegen des DHCP-Servers mit dem DNS weiterhilft. Der DHCP-Server regelt ja nur die Vergabe von IP-Adressen im Netzwerk, während der DNS die Namensauflösung übernimmt. Wenn ich den DHCP-Server auf ein Gerät mit PiHole verlege, dann ist der DNS für das Netzwerk ja immer noch der im Router hart konfigurierte.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-27T11:12:41Z" title="2022-02-27 11:12 ">
+   Februar 27, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es werden per DHCP einem Gerät nicht nur dessen IP-Adresse, die Subnetzmaske und das Gateway (hier die FiberBox) mitgeteilt, sondern auch, welche DNS-Server zu verwenden sind. Die FiberBox stellt kaum DHCP Einstellungen bereit, sodass die, per DHCP verteilten, DNS-Server nicht angepasst werden können (hier der DNS-Server der FiberBox, welcher auf die DNS-Server von Magenta zurückgreift).
+   </p>
+   <p>
+    Wenn PiHole als DHCP Server arbeitet, wird auch die IP-Adresse, unter welcher der PiHole DNS-Server erreichbar ist, über diese DHCP Nachrichten an die Geräte mitgeteilt. Und bei PiHole kannst du dann jeden beliebigen Quell-DNS-Server eintragen (Cloudflare 1Dot, Google, etc). Damit wäre es dann egal, ob der DNS-Server der FiberBox noch aktiv ist, da dieser mit PiHole einfach umgangen wird.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   David43
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-27T12:51:47Z" title="2022-02-27 12:51 ">
+   Februar 27, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Vielen Dank, das macht das Ganze schon klarer. Ich werd's demnächst mal ausprobieren.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

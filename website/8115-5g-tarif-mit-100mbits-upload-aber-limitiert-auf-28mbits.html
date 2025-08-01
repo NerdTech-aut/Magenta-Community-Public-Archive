@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   5G Tarif mit 100Mbit/s Upload, aber limitiert auf 28Mbit/s ?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   5G Tarif mit 100Mbit/s Upload, aber limitiert auf 28Mbit/s ?
+  </h1>
+  <span class="author">
+   deliciousbob
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-10-03T15:11:47Z" title="2022-10-03 15:11 ">
+   Oktober 3, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Freunde,
+   </p>
+   <p>
+    ich bräuchte mal eure Erfahrung zum Thema 5G Magenta-Netz und Upload....
+   </p>
+   <p>
+    Ich hab einen neuen Mobil-Tarif mit 350Mbit/s down &amp;
+    <strong>
+     100Mbit/s (geil)
+    </strong>
+    up bestellt, mein aktueller Tarif hat 250Mbit/s / 25Mbit/s.
+   </p>
+   <p>
+    Jetzt leg ich die neue Sim in meinen Huawei Magenta 5G Router rein, um das zu testen, und bekomme ähnlichen Download, also 200-250Mbit/s, Empfang ist mit 5/5 strichen und -96db perfekt, aber der Upload ist ebenso nur bei 25-28Mbit/s.
+   </p>
+   <p>
+    Jetzt hab ich unterm Tag Speedtest von 160-180 down und 28 up. Mitten in der Nacht schaffe ich
+    <strong>
+     260down/28 up
+    </strong>
+    . Egal wann und was ich mach, der
+    <strong>
+     Upload stoppt bei 28Mbit/s
+    </strong>
+    . Bei einem FTP Upload wirds noch deutlicher, ich hab ein ISO auf meine Server in DE hochgeladen, da bin ich sofort auf 3,5MB/s (was genau wieder 28Mbit/s sind) und das bleibt auf Anschlag den ganzen Upload lang.
+   </p>
+   <p>
+    Jetzt frag’ ich bei Magenta nach, ob beim neuen Tarif was schiefgelaufen ist, beim Speed-Profil, weil ich hab ganz klar ein Limit drinnen, nach einem aufgenommenen Ticket und einer SMS mit "Status: Erledigt" und mehreren Rückfragen bei der Hotline, was genau da "erledigt" wurde, bekomme ich die Rückmeldung, dass
+    <strong>
+     das Netz in meiner Umgebung sehr ausgelastet ist
+    </strong>
+    , und nicht
+    <strong>
+     mehr drinnen ist als 30Mbit/s upload
+    </strong>
+    ...
+    <img alt="&gt;:)" data-emoticon="" height="20" src="images/emoticons/tma_eyebrow-o.png" srcset="images/emoticons/tma_eyebrow-o@2x.png 2x" title="&gt;:)" width="20"/>
+    <br/>
+    Magenta, seriously? Ich bekomme gute 180Mbit/s down unterm Tag, und ihr meint, das Netz ist überlastet? In meinem Kaff, wo die meisten nicht mal wissen was 5G ist... da bezweifle ich stark, dass das 5G Netz jetzt schon ausgelastet ist...
+    <br/>
+    Was bekommt ihr so für Uploads zusammen, hab ihr dasselbe Problem wie ich, oder schafft ihr den vollen Upload?
+    <br/>
+    Danke für eure Hilfe!
+    <br>
+     LG aus Tirol, Robert
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-10-04T10:37:37Z" title="2022-10-04 10:37 ">
+   Oktober 4, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94449-deliciousbob/?do=hovercard" data-mentionid="94449" href="https://community.magenta.at/profile/94449-deliciousbob/" rel="">
+      @deliciousbob
+     </a>
+    </span>
+    <br>
+     <s>
+      Damit du die 100 Mbit/s Upload erreichen könntest, müsste 5G bei dir mit dem gigabit fähigen Band n78 (3500 MHz) realisiert sein.
+     </s>
+    </br>
+   </p>
+   <p>
+    <s>
+     Dies ist aber nicht überall der Fall, denn
+    </s>
+    Magenta realisiert 5G derzeit mit drei unterschiedlichen Bändern:
+   </p>
+   <ul>
+    <li>
+     5G mit dediziertem Low-Band Spektrum (Band n28 700 MHz),
+    </li>
+    <li>
+     5G mit, mit 4G geteiltem, Mid-Band Spektrum (Band n1/b1 2100 MHz) und
+    </li>
+    <li>
+     5G mit gigabit fähigem High-Band Spektrum (Band n78 3500 MHz aka 3.5 GHz)
+    </li>
+   </ul>
+   <p>
+    <s>
+     Mit n28 und n1 sind derzeit unter sehr guten Bedingungen max. 50 Mbit/s möglich.
+    </s>
+   </p>
+   <p>
+   </p>
+   <p>
+    Außerdem benötigt 5G von Magenta derzeit noch eine gleichzeitige 4G Verbindung (5G non-standalone modus). In diesem Modus werden die Bandbreite von 4G und 5G
+    <s>
+     im Download
+    </s>
+    kombiniert
+    <s>
+     , aber nicht im Upload. Sollte das 4G Netz also genügend reserve haben kann es sein, dass du mit n28 oder n1 recht hohen Download erzielst, aber der Upload deutlich geringer ausfällt.
+    </s>
+   </p>
+   <p>
+   </p>
+   <p>
+    Solltest du bereits ein 5G fähiges Smartphone haben, könntest du damit vielleicht in Erfahrung bringen welches 5G Band bei dir empfangbar ist.
+   </p>
+   <p>
+    LG NTM
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2022-10-04T12:07:28Z" title="2022-10-04 12:07 ">
+      Oktober 4, 2022
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Julian S.
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-10-04T11:45:23Z" title="2022-10-04 11:45 ">
+   Oktober 4, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49070" data-ipsquote-contentid="8115" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1664879857" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor einer Stunde schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hey
+      <span>
+       <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94449-deliciousbob/?do=hovercard" data-mentionid="94449" href="https://community.magenta.at/profile/94449-deliciousbob/" rel="">
+        @deliciousbob
+       </a>
+      </span>
+      <br>
+       Damit du die 100 Mbit/s Upload erreichen könntest, müsste 5G bei dir mit dem gigabit fähigen Band n78 (3500 MHz) realisiert sein.
+      </br>
+     </p>
+     <p>
+      Dies ist aber nicht überall der Fall, denn Magenta realisiert 5G derzeit mit drei unterschiedlichen Bändern:
+     </p>
+     <ul>
+      <li>
+       5G mit dediziertem Low-Band Spektrum (Band n28 700 MHz),
+      </li>
+      <li>
+       5G mit, mit 4G geteiltem, Mid-Band Spektrum (Band n1/b1 2100 MHz) und
+      </li>
+      <li>
+       5G mit gigabit fähigem High-Band Spektrum (Band n78 3500 MHz aka 3.5 GHz)
+      </li>
+     </ul>
+     <p>
+      Mit n28 und n1 sind derzeit unter sehr guten Bedingungen max. 50 Mbit/s möglich.
+     </p>
+     <p>
+     </p>
+     <p>
+      Außerdem benötigt 5G von Magenta derzeit noch eine gleichzeitige 4G Verbindung (5G non-standalone modus). In diesem Modus werden die Bandbreite von 4G und 5G im Download kombiniert, aber nicht im Upload. Sollte das 4G Netz also genügend reserve haben kann es sein, dass du mit n28 oder n1 recht hohen Download erzielst, aber der Upload deutlich geringer ausfällt.
+     </p>
+     <p>
+     </p>
+     <p>
+      Solltest du bereits ein 5G fähiges Smartphone haben, könntest du damit vielleicht in Erfahrung bringen welches 5G Band bei dir empfangbar ist.
+     </p>
+     <p>
+      LG NTM
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Sollte nicht wegen NSA mit 700+1800 weit mehr als 50 Mbit möglich sein? Habe schon Speedtests mit über 100 Mbit Upload gesehen. Oder spart man mittlererweile die zusätzlichen 1800 beim 700 Mhz Ausbau ein?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-10-04T11:57:24Z" title="2022-10-04 11:57 ">
+   Oktober 4, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Stimmt hab nochmal nachgesehen. Scheinbar ist doch 4G + 5G ULCA möglich.
+   </p>
+   <p>
+    Dann bitte meinen Beitrag oben ignorieren.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-10-04T12:10:38Z" title="2022-10-04 12:10 ">
+   Oktober 4, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Allerdings müsste Sowohl im Band 3 oder Band 7 als auch im Band n28 oder Band n1 praktisch nichts im Upload los sein um auf 100 Mbit/s zu kommen. Mit n78 ist dies deutlich leichter möglich.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Julian S.
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-10-04T17:26:00Z" title="2022-10-04 17:26 ">
+   Oktober 4, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Neben B3 sollte es ja auch B20 überall geben so daß es wenn der 700 Mhz Rollout fertig ist überall 700+800+1800 gibt. Und wo die Auslastung höher ist gibt es dann ja auch noch 2100 oder gar 2100+2600.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   deliciousbob
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-10-07T13:54:59Z" title="2022-10-07 13:54 ">
+   Oktober 7, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49075" data-ipsquote-contentid="8115" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1664885438" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 4.10.2022 um 14:10 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Allerdings müsste Sowohl im Band 3 oder Band 7 als auch im Band n28 oder Band n1 praktisch nichts im Upload los sein um auf 100 Mbit/s zu kommen. Mit n78 ist dies deutlich leichter möglich.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    <br>
+     Danke Julian und NTM, ich sehe das genauso, eigentlich dürfte ja im Upload-Bereich weniger los sein als bei dem Download, und der Upload sollte zumindest über die 30Mbit/s darüber geben, tut es aber nicht, zu keiner Stunde des Tages komme ich über 30 Mbit/s...
+     <br>
+      Bin immer noch der Meinung, dass ich da auf 30Mbit/s limitiert bin. Von Magenta habe ich noch keine Rückmeldung bekommen...
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

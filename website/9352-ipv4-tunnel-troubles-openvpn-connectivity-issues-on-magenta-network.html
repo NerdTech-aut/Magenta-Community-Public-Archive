@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   IPv4 Tunnel Troubles -  OpenVPN Connectivity Issues on Magenta Network!
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   IPv4 Tunnel Troubles -  OpenVPN Connectivity Issues on Magenta Network!
+  </h1>
+  <span class="author">
+   Tjani
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-19T06:17:35Z" title="2024-01-19 06:17 ">
+   Januar 19, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hello!
+   </p>
+   <p>
+   </p>
+   <p>
+    My business device is running with OpenVPN and apparently many of us at work who have their internet at Magenta, are facing connectivity issues. The VPN keeps restoring itself or I have to restart it manually in order to restore data transfer.
+   </p>
+   <p>
+    All my other devices at home work flawlessly on the same network.
+   </p>
+   <p>
+    My business device works flawlessly when connected via Hotspot or other networks.
+   </p>
+   <p>
+    I already had an intervention with Magenta technicians, they told me there are no connectivity issues.
+   </p>
+   <p>
+    Yet here we are...
+   </p>
+   <p>
+   </p>
+   <p>
+    Any idea what might be the issue? Can the Ipv settings have something to do with it? My VPN is set on IPV-4 tunnel only
+   </p>
+   <p>
+   </p>
+   <p>
+    Thanks
+   </p>
+   <p>
+    Tatjana
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-19T09:58:45Z" title="2024-01-19 09:58 ">
+   Januar 19, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56417" data-ipsquote-contentid="9352" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1705645055" data-ipsquote-userid="98537" data-ipsquote-username="Tjani">
+    <div class="ipsQuote_citation">
+     Am 19.1.2024 um 07:17 schrieb Tjani:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Any idea what might be the issue?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hello,
+   </p>
+   <p>
+   </p>
+   <p>
+    it sounds like there might be an issue with Magenta's network configuration that is affecting OpenVPN connections. The fact that your device works fine on other networks suggests that the problem is not with your device or with your VPN setup.
+   </p>
+   <p>
+   </p>
+   <p>
+    One possibility is that Magenta is filtering some of the traffic that OpenVPN uses. This could be due to a security policy or to a bug in their network equipment. Another possibility is that there is a problem with the routing between Magenta's network and your company's VPN server.
+   </p>
+   <p>
+   </p>
+   <p>
+    Here are some things you can try to troubleshoot the problem:
+   </p>
+   <p>
+    - Check your VPN logs: Your VPN should be generating logs that you can use to track the status of your connection. Look for any errors or warnings that might be related to the problem.
+   </p>
+   <p>
+    - Try using a different VPN server: If you have access to multiple VPN servers, try using a different one to see if the problem persists. This will help you to isolate the problem to your company's VPN server or to Magenta's network.
+   </p>
+   <p>
+    - Contact your company's IT department: If you are still having problems, contact your company's IT department. They will be able to investigate the problem further and may be able to provide you with additional troubleshooting steps.
+   </p>
+   <p>
+   </p>
+   <p>
+    If you have checked your VPN logs and tried using a different VPN server, but the problem still persists, then it is likely that the problem is with Magenta's network. In this case, you will need to contact Magenta's customer support (0676 200 7777 oder Chat via MeinMagenta App) and let them know about the issue.
+   </p>
+   <p>
+   </p>
+   <p>
+    In the meantime, you can try using a different VPN protocol, such as IPsec or L2TP. These protocols may not be as secure as OpenVPN, but they may be less likely to be affected by network filtering. You can also try disabling IPv4 forwarding on your device. This can sometimes help to resolve issues with OpenVPN connections.
+   </p>
+   <p>
+   </p>
+   <p>
+    Best regards, JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Tjani
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-02-15T17:03:56Z" title="2024-02-15 17:03 ">
+   Februar 15, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Thank you, JD! I will try that. At Magenta they told me everything looks good on their end. What we´ve figured out is, that if we disable the 2.4GHz, there are no interruptions. However, other devices at home start bugging then... So during the day, I´m on 5GHz, when I´m done, I enable 2GHy as well. It´s not ideal, I am 2/day in the Fiber Box settings, but at least no interruptions...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Ciano
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-02-21T21:22:15Z" title="2024-02-21 21:22 ">
+   Februar 21, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hello, can you explain how you can disable the 2.4 GHz line?
+    <br/>
+    Cause I have the exact same issue and I've tried different things to solve it, but with no success.
+   </p>
+   <p>
+    Thanks
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-02-22T09:58:24Z" title="2024-02-22 09:58 ">
+   Februar 22, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hello
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98692-ciano/?do=hovercard" data-mentionid="98692" href="https://community.magenta.at/profile/98692-ciano/" rel="">
+     @Ciano
+    </a>
+    ,
+   </p>
+   <p>
+   </p>
+   <p>
+    which modem are you using?
+   </p>
+   <p>
+   </p>
+   <p>
+    <a href="https://linktr.ee/kundenberater" rel="external nofollow">
+     Kind regards, JD.
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-04-05T10:29:53Z" title="2024-04-05 10:29 ">
+   April 5, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey i have strongswan and ikev2 No With Router With Apps on my boxes and Tablet etc works perfekt
+   </p>
+   <p>
+   </p>
+   <p>
+    In Router vpn Go to Gl.inet best Option
+   </p>
+   <p>
+   </p>
+   <p>
+    Original Router No for vpn
+   </p>
+   <p>
+   </p>
+   <p>
+    Mfg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Evgenii
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-04-26T09:54:41Z" title="2024-04-26 09:54 ">
+   April 26, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hello! Our company also faced this issue. We are using OpenVPN with server at AWS (Ireland), and since last week our colleagues (who has Magenta provider at home) can't use it to reach our servers.
+    <br/>
+    The weirdest part that if I switch to mobile hotspot (also Magenta), OpenVPN works normally.
+    <br/>
+    Also we figured out that AWS VPN
+    <a href="https://aws.amazon.com/vpn/client-vpn-download/" rel="external nofollow">
+     https://aws.amazon.com/vpn/client-vpn-download/
+    </a>
+    is working normally as well.
+   </p>
+   <p>
+   </p>
+   <p>
+    Any ideas how to fix it?
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

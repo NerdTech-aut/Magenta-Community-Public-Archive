@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Kabel Internetproblem -  Verbindungsaufbau dauert 4x länger (aber Bandbreite OK)
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Kabel Internetproblem -  Verbindungsaufbau dauert 4x länger (aber Bandbreite OK)
+  </h1>
+  <span class="author">
+   frederik
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-13T21:52:51Z" title="2022-01-13 21:52 ">
+   Januar 13, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Meine Internet Verbindung via UPC Kabel - Internet Fiber Box ist seit einigen Tagen so schlecht, dass ich nicht mehr normal arbeiten kann. Das Problem ist NICHT die Bandbreite sondern der Verbindungsaufbau - der immer sehr lange dauert. Merkt man sofort beim Laden einer beliebigen Website, Bilder kommen anfänglich nicht, dann sehr schnell. Bei Webapplikationen noch problematischer, Trello glaubt immer wieder ich bin offline, ebenso MS Teams, andere Applikationen loggen mich aus weil der Single-Sign-In ein Timeout liefert. Sobald zB Teams eine Videoverbindung aufbauen kann, hält diese recht stabil.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich kann diese Verbindungsprobleme messen und nachweisen, siehe Anhang. Verwende dazu ein einfaches Speedmeter, welches neben Download/Upload Mbps auch die RTT (Round Trip Time of a ping data packet) in ausweist. Bei funktionierender Kabel-Internet-Verbindung beträgt der RTT bei mir 40-50ms (via WLAN). Derzeit beträgt der RTT meistens 140-200ms (mittels LAN-Kabel direkt in Router; untere gelbe RTT Messwerte im Anhang) und das Arbeiten mit Webapplikationen ist kaum noch möglich (man sieht in der Messreihe auch stark schwankende Download/Upload Mbps). Wenn ich umschalte auf Handy-Hotspot beträgt der RTT zw 60-80ms (obere grüne RTT Messwerte im Anhang) und ich kann wieder normal arbeiten.
+   </p>
+   <p>
+   </p>
+   <p>
+    Habe bereits 4x mit Magenta Serviceline telefoniert. Daraufhin habe ich gestern neue "Internet Fiber Box" von Magenta Shop geholt, leider nur kurze Verbesserung, seit heute Do morgen wieder unverändert schlechte Verbindung. WLAN kann auch ausgeschlossen werden, Verbindung mit LAN-Kabel genauso schlecht, siehe obige Testreihe.
+   </p>
+   <p>
+   </p>
+   <p>
+    Any Tipps woran das liegen könnte? Danke lg Frederik
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="3640" href="images/uploads/61e09ee632df3_2022-01-1321_20InternetMesswerte.png.f17f298097b394e2467428f5f19011f2.png" rel="">
+     <img alt="2022-01-13 21_20 Internet Messwerte.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3640" src="images/uploads/61e09ee632df3_2022-01-1321_20InternetMesswerte.png.f17f298097b394e2467428f5f19011f2.png"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-17T15:14:35Z" title="2022-01-17 15:14 ">
+   Januar 17, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/89287-frederik/?do=hovercard" data-mentionid="89287" href="https://community.magenta.at/profile/89287-frederik/" rel="">
+     @frederik
+    </a>
+    ,
+   </p>
+   <p>
+   </p>
+   <p>
+    die Ursache kann an verschiedenen Stellen zu finden sein. Nutzt du hinter dem Magenta Modem einen eigenen Router? Ist dein Modem mit einem weißen oder schwarzen Antennenkabel verbunden? Wie viele Geräte greifen auf das Internet zu? Welchen Tarif hast du? Bei welchen Webseiten merkst du diese Einschränkungen? Liebe Grüße, Jonathan
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Philipp_
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-19T05:52:06Z" title="2022-01-19 05:52 ">
+   Januar 19, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Morgen,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich hab ebenfalls exakt die gleiche Problematik seit einige Tage, dachte zuerst an ein DNS Thema, welches ich mittlerweile auschließen kann.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich werden nur den Magenta Router. Man merkt es, wie Frederik sagt, speziell im Browser, hier sieht man dann immer wieder Connecting links unten und die Seite lädt nicht oder unvollständig.
+   </p>
+   <p>
+    Unabhängig vom Client, egal ob WLAN oder LAN
+   </p>
+   <p>
+   </p>
+   <p>
+    Man sieht es recht einfach mit Ping, dass der erste Ping reproduzierbar verloren geht
+   </p>
+   <p>
+   </p>
+   <p>
+    <img alt="image.png.5b4fe5f8e2903ad2dda1930cc8fb9c63.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3642" src="images/uploads/image.png.5b4fe5f8e2903ad2dda1930cc8fb9c63.png"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hab keine Idee mehr wie ich das weiter eingrenzen könnte.
+   </p>
+   <p>
+   </p>
+   <p>
+    Lg
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   frederik
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-23T14:24:27Z" title="2022-01-23 14:24 ">
+   Januar 23, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46095" data-ipsquote-contentid="7466" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1642571526" data-ipsquote-userid="92142" data-ipsquote-username="Philipp_">
+    <div class="ipsQuote_citation">
+     Am 1/19/2022 um 06:52 schrieb Philipp_:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Guten Morgen,
+     </p>
+     <p>
+     </p>
+     <p>
+      ich hab ebenfalls exakt die gleiche Problematik seit einige Tage, dachte zuerst an ein DNS Thema, welches ich mittlerweile auschließen kann.
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich werden nur den Magenta Router. Man merkt es, wie Frederik sagt, speziell im Browser, hier sieht man dann immer wieder Connecting links unten und die Seite lädt nicht oder unvollständig.
+     </p>
+     <p>
+      Unabhängig vom Client, egal ob WLAN oder LAN
+     </p>
+     <p>
+     </p>
+     <p>
+      Man sieht es recht einfach mit Ping, dass der erste Ping reproduzierbar verloren geht
+     </p>
+     <p>
+     </p>
+     <p>
+      <a data-fileid="3642" href="images/uploads/image.png.5b4fe5f8e2903ad2dda1930cc8fb9c63.png" rel="" title="Bild vergrößern">
+       <img alt="image.png.5b4fe5f8e2903ad2dda1930cc8fb9c63.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3642" src="images/uploads/image.png.5b4fe5f8e2903ad2dda1930cc8fb9c63.png"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich hab keine Idee mehr wie ich das weiter eingrenzen könnte.
+     </p>
+     <p>
+     </p>
+     <p>
+      Lg
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo Philipp, danke für Feedback und ping Analyse.
+   </p>
+   <p>
+    Bei mir ebenfalls oftmalige ping Aussetzer beim ersten Mal, dann funktioniert es wieder, siehe Screenshot anbei:
+    <br/>
+    <img alt="image.png.a81328a2dd926d3d1fd5509a127cfd26.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3651" src="images/uploads/image.png.a81328a2dd926d3d1fd5509a127cfd26.png"/>
+    <br/>
+    <br/>
+    Die Internet Fiber Box habe ich zuvor auf Werkseinstellungen zurückgesetzt, und bin direkt mit Ethernet Kabel angeschlossen.
+    <br>
+     Bin ratlos und brauche dringend Unterstützung von Magenta Kundenservice.
+    </br>
+   </p>
+   <p>
+    mfg Frederik
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   frederik
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-23T14:32:52Z" title="2022-01-23 14:32 ">
+   Januar 23, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46082" data-ipsquote-contentid="7466" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1642432475" data-ipsquote-userid="77318" data-ipsquote-username="Jonathan Dorian">
+    <div class="ipsQuote_citation">
+     Am 1/17/2022 um 16:14 schrieb Jonathan Dorian:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/89287-frederik/?do=hovercard" data-mentionid="89287" href="https://community.magenta.at/profile/89287-frederik/" rel="">
+       @frederik
+      </a>
+      ,
+     </p>
+     <p>
+     </p>
+     <p>
+      die Ursache kann an verschiedenen Stellen zu finden sein. Nutzt du hinter dem Magenta Modem einen eigenen Router? Ist dein Modem mit einem weißen oder schwarzen Antennenkabel verbunden? Wie viele Geräte greifen auf das Internet zu? Welchen Tarif hast du? Bei welchen Webseiten merkst du diese Einschränkungen? Liebe Grüße, Jonathan
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo Jonathan,
+    <br>
+     ich verwende eine ganz neue Internet Fiber Box (also das Kabelmodem von Magenta, vormals UPC) und sonst gar nichts. Das UPC Kabel (für Kabelfernsehen und Kabelinternet) ist weiss. Mittlerweile greife ich mit einem einzigem Laptop via Ethernet auf das Modem zu, dieses habe ich heute nochmals auf Werkseinstellungen zurückgesetzt und dann 1min vom Strom genommen. Tarif: Internet Fiber 150. Einschränkungen bei ALLEN Websiten &amp; -Applikationen, siehe Beschreibung oben - ist leider immer noch unverändert schlecht wie letzte Woche beschrieben.
+     <br>
+      Befürchte ich brauche Analyse &amp; Behebung von Magenta Servicetechniker?
+      <br>
+       Danke Frederik
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   frederik
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-23T15:18:26Z" title="2022-01-23 15:18 ">
+   Januar 23, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nochmals Magenta Serviceline angerufen, ein sehr kompetenter Mitarbeiter: offenbar ist in meiner Kabeldose nur noch ein sehr schwaches Signal, im Hausverteiler im Keller ist das Signal noch normal gut. Er hat Technikertermin vereinbart - endlich.
+    <br>
+     @Philipp: werde Update geben nach Technikerbesuch.
+     <br>
+      mfg Frederik
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Philipp_
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-25T13:15:38Z" title="2022-01-25 13:15 ">
+   Januar 25, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich hab heute auch die Serviceline angerufen und bekam also Auskunft, dass mit 13 aktiven Geräten durchaus meine 75Mbit zu wenig sein können. Die Qualität der Leitung passt angeblich.
+   </p>
+   <p>
+    Dass der Großteil davon IOT Devices, wie Staubsaugroboter, Klimaanlage und Haussteuerung sind, konnte ich dem Herrn an der Hotline nicht glaubhaft vermitteln. Ich hab ja auch kein Bandbreiten Thema sondern Ausfälle.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hab das heute nochmals weiter untersucht, wenn Richtung Internet nichts mehr geht, geht auch kein ping mehr aufs Modem mit der 192.168.0.1 bzw kommt man auch nicht aufs Webinterface.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wäre auch für Tipps dankbar.
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   frederik
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-01-27T20:08:57Z" title="2022-01-27 20:08 ">
+   Januar 27, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Philipp,
+    <br>
+     gestern war Magenta Techniker da, sehr kompetent. Alte Kabeldose usw ausgetauscht, durchgemessen, hat alles in Ordnung ausgesehen. Dann das Kabelmodem = Internet Fiber Box ausgetauscht, seit dem funktioniert alles wieder.
+     <br>
+      Eigenartig ist aber, dass ich auf Anraten der Hotline bereits vor 10 Tagen die Fiber Box ausgetauscht hatte (bin zu einem Magenta Shop gefahren). Danach ging es ein paar Stunden, am nächsten Morgen wieder genauso schlecht. Diesmal (mit der dritten Fiber Box) habe ich vorsichtshalber auch neue WLAN Passwörter verwendet (statt unserem schwachen "Familien-Passwort"). Bin abschliessend nicht sicher was die Lösung war, hoffe aber es hält.
+     </br>
+    </br>
+   </p>
+   <p>
+    Dir auch viel Erfolg, lg Frederik
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   E5170s HomeNet Box - bebilderte Anleitung mit aktueller Firmware (2015) bitte
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   E5170s HomeNet Box - bebilderte Anleitung mit aktueller Firmware (2015) bitte
+  </h1>
+  <span class="author">
+   Greg
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2015-12-14T23:00:00Z" title="2015-12-14 23:00 ">
+   Dezember 14, 2015
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo T-Mobile Team,
+   </p>
+   <p>
+    hab' nun meinen Internet Zugang zu T-Mobile gewechselt - meine WLAN Konfiguration (TP-Link Router) daheim ist unverändert.
+   </p>
+   <p>
+    Jetzt würde ich gerne von unterwegs auf meine Synology NAS zugreifen - bitte um eine bebilderte Anleitung dfür den Huwaei Würfel E5170s (Home Net Box) wie dieser zu konfigurieren ist (aktuelle Firmware!!!)
+   </p>
+   <p>
+    Alte Einträge in diesesem Forum sprechen von einer DMZ - dieser Menüpunkt ist aber aktuell nicht vorhanden - oder umbenannt...
+   </p>
+   <p>
+    Daher bitte eine aktuelle Anleitung - es wird sicher einige Leute geben, die ein vergleichbares Set-Up daheim haben / möchten.
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke im Voraus &amp; viele Grüße,
+   </p>
+   <p>
+   </p>
+   <p>
+    Gregor
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   techsupport
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2015-12-14T23:00:00Z" title="2015-12-14 23:00 ">
+   Dezember 14, 2015
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Gregor,
+   </p>
+   <p>
+    wenn du auf der Adminseite des Routers bist, wähle bitte oben "Einstellungen".
+   </p>
+   <p>
+    Anschliessend bitte mit admin &amp; admin einloggen. Anschliessend findest du links
+   </p>
+   <p>
+    ein Menü, dort wähle bitte "Verbindungsaufbau" aus, dann im Untermenü "Profilverwaltung" und dann rechts auf der Seite "neues Profil".
+   </p>
+   <p>
+    In den nun auftauchenden Feldern gib bitte der Reihe nach folgende Daten ein:
+   </p>
+   <p>
+    Name: internet
+   </p>
+   <p>
+    Benutzername: t-mobile
+   </p>
+   <p>
+    Passwort: tm
+   </p>
+   <p>
+    APN: statisch auswählen
+   </p>
+   <p>
+    im leeren Feld darunter "business.gprsinternet" eingeben und dann
+   </p>
+   <p>
+    "Speichern" klicken.
+   </p>
+   <p>
+    Danach findest du links im Menü unter "System", den Punkt "Geräteinformationen". Diesen bitte öffnen und dann findest du in der Mitte unten "WAN-IP Adresse". Diese Adresse sollte dann mit 78.x.x.x beginnen. Der Zugriff von extern ist dann möglich.
+   </p>
+   <p>
+    LG
+   </p>
+   <p>
+    Mario(TSC)
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Greg
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2015-12-15T23:00:00Z" title="2015-12-15 23:00 ">
+   Dezember 15, 2015
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    leider trifft die Antwort nicht meine (ganze) Frage...
+   </p>
+   <p>
+    Die erwähnten Schritte hab' ich gemacht (erhalte öffentl. IP Adresse und leite weiter).
+   </p>
+   <p>
+    Anordnung HomeNetBox - Router - Rechner ist im Prinzip wie bei Desperado
+    <a href="http://forum.t-mobile.at/posts/03ea06dfe3" target="_blank">
+     http://forum.t-mobile.at/posts/03ea06dfe3
+    </a>
+   </p>
+   <p>
+    Nur der Router ist von TP-Link mit DD-WRT
+   </p>
+   <p>
+    Danke im Voraus,
+   </p>
+   <p>
+    G
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2015-12-15T23:00:00Z" title="2015-12-15 23:00 ">
+   Dezember 15, 2015
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   Hallo Gregor,
+ich weiß leider nicht welchen Router du genau hast, aber hier ist eine Anleitung wie du DynDNS konfigurierst:
+
+http://www.tp-link.us/faq-297.html
+
+DMZ wird dir da nicht viel helfen - normalerweise stellst du das auch am Router ein - kannst du aber fürs erste vernachlässigen.
+DynDns brauchst du, weil du ja deine öffentliche IP Adresse nicht immer kennst und diese sich von Zeit zu Zeit ändert.
+  </div>
+  <hr/>
+ </body>
+</html>

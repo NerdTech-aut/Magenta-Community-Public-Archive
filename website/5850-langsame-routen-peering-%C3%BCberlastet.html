@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Langsame Routen / Peering überlastet?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Langsame Routen / Peering überlastet?
+  </h1>
+  <span class="author">
+   FlorianC
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-24T20:33:14Z" title="2020-05-24 20:33 ">
+   Mai 24, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe bei Downloads von bestimmten seiten sehr schlechte Datenübertragungsraten - 200 KB/s.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wähle ich mich in das VPN der TU-Wien ein und lade die gleiche Datei bekomme ich Übertragungsraten von ca 2.5 MB/s.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ist das Peering zu ntt.net so überlastet oder gibt es da vielleicht einen anderen Grund? Danke!
+   </p>
+   <p>
+   </p>
+   <p>
+    Langsame Route ohne VPN:
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      flo@Florians-MacBook-Pro ~ % traceroute 163.237.222.40
+     </p>
+     <p>
+      traceroute to 163.237.222.40 (163.237.222.40), 64 hops max, 52 byte packets
+     </p>
+     <p>
+      1  192.168.1.1 (192.168.1.1)  5.042 ms  1.460 ms  1.430 ms
+     </p>
+     <p>
+      2  * * *
+     </p>
+     <p>
+      3  10.15.19.142 (10.15.19.142)  35.394 ms  31.100 ms  27.640 ms
+     </p>
+     <p>
+      4  185099072001.public.t-mobile.at (185.99.72.1)  22.153 ms  26.046 ms  24.076 ms
+     </p>
+     <p>
+      5  * * *
+     </p>
+     <p>
+      6  185099072006.public.t-mobile.at (185.99.72.6)  53.347 ms  22.679 ms  24.998 ms
+     </p>
+     <p>
+      7  185099075002.public.t-mobile.at (185.99.75.2)  26.816 ms  34.179 ms  26.447 ms
+     </p>
+     <p>
+      8  62.157.248.9 (62.157.248.9)  28.574 ms  26.752 ms  35.823 ms
+     </p>
+     <p>
+      9  pd9ef378e.dip0.t-ipconnect.de (217.239.55.142)  36.916 ms  28.534 ms  25.996 ms
+     </p>
+     <p>
+      10  ae-9.r01.vienat01.at.bb.gin.ntt.net (129.250.66.125)  24.770 ms  29.071 ms  30.213 ms
+     </p>
+     <p>
+      11  ae-7.r25.amstnl02.nl.bb.gin.ntt.net (129.250.2.111)  46.056 ms  48.094 ms  49.716 ms
+     </p>
+     <p>
+      12  ae-1.a01.amstnl02.nl.bb.gin.ntt.net (129.250.4.173)  58.387 ms  46.885 ms  48.921 ms
+     </p>
+     <p>
+      13  83.231.213.78 (83.231.213.78)  134.853 ms  136.372 ms  134.259 ms
+     </p>
+     <p>
+      14  * * *
+     </p>
+     <p>
+      15  share-media.REDACTED.com (163.237.222.40)  144.388 ms  136.075 ms  128.543 ms
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Schnelle Route mit VPN über die TU Wien
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      flo@Florians-MacBook-Pro ~ % traceroute 163.237.222.40
+     </p>
+     <p>
+      traceroute to 163.237.222.40 (163.237.222.40), 64 hops max, 52 byte packets
+     </p>
+     <p>
+      1  winnetou-796.kom.tuwien.ac.at (128.131.241.1)  31.963 ms  27.710 ms  30.892 ms
+     </p>
+     <p>
+      2  border-be2-942.kom.tuwien.ac.at (192.35.241.116)  26.727 ms  27.194 ms  26.184 ms
+     </p>
+     <p>
+      3  wien1.aco.net (193.171.13.9)  36.956 ms  27.487 ms  33.065 ms
+     </p>
+     <p>
+      4  ae-3-0.r18.uni.vie.at.nextlayer.net (81.16.152.13)  32.057 ms  38.525 ms  98.993 ms
+     </p>
+     <p>
+      5  ae19-0-r03.uni.vie.nextlayer.net (92.60.0.60)  30.840 ms  32.080 ms
+     </p>
+     <p>
+      ae19-0-r04.uni.vie.nextlayer.net (92.60.1.60)  28.570 ms
+     </p>
+     <p>
+      6  ae4-0-r12.inx.vie.nextlayer.net (92.60.1.110)  39.544 ms
+     </p>
+     <p>
+      ae4-0-r11.inx.vie.nextlayer.net (92.60.0.110)  38.697 ms
+     </p>
+     <p>
+      ae4-0-r12.inx.vie.nextlayer.net (92.60.1.110)  118.138 ms
+     </p>
+     <p>
+      7  ae2-0-r03.esh.vie.nextlayer.net (92.60.1.35)  33.249 ms
+     </p>
+     <p>
+      ae1-0-r03.inx.vie.nextlayer.net (92.60.0.7)  117.999 ms
+     </p>
+     <p>
+      ae2-0-r04.inx.vie.nextlayer.net (92.60.1.63)  41.781 ms
+     </p>
+     <p>
+      8  ae2-0-r60.inx.vie.nextlayer.net (92.60.1.233)  34.739 ms
+     </p>
+     <p>
+      ae1-0-r60.inx.vie.nextlayer.net (92.60.0.233)  32.661 ms
+     </p>
+     <p>
+      ae2-0-r60.inx.vie.nextlayer.net (92.60.1.233)  30.818 ms
+     </p>
+     <p>
+      9  xe-0-0-0-2.r00.vienat01.at.bb.gin.ntt.net (83.231.187.1)  34.204 ms  103.890 ms
+     </p>
+     <p>
+      ae1-0-r60.inx.vie.nextlayer.net (92.60.0.233)  67.988 ms
+     </p>
+     <p>
+      10  ae-3.r01.vienat01.at.bb.gin.ntt.net (129.250.2.37)  70.791 ms
+     </p>
+     <p>
+      xe-0-0-0-2.r00.vienat01.at.bb.gin.ntt.net (83.231.187.1)  44.353 ms
+     </p>
+     <p>
+      ae-3.r01.vienat01.at.bb.gin.ntt.net (129.250.2.37)  57.862 ms
+     </p>
+     <p>
+      11  ae-7.r25.amstnl02.nl.bb.gin.ntt.net (129.250.2.111)  62.943 ms  55.854 ms
+     </p>
+     <p>
+      ae-3.r01.vienat01.at.bb.gin.ntt.net (129.250.2.37)  54.569 ms
+     </p>
+     <p>
+      12  ae-1.a01.amstnl02.nl.bb.gin.ntt.net (129.250.4.173)  53.574 ms  54.562 ms
+     </p>
+     <p>
+      ae-7.r25.amstnl02.nl.bb.gin.ntt.net (129.250.2.111)  49.212 ms
+     </p>
+     <p>
+      13  ae-1.a02.amstnl02.nl.bb.gin.ntt.net (129.250.3.223)  54.503 ms
+     </p>
+     <p>
+      ae-1.a01.amstnl02.nl.bb.gin.ntt.net (129.250.4.173)  118.145 ms  89.778 ms
+     </p>
+     <p>
+      14  83.231.213.78 (83.231.213.78)  51.831 ms  53.863 ms
+     </p>
+     <p>
+      213.198.92.242 (213.198.92.242)  56.229 ms
+     </p>
+     <p>
+      15  * * *
+     </p>
+     <p>
+      ...
+     </p>
+     <p>
+      41  * *^C
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   FlorianC
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-25T08:04:42Z" title="2020-05-25 08:04 ">
+   Mai 25, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Update: Heute (zumindest um diese Uhrzeit) sind die Übertragungsraten teilweise sehr gut. Ich bin gespannt, wie es am Nachmittag aussieht.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="5 yr" datetime="2020-05-25T08:05:27Z" title="2020-05-25 08:05 ">
+      Mai 25, 2020
+     </time>
+     von FlorianC
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-25T10:02:25Z" title="2020-05-25 10:02 ">
+   Mai 25, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    DSL/LTE oder Coax?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   FlorianC
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-05-25T14:53:16Z" title="2020-05-25 14:53 ">
+   Mai 25, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Network type: 4G+ LTE
+    <br/>
+    Band: 3,20
+    <br/>
+    Signal Strength: 100%
+    <br/>
+    RSRP: -71dBm
+    <br>
+     RSRQ: -7dB
+     <br>
+      SNR: 26.8dB
+     </br>
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    Es ist offensichtlich die Netzwerkauslastung an irgendeiner Stelle. Allerdings ist es anscheinend nicht der Sendemast mit dem ich verbunden bin - Downloads von anderen Servern/Orten sind nachwievor schnell.
+   </p>
+   <p>
+   </p>
+   <p>
+    Jetzt sind (also am frühen Abend) es wieder nur 190KB/s.
+   </p>
+   <p>
+    Am Vormittag ging es mit 13MB/s.
+   </p>
+   <p>
+   </p>
+   <p>
+    Edit:
+   </p>
+   <p>
+    jetzt sind wieder schnellere Transfers dabei.. es geht rauf und runter wie bei ner Achterbahn..
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Edit 2 - ein Log der Achterbahnfahrt..
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      flo@Florians-MacBook-Pro ~ % wget
+      <a href="https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4" rel="external nofollow">
+       https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4
+      </a>
+      <br>
+       --2020-05-25 16:55:20--
+       <a href="https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4" rel="external nofollow">
+        https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4
+       </a>
+       <br>
+        Auflösen des Hostnamens share-media.REDACTED.com (share-media.REDACTED.com)… 163.237.222.40
+        <br/>
+        Verbindungsaufbau zu share-media.REDACTED.com (share-media.REDACTED.com)|163.237.222.40|:443 … verbunden.
+        <br/>
+        HTTP-Anforderung gesendet, auf Antwort wird gewartet … 200 OK
+        <br/>
+        Länge: 46967735 (45M) [video/mp4]
+        <br/>
+        Wird in »hd.mp4.14« gespeichert.
+       </br>
+      </br>
+     </p>
+     <p>
+      hd.mp4.14                         31%[================&gt;                                       ]  13,98M  4,06MB/s    ETA 9s     ^C
+      <br/>
+      flo@Florians-MacBook-Pro ~ % wget
+      <a href="https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4" rel="external nofollow">
+       https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4
+      </a>
+      <br/>
+      --2020-05-25 17:16:22--
+      <a href="https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4" rel="external nofollow">
+       https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4
+      </a>
+      <br/>
+      Auflösen des Hostnamens share-media.REDACTED.com (share-media.REDACTED.com)… 163.237.222.40
+      <br/>
+      Verbindungsaufbau zu share-media.REDACTED.com (share-media.REDACTED.com)|163.237.222.40|:443 … verbunden.
+      <br/>
+      HTTP-Anforderung gesendet, auf Antwort wird gewartet … 200 OK
+      <br/>
+      Länge: 46967735 (45M) [video/mp4]
+      <br/>
+      Wird in »hd.mp4.15« gespeichert.
+     </p>
+     <p>
+      hd.mp4.15                          2%[&gt;                                                       ]   1,25M  37,2KB/s    ETA 9m 21s
+      <br/>
+      hd.mp4.15                          4%[=&gt;                                                      ]   1,84M  71,2KB/s    ETA 10m 12s
+      <br/>
+      hd.mp4.15                          5%[=&gt;                                                      ]   2,38M  54,6KB/s    ETA 10m 11s
+      <br/>
+      hd.mp4.15                          6%[==&gt;                                                     ]   2,76M  73,6KB/s    ETA 10m 4s
+      <br/>
+      hd.mp4.15                          6%[==&gt;                                                     ]   2,94M  36,4KB/s    ETA 10m 38s
+      <br/>
+      hd.mp4.15                          7%[===&gt;                                                    ]   3,48M  85,5KB/s    ETA 10m 22s
+      <br/>
+      hd.mp4.15                          9%[====&gt;                                                   ]   4,15M   118KB/s    ETA 9m 32s
+      <br/>
+      hd.mp4.15                         11%[=====&gt;                                                  ]   4,96M   105KB/s    ETA 9m 7s
+      <br/>
+      hd.mp4.15                         12%[=====&gt;                                                  ]   5,45M  64,1KB/s    ETA 9m 8s
+      <br/>
+      hd.mp4.15                         13%[======&gt;                                                 ]   5,89M  73,8KB/s    ETA 9m 5s
+      <br/>
+      hd.mp4.15                         20%[==========&gt;                                             ]   9,02M  72,8KB/s    ETA 8m 30s
+      <br/>
+      hd.mp4.15                         22%[===========&gt;                                            ]   9,88M  56,8KB/s    ETA 8m 28s
+      <br/>
+      hd.mp4.15                         23%[============&gt;                                           ]  10,72M  68,8KB/s    ETA 8m 33s
+      <br/>
+      hd.mp4.15                         28%[==============&gt;                                         ]  12,65M  41,7KB/s    ETA 8m 44s
+      <br/>
+      hd.mp4.15                         37%[===================&gt;                                    ]  16,78M  45,5KB/s    ETA 8m 8s
+      <br/>
+      hd.mp4.15                         39%[=====================&gt;                                  ]  17,73M  23,1KB/s    ETA 7m 56s
+      <br/>
+      hd.mp4.15                         50%[===========================&gt;                            ]  22,47M  43,9KB/s    ETA 6m 42s
+      <br/>
+      hd.mp4.15                         52%[============================&gt;                           ]  23,48M  32,0KB/s    ETA 6m 26s
+      <br/>
+      hd.mp4.15                         74%[========================================&gt;               ]  33,41M   121KB/s    ETA 3m 8s
+      <br/>
+      hd.mp4.15                         76%[=========================================&gt;              ]  34,37M   110KB/s    ETA 2m 51s
+      <br/>
+      hd.mp4.15                         79%[===========================================&gt;            ]  35,53M   137KB/s    ETA 2m 31s
+      <br/>
+      hd.mp4.15                         84%[==============================================&gt;         ]  37,94M  50,3KB/s    ETA 1m 50s
+      <br/>
+      hd.mp4.15                         85%[==============================================&gt;         ]  38,26M  96,8KB/s    ETA 1m 44s ^C
+      <br/>
+      flo@Florians-MacBook-Pro ~ % wget
+      <a href="https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4" rel="external nofollow">
+       https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4
+      </a>
+      <br/>
+      --2020-05-25 17:26:32--
+      <a href="https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4" rel="external nofollow">
+       https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4
+      </a>
+      <br/>
+      Auflösen des Hostnamens share-media.REDACTED.com (share-media.REDACTED.com)… 163.237.222.40
+      <br/>
+      Verbindungsaufbau zu share-media.REDACTED.com (share-media.REDACTED.com)|163.237.222.40|:443 … verbunden.
+      <br/>
+      HTTP-Anforderung gesendet, auf Antwort wird gewartet … 200 OK
+      <br/>
+      Länge: 46967735 (45M) [video/mp4]
+      <br/>
+      Wird in »hd.mp4.16« gespeichert.
+     </p>
+     <p>
+      hd.mp4.16                        100%[=======================================================&gt;]  44,79M  4,87MB/s    in 15s
+     </p>
+     <p>
+      2020-05-25 17:26:48 (2,90 MB/s) - »hd.mp4.16« gespeichert [46967735/46967735]
+     </p>
+     <p>
+      flo@Florians-MacBook-Pro ~ % wget
+      <a href="https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4" rel="external nofollow">
+       https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4
+      </a>
+      <br/>
+      --2020-05-25 17:26:50--
+      <a href="https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4" rel="external nofollow">
+       https://share-media.REDACTED.com/signed/redacted/UJWeWkTSgX-v-GQhXp1bJg/2/i/m/3/im32ffnz/source/hd.mp4
+      </a>
+      <br/>
+      Auflösen des Hostnamens share-media.REDACTED.com (share-media.REDACTED.com)… 163.237.222.40
+      <br/>
+      Verbindungsaufbau zu share-media.REDACTED.com (share-media.REDACTED.com)|163.237.222.40|:443 … verbunden.
+      <br/>
+      HTTP-Anforderung gesendet, auf Antwort wird gewartet … 200 OK
+      <br/>
+      Länge: 46967735 (45M) [video/mp4]
+      <br/>
+      Wird in »hd.mp4.17« gespeichert.
+     </p>
+     <p>
+      hd.mp4.17                         17%[========&gt;                                               ]   7,83M   398KB/s    ETA 56s
+      <br/>
+      hd.mp4.17                         26%[=============&gt;                                          ]  11,72M   627KB/s    ETA 51s
+      <br/>
+      hd.mp4.17                         37%[===================&gt;                                    ]  16,65M   401KB/s    ETA 46s
+      <br/>
+      hd.mp4.17                         44%[=======================&gt;                                ]  19,94M   242KB/s    ETA 48s
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/5ecbe450e02c5_Bildschirmfoto2020-05-25um17_23_46.png.018e05dd63ea3ff9d9b1b24f3bdc5a54.png">
+     <img alt="Bildschirmfoto 2020-05-25 um 17.23.46.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2211" src="images/uploads/5ecbe451ad07e_Bildschirmfoto2020-05-25um17_23_46.thumb.png.2783969f57d18edbf1e55a025887045a.png"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/5ecbe452eea44_Bildschirmfoto2020-05-25um17_22_46.png.a9d9464eb5b374b2ea3df789e02c5a6b.png">
+     <img alt="Bildschirmfoto 2020-05-25 um 17.22.46.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2212" src="images/uploads/5ecbe453862f0_Bildschirmfoto2020-05-25um17_22_46.thumb.png.4caa9c2f142e588280048eeeca94d339.png"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="5 yr" datetime="2020-05-25T15:29:29Z" title="2020-05-25 15:29 ">
+      Mai 25, 2020
+     </time>
+     von FlorianC
+    </strong>
+   </span>
+  </div>
+  <hr/>
+ </body>
+</html>

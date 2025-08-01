@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Router-Probleme - Hybridanschluss, DynDNS, Portweiterleitungen
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Router-Probleme - Hybridanschluss, DynDNS, Portweiterleitungen
+  </h1>
+  <span class="author">
+   hitch
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-22T14:02:21Z" title="2018-09-22 14:02 ">
+   September 22, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe zwei IP-Kameras und einen ftp-Server, auf die ich mit DynDNS von außen zugreifen möchte.
+    <br/>
+    An und für sich funktioniert das mit dem HA35-Hybridrouter - sofort nach dem Einrichten der Portzuordnung habe ich meinen ftp-Server (ist mit Kabel mit dem Router verbunden) erreichen können (Firewall-Stufe niedrig). Wenn ich aber den HA35 neu starte, bleibt der Port aber so lange geschlossen, bis ich den Server zwei- oder dreimal neugestartet habe, erst dann ist der Port im Router wieder offen. Ohne diese Server-Neustarts bleibt der Port auch nach einer Stunde noch zu. Habt ihr vielleicht Erfahrungen mit diesem Problem?
+   </p>
+   <p>
+    Ich habe noch andere Schwierigkeiten mit diesem Router:
+    <br/>
+    Ich muss die beiden IP-Kameras über einen Repeater (Fritz 1750E) ins WLAN einbinden, die Entfernung zum HA35 ist zu groß. Ich habe zuerst am Repeater eine fixe IP eingestellt, danach ist er im HA35 aus der Liste mit den WLAN-Geräten verschwunden und ist über die fixe IP nicht mehr erreichbar gewesen. Dann habe ich im Repeater DHCP ausgewählt und im HA35 DHCP-Reservierungen für die 2,4 und die 5 Ghz Macadressen des Repeaters eingestellt. Trotz dieser Reservierungen vergibt der Router aber jedes Mal wieder andere IPs an den Repeater.
+   </p>
+   <p>
+    Das größte Problem ist, dass die IP-Kameras (statische IPs) nicht im HA35 angezeigt werden, wenn sie über den Repeater eingebunden werden. Anfangs sind die Kameras aus dem WAN erreichbar, nach einem Neustart werden sie aber im HA35 als inaktiv angezeigt, natürlich funktioniert die Portweiterleitung dann nicht mehr. Lokal kann man auf die Kameras z.B. über einen Browser zugreifen, sie antworten dem HA35 auch auf Pings. Hättet ihr noch ein paar Tipps für mich?
+   </p>
+   <p>
+    Mit meinem alten AVM LTE Router hat es diese Probleme nicht gegeben - ich bin mittlerweile so genervt vom HA35, dass ich überlege, einige 100 Euro extra für einen anderen Router auszugeben. Würde ein Fritz-Hybridrouter mit dem Hybrid-Anschluss von T-Mobile funktionieren?
+    <em>
+     EDIT: Ok, hab gerade gelesen, dass die AVM-Router kein Hybrid können.
+    </em>
+   </p>
+   <p>
+    Danke!
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2018-09-22T14:29:34Z" title="2018-09-22 14:29 ">
+      September 22, 2018
+     </time>
+     von hitch
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-22T15:05:17Z" title="2018-09-22 15:05 ">
+   September 22, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Edit: anderen Beitrag gelesen.
+   </p>
+   <p>
+    Auf was für einem System rennt der FTP Server. IP Kamera und FTP im Internet finde ich persönlich nicht so toll, da FTP und IP Kameras nicht immer so auf Sicherheit achten.
+   </p>
+   <p>
+    Wie verhält es sich bei einen simplen Web Server?
+   </p>
+   <p>
+    In machen Fällen wäre das über ein VPN eleganter.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2018-09-22T15:07:45Z" title="2018-09-22 15:07 ">
+      September 22, 2018
+     </time>
+     von IT-Freak
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   hitch
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-22T15:59:05Z" title="2018-09-22 15:59 ">
+   September 22, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Du bist immer der Erste, der zu helfen versucht - danke
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+   <p>
+    Das ist ein Linux-Server, ich hab's aber testweise schon mit Windows versucht und habe auch eine IP-Kamera abmontiert und direkt mit dem HA35 verbunden - immer das Gleiche, man muss einige Male neustarten.
+   </p>
+   <p>
+    Mit der Sicherheit ist es bei mir nicht so tragisch: Am ftp-Server sind keine wirklich geheimen Daten und die Kameras sind zur Überwachung eines Stalls - ein Hacker würde nur idyllische Bilder von Tieren sehen
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-22T17:30:54Z" title="2018-09-22 17:30 ">
+   September 22, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich nehme mal an der Linux Server wird wenig im Netz machen.
+   </p>
+   <p>
+    Was ist, wenn du nach dem Neustart vom Hybrid einen Ping vom Linux Server ins Netz sendest? (Ich gehe davon aus, der Linux Server wird wenig im Internet "surfen" )
+   </p>
+   <p>
+   </p>
+   <p>
+    Meine Vermutung:
+   </p>
+   <p>
+    Sowie es aussieht, ordnet der Hybrid die Weiterleitung dem Host zu aber nicht der IP. Und wie es aussieht, macht das ding kein rARP.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-22T19:22:39Z" title="2018-09-22 19:22 ">
+   September 22, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27108" data-ipsquote-contentid="4706" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1537631945" data-ipsquote-userid="76820" data-ipsquote-username="hitch">
+    <div class="ipsQuote_citation">
+     vor 3 Stunden schrieb hitch:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Mit der Sicherheit ist es bei mir nicht so tragisch: Am ftp-Server sind keine wirklich geheimen Daten und die Kameras sind zur Überwachung eines Stalls - ein Hacker würde nur idyllische Bilder von Tieren sehen
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Naja ganz so unrecht hat
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/72107-it-freak/?do=hovercard" data-mentionid="72107" href="https://community.magenta.at/profile/72107-it-freak/" rel="">
+     @IT-Freak
+    </a>
+    nicht, auch wenn es nur „unwichtige“ Daten sind. Auch über den FTP Server kann man genug Dinge anstellen.
+   </p>
+   <p>
+    Sorry fürs off topic sein  ?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   hitch
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-23T11:38:43Z" title="2018-09-23 11:38 ">
+   September 23, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27109" data-ipsquote-contentid="4706" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1537637454" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 18 Stunden schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Meine Vermutung:
+     </p>
+     <p>
+      Sowie es aussieht, ordnet der Hybrid die Weiterleitung dem Host zu aber nicht der IP. Und wie es aussieht, macht das ding kein rARP.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich befürchte, dass du absolut recht hast. Ich denke, es wird mir nichts anderes übrig bleiben als Neustarts zukünftig zu vermeiden und zu hoffen, dass es nicht allzu viele Stromausfälle geben wird.
+   </p>
+   <p>
+    Ich bin mittlerweile schon so richtig genervt von dem HA35 - ich habe schon das nächste Problem, diesmal mit den externen Antennen. Da werde ich aber ein neues Thema aufmachen, das passt hier nicht wirklich rein...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-23T13:15:38Z" title="2018-09-23 13:15 ">
+   September 23, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Beim Nachbarn hängt die homenet Box an der usv. Genau wegen solchen Problemen.
+   </p>
+   <p>
+    (Sowie alle anderen Sachen, die vom internet aus erreichbar sind)
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-23T15:36:31Z" title="2018-09-23 15:36 ">
+   September 23, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27118" data-ipsquote-contentid="4706" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1537702723" data-ipsquote-userid="76820" data-ipsquote-username="hitch">
+    <div class="ipsQuote_citation">
+     vor 3 Stunden schrieb hitch:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich befürchte, dass du absolut recht hast. Ich denke, es wird mir nichts anderes übrig bleiben als Neustarts zukünftig zu vermeiden und zu hoffen, dass es nicht allzu viele Stromausfälle geben wird.
+     </p>
+     <p>
+      Ich bin mittlerweile schon so richtig genervt von dem HA35 - ich habe schon das nächste Problem, diesmal mit den externen Antennen. Da werde ich aber ein neues Thema aufmachen, das passt hier nicht wirklich rein...
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Kannst du nur hoffen, dass die Hardware das auch überlebt und nicht einfach zwischendurch von selbst mein, sie muss jetzt neustarten
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-23T16:44:38Z" title="2018-09-23 16:44 ">
+   September 23, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Mir sind schon boxen untergekommen, die über ein Jahr durch gelaufen sind.
+   </p>
+   <p>
+    Teils bedenklich, da diese auch kein Firmware upgrade gemacht haben.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-23T17:31:08Z" title="2018-09-23 17:31 ">
+   September 23, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich würde mich sowieso nie auf die standardhardware verlassen ....
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-23T18:50:23Z" title="2018-09-23 18:50 ">
+   September 23, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Bei Hybrid gibt es hardware mäßig keine alternativen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-23T18:51:32Z" title="2018-09-23 18:51 ">
+   September 23, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Aber du kannst dir dahinter was besseres aufstellen
+    <img alt="B|" data-emoticon="" height="20" src="images/emoticons/tma_cool-o.png" srcset="images/emoticons/tma_cool-o@2x.png 2x" title="B|" width="20"/>
+    dann hast du auch oftmals weniger Probleme.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

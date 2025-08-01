@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Port Weiterleitung funktioniert leider nicht | E5170
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Port Weiterleitung funktioniert leider nicht | E5170
+  </h1>
+  <span class="author">
+   anton1995
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-04T18:32:57Z" title="2018-05-04 18:32 ">
+   Mai 4, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo liebe Community,
+   </p>
+   <p>
+    nach laaangem tüfteln habe ich mich nun doch dazu entschieden, mein Problem hier öffentlich zu posten... Ich komme nun mal nicht mehr weiter :-(
+   </p>
+   <p>
+    Bei mir zuhause steht die Huawei E5170 Box für einen bestmöglichen Empfang am Dachboden, via LAN-Kabel verbunden mit einer Fritzbox 7590 im Wohnzimmer. Die Fritzbox arbeitet ausschließlich als Switch und bietet daher selbst keine Möglichkeit, irgendwelche Ports zu öffnen (sie blockiert ja auch nichts).
+   </p>
+   <p>
+    Beim Huawei Router ist die "business.gprsinternet" APN aktiviert und es wurden testweise Ports für verschiedene Geräte über verschiedene Wege geöffnet (zB Desktop über Fritzbox, Macbook direkt an der Huawei usw). Ich habe auch schon die Firewall des Huawei komplett deaktiviert und selbst da kam absolut nichts durch...
+   </p>
+   <p>
+   </p>
+   <p>
+    Portweiterleitung habe ich wie folgt gemacht:
+   </p>
+   <p>
+    Einstellungen -&gt; Sicherheit -&gt; Virtueller Server
+   </p>
+   <p>
+    Name: test | WAN-Port: gewünschter Port | LAN-IP-Adresse: 192.168.1.103 (Desktop) | LAN-Port: nochmal der Port | Status: an
+   </p>
+   <p>
+   </p>
+   <p>
+    APN:
+   </p>
+   <p>
+    Einstellungen -&gt; Verbindungsaufbau -&gt; Profilverwaltung
+   </p>
+   <p>
+    Benutzername: t-mobile
+   </p>
+   <p>
+    Passwort: tm
+   </p>
+   <p>
+    APN: statisch | business.gprsinternet
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich weiß leider selbst nicht mehr weiter und freue mich auf eure Vorschläge ;-)
+   </p>
+   <p>
+    Freundliche Grüße
+   </p>
+   <p>
+    Anton
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-24T11:43:26Z" title="2018-05-24 11:43 ">
+   Mai 24, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Kannst du einen Screenshot von den Portweiterleitung hier reinstellen?
+    <br/>
+    Was genau möchtest du denn freischalten? Also welche Anwendung(en)
+   </p>
+   <p>
+    Hast du einen Virenscutz/Firewall auf dem Gerät auf dem die Anwendung läuft?
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   anton1995
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-24T15:41:43Z" title="2018-05-24 15:41 ">
+   Mai 24, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Mario,
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielen Dank für deine Antwort!
+   </p>
+   <p>
+    Ich habe den Huawei Router gegen einen Fritzbox 6820 ausgetauscht und nun funktioniert die Portweiterleitung zu meinem Synology-System einwandfrei.
+   </p>
+   <p>
+    Ich kann es mir zwar immernoch nicht erklären, warum dies mit dem Huawei nichts funktioniert hat, bin allerdings nun froh, dass jetzt alles funktioniert.
+   </p>
+   <p>
+    MfG Anton
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-05-26T04:46:12Z" title="2018-05-26 04:46 ">
+   Mai 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Super dass es funktioniert ? leider sind die Geräte von t-mobile oftmals sehr begrenzt was die Firmware betrifft. Vielleicht lag es daran.
+   </p>
+   <p>
+    lg
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

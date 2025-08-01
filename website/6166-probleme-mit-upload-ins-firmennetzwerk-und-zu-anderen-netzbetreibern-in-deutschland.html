@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Probleme mit Upload ins Firmennetzwerk (und zu anderen Netzbetreibern in Deutschland)
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Probleme mit Upload ins Firmennetzwerk (und zu anderen Netzbetreibern in Deutschland)
+  </h1>
+  <span class="author">
+   BM8
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-10-15T06:59:15Z" title="2020-10-15 06:59 ">
+   Oktober 15, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe seit einigen Wochen das Problem, dass über meinen Magenta/UPC Kabelanschluss in Wien der Upload in ein Firmennetzwerk nach München, extrem langsam ist. (Im Bereich von einigen Hundert kbis/s) Es hat mich einige Zeit gekostet diverse Fehlerquellen auf meiner Seite, als auch auf Firmennetz-Seite (bin in der IT tätig) auszuschließen und das Problem einzugrenzen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Die unmittelbare Ursache für den langsamen Upload ist, dass offenbar bei dem momentan gewählten IP-Routing von Magenta am Weg von Wien nach München Paketverluste von 15-20% auftreten (mittels iPerf getestet) und zwar unabhängig von der Übertragungsgeschwindigkeit. Damit werden alle auf TCP basierenden Protokolle (HTTP, FTP, SMTP, diverse interne Dienste via VPN) massiv ausgebremst.
+   </p>
+   <p>
+   </p>
+   <p>
+    Dazu muss gesagt werden, dass mein Internetanschluss an sich absolut einwandfrei läuft und ich zu Servern in Wien, Frankfurt, oder beispielsweise auch Amazon AWS/S3 ohne Schwierigkeiten den vollen Up- und Downloadspeed meines Magenta-Internetpakets erreiche. Dass mein Anschluss oder meine Heimnetzkonfiguration im Speziellen das Problem darstellt, lässt sich auch insofern ausschließen, da die gleichen Problme mit dem Upload nach München auch vom Anschluss meiner Eltern und bei dem von einem Freund (beide Magenta/UPC Kabelanschluss) auftreten. Ein Problem auf der Firmenseite lässt sich auch leicht ausschließen, denn wenn ich über den Hotspot von meinem Handy (A1) einen Upload mit dem Labtop starte funktioniert dieser einwandfrei mit 5-20Mbit/s - also was das LTE-Netz momentan halt so hergibt. Abgesehen davon würden bei einem Fehler auf Firmenseite sofort deren Kunden Sturmläuten.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das beschriebene Problem lässt sich auch sehr schön mittels Speedtests nachvollziehen und beschärnkt sich auch gar nicht auf den speziellen IP-Adressenbereich der Firma, sondern betrifft offenbar einige Netzbereiche in Deutschland (und vielleicht auch anderswo). So leider auch den Netzbereich der Firma M-Net (dem Internetprovider meiner Firma in München). M-Net bietet auf deren Webseite einen Speedtest an (
+    <a href="https://m-net.speedtestcustom.com/" rel="external nofollow">
+     https://m-net.speedtestcustom.com/
+    </a>
+    ). Führe ich diesen auf den mir zur Verfügung stehenden Magenta-Anschlüssen (bei mir, meinen Eltern und beim Freund) aus, so komme ich auf über 200 Mbit/s im Download, aber ebenfalls nur auf maximal 1-2 Mbit/s im Upload. Grund sind wiederum massive Paketverluste, wie sich mit Wireshark leicht überprüfen lässt. Die 1-2 Mbit/s sind dabei eher optimistisch für reale Übertragungen, da diese Speedtests üblicherweise mit etlichen gleichzeitigen Verbindungen durchgeführt werden um die Bandbreite des Anschlusses bestmöglich auszulasten. Bei einer einzelnen Datenübertragung kommt man teilweise nur auf einen Bruchteil!
+   </p>
+   <p>
+   </p>
+   <p>
+    Ein Problem auf der Seite von M-Net lässt sich auch leicht ausschließen, da das gleiche Phänomen auch bei manchen anderen Netzen in Deutschland auftritt. Das lässt sich recht gut mit
+    <a href="https://www.speedtest.net/" rel="external nofollow">
+     speedtest.net
+    </a>
+    überprüfen, da man dort gezielt den zu testenden Server auswählen kann.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ebenfalls Probleme mit Uploadgeschwindigkeiten von nur 1-2 Mbit/s gibt es beispielsweise mit den Speedtest-Serverstandorten:
+    <br/>
+    - MIVITEC / Munich
+    <br/>
+    - HessenKom / Frankfurt
+    <br/>
+    - Contabo / Nuremberg (dürfte auch in Frankfurt stehen)
+   </p>
+   <p>
+   </p>
+   <p>
+    Bei den meisten anderen hingegen komme ich auf die "normalen" 40-50 Mbit/s meines Anschlusses, z.B. bei:
+    <br>
+     - Contabo / Munich
+     <br/>
+     - InterNetX / Munich
+     <br/>
+     - Deutsche Telekom / Munich
+     <br/>
+     - Fdcservers / Frankfurt
+     <br/>
+     - Vodafone / Frankfurt
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    Wähle ich mich Remote bei der Firma in München ein und führe aus dem Netz von M-Net einen Speedtest auf den Speedtest-Server von Magenta in Wien so erreiche ich ebenfalls nur 1-2 Mbit - diesmal aber natürlich im Download, da ja die Richtungen aus Sicht des Firmennetzes vertauscht sind. Der Upload erreicht über den Firmenanschluss von München nach Wien weit über 500 Mbit/s.
+   </p>
+   <p>
+   </p>
+   <p>
+    Es gibt eine Gemeinsamkeit der oben angeführten Problemfälle. Bei allen vier werden die aus dem Magenta/Liberty Global Netz ausgehenden Pakete (anscheinend noch in Wien) über Level3/CenturyLink geroutet. Zumindest ist für die Server
+    <br/>
+    - speedtest.m-net.de
+    <br/>
+    - speedtest.mivitec.net
+    <br/>
+    - speedtest.hessenkom.net
+    <br/>
+    - speedtest.contabo.net
+   </p>
+   <p>
+   </p>
+   <p>
+    sowie für den für mich relevanten Netzbereich 62.245.128.0/17 von M-Net laut Traceroute der erste Hop nach Verlassen des Magenta/Liberty Global-Netzes ein Router von Level3. Bei den Servern, mit denen es keine Uploadprobleme gibt, werden die Pakete über andere Provider bzw. Peering-Partner (Cogent, Telia, DTAG, ...) geroutet.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das Problem tritt (zumindest für die Verbindung zu dem Firmennetz) erst seit ein paar Wochen auf. Davor gab es Jahre, fast schon Jahrzehnte, keine Probleme mit der Verbindung. Auch hat sich auf meiner Seite und auf Seiten der Firma, für die ich arbeite, im letzten Jahr netzwerktechnisch nichts verändert. Es sieht so aus als wurde hier das Routing im Magenta-Netz sehr nachteilig geändert, sicher sagen kann ich es leider nicht, da ich von früher natürlich keine Traceroutes gespeichert habe.
+   </p>
+   <p>
+   </p>
+   <p>
+    Kann jemand im Forum meine Beobachtungen bestätigen und/oder einen Tipp geben wie man hier an Magenta am besten herantritt? Ein Anruf bei der Servicehotline gestern war wenig ergiebig. Die Mitarbeiterin war zwar sehr hilfsbereit und bemüht, die von ihr letztlich vorgeschlagene "Optimierung meines WLANs" führt aber dann doch ein klein wenig an meiner eigentlichen Problemstellung vorbei...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Rexalius2000
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-10-15T07:11:25Z" title="2020-10-15 07:11 ">
+   Oktober 15, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/86151-bm8/?do=hovercard" data-mentionid="86151" href="https://community.magenta.at/profile/86151-bm8/" rel="">
+     @BM8
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Versuche es mal bei der Technik
+   </p>
+   <p>
+   </p>
+   <p>
+    Business
+   </p>
+   <p>
+    0676 20333
+    <br>
+     24 Stunden täglich, 7 Tage die Woche
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   BM8
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-10-15T07:34:55Z" title="2020-10-15 07:34 ">
+   Oktober 15, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36778" data-ipsquote-contentid="6166" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1602745885" data-ipsquote-userid="77193" data-ipsquote-username="Rexalius2000">
+    <div class="ipsQuote_citation">
+     vor 22 Minuten schrieb Rexalius2000:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/86151-bm8/?do=hovercard" data-mentionid="86151" href="https://community.magenta.at/profile/86151-bm8/" rel="">
+       @BM8
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Versuche es mal bei der Technik
+     </p>
+     <p>
+     </p>
+     <p>
+      Business
+     </p>
+     <p>
+      0676 20333
+      <br>
+       24 Stunden täglich, 7 Tage die Woche
+      </br>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Danke für den Tipp mit der Business-Line, werde ich heute ausprobieren und dann berichten...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   HanslW
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-10-16T05:34:18Z" title="2020-10-16 05:34 ">
+   Oktober 16, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Morgen!
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich ärgere mich ebenfalls seit einigen Wochen mit den gleichen Symptomen herum. Ich benutze unter Anderem Webhosting von WebGo (haben ihr RZ in Frankfurt). Mein Upload via FTP liegt bei mir UNTER 1Mbit. Auch ich kann sowohl Probleme bei mir lokal, als auch beim Ziel ausschließen. Von der Arbeit aus lade ich auf den gleichen Server mit 10MB/S (!) meine Daten hoch!
+   </p>
+   <p>
+   </p>
+   <p>
+    Es wäre fein, wenn du deine "Erkenntnisse" mit Magenta mit uns hier teilen würdest! :-)
+   </p>
+   <p>
+   </p>
+   <p>
+    Schönen Tag noch
+   </p>
+   <p>
+    Wolfgang
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   BM8
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-10-16T06:56:37Z" title="2020-10-16 06:56 ">
+   Oktober 16, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36793" data-ipsquote-contentid="6166" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1602826458" data-ipsquote-userid="86167" data-ipsquote-username="HanslW">
+    <div class="ipsQuote_citation">
+     vor einer Stunde schrieb HanslW:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Guten Morgen!
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich ärgere mich ebenfalls seit einigen Wochen mit den gleichen Symptomen herum. Ich benutze unter Anderem Webhosting von WebGo (haben ihr RZ in Frankfurt). Mein Upload via FTP liegt bei mir UNTER 1Mbit. Auch ich kann sowohl Probleme bei mir lokal, als auch beim Ziel ausschließen. Von der Arbeit aus lade ich auf den gleichen Server mit 10MB/S (!) meine Daten hoch!
+     </p>
+     <p>
+     </p>
+     <p>
+      Es wäre fein, wenn du deine "Erkenntnisse" mit Magenta mit uns hier teilen würdest! :-)
+     </p>
+     <p>
+     </p>
+     <p>
+      Schönen Tag noch
+     </p>
+     <p>
+      Wolfgang
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Es "freut" mich, dass es offenbar noch andere mit dem selben Problem gibt. Das bestätigt nur meine Annahme, dass es sich um ein generelles Problem im Magenta-Netz handelt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ein einfacher Traceroute zum Server, auf dem die WebGo-Webseite gehostet wird, zeigt auch sehr schön die Gemeinsamkeit mit den oben beschriebenen Problemfällen:
+   </p>
+   <p>
+   </p>
+   <p>
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   </p>
+   <p>
+    Routenverfolgung zu www.webgo.de [45.153.59.196] über maximal 30 Abschnitte:
+   </p>
+   <p>
+    1    &lt;1 ms    &lt;1 ms    &lt;1 ms  router.bm.lan [172.24.1.254]
+    <br>
+     2     *        *        *     Zeitüberschreitung der Anforderung.
+     <br>
+      3     9 ms     8 ms     6 ms  80-241-20-177.static.upcbusiness.at [80.241.20.177]
+      <br/>
+      4     7 ms    19 ms     8 ms  at-vie05d-rc1-ae-25-2076.aorta.net [84.116.228.245]
+      <br/>
+      5     7 ms     7 ms     7 ms  at-vie05b-ri3-ae-12-0.aorta.net [213.46.173.125]
+      <br/>
+      6    13 ms     8 ms     8 ms  213.46.184.105
+      <br/>
+      7    36 ms    27 ms    26 ms  ae-1-5.bar1.hamburg1.level3.net [4.69.142.209]
+      <br/>
+      8    27 ms    32 ms    27 ms  212.162.29.190
+      <br/>
+      9    59 ms    44 ms    50 ms  89.44.8.17
+      <br/>
+      10    35 ms    27 ms    26 ms  website.webgo.de [45.153.59.196]
+     </br>
+    </br>
+   </p>
+   <p>
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   </p>
+   <p>
+   </p>
+   <p>
+    Auch hier ist Level3 die von Magenta gewählte Route. Um nicht den falschen Eindruck zu erwecken: Level3/CenturyLink ist einer der größten, weltweit operierenden Internet-Backbone-Provider. Es würde mich sehr wundern, wenn die mit unseren lächerlichen paar Mbit Upload nicht klar kommen würden. Ich vermute ja eher, dass der letzte Router im Magenta/Liberty Global-Netz, also die 213.46.184.105 das Problem darstellt - aber das ist natürlich eher Spekulation.
+   </p>
+   <p>
+   </p>
+   <p>
+    Meine Erkenntnisse bisher sind, dass ich gestern, wie hier im Forum vorgeschlagen, bei der Businesshotline angerufen habe. Dort hat man mich gebeten meine Problembeschreibung an eine bestimmte Business-Support E-Mailadresse zu schicken, was ich umgehend gemacht habe. Bis jetzt kam noch keine Rückmeldung, aber zumindest gleich eine Empfangsbestätigung in der auch darauf hingewiesen wurde, dass man auf Grund von erhöhten Anfragen mit einer etwas längen Bearbeitungsdauer rechnen muss. Wie bereits geschrieben, sobald ich was Neues weiß, werde ich berichten...
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2020-10-16T06:58:56Z" title="2020-10-16 06:58 ">
+      Oktober 16, 2020
+     </time>
+     von BM8
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   BM8
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-10-16T22:03:27Z" title="2020-10-16 22:03 ">
+   Oktober 16, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo zusammen,
+   </p>
+   <p>
+   </p>
+   <p>
+    eine erfreuliche Nachricht zum Wochenende:
+   </p>
+   <p>
+    Heute im Laufe des Tages wurde das Routing innerhalb des Magenta-Netzes offenbar geändert. Daten zu den oben beschrieben Netzen werden, so wie es aussieht, nun nicht mehr von Wien aus über Level3 geroutet, sondern teilweise über andere Provider geleitet und teilweise an anderen Übergabepunkten innerhalb des Magenta/Liberty Global Netzes an Level3 übergeben. Damit bestehen die in diesem Thread beschriebenen Uploadschwierigkeiten/Paketverluste (zumindest für die oben genannten Netze) nicht mehr.
+   </p>
+   <p>
+   </p>
+   <p>
+    Eine direkte Nachricht/Antwort auf meine E-Mail an die Business-Serviceline habe ich zwar bisher noch nicht erhalten, an die richtige Stelle dürfte die Mail aber offensichtlich gelangt sein.
+    <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+    Die Hauptsache ist natürlich, dass dieses sehr lästige Problem behoben wurde. Ich hoffe es bleibt auch dabei. Sollte ein Verantwortlicher bei Magenta dies hier lesen - vielen Dank für die Behebung!
+   </p>
+   <p>
+   </p>
+   <p>
+    Beste Grüße,
+   </p>
+   <p>
+    BM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-10-17T06:22:24Z" title="2020-10-17 06:22 ">
+   Oktober 17, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das sind mal gute Nachrichten! Danke dafür.
+    <br>
+     Schön das wieder was gelöst ist.
+     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+     <br>
+      LG
+      <br/>
+      Christian
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   HanslW
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-10-17T07:16:23Z" title="2020-10-17 07:16 ">
+   Oktober 17, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36809" data-ipsquote-contentid="6166" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1602915744" data-ipsquote-userid="70315" data-ipsquote-username="Christian_E">
+    <div class="ipsQuote_citation">
+     vor 50 Minuten schrieb Christian_E:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das sind mal gute Nachrichten! Danke dafür.
+      <br>
+       Schön das wieder was gelöst ist.
+       <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+       <br/>
+       LG
+       <br/>
+       Christian
+      </br>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Jop, auch mein Problem hat sich mit 7MB/s Upload nach Frankfurt in Wohlgefallen aufgelöst - damit auch danke an den TO, dessen fundierte Problem Darstellung, wohl positiv zur Lösung beigetragen hat!
+    <img alt=":$" data-emoticon="" height="20" src="images/emoticons/tma_blushing-o.png" srcset="images/emoticons/tma_blushing-o@2x.png 2x" title=":$" width="20"/>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

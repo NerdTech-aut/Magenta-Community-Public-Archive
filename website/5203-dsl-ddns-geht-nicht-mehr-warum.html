@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   DSL -  DDNS geht nicht mehr, warum?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   DSL -  DDNS geht nicht mehr, warum?
+  </h1>
+  <span class="author">
+   podex
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-08-14T07:25:30Z" title="2019-08-14 07:25 ">
+   August 14, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich bin seit Jahren zufriedener inode-UPC-t-mobile Kunde und habe als solcher seit Beginn an DDNS in Verwendung, damit ich meine Daten selbst unter Kontrolle habe und nicht auf die Clouds angewiesen bin. Stichwort: NextCloud
+   </p>
+   <p>
+   </p>
+   <p>
+    Aber seit ca. 2 Tagen ist mein Rechner von außen nicht mehr erreichbar,. Der Zugang ins Internet (ADSL) funktioniert, ein ping auf die DDNS-Adresse geht, die IP dort stimmt, aber SSH u.ä. von draußen geht nicht.  Was wurde da umgestellt, gibt es neue Firewalls ohne dass ich davon informiert wurde?
+   </p>
+   <p>
+   </p>
+   <p>
+    mfG,
+   </p>
+   <p>
+    Christof
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-08-14T07:45:17Z" title="2019-08-14 07:45 ">
+   August 14, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ist die WAN im von der FB ident mit der bei heise.de/ip
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   podex
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-08-14T08:00:41Z" title="2019-08-14 08:00 ">
+   August 14, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke für die rasche Antwort!
+   </p>
+   <p>
+   </p>
+   <p>
+    Also ich bin leider gerade nicht vor Ort, kann das also nicht direkt beantworten. Aber die WAN-Adresse in der Fritz.Box stimmt mit der über 'dig' abgefragten überein. Ein Ping vom Internet aus auf die DDNS-Adresse funktioniert, aber traceroute oder ssh nicht. Ich könnte Dir per PM ein wenig Log schicken.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-08-14T08:02:19Z" title="2019-08-14 08:02 ">
+   August 14, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ok, das hilft auch. Beginnt die IP mit 100., 192. oder 10. ?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   podex
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-08-14T08:14:30Z" title="2019-08-14 08:14 ">
+   August 14, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Sorry, weiss nicht, wie ich PM schicken kann, also hier ein wenig LOGs, die ich beim Zugriff vom Internet aus gemacht habe:
+   </p>
+   <p>
+   </p>
+   <p>
+    PING xxx (80.110.x.x) 56(84) bytes of data.
+    <br/>
+    ...
+   </p>
+   <p>
+    4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+    <br/>
+    rtt min/avg/max/mdev = 37.460/41.300/44.915/3.017 ms
+   </p>
+   <p>
+   </p>
+   <p>
+    $ traceroute -p 80 --resolve-hostnames xxx
+    <br/>
+    traceroute to xxx (80.110.x.x), 64 hops max
+    <br>
+     ...
+    </br>
+   </p>
+   <p>
+    11   213.46.173.126 (at-vie05d-rc1-ae12-0.aorta.net)  30,215ms  55,320ms  40,957ms
+    <br>
+     12   84.116.228.42 (at-klu-vill-pe02-bundle-ether1-2021.aorta.net)  38,965ms  30,398ms  29,933ms
+     <br>
+      13   *  84.116.218.166 (at-klu-vill-bng01-1-2-2-2157.aorta.net)  30,205ms  30,304ms
+      <br>
+       14   80.110.x.x (80-110-x-x.static.upcbusiness.at)  43,805ms  34,777ms  35,984ms
+       <br>
+        15   80.110.x.x (80-110-x-x.static.upcbusiness.at)  38,990ms  34,675ms  34,936ms
+        <br/>
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    $ ssh -v xxx
+    <br/>
+    OpenSSH_....
+    <br/>
+    debug1: Reading configuration data /etc/ssh/ssh_config
+    <br/>
+    debug1: /etc/ssh/ssh_config line 19: Applying options for *
+    <br/>
+    debug1: Connecting to xxx [80.110.x.x] port 22.
+    <br/>
+    debug1: connect to address 80.110.x.x port 22: No route to host
+    <br/>
+    ssh: connect to host xxx port 22: No route to host
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="5 yr" datetime="2019-08-14T10:48:59Z" title="2019-08-14 10:48 ">
+      August 14, 2019
+     </time>
+     von podex
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   podex
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-08-15T20:38:02Z" title="2019-08-15 20:38 ">
+   August 15, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Am Abend ist mir eine Idee gekommen. Das Problem könnte bei mir intern im Netz mit dem NAT und Portweiterleitung liegen. Und nach einem Check heute sieht es ganz danach aus, dass es daran liegt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke trotzdem für die Unterstützung!
+   </p>
+   <p>
+   </p>
+   <p>
+    Lg, Christof
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   T-Mobile Webserver einrichten
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   T-Mobile Webserver einrichten
+  </h1>
+  <span class="author">
+   xImMoRtALitYx
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-04-14T19:36:22Z" title="2019-04-14 19:36 ">
+   April 14, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Tag,
+   </p>
+   <p>
+    ich versuche seit Wochen, dass ich einen Webserver zum Laufen bringe. Ich habe zuhause die T-Mobile Box "Huawei B529s-23a". An dieser hängt ein "Asus RT-AC68U" Router, mit dem alle Geräte im Netzwerk verwaltet werden, unter anderem auch ein "Raspberry Pi", der als Webserver dienen soll. Ich habe bereits die Business-APN verwendet bekomme auch eine öffentliche IP-Adresse mit 78.132.x.x. Dennoch ist es nicht möglich, dass ich ich mit der IP-Adresse auf das Routermenü zugreifen kann, dies funktioniert nur, wenn ich am T-Mobile Router DDNS aktiviere oder ich mit einem Gerät im Netzwerk hänge und im Browser die public IP eingebe. Wenn ich die öffentliche IP des Routers über das Handy im Mobilfunknetz aufrufe, wird ein ERR_CONNECTION_TIMED_OUT oder ERR_CONNECTION_REFUSED Fehler ausgegeben. Portforwarding hätte ich bereits aktiviert, in meinem Fall 8080 und die IP-Adresse des Asus Routers und dieser übergibt die IP mit portforwarding an den Raspberry. Nun wird jedoch derselbe Fehler angezeigt wenn ich mit 78.132.x.x:8080 auf den Webserver zugreifen will. Ich habe kontrolliert, ob die Ports freigegeben wurden, jedoch haben mir Websites, mit der man freigegebene Ports überprüfen kann, angezeigt, dass die Ports geschlossen sind, obwohl portforwarding aktiviert ist. Zurücksetzen des Routers brachte keinen Erfolg.
+   </p>
+   <p>
+    Ich habe keine Idee mehr, woran es liegen kann, dass die Ports nicht geöffnet werden und würde mich über jede Hilfe freuen.
+   </p>
+   <p>
+    LG
+   </p>
+   <p>
+    D.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-04-15T05:52:05Z" title="2019-04-15 05:52 ">
+   April 15, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich meld mich mal, muss aber an die anderen Kollegen verweisen. Vielleicht hat da jemand eine Idee?
+    <br/>
+    Ansonsten gibts ja die Technik Hotline, wo dir auch geholfen werden kann aber warten wir mal ab, ob sich hier jemand von den Kolleginnen und Kollegen meldet.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-04-15T06:36:42Z" title="2019-04-15 06:36 ">
+   April 15, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Welcher IP Bereich wird vom Asus Router verwendet und welcher vom TMobile Router?
+   </p>
+   <p>
+    Funktioniert der Zugriff von außen, wenn der Webserver sich im TMobile Router Netz befindet und a auf dieses die Port Weiterleitungen eingerichtet ist?
+   </p>
+   <p>
+    (Testen bitte von extern, z.B mit dem Smartphone)
+   </p>
+   <p>
+   </p>
+   <p>
+    Was für ein web Server ist es?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   xImMoRtALitYx
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-04-15T08:55:38Z" title="2019-04-15 08:55 ">
+   April 15, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="28837" data-ipsquote-contentid="4880" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1555310202" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 1 Stunde schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Welcher IP Bereich wird vom Asus Router verwendet und welcher vom TMobile Router?
+     </p>
+     <p>
+      Funktioniert der Zugriff von außen, wenn der Webserver sich im TMobile Router Netz befindet und a auf dieses die Port Weiterleitungen eingerichtet ist?
+     </p>
+     <p>
+      (Testen bitte von extern, z.B mit dem Smartphone)
+     </p>
+     <p>
+     </p>
+     <p>
+      Was für ein web Server ist es?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Der Asus hat den Bereich 192.168.1.x, der T-Mobile verwendet 192.168.8.x
+   </p>
+   <p>
+    Habe den Webserver jetzt umgesteckt, funktioniert trotzdem nicht.
+   </p>
+   <p>
+    Webserver will ich Apache2 oder eventuell Lighttpd verwenden.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-04-15T16:56:47Z" title="2019-04-15 16:56 ">
+   April 15, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Dann probiere bitte von extern einmal einen anderen Port.
+   </p>
+   <p>
+    P.s. bitte beobachte den Log vom Apache Server. Bzw den Firewall log
+   </p>
+   <p>
+    (Z.B. mit tail -f /var/log/apache/WIEAUCHIMMerDIELOG DATEI HEISST)
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2019-04-15T17:17:36Z" title="2019-04-15 17:17 ">
+      April 15, 2019
+     </time>
+     von IT-Freak
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   xImMoRtALitYx
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-04-15T19:36:03Z" title="2019-04-15 19:36 ">
+   April 15, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="28843" data-ipsquote-contentid="4880" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1555347407" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Dann probiere bitte von extern einmal einen anderen Port.
+     </p>
+     <p>
+      P.s. bitte beobachte den Log vom Apache Server. Bzw den Firewall log
+     </p>
+     <p>
+      (Z.B. mit tail -f /var/log/apache/WIEAUCHIMMerDIELOG DATEI HEISST)
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Vielen Dank, es hat funktioniert! Habe anstatt Port 8080 den 8000er verwendet, habe sofort den Webserver erreicht. Den Log vom Apache2-Server habe ich gar nicht benötigt.
+   </p>
+   <p>
+    Wünsche noch einen schönen Abend!
+   </p>
+   <p>
+    LG
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   🔐 NAT-Typ bleibt bei mobilem WLAN (Xiaomi Router) auf "Moderat" – Wie auf "Offen" umstellen? 🔐
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   🔐 NAT-Typ bleibt bei mobilem WLAN (Xiaomi Router) auf "Moderat" – Wie auf "Offen" umstellen? 🔐
+  </h1>
+  <span class="author">
+   Adi25
+  </span>
+  <br/>
+  <time class="Apr 25" datetime="2025-04-25T08:20:04Z" title="2025-04-25 08:20 ">
+   April 25
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo liebe Community. Folgendes problem
+   </p>
+   <p>
+   </p>
+   <p>
+    ein Freund von mir hat sich nun auch ein Mobiles W-LAN geholt, laut Vertrag mit bis zu 600mbit und es ist ein Router von Xiaomi (so ein Würfel bzw. Zylinder)
+   </p>
+   <p>
+   </p>
+   <p>
+    wir beide haben einen NAT-Typ von Moderat (2) aber können nicht miteinander spielen. Das alte Internet von ihm war wirklich schlecht, (Download 10mbit, Upload 4-7 Mbit aber NAT Typ auch moderat) aber wir konnten miteinander spielen.
+   </p>
+   <p>
+   </p>
+   <p>
+    jetzt habe ich die Frage wie ich den NAT Typ von mir auf offen machen kann. Habe schon viele probiert aber er bleibt leider auf Moderat.
+   </p>
+   <p>
+   </p>
+   <p>
+    falls jemand eine Lösung hat, bitte Bescheid geben
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="Apr 28" datetime="2025-04-28T06:44:17Z" title="2025-04-28 06:44 ">
+   April 28
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/100280-adi25/?do=hovercard" data-mentionid="100280" href="https://community.magenta.at/profile/100280-adi25/" rel="">
+     @Adi25
+    </a>
+    ,
+   </p>
+   <p>
+   </p>
+   <p>
+    Hallo,
+    <span class="ipsEmoji">
+     👋
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    und willkommen in der Community! Es ist verständlich, dass es frustrierend ist, wenn das Online-Gaming trotz gutem Internet nicht wie gewünscht funktioniert. Das Problem mit dem NAT-Typ ist bei mobilen Internetverbindungen (wie bei Magenta Mobil und Routern von Xiaomi) recht häufig – aber es gibt Lösungsansätze.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Was ist das Problem?
+    </strong>
+   </p>
+   <p>
+    Viele mobile Internetanbieter verwenden sogenanntes Carrier Grade NAT (CGNAT). Dabei teilen sich mehrere Nutzer eine öffentliche IP-Adresse, was die direkte Kommunikation zwischen Geräten erschwert. Das führt dazu, dass der NAT-Typ meist nur „moderat“ oder sogar „strikt“ ist – und das kann beim Online-Gaming zu Problemen führen, wie ihr sie erlebt.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Was kannst du versuchen?
+    </strong>
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     1. APN-Einstellungen ändern
+    </strong>
+   </p>
+   <ul>
+    <li>
+     Bei Magenta kannst du versuchen, den APN auf business.gprsinternet umzustellen. Das kann helfen, einen offeneren NAT-Typ zu bekommen, weil du so (theoretisch) eine öffentliche IP zugewiesen bekommst.
+    </li>
+    <li>
+     Anleitung:
+     <ul>
+      <li>
+       Im Router-Menü unter den Netzwerkeinstellungen ein neues Profil anlegen.
+      </li>
+      <li>
+       APN: business.gprsinternet
+      </li>
+      <li>
+       Benutzername: t-mobile
+      </li>
+      <li>
+       Passwort: tm
+      </li>
+      <li>
+       APN-Typ: statisch
+      </li>
+      <li>
+       Speichern und Router neu starten.
+      </li>
+     </ul>
+    </li>
+    <li>
+     Eine Schritt-für-Schritt-Anleitung findest du auch direkt bei
+     <strong>
+      <a href="https://www.magenta.at/hilfe-service/services/hardwaresupport" rel="external nofollow">
+       Magenta
+      </a>
+     </strong>
+     für Xiaomi-Geräte.
+    </li>
+   </ul>
+   <p>
+   </p>
+   <p>
+    <strong>
+     2. UPnP aktivieren
+    </strong>
+   </p>
+   <ul>
+    <li>
+     Im Router-Menü solltest du die Option „UPnP“ (Universal Plug and Play) aktivieren. Das erleichtert die automatische Portfreigabe für Spielekonsolen und viele PC-Spiele35.
+    </li>
+    <li>
+     Nach dem Aktivieren den Router neu starten.
+    </li>
+   </ul>
+   <p>
+   </p>
+   <p>
+    <strong>
+     3. Ports manuell freigeben
+    </strong>
+   </p>
+   <ul>
+    <li>
+     Falls UPnP nicht hilft, kannst du versuchen, die für dein Spiel benötigten Ports manuell im Router freizugeben. Die benötigten Ports findest du meist auf den Supportseiten der jeweiligen Spiele oder Konsolenhersteller.
+    </li>
+   </ul>
+   <p>
+   </p>
+   <p>
+    <strong>
+     4. DMZ nutzen
+    </strong>
+   </p>
+   <ul>
+    <li>
+     Manche Router bieten die Möglichkeit, ein Gerät in die sogenannte DMZ (Demilitarized Zone) zu stellen. Dadurch werden alle Ports für dieses Gerät geöffnet. Achtung: Das kann ein Sicherheitsrisiko sein und sollte nur testweise genutzt werden.
+    </li>
+   </ul>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Grenzen bei mobilem Internet
+    </strong>
+   </p>
+   <p>
+    Trotz aller Einstellungen kann es sein, dass du keinen „offenen“ NAT-Typ erreichst. Möglicherweise kann dir dann unser Technikteam unter 0676 200 7777 weiterhelfen.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Zusammengefasst
+    </strong>
+   </p>
+   <ul>
+    <li>
+     Stelle den APN auf business.gprsinternet um.
+    </li>
+    <li>
+     Aktiviere UPnP im Router-Menü35.
+    </li>
+    <li>
+     Starte Router und Endgerät neu.
+    </li>
+    <li>
+     Prüfe, ob sich der NAT-Typ verbessert hat.
+    </li>
+    <li>
+     Wenn nicht: Ports manuell freigeben oder DMZ testen.
+    </li>
+    <li>
+     Beachte: Bei mobilem Internet ist ein komplett offener NAT-Typ oft nicht erreichbar.
+    </li>
+   </ul>
+   <p>
+   </p>
+   <p>
+    Wenn du Hilfe bei den Einstellungen am Xiaomi-Router brauchst, poste gerne einen Screenshot deiner aktuellen APN-Konfiguration (persönliche Daten bitte abdecken). Wir unterstützen dich gern Schritt für Schritt!
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hoffe, das hilft dir weiter.
+    <span class="ipsEmoji">
+     🙂
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Viele Grüße, JD.
+    <span class="ipsEmoji">
+     🌻
+    </span>
+   </p>
+   <p>
+    <span style="font-size:10px;">
+     (geschrieben mit Hilfe von Perplexity)
+    </span>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

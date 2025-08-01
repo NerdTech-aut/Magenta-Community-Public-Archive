@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Ports 445 und 139 freigeben
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Ports 445 und 139 freigeben
+  </h1>
+  <span class="author">
+   Begus
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-12-11T10:34:13Z" title="2019-12-11 10:34 ">
+   Dezember 11, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Tag!
+   </p>
+   <p>
+    Ich benutze für meinen Internetzugang eine Internet Fiber Box, alle Geräte sind jedoch mit einem anderen Router verbunden.
+   </p>
+   <p>
+    Nun möchte ich die Ports 445 und 139 freigeben, dann erscheint jedoch die Nachricht "Die gewählte Port Range darf keine der folgenden reservierten Ports beinhalten.(25,53,135,137,138,139,161,162,445 &amp;1080)".
+   </p>
+   <p>
+    Ich habe gelesen, dass man die Fiber Box als reines Modem benutzen kann, diese Menüoption fehlt jedoch.
+   </p>
+   <p>
+    Wie kann ich diese reservierten Ports freigeben?
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="1834" href="images/uploads/port445.png.cdf0a70d2f6c4fddb70ba76a590885cf.png" rel="">
+     <img alt="port445.png" class="ipsImage ipsImage_thumbnailed" data-fileid="1834" src="images/uploads/port445.png.cdf0a70d2f6c4fddb70ba76a590885cf.png"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-12-11T12:06:26Z" title="2019-12-11 12:06 ">
+   Dezember 11, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hello,
+   </p>
+   <p>
+    was läuft denn bei dir auf diesem Port?
+   </p>
+   <p>
+   </p>
+   <p>
+    Eventuell kannst du bei der Anwendunge/Server was auch immer auf den Port zugreifen soll den Port auf einen anderen ändern? Einen nicht reservierten?
+   </p>
+   <p>
+   </p>
+   <p>
+    Liebe Grüße
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   TheCableGuy
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-12-11T12:55:36Z" title="2019-12-11 12:55 ">
+   Dezember 11, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Begus
+   </p>
+   <p>
+    Die Funktion nennt sich Bridge Mode danach ist die Fiberbox wie ein reines Modem.
+   </p>
+   <p>
+    Für Routing Funktionen musst dann einen eigenen Router anhängen.
+   </p>
+   <p>
+    Solltest du diese Funktion nicht haben lass mal von der Hotline überprüfen ob IPv4 richtig aktiviert ist.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Begus
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-12-11T14:25:20Z" title="2019-12-11 14:25 ">
+   Dezember 11, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Danke für die rapide Antworten!
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="32486" data-ipsquote-contentid="5470" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1576065986" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hello,
+     </p>
+     <p>
+      was läuft denn bei dir auf diesem Port?
+     </p>
+     <p>
+     </p>
+     <p>
+      Eventuell kannst du bei der Anwendunge/Server was auch immer auf den Port zugreifen soll den Port auf einen anderen ändern? Einen nicht reservierten?
+     </p>
+     <p>
+     </p>
+     <p>
+      Liebe Grüße
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Auf diesem Port läuft ein Samba Server, und  da man unter Windows anscheinend den Port nicht ändern kann beim Zugriff auf den Server, ist den Port zu ändern keine Option.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="32488" data-ipsquote-contentid="5470" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1576068936" data-ipsquote-userid="77911" data-ipsquote-username="TheCableGuy">
+    <div class="ipsQuote_citation">
+     vor einer Stunde schrieb TheCableGuy:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo Begus
+     </p>
+     <p>
+      Die Funktion nennt sich Bridge Mode danach ist die Fiberbox wie ein reines Modem.
+     </p>
+     <p>
+      Für Routing Funktionen musst dann einen eigenen Router anhängen.
+     </p>
+     <p>
+      Solltest du diese Funktion nicht haben lass mal von der Hotline überprüfen ob IPv4 richtig aktiviert ist.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ja, das wäre optimal, da ich ohnehin schon einen anderen Router verwende.
+   </p>
+   <p>
+    Muss ich mich hierfür bei Magenta melden, oder direkt beim Internet Provider?
+   </p>
+   <p>
+    Das ist nämlich ein "Drittanbieter" (Gemeindeverwaltung).
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-12-11T16:02:13Z" title="2019-12-11 16:02 ">
+   Dezember 11, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/81252-begus/?do=hovercard" data-mentionid="81252" href="https://community.magenta.at/profile/81252-begus/" rel="">
+     @Begus
+    </a>
+   </p>
+   <p>
+    Um den Modem Modus nutzen zu können bedarf es IPv4 (Standardmäßig wirst du IPv6 haben). Kontaktiere hierfür am besten den Support.
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-12-12T07:57:55Z" title="2019-12-12 07:57 ">
+   Dezember 12, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="32492" data-ipsquote-contentid="5470" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1576074320" data-ipsquote-userid="81252" data-ipsquote-username="Begus">
+    <div class="ipsQuote_citation">
+     17 hours ago, Begus said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Auf diesem Port läuft ein Samba Server, und  da man unter Windows anscheinend den Port nicht ändern kann beim Zugriff auf den Server, ist den Port zu ändern keine Option.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Welcher Server ist denn das genau? Oder ist das ein Windows eigener/interner?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Begus
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-12-12T09:24:09Z" title="2019-12-12 09:24 ">
+   Dezember 12, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="32497" data-ipsquote-contentid="5470" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1576137475" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor einer Stunde schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Welcher Server ist denn das genau? Oder ist das ein Windows eigener/interner?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Das ist der SambaServerSimple von Debian.
+   </p>
+   <p>
+   </p>
+   <p>
+    Habe bereits den Support kontaktiert, um mein Modem auf IPv4 zu konfigurieren.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-12-12T11:21:07Z" title="2019-12-12 11:21 ">
+   Dezember 12, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="32501" data-ipsquote-contentid="5470" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1576142649" data-ipsquote-userid="81252" data-ipsquote-username="Begus">
+    <div class="ipsQuote_citation">
+     1 hour ago, Begus said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das ist der SambaServerSimple von Debian.
+     </p>
+     <p>
+     </p>
+     <p>
+      Habe bereits den Support kontaktiert, um mein Modem auf IPv4 zu konfigurieren.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Und damit sollte es dann gehen? Oder was hat dir der Support geraten?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Begus
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2019-12-12T11:28:53Z" title="2019-12-12 11:28 ">
+   Dezember 12, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="32502" data-ipsquote-contentid="5470" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1576149667" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor 5 Minuten schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Und damit sollte es dann gehen? Oder was hat dir der Support geraten?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Noch hat er nicht geantwortet. Aber ich nehme an, dass im Bridge Mode keine Ports blockiert werden und ich somit die Ports 445 und 139 auf meinem Router freigeben kann, da dieser sie nicht als "reserviert" angibt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   marco03027
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-03-31T17:31:19Z" title="2020-03-31 17:31 ">
+   März 31, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+   </p>
+   <p>
+    war heute mit dem technischen Kundensupport in Kontakt... die hatten leider nicht viel Ahnung davon. Sie meinten das eigentlich nichts blockiert ist und Sie da keinen Einfluss hätten..
+   </p>
+   <p>
+   </p>
+   <p>
+    Meine Frage nun.. Ich habe einen Synology NAS und verwende die SMB Datenbrotokolle. Synology hat standardmäßig die Ports 137-139 und 445 dafür definiert. Diese lassen sich nicht ändern! Ich muss somit diese Ports weiterleiten. Leider bekomme ich auch immer die Meldung, dass dieses Ports reserviert sind.
+   </p>
+   <p>
+    Kann ich diese Reservierung deaktivieren?? Ich möchte ungern einen Neuen Router kaufen und den Magenta Router in Bridge Mode bringen.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    bin für jeden Tip dankbar!!
+   </p>
+   <p>
+    Danke!!
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/5e837e4ae8efd_Bildschirmfoto2020-03-31um17_07_53.png.bb74884ec606b448e8dd293bcc81b00b.png">
+     <img alt="Bildschirmfoto 2020-03-31 um 17.07.53.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2100" src="images/uploads/5e837e4b774fe_Bildschirmfoto2020-03-31um17_07_53.thumb.png.375071651fd4ede4c1f8cfa7ee25f3fa.png"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Begus
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-03-31T23:18:44Z" title="2020-03-31 23:18 ">
+   März 31, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33970" data-ipsquote-contentid="5470" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1585675879" data-ipsquote-userid="82943" data-ipsquote-username="marco03027">
+    <div class="ipsQuote_citation">
+     vor 5 Stunden schrieb marco03027:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo,
+     </p>
+     <p>
+     </p>
+     <p>
+      war heute mit dem technischen Kundensupport in Kontakt... die hatten leider nicht viel Ahnung davon. Sie meinten das eigentlich nichts blockiert ist und Sie da keinen Einfluss hätten..
+     </p>
+     <p>
+     </p>
+     <p>
+      Meine Frage nun.. Ich habe einen Synology NAS und verwende die SMB Datenbrotokolle. Synology hat standardmäßig die Ports 137-139 und 445 dafür definiert. Diese lassen sich nicht ändern! Ich muss somit diese Ports weiterleiten. Leider bekomme ich auch immer die Meldung, dass dieses Ports reserviert sind.
+     </p>
+     <p>
+      Kann ich diese Reservierung deaktivieren?? Ich möchte ungern einen Neuen Router kaufen und den Magenta Router in Bridge Mode bringen.
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+     <p>
+      bin für jeden Tip dankbar!!
+     </p>
+     <p>
+      Danke!!
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo Marco,
+   </p>
+   <p>
+    ich habe meinem direkten Provider (nicht Magenta, sondern in meinem Fall meine Gemeinde, die Magenta Internet anbietet) kurz nach der Eröffnung dieses Threads geschrieben, dass sie doch mein Modem auf IPv4 konfigurieren sollen, habe jedoch keine Antwort erhalten.
+   </p>
+   <p>
+    Vor ca. zwei Wochen wurden dann Wartungsarbeiten durchgeführt und plötzlich war der Bridge Mode in meinem Menü verfügbar!
+   </p>
+   <p>
+    Also kann ich nur empfehlen, den Support zu kontaktieren, anders hätte ich es auch nicht geschafft.
+   </p>
+   <p>
+   </p>
+   <p>
+    Eine Sache möchte ich jedoch erwähnen: Ich hatte bis vor zwei Wochen noch eine statische IP Adresse, ohne diese erworben bzw. bezahlt zu haben. Also praktisch eine Business Verbindung, obwohl ich eigentlich einen privaten Vertrag habe. Nach den genannten Wartungsarbeiten war die leider weg.
+   </p>
+   <p>
+    Da das bei dir wahrscheinlich nicht der Fall sein wird, melde dich beim Support mit der Bitte, dass sie dein Modem auf IPv4 konfigurieren sollen (was das bedeutet, keine Ahnung, hat bei mir anscheinend funktioniert).
+   </p>
+   <p>
+   </p>
+   <p>
+    Edit:
+   </p>
+   <p>
+    Möchtest du deinen Router NICHT in den Bridge Mode versetzen?
+   </p>
+   <p>
+    Wenn nicht, dann fürchte ich, dass das mit diesem Router nicht möglich sein wird...
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="5 yr" datetime="2020-03-31T23:21:04Z" title="2020-03-31 23:21 ">
+      März 31, 2020
+     </time>
+     von Begus
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   marco03027
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-04-01T14:11:08Z" title="2020-04-01 14:11 ">
+   April 1, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33975" data-ipsquote-contentid="5470" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1585696724" data-ipsquote-userid="81252" data-ipsquote-username="Begus">
+    <div class="ipsQuote_citation">
+     vor 14 Stunden schrieb Begus:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo Marco,
+     </p>
+     <p>
+      ich habe meinem direkten Provider (nicht Magenta, sondern in meinem Fall meine Gemeinde, die Magenta Internet anbietet) kurz nach der Eröffnung dieses Threads geschrieben, dass sie doch mein Modem auf IPv4 konfigurieren sollen, habe jedoch keine Antwort erhalten.
+     </p>
+     <p>
+      Vor ca. zwei Wochen wurden dann Wartungsarbeiten durchgeführt und plötzlich war der Bridge Mode in meinem Menü verfügbar!
+     </p>
+     <p>
+      Also kann ich nur empfehlen, den Support zu kontaktieren, anders hätte ich es auch nicht geschafft.
+     </p>
+     <p>
+     </p>
+     <p>
+      Eine Sache möchte ich jedoch erwähnen: Ich hatte bis vor zwei Wochen noch eine statische IP Adresse, ohne diese erworben bzw. bezahlt zu haben. Also praktisch eine Business Verbindung, obwohl ich eigentlich einen privaten Vertrag habe. Nach den genannten Wartungsarbeiten war die leider weg.
+     </p>
+     <p>
+      Da das bei dir wahrscheinlich nicht der Fall sein wird, melde dich beim Support mit der Bitte, dass sie dein Modem auf IPv4 konfigurieren sollen (was das bedeutet, keine Ahnung, hat bei mir anscheinend funktioniert).
+     </p>
+     <p>
+     </p>
+     <p>
+      Edit:
+     </p>
+     <p>
+      Möchtest du deinen Router NICHT in den Bridge Mode versetzen?
+     </p>
+     <p>
+      Wenn nicht, dann fürchte ich, dass das mit diesem Router nicht möglich sein wird...
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Hallo,
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke schon mal für die Antwort!
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich war jetzt noch einmal mit dem Support in Kontakt.. Eher wieder nur wenig Auskunft. Das Modem ist auf IPv4 Programmiert. Also das ist es mal nicht.
+   </p>
+   <p>
+    der Support meinte dann nur, dass ich es Zurücksetzen soll und neu Konfigurieren. Das hab ich jetzt auch gemacht - ohne Erfolg! Ich bekomme bei den Ports genau die selbe Meldung.
+   </p>
+   <p>
+   </p>
+   <p>
+    und NEIN ich möchte das Modem ganz normal OHNE Bridge Mode verwenden und trotzdem diese Ports freigeben.
+   </p>
+   <p>
+   </p>
+   <p>
+    ...Vom Support bekomme ich immer nur die Aussage, dass Sie keinen Einfluss auf die Ports hätten und KEINE Reserviert sind!... Also haben die nicht wirklich eine Ahnung davon - bzw. sehen es nicht einmal ein selbst wenn Sie den Screenshot sehen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Liebes Magenta Team
+    <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+   </p>
+   <p>
+    Es wäre nett auch ein offizielles Statement von euch zu bekommen! Herzlichen Dank!
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Begus
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-04-01T17:18:11Z" title="2020-04-01 17:18 ">
+   April 1, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33985" data-ipsquote-contentid="5470" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1585750268" data-ipsquote-userid="82943" data-ipsquote-username="marco03027">
+    <div class="ipsQuote_citation">
+     vor 3 Stunden schrieb marco03027:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      und NEIN ich möchte das Modem ganz normal OHNE Bridge Mode verwenden und trotzdem diese Ports freigeben.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ach so, ich habe deine Frage leider falsch interpretiert.
+   </p>
+   <p>
+    Ich denke nicht, dass es möglich ist, die reservierten Ports freizugeben. Ich habe schon einiges probiert, ohne Erfolg.
+   </p>
+   <p>
+    Es wäre wahrscheinlich am besten einen neuen Router zu kaufen und den aktuellen in den Bridge Mode zu versetzen, auch wenn du das vermeiden wolltest. Ich hatte das Glück, dass ich sowieso einen anderen Router verwendet habe.
+   </p>
+   <p>
+   </p>
+   <p>
+    Sonst kann ich dir leider auch nicht weiterhelfen, viel Glück mit dem Support noch!
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-04-14T19:15:47Z" title="2020-04-14 19:15 ">
+   April 14, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich hab das Thema erst jetzt gesehen.
+   </p>
+   <p>
+    Ich würde es so sagen, es gibt sehr gute Gründe warum diese Ports gesperrt sind.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich würde ein VPN verwenden, anstatt den Samba Server aus dem www erreichbar zu machen. Andererseits, man braucht auch Sachen für IT Security Events über die man schmunzeln kann.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

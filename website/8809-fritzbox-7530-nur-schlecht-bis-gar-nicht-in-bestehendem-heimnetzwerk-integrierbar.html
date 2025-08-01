@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   FRITZ!Box 7530 nur schlecht bis gar nicht in bestehendem Heimnetzwerk integrierbar
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   FRITZ!Box 7530 nur schlecht bis gar nicht in bestehendem Heimnetzwerk integrierbar
+  </h1>
+  <span class="author">
+   ben
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-06T12:38:52Z" title="2023-06-06 12:38 ">
+   Juni 6, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Tag,
+    <br>
+     <br/>
+     ich habe heute den Versuch unternommen, meine neue fb7530 (dsl) von Magenta online zu nehmen, da meine 7220 sich nicht mehr einloggen konnte,
+     <br/>
+     dabei sind mir mehrere Punkte aufgefallen, welche es unmöglich bzw. untragbar machen, die box in meinem bereits konfigurierten Heim-Netz zu betreiben.
+     <br/>
+     <br/>
+     1. es ist nicht möglich den DHCP Server zu deaktivieren, daher "bekämpft" sich Dieser mit meinem bereits existierenden. Super mitgedacht, danke magenta!
+     <br/>
+     2. es ist keine konfiguration des internen IPv4 Netzwerks möglich - garkeine! Sowas habe ich noch nie gesehen. Das ist basisfunktionalität eines jeden routers. Ihr erwartet also von mir, dass ich meine ganze Netzwerkconfig umschmeisse, damit Ihr euch 5 Support Anrufe am tag spart, von leuten die es nicht geschafft haben ihren router nicht zu ver-konfigurieren. Auch super!
+     <br/>
+     3. Manuelles Firmware Update per File ist auch nicht erlaubt, vmtl. aus den gleichen Gründen wie bei 2.
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    All dies lässt mich ehrlich überlegen diesen Anschluss einfach zu kündigen, da Magenta Ihre Kunden offenbar für unselbstständige Idioten hält.
+    <br/>
+    Dieser Mangel an Flexibilität ist mMn echt ein großes MINUS für jeden moderat fähigen PowerUser...
+    <br/>
+    <br/>
+    @community
+    <br/>
+    Sind diese Puknte noch niemandem sauer aufgestoßen? Der, sehr nette, Support meinte: darüber hat sich noch nie jmd. beschwert.
+    <br/>
+    Kann ich mir fast nicht vorstellen. Aber im Netz habe ich dazu auch nichts gefunden... ausser, dass die 7530 diese features sehr wohl hat.
+   </p>
+   <p>
+    <br/>
+    backstory/workaround:
+    <br/>
+    Diese leitung soll nur als secondary gateway dienen, falls mein 4G zu "flaky" ist oder zu hohe latenz hat.
+    <br/>
+    Es gibt zwar scheinbar möglichkeiten die fb auf eine "original" firmware vom hersteller zu flashen, dies ist aber nur mit kunstgriffen möglich, welche bei mir nicht gefunkt haben.
+    <br/>
+    Eine andere Möglichkeit welche man andenken könnte, wär die box in ein vlan zu sperren und zu routen. Was wieder einen extra Aufwand an HW und Zeit bedeutet.
+    <br/>
+    Das setup ist dazu gedacht, so wenig geräte wie möglich zu verwenden und nicht den "single point of failure" eines einzelnen vorgeschalteten Routers zu haben. Daher sind die wichtigen Computer im netzwerk nicht per dhcp konfiguriert, sondern statisch. Ein check-skript passt auf Diesen einfach den Gateway an, je nach verfügbarkeit der Leitungen. Ich weis, es gibt möglichkeiten das "eleganter" zu lösen z.B. mit redundantem fw cluster mit keepalived drauf.
+    <br/>
+    <br/>
+    Sei es wie es sei, ich hab mir jetzt einen €40 TP-Link TD-W9970 bestellt und hoffe, dass der mit Magenta reden kann.
+   </p>
+   <p>
+   </p>
+   <p>
+    lg
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2023-06-06T12:57:30Z" title="2023-06-06 12:57 ">
+      Juni 6, 2023
+     </time>
+     von ben
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   ben
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-07T15:58:25Z" title="2023-06-07 15:58 ">
+   Juni 7, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    eigenen router kann man hier offenbar ganz vergessen. wieder super, magenta.
+   </p>
+   <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed8367173266" scrolling="no" src="8541-eigene-fritzbox-bei-internet-fix-verwenden.html" style="height:371px;max-width:502px;">
+   </iframe>
+   <p>
+    <br>
+     der support hat davon auch nichts erwähnt, als ich explizit gesagt habe, dass ich beabsichtige einen eigenen router zu installieren. super training, magenta. 1A Leistung, magenta. Damit geh ich direkt zu einem ordenlichen Anbieter, bye...
+     <br/>
+     <br/>
+     P.S. Wenn ihr bei meinem Kabel anschluss im anderen Haus auch mit solchem unfug anfangt, folgt dort das gleiche...
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   hackerd
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-07T16:50:51Z" title="2023-06-07 16:50 ">
+   Juni 7, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Tja, ich bezweifle,  daß der Support weiß,  daß Magenta eine Datenbank der eigenen Router führt und fremde nicht reinlässt (dhcp gibt keine IP-Adresse her). Ich habe damals zig Stunden damit verbracht, Konfigurationsänderungen durchzuprobieren, bis ich zufällig bei Magenta jemanden erreichte, der davon wusste. Meines Wissens nach ( Stand Februar ) kommuniziert Magenta das nicht, ich hab zumindest damals nirgends eine diesbezügliche Info gefunden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bezüglich Konfiguration 7530:
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich weiß nicht, ob Magenta inzwischen restriktiver in der Konfiguration geworden ist, ich habe meine 7530 schon einige Jahre. Ich hatte damals kein Problem,  IPV4 umzukonfigurieren. Ich hatte auch ein eigenes Netz und keine Lust, alle Geräte umzukonfigurieren. Meine 7530 läuft mit der alten Adresse des Vorgängers  10.0.0.138 in einem 10.0.0.0/24er Netz. Mein Dhcp läuft auf einem Raspberry mit pihole als Werbefilter, der Dhcp auf der Fritzbox ist inaktiv.
+   </p>
+   <p>
+   </p>
+   <p>
+    Und ich habe die 7530 auf automatischen Update umkonfiguriert, nachdem Magenta mit Uralt-Firmware gearbeitet hat. Seit Ende Mai läuft Firmware 7.55 und ich kann via Wireguard vom Handy in mein Netz. Leider hat Magenta Adminrechte und es könnte jederzeit passieren, dass sie mir die Firmware downgraden und ich kein Wireguard mehr habe. Ich habe irgendwo eine Beschreibung gefunden, wie man den Update wieder enabled, weiß aber nicht mehr wo.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   ben
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-07T17:13:28Z" title="2023-06-07 17:13 ">
+   Juni 7, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    danke für die extra details! fahre ein ähnliches setup, mit raspi für dhcp/pxe, internal dns + dns-forward.
+    <br>
+     so wie das klingt hast du vmtl. nicht die magenta FW auf deiner box.
+     <br>
+      ich hab weder fürs ipv4 noch für den dhcp einstellungsmöglichkeiten, auf meiner 7530 gefunden.
+      <br/>
+      eventuell, macht magenta keine down-grades der version, d.h. solang du ihnen voraus bist, kannst deine Features behalten
+      <img alt="xD" data-emoticon="" height="20" src="images/emoticons/tma_party-o.png" srcset="images/emoticons/tma_party-o@2x.png 2x" title="xD" width="20"/>
+      <br/>
+      <br/>
+      denke ich hab den gleichen artikel, eh von hier, gefunden. irgendwas von dsl abstecken, factory reset, anbieter in den settings auf "andere" ändern -&gt; dann soll man update per file verwenden können. habe ich nicht zusammen gebracht.
+      <br/>
+      <br/>
+      hab schon versucht die kündigung in die wege zu leiten, leider um 17.50 da hat sich dann natürlich keiner mehr gemeldet.
+      <br/>
+      <br/>
+      ich hoff die verpfuschen nicht auch noch mein kabel setup in der wohnung.
+      <br/>
+      lästig genug beim dsl im haus meiner eltern wo ich meist nur am wochenende bin.
+      <br/>
+      <br/>
+      Was ist dein Plan, falls dein router eingeht? Bleibts bei magenta und sperrst ihn in eine "Netzwerk Box" oder confst dein Netzwerk um oder suchst du dir einen "ordentlichen" Anbieter?
+      <img alt=":P" data-emoticon="" height="20" src="images/emoticons/tma_tounge-o.png" srcset="images/emoticons/tma_tounge-o@2x.png 2x" title=":P" width="20"/>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   hackerd
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-06-08T09:25:01Z" title="2023-06-08 09:25 ">
+   Juni 8, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Also bei mir ist Heimnetz / Netzwerk / Netzwerkeinstellungen / Weitere Einstellungen / IP-Adressen / IPv4-Einstellungen offen zur Konfigurierung. Dort kann ich IP-Adresse, Subnetz und Dhcp Server konfigurieren.
+   </p>
+   <p>
+    Wenn bei dir dieser Pfad gesperrt ist, ist das vermutlich eine Sicherheitsmaßnahme, damit sie keinen Techniker schicken müssen, wenn der DAU die IP-Konfig verhunzt.
+   </p>
+   <p>
+    Das Update war bei mir gesperrt. Nach manuellem Update war auch der Update wieder offen.
+   </p>
+   <p>
+    Ich vermute dass man (Magenta) wie den Update jeden Menüpunkt über einen Eintrag im Konfigfile deaktivieren kann.
+   </p>
+   <p>
+    Falls die Fritzbox eingeht und die neue abgesperrt ist, muss ich mir wohl einen Provider suchen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-06T14:25:34Z" title="2023-08-06 14:25 ">
+   August 6, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Sieh dir die Anleitung an:
+   </p>
+   <p>
+    <a href="https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7530/19_IP-Adresse-der-FRITZ-Box-andern/" rel="external nofollow">
+     https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7530/19_IP-Adresse-der-FRITZ-Box-andern/
+    </a>
+   </p>
+   <p>
+    Vielleicht ist das auch nötig:
+   </p>
+   <p>
+    <a href="https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7530/1652_Erweiterte-Ansicht-der-Benutzeroberflache-aktivieren/" rel="external nofollow">
+     https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7530/1652_Erweiterte-Ansicht-der-Benutzeroberflache-aktivieren/
+    </a>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   5G Outdoor Box und IPv6
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   5G Outdoor Box und IPv6
+  </h1>
+  <span class="author">
+   freaky-guy
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-12T09:13:56Z" title="2022-04-12 09:13 ">
+   April 12, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+    ich nutze eine 5G Outdoorbox im Bridge-Modus und einer public IP.
+   </p>
+   <p>
+    Gibt es eine Möglichkeit, hier IPv6 nutzen zu können?
+   </p>
+   <p>
+    Wenn ich einen APN mit NAT nutze, wird der ODU zwar eine IPv6-Adresse zugewiesen, aber nutzen kann ich diese nicht, weil der lokale DHCP der ODU kein IPv6 unterstützt.
+   </p>
+   <p>
+    Nutze ich einen APN mit public-IP, so erhalte ich gar keine IPv6 Adresse.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-12T15:16:47Z" title="2022-04-12 15:16 ">
+   April 12, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/92530-freaky-guy/?do=hovercard" data-mentionid="92530" href="https://community.magenta.at/profile/92530-freaky-guy/" rel="">
+      @freaky-guy
+     </a>
+     <br/>
+     Ich habe mir das mal angesehen.
+     <br/>
+     Wenn ich ein Gerät an die ODU anstecke (über das PoE Netzteil), dann bekommt dieses eine IPv4 und eine IPv6 Adresse.
+     <br/>
+     Nur die IDU kann wohl nichts mit IPv6 anfangen.
+     <br>
+      Versuche daher den DHCP Server der IDU auszuschalten und dann das Kabel zur ODU statt am WAN Port an einem der vier LAN-Ports anzuschließen.
+      <br>
+       Solltest du dies rückgängig machen wollen, müsstest du einem Gerät eine entsprechende IP-Adresse (aus dem Bereich 192.168.1.2 bis 192.168.1.254 mit Maske 255.255.255.0 bzw. /24) manuell konfigurieren, um auf die Managementseite der IDU zu gelangen. Alternativ kannst du die IDU auch über die Taste auf der Rückseite zurücksetzen.
+       <br>
+        LG NTM
+       </br>
+      </br>
+     </br>
+    </span>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-04-12T15:18:10Z" title="2022-04-12 15:18 ">
+      April 12, 2022
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   freaky-guy
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-12T15:26:42Z" title="2022-04-12 15:26 ">
+   April 12, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi, vielen Dank für deine Antwort!
+   </p>
+   <p>
+    Leider trifft das bei mir nicht so ganz zu.
+   </p>
+   <p>
+    ODU ist im Bridge-Mode. Der APN mit der public-IP hat ein VLAN zugewiesen.
+   </p>
+   <p>
+    Die ODU steckt per Kabel nicht an der Magenta IDU sondern an einer Firewall. Dort ist am WAN-Interface auch das entsprechende VLAN vergeben und es wird eine öffentliche IPv4 Adresse per DHCP zugewiesen. Allerdings keine IPv6 Adresse.
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-12T16:06:32Z" title="2022-04-12 16:06 ">
+   April 12, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Mit dem APN um eine öffentliche IPv4 zu bekommen, wird keine IPv6 Adresse vergeben.
+   </p>
+   <p>
+    Es geht nur entweder Dual Stack mit privater IPv4 und IPv6 oder öffentliche IPv4 und dafür kein IPv6.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-13T05:24:45Z" title="2022-04-13 05:24 ">
+   April 13, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das Problem ist teilweise, dass Magenta nur ein /64 Netz ergibt. Man würde ein größeres Netz für dieses Setup brauchen.
+   </p>
+   <p>
+    Bridge Mode und IPv6 ist leider die nächste Baustelle. Bis jetzt habe ich noch kein Modem gesehen, dass damit gut umgeht.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   freaky-guy
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-04-13T06:30:56Z" title="2022-04-13 06:30 ">
+   April 13, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nunja... ich finde das echt schade... ich benötige zwingend eine public-IP, und für bestimmte Aktionen IPv6. DualStack würde mir hier schon helfen... Also bleibt mir nichts anderes übrig, als zu warten. Schade!
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

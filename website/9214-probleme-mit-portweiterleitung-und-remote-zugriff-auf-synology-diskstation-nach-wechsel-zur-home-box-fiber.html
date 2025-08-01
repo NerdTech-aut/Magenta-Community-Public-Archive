@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Probleme mit Portweiterleitung und Remote-Zugriff auf Synology Diskstation nach Wechsel zur Home Box Fiber
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Probleme mit Portweiterleitung und Remote-Zugriff auf Synology Diskstation nach Wechsel zur Home Box Fiber
+  </h1>
+  <span class="author">
+   Lucetius
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-10-10T14:08:52Z" title="2023-10-10 14:08 ">
+   Oktober 10, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Seit ich die aktuelle Home Box Fiber (Technicolor CGA4336) bekommen hab, kann ich nicht mehr auf meine Synology Diskstation von aussen zugreifen.
+    <br/>
+    Eine Einrichtung der Portweiterleitung vom NAS aus scheint primär daran zu scheitern, dass kein UPnP-Router gefunden wurde. Und die Portweiterleitung, die ich in der Magenta-App einstellen kann, scheint nicht zu greifen (funktioniert einfach nicht).
+    <br/>
+    Woran scheitert es also, dass ich von aussen auf mein NAS zugreifen kann?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Karo
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-10-11T08:18:45Z" title="2023-10-11 08:18 ">
+   Oktober 11, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98063-lucetius/?do=hovercard" data-mentionid="98063" href="https://community.magenta.at/profile/98063-lucetius/" rel="">
+     @Lucetius
+    </a>
+    , ist das Modem auch auf IPv4 only eingestellt ist? Du kannst nämlich beim CGA auch über die App Port-Forwardings setzen wenn IPv6-dslite aktiv ist. Dann funktioniert es aber nicht. LG Karo
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-10-30T16:25:03Z" title="2023-10-30 16:25 ">
+   Oktober 30, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55657" data-ipsquote-contentid="9214" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1696946932" data-ipsquote-userid="98063" data-ipsquote-username="Lucetius">
+    <div class="ipsQuote_citation">
+     Am 10.10.2023 um 16:08 schrieb Lucetius:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Woran scheitert es also, dass ich von aussen auf mein NAS zugreifen kann?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Es kann unterschiedliche Gründe haben. Versuche mal Folgendes (wenn möglich).
+   </p>
+   <p>
+   </p>
+   <p>
+    - UPnP-Einstellungen überprüfen: Stelle sicher, dass UPnP (Universal Plug and Play) in deinen Router-Einstellungen aktiviert ist. Das ermöglicht es deinen Geräten im Netzwerk, automatisch Portweiterleitungen einzurichten. Überprüfe die Router-Oberfläche, um sicherzustellen, dass UPnP aktiviert ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    - Manuelle Portweiterleitung einrichten: Wenn UPnP nicht funktioniert, versuche, die Portweiterleitung manuell einzurichten. Gehe in die Router-Einstellungen und suche nach der Option zur manuellen Portweiterleitung. Erstelle Regeln, um die erforderlichen Ports an deine Synology Diskstation weiterzuleiten. Die von deiner Synology DiskStation benötigten Ports hängen von den von dir verwendeten Diensten (z.B. HTTP, HTTPS, FTP, usw.) ab.
+   </p>
+   <p>
+   </p>
+   <p>
+    - Statische IP-Adresse für deine Synology Diskstation einrichten: Stelle sicher, dass deine Synology Diskstation eine statische IP-Adresse im lokalen Netzwerk hat. Dadurch wird sichergestellt, dass die Portweiterleitungen immer zur richtigen IP-Adresse verweisen.
+   </p>
+   <p>
+    Firewall-Einstellungen überprüfen: Überprüfe, ob die Firewall-Einstellungen auf deiner Synology Diskstation korrekt konfiguriert sind. Stelle sicher, dass der Datenverkehr auf den erforderlichen Ports erlaubt ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    - DDNS-Dienst verwenden: Wenn deine öffentliche IP-Adresse dynamisch ist, kann es hilfreich sein, einen DDNS-Dienst (Dynamic Domain Name System) zu verwenden. Dies ermöglicht es dir, auf deine Diskstation über einen festen Domainnamen zuzugreifen, selbst wenn sich deine IP-Adresse ändert.
+   </p>
+   <p>
+   </p>
+   <p>
+    - Router-Firmware aktualisieren: Überprüfe, ob für deinen Technicolor CGA4336 Router Firmware-Updates verfügbar sind, und aktualisiere diese gegebenenfalls. Aktualisierte Firmware kann Fehler beheben und die Kompatibilität verbessern.
+   </p>
+   <p>
+    VPN verwenden (optional): Falls du immer noch Probleme hast, auf deine Diskstation von außen zuzugreifen, könnte die Verwendung eines VPNs eine Lösung sein, um auf deine Diskstation zuzugreifen. Dies kann die Notwendigkeit von Portweiterleitungen beseitigen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Für mehr Hilfe dazu wende dich ggf. an unsere Techniker:innen unter 0676 200 7777. Falls du eine Lösung gefunden hast, wäre es toll, wenn du uns diese hier mitteilst, damit sich auch andere User informieren können.
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke und LG JD.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

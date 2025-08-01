@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Probleme mit Portweiterleitung trotz neuer Internet Flex Box AX3000 - Hilfe gesucht!
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Probleme mit Portweiterleitung trotz neuer Internet Flex Box AX3000 - Hilfe gesucht!
+  </h1>
+  <span class="author">
+   Fabian Marktler
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-12-10T13:30:13Z" title="2023-12-10 13:30 ">
+   Dezember 10, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Tag,
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich versuche seit Monaten einige Dienste von meinem Privaten Netz ins Öffentliche zu bekommen...
+   </p>
+   <p>
+    Beispielsweise den Port 25565 für einen Minecraft-Server o.Ä.
+   </p>
+   <p style="background-color:transparent;">
+    Habe jetzt einen Nagelneuen Internet Flex Box AX3000 bekommen, leider funktioniert auch hier die Weiterleitung nicht(davor hatte ich einen gebrauchten Magenta Cube und eine Wertkarte.
+   </p>
+   <p style="background-color:transparent;">
+   </p>
+   <p style="background-color:transparent;">
+    Was hab ich gemacht?
+   </p>
+   <p style="background-color:transparent;">
+    Freigabe der Ports auf der Windows Firewall...
+   </p>
+   <p style="background-color:transparent;">
+   </p>
+   <p style="background-color:transparent;">
+    Server gestartet(intern erreichbar)
+   </p>
+   <p style="background-color:transparent;">
+   </p>
+   <p style="background-color:transparent;">
+    Profil auf business:
+   </p>
+   <p style="background-color:transparent;">
+    <img alt="image.png.5a8c823f5d161ca6b3d1d451977c3793.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5234" data-ratio="55.10" src="images/uploads/image.png.5a8c823f5d161ca6b3d1d451977c3793.png" width="735"/>
+   </p>
+   <p style="background-color:transparent;">
+    Portweiterleitrung:
+   </p>
+   <p style="background-color:transparent;">
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5235" href="images/uploads/image.png.39eefcd43b77da9edf0666512b92e758.png" rel="">
+     <img alt="image.thumb.png.de08c55e2ceb8c7168dece9f9817c60b.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5235" data-ratio="9.80" src="images/uploads/image.thumb.png.de08c55e2ceb8c7168dece9f9817c60b.png" width="1000"/>
+    </a>
+   </p>
+   <p style="background-color:transparent;">
+   </p>
+   <p style="background-color:transparent;">
+    Neustart des Routers und des PCs
+   </p>
+   <p style="background-color:transparent;">
+   </p>
+   <p style="background-color:transparent;">
+    Bitte um Hilfe, LG Fabian...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-12-11T13:14:13Z" title="2023-12-11 13:14 ">
+   Dezember 11, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98360-fabian-marktler/?do=hovercard" data-mentionid="98360" href="https://community.magenta.at/profile/98360-fabian-marktler/" rel="">
+     @Fabian Marktler
+    </a>
+   </p>
+   <p>
+    Das würde soweit gut aussehen.
+   </p>
+   <p>
+    Stimmt die WAN-IP-Adresse des Routers mit jener auf z.B.
+    <a href="https://api.ipify.org/" rel="external nofollow">
+     https://api.ipify.org/
+    </a>
+    überein?
+   </p>
+   <p>
+    Testest du die Verbindung mit der WAN-IP-Adresse des Routers über einen anderen Internet-Anschluss? Weil nicht alle Router unterstützen NAT-Loopback, also das kontaktieren eines Gerätes im eigenen Heimnetzwerk mittels Portweiterleitung über die WAN-IP-Adresse des Routers. Deswegen unbedingt mit einem anderen Gerät über einen anderen Internet-Anschluss testen.
+   </p>
+   <p>
+    Der PC hat auch weiterhin die 192.168.1.10 als IP-Adresse? Am besten eine
+    <br/>
+    Hast du vielleicht ein Internet-Schutz Zusatzpaket (unbewusst) gebucht?
+   </p>
+   <p>
+    <br/>
+    Mit der Bemerkung „auch hier“ möchtest du sagen, dass es hat auch mit dem alten Setup nicht funktioniert?
+   </p>
+   <p>
+    Wenn es mit dem alten Setup auch nicht funktioniert hat, dann würde dies auf einen Fehler in deinen Tests oder in der Serverkonfiguration hindeuten.
+   </p>
+   <p>
+    LG NTM
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Johannes Lueger
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-12-15T16:07:26Z" title="2023-12-15 16:07 ">
+   Dezember 15, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo, ich denke ich habe das Problem bei mir gerade lösen können...
+   </p>
+   <p>
+    Bei mir ging es um einen Loxone-Miniserver.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe die Port-Freigabe bei der FlexBox AX3000 wie du vorgenommen und es hat nicht funktioniert... nach langem herumprobieren (4h) habe ich dann am Router noch zusätzlich unter =&gt; Sicherheit =&gt; ACL =&gt; Schnittstelle HTTPS für den entsprechenden IP-Adressbereich (wenn es nur eine Adresse ist musst du trotzdem von - bis eingeben also z.B.: 192.168.1.1234 - 192.168.1.1234) aktiviert
+   </p>
+   <p>
+   </p>
+   <p>
+    Jetzt funktioniert alles =&gt; ich kann jetzt mit allen Geräten ohne im WLAN zu sein auf meinen Miniserver zugreifen...
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hoffe ich konnte dir helfen und es funktioniert bei dir auch so wie bei mir
+    <span>
+     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    <span>
+     MfG
+     <br/>
+     Johannes
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fabian Marktler
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-12-17T10:55:40Z" title="2023-12-17 10:55 ">
+   Dezember 17, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Tag,
+   </p>
+   <p>
+    Die Server Adresse "192.168.1.10" ist im DHCP Statisch eingetragen, daher kann sich die nicht verändern(habs auch schon mit einer statischen IP ohne DHCP-Server des Routers getestet).
+   </p>
+   <p>
+   </p>
+   <p>
+    Stimmt die WAN-IP-Adresse des Routers mit jener auf z.B. https://api.ipify.org/ überein?
+   </p>
+   <p>
+    ja, sind die selben Adressen!
+   </p>
+   <p>
+   </p>
+   <p>
+    Beim alten router hat es genau 1 mal funktioniert und dann nach einigen tests plötzlich nicht mehr. (hab den innerhalb des WLANs das über den besagten router und per hotspot von meinem Handy getestet. Nach einem Neustart, wegen weiteren tests wars dann vorbei. Jetzt mit dem neuen Router haut leider gar nix mehr bzgl. Portweiterleitung hin..
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Fabian
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fabian Marktler
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-12-17T10:56:11Z" title="2023-12-17 10:56 ">
+   Dezember 17, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56154" data-ipsquote-contentid="9297" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1702656446" data-ipsquote-userid="98380" data-ipsquote-username="Johannes Lueger">
+    <div class="ipsQuote_citation">
+     Am 15.12.2023 um 17:07 schrieb Johannes Lueger:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo, ich denke ich habe das Problem bei mir gerade lösen können...
+     </p>
+     <p>
+      Bei mir ging es um einen Loxone-Miniserver.
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich habe die Port-Freigabe bei der FlexBox AX3000 wie du vorgenommen und es hat nicht funktioniert... nach langem herumprobieren (4h) habe ich dann am Router noch zusätzlich unter =&gt; Sicherheit =&gt; ACL =&gt; Schnittstelle HTTPS für den entsprechenden IP-Adressbereich (wenn es nur eine Adresse ist musst du trotzdem von - bis eingeben also z.B.: 192.168.1.1234 - 192.168.1.1234) aktiviert
+     </p>
+     <p>
+     </p>
+     <p>
+      Jetzt funktioniert alles =&gt; ich kann jetzt mit allen Geräten ohne im WLAN zu sein auf meinen Miniserver zugreifen...
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich hoffe ich konnte dir helfen und es funktioniert bei dir auch so wie bei mir
+      <span>
+       <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+      </span>
+     </p>
+     <p>
+     </p>
+     <p>
+      <span>
+       MfG
+       <br>
+        Johannes
+       </br>
+      </span>
+     </p>
+    </div>
+   </blockquote>
+   <p style="background-color:transparent;">
+    Hallo, hab ich getestet, leider ohneErfolg.
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielen Dank trotzdem für den Tipp!
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

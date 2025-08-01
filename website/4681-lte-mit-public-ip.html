@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   LTE mit public IP
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   LTE mit public IP
+  </h1>
+  <span class="author">
+   fraenk
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-03T13:44:21Z" title="2018-09-03 13:44 ">
+   September 3, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo zusammen,
+   </p>
+   <p>
+    zur Zeit nutze ich den Klax Tarif um damit mit meiner LTE fritzbox 6840 ins Internet zu kommen. Klappt auch alles ganz gut, allerdings würde ich auch gerne von aussen auf den Router über VPN kommen. Dies ist nicht möglich, mein Verdacht ist das die IP die ich bekomme nicht öffentlich ist. Die IP kann nicht aufgeschlüsselt werden und ist auch per PING nicht erreichbar.
+   </p>
+   <p>
+    Gibt es eine Option mit der das möglich wird? Ggf. anderer Tarif; APN oder oder????
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-03T15:42:24Z" title="2018-09-03 15:42 ">
+   September 3, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Probier einmal das Business APN:
+   </p>
+   <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed3778439286" scrolling="no" src="2532-apn-aenderung-homenet-router-box.html" style="height:213px;max-width:502px;">
+   </iframe>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-09-03T18:10:33Z" title="2018-09-03 18:10 ">
+   September 3, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26806" data-ipsquote-contentid="4681" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1535989344" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Probier einmal das Business APN:
+     </p>
+     <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed7909966087" scrolling="no" src="2532-apn-aenderung-homenet-router-box.html" style="height:213px;max-width:502px;">
+     </iframe>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    @fraenk
+   </p>
+   <p>
+    Für dich ist der APN business.gprsinternet interessant. Damit solltest du dann auch eine öffentlich IP Adresse bekommen.
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

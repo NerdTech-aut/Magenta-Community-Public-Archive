@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Frage zu Porteinstellung Conectbox
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Frage zu Porteinstellung Conectbox
+  </h1>
+  <span class="author">
+   dfvt
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-15T18:23:47Z" title="2022-02-15 18:23 ">
+   Februar 15, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Tag
+   </p>
+   <p>
+    habe vor kurzen die frage gestellt wie ich die portfreigabe überhaupt aktivieren kann
+   </p>
+   <p>
+    doch jetzt gibt es da noch Lokaler end/start sowie externen start/end port ich weiss jetzt nicht so ganz was ich da eingeben soll
+   </p>
+   <p>
+    weil ich bei so ziemlich allen tutorials zu server hosting für minecraft Java nur 2 port sachen gesehen habe
+   </p>
+   <p>
+    danke sehr
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-02-15T18:46:17Z" title="2022-02-15 18:46 ">
+      Februar 15, 2022
+     </time>
+     von dfvt
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-16T00:29:05Z" title="2022-02-16 00:29 ">
+   Februar 16, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/92425-dfvt/?do=hovercard" data-mentionid="92425" href="https://community.magenta.at/profile/92425-dfvt/" rel="">
+     @dfvt
+    </a>
+   </p>
+   <p>
+    In den meisten Fällen wäre es so, dass sowohl für den lokalen als auch den externen Port derselbe Port gewählt wird.
+   </p>
+   <p>
+    Wenn ein Portbereich eingegeben werden muss, aber nur ein Port verwendet wird, einfach bei Start und Ende des Bereichs denselben Port eingeben.
+   </p>
+   <p>
+    So wie es aussieht wäre der Standardport für einen Minecraft Server 25565 auf TCP und UDP (
+    <a href="https://minecraft.fandom.com/wiki/Tutorials/Setting_up_a_server" rel="external nofollow">
+     Quelle
+    </a>
+    ).
+   </p>
+   <p>
+    Wenn du eine neue Port-Weiterleitungs-Regel hinzufügst, müsstest du nun zunächst die IP-Adresse des Computers, welcher als Minecraftserver arbeitet eintragen, dann bei Lokaler Start Port, Lokaler End Port, Externer Start Port und Externer End Port immer 25565 als Port eintragen, als Protokoll "Beide" (TCP &amp; UDP) auswählen und prüfen, ob die Option "Aktiviert" auf "An" ist. Dann kann die Regel hinzugefügt werden. Im Anschluss nicht vergessen die auf den Button "Änderungen übernehmen" zu klicken.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich würde auch empfehlen bei der FiberBox/ConnectBox über "Erweiterte Einstellungen" -&gt; "DHCP" dem Computer eine bestimmte IP-Adresse zuzuweisen, damit sich die IP-Adresse nicht ändert und damit die Portweiterleitung nicht mehr funktionieren würde. Suche dir zunächst aus der Liste "Verbundene Endgeräte" den Computer heraus. Es sollte möglich sein die MAC- und IP-Adresse, per Klick auf den Kreis in der ersten Spalte des Eintrags, zum Punkt "Reservierte Regel hinzufügen" zu übernehmen. Sollte dies nicht möglich sein die MAC- und IP-Adresse händisch in die entsprechenden Felder eintragen übertragen. Dann kann diese Regel hinzugefügt werden. Im Anschluss nicht vergessen die auf den Button "Änderungen übernehmen" zu klicken.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bitte teste ob die Portweiterleitung funktioniert, außerdem nur von außerhalb. Also mit einem zweiten Computer über einen zweiten Internetanschluss.
+   </p>
+   <p>
+    LG NTM
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-02-16T00:32:24Z" title="2022-02-16 00:32 ">
+      Februar 16, 2022
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   dfvt
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-16T14:56:51Z" title="2022-02-16 14:56 ">
+   Februar 16, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46519" data-ipsquote-contentid="7585" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1644971345" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 14 Stunden schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hey
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/92425-dfvt/?do=hovercard" data-mentionid="92425" href="https://community.magenta.at/profile/92425-dfvt/" rel="">
+       @dfvt
+      </a>
+     </p>
+     <p>
+      In den meisten Fällen wäre es so, dass sowohl für den lokalen als auch den externen Port derselbe Port gewählt wird.
+     </p>
+     <p>
+      Wenn ein Portbereich eingegeben werden muss, aber nur ein Port verwendet wird, einfach bei Start und Ende des Bereichs denselben Port eingeben.
+     </p>
+     <p>
+      So wie es aussieht wäre der Standardport für einen Minecraft Server 25565 auf TCP und UDP (
+      <a href="https://minecraft.fandom.com/wiki/Tutorials/Setting_up_a_server" rel="external nofollow">
+       Quelle
+      </a>
+      ).
+     </p>
+     <p>
+      Wenn du eine neue Port-Weiterleitungs-Regel hinzufügst, müsstest du nun zunächst die IP-Adresse des Computers, welcher als Minecraftserver arbeitet eintragen, dann bei Lokaler Start Port, Lokaler End Port, Externer Start Port und Externer End Port immer 25565 als Port eintragen, als Protokoll "Beide" (TCP &amp; UDP) auswählen und prüfen, ob die Option "Aktiviert" auf "An" ist. Dann kann die Regel hinzugefügt werden. Im Anschluss nicht vergessen die auf den Button "Änderungen übernehmen" zu klicken.
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich würde auch empfehlen bei der FiberBox/ConnectBox über "Erweiterte Einstellungen" -&gt; "DHCP" dem Computer eine bestimmte IP-Adresse zuzuweisen, damit sich die IP-Adresse nicht ändert und damit die Portweiterleitung nicht mehr funktionieren würde. Suche dir zunächst aus der Liste "Verbundene Endgeräte" den Computer heraus. Es sollte möglich sein die MAC- und IP-Adresse, per Klick auf den Kreis in der ersten Spalte des Eintrags, zum Punkt "Reservierte Regel hinzufügen" zu übernehmen. Sollte dies nicht möglich sein die MAC- und IP-Adresse händisch in die entsprechenden Felder eintragen übertragen. Dann kann diese Regel hinzugefügt werden. Im Anschluss nicht vergessen die auf den Button "Änderungen übernehmen" zu klicken.
+     </p>
+     <p>
+     </p>
+     <p>
+      Bitte teste ob die Portweiterleitung funktioniert, außerdem nur von außerhalb. Also mit einem zweiten Computer über einen zweiten Internetanschluss.
+     </p>
+     <p>
+      LG NTM
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ja habe ich probiert Dan sagt er mir der anfangs Port muss niedriger als der End Port sein und wenn ich für lokal und extern die gleichen nimm Überlappen sich diese angeblich
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   dfvt
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-16T15:18:40Z" title="2022-02-16 15:18 ">
+   Februar 16, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46528" data-ipsquote-contentid="7585" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1645023411" data-ipsquote-userid="92425" data-ipsquote-username="dfvt">
+    <div class="ipsQuote_citation">
+     vor 21 Minuten schrieb dfvt:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ja habe ich probiert Dan sagt er mir der anfangs Port muss niedriger als der End Port sein und wenn ich für lokal und extern die gleichen nimm Überlappen sich diese angeblich
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    fail.. jetzt ging es
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   dfvt
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-18T18:03:31Z" title="2022-02-18 18:03 ">
+   Februar 18, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja nachdem jetzt das Internet wieder geht....
+   </p>
+   <p>
+    Konnte mein freund nicht rauf:"failed to conect no further in formation"
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Warum Wi-Free mit Android 11 nicht (mehr) funktioniert
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Warum Wi-Free mit Android 11 nicht (mehr) funktioniert
+  </h1>
+  <span class="author">
+   Atrox
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-12T16:47:37Z" title="2021-02-12 16:47 ">
+   Februar 12, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <strong>
+     PROBLEM
+    </strong>
+   </p>
+   <p>
+    Android 11 Geräte mit dem Android 11 QPR1 security update vom Dezember 2020, können sich nicht mehr in zertifikatslose WPA2/3-Enterprise Netze einbuchen. Diese Option wurde aus WPA3 (und jetzt Android) entfernt, weil es möglich ist, fake-Netze zu errichten welche die Logindaten abgreifen. (Das ist bei Wi-Free nicht so tragisch, weil es ein unabhängiges Passwort sein sollte.)
+    <br/>
+    Betroffen sind (Stand Jänner/Februar ) primär Google Geräte der Pixel-Serie mit Android 11, aber es ist zu erwarten dass andere Hersteller das Update ebenfalls übernehmen. Zu erkennen ist diese Änderung daran, dass die Zertifikatsprüfung im Drop-Down "Zertifikate" nicht mehr ausgeschaltet werden kann, und daher immer ein "Domain"-Feld zu befüllen ist. Gelichzeitig kommt ein Drop-Down zur "online Zertifikatsprüfung" hinzu, aber lokal wird das Zertifikat immer geprüft.
+   </p>
+   <p>
+   </p>
+   <p>
+    UPC / Magenta Wi-Free wird in genau diesem Modus ohne Zertifikate betrieben.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     LÖSUNG
+    </strong>
+    (für Magenta)
+   </p>
+   <p>
+    Magenta muss auf ein zertifikatsbasiertes Wi-Free umstellen (nur zur Netzauthentifikation, nicht unbedingt für jeden einzelnen User). Die Einrichtung (bzw Import) von Zertifikaten ist je nach Betriebsystem etwas unübersichtlich. Sollte Magenta also keines der Standard-Zertifikate verwenden wollen, empfielt sich eine App (von Magenta) welche die Einstellungen vornehmen kann.
+   </p>
+   <p>
+    Falls ein Dual-Betrieb (mit und ohne Zertifikatsüberprüfung) einrichtbar ist (oder schon wurde), muss Magenta die neuen Einstellungen veröffentlichen.
+   </p>
+   <p>
+    [Je nach Architektur, muss so eine Umstellung grenzüberschreitend koordiniert werden).
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     LÖSUNG
+    </strong>
+    (für den Endkunden)
+   </p>
+   <p>
+    Sind mir keine bekannt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Atrox
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-12T17:03:18Z" title="2021-02-12 17:03 ">
+   Februar 12, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/1-admin/?do=hovercard" data-mentionid="1" href="https://community.magenta.at/profile/1-admin/" rel="">
+     @admin
+    </a>
+    Bitte um Weiterleitung an die zuständigen Personen für Wi-Free. Das wird (immer) mehr Personen betreffen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-12T17:28:42Z" title="2021-02-12 17:28 ">
+   Februar 12, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Oh, das wird spannend. Das hat Apple und Windows besser gelöst, da kann man Zertifikate anlernen. Es wird jetzt auch schon ein Zertifikat im Einsatz sein, sonst würde es grundsätzlich nicht gehen.
+   </p>
+   <p>
+   </p>
+   <p>
+    (Mist, ich muss mir dann bei meinem WLAN auch was überlegen)
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-12T17:32:56Z" title="2021-02-12 17:32 ">
+   Februar 12, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    P.S. vermutlich wird freeradius eingesetzt, da ist es eigentlich ohne Probleme möglich ein eigenes Zertifikat zu setzen. Es ist halt je nach dem aufwendig, weil je nach Zertifikatquelle es unter Umständen öfters getauscht werden muss, wie ein selbst signiertes.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-13T16:08:30Z" title="2021-02-13 16:08 ">
+   Februar 13, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich verwende Wi-Free nicht, aber es könnte mit der
+    <a href="https://play.google.com/store/apps/details?id=at.upc.connect.android.release&amp;hl=de_AT&amp;gl=US" rel="external nofollow">
+     Internet Fiber App
+    </a>
+    funktionieren.
+   </p>
+   <p>
+    Mit der App soll man sich auch mit Wi-Free Hotspots verbinden können.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Rexalius2000
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-13T16:15:47Z" title="2021-02-13 16:15 ">
+   Februar 13, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hat man eigentlich mit Wi-Free Performance Probleme wenn sich ein fremder User mit dem Modem verbindet?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-13T16:32:23Z" title="2021-02-13 16:32 ">
+   Februar 13, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es ist abhängig davon ob das WLAN oder das Coax Netz überlastet ist, aber eher nicht.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Atrox
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-13T16:32:27Z" title="2021-02-13 16:32 ">
+   Februar 13, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="40397" data-ipsquote-contentid="6625" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1613232510" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 6 Stunden schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich verwende Wi-Free nicht, aber es könnte mit der
+      <a href="https://play.google.com/store/apps/details?id=at.upc.connect.android.release&amp;hl=de_AT&amp;gl=US" rel="external nofollow">
+       Internet Fiber App
+      </a>
+      funktionieren.
+     </p>
+     <p>
+      Mit der App soll man sich auch mit Wi-Free Hotspots verbinden können.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Kann die App jemand mit einem Pixel ausprobieren? Ich kann sie nicht installieren.
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2916" href="images/uploads/Screenshot-from-2021-02-13-.png.3aa111308ee75a7eb767eaf6854746a8.png" rel="">
+     <img alt="Screenshot-from-2021-02-13-.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2916" src="images/uploads/Screenshot-from-2021-02-13-.png.3aa111308ee75a7eb767eaf6854746a8.png"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Edit:
+    <a href="https://play.google.com/store/apps/details?id=ch.upc.connect.android.release" rel="external nofollow">
+     https://play.google.com/store/apps/details?id=ch.upc.connect.android.release
+    </a>
+    funktioniert auch nicht.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-02-13T22:50:49Z" title="2021-02-13 22:50 ">
+      Februar 13, 2021
+     </time>
+     von Atrox
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Atrox
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-14T00:34:13Z" title="2021-02-14 00:34 ">
+   Februar 14, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nachdem ich die Android App (wegen irgendwelcher Einstellungen von Magenta) nicht installieren darf, habe ich das APK (at.upc.connect.android.release) downgeloadet und direkt installiert. Leider erzeugt die App wieder zertifikatslose Netzeinträge - bzw sie versucht es, und scheitert daran: "
+    <strong>
+     java.lang.IllegalArgumentException: Enterprise configuration is insecure
+    </strong>
+    ".
+    <br/>
+    <br/>
+    Anbei der relevante Teil aus dem Logcat:
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      02-14 01:25:16.023 16979 17177 D offload-agent: g::generateEAPWifiEnterprise Generating wifi configuration for EAP TTLS MSCHAPV2.
+      <br>
+       02-14 01:25:16.023 16979 17177 D offload-agent: g::generateEAPWifiEnterprise Returning updated configuration for EAP TTLS MSCHAPV2.
+       <br>
+        02-14 01:25:16.023 16979 17177 E offload-agent: com.openet.offload.agent.d.b::callEvaluation AskEvaluationTask failed
+        <br>
+         02-14 01:25:16.023 16979 17177 E offload-agent: java.lang.IllegalArgumentException: Enterprise configuration is insecure
+         <br>
+          02-14 01:25:16.023 16979 17177 E offload-agent:     at android.net.wifi.WifiNetworkSuggestion$Builder.setWpa2EnterpriseConfig(WifiNetworkSuggestion.java:271)
+          <br>
+           02-14 01:25:16.023 16979 17177 E offload-agent:     at com.openet.offload.agent.network.configuration.a.b(SourceFile:8)
+           <br>
+            02-14 01:25:16.023 16979 17177 E offload-agent:     at com.openet.offload.agent.network.configuration.a.a(SourceFile:67)
+            <br>
+             02-14 01:25:16.023 16979 17177 E offload-agent:     at com.openet.offload.agent.evaluation.a.a(SourceFile:58)
+             <br>
+              02-14 01:25:16.023 16979 17177 E offload-agent:     at com.openet.offload.agent.evaluation.a.a(SourceFile:21)
+              <br>
+               02-14 01:25:16.023 16979 17177 E offload-agent:     at com.openet.offload.agent.evaluation.RulesEvaluator.evaluate(SourceFile:16)
+               <br/>
+               02-14 01:25:16.023 16979 17177 E offload-agent:     at com.openet.offload.agent.d.b.a(SourceFile:11)
+               <br/>
+               02-14 01:25:16.023 16979 17177 E offload-agent:     at com.openet.offload.agent.d.b.a(SourceFile:2)
+               <br/>
+               02-14 01:25:16.023 16979 17177 E offload-agent:     at com.openet.offload.agent.d.b.doInBackground(SourceFile:1)
+               <br/>
+               02-14 01:25:16.023 16979 17177 E offload-agent:     at android.os.AsyncTask$3.call(AsyncTask.java:394)
+               <br/>
+               02-14 01:25:16.023 16979 17177 E offload-agent:     at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+               <br/>
+               02-14 01:25:16.023 16979 17177 E offload-agent:     at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:305)
+               <br/>
+               02-14 01:25:16.023 16979 17177 E offload-agent:     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+               <br/>
+               02-14 01:25:16.023 16979 17177 E offload-agent:     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+               <br/>
+               02-14 01:25:16.023 16979 17177 E offload-agent:     at java.lang.Thread.run(Thread.java:923)
+               <br/>
+               02-14 01:25:16.024 16979 17177 D offload-agent: com.openet.offload.agent.d.b::callEvaluation Finished calling evaluation task.
+               <br/>
+               02-14 01:25:16.024 16979 17177 D offload-agent: b::scheduleEvaluationJobService Attempting to schedule evaluation job service.
+               <br/>
+               02-14 01:25:16.024 16979 17177 D offload-agent: b::scheduleEvaluationJobService Scheduling NSI evaluation job service. minConnectionStatisticsLatency = 5
+               <br/>
+               02-14 01:25:16.024 16979 17177 D offload-agent: b::scheduleJobService Attempting to schedule job service with ID = 2000
+               <br/>
+               02-14 01:25:16.024 16979 17177 D offload-agent: Device:hasSimCard() getSimSerialNumber is not allowed to be collected by enclosing app; value will be true
+               <br/>
+               02-14 01:25:16.025 16979 17177 D offload-agent: b::HasSDKGotNoMobileDataAndHaveCPConfig mobile data is enable
+               <br/>
+               02-14 01:25:16.044 16979 17177 D offload-agent: b::scheduleEvaluationJobService Finished attempting to schedule evaluation job service.
+               <br/>
+               02-14 01:25:16.044 16979 17177 D offload-agent: com.openet.offload.agent.d.b::doInBackground Finished task
+              </br>
+             </br>
+            </br>
+           </br>
+          </br>
+         </br>
+        </br>
+       </br>
+      </br>
+     </p>
+     <p>
+      02-14 01:25:10.973  1009  1013 E statsd  : Predicate 5980654721335871649 dropping data for dimension key (10)0x2010101-&gt;10486
+      <em>
+       (10)0x30000-&gt;*job*/at.upc.connect.android.release/com.openet.offload.agent.jobServices.EvaluationJobService
+      </em>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Ich konnte im zerlegten APK auch nichts finden, das nach einer Zertifikatsdatei ausgesehen hat. Dafür findet man diese Suchliste für SSIDs: XFINITY (Usa), Virgin Media (UK), arq_wifi_x (UK), TelenetWiFree (Belgien), Horizon Wi-Free (Irland), Ziggo (Niederland), UPC Wi-Free (AT,HU,PL,CZ,SK,RU,CH), aber auch "Unitymedia WifiSpot", welches seit der Übernahme durch Vodaphone in Deutschland schon seit einiger Zeit nicht mehr existiert.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-02-15T20:40:46Z" title="2021-02-15 20:40 ">
+      Februar 15, 2021
+     </time>
+     von Atrox
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-14T20:56:22Z" title="2021-02-14 20:56 ">
+   Februar 14, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Man müsste mit einem Client das Zertifikat abfangen. Windows speichert sich leider nur den fingerprint des Zertifikats.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wie man das am besten angeht, weiß ich nicht.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Karo
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-15T11:37:13Z" title="2021-02-15 11:37 ">
+   Februar 15, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/88393-atrox/?do=hovercard" data-mentionid="88393" href="https://community.magenta.at/profile/88393-atrox/" rel="">
+     @Atrox
+    </a>
+    ,  danke für die Info. Ich habe deine Meldung soeben weitergeleitet. LG Karo
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Atrox
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-15T20:08:09Z" title="2021-02-15 20:08 ">
+   Februar 15, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="40441" data-ipsquote-contentid="6625" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1613389033" data-ipsquote-userid="77323" data-ipsquote-username="Karo">
+    <div class="ipsQuote_citation">
+     vor 8 Stunden schrieb Karo:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hi
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/88393-atrox/?do=hovercard" data-mentionid="88393" href="https://community.magenta.at/profile/88393-atrox/" rel="">
+       @Atrox
+      </a>
+      ,  danke für die Info. Ich habe deine Meldung soeben weitergeleitet. LG Karo
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    danke!
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Atrox
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-15T20:29:59Z" title="2021-02-15 20:29 ">
+   Februar 15, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Stellt sich heraus, es ist gar nicht so einfach, an die WPA Enterprise Zertifikate zu kommen. Der einfachste Weg, ist in der Tat, den 802.1X Netzwerktraffic vom WPA Supplicant aufzuzeichnen, und die Bytes aus dem ServerHello Paket auszuschneiden. Dann erhält man (nach der Umwandlung von DER auf PEM) folgende Zertifikate:
+   </p>
+   <p>
+   </p>
+   <p>
+    1_liberty_global_wifi_test_0001.pem  ( SubjectAltName:
+    <strong>
+     wifi-auth.upclabs.com
+    </strong>
+    <u>
+     &lt;-- das ist die Domain, die wir suchen!
+    </u>
+    )
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      -----BEGIN CERTIFICATE-----
+      <br>
+       MIID3zCCAsegAwIBAgIQYPLyr2hC9c5CcgGUaY/mGzANBgkqhkiG9w0BAQsFADCB
+       <br>
+        qjELMAkGA1UEBhMCTkwxJzAlBgNVBAoTHkxpYmVydHkgR2xvYmFsIE9wZXJhdGlv
+        <br>
+         bnMgQi5WLjEoMCYGA1UECxMfSE9SSVpPTiBTZXJ2aWNlIE9wZXJhdG9yIENBMDAw
+         <br>
+          MTFIMEYGA1UEAxM/TGliZXJ0eSBHbG9iYWwgSE9SSVpPTiBTZXJ2aWNlIE9wZXJh
+          <br/>
+          dG9yIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTE2MDQxMzAwMDAwMFoXDTIz
+          <br/>
+          MDQxMjIzNTk1OVowVTELMAkGA1UEBhMCTkwxDDAKBgNVBAoTA0xHSTEQMA4GA1UE
+          <br/>
+          CxMHSE9SSVpPTjEmMCQGA1UEAxMdTGliZXJ0eSBHbG9iYWwgV2lGaSBUZXN0IDAw
+          <br/>
+          MDEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCw6Tq5IswQu5s6YYMR
+          <br/>
+          DPixClkZ6GpadGYAJyWAI/iDu+9Y7NfngC9W72WOqk4zXXOjTZiWZwY0nG8czxia
+          <br/>
+          aC/hGUlokuP6+jOGdtSSYrGGQ74ToSM9pKLsPMLObnNtW3OQqT8rrI4vABv+FJT5
+          <br/>
+          f1iBiOt31RoMo8c3GIzBgE/fhCagbFuqhwvX9P2O61fYxu9zwv6XFlZny6mtr+8z
+          <br/>
+          E6ED76BM/9tqDx8M3rqyoWownJNdsJizAm6Xo7QRHdJyqlIfUNwHRwZHxGB6kTeD
+          <br/>
+          IWmw7V9oq3VJe8UEq44fW8xo7inqUTOJO+KflG8RSoyYyQ6Vnl0JIGmQE5sl3QvA
+          <br/>
+          VpYxAgMBAAGjVTBTMA4GA1UdDwEB/wQEAwIFoDAgBgNVHREEGTAXghV3aWZpLWF1
+          <br/>
+          dGgudXBjbGFicy5jb20wHwYDVR0jBBgwFoAUKWb52UIudiaUF2NJ/HmuoKY0V4Qw
+          <br/>
+          DQYJKoZIhvcNAQELBQADggEBAEquwg3CtLebzd5s9Qs7d3RpdBT5S4EU6KsxDPqD
+          <br/>
+          Plt5VfgfZZMIF/QjAsqJkCvKJ2og8q9GRNmphLnq9bqHag561mB9WxL5Ivn5G2jM
+          <br/>
+          Z0mMcCn1Getu1nw9swjTkjMhyLDAwHo5MsEJECUj8mly1gGc5Rqi5/3hPJkzyD4/
+          <br/>
+          qh4HvC7LrF5ARtwwjQi0x6tN2pHlgC2TfbXD8hIgqhoPNsrNw45a6xGvfT96POwu
+          <br/>
+          LaJTz4tbngGeMWJuxNJ8syMeTNOtRljVedig7A5jN81BF0/Nf7NJ1/FWE6glqnQT
+          <br/>
+          opsxlWESVVRk2JDDYIrFUkVuQxSVVP69ge5YX9e20nJZ2tY=
+          <br/>
+          -----END CERTIFICATE-----
+         </br>
+        </br>
+       </br>
+      </br>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    2_liberty_global_horizon_service_operator_certif.pem
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      -----BEGIN CERTIFICATE-----
+      <br/>
+      MIIFSzCCAzOgAwIBAgIQcLIfxFKQZJZueTNeicyryjANBgkqhkiG9w0BAQsFADCB
+      <br/>
+      gjELMAkGA1UEBhMCTkwxJzAlBgNVBAoTHkxpYmVydHkgR2xvYmFsIE9wZXJhdGlv
+      <br/>
+      bnMgQi5WLjEUMBIGA1UECxMLUm9vdCBDQTAwMDExNDAyBgNVBAMTK0xpYmVydHkg
+      <br/>
+      R2xvYmFsIFJvb3QgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTMxMTA1MDAw
+      <br/>
+      MDAwWhcNMjMxMTA0MjM1OTU5WjCBqjELMAkGA1UEBhMCTkwxJzAlBgNVBAoTHkxp
+      <br/>
+      YmVydHkgR2xvYmFsIE9wZXJhdGlvbnMgQi5WLjEoMCYGA1UECxMfSE9SSVpPTiBT
+      <br/>
+      ZXJ2aWNlIE9wZXJhdG9yIENBMDAwMTFIMEYGA1UEAxM/TGliZXJ0eSBHbG9iYWwg
+      <br/>
+      SE9SSVpPTiBTZXJ2aWNlIE9wZXJhdG9yIENlcnRpZmljYXRpb24gQXV0aG9yaXR5
+      <br/>
+      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwSmAAoEIQvWzCUop55kz
+      <br/>
+      aijikiXwcbEcC80cfWBSXG/hKzfFQCGqMgWEmLnUP55wrR8LQXE8UUX0+7tK1Xfq
+      <br/>
+      bdbhHhOFUhIEDTSrUeNo/LAIY/D+SwrKGrdqmZ1PUF1k8cdSnainH7Vsos5r9SSE
+      <br/>
+      90uqSVkp+3fJHuObruDBN+V/+RfIk8ccBUEJuA4DLrIgxYsSkT+Rh0K+0D9yWjc+
+      <br/>
+      UZUj2F0x8FVQk9dh6k7b6Uqj+rPWg//EdubVmXyHSv9V1qXdtTlIUf48Xp5GnQbm
+      <br/>
+      Zvvvq+wBJLxAco8ZFGMfaHUVeJx5dbmnRQEDulg6YLCusXYeJBhObQ8FefmkkKDJ
+      <br/>
+      1wIDAQABo4GSMIGPMA4GA1UdDwEB/wQEAwIBBjASBgNVHRMBAf8ECDAGAQH/AgEA
+      <br/>
+      MCkGA1UdEQQiMCCkHjAcMRowGAYDVQQDExFTeW1hbnRlY1BLSS0xLTU0NjAdBgNV
+      <br/>
+      HQ4EFgQUKWb52UIudiaUF2NJ/HmuoKY0V4QwHwYDVR0jBBgwFoAUbcyvifTpKW1h
+      <br/>
+      5A29HUOmKXU9uggwDQYJKoZIhvcNAQELBQADggIBACr/rXB9uaTABCD4KBfYjgYl
+      <br/>
+      jlB1BStohwTEoAZ4nKC760WQfAHAD8tDduVW9BAK7grrp6oMeqr+SwMPfPGtbI8Q
+      <br/>
+      6G2JJqm8uPr4TJqzeo7RpE72Ve5sFSsXIfUn5gfa44fp+rwuUq7hYQDVuZpRKfts
+      <br/>
+      DYRDjcJRpKXQRbkIAn2Ez/cEDwlNHAMkqLQqtp1V9MxWmEegpVai0IknPgOvhFjy
+      <br/>
+      likTGt0mk0XoKJvl6+bO9tLrXp3qgQG8QMjFgmVv9WzRimwIjj7KXMmT8bhXTokF
+      <br/>
+      I0NCP1eS2e8RU49sB6zGxzchtChdQ3nMe4yYK492X0Zc71mvJPb9RyHO1jeGzWHD
+      <br/>
+      vxv9WNrsWhsI7pr+ZFLI5vbwnbi56H5M52k3fcY90bzCGFMIHqBAHjDHyIabCmn9
+      <br/>
+      MJythSuMtuUne+LWYd012kJzGJwKqmEV+mRZe85iCXfWpR2O1gvTISN0uU52NzAj
+      <br/>
+      hhkn799oT6MXCyc5vYArkxeZJEMfNrWnTAJ2kWJPamMS65vouTryW+ogih+rc+sl
+      <br/>
+      uUGBNi1HsJdGbYviaSwKtCQtM/FpArKo0x6HtgBVHm6/sJY2aHdHTQQJx6hpqyhU
+      <br/>
+      MJsRAe2o0gXBuiFIvN0UxhINCobz2odBU7Kt8zytORVaSbhyKh0YIbdiJczE6k3p
+      <br/>
+      Lx1AEDmPTBdABH6sgkXb
+      <br/>
+      -----END CERTIFICATE-----
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    3_liberty_global_root_certification_authority.pem
+    <u>
+     <strong>
+      (Das ist das Root-Certificate das wir brauchen!)
+     </strong>
+    </u>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Zitat
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      -----BEGIN CERTIFICATE-----
+      <br/>
+      MIIF0jCCA7qgAwIBAgIQDOxx5LphChl+2B00OSnk6zANBgkqhkiG9w0BAQsFADCB
+      <br/>
+      gjELMAkGA1UEBhMCTkwxJzAlBgNVBAoTHkxpYmVydHkgR2xvYmFsIE9wZXJhdGlv
+      <br/>
+      bnMgQi5WLjEUMBIGA1UECxMLUm9vdCBDQTAwMDExNDAyBgNVBAMTK0xpYmVydHkg
+      <br/>
+      R2xvYmFsIFJvb3QgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTMxMTA1MDAw
+      <br/>
+      MDAwWhcNNDgxMTA0MjM1OTU5WjCBgjELMAkGA1UEBhMCTkwxJzAlBgNVBAoTHkxp
+      <br/>
+      YmVydHkgR2xvYmFsIE9wZXJhdGlvbnMgQi5WLjEUMBIGA1UECxMLUm9vdCBDQTAw
+      <br/>
+      MDExNDAyBgNVBAMTK0xpYmVydHkgR2xvYmFsIFJvb3QgQ2VydGlmaWNhdGlvbiBB
+      <br/>
+      dXRob3JpdHkwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDPCiz0+Qq2
+      <br/>
+      NET2u0EZoGTmNvsRlfhNAhM+aaVtQiGgCJH25PeA3CNaZjD1V8qpiHuTUtENPY+Y
+      <br/>
+      g6cwjeDAUPL0UxdPqlHWzllMLxuju1+nen5h/Awm4FrRQQ0iVOHw8ys4XDuXJZ+d
+      <br/>
+      653BWTrdK2kl7AKBSPZPuoaNZKv4YgD40sG9S8R1UmwS4RpRjWh9SNEKul8rViOB
+      <br/>
+      PybtY883tm4lBBlEb+P5SvnpF7MkfqPbq5qRwesuq5/9UyGGTsgk3pSShpHe/O2/
+      <br/>
+      50RIQbqAxx+h02aPh+gpJ09xFmhu5sIlSNPXKeRlyMlXWR4oXiEvv8Ykuw4PTIv/
+      <br/>
+      pZCFOvyjNJKmDQ6udT3QTFiEJFo+ZNtpqWS7s9DF5hGvsAH7Ab8rAEgnYd868auv
+      <br/>
+      2KcHqeQrzxxjydHa/3SBHmx8AaICfrBiGzKQDlhr7EN6YNR7pyrBK7HQjUZFw1oW
+      <br/>
+      HyDqrbgpQBs2Ye4fBWGwBPhOY7FeJK793hKMSnQI/YXvMPd0WkfZHmVbC+j6a2zo
+      <br/>
+      rBKePe/5dEroIfJw7xtiYF7vAwy62uuieQF6XMaN5MGlH09fDQTwNb1DkemsLUh1
+      <br/>
+      I9r2KS97Mo5wV9xUHzswwtmqunlciHCjrKg9YLHOx0OlC3oVEqmBO2zjhmUiSp7U
+      <br/>
+      1zvM8X8iTiIwjLgUbXrvcZ4d32S9P3WUnwIDAQABo0IwQDAPBgNVHRMBAf8EBTAD
+      <br/>
+      AQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNVHQ4EFgQUbcyvifTpKW1h5A29HUOmKXU9
+      <br/>
+      uggwDQYJKoZIhvcNAQELBQADggIBAKR5uWPGNf3xHJ8w1PYOwc1i8orMZO9lFdCS
+      <br/>
+      v5G8YCMJ8iaP291d6SKXfUmW28+rFP7qXFTvI9XslfryNFf34ul4FYS5NzO3viL3
+      <br/>
+      5w+ins5KEgv4ixyEnJd5AvyupEuCsrb7I+bFww3YDsJ1eynXZDiE7Sg+7rgP+DV2
+      <br/>
+      bTXuF6l8gSCR6xgJ9wBtv4/L++gWbrnbCZbwNxWL6Ifedt9q6MfHrLtXaFkBJ3gr
+      <br/>
+      D47y2sE5/MO95crgnN0T2dzwbvjPnoW82Zd3gTHLk5hTROQtZVicpQFCE0uOeQLr
+      <br/>
+      IOu3yQE0y1B66cDY21SvovkYE66+TpGbBpfUrjxneIOFmoGw5zASom6nrqY1lEea
+      <br/>
+      CIZBZq5KPDsdYF91swhCSaKkwIhzrfkISbPGK7qsFx+eB96HHpbMsK1uFGrSmRnp
+      <br/>
+      Xgoa7gyMhWj0LQjY+so4BZ5WFwEXOvvlb8Vu2irN+7IeFojTenHkY0iUJc2KXiRo
+      <br/>
+      ZC37iD21Yn6q7OhFcWRjU+r4FY5xmAH+50x7sxpcJDnWEsyVErgPBbq9qAM4jKKH
+      <br/>
+      16SORCzK0NnOFYIrU+ZRJyBkK2cTlX+iAZX1/pPyZ9H9kUFTZu1Qu/bMNIrIrKpU
+      <br/>
+      CfrghejFjiPA/ap4StHVE6E1O/8OkTLNO0NRhJ2E5W4l7BdpS83q8oXQnC1u8hNB
+      <br/>
+      9FnbMLBq
+      <br/>
+      -----END CERTIFICATE-----
+      <br/>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf Android 9 konnte ich dann das root Zertifikat (Nr. 3) importieren (Datei übertragen, dann Settings &gt; Security &amp; location &gt; Encryption &amp; credentials &gt; Install from Storage &gt; Aus Download Verzeichnis heraussuchen) , als Domäne "wifi-auth.upclabs.com" eintragen, und mich erfolgreich verbinden.
+   </p>
+   <p>
+    Auf Android 11 hat das leider nicht geklappt. Nach 2-3 Versuchen scheint Android 11 dann auch das Zertifikat aus dem Store zu löschen, was sehr ärgerlich beim Testen ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    Mir ist noch unklar, ob andere Betreiber (Ziggo, XFINITY, Virgin, Arq_wifi_x) mit dem selben Root Zertifikat funktionieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    Übrigens, gerade entdeckt: Es scheint so, als ob Android 11 es Apps nicht mehr erlaubt, (root) Zertifikate direkt zu installieren:
+    <a href="https://issuetracker.google.com/issues/151858120" rel="external nofollow">
+     https://issuetracker.google.com/issues/151858120
+    </a>
+    . Unklar ist, ob das auch Wi-Fi Zertifikate oder nur Web &amp; App Zertifikate betrifft. Workaround: "Non-MDM apps could, for example, take the following approach:
+    <br/>
+    * Write the CA certificate to the Download media collection.
+    <br/>
+    * Prompt the user to go to Settings to install the certificate from the Download media collection."
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-02-17T21:25:31Z" title="2021-02-17 21:25 ">
+      Februar 17, 2021
+     </time>
+     von Atrox
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Atrox
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-16T18:06:59Z" title="2021-02-16 18:06 ">
+   Februar 16, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <strong>
+     UPDATE: Hier ist eine Lösung für Android 11, die zumindest für
+     <a href="6617-upc-wifi-free-unter-android-11/#comment-40532" rel="">
+      einige Geräte
+     </a>
+     funktioniert
+    </strong>
+    (Danke an corsetto für das Feedback!, Leider funktioniert die Lösung nicht bei mir selbst)
+    <strong>
+     . Achtung: Das installieren eines Zertifikats erfordert, dass ein Screenlock (Muster, Fingerabdruck, etc) gesetzt ist.
+    </strong>
+   </p>
+   <p>
+    Die Magenta App schlägt fehl, man kann sie aber noch für die Hotspot-Karte verwenden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hier der Lösungsweg:
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     1.
+    </strong>
+    Downloade das Zertifikat von
+    <a href="https://www.dropbox.com/s/on90p6qycecbocf/3_liberty_global_root_certification_authority.pem?dl=0" rel="external nofollow">
+     https://www.dropbox.com/s/on90p6qycecbocf/3_liberty_global_root_certification_authority.pem?dl=0
+    </a>
+    (oder kopiere es aus diesem Thread weiter oben in eine Textdatei) und lege es im Download-Verzeichnis ab.
+   </p>
+   <p>
+    <strong>
+     2.
+    </strong>
+    Gehe in die Systemeinstellungen &gt; Security&amp;Location &gt; Encryption &gt; Credentials &gt;  Install from Storage
+   </p>
+   <p>
+    <strong>
+     3.
+    </strong>
+    Wähle "Wi-Fi Zertifikat" aus, und die .pem Datei im Downloads-Verzeichnis. Nenne es zb "Liberty Global Root" (Name ist relativ egal).
+   </p>
+   <p>
+    <strong>
+     4.
+    </strong>
+    Wechsle zu den Wi-Fi Einstellungen. Lege "UPC Wi-Free" neu an, oder editiere deinen bestehenen Eintrag.
+   </p>
+   <p>
+    <strong>
+     EAP Method:
+    </strong>
+    PEAP
+   </p>
+   <p>
+    <strong>
+     Phase 2
+    </strong>
+    : MSCHAPV2
+   </p>
+   <p>
+    <strong>
+     CA certificate:
+    </strong>
+    Liberty Global Root
+    <em>
+     (der Name von Punkt 3)
+    </em>
+   </p>
+   <p>
+    <strong>
+     Domain:
+    </strong>
+    wifi-auth.upclabs.com
+   </p>
+   <p>
+    <strong>
+     Identity:
+    </strong>
+    <em>
+     &lt;dein UPC kunden login bzw Wi-Free name, oft vorname.nachname&gt;
+    </em>
+   </p>
+   <p>
+    <strong>
+     Anonymous Identity:
+    </strong>
+    <em>
+     &lt;bleibt leer&gt;
+    </em>
+   </p>
+   <p>
+    <strong>
+     Passwort:
+    </strong>
+    <em>
+     &lt;dein UPC Wi-Free Passwort&gt;
+    </em>
+   </p>
+   <p>
+    <strong>
+     5.
+    </strong>
+    Speichern und zu dem Wi-Fi verbinden.
+   </p>
+   <p>
+   </p>
+   <p>
+    (Unklar bleibt, ob das auch im Ausland mit den Partner-Hotspots funktioniert, oder ob man nicht andere Zertifikate braucht.)
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-02-16T18:14:08Z" title="2021-02-16 18:14 ">
+      Februar 16, 2021
+     </time>
+     von Atrox
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Atrox
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-17T21:23:33Z" title="2021-02-17 21:23 ">
+   Februar 17, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das Forum fordert mich auf (meine eigene reverse-engineerte) Lösung zu markieren, auch wenn folgende Punkte offen bleiben:
+    <br>
+     <br>
+      <strong>
+       a) Magenta sollte die Info über Domain und Zertifikat in Ihre offizielle Wi-Free Dokumentation aufnehmen.
+      </strong>
+      Immer mehr Leute werden das entsprechende Android 11 update erhalten. Ausserdem sollte das Zertifikat von vertraunswürdiger Quelle beziehbar sein, und nicht über (meinen) Dropbox-Link. (Alternative: UPC/Magenta steigt auf ein Zertifikat einer anerkannten CA um, bzw co-signature durch so eine CA.)
+     </br>
+    </br>
+   </p>
+   <p>
+    <strong>
+     b) Es bleibt unklar, ob Ziggo, XFINITY, Virgin, Arq_wifi_x, ... das gleiche Zertifikat verwenden
+    </strong>
+    , oder ob man im Ausland ein anderes Zertifikat braucht. Hier wäre eine Info wünschenswert.
+   </p>
+   <p>
+    <strong>
+     c) Die
+     <a href="https://play.google.com/store/apps/details?id=at.upc.connect.android.release&amp;hl=de_AT&amp;gl=US" rel="external nofollow">
+      Internet Fiber App
+     </a>
+     muss für Android 11 mit aktuellen Security-Updates angepasst werden.
+    </strong>
+   </p>
+   <p>
+    d) Offen bleibt, warum ich auf meinem Gerät die App nicht aus dem offiziellen App-Store installieren kann. Gibt es irgendwelche Provider-locks? (Ich verwende Dual-(e)Sim mit einem anderen ausländischen Anbieter.)
+   </p>
+   <p>
+    <br/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   JasonC
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-13T07:04:07Z" title="2021-03-13 07:04 ">
+   März 13, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das Problem besteht seit 11.03.2021 auch bei Android 10. Ich kann mich nicht mehr bei Wi-Free einloggen. Es erscheint folgende Fehlermeldung: "IP-Adresse konnte nicht abgerufen werden". Ich habe den Router neu gestartet, habe die Android 10 Netzwerkeinstellungen zurückgesetzt - hilft alles nix. Einen Tag davor hat's noch funktioniert (habe mich Wochenlang täglich über's Wi-Free problemlos eingeloggt!).
+   </p>
+   <p>
+    Ich hoffe Magenta löst dieses Problem - so macht ein Wi-Free keinen Sinn! Hinzu kommt, dass man Wi-Free nicht mehr deaktivieren kann - nur noch Passwort zurücksetzen (siehe Screenshot!)
+    <img alt="" class="ipsImage ipsImage_thumbnailed" data-fileid="o_1f0l68l7s28v80r136t1kdk1huhb" src=""/>
+    <img alt="Wi-Free.jpg.9e18f3321cb598e089aceb6c97d669fd.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="2991" src="images/uploads/Wi-Free.jpg.9e18f3321cb598e089aceb6c97d669fd.jpg"/>
+    !
+   </p>
+   <p>
+    Sinnloses Feature welches bald niemand mehr benutzen kann!
+   </p>
+   <p>
+   </p>
+   <p>
+    regards Jason
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Karo
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-17T10:43:17Z" title="2021-03-17 10:43 ">
+   März 17, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/88818-jasonc/?do=hovercard" data-mentionid="88818" href="https://community.magenta.at/profile/88818-jasonc/" rel="">
+     @JasonC
+    </a>
+    , wenn die Meldung erscheint, dass die IP-Adresse nicht abgerufen werden konnte, dann liegt es daran, dass der Bereich im Moment ausgelastet ist. Es sind nämlich maximal 5 User pro Modem möglich.
+   </p>
+   <p>
+    Infos dazu findest du auch hier:
+   </p>
+   <p>
+    <a href="https://www.magenta.at/hilfe-service/faq#!technische+anfrage/frage/20489" rel="external nofollow">
+     https://www.magenta.at/hilfe-service/faq#!technische+anfrage/frage/20489
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Bezüglich dem Punkt, dass du Wi-Free nicht deaktivieren kannst, ist es notwendig das vom Technikteam überprüfen zu lassen.
+   </p>
+   <p>
+    Nutzt du Wi-Free bereits und hast ein Modem, welches dieses Feature unterstützt, sollte der Punkt nämlich in Mein Magenta nicht fehlen.
+   </p>
+   <p>
+    Ein Check durch das Technikteam (0676 200 7777) ist daher notwendig. LG Karo
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   JasonC
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-17T15:05:31Z" title="2021-03-17 15:05 ">
+   März 17, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77323-karo/?do=hovercard" data-mentionid="77323" href="https://community.magenta.at/profile/77323-karo/" rel="">
+     @Karo
+    </a>
+    . Habe es soeben nochmals probiert, wieder konnte meine IP-Adresse nicht abgerufen werden. Seit 1 Woche kann ich mich nicht mehr in's UPC Wi-Free einloggen! Davor ging's wochen- ja monatelang völlig problemlos (irgendwie eigenartig!).
+   </p>
+   <p>
+    Wegen der Deaktivierung werde ich mich an's Technikteam wenden.
+   </p>
+   <p>
+    Jedenfalls Danke für den Tipp!
+   </p>
+   <p>
+   </p>
+   <p>
+    regards Jason
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-03-17T15:10:31Z" title="2021-03-17 15:10 ">
+      März 17, 2021
+     </time>
+     von JasonC
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-17T15:57:18Z" title="2021-03-17 15:57 ">
+   März 17, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Bitte dabei eine "statische" MAC-Adresse verwenden und nicht die gewürfelte.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das ist eine Einstellung für das jeweilige WLAN.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   JasonC
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-17T18:07:43Z" title="2021-03-17 18:07 ">
+   März 17, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="41128" data-ipsquote-contentid="6625" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1615996638" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Bitte dabei eine "statische" MAC-Adresse verwenden und nicht die gewürfelte.
+     </p>
+     <p>
+     </p>
+     <p>
+      Das ist eine Einstellung für das jeweilige WLAN.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Habe ich alles probiert, ändert nix an der Fehlermeldung "IP-Adresse konnte nicht abgerufen werden"!
+   </p>
+   <p>
+    Falls du mich mit meinem Problem meinst...
+   </p>
+   <p>
+   </p>
+   <p>
+    An
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77323-karo/?do=hovercard" data-mentionid="77323" href="https://community.magenta.at/profile/77323-karo/" rel="">
+     @Karo
+    </a>
+    und
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/72107-it-freak/?do=hovercard" data-mentionid="72107" href="https://community.magenta.at/profile/72107-it-freak/" rel="">
+     @IT-Freak
+    </a>
+    . Was ich noch vergessen habe zu erwähnen. Mit meinem Notebook kann ich mich jederzeit und problemlos in's UPC Wi-Free einloggen, nur mit dem Smartphone (Android 10) funkts seit ca. 1 Woche nicht mehr...
+   </p>
+   <p>
+   </p>
+   <p>
+    regards Jason
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-03-17T18:33:51Z" title="2021-03-17 18:33 ">
+      März 17, 2021
+     </time>
+     von JasonC
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Karo
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-18T08:22:30Z" title="2021-03-18 08:22 ">
+   März 18, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hast du dich immer am gleichen Standort versucht anzumelden oder auch an unterschiedlichen Orten?
+   </p>
+   <p>
+    Wie schon geschrieben, können sich max. 5 User gleichzeitig über ein Modem mit Wi-Free verbinden. Ist das ausgelastet ist der Login nicht mehr möglich. Nutzt du Wi-Free über den PC und Handy gleichzeitig - sind da schon mal 2 Plätze belegt. LG Karo
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-18T08:45:12Z" title="2021-03-18 08:45 ">
+   März 18, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Vermutung:
+   </p>
+   <p>
+    Wenn das Handy regelmäßig die Mac neu würfelt, wird das Handy mezrfahr gezählt, genau dann, wenn das Handy die Mac Adresse ändert wird es neu gezählt. Da könnte dann warten helfen, bis sich hoffentlich das wieder selbst rauslöscht.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   JasonC
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-18T11:30:11Z" title="2021-03-18 11:30 ">
+   März 18, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="41148" data-ipsquote-contentid="6625" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1616055750" data-ipsquote-userid="77323" data-ipsquote-username="Karo">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb Karo:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hast du dich immer am gleichen Standort versucht anzumelden oder auch an unterschiedlichen Orten?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Seit es nicht mehr funktioniert habe ich mich immer am selben Standort versucht anzumelden.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="41148" data-ipsquote-contentid="6625" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1616055750" data-ipsquote-userid="77323" data-ipsquote-username="Karo">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb Karo:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Nutzt du Wi-Free über den PC und Handy gleichzeitig - sind da schon mal 2 Plätze belegt.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich nutze UPC Wi-Free entweder mit dem Smartphone oder mit dem Notebook (gleichzeitig habe ich es nie verwendet!)
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="41149" data-ipsquote-contentid="6625" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1616057112" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Vermutung:
+     </p>
+     <p>
+      Wenn das Handy regelmäßig die Mac neu würfelt, wird das Handy mezrfahr gezählt, genau dann, wenn das Handy die Mac Adresse ändert wird es neu gezählt. Da könnte dann warten helfen, bis sich hoffentlich das wieder selbst rauslöscht.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich habe es mit TelefonMAC und "gewürfelter" MAC probiert. Es geht seit 1 Woche nicht mehr egal was ich mache.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielen Dank für eure Tipps
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77323-karo/?do=hovercard" data-mentionid="77323" href="https://community.magenta.at/profile/77323-karo/" rel="">
+     @Karo
+    </a>
+    und
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/72107-it-freak/?do=hovercard" data-mentionid="72107" href="https://community.magenta.at/profile/72107-it-freak/" rel="">
+     @IT-Freak
+    </a>
+   </p>
+   <p>
+    Ich habe wirklich schon alles probiert, selbst die Lösung vom Atrox funktioniert nicht (beim Android 10 konnte ich auch keine Domain eingeben!). UPC Wi-Free funktioniert nur noch mit meinem Linux-Notebook!
+    <br>
+     Ich verwende UPC Wi-Free aber nahezu ausschließlich übers. Smartphone mit Android 10. Habe heute schon mit der Magenta-Technikhotline telefoniert, weil ich Wi-Free nicht mehr deaktivieren kann. Die schauen sich das an und geben mit gegebenenfalls Bescheid.
+    </br>
+   </p>
+   <p>
+    Schau ma mal...
+   </p>
+   <p>
+   </p>
+   <p>
+    regards Jason
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-18T12:02:00Z" title="2021-03-18 12:02 ">
+   März 18, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Bitte Telefon Mac verwenden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn meine Vermutung stimmt, dann kann es eine mir unbekannte Zeit dauern bis die alten Mac Adresse aus dem Pool gelöst werden im Wi Free Server.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   JasonC
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-18T14:59:11Z" title="2021-03-18 14:59 ">
+   März 18, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/72107-it-freak/?do=hovercard" data-mentionid="72107" href="https://community.magenta.at/profile/72107-it-freak/" rel="">
+     @IT-Freak
+    </a>
+    .
+   </p>
+   <p>
+    Also ich habe es auch mit der TelefonMAC probiert, es ging einfach nicht mehr (es gibt nix mehr was ich noch versuchen hätte können).
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich wurde nun von einem Magenta-Mitarbeiter angerufen. Ich selbst kann lt. Mitarbeiter (bei meinem Vertrag) UPC Wi-Free nicht deaktivieren. Ich muss anrufen und telefonisch eine Deaktivierung oder Aktivierung veranlassen. Jedenfalls sagte der Mitarbeiter, dass UPC Wi-Free "im aussterben ist" (Originalzitat des Mitarbeiters). Es ist ein altes "Relikt" aus UPC-Zeiten welches von Magenta übernommen wurde. Da wird nix mehr gemacht (anscheinend aus Lizenzgründen usw. usf.). Das heißt, solange es funktioniert ist's gut, wenn's mal nicht mehr geht (anscheinend ab Android 10, bei Android 11 lt. Atrox nur noch mit der von ihm aufgezeigten Lösung!) hat man Pech und kann nix mehr tun (möglicherweise geht's mit Android 9 noch, kann ich nicht sagen!). So ist die Situation.
+   </p>
+   <p>
+    Ich habe mein UPC Wi-Free deaktivieren lassen da ich es so nicht mehr brauchen kann (eigentlich unnötiger Elektrosmog)!
+   </p>
+   <p>
+   </p>
+   <p>
+    Jedenfalls vielen Dank noch für die Tipps und Hilfestellungen,
+   </p>
+   <p>
+   </p>
+   <p>
+    regards Jason
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-03-19T12:06:45Z" title="2021-03-19 12:06 ">
+      März 19, 2021
+     </time>
+     von JasonC
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   RasiK22
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-22T08:52:23Z" title="2021-03-22 08:52 ">
+   März 22, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Auch bei mir geht auf keinen einzigen Device, seit Anfang Februar WiFi Free nicht mehr. AufHandy (Android10) hängt es immer bei IP Adressen Zuweisung, am PC (W10)erscheint veraltetes Sicherheitszertifikat und Verbindung wird abgelehnt.Der Magenta Support bestreitet Probleme und ist nicht behilflich.
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Atrox
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-12T16:47:37Z" title="2021-02-12 16:47 ">
+   Februar 12, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <strong>
+     PROBLEM
+    </strong>
+   </p>
+   <p>
+    Android 11 Geräte mit dem Android 11 QPR1 security update vom Dezember 2020, können sich nicht mehr in zertifikatslose WPA2/3-Enterprise Netze einbuchen. Diese Option wurde aus WPA3 (und jetzt Android) entfernt, weil es möglich ist, fake-Netze zu errichten welche die Logindaten abgreifen. (Das ist bei Wi-Free nicht so tragisch, weil es ein unabhängiges Passwort sein sollte.)
+    <br/>
+    Betroffen sind (Stand Jänner/Februar ) primär Google Geräte der Pixel-Serie mit Android 11, aber es ist zu erwarten dass andere Hersteller das Update ebenfalls übernehmen. Zu erkennen ist diese Änderung daran, dass die Zertifikatsprüfung im Drop-Down "Zertifikate" nicht mehr ausgeschaltet werden kann, und daher immer ein "Domain"-Feld zu befüllen ist. Gelichzeitig kommt ein Drop-Down zur "online Zertifikatsprüfung" hinzu, aber lokal wird das Zertifikat immer geprüft.
+   </p>
+   <p>
+   </p>
+   <p>
+    UPC / Magenta Wi-Free wird in genau diesem Modus ohne Zertifikate betrieben.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     LÖSUNG
+    </strong>
+    (für Magenta)
+   </p>
+   <p>
+    Magenta muss auf ein zertifikatsbasiertes Wi-Free umstellen (nur zur Netzauthentifikation, nicht unbedingt für jeden einzelnen User). Die Einrichtung (bzw Import) von Zertifikaten ist je nach Betriebsystem etwas unübersichtlich. Sollte Magenta also keines der Standard-Zertifikate verwenden wollen, empfielt sich eine App (von Magenta) welche die Einstellungen vornehmen kann.
+   </p>
+   <p>
+    Falls ein Dual-Betrieb (mit und ohne Zertifikatsüberprüfung) einrichtbar ist (oder schon wurde), muss Magenta die neuen Einstellungen veröffentlichen.
+   </p>
+   <p>
+    [Je nach Architektur, muss so eine Umstellung grenzüberschreitend koordiniert werden).
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     LÖSUNG
+    </strong>
+    (für den Endkunden)
+   </p>
+   <p>
+    Sind mir keine bekannt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   RasiK22
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-22T08:56:16Z" title="2021-03-22 08:56 ">
+   März 22, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="41148" data-ipsquote-contentid="6625" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1616055750" data-ipsquote-userid="77323" data-ipsquote-username="Karo">
+    <div class="ipsQuote_citation">
+     Am 18.3.2021 um 09:22 schrieb Karo:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hast du dich immer am gleichen Standort versucht anzumelden oder auch an unterschiedlichen Orten?
+     </p>
+     <p>
+      Wie schon geschrieben, können sich max. 5 User gleichzeitig über ein Modem mit Wi-Free verbinden. Ist das ausgelastet ist der Login nicht mehr möglich. Nutzt du Wi-Free über den PC und Handy gleichzeitig - sind da schon mal 2 Plätze belegt. LG Karo
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Das wurde mir heute beim Support auch gesagt.
+   </p>
+   <p>
+    Ich finde das irrrelevant, den die ersten 5 Devices müssten ja denoch gehen, tun sie aber definitiv nicht. Auch PW ändern wurde mir vorgeschlagen. Habe auch das gemacht, geht nicht. Werden dadurch wieder 5 Devices frei?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   JasonC
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-03-22T12:41:51Z" title="2021-03-22 12:41 ">
+   März 22, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/88931-rasik22/?do=hovercard" data-mentionid="88931" href="https://community.magenta.at/profile/88931-rasik22/" rel="">
+     @RasiK22
+    </a>
+    ,
+   </p>
+   <p>
+    vergiss es. Siehe dir meinen letzten Beitrag an. Da wird nix mehr gemacht, Magenta hat kein Interesse. Ich weiß nicht, wie sie es kontrollieren - wenn es irgendwann nur noch sehr wenige nutzen wird's anscheinend abgedreht! Ob was anderes kommt weiß man nicht. Ist sinnloser Elektrosmog...
+   </p>
+   <p>
+    regards Jason
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   WhyFi
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-11-02T14:56:14Z" title="2021-11-02 14:56 ">
+   November 2, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="40535" data-ipsquote-contentid="6625" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1613498819" data-ipsquote-userid="88393" data-ipsquote-username="Atrox">
+    <div class="ipsQuote_citation">
+     Am 2/16/2021 um 19:06 schrieb Atrox:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      <strong>
+       UPDATE: Hier ist eine Lösung für Android 11, die zumindest für
+       <a href="6617-upc-wifi-free-unter-android-11/#comment-40532" rel="">
+        einige Geräte
+       </a>
+       funktioniert
+      </strong>
+      (Danke an corsetto für das Feedback!, Leider funktioniert die Lösung nicht bei mir selbst)
+      <strong>
+       . Achtung: Das installieren eines Zertifikats erfordert, dass ein Screenlock (Muster, Fingerabdruck, etc) gesetzt ist.
+      </strong>
+     </p>
+     <p>
+      Die Magenta App schlägt fehl, man kann sie aber noch für die Hotspot-Karte verwenden.
+     </p>
+     <p>
+     </p>
+     <p>
+      Hier der Lösungsweg:
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       1.
+      </strong>
+      Downloade das Zertifikat von
+      <a href="https://www.dropbox.com/s/on90p6qycecbocf/3_liberty_global_root_certification_authority.pem?dl=0" rel="external nofollow">
+       https://www.dropbox.com/s/on90p6qycecbocf/3_liberty_global_root_certification_authority.pem?dl=0
+      </a>
+      (oder kopiere es aus diesem Thread weiter oben in eine Textdatei) und lege es im Download-Verzeichnis ab.
+     </p>
+     <p>
+      <strong>
+       2.
+      </strong>
+      Gehe in die Systemeinstellungen &gt; Security&amp;Location &gt; Encryption &gt; Credentials &gt;  Install from Storage
+     </p>
+     <p>
+      <strong>
+       3.
+      </strong>
+      Wähle "Wi-Fi Zertifikat" aus, und die .pem Datei im Downloads-Verzeichnis. Nenne es zb "Liberty Global Root" (Name ist relativ egal).
+     </p>
+     <p>
+      <strong>
+       4.
+      </strong>
+      Wechsle zu den Wi-Fi Einstellungen. Lege "UPC Wi-Free" neu an, oder editiere deinen bestehenen Eintrag.
+     </p>
+     <p>
+      <strong>
+       EAP Method:
+      </strong>
+      PEAP
+     </p>
+     <p>
+      <strong>
+       Phase 2
+      </strong>
+      : MSCHAPV2
+     </p>
+     <p>
+      <strong>
+       CA certificate:
+      </strong>
+      Liberty Global Root
+      <em>
+       (der Name von Punkt 3)
+      </em>
+     </p>
+     <p>
+      <strong>
+       Domain:
+      </strong>
+      wifi-auth.upclabs.com
+     </p>
+     <p>
+      <strong>
+       Identity:
+      </strong>
+      <em>
+       &lt;dein UPC kunden login bzw Wi-Free name, oft vorname.nachname&gt;
+      </em>
+     </p>
+     <p>
+      <strong>
+       Anonymous Identity:
+      </strong>
+      <em>
+       &lt;bleibt leer&gt;
+      </em>
+     </p>
+     <p>
+      <strong>
+       Passwort:
+      </strong>
+      <em>
+       &lt;dein UPC Wi-Free Passwort&gt;
+      </em>
+     </p>
+     <p>
+      <strong>
+       5.
+      </strong>
+      Speichern und zu dem Wi-Fi verbinden.
+     </p>
+     <p>
+     </p>
+     <p>
+      (Unklar bleibt, ob das auch im Ausland mit den Partner-Hotspots funktioniert, oder ob man nicht andere Zertifikate braucht.)
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Hallo, diese Lösung scheint auf Android 12 nicht mehr zu funktionieren. Habe mein Pixel 5 von Android 11 (Wo diese Lösung funktioniert hat) auf 12 upgedatet, jetzt kann ich mich leider nicht mehr mit Wi-Free verbinden. Leider auch keine brauchbare Fehlermeldung.
+   </p>
+   <p>
+   </p>
+   <p>
+    Kann das jemand bestätigen?
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="40535" data-ipsquote-contentid="6625" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1613498819" data-ipsquote-userid="88393" data-ipsquote-username="Atrox">
+    <div class="ipsQuote_citation">
+     Am 2/16/2021 um 19:06 schrieb Atrox:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      <strong>
+       UPDATE: Hier ist eine Lösung für Android 11, die zumindest für
+       <a href="6617-upc-wifi-free-unter-android-11/#comment-40532" rel="">
+        einige Geräte
+       </a>
+       funktioniert
+      </strong>
+      (Danke an corsetto für das Feedback!, Leider funktioniert die Lösung nicht bei mir selbst)
+      <strong>
+       . Achtung: Das installieren eines Zertifikats erfordert, dass ein Screenlock (Muster, Fingerabdruck, etc) gesetzt ist.
+      </strong>
+     </p>
+     <p>
+      Die Magenta App schlägt fehl, man kann sie aber noch für die Hotspot-Karte verwenden.
+     </p>
+     <p>
+     </p>
+     <p>
+      Hier der Lösungsweg:
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       1.
+      </strong>
+      Downloade das Zertifikat von
+      <a href="https://www.dropbox.com/s/on90p6qycecbocf/3_liberty_global_root_certification_authority.pem?dl=0" rel="external nofollow">
+       https://www.dropbox.com/s/on90p6qycecbocf/3_liberty_global_root_certification_authority.pem?dl=0
+      </a>
+      (oder kopiere es aus diesem Thread weiter oben in eine Textdatei) und lege es im Download-Verzeichnis ab.
+     </p>
+     <p>
+      <strong>
+       2.
+      </strong>
+      Gehe in die Systemeinstellungen &gt; Security&amp;Location &gt; Encryption &gt; Credentials &gt;  Install from Storage
+     </p>
+     <p>
+      <strong>
+       3.
+      </strong>
+      Wähle "Wi-Fi Zertifikat" aus, und die .pem Datei im Downloads-Verzeichnis. Nenne es zb "Liberty Global Root" (Name ist relativ egal).
+     </p>
+     <p>
+      <strong>
+       4.
+      </strong>
+      Wechsle zu den Wi-Fi Einstellungen. Lege "UPC Wi-Free" neu an, oder editiere deinen bestehenen Eintrag.
+     </p>
+     <p>
+      <strong>
+       EAP Method:
+      </strong>
+      PEAP
+     </p>
+     <p>
+      <strong>
+       Phase 2
+      </strong>
+      : MSCHAPV2
+     </p>
+     <p>
+      <strong>
+       CA certificate:
+      </strong>
+      Liberty Global Root
+      <em>
+       (der Name von Punkt 3)
+      </em>
+     </p>
+     <p>
+      <strong>
+       Domain:
+      </strong>
+      wifi-auth.upclabs.com
+     </p>
+     <p>
+      <strong>
+       Identity:
+      </strong>
+      <em>
+       &lt;dein UPC kunden login bzw Wi-Free name, oft vorname.nachname&gt;
+      </em>
+     </p>
+     <p>
+      <strong>
+       Anonymous Identity:
+      </strong>
+      <em>
+       &lt;bleibt leer&gt;
+      </em>
+     </p>
+     <p>
+      <strong>
+       Passwort:
+      </strong>
+      <em>
+       &lt;dein UPC Wi-Free Passwort&gt;
+      </em>
+     </p>
+     <p>
+      <strong>
+       5.
+      </strong>
+      Speichern und zu dem Wi-Fi verbinden.
+     </p>
+     <p>
+     </p>
+     <p>
+      (Unklar bleibt, ob das auch im Ausland mit den Partner-Hotspots funktioniert, oder ob man nicht andere Zertifikate braucht.)
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Hallo, diese Lösung scheint auf Android 12 nicht mehr zu funktionieren. Habe mein Pixel 5 von Android 11 (Wo diese Lösung funktioniert hat) auf 12 upgedatet, jetzt kann ich mich leider nicht mehr mit Wi-Free verbinden. Leider auch keine brauchbare Fehlermeldung.
+   </p>
+   <p>
+   </p>
+   <p>
+    Kann das jemand bestätigen?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   WhyFi
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-11-03T12:11:11Z" title="2021-11-03 12:11 ">
+   November 3, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Kleines Update, habe mit dem Support telefoniert. Sie haben folgende Einstellungen abgefragt die ja leider nicht mehr aktuell sind:
+    <a href="https://www.magenta.at/hilfe-service/faq#!technische+anfrage/kabelfestnetz+internet/wlan/frage/20483" rel="external nofollow">
+     https://www.magenta.at/hilfe-service/faq#!technische+anfrage/kabelfestnetz+internet/wlan/frage/20483
+    </a>
+   </p>
+   <p>
+    Das habe ich ihnen auch erklärt. Sie haben nun ein internes Ticket erstellt um es zu prüfen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Aber, falls es jemanden interessiert, bei
+    <strong>
+     Android 12
+    </strong>
+    ist bei den WiFi Einstellungen ein neuer Punkt zu sehen:
+   </p>
+   <p>
+    Nach "CA certificate" gibt es jetzt einen Punkt: "
+    <strong>
+     Online Certificate Status
+    </strong>
+    " mit 3 Optionen:
+   </p>
+   <ul>
+    <li>
+     Do not verify
+    </li>
+    <li>
+     Request certificate status
+    </li>
+    <li>
+     Require certificate status
+    </li>
+   </ul>
+   <p>
+   </p>
+   <p>
+    Habe alle Möglichkeiten durchprobiert und kann mich leider immer noch nicht mit Wi-Free verbinden. Das ist echt mies da ich mich bis vor Kurzem so in der Garage verbinden konnte um die Firmware auf unserer Wallbox zu aktualisieren (wir haben in der Garage Wi-Free Empfang, nehme an von einem Nachbarn).
+   </p>
+   <p>
+   </p>
+   <p>
+    Interessant ist auch dass ich ein älteres Smartphone mit Android 10 getestet habe, und die Methode vom User
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/88393-atrox/?do=hovercard" data-mentionid="88393" href="https://community.magenta.at/profile/88393-atrox/" rel="">
+     @Atrox
+    </a>
+    hat dort nicht funktioniert.
+   </p>
+   <p>
+   </p>
+   <p>
+    Also:
+   </p>
+   <ul>
+    <li>
+     Pixel 5 mit Android 11 hat funktioniert
+    </li>
+    <li>
+     Pixel 5 mit Android 12 funktioniert nicht mehr
+    </li>
+    <li>
+     Moto G5 Plus mit Android 10 funktioniert nicht
+    </li>
+   </ul>
+   <p>
+    Kann natürlich auch sein das sich was auf Wi-Free Seite geändert hat, oder es Probleme in meiner Gegend gibt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Atrox
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-11-03T23:46:30Z" title="2021-11-03 23:46 ">
+   November 3, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hoffe es kann jemand ausprobieren. Ich bin derzeit mit meinem Android 12 Gerät ein paar tausend Kilometer ausser der Reichweite des nächsten Wi-Free Hotspots, aber ich kann bestätigen dass es sehr wohl möglich ist, ein (globales) federated Wi-Fi System aufzubauen dass durchgehend bis Android 12 funktioniert: zb eduroam.
+    <br/>
+    Die hier vorher im Thread geäußerten Theorien, wonach 'gratis' großflächige WLAN-Netze nicht mehr ins Businessmodell der neuen Mobilfunk-Eigentümer passt, scheinen zumindest plausibel. Magenta hätte in den letzten 11 Monaten zumindest selber die Zertifikate bereitstellen können und die Anleitung überarbeiten -- oder eben auf neue öffentliche Zertifikate umsteigen können.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2021-11-03T23:47:13Z" title="2021-11-03 23:47 ">
+      November 3, 2021
+     </time>
+     von Atrox
+    </strong>
+   </span>
+  </div>
+  <hr/>
+ </body>
+</html>

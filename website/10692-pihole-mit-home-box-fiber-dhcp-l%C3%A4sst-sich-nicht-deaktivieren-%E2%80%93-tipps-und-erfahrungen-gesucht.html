@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   PiHole mit Home Box Fiber -  DHCP lässt sich nicht deaktivieren – Tipps und Erfahrungen gesucht!
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   PiHole mit Home Box Fiber -  DHCP lässt sich nicht deaktivieren – Tipps und Erfahrungen gesucht!
+  </h1>
+  <span class="author">
+   w4lter
+  </span>
+  <br/>
+  <time class="Jan 7" datetime="2025-01-07T06:38:56Z" title="2025-01-07 06:38 ">
+   Januar 7
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Tag,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich würde gerne im eigenen Netzwerk einen PiHole verwenden.
+   </p>
+   <p>
+    Hierfür ist es notwendig, dass PiHole die Rolle des DHCP Server übernimmt.
+   </p>
+   <p>
+   </p>
+   <p>
+    In der Mein Magenta App finde ich wohl eine Einstellung, den DHCP Server an der Home Box Fiber zu deaktivieren. Nachdem ich den Switch in der App umstelle (auf deaktivieren), wird das Modem auch entsprechend von der Ferne neugestartet.
+   </p>
+   <p>
+    Der DHCP Server bleibt jedoch trotzdem aktiv, sprich die Geräte beziehen wieder IP Adressen vom Modem und auch in der Mein Magenta App ist der DHCP Server wieder reaktiviert.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ist das ein bekanntes Problem?
+   </p>
+   <p>
+    Gibt es hierzu irgendwelche Tipps?
+   </p>
+   <p>
+    externes IPv4 ist aktiv, ist das womöglich mein Problem?
+   </p>
+   <p>
+   </p>
+   <p>
+    kleiner Zusatz:
+   </p>
+   <p>
+    Gibt es von Magenta irgendeine Roadmap wie es mit der Mein Magenta App und der Home Box Fiber weiter geht bezüglich Features der selbstverwaltung?
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke!
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="Jan 8" datetime="2025-01-08T15:10:27Z" title="2025-01-08 15:10 ">
+   Januar 8
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99972-w4lter/?do=hovercard" data-mentionid="99972" href="https://community.magenta.at/profile/99972-w4lter/" rel="">
+     @w4lter
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Hallo,
+    <span class="ipsEmoji">
+     👋
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    es ist klasse, dass du dich mit der Einrichtung eines PiHole beschäftigst – eine großartige Lösung für ein werbefreies und optimiertes Netzwerk!
+    <span class="ipsEmoji">
+     😊
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich verstehe aber, dass es frustrierend ist, wenn der DHCP-Server der Home Box Fiber sich nicht wie gewünscht deaktivieren lässt. Lass uns das gemeinsam durchgehen:
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     DHCP-Problem:
+    </strong>
+   </p>
+   <p>
+    Es kann vorkommen, dass Änderungen in der Mein Magenta App nicht dauerhaft übernommen werden. Ein möglicher Grund könnte ein Firmware- oder Konfigurationsproblem sein. Ich empfehle, die Deaktivierung des DHCP-Servers direkt über die Benutzeroberfläche des Routers vorzuhnemen (falls zugänglich) oder unseren technischen Support zu kontaktieren (0676 200 7777, täglich 8:00 bis 22:00 Uhr oder 24/7 via Live-Chat in der
+    <a href="https://www.magenta.at/hilfe-service/mein-magenta" rel="external nofollow">
+     Mein Magenta App
+    </a>
+    ), um sicherzustellen, dass die Änderung korrekt durchgeführt wird. Eventuell ist dazu ein Tausch auf ein anderes Router-Modell erforderlich.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Externes IPv4 aktiv:
+    </strong>
+   </p>
+   <p>
+    Das Vorhandensein einer externen IPv4-Adresse sollte grundsätzlich kein Hindernis sein, den DHCP-Server zu deaktivieren. Es könnte jedoch sein, dass bestimmte Netzwerkkonfigurationen oder Restriktionen auf der Home Box Fiber dies beeinflussen.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Alternative Lösung:
+    </strong>
+    Falls die Deaktivierung des DHCP-Servers nicht möglich ist, könntest du versuchen, den PiHole als DNS-Server für alle Geräte im Netzwerk einzurichten und den DHCP-Server der Home Box Fiber (oder eines anderen Router Modells) weiterhin aktiv zu lassen. Dies erfordert jedoch eine manuelle Konfiguration der DNS-Einstellungen auf jedem Gerät.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     Roadmap:
+    </strong>
+   </p>
+   <p>
+    Leider können wir keine Details zu zukünftigen Features oder Updates der Mein Magenta App oder der Home Box Fiber preisgeben. Aber sei versichert, dass wir kontinuierlich daran arbeiten, unsere Produkte und Services zu verbessern.
+   </p>
+   <p>
+   </p>
+   <p>
+    Falls du weitere Unterstützung benötigst oder Fragen hast, lass es mich wissen – ich helfe dir gerne weiter!
+   </p>
+   <p>
+   </p>
+   <p>
+    Liebe Grüße, JD.
+    <span class="ipsEmoji">
+     🌻
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   w4lter
+  </span>
+  <br/>
+  <time class="Jan 9" datetime="2025-01-09T09:46:52Z" title="2025-01-09 09:46 ">
+   Januar 9
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo JD,
+   </p>
+   <p>
+   </p>
+   <p>
+    danke für die Rückmeldung.
+   </p>
+   <p>
+    Ich möchte eigentlich nur einen Satz von Dir zitieren:
+   </p>
+   <p>
+   </p>
+   <p>
+    <em>
+     "Ich empfehle, die Deaktivierung des DHCP-Servers direkt über die Benutzeroberfläche des Routers vorzuhnemen (falls zugänglich)..."
+    </em>
+   </p>
+   <p>
+   </p>
+   <p>
+    Echt schade, dass man hier den Weg gegangen ist, kein Web Interface mehr anzubieten, sondern eben nur die Steuerung über die Mein Magenta App.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich werde es wohl dann telefonisch versuchen, der Live Chat über die Mein Magenta App konnte mit dem Wort "DHCP" leider nichts anfangen
+    <span>
+     :-).
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    <span>
+     Vielleicht melden sich ja noch andere Community Mitglieder, welche dies erfolgreich geschafft haben.
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    <span>
+     Freundliche Grüße,
+    </span>
+   </p>
+   <p>
+    <span>
+     Walter
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="Jan 9" datetime="2025-01-09T10:59:26Z" title="2025-01-09 10:59 ">
+   Januar 9
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99972-w4lter/?do=hovercard" data-mentionid="99972" href="https://community.magenta.at/profile/99972-w4lter/" rel="">
+     @w4lter
+    </a>
+    ,
+   </p>
+   <p>
+   </p>
+   <p>
+    Hallo Walter,
+    <span class="ipsEmoji">
+     👋
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    danke für dein Feedback und deine ehrlichen Worte! Ich verstehe, dass es frustrierend sein kann, wenn eine gewünschte Einstellungsmöglichkeit nicht direkt zugänglich ist. Die Mein Magenta App ist so konzipiert, dass sie die Bedienung möglichst einfach macht, aber ich gebe dir recht – für technisch versierte Nutzer wie dich wäre ein Webinterface durchaus hilfreich. Ein Tausch auf ein anderes Router-Modell kommt in diesem Szenario für dich nicht in Frage?
+   </p>
+   <p>
+   </p>
+   <p>
+    Es ist schade, dass der Live-Chat dir in diesem Fall nicht weiterhelfen konnte. Vielleicht hilft dir ein kurzer Anruf bei der Technik-Hotline (0676 200 7777, täglich 8:00 bis 22:00 Uhr) tatsächlich weiter, da die Kolleginnen und Kollegen dort oft spezifischere Fragen beantworten und Anfragen an interne Spezialistinnen und Spezialisten weitergeleitet werden können.
+   </p>
+   <p>
+   </p>
+   <p>
+    Alternativ kannst du auch weiterhin in der Community nach Erfahrungen anderer Mitglieder suchen – oft gibt es dort kreative Lösungen oder Workarounds.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich nehme dein Feedback zur Mein Magenta App und den fehlenden Optionen gerne mit und gebe es intern weiter. Es ist wichtig, dass wir solche Rückmeldungen bekommen, um unsere Services weiter zu verbessern.
+   </p>
+   <p>
+   </p>
+   <p>
+    Falls du noch Fragen hast oder Unterstützung brauchst, lass es uns wissen – wir sind gerne für dich da!
+    <span class="ipsEmoji">
+     🙂
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Viele Grüße, JD
+    <span class="ipsEmoji">
+     🌻
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   presl
+  </span>
+  <br/>
+  <time class="Jan 13" datetime="2025-01-13T15:45:19Z" title="2025-01-13 15:45 ">
+   Januar 13
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich stehe vor exakt dem selben Problem.
+   </p>
+   <p>
+    Auf der Hotline wurde mir nach probiern aller Standard Lösungen beim technischen Support nachgefragt und mitgeteilt, dass es gewollt ist, dass sich der DHCP nicht deaktivieren lässt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Sprich, der Regler sieht hübsch aus, hat aber keine Funktion hinterlegt. Das ist Absicht - laut Hotline.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hat es schon wer geschafft bei einer Ho e Fiber Box den DHCP zu deaktivieren?
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="Jan 14" datetime="2025-01-14T09:10:24Z" title="2025-01-14 09:10 ">
+   Januar 14
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/100021-presl/?do=hovercard" data-mentionid="100021" href="https://community.magenta.at/profile/100021-presl/" rel="">
+     @presl
+    </a>
+    ,
+   </p>
+   <p>
+   </p>
+   <p>
+    Hallo,
+    <span class="ipsEmoji">
+     👋
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    eventuell ist es möglich, dass du dein Modem gegen ein anderes Modell tauschst (z.B.: Fritz!Box 6660). Bei diesem sollte der Regler nicht nur eine Design-Entscheidung sein. Frage da am besten noch mal nach und teste es aus. Halte uns dann hier am Laufenden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Liebe Grüße, JD.
+    <span class="ipsEmoji">
+     🌻
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Chris777
+  </span>
+  <br/>
+  <time class="Jun 4" datetime="2025-06-04T07:09:38Z" title="2025-06-04 07:09 ">
+   Juni 4
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="59745" data-ipsquote-contentid="10692" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1736845824" data-ipsquote-userid="77318" data-ipsquote-username="Jonathan Dorian">
+    <div class="ipsQuote_citation">
+     Am 14.1.2025 um 10:10 schrieb Jonathan Dorian:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/100021-presl/?do=hovercard" data-mentionid="100021" href="https://community.magenta.at/profile/100021-presl/" rel="">
+       @presl
+      </a>
+      ,
+     </p>
+     <p>
+     </p>
+     <p>
+      Hallo,
+      <span class="ipsEmoji">
+       👋
+      </span>
+     </p>
+     <p>
+     </p>
+     <p>
+      eventuell ist es möglich, dass du dein Modem gegen ein anderes Modell tauschst
+      <u>
+       <strong>
+        (z.B.: Fritz!Box 6660).
+       </strong>
+      </u>
+      Bei diesem sollte der Regler nicht nur eine Design-Entscheidung sein. Frage da am besten noch mal nach und teste es aus. Halte uns dann hier am Laufenden.
+     </p>
+     <p>
+     </p>
+     <p>
+      Liebe Grüße, JD.
+      <span class="ipsEmoji">
+       🌻
+      </span>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Hallo Jonathan
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe das gleiche Problem.
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe wegen dem Modem
+    <u>
+     <strong>
+      Fritz!Box 6660
+     </strong>
+    </u>
+    <strong>
+     ,
+    </strong>
+    das bekomme ich nicht, weil Ihr zu wenig habe, und andere es dringender brauchen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hast du vielleicht eine idee
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+   <p>
+    Chris
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="Jun 5" datetime="2025-06-05T10:42:07Z" title="2025-06-05 10:42 ">
+   Juni 5
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/100362-chris777/?do=hovercard" data-mentionid="100362" href="https://community.magenta.at/profile/100362-chris777/" rel="">
+     @Chris777
+    </a>
+    ,
+    <span class="ipsEmoji">
+     👋
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Melde dich mal auf Facebook, Insta oder X via Privatnachricht. Gut möglich, dass dir meine Kolleg:innen, die dort auch Kund:innen supporten, da weiterhelfen können. Da findet sich bestimmt noch eine Lösung. Beziehe dich aber bitte auf den Thread hier, damit sich alle gleich auskennen.
+   </p>
+   <p>
+   </p>
+   <p>
+    <span class="ipsEmoji">
+     ➡️
+    </span>
+    <a href="https://www.facebook.com/magentatelekom.at" rel="external nofollow">
+     https://www.facebook.com/magentatelekom.at
+    </a>
+   </p>
+   <p>
+    <span class="ipsEmoji">
+     ➡️
+    </span>
+    <a href="https://www.instagram.com/magentatelekom.at/?hl=de" rel="external nofollow">
+     https://www.instagram.com/magentatelekom.at/?hl=de
+    </a>
+   </p>
+   <p>
+    <span class="ipsEmoji">
+     ➡️
+    </span>
+    <a href="https://x.com/magentatelekom?lang=de" rel="external nofollow">
+     https://x.com/magentatelekom?lang=de
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    LG, JD.
+    <span class="ipsEmoji">
+     🌻
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Karo
+  </span>
+  <br/>
+  <time class="Jun 6" datetime="2025-06-06T12:45:25Z" title="2025-06-06 12:45 ">
+   Juni 6
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <span>
+     <span>
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/100362-chris777/?do=hovercard" data-mentionid="100362" href="https://community.magenta.at/profile/100362-chris777/" rel="">
+       @Chris777
+      </a>
+      , ich bin auf den Thread gestoßen und habe mich dazu beim Technikteam noch erkundigt.
+     </span>
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ja, die Funktion, dass der DHCP deaktiviert werden kann, wird derzeit noch nicht vollständig bei der Home Box Fiber unterstützt.
+   </p>
+   <p>
+    Es kann aber die Routerfunktion des Modems ganz deaktivieren werden, indem das Modem in den Bridge-Modus gesetzt wird.
+   </p>
+   <p>
+    Mit einem externen Router, der die entsprechenden Anforderungen für Pi-Hole unterstützt, ist die Verwendung auch mit der Home Box Fiber möglich. Die Umstellung auf den Bridge-Modus kannst du beim Technikteam über die Hotline oder den Chat anstoßen lassen. LG Karo
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Fritz!Box 6660 Cable Öffentliche IP
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Fritz!Box 6660 Cable Öffentliche IP
+  </h1>
+  <span class="author">
+   RookieIV
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-24T10:04:39Z" title="2022-02-24 10:04 ">
+   Februar 24, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo liebe Community,
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe seit einiger Zeit eine Fritz!Box 6660 Cable inkl. Gaming 300 Tarif von Magenta. Nun möchte ich z.B. meinen Raspberry von außen zugänglich machen. Dazu bräuchte ich eine öffentliche IP bzw. eine Freischaltung meiner IP in der Firewall. Leider hat mich der Telefon-Support abgewimmelt, dass dies mit der Fritz!Box nicht geht.
+   </p>
+   <p>
+   </p>
+   <p>
+    Leider lasse ich mich so leicht nicht abspeisen und frage mal hier nach.
+   </p>
+   <p>
+   </p>
+   <p>
+    Den grundsätzlich ermöglicht die Fritz!Box unter Interner &gt; Freigaben &gt; DynDNS eine Freigabe nach außen. Leider kann ich Sie nicht nutzen, da meine IP nicht erreichbar ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    Eine weitere Frage: Geht das nur mit IP V4 oder auch mit IP V6, weil aktuell bin ich auf IP V6 eingestellt?
+   </p>
+   <p>
+   </p>
+   <p>
+    Bitte um eure Mithilfe und Expertise. Danke!
+   </p>
+   <p>
+   </p>
+   <p>
+    LG RookieIV
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-24T10:51:12Z" title="2022-02-24 10:51 ">
+   Februar 24, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Portfreigaben sind mit IPv6 auch möglich, jedoch müssen dann beide Seiten IPv6 tauglich sein.
+   </p>
+   <p>
+    DDNS geht auch über IPv6, da muss dann der Raspberry PI DDNS machen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   RookieIV
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-24T11:26:25Z" title="2022-02-24 11:26 ">
+   Februar 24, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo, danke fürs Feedback.
+   </p>
+   <p>
+   </p>
+   <p>
+    Aber es geht nicht um die Portfreigaben, sondern das ich Magenta dazu bekomme, meinen Router so freizuschalten, dass es von außen erreichbar ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bitte um weitere Rückmeldungen. Danke.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG RookieIV
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-26T07:18:07Z" title="2022-02-26 07:18 ">
+   Februar 26, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    War die FRITZ!Box schon von magenta?
+   </p>
+   <p>
+    Mit welcher Begründung wurdest du denn abgewimmelt?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   RookieIV
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-26T08:25:35Z" title="2022-02-26 08:25 ">
+   Februar 26, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja, die Fritz!Box ist offiziell von Magenta. Begründung, dass es nicht geht. Was ich mir aber einfach nicht vorstellen kann.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG RookieIV
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-02-26T08:39:57Z" title="2022-02-26 08:39 ">
+   Februar 26, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wegen Docsis könnte es sein, dass es für Magenta der doppelte Aufwand ist, für die Box ein Profil mit IPv4/Dualstack bereitzustellen. Fehleranfälligkeit steigt dadurch auch.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   RookieIV
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-03-01T10:20:08Z" title="2022-03-01 10:20 ">
+   März 1, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Leider hilft mir das nicht. Hat jemand die offizielle Fritzbox von Magenta und eine öffentliche erreichbare IP?
+   </p>
+   <p>
+   </p>
+   <p>
+    LG RookieIV
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Ping Spikes von +8ms ca 2-10 mal pro Minute bei docsis normal?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Ping Spikes von +8ms ca 2-10 mal pro Minute bei docsis normal?
+  </h1>
+  <span class="author">
+   Rene9
+  </span>
+  <br/>
+  <time class="Aug 19" datetime="2024-08-19T23:11:51Z" title="2024-08-19 23:11 ">
+   August 19, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Servus,
+   </p>
+   <p>
+    wollte mich hier mal erkundigen bevor ich beim Support anrufe.
+   </p>
+   <p>
+    Ich hab seit nem guten Jahr den 300 down tarif via coax und docsis 3.0 (weiße modem), bis jetzt war der nur das Second / Backup Internet und wurde deswegen nicht stark genutzt, nun hab ich vor drüber etwas Latenz empfindliche Sachen laufen zu lassen und bemerkt das die Latenz am Spiken ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hab mehrmals pro Minute Ping Spikes von +8ms bis +15ms irgendwo zwischen dem Modem und dem nächsten Hop von Magenta
+    <br/>
+    (XXX-XXX-XXX-XXX.static.upcbusiness.at Verteiler?).
+    <br/>
+    Faktoren im LAN hab ich ausgeschlossen, (zum Testen nur ein Client mit Kabel direkt dran und pings zum Modem direkt sind problemfrei)
+   </p>
+   <p>
+    gleiche spikes bestehen egal zu welcher anderen Public IPs
+    <br/>
+    (9.9.9.9, Magenta eigene Speedtestserver, diverse XXX.static.upcbusiness.at) und scheint auch im RTR speedtest auf.
+   </p>
+   <p>
+    Signalstärke meines Wissens nach im Rahmen aber nicht super gut, (Downstream Signalstärke -8 bis -9 dBmV, Downstream SNR 30 bis 35, Upstream Signalstärke 47 dBmV mit wenigen T3 Timeouts (aber nur ca 2-5 pro 24 Stunden) ist aber meines wissens nach trotzdem nicht normal... und ne riesen menge an RS Errors (was aber nichts heißen muss)
+   </p>
+   <p>
+    Ist durchgehend, auch mitten in der Nacht, denke also nicht überlastetes Netz und Bandbreite passt auch (kommt sogar knapp über 300 mbit an).
+   </p>
+   <p>
+   </p>
+   <p>
+    Kann es sein das Pakete vom Modem zum Verteiler manchmal wegen loss neu gesendet werden müssen?
+    <br>
+     Die Spikes sind immer ca 8ms (egal zu welcher Public IP und ob die nen dauerping von 10ms oder 50ms hat) und die 8ms ist genau die Latenz vom Modem zum nächsten Hop und die resends müssten im docsis Layer / über dem IP Layer sein weil Package loss / Retries scheinen zB bei MTR nicht auf.
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    Was meint ihr?
+    <br/>
+   </p>
+   <p>
+    Hier paar Beispiele
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5806" href="images/uploads/Screenshot_20240819_230012.png.052d516bdac687528495947d665095ca.png" rel="">
+     <img alt="Screenshot_20240819_230012.thumb.png.1518c257cd02bceab3d07890388bef10.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5806" data-ratio="59.90" src="images/uploads/Screenshot_20240819_230012.thumb.png.1518c257cd02bceab3d07890388bef10.png" width="1000"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5804" href="images/uploads/Screenshot_20240819_221629.png.93121c567d2d9a67ec7a4cdb363f4279.png" rel="">
+     <img alt="Screenshot_20240819_221629.thumb.png.6fec21c3eca8315209e9f898eeb77d8b.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5804" data-ratio="122.15" src="images/uploads/Screenshot_20240819_221629.thumb.png.6fec21c3eca8315209e9f898eeb77d8b.png" width="614"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5805" href="images/uploads/Screenshot_20240819_224556.png.6bbd0509061c51c8b7772577fecdc441.png" rel="">
+     <img alt="Screenshot_20240819_224556.thumb.png.0b3f977f445a9c087880adb6d351de8c.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5805" data-ratio="46.50" src="images/uploads/Screenshot_20240819_224556.thumb.png.0b3f977f445a9c087880adb6d351de8c.png" width="1000"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    PS:
+    <br/>
+    warum gibt es für privat Verträge nicht mehr die option über ein Kontakt Formular ein Support Ticket zu erstellen?
+    <br/>
+    Ist viel einfacher als zu versuchen das am Telefon zu erklären &amp; screenshots bzw logs könnte man auch gleich inkludieren...
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="Aug 19" datetime="2024-08-19T23:22:41Z" title="2024-08-19 23:22 ">
+      August 19, 2024
+     </time>
+     von Rene9
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="Aug 20" datetime="2024-08-20T22:28:31Z" title="2024-08-20 22:28 ">
+   August 20, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das von dir aufgezeigte Verhalten kann ich auch bei meiner Fiber Box 1 (ehem. UPC Connect Box) beobachten.
+   </p>
+   <p>
+    Dieses Gerät enthält den berühmt berüchtigten Intel Puma 6 Chip, welcher zu Beginn deutliche Latenzprobleme hatte.
+   </p>
+   <p>
+    Es dürfte am Anfang deutlich schlechter gewesen sein, und mit Updates nun für die allermeisten okay sein.
+   </p>
+   <p>
+    Ich selbst habe die Box auch erst seit etwas weniger als drei Jahren und bisher ist insgesamt alles bestens (läuft bei mir im Bridge Mode).
+   </p>
+   <p>
+   </p>
+   <p>
+    <a href="https://www.techpowerup.com/232517/intel-atom-based-puma-6-modem-chipset-has-severe-latency-issues-many-cable-modems-affected" rel="external nofollow">
+     https://www.techpowerup.com/232517/intel-atom-based-puma-6-modem-chipset-has-severe-latency-issues-many-cable-modems-affected
+    </a>
+   </p>
+   <p>
+    <a href="https://www.theregister.com/2016/12/03/intel_puma_chipset_firmware_fix/" rel="external nofollow">
+     https://www.theregister.com/2016/12/03/intel_puma_chipset_firmware_fix/
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Rene9
+  </span>
+  <br/>
+  <time class="Aug 21" datetime="2024-08-21T00:11:33Z" title="2024-08-21 00:11 ">
+   August 21, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    ok danke
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="Aug 21" datetime="2024-08-21T15:11:59Z" title="2024-08-21 15:11 ">
+      August 21, 2024
+     </time>
+     von Rene9
+    </strong>
+   </span>
+  </div>
+  <hr/>
+ </body>
+</html>

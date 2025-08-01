@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Router Ha35 vergibt an neue WLAN Geräte keine IP
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Router Ha35 vergibt an neue WLAN Geräte keine IP
+  </h1>
+  <span class="author">
+   friedolino313
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-09T08:33:26Z" title="2018-10-09 08:33 ">
+   Oktober 9, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+   </p>
+   <p>
+    Vorab mein Netzwerkaufbau:
+   </p>
+   <p>
+   </p>
+   <p>
+    HUAWEI Hybrid-Router HA35 – DHCP Server aktiviert, beide WLAN-Frequenzen des Routers deaktiviert.
+   </p>
+   <p>
+    per Lan geht’s zu einem Ubiquiti Access Point der das WLAN im Haus zur Verfügung stellt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das Problem:
+   </p>
+   <p>
+    Neu angeschaffte Geräte(Handy, Ebook-reader, Smartplug, usw) bekommen keine IP zugeteilt.
+   </p>
+   <p>
+    Erst wenn ich den Router neustarte funktioniert es.
+   </p>
+   <p>
+   </p>
+   <p>
+    Rückblickend betrachtet besteht dieses Problem schon länger. Das erste mal ist es mir bei einer Smart Bulb aufgefallen. Ich habe die Schuld damals auf das Endgerät geschoben und aufgegeben.
+   </p>
+   <p>
+    Danach wars ein ebook-reader der zwar ins WLAN kam aber nicht ins Internet weil er keine IP bekommt.
+   </p>
+   <p>
+    Als dann aber das neue Galaxy S9 ebenfalls nicht online ging wurde es zu einem größeren Problem.
+   </p>
+   <p>
+    Über das Netzwerktool „FING“ und auch über die Steuerkonsole des AP war ersichtlich dass die Geräte im Netzwerk sind aber eben keine IP bekommen. Nachdem hier der Neustart des AP nichts brachte war dann der Router dran.
+   </p>
+   <p>
+    und siehe da…danach klappte es sofort.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das könnte jetzt schon die Lösung sein aber das Problem tritt ständig auf. Das letzte mal beim Versuch Amazons alexa zu reseten und neu zu verbinden. und davor beim Einbinden eines Gäste Ipads.
+   </p>
+   <p>
+    Das find ich extrem mühsam.
+   </p>
+   <p>
+    Hat jemand eine Idee woran das liegen kann? Könnte ein reset helfen? oder gibt es vorher noch einen zeitsparenderen Lösungsansatz
+   </p>
+   <p>
+   </p>
+   <p>
+    lg
+   </p>
+   <p>
+    Christian
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-09T09:30:41Z" title="2018-10-09 09:30 ">
+   Oktober 9, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wie viel Geräte hast du im LAN?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   friedolino313
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-09T09:51:44Z" title="2018-10-09 09:51 ">
+   Oktober 9, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Mein pc hängt direkt an einem lan port des routers. Und über einen 2. Lan port geht es zu einem switch und von dort zu Netzwerk dosen im haus. Da hängen tv, nas, usw dran. Geschätzt 10 bis 15 Geräte. Die meisten davon mit fixen ips außerhalb des dhcp Bereichs.
+   </p>
+   <p>
+    Mein pc hängt direkt an einem lan port des routers. Und über einen 2. Lan port geht es zu einem switch und von dort zu Netzwerk dosen im haus. Da hängen tv, nas, usw dran. Geschätzt 10 bis 15 Geräte. Die meisten davon mit fixen ips außerhalb des dhcp Bereichs.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-10T10:29:06Z" title="2018-10-10 10:29 ">
+   Oktober 10, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hello, dh aber nur Geräte die sich via wlan verbinden bekommen keine IP? Oder auch wenn du ein Gerät man Switch/Router ansteckst?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   friedolino313
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-10T13:18:41Z" title="2018-10-10 13:18 ">
+   Oktober 10, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    das kann ich nicht sagen da ja alle meine neuen Geräte keinen LAN Anschluss haben. Dafür müsste ich ein bestehendes LAN Gerät entfernen und neu anmelden.
+   </p>
+   <p>
+    Auf Anraten von T-mobile hab ich aber jetzt gestern mal den Router resettet.  Werde das jetzt mal testen wie es sich mit neuen WLAN Geräten verhält
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-10T13:19:44Z" title="2018-10-10 13:19 ">
+   Oktober 10, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    O.k. das Problem kommt mir jetzt bekannt vor.
+   </p>
+   <p>
+    Sprich du bist über 32 Geräte.
+   </p>
+   <p>
+    Meine erste Überlegung wäre einen 2. Router nach dem Hybrid Router verwenden.
+   </p>
+   <p>
+    Edit:
+   </p>
+   <p>
+    Oder versuchen mit einem 2. DHCP Server im LAN arbeiten, wobei das sicher Probleme mit sich bringt. Dieser müsste in einem anderem Bereich agieren als der vom Hybrid und sollte auch nicht mit den statischen IPs kollidieren.
+   </p>
+   <p>
+    Vielleicht lässt sich das limit von 32 Geräten auch in der Firmware bzw config ändern. Bei der anderen Firmware vergisst das Geräte immer das erste Gerät, wenn sich das 33. am DHCP meldet.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2018-10-10T13:26:31Z" title="2018-10-10 13:26 ">
+      Oktober 10, 2018
+     </time>
+     von IT-Freak
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   friedolino313
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-10T14:16:41Z" title="2018-10-10 14:16 ">
+   Oktober 10, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Also 32 Geräte aktiv zur gleichen Zeit geht sich nicht aus(Bsp es laufen nicht alle TV´s zur selbenZeit). Aber insgesamt bin ich sicher über 32 Geräten.
+   </p>
+   <p>
+    Einen 2. IP Bereich hab ich schon mal überlegt. Vielleicht versuche ich das auch mal. Danke auf jeden Fall mal für deine/eure rasche Hilfe.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   SigiBlue
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-10T19:36:34Z" title="2018-10-10 19:36 ">
+   Oktober 10, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27285" data-ipsquote-contentid="4718" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1539177584" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 6 Stunden schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Sprich du bist über 32 Geräte.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    ist hier kein unterschied ob im lan oder wlan?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-11T03:44:05Z" title="2018-10-11 03:44 ">
+   Oktober 11, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nein, da alle im "LAN" sind. (WLAN läuft über Access Points und nicht das eingebaute WLAN)
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   friedolino313
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-11T04:55:02Z" title="2018-10-11 04:55 ">
+   Oktober 11, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Jetzt verzweifelt ich leicht. Der Auslöser des ganzen Problems war unter anderem dass alexa keine TuneIn Radiosender mehr gespielt hat. Da hab ich die Schuld auf alexa geschoben. Jetzt versuche ich über mein Handy im wlan, online Radio zu hören und wenn ich im WLAN bin bricht er ab. Wenn ich dann aufs handynetz wechsle läuft es weiter. WLAN wieder an am Handy –&gt;Radio aus. WLAN aus –&gt;Radio an.
+   </p>
+   <p>
+    was kann das denn sein? Alles andere funktioniert im wlan aber anstandslos. Speedtest  durchgeführt und super Ergebnisse bekommen. Aber der Radio geht sofort aus.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2018-10-11T06:45:35Z" title="2018-10-11 06:45 ">
+      Oktober 11, 2018
+     </time>
+     von friedolino313
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-11T07:35:19Z" title="2018-10-11 07:35 ">
+   Oktober 11, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27285" data-ipsquote-contentid="4718" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1539177584" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 18 Stunden schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      O.k. das Problem kommt mir jetzt bekannt vor.
+     </p>
+     <p>
+      Sprich du bist über 32 Geräte.
+     </p>
+     <p>
+      Meine erste Überlegung wäre einen 2. Router nach dem Hybrid Router verwenden.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Aber das sollte doch der AP handeln können. Der steht ja immerhin hinter dem Router? Oder habe ich da was falsch verstanden?
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27291" data-ipsquote-contentid="4718" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1539233702" data-ipsquote-userid="76920" data-ipsquote-username="friedolino313">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb friedolino313:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      was kann das denn sein? Alles andere funktioniert im wlan aber anstandslos. Speedtest  durchgeführt und super Ergebnisse bekommen. Aber der Radio geht sofort aus.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    In dem Fall hast du aber nicht mehr als 32 gleichzeitig laufen, oder?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   friedolino313
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-11T09:30:35Z" title="2018-10-11 09:30 ">
+   Oktober 11, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27294" data-ipsquote-contentid="4718" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1539243319" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor 1 Stunde schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+     </p>
+     <p>
+      In dem Fall hast du aber nicht mehr als 32 gleichzeitig laufen, oder?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Nein 32 aktive Geräte hab ich nie laufen. und zu diesem Zeitpunkt auch nicht. Ich weis auch nicht ob das mit dem Online Radio das gleiche Problem zur Ursache hat
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-11T09:39:45Z" title="2018-10-11 09:39 ">
+   Oktober 11, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Okay, ich würde mal den zweiten IP Adressbereich versuchen, wenn das nicht zu viel Aufwand ist.
+   </p>
+   <p>
+    Wenn das auch nicht hilft, müssen wir uns was anderes überlegen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-12T07:19:18Z" title="2018-10-12 07:19 ">
+   Oktober 12, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Kann man der Alexa mal testweise eine fixe IP Adresse vergeben?
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2018-10-12T07:19:45Z" title="2018-10-12 07:19 ">
+      Oktober 12, 2018
+     </time>
+     von Christian_E
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   friedolino313
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-16T09:13:53Z" title="2018-10-16 09:13 ">
+   Oktober 16, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <u>
+     Aktueller Stand
+    </u>
+    : Es läuft scheinbar wieder wie es soll.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe einen kompletten Reset des Routers durchgeführt. Zusätzlich hab ich auch mal alte WLAN Geräte die nur sinnlos rumliegen aus dem Netz entfernt(alte Handys zB)
+   </p>
+   <p>
+    Habe auch meine Geräte gezählt und ich komme dabei „nur“ auf 29. Das Problem mit den 32 + 1 kann es dann noch nicht gewesen sein denk ich mal.
+   </p>
+   <p>
+   </p>
+   <p>
+    <em>
+     @Christian_E:
+    </em>
+    Alexa hab ich auch wieder online bekommen. eine statische IP konnte ich ihr aber nicht vergeben. Allen Anleitungen im www zum Trotz.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf jeden Fall mal
+    <strong>
+     Danke
+    </strong>
+    an alle die versucht haben mir zu helfen!!!! Wirklich Top!
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-10-16T09:19:09Z" title="2018-10-16 09:19 ">
+   Oktober 16, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Super - Danke für das Feedback.
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+    <br/>
+    Ja manchmal hilft auch mal ein Reset, auch wenn das eher die letzte Konsequenz ist aber die wirkt dann doch oft Wunder.
+    <br/>
+    <br/>
+    LG
+    <br>
+     Christian
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Psyobilin
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-01-24T16:03:19Z" title="2019-01-24 16:03 ">
+   Januar 24, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe bei mir das exakt gleiche Problem und ein Reset hatte nur kurzfristig geholfen. Ich möchte jetzt einen eigenen DHCP Server ins Netz bringen (PiHole). Kann man den DHCP des Routers deaktivieren?
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

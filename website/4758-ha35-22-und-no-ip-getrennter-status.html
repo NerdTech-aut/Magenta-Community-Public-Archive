@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   HA35-22 und NO-IP -  "getrennter Status"
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   HA35-22 und NO-IP -  "getrennter Status"
+  </h1>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-16T10:44:28Z" title="2018-11-16 10:44 ">
+   November 16, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Liebes Forum.
+   </p>
+   <p>
+    Ich habe seit gestern meinen HA35-22 im Einsatz. DSL ist eingerichtet und läuft zusammen mit LTE (der Router steht z.Z. an einem anderen Ort ohne DSL).
+   </p>
+   <p>
+    <strong>
+     Öffentliche IP ist beantragt und Router neu gestartet (meine öffentliche IP beginnt mit 213).
+    </strong>
+   </p>
+   <p>
+    Ich bekomme die DDNS Konfiguration nicht zu Laufen, der Status ist immer "getrennt" und die IP wird bei NO-IP auch nicht erneuert.
+   </p>
+   <p>
+    Die Softwareversion des Routers ist V100R018C00SPC108.
+   </p>
+   <p>
+    Was mache ich falsch?
+   </p>
+   <p>
+    Danke für Eure Hilfe
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/DDNS.png.d1b0264de59564f298e685fa455b1dd9.png">
+     <img alt="DDNS.png" class="ipsImage ipsImage_thumbnailed" data-fileid="1187" src="images/uploads/DDNS.thumb.png.9b859c5ea37a94d31c56bb278ae1cde7.png"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-19T09:50:24Z" title="2018-11-19 09:50 ">
+   November 19, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi Waldemar,
+   </p>
+   <p>
+    werde es heute Abend bei mir Testweise einrichten und sehen wie es sich verhält, dann geb ich Bescheid.
+   </p>
+   <p>
+    Vielleicht meldet sich noch wer anders zu dem Thema und kann Erfahrungen schildern.
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+   <p>
+    LGFW
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-19T19:16:43Z" title="2018-11-19 19:16 ">
+   November 19, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Update: Soeben getestet mit noip.com.
+   </p>
+   <p>
+    Bei dem Anbieter registriert, Hostname angelegt, entsprechenden Daten am Router bei DDNS eingetragen -&gt; Status bleibt auf "Getrennt".
+   </p>
+   <p>
+    Nach einem Router Neustart -&gt; Status änderte sich ca. eine Minute nach Verbindungsaufbau auf "Verbunden" und die IP wurde am noip.com Portal aktualisiert.
+   </p>
+   <p>
+    Bei Benutzername hab ich meine Mailadresse eingetragen, mit der ich mich bei noip.com registriert habe. Ob es auch mit dem Usernamen funktioniert, konnt ich nicht mehr testen, keine Zeit mehr.
+   </p>
+   <p>
+    LGFW
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-20T02:55:05Z" title="2018-11-20 02:55 ">
+   November 20, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das habe ich auch grade probiert - leider ohne Erfolg. Der Status bleibt nach dem Eintragen meiner e-Mailadresse auch nach 10 Minuten nach dem Neustart: "getrennt".
+   </p>
+   <p>
+    Allerdings habe ich z.Z. kein DSL sondern nur LTE.
+   </p>
+   <p>
+    Welche Intrenetverbindung war bei Deinem Versuch aktiv?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-23T15:05:54Z" title="2018-11-23 15:05 ">
+   November 23, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Update: Habe heute den Router mit DSL und LTE in Betrieb gehabt und siehe da: Status: Verbunden.
+   </p>
+   <p>
+    DAnn habe ich DSL augesteckt und der Status wechselte auf: Getrennt.
+   </p>
+   <p>
+    Das heißt für mich dass die von mir geplante Ausfallssicherheit nicht erreichbar ist, da bei Ausfall von DSL der Router nicht mehr erreichbar ist.
+   </p>
+   <p>
+    Fazit: DDNS wird nur über die DSL-VErbindung aktiviert.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-26T09:35:51Z" title="2018-11-26 09:35 ">
+   November 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27654" data-ipsquote-contentid="4758" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1542985554" data-ipsquote-userid="77066" data-ipsquote-username="Waldemar">
+    <div class="ipsQuote_citation">
+     Am 23.11.2018 um 16:05 schrieb Waldemar:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Fazit: DDNS wird nur über die DSL-VErbindung aktiviert.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Das ist ziemlich unpraktisch
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+    <br/>
+    <br/>
+    Suchst du dir jetzt eine andere Lösung oder lässt du es ganz bleiben?
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-26T09:59:20Z" title="2018-11-26 09:59 ">
+   November 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    ich bin mit meinem Latein am Ende. Vielleicht kann noch ein Moderator dir bei dem Problem weiter helfen.
+   </p>
+   <p>
+    Oder der Support.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-26T10:00:25Z" title="2018-11-26 10:00 ">
+   November 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich würde entweder auf einen anderen Anbieter umsteigen (DDNS Anbieter) oder mir dahinter ein Gerät stellen, dass das kann (ASUS Router oder dgl.)
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-26T10:05:24Z" title="2018-11-26 10:05 ">
+   November 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es gibt dazu leider mehrere Threads.
+   </p>
+   <p>
+    Kurz Zusammenfassung:
+   </p>
+   <p>
+    Zugriff von Extern geht nur über DSL über die DSL IP.
+   </p>
+   <p>
+    Die Bonding IP ist öffentlich, jedoch kann man darauf nicht zugreifen.
+   </p>
+   <p>
+    DDNS greift auf die DSL IP zurück. =&gt; kein DSL kein DDNS.
+   </p>
+   <p>
+    über ipv6 geht der Zugriff immer. (Keine Ahnung, ob über das bonding oder LTE Interface9
+   </p>
+   <p>
+   </p>
+   <p>
+    Unter Umständen, kommt die Anfrage von Extern über die Bonding IP nicht zu HybridBox oder wird dort von der Hybrid Box angefangen.
+   </p>
+   <p>
+    Wobei ich weder bei dem einem noch bei dem anderen einen Ansatz einer Idee habe, wie man das Problem lösen könnte.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-26T10:11:14Z" title="2018-11-26 10:11 ">
+   November 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27666" data-ipsquote-contentid="4758" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1543226724" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 5 Minuten schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Die Bonding IP ist öffentlich, jedoch kann man darauf nicht zugreifen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/72107-it-freak/?do=hovercard" data-mentionid="72107" href="https://community.magenta.at/profile/72107-it-freak/" rel="">
+     @IT-Freak
+    </a>
+    : D.h auch auf Seite wie
+    <a href="https://whatismyipaddress.com/" rel="external nofollow">
+     https://whatismyipaddress.com/
+    </a>
+    ist dann die öffentliche IP Adresse nicht sichtbar? Oder dort schon?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-26T10:15:10Z" title="2018-11-26 10:15 ">
+   November 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Laut
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77066-waldemar/?do=hovercard" data-mentionid="77066" href="https://community.magenta.at/profile/77066-waldemar/" rel="">
+     @Waldemar
+    </a>
+    ist da die Bonding IP sichtbar.:
+   </p>
+   <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed9072854238" scrolling="no" src="4759-ha35-22-portweiterleitung.html&amp;comment=27657&amp;embedComment=27657&amp;embedDo=findComment" style="height:254px;max-width:500px;">
+   </iframe>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-26T10:21:02Z" title="2018-11-26 10:21 ">
+   November 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Naja, wenn das funktioniert, könnten man ja ein Gerät dahinter stellen, dass die öffentlich IP Adresse nicht vom WAN Port ausliest, sondern über eine Webabfrage, oder?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-26T10:47:35Z" title="2018-11-26 10:47 ">
+   November 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja, ich sehe beim ddns auch nicht das Problem. Das DDNS Thema lässt sich mit einem Raspberry PI oder ähnlichem lösen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich nehme an, das
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77066-waldemar/?do=hovercard" data-mentionid="77066" href="https://community.magenta.at/profile/77066-waldemar/" rel="">
+      @Waldemar
+     </a>
+     von extern getestet hat. Z.B. mit Can you see me oder über eine andere Leitung/LTE.
+    </span>
+    Auf diese ip konnte er keine Verbindung aufbauen.
+   </p>
+   <p>
+    Das Problem ist, ohne DSL funktioniert der Zugriff von Extern nicht über IPv4. Es sein denn, es wurde falsch getestet. (Z.B. vom LAN heraus)
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Waldemar
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-26T11:02:37Z" title="2018-11-26 11:02 ">
+   November 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27663" data-ipsquote-contentid="4758" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1543224951" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor einer Stunde schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das ist ziemlich unpraktisch
+      <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+      <br/>
+      <br>
+       Suchst du dir jetzt eine andere Lösung oder lässt du es ganz bleiben?
+      </br>
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Das fehlende DDNS ohne DSL ist ärgerlich, der echte Show-Stopper ist allerdings die Aussage des T-Mobile Supports, das der HA35-22 nur für Home-Anwendungen geeignet wäre und Portweiterleitungen wie von mir gefordert nicht funktionieren würden.
+   </p>
+   <p>
+    Tatsächlich ist es mir nicht gelungen unter IPv4 auf ein dahinterliegendes Gerät mittels ssh über Port 22 zuzugreifen (mit IPv6 hat das sofort geklappt).
+   </p>
+   <p>
+    Mein Fazit ist, dass ich mir ein teureres Produkt der Konkurrenz holen werde. Viele Stunden mit Support und Testen sind auf Grund scheinbar falscher Versprechen seitens T-Mobile nun verloren.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-11-26T11:47:12Z" title="2018-11-26 11:47 ">
+   November 26, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27671" data-ipsquote-contentid="4758" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1543230157" data-ipsquote-userid="77066" data-ipsquote-username="Waldemar">
+    <div class="ipsQuote_citation">
+     vor 43 Minuten schrieb Waldemar:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Mein Fazit ist, dass ich mir ein teureres Produkt der Konkurrenz holen werde. Viele Stunden mit Support und Testen sind auf Grund scheinbar falscher Versprechen seitens T-Mobile nun verloren.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Es ist leider immer (auch bei anderen Anbietern) das Problem, dass die Geräte nicht für mehr als den Standardfall ausgelegt sind.
+    <br>
+     Ich bin daher auch immer ein Fan davon, andere Geräte zu nehmen, wenn man mehr braucht.
+    </br>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

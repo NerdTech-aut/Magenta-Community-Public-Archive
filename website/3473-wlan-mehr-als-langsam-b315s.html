@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Wlan mehr als langsam - B315s
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Wlan mehr als langsam - B315s
+  </h1>
+  <span class="author">
+   alex1996
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2016-11-20T14:27:40Z" title="2016-11-20 14:27 ">
+   November 20, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe den LTE Router
+    <span style="color:rgb(0,0,0);font-family:Arial, Helvetica, sans-serif, '宋体';font-size:12px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(244,244,244);float:none;">
+     B315s-2 und habe den Vertrag mit 50 mbits. Bin in der vollen LTE Netzabdeckung, Am Föhrenwald Eggendorf, wo laut Netzabdeckung auch viele verifiziert haben das hier voller Empfang ist. Bekomme aber nur 2 bis 5!!! mbits und das ist leider eine absolute Frechheit für diesen Preis und man kann damit absolut nicht arbeiten. Und sobald ein zweites Gerät zugreift ist es sowieso überfordert und es geht nichts mehr und das bei einem Produkt was bis zu 32 Geräte verspricht ist sehr schwach.
+    </span>
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="8 yr" datetime="2016-11-20T14:36:08Z" title="2016-11-20 14:36 ">
+      November 20, 2016
+     </time>
+     von alex1996
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   black_gis
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2016-11-20T20:37:51Z" title="2016-11-20 20:37 ">
+   November 20, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi, hatte das gleiche Problem und TMobile konnte mir nicht helfen ...auch volle Abdeckung, auch 50mbit Vertrag aber max 10mbit down, komischerweise der up ging immer normal wie im Vertrag
+   </p>
+   <p>
+    Habe aber eine Lösung gefunden die bei mir funktioniert hat.
+   </p>
+   <ol>
+    <li>
+     Router wirklich dort hinstellen wo die Antenne(Sendemast) steht.
+     <ol>
+      <li>
+       Mein Router steht jetzt in der Küche und nicht mehr direkt beim Schreibtisch weil der Sendemast dort am nächsten ist. Wlan ist vielleicht nicht mehr 100% macht aber nichts da ja nur 50mbit Vertrag - also solange 3 Stricherl da sind, alles gut.
+      </li>
+      <li>
+       Das musst du ein bisschen testen mit
+       <a href="http://www.speedtest.net/de/" rel="external nofollow">
+        http://www.speedtest.net/de/
+       </a>
+       wo der wirklich dann den besten Empfang hat.
+      </li>
+     </ol>
+    </li>
+    <li>
+     In den Routereinstellungen (Einstellungen/Allg.Einstellungen/Interneteinstellungen) bei
+     <ol>
+      <li>
+       mobiles Netzwerk nur LTE wählen und
+      </li>
+      <li>
+       als Daten-APN (noproxy) (musst du wahrscheinlich anlegen, findest du im Inernet ;-) ).
+      </li>
+     </ol>
+    </li>
+    <li>
+     (Einstellungen/Allg.Einstellungen/Externe Antenne) die Antenne auf Interne setzten
+    </li>
+    <li>
+     (Einstellungen/Allg.Einstellungen/WLAN Einstellungen)
+     <ol>
+      <li>
+       Modus natürlich auf bgn,
+      </li>
+      <li>
+       WLAN Kanal auf 1,6 oder 11 (schau welcher Kanal wenig genutzt ist in deiner Umgebung gibt ja genug Apps die das können),
+       <ol>
+        <li>
+         Wenn du den Kanal nicht ändern kannst setzt den Router zurück, das hat bei mir Wunder gewirkt und ich konnte den Kanal wieder ordentlich einstellen
+        </li>
+       </ol>
+      </li>
+      <li>
+       20/40 MHz
+      </li>
+      <li>
+       Sendeleistung 100%
+      </li>
+      <li>
+       QoS aktivieren (!das wars bei mir glaube ich warum es jetzt geht)
+      </li>
+      <li>
+       Sicherheit WPA2-PSK
+      </li>
+      <li>
+       WPA-Vers.: AES
+      </li>
+     </ol>
+    </li>
+   </ol>
+   <p>
+    Zusammenfassend wars bei mir die Router location die wirklich so nahe als möglich am Sendemast sein muss wie geht und die QoS die mir jetzt abhängig von der Breitbandsharing ala TMobile 30-50mbit beschert.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

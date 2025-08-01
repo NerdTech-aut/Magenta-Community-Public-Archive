@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   5G Outdoor Box mit TP-Link Deco Mesh Wlan
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   5G Outdoor Box mit TP-Link Deco Mesh Wlan
+  </h1>
+  <span class="author">
+   Creature
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-11-13T23:51:51Z" title="2022-11-13 23:51 ">
+   November 13, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+   </p>
+   <p>
+    Folgendes Problem:
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe die 5G Outdoorbox mit der Indooreinheit verbunden, diese per LAN an ein PatchPanel über eine Netzwerkdose. Von da weg über ein Switch in alle Etagen des Hauses verteilt (3x).
+   </p>
+   <p>
+    was mit der A1 Box Tadellos funktioniert hat, will hier nicht funktionieren. Ich bekomme leider keine Verbindung hin.
+   </p>
+   <p>
+    Steck ich mein MacBook direkt an die Indooreinheit, funktioniert es, über die Netzwerkdose leider nicht.
+   </p>
+   <p>
+    Wo ich beim eigentlichen Problem angelangt bin, dass ich mein Mesh-WLAN welches ich als Accesspoint eingerichtet hatte, nicht ans Netz angeschlossen bekomme.
+   </p>
+   <p>
+   </p>
+   <p>
+    ich hoffe ihr könnt mir weiterhelfen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-11-14T12:22:44Z" title="2022-11-14 12:22 ">
+   November 14, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94876-creature/?do=hovercard" data-mentionid="94876" href="https://community.magenta.at/profile/94876-creature/" rel="">
+      @Creature
+     </a>
+     <br/>
+     Es wäre gut, wenn du es irgendwie schaffen würdest die Indoor-Einheit aus deinem Setup zu entfernen.
+     <br/>
+     <br/>
+     Sollten die Lan Dosen zwei Ports haben, könntest du die Outdoor-Einheit über einen Port über den PoE Adapter mit einem der TP-Link Deco Geräte verbinden und diesen Deco als Router konfigurieren. Dann von diesem Deco wiederum zurück zum Switch über den zweiten Port an der Dose. Wie gesagt falls möglich.
+     <br>
+      <br>
+       Alternativ sollte es auch möglich sein die Indoor-Einheit wegzulassen und die Outdoor-Einheit über den PoE Adapter mit dem Switch zu verbinden. Dann könnten die Deco im Access-Point Modus bleiben. Um dies umzusetzen, solltest du den DHCP-Bereich der Outdoor-Einheit vorher anpassen, damit alle Geräte auch eine IP-Adresse bekommen können, denn standardmäßig wird nur der Bereich 192.168.0.
+       <strong>
+        10
+       </strong>
+       bis 192.168.0.
+       <strong>
+        20
+       </strong>
+       vergeben. Die Einstellung ist auf https://192.168.0.1 (Adresse der Outdoor-Einheit) unter Einstellungen -&gt; LAN zu finden.
+       <br>
+        <br>
+         LG NTM
+        </br>
+       </br>
+      </br>
+     </br>
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Creature
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-11-14T12:31:35Z" title="2022-11-14 12:31 ">
+   November 14, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Genial!
+   </p>
+   <p>
+   </p>
+   <p>
+    diesen Punkt hatte ich nicht am Schirm.
+   </p>
+   <p>
+    vielen herzlichen Dank!
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   atzlinger_s
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-11-28T22:14:06Z" title="2022-11-28 22:14 ">
+   November 28, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49591" data-ipsquote-contentid="8212" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1668428564" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 14.11.2022 um 13:22 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hey
+      <span>
+       <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94876-creature/?do=hovercard" data-mentionid="94876" href="https://community.magenta.at/profile/94876-creature/" rel="">
+        @Creature
+       </a>
+       <br>
+        Es wäre gut, wenn du es irgendwie schaffen würdest die Indoor-Einheit aus deinem Setup zu entfernen.
+        <br>
+         <br/>
+         Sollten die Lan Dosen zwei Ports haben, könntest du die Outdoor-Einheit über einen Port über den PoE Adapter mit einem der TP-Link Deco Geräte verbinden und diesen Deco als Router konfigurieren. Dann von diesem Deco wiederum zurück zum Switch über den zweiten Port an der Dose. Wie gesagt falls möglich.
+         <br/>
+         <br/>
+         Alternativ sollte es auch möglich sein die Indoor-Einheit wegzulassen und die Outdoor-Einheit über den PoE Adapter mit dem Switch zu verbinden. Dann könnten die Deco im Access-Point Modus bleiben. Um dies umzusetzen, solltest du den DHCP-Bereich der Outdoor-Einheit vorher anpassen, damit alle Geräte auch eine IP-Adresse bekommen können, denn standardmäßig wird nur der Bereich 192.168.0.
+         <strong>
+          10
+         </strong>
+         bis 192.168.0.
+         <strong>
+          20
+         </strong>
+         vergeben. Die Einstellung ist auf https://192.168.0.1 (Adresse der Outdoor-Einheit) unter Einstellungen -&gt; LAN zu finden.
+         <br/>
+         <br/>
+         LG NTM
+        </br>
+       </br>
+      </span>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo,
+   </p>
+   <p>
+    ich stehe aktuell vor einem ähnlichen Problem. Wenn ich das richtig verstanden habe würde man die IDU bei beiden Varianten weglassen, bei mir wären beide Varianten soweit leicht umsetzbar. Gibt es aus deiner Sicht Vor- bzw. Nachteile? Müsste man bei einer der Varianten noch weitere Einstellungen ändern? Aktuell habe ich den Business ATP eingerichtet und die IDU als DMZ am der ODU konfiguriert, sowie die Firewall der ODU auf LOW. Gibt es Features, die nicht unterstützt werden, wenn man Variante 2 umsetzt? Also Features, die die IDU bietet, welche von der ODU nicht geboten werden? Alternativ hätte ich ursprünglich geplant, die ODU im Bridgemode mit einer meiner alten Fritzboxen und den Decks als Accesspoints zu betreiben - mittlerweile habe ich aber leider schon einiges gelesen, dass bei der Nutzung von alternativen Routern in Verbindung mit dem Bridgemode Probleme auftreten und die gelieferte Geschwindigkeit stark reduziert wird.
+   </p>
+   <p>
+    Eventuell hat ja einer von euch auch einen Tip zur Ausrichtung der ODU. Hatte extra im Sendekataster den vermutlich korrekten 5G Masten ermittelt, der auch von Magenta verwendet wird - die Serviceline hat ebenfalls angedeutet, dass eine Ausrichtung in diese Richtung passen sollte. Die Entfernung beträgt ca. 200m Luftlinie bei freier Sicht, topografisch sollte die ODU durch die Höhe des Hauses und die zusätzliche Lage auf einem Hügel auch optimal positioniert sein, da die meisten Störquellen viel niedriger liegen sollten. Bei direkter Ausrichtung bekomme ich trotzdem nur 2/5 Balken, bei drehen der ODU auf ca. 45-90° Abweichung sind es auf einmal doch 4/5. Geschwindigkeit passt zwar laut Tests aktuell (mit ODU+IDU und ohne Decks) allerdings würde ich den Empfang wenn möglich für eventuell schwierigere Wetterlagen doch gerne noch etwas optimieren (bin hier einfach Perfektionist und von 5/5 ausgegangen, bei diesen Bedingungen, wenn der gedachte Sendemast tatsächlich der korrekte sein sollte) - falls ich einfach den falschen Sendemasten erwischt haben sollte werde ich definitiv den Montageort dementsprechend erneut anpassen, um möglichst optimale Bedingungen bieten zu können.
+   </p>
+   <p>
+   </p>
+   <p>
+    Edit: hier noch 2 Bilder - eines aus dem Mail verkehr zur Anfrage des nächsten 5G Magenta Mastens und eines vom angehängten PDF mit einer Markierung auf der Karte
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/IMG_20221128_232726.jpg.fb064fdb902f7f7193679075305d11ba.jpg">
+     <img alt="IMG_20221128_232726.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="4289" src="images/uploads/IMG_20221128_232726.jpg.fb064fdb902f7f7193679075305d11ba.jpg"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/IMG_20221128_232218.jpg.8b88c7430d35e24db7777286304e40c3.jpg">
+     <img alt="IMG_20221128_232218.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="4290" src="images/uploads/IMG_20221128_232218.thumb.jpg.c6ba9bdd253cec420c5a8104fccc7ecb.jpg"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2022-11-28T22:33:29Z" title="2022-11-28 22:33 ">
+      November 28, 2022
+     </time>
+     von atzlinger_s
+    </strong>
+    <br/>
+    Bilder angefügt
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-11-29T13:11:49Z" title="2022-11-29 13:11 ">
+   November 29, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/95048-atzlinger_s/?do=hovercard" data-mentionid="95048" href="https://community.magenta.at/profile/95048-atzlinger_s/" rel="">
+      @atzlinger_s
+     </a>
+     <br/>
+     So wie es aussieht handelt es sich in deinem Fall um 5G Band n1 2100MHZ (DSS) oder n28 700 MHz.
+    </span>
+   </p>
+   <p>
+    <span>
+     (Breitbandatlas Positionsangabe
+    </span>
+    <span>
+    </span>
+    100mN27813E46334
+    <span>
+    </span>
+    , dort steht
+    <span>
+     der Sendemast, nicht in der CSV-Datei, welche
+     <a href="https://www.magenta.at/unternehmen/rechtliches/versorgungsdaten" rel="external nofollow">
+      hier
+     </a>
+     zu finden ist, vorhanden)
+    </span>
+   </p>
+   <p>
+    <span>
+     Laut
+     <a href="https://www.cellmapper.net/map?MCC=232&amp;MNC=3&amp;type=LTE&amp;latitude=48.06310831891318&amp;longitude=14.201962291221891&amp;zoom=14.700720624563637&amp;showTowers=true&amp;showIcons=false&amp;showTowerLabels=true&amp;clusterEnabled=false&amp;tilesEnabled=true&amp;showOrphans=false&amp;showNoFrequencyOnly=false&amp;showFrequencyOnly=false&amp;showBandwidthOnly=false&amp;DateFilterType=Last&amp;showHex=false&amp;showVerifiedOnly=false&amp;showUnverifiedOnly=false&amp;showLTECAOnly=false&amp;showENDCOnly=false&amp;showBand=0&amp;showSectorColours=true&amp;mapType=roadmap&amp;darkMode=false" rel="external nofollow">
+      Cellmapper
+     </a>
+     Daten sendet dieser Sendemast wohl die 4G Bänder 20, 8, 3 &amp; 1.
+     <br>
+      <br/>
+      <br/>
+      Bezüglich das Themas Heimnetzwerk konfigurieren:
+      <br/>
+      Ich konnte in meinen Tests keine Performance-Probleme feststellen in Kombination mit dem Bridgemode der Outdoor-Einheit.
+      <br/>
+      Du hast also eine Fritz!Box + ein Deco System bisher im Einsatz gehabt?
+      <br/>
+      Die Fritz!Box hat auf jeden Fall mehr Funktionen als die Indoor-Einheit des Outdoor-Router.
+      <br/>
+      Wenn du sowieso irgendein Gerät, welches als Router arbeiten kann (Fritz!Box oder ein Deco System), an die Indoor-Einheit anschließen möchtest, würde ich empfehlen die Indoor-Einheit weg zu lassen. Denn dann hast du weniger Geräte, welche eine Fehlerquelle darstellen können, und geringeren Stromverbrauch.
+     </br>
+    </span>
+    <br/>
+    <br/>
+    LG NTM
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2022-11-29T21:49:35Z" title="2022-11-29 21:49 ">
+      November 29, 2022
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   atzlinger_s
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-11-29T17:42:52Z" title="2022-11-29 17:42 ">
+   November 29, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49902" data-ipsquote-contentid="8212" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1669727509" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 4 Stunden schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hey
+      <span>
+       <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/95048-atzlinger_s/?do=hovercard" data-mentionid="95048" href="https://community.magenta.at/profile/95048-atzlinger_s/" rel="">
+        @atzlinger_s
+       </a>
+       <br>
+        So wie es aussieht handelt es sich in deinem Fall um 5G Band n1 2100MHZ (DSS) oder n28 700 MHz.
+       </br>
+      </span>
+     </p>
+     <p>
+      <span>
+       (Breitbandatlas Positionsangabe
+      </span>
+      100mN27812E46330, dort steht
+      <span>
+       der Sendemast, nicht in der CSV-Datei, welche
+       <a href="https://www.magenta.at/unternehmen/rechtliches/versorgungsdaten" rel="external nofollow">
+        hier
+       </a>
+       zu finden ist, vorhanden)
+      </span>
+     </p>
+     <p>
+      <span>
+       Laut
+       <a href="https://www.cellmapper.net/map?MCC=232&amp;MNC=3&amp;type=LTE&amp;latitude=48.06310831891318&amp;longitude=14.201962291221891&amp;zoom=14.700720624563637&amp;showTowers=true&amp;showIcons=false&amp;showTowerLabels=true&amp;clusterEnabled=false&amp;tilesEnabled=true&amp;showOrphans=false&amp;showNoFrequencyOnly=false&amp;showFrequencyOnly=false&amp;showBandwidthOnly=false&amp;DateFilterType=Last&amp;showHex=false&amp;showVerifiedOnly=false&amp;showUnverifiedOnly=false&amp;showLTECAOnly=false&amp;showENDCOnly=false&amp;showBand=0&amp;showSectorColours=true&amp;mapType=roadmap&amp;darkMode=false" rel="external nofollow">
+        Cellmapper
+       </a>
+       Daten sendet dieser Sendemast wohl die 4G Bänder 20, 8, 3 &amp; 1.
+       <br/>
+       <br/>
+       <br/>
+       Bezüglich das Themas Heimnetzwerk konfigurieren:
+       <br/>
+       Ich konnte in meinen Tests keine Performance-Probleme feststellen in Kombination mit dem Bridgemode der Outdoor-Einheit.
+       <br/>
+       Du hast also eine Fritz!Box + ein Deco System bisher im Einsatz gehabt?
+       <br/>
+       Die Fritz!Box hat auf jeden Fall mehr Funktionen als die Indoor-Einheit des Outdoor-Router.
+       <br/>
+       Wenn du sowieso irgendein Gerät, welches als Router arbeiten kann (Fritz!Box oder ein Deco System), an die Indoor-Einheit anschließen möchtest, würde ich empfehlen die Indoor-Einheit weg zu lassen. Denn dann hast du weniger Geräte, welche eine Fehlerquelle darstellen können, und geringeren Stromverbrauch.
+      </span>
+      <br/>
+      <br/>
+      LG NTM
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo,
+   </p>
+   <p>
+    danke für die Tips, werde Mal den Betrieb mit den Decos als Router testen (wie so bereits meintest eventuell gut, nicht unnötig viele Geräte dazwischen zu schalten) und falls nötig eine Fritzbox mit WAN Anschluss statt der ODU dazwischen und auf Accesspoints Modus wechseln.
+   </p>
+   <p>
+    Bei deiner Anmerkung zwecks Sendemasten blicke ich aktuell gar nicht durch - bei Eingabe von 100mN27812E46330 auf Breitbandatlas scheint gar nichts zu passieren - also liege ich Recht in meiner Annahme, dass der markierte Sendemast der falsche ist? Kannst du mir eventuell in etwa die Position für den richtigen Masten (eventuell in einem anderen Format oder für eine andere Seite) übersetzen, damit ich die Position etwas besser einschätzen kann? Ist wirklich nicht einfach, das als Laie in etwa abschätzen zu können.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Stefan
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-11-29T21:55:31Z" title="2022-11-29 21:55 ">
+   November 29, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49911" data-ipsquote-contentid="8212" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1669743772" data-ipsquote-userid="95048" data-ipsquote-username="atzlinger_s">
+    <div class="ipsQuote_citation">
+     vor 4 Stunden schrieb atzlinger_s:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Bei deiner Anmerkung zwecks Sendemasten blicke ich aktuell gar nicht durch - bei Eingabe von 100mN27812E46330 auf Breitbandatlas scheint gar nichts zu passieren - also liege ich Recht in meiner Annahme, dass der markierte Sendemast der falsche ist? Kannst du mir eventuell in etwa die Position für den richtigen Masten (eventuell in einem anderen Format oder für eine andere Seite) übersetzen, damit ich die Position etwas besser einschätzen kann? Ist wirklich nicht einfach, das als Laie in etwa abschätzen
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Es ist schon der richtige Sendemast am Dach der (Greimühle Brot-Ecke Linzer Str. 2, 4532 Rohr im Kremstal).
+    <br>
+     Die Positionsangabe ist hier im Breitbandatlas zu finden:
+     <br/>
+     <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_11/image.png.fe717d534e0caef2e1069f4ef723592c.png" rel="external nofollow">
+      <img alt="image.thumb.png.c0a2127b40762496ed297dbcd9fb19d8.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4307" src="images/uploads/image.thumb.png.c0a2127b40762496ed297dbcd9fb19d8.png" style="width:300px;height:auto;"/>
+     </a>
+    </br>
+   </p>
+   <p>
+    Nach der Position kann im Breitbandatlas aber nicht gesucht werden.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-11-29T22:06:17Z" title="2022-11-29 22:06 ">
+   November 29, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe mir die Gegend nun mit Google Streetview etwas angesehen.
+   </p>
+   <p>
+    Ich hoffe die Outdoor-Einheit ist niedriger angebracht als die Antennen der Sendeanlage.
+   </p>
+   <p>
+    Denn auch wenn es nicht so aussieht, senden Mobilfunk-Antennen das Signal leicht nach unten gerichtet aus und nicht gerade Weg.
+    <br>
+     Wie stark genau hängt vom Antennen-Modell ab
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   atzlinger_s
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-11-30T10:45:50Z" title="2022-11-30 10:45 ">
+   November 30, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49916" data-ipsquote-contentid="8212" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1669759577" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 12 Stunden schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich habe mir die Gegend nun mit Google Streetview etwas angesehen.
+     </p>
+     <p>
+      Ich hoffe die Outdoor-Einheit ist niedriger angebracht als die Antennen der Sendeanlage.
+     </p>
+     <p>
+      Denn auch wenn es nicht so aussieht, senden Mobilfunk-Antennen das Signal leicht nach unten gerichtet aus und nicht gerade Weg.
+      <br>
+       Wie stark genau hängt vom Antennen-Modell ab
+      </br>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Das könnte tatsächlich knapp werden, laut Topografischen Karte ist die Position des Sendemasten bereits ca. 3m niedriger als die der ODU. Zusätzlich denke ich, dass unser Haus (inkl. Dach, auf dem die ODU montiert wurde) nochmal etwas höher ist als das Haus, auf dem der Sendemast montiert ist. Wenn ich davon ausgehe, dass die Angaben korrekt sind und der Mast selbst in etwa 1-2m zusätzlich zum Gebäude ausmachen könnte, sollte die Höhe tatsächlich etwas unterhalb der ODU liegen. Ist allerdings schwer zu sagen. Bin mir allerdings nicht sicher, ob das tatsächlich einen besseren Empfangswert bei einer Abweichung von 45°+ erklären könnte, werde eventuell noch versuchen, am Aktuellen Montageort soweit es geht nach unten zu kommen - könnte nochmal 0,5 - 1m bringen. Danach bleibt ohnehin nur noch Feinjustage mit Millimeterweise anpassen der ODU oder den Aufstellort der ODU zu überdenken, um noch tiefer zu kommen, wobei das natürlich doch erheblich aufwendiger werden würde und eventuell dann nicht mehr sinnvoll wäre, da die Bandbreite auch mit 3-4 Balken tatsächlich möglich zu sein scheint. Schade, dass es ohne Umstände bei der ODU auch nicht so leicht ist brauchbare Empfangswerte aus zu lesen - eine Ansicht, in der man nicht permanent auf neu ausgegebene Dateien drücken muss, währenddem man am Hausdach das Gerät justiert, wäre wirklich hilfreich
+    <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+   </p>
+   <p>
+    Auch die Information, dass die ODU tatsächlich niedriger als der Sendemasten Montiert werden sollte wäre in der Anleitung nicht schlecht gewesen, um vorab bereits eventuelle Möglichkeiten zu erwägen bzw. aus zu schließen.
+   </p>
+   <p>
+    Danke dir vielmals für die Infos, jetzt kann ich hoffentlich trotzdem mein Setup dahingehen noch etwas optimieren und hoffe dadurch auf nochmals etwas stabilere Werte zu kommen.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Stefan
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   atzlinger_s
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-12-03T13:40:48Z" title="2022-12-03 13:40 ">
+   Dezember 3, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49902" data-ipsquote-contentid="8212" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1669727509" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 29.11.2022 um 14:11 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hey
+      <span>
+       <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/95048-atzlinger_s/?do=hovercard" data-mentionid="95048" href="https://community.magenta.at/profile/95048-atzlinger_s/" rel="">
+        @atzlinger_s
+       </a>
+       <br>
+        So wie es aussieht handelt es sich in deinem Fall um 5G Band n1 2100MHZ (DSS) oder n28 700 MHz.
+       </br>
+      </span>
+     </p>
+     <p>
+      <span>
+       (Breitbandatlas Positionsangabe
+      </span>
+      <span>
+      </span>
+      100mN27813E46334
+      <span>
+      </span>
+      , dort steht
+      <span>
+       der Sendemast, nicht in der CSV-Datei, welche
+       <a href="https://www.magenta.at/unternehmen/rechtliches/versorgungsdaten" rel="external nofollow">
+        hier
+       </a>
+       zu finden ist, vorhanden)
+      </span>
+     </p>
+     <p>
+      <span>
+       Laut
+       <a href="https://www.cellmapper.net/map?MCC=232&amp;MNC=3&amp;type=LTE&amp;latitude=48.06310831891318&amp;longitude=14.201962291221891&amp;zoom=14.700720624563637&amp;showTowers=true&amp;showIcons=false&amp;showTowerLabels=true&amp;clusterEnabled=false&amp;tilesEnabled=true&amp;showOrphans=false&amp;showNoFrequencyOnly=false&amp;showFrequencyOnly=false&amp;showBandwidthOnly=false&amp;DateFilterType=Last&amp;showHex=false&amp;showVerifiedOnly=false&amp;showUnverifiedOnly=false&amp;showLTECAOnly=false&amp;showENDCOnly=false&amp;showBand=0&amp;showSectorColours=true&amp;mapType=roadmap&amp;darkMode=false" rel="external nofollow">
+        Cellmapper
+       </a>
+       Daten sendet dieser Sendemast wohl die 4G Bänder 20, 8, 3 &amp; 1.
+       <br/>
+       <br/>
+       <br/>
+       Bezüglich das Themas Heimnetzwerk konfigurieren:
+       <br/>
+       Ich konnte in meinen Tests keine Performance-Probleme feststellen in Kombination mit dem Bridgemode der Outdoor-Einheit.
+       <br/>
+       Du hast also eine Fritz!Box + ein Deco System bisher im Einsatz gehabt?
+       <br/>
+       Die Fritz!Box hat auf jeden Fall mehr Funktionen als die Indoor-Einheit des Outdoor-Router.
+       <br/>
+       Wenn du sowieso irgendein Gerät, welches als Router arbeiten kann (Fritz!Box oder ein Deco System), an die Indoor-Einheit anschließen möchtest, würde ich empfehlen die Indoor-Einheit weg zu lassen. Denn dann hast du weniger Geräte, welche eine Fehlerquelle darstellen können, und geringeren Stromverbrauch.
+      </span>
+      <br/>
+      <br/>
+      LG NTM
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo,
+   </p>
+   <p>
+    hätte hier nochmal eine andere Frage, da du dich bezüglich Bridgemode, etc. Recht gut aus zu kennen scheinst. Kannst du mir sagen, ob und wie die Konfigurationsseite der ODU erreichbar ist, sobald der Bridgemode aktiviert wurde und das Routing von einem direkt an die ODU angeschlossenem Router übernommen wird? Außerdem wüsste ich gerne, ob bei aktiviertem Bridgemode automatisch DHCP, DMZ, Firewall, etc. Der ODU deaktiviert werden - sollte nach meinem Verständnis so sein?! Habe an der ODU auch noch folgende Option gefunden, diese scheint leider nirgends beschrieben zu sein, bzw. auch bei keinem der Lösungsansätze wegen Doppel NAT eine Rolle zu spielen - wäre das deaktivieren dieser Option nicht eine Alternative zum Bridgemode? Oder sollte diese bei Bridgemode ohnehin deaktiviert werden / wird ohnehin deaktiviert?
+   </p>
+   <p>
+   </p>
+   <p>
+    Versuche immer noch die beste Lösung ohne Doppel NAT zu finden, wobei ich aktuell zu der Lösung mit ODU &gt; Fritzbox &gt; Switch &gt; Decos als AP tendiere, da die Fritzbox doch etwas mehr Optionen bei der Einstellung bietet, würde diese dann auch als Standardgateway für alles dahinter verwenden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hoffe du kannst mir hier noch ein paar nützliche Tipps geben bzw. die letzten paar offenen Fragen beantworten, damit ich bei der Umstellung meines aktuellen Anschlusses keine bösen Überraschungen erlebe und das komplette System lahm lege
+    <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Stefan
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/IMG_20221203_141959.jpg.9976c7fd07604b6a0e858936f5b3c61a.jpg">
+     <img alt="IMG_20221203_141959.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="4316" src="images/uploads/IMG_20221203_141959.thumb.jpg.420bc9833a415734ef369c74a6a3ce16.jpg"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-12-03T15:08:37Z" title="2022-12-03 15:08 ">
+   Dezember 3, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49967" data-ipsquote-contentid="8212" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1670074848" data-ipsquote-userid="95048" data-ipsquote-username="atzlinger_s">
+    <div class="ipsQuote_citation">
+     vor einer Stunde schrieb atzlinger_s:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      hätte hier nochmal eine andere Frage, da du dich bezüglich Bridgemode, etc. Recht gut aus zu kennen scheinst. Kannst du mir sagen, ob und wie die Konfigurationsseite der ODU erreichbar ist, sobald der Bridgemode aktiviert wurde und das Routing von einem direkt an die ODU angeschlossenem Router übernommen wird?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Genauso wie ohne im standard Router-Modus auch mit der https://192.168.0.1 (außer du hättest eine andere IP konfiguriert).
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49967" data-ipsquote-contentid="8212" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1670074848" data-ipsquote-userid="95048" data-ipsquote-username="atzlinger_s">
+    <div class="ipsQuote_citation">
+     vor einer Stunde schrieb atzlinger_s:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Außerdem wüsste ich gerne, ob bei aktiviertem Bridgemode automatisch DHCP, DMZ, Firewall, etc. Der ODU deaktiviert werden - sollte nach meinem Verständnis so sein?! Habe an der ODU auch noch folgende Option gefunden, diese scheint leider nirgends beschrieben zu sein, bzw. auch bei keinem der Lösungsansätze wegen Doppel NAT eine Rolle zu spielen - wäre das deaktivieren dieser Option nicht eine Alternative zum Bridgemode? Oder sollte diese bei Bridgemode ohnehin deaktiviert werden / wird ohnehin deaktiviert?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Eine alternative zum Bridge Modus gibt es nicht, wenn die Doppel-NAT umgangen werden soll. Im Bridge-Modus arbeitet die Outdoor-Einheit dann nur als Modem statt Modem + Router. Die IP-Adresse, welche dem Anschluss zugewiesen wird, wird dann an den Router dahinter weitergereicht. Damit würden alle anderen Optionen umgangen werden. Andere Geräte haben den Bridge-Mode in der Weboberfläche schöner implementiert, denn bei der Outdoor-Einheit werden die Optionen, welche nun keine Funktion haben, nicht ausgeblendet.
+   </p>
+   <p>
+   </p>
+   <p>
+    Übrigens hier noch die Zusammenfassung zur Aktivierung des Bridge Modus:
+   </p>
+   <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed2716587050" scrolling="no" src="7370-magenta-5g-box-outdoor-xbox-nat-typ-strikt.html&amp;comment=46326&amp;embedComment=46326&amp;embedDo=findComment" style="height:304px;max-width:502px;">
+   </iframe>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   atzlinger_s
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-12-10T01:52:03Z" title="2022-12-10 01:52 ">
+   Dezember 10, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49968" data-ipsquote-contentid="8212" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1670080117" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 3.12.2022 um 16:08 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Genauso wie ohne im standard Router-Modus auch mit der https://192.168.0.1 (außer du hättest eine andere IP konfiguriert).
+     </p>
+     <p>
+      Eine alternative zum Bridge Modus gibt es nicht, wenn die Doppel-NAT umgangen werden soll. Im Bridge-Modus arbeitet die Outdoor-Einheit dann nur als Modem statt Modem + Router. Die IP-Adresse, welche dem Anschluss zugewiesen wird, wird dann an den Router dahinter weitergereicht. Damit würden alle anderen Optionen umgangen werden. Andere Geräte haben den Bridge-Mode in der Weboberfläche schöner implementiert, denn bei der Outdoor-Einheit werden die Optionen, welche nun keine Funktion haben, nicht ausgeblendet.
+     </p>
+     <p>
+     </p>
+     <p>
+      Übrigens hier noch die Zusammenfassung zur Aktivierung des Bridge Modus:
+     </p>
+     <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed5301812501" scrolling="no" src="7370-magenta-5g-box-outdoor-xbox-nat-typ-strikt.html&amp;comment=46326&amp;embedComment=46326&amp;embedDo=findComment" style="height:383px;max-width:502px;">
+     </iframe>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Danke für die zahlreichen Tips, die ich von dir in verschiedenen Threads bereits finden könnte, leider scheine ich das Problem mit dem Bridgemode an der ODU + Fritzbox 7582 mit Internet über WAN aktuell immer noch nicht stabil konfiguriert zu bekommen. Werde weiter verschiedene Optionen testen, falls du bereits weitere Infos zum Bridgemode hast, welche mir helfen könnten wäre ich ziemlich dankbar. Vielversprechender sieht hier aktuell der Routermodus + DMZ auf der ODU aus, einziges Problem ist aktuell, dass ich nicht sicher bin, ob die DSL Mac Adresse der Fritzbox tatsächlich, wie ich vermute gleich der WAN Mac Adresse ist, könnte hierzu leider nirgends Infos finden. Alternativ wäre es natürlich noch möglich, den DHCP der ODU um zu stellen, sodass nur eine IP im Bereich liegt und der WAN der Fritzbox somit fix über eine interne IP in der DMZ der ODU eingefügt werden kann. Gibt es hier nennenswerte Unterschiede (Latenz, NAT, etc...) Im Vergleich von Bridgemode zu Routermodus+ DMZ? Hoffe, dass ich die nächsten Tage den Bridgemode eventuell noch hinbekomme, eventuell muss ich doch, trotz anderem POE-Injektor die Stromzufuhr nach dem Neustart durch die Umstellung nochmal länger trennen? Soll bei solchen Umstellungen eigentlich prinzipiell jedesmal zwischen original und anderem POE-Injektor gewechselt werden oder reicht die Verwendung eines alternativen Injektors zur Verkürzung der Wartezeit? Habe das leider noch nicht so Recht durchschaut.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Stefan
+   </p>
+   <p>
+   </p>
+   <p>
+    EDIT: hab's nach dem gefühlt hundertsten Versuch mit langem ausstrecken und POE Wechsel geschafft, der Bridgemode läuft scheinbar wie geplant.
+   </p>
+   <p>
+    Seltsam nur, dass Ooakla ewig braucht einen Server aus zu suchen - Speedtests sind trotz schlechtem Wetter dann aber zufriedenstellend auf einem Niveau, dass ich tatsächlich nicht erwartet hatte, nach all den Problemen bei der Ausrichtung, wo ich es nach wie vor nicht schaffe, die gewünschten Werte zu erreichen und bessere Werte bei ca30-45° zum Sendemast erreiche.
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2022-12-10T16:36:40Z" title="2022-12-10 16:36 ">
+      Dezember 10, 2022
+     </time>
+     von atzlinger_s
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2022-12-10T22:48:59Z" title="2022-12-10 22:48 ">
+   Dezember 10, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja die Outdoor-Einheit muss teilweise (aber nicht immer) recht lange ausgesteckt werden bis der Bridge Mode funktioniert.
+   </p>
+   <p>
+    Wenn du über eine Signal-Reflektion bessere Datenraten bekommst als mit direktem Blickkontakt wäre dies eigentlich nicht so schlimm.
+   </p>
+   <p>
+    Was wären denn die gewünschten Werte, bzw. welchen Tarif hast du?
+   </p>
+   <p>
+    Versuche auch mal einen alternativen DNS Server auf der Fritz!Box einzutragen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   aoswald
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-01-02T18:02:57Z" title="2023-01-02 18:02 ">
+   Januar 2, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+    betreibe auch die ODU im Bridge Modus mit dem business APN und einem Deco Mesh System im Router Modus dahinter. Es funktioniert soweit alles bis auf das, daß ich von aussen nicht mehr auf meine internen Server via dyndns zugreifen kann. Weder auf die Deco Unit noch auf das NAS. Hab schon alles erdenkliche probiert.
+   </p>
+   <p>
+    Sehe ich irgendwo, außer daran, das die IP and die Deco weitergegeben wird, daß die ODU wirklich im Bridge Modus läuft ?
+   </p>
+   <p>
+    danke
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   atzlinger_s
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-01-02T19:18:43Z" title="2023-01-02 19:18 ">
+   Januar 2, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Habe mittlerweile die Fritzbox erfolgreich im Bridgemodus, Zugriff von aussen über myfritz direkt auf die Fritzbox ist kein Problem, somit sollte, auch das gleiche mit den Deco im Routermodus und dem Server möglich sein. Zeigt dein DynDNS die korrekte externe IP? Hast du die korrekten Ports an den Decos zur Weiterleitung an die korrekte Internet IP des Servers eingerichtet? Wenn die korrekte externe IP am Deco anliegt, sollte das so passen. Im Zweifelsfall die ODU Mal ein paar Minuten vom Strom nehmen und nochmal testen. Bin mir nicht sicher, ob im Bridgemode die Firewall automatisch deaktiviert wird - eventuell versuchen diese an der ODU manuell zu deaktivieren. Hast du den Bridgemode über die Entwickleroptionen aktiviert oder als zweites Profil angelegt? Kannst du eventuell genauere Infos über deine aktuelle Topologie geben? ODU(Bridgemode) - Main Deco (WAN) nehme ich mal an. Von hier aus Switches, Client Decos? Wo hängt der Server genau? Welche IP hat dieser intern? Welche Ports sind freigegeben? Welche Decos hast du überhaupt im Einsatz? Sind alle Decos das gleiche Modell? Falls die Modelle gemischt sind - welches Modell ist aktuell als Main Deco gesetzt? Nutzt du Kabel, Wireless oder Wireless+Powerline Backhaul (falls du Deco P7 oder P9 im Einsatz hast)?
+   </p>
+   <p>
+   </p>
+   <p>
+    Zu den Signaloptimierungs Versuchen bin ich leider bei mir noch nicht gekommen, werde auf jeden Fall hier die Ergebnisse Posten, sobald ich näheres weiß - die Technikhotline meinte aber, dass der Korrekte Masten ca. 3km Richtung Süden sei, was mir eigentlich sehr weit vorkommt, aber von der Ausrichtung schon eher Sinn machen würde, leider wären das natürlich nicht mehr ganz so optimale Bedingungen, wie Ursprünglich vermutet, die Geschwindigkeit scheint soweit allerdings ganz gut und halbwegs stabil (genaue Werte folgen) trotz 3-4/5 Strichen Empfang (je nach Wetter) - genaue Werte für RSRP, RSRQ, Signal Stärke folgen ebenfalls, sobald ich dazu komme, da ich nach wie vor gerne für eventuelle worst-case Wetterlagen optimieren möchte, um sicher zu gehen, dass die Geschwindigkeit möglichst wenig durch äussere Faktoren negativ beeinflusst werden wird.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Stefan
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   aoswald
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-01-04T21:15:35Z" title="2023-01-04 21:15 ">
+   Januar 4, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="50469" data-ipsquote-contentid="8212" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1672687123" data-ipsquote-userid="95048" data-ipsquote-username="atzlinger_s">
+    <div class="ipsQuote_citation">
+     Am 2.1.2023 um 20:18 schrieb atzlinger_s:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Habe mittlerweile die Fritzbox erfolgreich im Bridgemodus, Zugriff von aussen über myfritz direkt auf die Fritzbox ist kein Problem, somit sollte, auch das gleiche mit den Deco im Routermodus und dem Server möglich sein. Zeigt dein DynDNS die korrekte externe IP? Hast du die korrekten Ports an den Decos zur Weiterleitung an die korrekte Internet IP des Servers eingerichtet? Wenn die korrekte externe IP am Deco anliegt, sollte das so passen. Im Zweifelsfall die ODU Mal ein paar Minuten vom Strom nehmen und nochmal testen. Bin mir nicht sicher, ob im Bridgemode die Firewall automatisch deaktiviert wird - eventuell versuchen diese an der ODU manuell zu deaktivieren. Hast du den Bridgemode über die Entwickleroptionen aktiviert oder als zweites Profil angelegt? Kannst du eventuell genauere Infos über deine aktuelle Topologie geben? ODU(Bridgemode) - Main Deco (WAN) nehme ich mal an. Von hier aus Switches, Client Decos? Wo hängt der Server genau? Welche IP hat dieser intern? Welche Ports sind freigegeben? Welche Decos hast du überhaupt im Einsatz? Sind alle Decos das gleiche Modell? Falls die Modelle gemischt sind - welches Modell ist aktuell als Main Deco gesetzt? Nutzt du Kabel, Wireless oder Wireless+Powerline Backhaul (falls du Deco P7 oder P9 im Einsatz hast)?
+     </p>
+     <p>
+     </p>
+     <p>
+      Zu den Signaloptimierungs Versuchen bin ich leider bei mir noch nicht gekommen, werde auf jeden Fall hier die Ergebnisse Posten, sobald ich näheres weiß - die Technikhotline meinte aber, dass der Korrekte Masten ca. 3km Richtung Süden sei, was mir eigentlich sehr weit vorkommt, aber von der Ausrichtung schon eher Sinn machen würde, leider wären das natürlich nicht mehr ganz so optimale Bedingungen, wie Ursprünglich vermutet, die Geschwindigkeit scheint soweit allerdings ganz gut und halbwegs stabil (genaue Werte folgen) trotz 3-4/5 Strichen Empfang (je nach Wetter) - genaue Werte für RSRP, RSRQ, Signal Stärke folgen ebenfalls, sobald ich dazu komme, da ich nach wie vor gerne für eventuelle worst-case Wetterlagen optimieren möchte, um sicher zu gehen, dass die Geschwindigkeit möglichst wenig durch äussere Faktoren negativ beeinflusst werden wird.
+     </p>
+     <p>
+     </p>
+     <p>
+      LG Stefan
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo -
+   </p>
+   <p>
+    mittlerweile funktioniert es durch eine Änderung die für mich zwar keinen Sinn ergibt, aber mehrmals eindeutig nachvollzogen werden konnte.
+   </p>
+   <p>
+    Zwar habe ich beim APN die Authentication von Auto auf PAP umgestellt und nun sind die Adressen problemlos von überall erreichbar
+   </p>
+   <p>
+    Ein letztes Problem habe ich allerdings noch.
+   </p>
+   <p>
+    Ich kann auf die Weboberfläche der ODU nicht mehr zugreifen, sobald diese am Deco hängt
+   </p>
+   <p>
+    Zu meinem Environment
+   </p>
+   <p>
+    Die ODU, 3 Deco Mesh M5 im Router modus wobei die ODU direkt am Port der ersten hängt und am zweiten Port dann das Kabel das zum Switch für die restliche Verteilung geht. Deco 2 via Ethernet Backhaul und Deco 3 via WLAN
+   </p>
+   <p>
+    Den Bridgemode auf der ODU habe ich mittels Entwicklermodus im ersten aktiven Profil geändert
+   </p>
+   <p>
+    Firewall auf der ODU hab ich deaktiviert
+   </p>
+   <p>
+    DHCP auf der ODU ist beschränkt auf 2 Adressen
+   </p>
+   <p>
+    ODU hat unterschiedliches Subnet von den Decos (192.168.1.,192.168.0.)
+   </p>
+   <p>
+    Ich forwarde nur 80 und 443 auf das NAS und der Rest wird dort über Reverseproxys gesteuert
+   </p>
+   <p>
+    Die VLAN Option habe ich nicht aktiviert. Das hatte ich kurz versucht, nur bekam ich dann keine IP mehr auf dem Deco
+   </p>
+   <p>
+    Das Problem liegt aber definitiv an den Decos - hab testweise einen alten TP Link Router mit OpenWRT dazwischen gehängt und da funktioniert er Zugriff auf alle Interfaces ohne Probleme.
+   </p>
+   <p>
+    Vielleicht hat noch jemand einen Tipp was ich an den Decos ändern kann
+   </p>
+   <p>
+    Danke
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   atzlinger_s
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-01-04T22:44:49Z" title="2023-01-04 22:44 ">
+   Januar 4, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="50527" data-ipsquote-contentid="8212" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1672866935" data-ipsquote-userid="95449" data-ipsquote-username="aoswald">
+    <div class="ipsQuote_citation">
+     vor 14 Stunden schrieb aoswald:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hallo -
+     </p>
+     <p>
+      mittlerweile funktioniert es durch eine Änderung die für mich zwar keinen Sinn ergibt, aber mehrmals eindeutig nachvollzogen werden konnte.
+     </p>
+     <p>
+      Zwar habe ich beim APN die Authentication von Auto auf PAP umgestellt und nun sind die Adressen problemlos von überall erreichbar
+     </p>
+     <p>
+      Ein letztes Problem habe ich allerdings noch.
+     </p>
+     <p>
+      Ich kann auf die Weboberfläche der ODU nicht mehr zugreifen, sobald diese am Deco hängt
+     </p>
+     <p>
+      Zu meinem Environment
+     </p>
+     <p>
+      Die ODU, 3 Deco Mesh M5 im Router modus wobei die ODU direkt am Port der ersten hängt und am zweiten Port dann das Kabel das zum Switch für die restliche Verteilung geht. Deco 2 via Ethernet Backhaul und Deco 3 via WLAN
+     </p>
+     <p>
+      Den Bridgemode auf der ODU habe ich mittels Entwicklermodus im ersten aktiven Profil geändert
+     </p>
+     <p>
+      Firewall auf der ODU hab ich deaktiviert
+     </p>
+     <p>
+      DHCP auf der ODU ist beschränkt auf 2 Adressen
+     </p>
+     <p>
+      ODU hat unterschiedliches Subnet von den Decos (192.168.1.,192.168.0.)
+     </p>
+     <p>
+      Ich forwarde nur 80 und 443 auf das NAS und der Rest wird dort über Reverseproxys gesteuert
+     </p>
+     <p>
+      Die VLAN Option habe ich nicht aktiviert. Das hatte ich kurz versucht, nur bekam ich dann keine IP mehr auf dem Deco
+     </p>
+     <p>
+      Das Problem liegt aber definitiv an den Decos - hab testweise einen alten TP Link Router mit OpenWRT dazwischen gehängt und da funktioniert er Zugriff auf alle Interfaces ohne Probleme.
+     </p>
+     <p>
+      Vielleicht hat noch jemand einen Tipp was ich an den Decos ändern kann
+     </p>
+     <p>
+      Danke
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Könntest du eventuell Mal Testweise Port 80 wieder aus der forwarding Liste entfernen und versuchen, ob die ODU wieder über die Weboberfläche erreichbar ist? Hast du an den Decos ein Standardgateway gesetzt? Wäre ebenfalls einen Versuch wert, das Standardgateway auf die IP der ODU zu setzen. Nach meinen Erfahrungen mit der ODU, IDU und auch in der Vergangenheit mit einigen Decos ist leider bei diesen Geräten nicht immer jede Einstellung und deren Auswirkungen zu 100% logisch und nachvollziehbar
+    <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+    Das verändern von einzelnen Parametern, die eigentlich keine Auswirkung auf ein anderes Gerät haben dürften verursachen oftmals trotzdem Probleme, die auf den ersten Blick gar nicht direkt in Zusammenhang stehen können/sollen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Im Gegensatz zu dir habe ich die Decos im AP Mode hinter einer Fritzbox als Router, somit kann ich leider aktuell noch nichts genaues zum Verhalten der Decos direkt an der ODU sagen. Könnte mir allerdings vorstellen, dass änderungen beim Portforwarding bzw. Das setzen des Standardgateway für das LAN durchaus Auswirkungen haben könnte.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Stefan
+   </p>
+   <p>
+   </p>
+   <p>
+    *EDIT: meinte eigentlich Port 443 Testweise rausnehmen, da du ja über "httpS" auf die ODU zugreifen möchtest.
+   </p>
+   <p>
+    *EDIT2: habe heute zufällig von ähnlichen Problemen bei Fritzboxen in Zusammenhang mit Portforwarding von Port 443 gelesen, wo externe Zugriffe ohne Probleme möglich waren, interne allerdings nicht mehr - hast du am DECO zufällig IPv6 aktiviert, falls ja Versuch mal die Option zu deaktivieren, scheint in dem erwähnten Threat das Problem gelöst zu haben - alternativ hab es noch positive Berichte mit DNS Rebindschutz - wobei ich fast sicher bin, dass es diese Option so bei den Decos nicht gibt - du könntest aber versuchen die primary/secondary DNS Einstellungen bei für WAN bzw. LAN an zu passen - könnte durchaus helfen. Genaue Vorschläge habe ich hier aktuell leider nicht zur Hand, da ich vorher mein Setup umstellen müsste - falls du so aber tatsächlich zu keiner Lösung kommen solltest, kann ich das eventuell in den nächsten Wochen durchaus Mal testen, sobald ich irgendwie die Zeit finde - allerdings habe ich vorher leider noch einige andere offenen Punkte zu erledigen und kann das nicht so schnell zwischendurch erledigen.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2023-01-05T12:03:18Z" title="2023-01-05 12:03 ">
+      Januar 5, 2023
+     </time>
+     von atzlinger_s
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   aoswald
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-01-07T22:15:00Z" title="2023-01-07 22:15 ">
+   Januar 7, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo -
+   </p>
+   <p>
+    vielen Dank - 443 rausnehmen bringt leider nichts - dann geht von draußen auch absolut nichts mehr.
+   </p>
+   <p>
+    IPV6 habe ich sowieso deaktiviert.
+   </p>
+   <p>
+    DNS verwende ich von Google bzw von Cloudflare
+   </p>
+   <p>
+    Ich habe eine Lösung gefunden die bedingt funktioniert. Zwar habe ich einen Switch zwischen ODU und den Deco gehängt, dann kommt man auf die ODU auch mit 192.168.1.1 drauf, allerdings nach einiger Zeit - weiß noch nicht genau wann - ringelt sich das ganze Netzwerk ein, so daß ich es dann wieder zurück stellen musste.
+   </p>
+   <p>
+    Eine Idee wäre vielleicht noch mit einem managed Switch und VLAN zu arbeiten - da muss ich mich aber erst schlau machen, da ich das noch nie gemacht habe.
+   </p>
+   <p>
+    Jedenfalls danke für deine Unterstützung
+   </p>
+   <p>
+    lG
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   atzlinger_s
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-01-09T10:51:26Z" title="2023-01-09 10:51 ">
+   Januar 9, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Eine Lösung für die Erreichbarkeit von aussen könnte man sicher noch finden - meine Frage war eher, ob die ODU von innen wieder ohne Probleme erreichbar wäre, wenn du 443 rausnimmst. Eventuell könntest du auch versuchen als DNS bei den Deco die IP der ODU ein zu tragen - bin nicht sicher im Bridgemode verhält, die ODU ist ja eigentlich in einem anderen Subnetz - theoretisch sollte es bei Zugriff direkt über IP auch keinen Unterschied machen und eventuell sogar zu Problemen beim Webzugriff führen - einen Versuch wär es aber denke ich wert. Den Zugriff versuchst du auch definitiv über httpS://192.168.0.1? Eventuell könntest du auch versuchen, die DHCP Range der Decos um zu stellen, dass sie im gleichen Subnetz liegt, wie die der ODU (192.168.1.3 - 192.168.1.xxx) mit Subnetmask 255.255.255.0) dann würde die ODU nur die 2 Adressen für ODU und Deco WAN vergeben (192.168.1.1 &amp; 192.168.1.2) aber trotzdem alle internen IPs im selben Subnetz sein somit sollten alle untereinander erreichbar sein.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG Stefan
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   bockigeshortkind
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-02-11T02:05:06Z" title="2023-02-11 02:05 ">
+   Februar 11, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi,
+   </p>
+   <p>
+   </p>
+   <p>
+    wie
+    <a href="7370-magenta-5g-box-outdoor-xbox-nat-typ-strikt/?do=findComment&amp;comment=51666" rel="">
+     hier
+    </a>
+    beschrieben, habe ich die IDU mit einer Fritzbox 4060 ersetzt, ODU im Bridge Modus, Zugriff über 192.168.0.1 auf ODU funktioniert weiterhin. (DHCP deaktiviert, Default Gateway IP hinterlegt)
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+    <br>
+    </br>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/63e6f77632bad_oduip.png.62496bc06ede30133f5bd559e9ddfa89.png">
+     <img alt="odu ip.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4532" src="images/uploads/63e6f77632bad_oduip.png.62496bc06ede30133f5bd559e9ddfa89.png"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

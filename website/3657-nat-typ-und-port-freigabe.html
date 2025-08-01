@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   NAT Typ und Port-Freigabe
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   NAT Typ und Port-Freigabe
+  </h1>
+  <span class="author">
+   Gabriel K
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-21T20:17:46Z" title="2017-03-21 20:17 ">
+   März 21, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Die Frage bezieht sich ebenfalls mal wieder auf den NAT-Typ in verschiedensten Spielen...
+    <br/>
+    <br/>
+    Der NAT-Typ ist immer auf Strikt beziehungsweise auf Moderat wenn ich die APN auf "business.gprsinternet" stelle.
+    <br/>
+    Die Frage bezieht sich nun auf die weitere Vorgehensweise also die Port-Freigabe.
+    <br>
+     Man muss bei der Port-Freigabe dann die WAN-Ports, IP-Adresse und LAN-Ports eingeben, jedoch weiß ich nicht wie ich welche dieser Dinge herausfinde und wo ich dann welches eingeben muss.
+     <br>
+      <br>
+       Wäre toll, wenn man die Frage so schnell es geht beantworten könnte, weil dieses Problem vermutlich mehrere haben.
+       <br>
+        Oder gibt es vielleicht eine APN in der alle Verbindungen erlaubt werden?
+        <br/>
+        <br/>
+        Falls es hilft
+        <br/>
+        Router:  Cube
+        <span style="color:rgb(0,0,0);font-family:Arial, Helvetica, sans-serif, '宋体';font-size:12px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+         E5170s-22
+        </span>
+        <br/>
+        Software-Version:
+        <span style="color:rgb(0,0,0);font-family:Arial, Helvetica, sans-serif, '宋体';font-size:12px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+         21.236.17.01.54
+        </span>
+        <br/>
+        Hardware-Version:
+        <span style="color:rgb(0,0,0);font-family:Arial, Helvetica, sans-serif, '宋体';font-size:12px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255,255,255);float:none;">
+         CL1E5170SM
+        </span>
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   sunshine
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-22T07:36:44Z" title="2017-03-22 07:36 ">
+   März 22, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <iframe data-embedcontent="" frameborder="0" src="3625-nat-typ-aendern-routerb315s-22.html">
+   </iframe>
+   <p>
+    Schau mal, da geht es um eine ähnliche Frage. Vielleicht klappt es damit.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Gabriel K
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-22T14:25:40Z" title="2017-03-22 14:25 ">
+   März 22, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Den Eintrag hab ich auch schon gesehen, jedoch hilft er mit nicht sehr viel, da ich immer noch nicht ganz verstehe wie das mit dem "Port-Forwarding" funktioniert.
+    <br>
+     <br>
+      Also angenommen ich würde den Port UCP 20 freischalten wollen...
+      <br/>
+      Was müsste ich bei WAN-Port, LAN-Port und IP-Adresse eingeben?
+      <br/>
+      <br/>
+      Lg
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="8 yr" datetime="2017-03-27T14:11:15Z" title="2017-03-27 14:11 ">
+   März 27, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi Gabriel,
+   </p>
+   <p>
+    angenommen du benötigst Port 1234, dann musst du bei WAN Port - als auch bei LAN Port 1234 eintragen.
+   </p>
+   <p>
+    Bezüglich der IP Adresse - hierzu musst du deinem PC/Konsole/etc. eine eigene IP Adresse geben(nehmen wir mal 192.168.1.100 - diese bitte auch bei IP Adresse am Cube eintragen).
+   </p>
+   <p>
+    Wie die IP Adressvergabe auf deinen Geräten(Spielekonsole etc) funktioniert, bitte in der jeweiligen Bedienungsanleitung nachlesen.
+   </p>
+   <p>
+    Folgende Daten kannst du in der IP Konfig eintragen(z.B. Spielekonsole, Pc,...):
+   </p>
+   <p>
+    IP-Adresse: hier 192.168.1.100 eingeben
+   </p>
+   <p>
+    Subnetzmaske/Teilnetzmaske: hier 255.255.255.0 eintragen.
+   </p>
+   <p>
+    Standard Gateway: 192.168.1.1 eintragen
+   </p>
+   <p>
+    DNS Server: hier kannst du ebenfalls 192.168.1.1 eintragen.
+   </p>
+   <p>
+    Hoffe ich konnte weiterhelfen.
+   </p>
+   <p>
+    LGFW
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

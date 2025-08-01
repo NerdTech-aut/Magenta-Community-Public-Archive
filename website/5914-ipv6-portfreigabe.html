@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   IPV6 Portfreigabe
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   IPV6 Portfreigabe
+  </h1>
+  <span class="author">
+   Schroe2k
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-06-23T08:19:55Z" title="2020-06-23 08:19 ">
+   Juni 23, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Liebe Magenta,
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe noch eine Connect Box aus UPC Zeiten und habe dort Dual-Stack light mit Native IPV6. Nun würde ich gerne für einige Hosts in meinem Netzwerk eine IPV6 Portfreigabe konfigurieren. Intern funktioniert es schon gut über IPV6 aber die Firewall der Connect Box bleibt massiv unbeeindruckt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Portfreigabe für meinen Host Eingetragen
+   </p>
+   <p>
+    Bsp:
+   </p>
+   <p>
+    Inbound, Source "All", Destination "Single" dort IPV6 von mein Host, Ports 25565 ( Beispiel mein MC Server Instanz)
+   </p>
+   <p>
+   </p>
+   <p>
+    Ist aber alles ganz egal, von extern komm man nicht auf meine IPV6 Hosts. Ich habe alle möglichen Port Freigaben eingerichtet und ich habe Testweise die Firewall komplett deaktiviert (möchte ich nicht machen) es macht überhaupt keinen Unterschied.
+   </p>
+   <p>
+   </p>
+   <p>
+    Auch werden die Portfreigaben automatisch mit Maske /128 angelegt obwohl ich nur eine IPv6 /64 bekomme.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe die Vermutung die Firewall und die Port Freigabe ist komplett "broken" auf der Connect Box. Ich verstehe jedoch nicht warum es Sie überhaupt gibt. Wenn Sie nicht da ist weiß ich gleich, dass ich auf ein anderes Produkt wechseln muss (M Business oder so). Wenn Sie da ist sollte Sie auch funktionieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    und Nein, ich möchte kein IPv4 Nat, ich möchte IPV6 Port Freigabe.
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielen Dank im voraus
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-06-23T10:43:36Z" title="2020-06-23 10:43 ">
+   Juni 23, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Versuche einmal damit zu testen:
+   </p>
+   <p>
+    <a href="http://www.ipv6scanner.com/cgi-bin/main.py" rel="external nofollow">
+     http://www.ipv6scanner.com/cgi-bin/main.py
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Dazu noch den RTR Netz Test auf einem Smartphone.
+   </p>
+   <p>
+    Dazu die Ports 8080 und 5061 für das Smartphone über IPv6 freigegeben.
+   </p>
+   <p>
+    (Bitte nicht den qos test überspringen)
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Screenshot_20200623-124154_RTR-NetTest.png.da0c53dbeccd1dfc91e41a0d60a2f6f7.png">
+     <img alt="Screenshot_20200623-124154_RTR-NetTest.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2260" src="images/uploads/Screenshot_20200623-124154_RTR-NetTest.thumb.png.85417fc45f5f920400203d75c846b34e.png"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Schroe2k
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-06-23T19:51:53Z" title="2020-06-23 19:51 ">
+   Juni 23, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="34988" data-ipsquote-contentid="5914" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1592909016" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 8 Stunden schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Versuche einmal damit zu testen:
+     </p>
+     <p>
+      <a href="http://www.ipv6scanner.com/cgi-bin/main.py" rel="external nofollow">
+       http://www.ipv6scanner.com/cgi-bin/main.p
+      </a>
+     </p>
+     <p>
+      Dazu noch den RTR Netz Test auf einem Smartphone.
+     </p>
+     <p>
+      Dazu die Ports 8080 und 5061 für das Smartphone über IPv6 freigegeben.
+     </p>
+     <p>
+      (Bitte nicht den qos test überspringen)
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Das habe ich alles gemacht. aber stimmt, schon hilfreich.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich schwöre ich habe Heute nichts verändert und als ich es jetzt von der Arbeit heim gekommen war und probiert hatte funktioniert alles tadellos. Ich hab das ganze Wochenende versucht dahinter zu kommen und nichts wollte Sinn machen. Sonntag habe ich es dann sein lassen und heute hab ich mal in das Forum gesehen und dachte ich schreib mal mein Anliegen. Ist ja nicht so als ob selbst damals an der HTL alle Cisco CCNA Zertifizierungen gemacht hätte, tut aber nichts zur Sache.
+   </p>
+   <p>
+    Anscheinend hat mein Rant wohl irgendeinen Techniker von UPC/Magenta aufgescheucht. Jedenfalls passt das nun. Vielen Dank für die Troubleshooting Tipps
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Capture1.PNG.eaf403a92d54da144db9b960e95226ea.PNG">
+     <img alt="Capture1.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="2262" src="images/uploads/Capture1.thumb.PNG.69955765d20729e16ab2a8450d0a12af.PNG"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Capture2.PNG.cca6776670b98c5ca3ae1fcb1df743df.PNG">
+     <img alt="Capture2.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="2263" src="images/uploads/Capture2.thumb.PNG.496c1318d3747b00ed2a7d9811e6bb16.PNG"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Capture3.PNG.ad0c7d77fcd0fd722ce97d42aa75f849.PNG">
+     <img alt="Capture3.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="2264" src="images/uploads/Capture3.thumb.PNG.ad0aa77aa0e07131750211126241fe6c.PNG"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Capture4.PNG.5c037293513fab1d76617656c046c2d0.PNG">
+     <img alt="Capture4.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="2265" src="images/uploads/Capture4.thumb.PNG.06a1a7c12ac354634bdcadf3f63db439.PNG"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="5 yr" datetime="2020-06-23T20:00:25Z" title="2020-06-23 20:00 ">
+   Juni 23, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich hab die ccna nicht gemacht, war aber der einzige in meiner Gruppe, der wusste, das die Switches und Router, welche wir verwendeten, 19 Zoll breit waren. (das war in der 4. Klasse. Da war ich etwas schockiert. )
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

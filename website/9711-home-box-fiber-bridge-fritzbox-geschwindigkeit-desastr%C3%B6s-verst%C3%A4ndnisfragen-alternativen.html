@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Home Box Fiber - Bridge - Fritzbox - Geschwindigkeit desaströs - Verständnisfragen - Alternativen
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Home Box Fiber - Bridge - Fritzbox - Geschwindigkeit desaströs - Verständnisfragen - Alternativen
+  </h1>
+  <span class="author">
+   meube
+  </span>
+  <br/>
+  <time class="Nov 15" datetime="2024-11-15T18:00:07Z" title="2024-11-15 18:00 ">
+   November 15, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo liebe Magenta Community,
+   </p>
+   <p>
+   </p>
+   <p>
+    um kurz Klarheit vorweg zu schaffen:
+   </p>
+   <p>
+    Ich bin neu in Österreich, bin mit den unterschiedlichen Anbietern nicht vertraut. Ich habe mehr oder weniger "blind" auf Magenta gesetzt, da in D von allen Internetanbietern die Telekom den besten Service hatte (zumindest an meinen bisherigen Wohnorten).
+   </p>
+   <p>
+    Außerdem kenne ich mich wirklich nur sehr rudimentär bis gar nicht aus mit den Themen Router, Protokolle, etc.. Ich möchte an dieser Stelle ausnahmsweise, dass es funktioniert ohne mich auch noch in diese Technikfragen einstudieren zu müssen. Und ich habe versucht, evtl. ähnliche Beiträge hier im Forum zu finden, allerdings erfolglos. Sollten meine Fragen hier schon irgendwo behandelt worden sein, freue ich mich über Hinweise!
+    <br/>
+    <br/>
+    Hier mein Problem:
+   </p>
+   <p>
+    Ich sitze am neuen Wohnort im homeoffice und möchte mit dem Firmenserver in D direkt verbunden sein. Als Lösung wurde mir präsentiert: Die home box fiber in den bridge modus schalten (zu lassen), dann die gewünschte Fritzbox als Router anhängen. Das ist nun passiert, und meine Verbindung ist in derart in den Keller gerauscht, dass kein einfacher Zoomcall mehr möglich war. Meine verbindung sollte eigentlich bei 600 Mbit down, 60 Mbit up sein. Im Magenta Speedtest erreiche ich noch 250 Mbit down, 16 Mbit up. In verschiedenen anderen Speedtests (google, ookla) erreiche ich übereinstimmend 125-150 Mbit down, 0.35-0.4 Mbit up. Bis hierher alles mit LAN Verbindung. Mit meinem zweiten Notebook als Test über WLAN nochmal Speedtest (wieder google, ookla): 9-23 Mbit down, 0.4 Mbit up.  Alle Geräte sind neu und nur die beigelegten LAN Kabel wurden verwendet.
+   </p>
+   <p>
+   </p>
+   <p>
+    Lösungsvorschlag Magenta Techniker:
+    <br/>
+    Home Box Fiber zurück in den Router Modus und gucken, ob es dann wieder besser funktioniert. (Darauf warte ich jetzt gerade.)
+   </p>
+   <p>
+   </p>
+   <p>
+    Hierzu folgende unmittelbare Fragen:
+   </p>
+   <p>
+    1. Woran liegts? Home Box Fiber im Bridge Modus schlechte Idee? Inkompatibilität Home Box und Fritzbox? (Fritzbox 4060, Kompatibilität vorab mit Technik Hotline abgeklärt)
+   </p>
+   <p>
+   </p>
+   <p>
+    Weiterführende Fragen:
+   </p>
+   <p>
+    2. Was mache ich mit dem (höchstwahrscheinlichen) Ergebnis, dass die Verbindung nur mit Home Box im Router Modus besser ist? Laut Techniker kann es dann an der Fritzbox oder dem Bridge Modus der Home Box liegen. Jeweils wohl nur durch (ebenfalls) neues Gerät zu prüfen?
+   </p>
+   <p>
+    3. Wieso, wirklich wieso, was macht das für einen Sinn, dass ich den Bridge Modus nicht selbst aktivieren/deaktivieren kann? Und warum kann das dann nicht einmal einer der Techniker am anderen Ende der Hotline? Warum wird das intern noch an eine andere Stelle weitergegeben, wo es dann bis zu 48h dauern kann bis der Modus gewechselt ist? Wozu diese absurden Hindernisse?
+   </p>
+   <p>
+    4. Wieso ist der Magenta Speedtest derart signifikant besser als bei anderen Seiten?
+   </p>
+   <p>
+    5. Ist seitens Magenta Verbessung bzgl. des Routers in Sicht?
+   </p>
+   <p>
+    6. Oder ist mein Vorhaben (Netzwerkzugang via Fritzbox) bei Magenta aussichtslos und ich sollte besser heute als morgen einen anderen Anbieter wählen? Wenn ja, gibt es Empfehlungen? Wäre A1 an der Stelle besser?
+   </p>
+   <p>
+    <br>
+     Herzlichen Dank und einen guten Start ins Wochenende allerseits!
+    </br>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="Nov 15" datetime="2024-11-15T18:01:49Z" title="2024-11-15 18:01 ">
+      November 15, 2024
+     </time>
+     von meube
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="Nov 15" datetime="2024-11-15T20:13:42Z" title="2024-11-15 20:13 ">
+   November 15, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey willkommen!
+   </p>
+   <p>
+   </p>
+   <p>
+    Ein guter Tipp statt Bridge Modus mache AC Modus und alles gut ! Kannst hier bischen rein lesen überall bzw schaue mal meine Threads !
+   </p>
+   <p>
+   </p>
+   <p>
+    Leider sage es immer wieder Bridge Modus ist und bleibt eine Not Lösung da langsam und schlecht eigentlich besser ist ein AC draus machen geht auch bei der fritz !
+   </p>
+   <p>
+   </p>
+   <p>
+    Kann die helfen sage mir Mal die ip von der Home Box !
+   </p>
+   <p>
+   </p>
+   <p>
+    Vor allem wenn du ac mit der Fritz machst (geht mit alle natürlich) dann hast keine Einschränkung und full Speed etc !
+   </p>
+   <p>
+   </p>
+   <p>
+    Und du brauchst dann nur das Lan Kabel von der Fiber in LAN rein bei der Fritz !
+   </p>
+   <p>
+   </p>
+   <p>
+    Habe die Lösung mit Speedport smart hier geschrieben
+   </p>
+   <p>
+   </p>
+   <p>
+    <a href="9704-speedport-smart-4-geheim-men%C3%BC-%C3%B6ffnen/" rel="">
+     9704-speedport-smart-4-geheim-menü-öffnen/
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    AC Access Point statt wan bzw Bridge Modus !
+   </p>
+   <p>
+   </p>
+   <p>
+    Mfg
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="Nov 15" datetime="2024-11-15T20:14:57Z" title="2024-11-15 20:14 ">
+      November 15, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="Nov 15" datetime="2024-11-15T22:14:28Z" title="2024-11-15 22:14 ">
+   November 15, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Also ich lese im netz 192.168.0.1 aber DHCP Bereich finde ich nix aber OK lasse Mal die Fieber so und dann
+    <span>
+     :
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Bei der Fritz Box setze die ip auf 192.168.0.28 Mal und DHCP mach aus bei der Fritz
+   </p>
+   <p>
+   </p>
+   <p>
+    Dann einfach das Lan Kabel von der Fiber Box in die Fritz auf LAN Port (nicht auf wan)
+   </p>
+   <p>
+   </p>
+   <p>
+    Und wenn alles klappt ist die Fritz ein AC und kannst dich normal verbinden
+   </p>
+   <p>
+   </p>
+   <p>
+    P.s, die Fiber so lassen wie sie ist aber nicht Bridge Modus einschalten
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn alles klappt kommst die mit http://192.168.0.1 auf die Fiber und mit http://192.168.0.28 auf die Fritz !
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    P.s. ich persönlich halte auch nix von Fritz Boxen da zu wenig RAM vor allem und das ist heutzutage wichtig bzw Finger weg vom Bridge Modus!
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Hier die Vorteile natürlich auch gegen Bridge Modus nicht nur repeater:
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Erweiterung Ihres Heimnetzes durch einen Access Point bietet klare Vorteile:
+   </p>
+   <p>
+   </p>
+   <p>
+    Starkes WLAN für zusätzliche Endgeräte und Nutzer – überall dort, wo das Router-Signal nicht hinreicht
+   </p>
+   <p>
+   </p>
+   <p>
+    Optionale LAN-Anschlussmöglichkeiten für potenziell datenintensive Anwendungen wie Home-Office, Streaming und Gaming
+   </p>
+   <p>
+   </p>
+   <p>
+    Volle Datennutzung dank Ethernet-Verbindung zum Router (im Gegensatz zur WLAN-Erweiterung durch Repeater)
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Viel Erfolg beim testen !
+   </p>
+   <p>
+   </p>
+   <p>
+    Mfg
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="Nov 15" datetime="2024-11-15T22:19:43Z" title="2024-11-15 22:19 ">
+      November 15, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="Nov 15" datetime="2024-11-15T22:56:14Z" title="2024-11-15 22:56 ">
+   November 15, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58453" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731693607" data-ipsquote-userid="99657" data-ipsquote-username="meube">
+    <div class="ipsQuote_citation">
+     Am 15.11.2024 um 19:00 schrieb meube:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      3. Wieso, wirklich wieso, was macht das für einen Sinn, dass ich den Bridge Modus nicht selbst aktivieren/deaktivieren kann? Und warum kann das dann nicht einmal einer der Techniker am anderen Ende der Hotline? Warum wird das intern noch an eine andere Stelle weitergegeben, wo es dann bis zu 48h dauern kann bis der Modus gewechselt ist? Wozu diese absurden Hindernisse?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Bei den vorhergehenden Modem/Router-Geräten war/ist es noch möglich den Bridge Modus selbst zu konfigurieren, zumindest solange der Anschluss auf IPv4 konfiguriert ist. Für den Wechsel von IPv6 auf IPv4 ist auch bei den älteren Geräten der Kundenservice und in weiterer Folge die Backoffice-Abteilung gefragt.
+   </p>
+   <p>
+    In Österreich gibt es keine gesetzliche Routerfreiheit und die Abläufe bei Magenta scheinen sind teils ziemlich aufwendig (z.B. auch das Thema eSIM).
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58453" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731693607" data-ipsquote-userid="99657" data-ipsquote-username="meube">
+    <div class="ipsQuote_citation">
+     Am 15.11.2024 um 19:00 schrieb meube:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      5. Ist seitens Magenta Verbessung bzgl. des Routers in Sicht?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Die nächste Technologie über Datenübertragung über Koaxialkabel DOCSIS 4.0 soll nächstes Jahr starten (zumindest in Wien, vielleicht auch mehr Gebiete), dann wird es auch ein neues Modem/Router-Gerät geben. Ob dieses z.B. weiterhin auf die WebUI verzichtet und nur über die App bedienbar ist wird sich zeigen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Irgendwelche Energiespareinstellungen auf der Fritz!Box konfiguriert? Sollte unter System-&gt;Energiemonitor-&gt;Energiemodus zu finden sein.
+   </p>
+   <p>
+    Die Übertragungsgeschwindigkeit auf der Fritz!Box richtig konfiguriert? Sollte unter Internet-&gt;Zugangsdaten-&gt;Internetzugang-&gt;Verbindungseinstellungen-&gt;Übertragungsgeschwindigkeit zu finden sein.
+   </p>
+   <p>
+    Du könntest auch für ein paar Tests dem PC/Laptop per LAN-Kabel an die Home Box Fiber hängen, während diese noch im Bridge Modus ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ansonsten nun mal die Umstellung zurück in den Router Modus abwarten.
+   </p>
+   <p>
+    Die Fritz!Box funktioniert auch wenn die Home Box Fiber wieder im Router Modus ist. Könnte auch im Vergleich zum Bridge Modus gegengetestet werden.
+   </p>
+   <p>
+   </p>
+   <p>
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98130-klaximaxi43/?do=hovercard" data-mentionid="98130" href="https://community.magenta.at/profile/98130-klaximaxi43/" rel="">
+      @Klaximaxi43
+     </a>
+    </span>
+   </p>
+   <p>
+    Ich denke du meinst AP Modus (
+    <strong>
+     A
+    </strong>
+    ccess
+    <strong>
+     P
+    </strong>
+    oint Modus).
+   </p>
+   <p>
+    Bei der Fritz!Box nennt sich dieser IP-Client Modus. Damit kann weiterhin der WAN-Port derFritz!Box für die Verbindung zur Home Box Fiber verwendet werden sobald diese wieder im Router Modus ist.
+   </p>
+   <p>
+    <a href="https://at.avm.de/service/wissensdatenbank/dok/FRITZ-Box-4060/3244_FRITZ-Box-als-IP-Client-einrichten/" rel="external nofollow">
+     https://at.avm.de/service/wissensdatenbank/dok/FRITZ-Box-4060/3244_FRITZ-Box-als-IP-Client-einrichten/
+    </a>
+   </p>
+   <p>
+    Ein paar Funktionen der Fritz!box sind im IP-Client Modus nicht verfügbar:
+   </p>
+   <p>
+    Die Kindersicherung, der Online-Zähler, der Gastzugang, VPN-Verbindungen sowie alle Funktionen, für die eine öffentliche IP-Adresse benötigt wird, stehen nicht zur Verfügung.
+   </p>
+   <p>
+   </p>
+   <p>
+    An sich kann die Fritz!Box auch im Router Modus bleiben, wenn die Home Box Fiber wieder im Router Modus ist, da dann nur Funktionen die eine öffentliche IP Adresse benötigen nicht funktionieren.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="Nov 15" datetime="2024-11-15T23:03:19Z" title="2024-11-15 23:03 ">
+      November 15, 2024
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="Nov 16" datetime="2024-11-16T07:27:00Z" title="2024-11-16 07:27 ">
+   November 16, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey nicht ganz ein AC ja Access Point ist was anderes das wird nicht über wan angeschlossen! Das ist dann wie ein eigener WLAN Router unabhängig vom Modem was davor steht ! Habe es so mit der Speedport smart 4 gemacht weil die smart 4 nicht auf wan möglich ist !
+   </p>
+   <p>
+   </p>
+   <p>
+    LAN ZU LAN
+    <span class="ipsEmoji">
+     😃
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Du kannst aus jedem Router einen ac machen wichtig ist eben die ips ab ändern da wird nix dann eingestellt außer die ip und DHCP aus beim WLAN Router und wichtig außerhalb von DHCP vom Modem davor ,somit hast du unabhängig von Modem davor alle Funktionen ohne Einschränkung am ac !
+   </p>
+   <p>
+   </p>
+   <p>
+    Das hat nix mit wan , Bridge , oder ip Client zum tun !!
+   </p>
+   <p>
+   </p>
+   <p>
+    Habe es ein bekannten auch so gemacht mit einer Fritz !
+   </p>
+   <p>
+   </p>
+   <p>
+    Also AC ist nicht IP Client , nicht Bridge , nicht wan !
+   </p>
+   <p>
+   </p>
+   <p>
+    Ein AC ist ein AC Point !
+   </p>
+   <p>
+   </p>
+   <p>
+    Wie gesagt habe es auch mit der af55 + Speedport gemacht da es nicht möglich ist am Speedport 4 die af55 per wan oder Modem 5g zum Nutzen also müsste eine ac Lösung her ohne Einschränkung und volle Funktionalität am ac unabhängig von der af55 der macht nur das Internet möglich mehr schon nicht !
+   </p>
+   <p>
+   </p>
+   <p>
+    Also nix ändern auf der Fritz nur DHCP aus und ip vergeben außerhalb von DHCP von der Fiber dann lan zu lan und alle Vorteile genießen! Trick 17 halt
+    <span class="ipsEmoji">
+     😃
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Mfg
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="Nov 16" datetime="2024-11-16T07:32:34Z" title="2024-11-16 07:32 ">
+      November 16, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="Nov 16" datetime="2024-11-16T15:47:10Z" title="2024-11-16 15:47 ">
+   November 16, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Warum die FRITZ!Box? Ist die der VPN Client?
+   </p>
+   <p>
+    (Ist jetzt kein Vorwurf, ich möchte es nur verstehen was hier die Überlegung war. An Standorten ohne VLANs habe ich FRITZ!Boxen im Einsatz)
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58453" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731693607" data-ipsquote-userid="99657" data-ipsquote-username="meube">
+    <div class="ipsQuote_citation">
+     Am 15.11.2024 um 19:00 schrieb meube:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich sitze am neuen Wohnort im homeoffice und möchte mit dem Firmenserver in D direkt verbunden sein. Als Lösung wurde mir präsentiert: Die home box fiber in den bridge modus schalten (zu lassen), dann die gewünschte Fritzbox als Router anhänge
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    von wem stammt der Lösungsvorschlag?
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Geschwindigkeitseinstellungen in der FRITZ!Box sind ein guter Tipp. Je nach Speedtest, kann der Download Speedtest auch eine Spur Upload brauchen, so wie die Speedtests aussehen, kann es sein, dass es am Upload scheitert.
+   </p>
+   <p>
+   </p>
+   <p>
+    Was auch sein könnte, beim Tausch des Modem Profils, was für den Wechsel auf IPv4 und somit Bridge Mode nötig ist, wurde ein fehlerhaftes Profil eingespielt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   meube
+  </span>
+  <br/>
+  <time class="Nov 17" datetime="2024-11-17T12:37:18Z" title="2024-11-17 12:37 ">
+   November 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo zusammen,
+   </p>
+   <p>
+   </p>
+   <p>
+    herzlichen Dank für eure Antworten und Anregungen!
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58460" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731772030" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     Am 16.11.2024 um 16:47 schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Warum die FRITZ!Box? Ist die der VPN Client?
+     </p>
+     <p>
+      (Ist jetzt kein Vorwurf, ich möchte es nur verstehen was hier die Überlegung war. An Standorten ohne VLANs habe ich FRITZ!Boxen im Einsatz)
+     </p>
+     <p>
+     </p>
+     <p>
+      von wem stammt der Lösungsvorschlag?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Wenn ich das richtig verstehe: Wir haben im Hauptstandort eine Fritzbox, damit soll meine Fritzbox direkt verbunden werden. Darüber habe ich direkten Zugriff auf den Server am Hauptstandort. (Hat auch soweit funktioniert, nur eben das beschriebene Geschwindigkeitsproblem)
+    <br>
+     <br>
+      Die Information, dass die Home Box in den Bridge Modus geschaltet werden müsste, um eine Fritzbox anzuhängen, kam von der Techniker-Hotline der Magenta.
+     </br>
+    </br>
+   </p>
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98130-klaximaxi43/?do=hovercard" data-mentionid="98130" href="https://community.magenta.at/profile/98130-klaximaxi43/" rel="">
+     @Klaximaxi43
+    </a>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+     @NTM
+    </a>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/72107-it-freak/?do=hovercard" data-mentionid="72107" href="https://community.magenta.at/profile/72107-it-freak/" rel="">
+     @IT-Freak
+    </a>
+    Aus euren Antworten lese ich, dass das nicht notwendig ist? Wofür gibt es dann diesen Bridge Modus, bzw. warum wird das von den Techniker:innen so empfohlen (Verständnisfrage)? Welche Einschränkungen gibt es, wenn ich die Fritzbox an die Home Box im Router Modus hänge? (Was wären zum Beispiel Funktionen, die eine öffentliche IP Adresse benötigen?)
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58460" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731772030" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     Am 16.11.2024 um 16:47 schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Was auch sein könnte, beim Tausch des Modem Profils, was für den Wechsel auf IPv4 und somit Bridge Mode nötig ist, wurde ein fehlerhaftes Profil eingespielt.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Ok, interessant. Das ließe sich dann nur herausfinden, wenn ich ich irgendwann in den kommenden Tagen zurück im Router Modus bin, das Spiel von vorne beginne? (Geschwindigkeit Home Box funktioniert prinzipiell super, s.u.)
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58457" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731711374" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 15.11.2024 um 23:56 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Irgendwelche Energiespareinstellungen auf der Fritz!Box konfiguriert? Sollte unter System-&gt;Energiemonitor-&gt;Energiemodus zu finden sein.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Im Energiemodus ist "ausgewogener Modus" eingestellt - ich nehme an, das ist der richtige (im Gegensatz zum Energiesparmodus)?
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58457" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731711374" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 15.11.2024 um 23:56 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Die Übertragungsgeschwindigkeit auf der Fritz!Box richtig konfiguriert? Sollte unter Internet-&gt;Zugangsdaten-&gt;Internetzugang-&gt;Verbindungseinstellungen-&gt;Übertragungsgeschwindigkeit zu finden sein.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Die Übertragungsgeschwindigkeiten sind jeweils mit 2500 Mbit eingestellt - ist das korrekt so? Müssen hier die exakten Werte des Vertrags eingegeben werden, oder darf das eingestellte Volumen nur nicht darunter liegen?
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58457" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731711374" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 15.11.2024 um 23:56 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Du könntest auch für ein paar Tests dem PC/Laptop per LAN-Kabel an die Home Box Fiber hängen, während diese noch im Bridge Modus ist.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Habe ich direkt gemacht. Siehe da, das Volumen ist wie vertraglich zugesichert bei ca. 600 Mbit down, 60 Mbit up. Kann man daraus irgendwelche Schlüsse ziehen?
+   </p>
+   <p>
+   </p>
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98130-klaximaxi43/?do=hovercard" data-mentionid="98130" href="https://community.magenta.at/profile/98130-klaximaxi43/" rel="">
+     @Klaximaxi43
+    </a>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+     @NTM
+    </a>
+    Herzlichen Dank auch für die Tips mit AC-Modus und IP-Client. Das werde ich versuchen so an unseren IT-Helfer weiterzuleiten, vielleicht kommen wir damit zu einer guten Lösung.
+   </p>
+   <p>
+   </p>
+   <p>
+    Einen schönen Sonntag!
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="Nov 17" datetime="2024-11-17T12:42:38Z" title="2024-11-17 12:42 ">
+      November 17, 2024
+     </time>
+     von meube
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="Nov 17" datetime="2024-11-17T12:43:04Z" title="2024-11-17 12:43 ">
+   November 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Welches VPN wird genutzt für die Verbindung in die Firma IP SEC oder Wireguard?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   meube
+  </span>
+  <br/>
+  <time class="Nov 17" datetime="2024-11-17T12:46:06Z" title="2024-11-17 12:46 ">
+   November 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58463" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731847384" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     Am 17.11.2024 um 13:43 schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Welches VPN wird genutzt für die Verbindung in die Firma IP SEC oder Wireguard?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Ich denke IP SEC. Bzw. andersherum: Ich weiß, dass es momentan nicht Wireguard ist - bedeutet das im Umkehrschluss IP SEC? Ist eine der beiden Varianten besser oder schlechter?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   meube
+  </span>
+  <br/>
+  <time class="Nov 17" datetime="2024-11-17T12:46:46Z" title="2024-11-17 12:46 ">
+   November 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Habs gerade im Menü gefunden, IP SEC ist eingestellt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="Nov 17" datetime="2024-11-17T13:00:31Z" title="2024-11-17 13:00 ">
+   November 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wireguard kann besser mit NAT und IPv6 umgehen als IP SEC.
+   </p>
+   <p>
+   </p>
+   <p>
+    Es liegt vermutlich nicht an dem Bridge Mode sondern eher an der Konfiguration der FRITZ!Box.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn du den VPN Client irgendwie auf den Laptop oder PC bekommen würdest und es nicht die FRITZ!Box macht, könnte es sich verbessern.
+   </p>
+   <p>
+   </p>
+   <p>
+    Potentielle Fehler, alles wird über die Firma getunnelt, DNS läuft nur über die Firma oder Bandbreiten Einstellungen passen nicht.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das müsstest du in der Routing Tabelle der Box sehen bzw. im VPN was als entferntes Netz steht.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich kann dir nicht sagen, wie du bei DNS prüfst, welchen Weg die Box nimmt. Da kann es halt sein, dass du auf einen für Deutschland optimieren Server verwiesen wirst und der dann aus Österreich nur mäßig erreichbar ist.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   meube
+  </span>
+  <br/>
+  <time class="Nov 17" datetime="2024-11-17T13:51:12Z" title="2024-11-17 13:51 ">
+   November 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ok, vielen Dank! Das werde ich auch so weiterleiten.
+    <br>
+     <br>
+      Nur eine Rückfrage: Im Bridge Modus kann die Home Box wohl nur IPv4. Wenn jetzt allerdings das Anhängen der Fritzbox im Router Modus der Home Box genauso funktioniert wie im Bridge Modus (ist dem so?), dann könnte man im Router Modus auch wieder auf IPv6 gehen und Wireguard nutzen?
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="Nov 17" datetime="2024-11-17T14:21:13Z" title="2024-11-17 14:21 ">
+   November 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wireguard geht auch über IPv4, also ist der Wechsel auf IPv6 nicht nötig.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wireguard kann im Bridge Modus als auch im normalen Modus genutzt werden.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="Nov 17" datetime="2024-11-17T15:02:49Z" title="2024-11-17 15:02 ">
+   November 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ist vielleicht in den Einstellungen der IPSec VPN Verbindung die Option "Gesamten Netzwerkverkehr über die VPN-Verbindung senden" aktiv?
+   </p>
+   <p>
+    Diese sollte, wenn du die Einstellungen der VPN-Verbindung bearbeitest, ganz unten unter dem Text "Erweiterte Einstellungen zum Netzwerkverkehr" versteckt sein. Wenn die Option an ist, wird das Deaktivieren dieser Option die Bandbreite wahrscheinlich verbessern. Denn wenn diese Option aktiviert ist, wird der gesamte Datenverkehr über die Fritz!Box im Büro gesendet und dementsprechend vom Internet-Anschluss im Büro anhängig.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bzw. versuche mal die IPSec VPN-Verbindung in der Fritz!Box ganz zu deaktivieren. Also die Checkbox für die VPN-Verbindung abwählen und übernehmen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das Thema VPN hatte ich anfangs übersehen, denn im IP-Client Modus oder auch der vom
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98130-klaximaxi43/?do=hovercard" data-mentionid="98130" href="https://community.magenta.at/profile/98130-klaximaxi43/" rel="">
+     @Klaximaxi43
+    </a>
+    erwähnte Trick 17 (welcher bei meinem gescheiten Router mit sauberem AP/IP-Client Modus wie einer Fritz!Box nicht nötig ist) kann die VPN Funktion der Fritz!Box nicht verwendet werden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Es wäre wohl besser, wenn die VPN-Verbindung nur auf dem einen Endgerät (PC/Laptop) eingerichtet wird, welches die VPN-Verbindung benötigt.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58462" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731847038" data-ipsquote-userid="99657" data-ipsquote-username="meube">
+    <div class="ipsQuote_citation">
+     Am 17.11.2024 um 13:37 schrieb meube:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Die Information, dass die Home Box in den Bridge Modus geschaltet werden müsste, um eine Fritzbox anzuhängen, kam von der Techniker-Hotline der Magenta.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Das wäre halt die saubere Lösung damit die Home Box Fiber nur als Modem arbeitet, statt zwei Router hintereinander.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58462" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731847038" data-ipsquote-userid="99657" data-ipsquote-username="meube">
+    <div class="ipsQuote_citation">
+     Am 17.11.2024 um 13:37 schrieb meube:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Habe ich direkt gemacht. Siehe da, das Volumen ist wie vertraglich zugesichert bei ca. 600 Mbit down, 60 Mbit up. Kann man daraus irgendwelche Schlüsse ziehen?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Es liegt wie
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/72107-it-freak/?do=hovercard" data-mentionid="72107" href="https://community.magenta.at/profile/72107-it-freak/" rel="">
+     @IT-Freak
+    </a>
+    schon geschrieben hat eher an der Konfiguration der Fritz!Box und nicht an der Home Box Fiber.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58462" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731847038" data-ipsquote-userid="99657" data-ipsquote-username="meube">
+    <div class="ipsQuote_citation">
+     Am 17.11.2024 um 13:37 schrieb meube:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Die Übertragungsgeschwindigkeiten sind jeweils mit 2500 Mbit eingestellt - ist das korrekt so? Müssen hier die exakten Werte des Vertrags eingegeben werden, oder darf das eingestellte Volumen nur nicht darunter liegen?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Es wäre halt ideal, wenn die tatsächlich möglichen Datenraten eingetragen sind.
+   </p>
+   <p>
+    Ich habe bei meinem 130/30 Tarif in meinem Router 132/32 eingetragen.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58462" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731847038" data-ipsquote-userid="99657" data-ipsquote-username="meube">
+    <div class="ipsQuote_citation">
+     Am 17.11.2024 um 13:37 schrieb meube:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Im Energiemodus ist "ausgewogener Modus" eingestellt - ich nehme an, das ist der richtige (im Gegensatz zum Energiesparmodus)?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ja das passt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   meube
+  </span>
+  <br/>
+  <time class="Nov 17" datetime="2024-11-17T20:13:56Z" title="2024-11-17 20:13 ">
+   November 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo allerseits,
+   </p>
+   <p>
+   </p>
+   <p>
+    nochmals vielen Dank für die Mithilfe!
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58469" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731855769" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 17.11.2024 um 16:02 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+      Ist vielleicht in den Einstellungen der IPSec VPN Verbindung die Option "Gesamten Netzwerkverkehr über die VPN-Verbindung senden" aktiv?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Habe ich gerade geprüft, ist nicht aktiv.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58469" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731855769" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 17.11.2024 um 16:02 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Bzw. versuche mal die IPSec VPN-Verbindung in der Fritz!Box ganz zu deaktivieren. Also die Checkbox für die VPN-Verbindung abwählen und übernehmen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Habe ich auch versucht, leider keine Verbesserung.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58469" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731855769" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 17.11.2024 um 16:02 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das Thema VPN hatte ich anfangs übersehen, denn im IP-Client Modus oder auch der vom
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98130-klaximaxi43/?do=hovercard" data-mentionid="98130" href="https://community.magenta.at/profile/98130-klaximaxi43/" rel="">
+       @Klaximaxi43
+      </a>
+      erwähnte Trick 17 (welcher bei meinem gescheiten Router mit sauberem AP/IP-Client Modus wie einer Fritz!Box nicht nötig ist) kann die VPN Funktion der Fritz!Box nicht verwendet werden.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Alles klar, danke für die Auflösung!
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   meube
+  </span>
+  <br/>
+  <time class="Nov 17" datetime="2024-11-17T20:16:26Z" title="2024-11-17 20:16 ">
+   November 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58469" data-ipsquote-contentid="9711" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1731855769" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 17.11.2024 um 16:02 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Es wäre halt ideal, wenn die tatsächlich möglichen Datenraten eingetragen sind.
+     </p>
+     <p>
+      Ich habe bei meinem 130/30 Tarif in meinem Router 132/32 eingetragen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Herzlichen Dank, das war die Lösung!!
+   </p>
+   <p>
+    Ich habe jetzt 600/60 eingetragen und es funktioniert, als wäre nie etwas gewesen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Interessensfrage: Warum ist das so?
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,3011 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Anleitung -  Magenta 5G Box Outdoor NAT Typ ändern
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Anleitung -  Magenta 5G Box Outdoor NAT Typ ändern
+  </h1>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-03-18T00:12:09Z" title="2022-03-18 00:12 ">
+   März 18, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    In dieser Anleitung erfährst du wie du den NAT Typ deiner Spielekonsole bei der Magenta 5G Box Outdoor ändern kannst.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     0. Vorbereitung:
+    </strong>
+   </p>
+   <p>
+    Die Anleitung setzt voraus, dass das 5G Outdoor Set bereits laut Anleitung/App eingerichtet wurde und ein Gerät mit einem Webbrowser (Handy, Tablet, Laptop, PC, etc.) per Lan oder W-Lan mit der Indoor-Einheit verbunden ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     1. Business APN auf der Outdoor-Einheit einrichten:
+    </strong>
+   </p>
+   <p>
+    Damit die Outdoor Unit eine öffentliche IP-Adresse bekommt, musst du den APN auf der Outdoor-Einheit ändern.
+   </p>
+   <p>
+    Der Business APN funktioniert auch für Privatkunden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Besuche mit deinem Gerät die Konfigurationsseite der Outdoor-Einheit unter
+    <a href="https://192.168.0.1" rel="">
+     https://192.168.0.1
+    </a>
+    . Es kann eine Meldung kommen, dass diese Verbindung nicht privat ist. In diesem Fall auf "Erweitert" und dann auf zum Beispiel "Weiter zu 192.168.0.1 (unsicher)" oder "Risiko akzeptieren und fortfahren" klicken.
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.011abdde7dc16eaf7bb09eac55ce2074.png" rel="external nofollow">
+     <img alt="image.thumb.png.0e1a7fb69e10658a85c4e12d9dfc8bec.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3741" src="images/uploads/image.thumb.png.0e1a7fb69e10658a85c4e12d9dfc8bec.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+    Auf der Konfigurationsseite angekommen müssen die Anmeldedaten eingegeben werden. Diese stehen auf der einem Aufkleber auf der Kurzanleitung, sowie auf einem Aufkleber unter dem vorderen Standfuß der Indoor-Einheit. Der Benutzername ist dabei immer "admin".
+   </p>
+   <p>
+   </p>
+   <p>
+    Nach dem Anmelden gehe zu "Einstellungen" -&gt; "Einwahl" -&gt; "MPDN-Management".
+   </p>
+   <p>
+    Auf einem PC, Laptop oder Tablet:
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.43345b6a1dd07849c5e173005591911e.png" rel="external nofollow">
+     <img alt="image.thumb.png.0855df6158d5a09a0a15a96aa5e29081.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3743" src="images/uploads/image.thumb.png.0855df6158d5a09a0a15a96aa5e29081.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+    Auf einem Handy oder Tablet:
+   </p>
+   <p>
+    <img alt="image.png.dadcd55228335a1c955ee7d11b45d7f5.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3744" src="images/uploads/image.png.dadcd55228335a1c955ee7d11b45d7f5.png" style="width:150px;height:auto;"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Konfiguriere hier den Business APN mit den folgenden Einstellungen.
+   </p>
+   <p>
+    Wähle aus der Liste APN-Name "business.gprsinternet" aus, stelle die Authentifizierung auf "PAP", gebe als Benutzername "t-mobile" ein und als Passwort "tm". Nicht vergessen auf "Anwenden" zu klicken!
+   </p>
+   <p>
+    Auf einem PC, Laptop oder Tablet:
+    <br>
+     <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.57b88b092667109c7a8f6c167c25d0df.png" rel="external nofollow">
+      <img alt="image.thumb.png.93c0e17abb239ba7e52954ef271f7036.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3745" src="images/uploads/image.thumb.png.93c0e17abb239ba7e52954ef271f7036.png" style="width:300px;height:auto;"/>
+     </a>
+    </br>
+   </p>
+   <p>
+    Auf einem Handy oder Tablet:
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.65a11908c9bda4215c6f5d43f5373472.png" rel="external nofollow" style="background-color:rgb(255,255,255);">
+     <img alt="image.thumb.png.68948875a8f8e5dc80ae04f4885cf23c.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3746" src="images/uploads/image.thumb.png.68948875a8f8e5dc80ae04f4885cf23c.png" style="width:100px;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Trenne nun das lange weiße Lan Kabel für einige Sekunden von dem Netzteil (PoE Adapter) der Outdoor-Einheit und schließe dieses anschließend wieder an, damit die Outdoor-einheit neu startet.
+   </p>
+   <p>
+   </p>
+   <p>
+    Melde dich anschließend wieder bei der Konfigurationsseite der Outdoor-Einheit unter
+    <a href="https://192.168.0.1" rel="">
+     https://192.168.0.1
+    </a>
+    an.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     2. Firewall der Outdoor-Einheit konfigurieren:
+    </strong>
+   </p>
+   <p>
+    Wieder zurück auf der Konfigurationsseite der Outdoor-Einheit ist der nächste Schritt die Konfiguration der Firewall.
+   </p>
+   <p>
+   </p>
+   <p>
+    Gehe dafür zu "Einstellungen" -&gt; "Sicherheit" -&gt; "Firewall-Schalter". Nicht vergessen auf "Anwenden" zu klicken! Das Übernehmen der Einstellung kann ein paar Sekunden dauern.
+   </p>
+   <p>
+    Auf einem PC, Laptop oder Tablet:
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.5110cf199c652c85c8704d5c1d4f3f79.png" rel="external nofollow">
+     <img alt="image.thumb.png.494da29a31e25cb84c84ab65b682561d.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3747" src="images/uploads/image.thumb.png.494da29a31e25cb84c84ab65b682561d.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf einem Handy oder Tablet:
+   </p>
+   <p>
+    <img alt="image.png.b0328d518ddb75cc7002bd852de568e6.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3749" src="images/uploads/image.png.b0328d518ddb75cc7002bd852de568e6.png" style="width:150px;height:auto;"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Stelle nun die "Sicherheitsstufe" der Firewall von "Mittel" auf "Niedrig".
+   </p>
+   <p>
+    Auf einem PC, Laptop oder Tablet:
+   </p>
+   <p>
+   </p>
+   <p>
+    <img alt="image.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3750" src="images/uploads/image.thumb.png.78281ca861720cfe5b1739a6ef8a298d.png" style="width: 300px; height: auto;"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf einem Handy oder Tablet:
+   </p>
+   <p>
+    <img alt="image.png.c932fbaa5ba0ba016153121f75d4ff1b.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3752" src="images/uploads/image.png.c932fbaa5ba0ba016153121f75d4ff1b.png" style="width:150px;height:auto;"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Damit ist die Firewall konfiguriert.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     3. DMZ der Outdoor-Einheit Konfigurieren:
+    </strong>
+   </p>
+   <p>
+    Zur Konfiguration der DMZ wird die MAC-Adresse der Indoor-Einheit benötigt.
+   </p>
+   <p>
+    Rufe dafür auf der Konfigurationsseite der Indoor-Einheit unter
+    <a href="http://192.168.1.1" rel="">
+     http://192.168.1.1
+    </a>
+    auf.
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.a5f8f1e64871f1ea538fc25419ca436b.png" rel="external nofollow">
+     <img alt="image.thumb.png.eec9e6dd79b15ed53c2c55725031b469.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3753" src="images/uploads/image.thumb.png.eec9e6dd79b15ed53c2c55725031b469.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Zum Anmelden muss das Passwort, welches rechts unten auf dem großen Aufkleber auf Indoor-Einheit aufgedruckt ist, eingegeben werden.
+   </p>
+   <p>
+    Auf der Startseite der Konfigurationsseite wird die MAC Adresse direkt ausgegeben.
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.a8668a4f7e7d4cfc06700420d0a3981f.png" rel="external nofollow">
+     <img alt="image.thumb.png.2653fc5c7021db067b995b7a5cf84e8f.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3755" src="images/uploads/image.thumb.png.2653fc5c7021db067b995b7a5cf84e8f.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Diese kann nun kopiert werden.
+   </p>
+   <p>
+    Wechsle nun zurück zur Konfigurationsseite der Outdoor-Einheit und wechsle zu "Einstellungen" -&gt; "NAT" -&gt; "DMZ".
+   </p>
+   <p>
+    Auf einem PC, Laptop oder Tablet:
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.445eebaebead13e1b616aab154a663a3.png" rel="external nofollow">
+     <img alt="image.thumb.png.794a3defbcac1243018c63d06e3aa1d9.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3756" src="images/uploads/image.thumb.png.794a3defbcac1243018c63d06e3aa1d9.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+    Auf einem Handy oder Tablet:
+   </p>
+   <p>
+    <img alt="image.png.db8013940bb5c7d14bb5958b1e4764c0.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3757" src="images/uploads/image.png.db8013940bb5c7d14bb5958b1e4764c0.png" style="width:150px;height:auto;"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Wähle nun die Option "DMZ MAC" und füge anschließend in das Textfeld "DMZ MAC adresse" die MAC Adresse der Indoor-Einheit ein. Nicht vergessen auf "Anwenden" zu klicken!
+   </p>
+   <p>
+    Auf einem PC, Laptop oder Tablet:
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.76371f7025580f6ce00e15d8573f77bb.png" rel="external nofollow" style="background-color:rgb(255,255,255);">
+     <img alt="image.thumb.png.b7001cde93e8c6b7495fea596d9efb2e.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3758" src="images/uploads/image.thumb.png.b7001cde93e8c6b7495fea596d9efb2e.png" style="width:300px;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf einem Handy oder Tablet:
+   </p>
+   <p>
+   </p>
+   <p>
+    <img alt="image.png.4f81da1013973fb0eb5ee7597e0db81c.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3760" src="images/uploads/image.png.4f81da1013973fb0eb5ee7597e0db81c.png" style="width:200px;height:auto;"/>
+   </p>
+   <p>
+    <strong>
+     4. UPnP Einstellungen auf der Indoor-Einheit aktivieren:
+    </strong>
+   </p>
+   <p>
+    Wechsle nun wieder zurück zur Konfigurationsseite der Indoor-Einheit.
+   </p>
+   <p>
+   </p>
+   <p>
+    Gehe hier zu "Einstellungen" -&gt; "Sicherheit" -&gt; "UPnP".
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="3761" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.1354deca1fa3dd4c40678b779935ba42.png" rel="external nofollow">
+     <img alt="image.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3761" data-unique="qfpifjz9d" src="images/uploads/image.thumb.png.d252e21ba760b6d2324ebe3d17baaa87.png" style="width: 300px; height: auto;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Stelle sicher das die Checkbox "UPnP aktivieren" aktiv ist.
+   </p>
+   <p>
+    Falls dies nicht der Fall ist, klicke diese einmal an. Anschließend nicht vergessen auf "Speichern" zu klicken!
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.b6974bbe8098ba9a438e5f8aed5b711a.png" rel="external nofollow">
+     <img alt="image.thumb.png.a807683f24f1ea82602e90fe3793b850.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3762" src="images/uploads/image.thumb.png.a807683f24f1ea82602e90fe3793b850.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+    <strong>
+     5. Fertig!
+    </strong>
+   </p>
+   <p>
+    Damit sollte nun ein Moderater NAT bzw. NAT-Typ B auf der Konsole möglich sein.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Getestet wurde diese Anleitung mit dem Verbindungstest einer Nintendo Switch.
+   </p>
+   <p>
+    Sollte es Anmerkungen zu dieser Anleitung geben, bitte diese hier posten.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Rafael
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-03-18T12:19:49Z" title="2022-03-18 12:19 ">
+   März 18, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+     @NTM
+    </a>
+    Super vielen Dank. Die Anleitung hat geklappt. Ich habe nun bei meiner PS4 den NAT-Typ 2 (moderat) und der Router funktioniert ohne Probleme. 👍🏻👌🏻
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-03-18T12:20:23Z" title="2022-03-18 12:20 ">
+      März 18, 2022
+     </time>
+     von Rafael
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Florian31
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-03-20T19:26:21Z" title="2022-03-20 19:26 ">
+   März 20, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Weißt du auch zufällig, wie ich den Nat Typ offen bei Call of Duty bekomme ?
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe zwar Nat Typ Mittel aber wenn ich mit Freunden Warzone spiele, sucht er ewig eine Lobby wenn ich dabei bin..
+   </p>
+   <p>
+   </p>
+   <p>
+    Übrigens kann ich auch kein IPTV schauen, ist ab 16:00 unmöglich .
+   </p>
+   <p>
+   </p>
+   <p>
+    LG
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-03-20T20:37:17Z" title="2022-03-20 20:37 ">
+   März 20, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="47008" data-ipsquote-contentid="7651" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1647804381" data-ipsquote-userid="92162" data-ipsquote-username="Florian31">
+    <div class="ipsQuote_citation">
+     vor einer Stunde schrieb Florian31:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Weißt du auch zufällig, wie ich den Nat Typ offen bei Call of Duty bekomme ?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Versuche es mal, indem du auf der Indoor Unit die entsprechenden Portweiterleitungen einträgst.
+   </p>
+   <p>
+    <a href="https://support.activision.com/content/atvi/support/web/de/articles/ports-used-for-call-of-duty-games.html" rel="external nofollow">
+     https://support.activision.com/content/atvi/support/web/de/articles/ports-used-for-call-of-duty-games.html
+    </a>
+   </p>
+   <p>
+    Es könnte damit funktionieren, auch wenn es eigentlich nicht der Fall sein sollte.
+   </p>
+   <p>
+   </p>
+   <p>
+    Für Portweiterleitungen solltest du zuerst eine statische IP für die Konsole oder den PC konfigurieren.
+   </p>
+   <p>
+    Dies kannst du auf der Indoor-Einheit unter "Einstellungen" -&gt; "Verbindungen" -&gt; "LAN" machen.
+   </p>
+   <p>
+    Klicke dafür auf den Magenta-farbene Schaltfläche "DHCP-Reservierung".
+   </p>
+   <p>
+    Es öffnet sich dann ein kleines Fenster, in welchem alle verbundenen Geräte gelistet sind.
+   </p>
+   <p>
+    Solltest du deinen PC oder deine Konsole in der Liste anhand des Namens nicht ausfindig machen können, müsstest du in die Netzwerkeinstellungen deines PC oder deiner Konsole nachsehen, welche IP-Adresse, bzw. MAC Adresse diese(r) hat.
+   </p>
+   <p>
+    Wenn du weißt welches das richtige Gerät ist, markiere den entsprechenden Eintrag mit der Checkbox auf der rechten Seite und klicke dann auf "Clients hinzufügen".
+   </p>
+   <p>
+    Klicke anschließend rechts unten auf "Speichern".
+   </p>
+   <p>
+    Es werden dann alle Endgeräte die W-Lan/Lan-Verbindung für einige Sekunden verlieren.
+   </p>
+   <p>
+    Damit wird dein PC oder deine Konsole immer dieselbe PC-Adresse bekommen, wenn diese mit der Indoor-Einheit verbunden ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    Gehe dann zu "Einstellungen" -&gt; "Sicherheit" -&gt; "Port-Weiterleitung", um die die entsprechenden Portweiterleitungen einzutragen.
+   </p>
+   <p>
+    Der "Anwendungsname" ist egal was du eingibst (z.B. CoD1, CoD2, etc).
+   </p>
+   <p>
+    "Anzahl der Häfen" ist eine schlechte Übersetzung für Anzahl der Ports. Hier musst du eingeben wie viele Ports zu mit diesem Eintrag freigeben möchtest. Wenn du z.B. die Ports 3478 bis 3480 freigeben möchtest, musst du bei "Anzahl der Häfen" "3" eingeben. Wenn du nur einen Port mit dem Eintrag freigeben möchtest, dann eben nur "1"
+   </p>
+   <p>
+    External und Internal Ports sind identisch zu konfigurieren.
+   </p>
+   <p>
+    Als "Protokoll" entsprechend TCP und UDP auswählen.
+   </p>
+   <p>
+    Und als IP-Adresse die nun fixe IP-Adresse der Konsole oder des PC.
+   </p>
+   <p>
+    Nicht vergessen die Checkbox "aktiviert" zu aktivieren!!!
+   </p>
+   <p>
+    Und den Portweiterleitungseintrag dann mit "Übernehmen" speichern.
+   </p>
+   <p>
+   </p>
+   <p>
+    Alle Portweiterleitungen danach noch mit "Speichern" speichern.
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="47008" data-ipsquote-contentid="7651" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1647804381" data-ipsquote-userid="92162" data-ipsquote-username="Florian31">
+    <div class="ipsQuote_citation">
+     vor einer Stunde schrieb Florian31:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Übrigens kann ich auch kein IPTV schauen, ist ab 16:00 unmöglich .
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Wenn es nur zu bestimmten Zeiten nicht geht, dann liegt dies wohl an der Bandbreite.
+   </p>
+   <p>
+    Wie sehen Speedtests aus, wenn du Probleme mit dem IP-TV hast?
+   </p>
+   <p>
+    Speedtests am besten via Lan Kabel oder via 5GHz W-Lan machen.
+   </p>
+   <p>
+    <a href="https://www.netztest.at/de/" rel="external nofollow">
+     https://www.netztest.at/de/
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Um welchen IP-TV Anbieter handelt es sich?
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-03-20T20:37:46Z" title="2022-03-20 20:37 ">
+      März 20, 2022
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   PatrikG
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-15T08:16:43Z" title="2022-05-15 08:16 ">
+   Mai 15, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo hy ich hab mir den Router geholt und die Leistung ist Weltklasse aber ich bekomme den nat typ nicht auf moderat und die Anleitung funktioniert nicht bei mir da die Outdoor box nur per der app erreichbar.
+   </p>
+   <p>
+    Die indorbox ganz normal per Konfigurations Website  zu erreichen.
+   </p>
+   <p>
+    Den apn gprs business ist schon fertig vor eingerichtet  aber bei der Firewall finde ich nix
+   </p>
+   <p>
+    Hoffentlich kann mir jemand helfen mfg
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-15T09:59:53Z" title="2022-05-15 09:59 ">
+   Mai 15, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/93192-patrikg/?do=hovercard" data-mentionid="93192" href="https://community.magenta.at/profile/93192-patrikg/" rel="">
+     @PatrikG
+    </a>
+   </p>
+   <p>
+    Ohne Zugriff auf die Konfigurationswebseite der Outdoor-Einheit kann es leider nicht entsprechend konfiguriert werden.
+   </p>
+   <p>
+    Hast du den Link zur Konfigurationswebseite der Outdoor-Einheit aus dieser Anleitung angeklickt?
+    <a href="https://192.168.0.1" rel="">
+     https://192.168.0.1
+    </a>
+   </p>
+   <p>
+    Es sollte dann eine Sicherheitswarnung kommen, welche so okay ist und akzeptiert werden kann.
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_05/Screenshot_20220515-113356_Chrome.jpg.7220bbc2cf0fe0c70bca84b05088ace8.jpg" rel="external nofollow">
+     <img alt="Screenshot_20220515-113356_Chrome.thumb.jpg.69551cbd1b98588d58e30b4e55eabd89.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3880" src="images/uploads/Screenshot_20220515-113356_Chrome.thumb.jpg.69551cbd1b98588d58e30b4e55eabd89.jpg" style="width:150px;height:auto;"/>
+    </a>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_05/Screenshot_20220515-113402_Chrome.jpg.2055004ebe395a0db8c66518914bfae7.jpg" rel="external nofollow">
+     <img alt="Screenshot_20220515-113402_Chrome.thumb.jpg.3aaa660abf68b80ed40c656fa373586e.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3881" src="images/uploads/Screenshot_20220515-113402_Chrome.thumb.jpg.3aaa660abf68b80ed40c656fa373586e.jpg" style="width:150px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+    Beispiel für Chrome (alle Plattformen)
+   </p>
+   <p>
+   </p>
+   <p>
+    Es kann mehrere Anläufe brauchen bis die Konfigurationswebseite der Outdoor-Einheit funktioniert.
+   </p>
+   <p>
+   </p>
+   <p>
+    Sieh auch mal nach, ob die IP-Adresse bei dir doch anders ist. Gehe dazu auf die Konfigurationsseite der Indoor-Einheit, melde dich an und prüfe den Eintrag Standardgateway, ob die IP-Adresse abweicht.
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_05/IMG_1210.jpg.954e009fa198ebdd459e94fdbf7b3767.jpg" rel="external nofollow">
+     <img alt="IMG_1210.thumb.jpg.ceae8ec6fd3f480950e2d2fdb404d92f.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3882" src="images/uploads/IMG_1210.thumb.jpg.ceae8ec6fd3f480950e2d2fdb404d92f.jpg" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Mit was für einem Gerät hast du denn versucht auf die Konfigurationswebseite der Outdoor-Einheit zuzugreifen?
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   PatrikG
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-05-15T12:58:05Z" title="2022-05-15 12:58 ">
+   Mai 15, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hy ich Habs mit einem Huawei p30pro probiert.
+   </p>
+   <p>
+    Und bekomme jedes mal diese meldung
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Screenshot_20220515_174948_com.android.chrome.jpg.bc6f8a00a8eb129b24964757f1117435.jpg">
+     <img alt="Screenshot_20220515_174948_com.android.chrome.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3883" src="images/uploads/Screenshot_20220515_174948_com.android.chrome.thumb.jpg.213dc203fcb382a166da6702cb43fe68.jpg"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-05-15T15:50:43Z" title="2022-05-15 15:50 ">
+      Mai 15, 2022
+     </time>
+     von PatrikG
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Rafael
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-07-13T12:59:28Z" title="2022-07-13 12:59 ">
+   Juli 13, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46990" data-ipsquote-contentid="7651" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1647562329" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 18.3.2022 um 01:12 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      In dieser Anleitung erfährst du wie du den NAT Typ deiner Spielekonsole bei der Magenta 5G Box Outdoor ändern kannst.
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       0. Vorbereitung:
+      </strong>
+     </p>
+     <p>
+      Die Anleitung setzt voraus, dass das 5G Outdoor Set bereits laut Anleitung/App eingerichtet wurde und ein Gerät mit einem Webbrowser (Handy, Tablet, Laptop, PC, etc.) per Lan oder W-Lan mit der Indoor-Einheit verbunden ist.
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       1. Business APN auf der Outdoor-Einheit einrichten:
+      </strong>
+     </p>
+     <p>
+      Damit die Outdoor Unit eine öffentliche IP-Adresse bekommt, musst du den APN auf der Outdoor-Einheit ändern.
+     </p>
+     <p>
+      Der Business APN funktioniert auch für Privatkunden.
+     </p>
+     <p>
+     </p>
+     <p>
+      Besuche mit deinem Gerät die Konfigurationsseite der Outdoor-Einheit unter
+      <a href="https://192.168.0.1" rel="">
+       https://192.168.0.1
+      </a>
+      . Es kann eine Meldung kommen, dass diese Verbindung nicht privat ist. In diesem Fall auf "Erweitert" und dann auf zum Beispiel "Weiter zu 192.168.0.1 (unsicher)" oder "Risiko akzeptieren und fortfahren" klicken.
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.011abdde7dc16eaf7bb09eac55ce2074.png" rel="external nofollow">
+       <img alt="image.thumb.png.0e1a7fb69e10658a85c4e12d9dfc8bec.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3741" src="images/uploads/image.thumb.png.0e1a7fb69e10658a85c4e12d9dfc8bec.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+      Auf der Konfigurationsseite angekommen müssen die Anmeldedaten eingegeben werden. Diese stehen auf der einem Aufkleber auf der Kurzanleitung, sowie auf einem Aufkleber unter dem vorderen Standfuß der Indoor-Einheit. Der Benutzername ist dabei immer "admin".
+     </p>
+     <p>
+     </p>
+     <p>
+      Nach dem Anmelden gehe zu "Einstellungen" -&gt; "Einwahl" -&gt; "MPDN-Management".
+     </p>
+     <p>
+      Auf einem PC, Laptop oder Tablet:
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.43345b6a1dd07849c5e173005591911e.png" rel="external nofollow">
+       <img alt="image.thumb.png.0855df6158d5a09a0a15a96aa5e29081.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3743" src="images/uploads/image.thumb.png.0855df6158d5a09a0a15a96aa5e29081.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+      Auf einem Handy oder Tablet:
+     </p>
+     <p>
+      <a data-fileid="3744" href="images/uploads/image.png.dadcd55228335a1c955ee7d11b45d7f5.png" rel="" title="Bild vergrößern">
+       <img alt="image.png.dadcd55228335a1c955ee7d11b45d7f5.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3744" src="images/uploads/image.png.dadcd55228335a1c955ee7d11b45d7f5.png" style="width:150px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Konfiguriere hier den Business APN mit den folgenden Einstellungen.
+     </p>
+     <p>
+      Wähle aus der Liste APN-Name "business.gprsinternet" aus, stelle die Authentifizierung auf "PAP", gebe als Benutzername "t-mobile" ein und als Passwort "tm". Nicht vergessen auf "Anwenden" zu klicken!
+     </p>
+     <p>
+      Auf einem PC, Laptop oder Tablet:
+      <br/>
+      <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.57b88b092667109c7a8f6c167c25d0df.png" rel="external nofollow">
+       <img alt="image.thumb.png.93c0e17abb239ba7e52954ef271f7036.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3745" src="images/uploads/image.thumb.png.93c0e17abb239ba7e52954ef271f7036.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+      Auf einem Handy oder Tablet:
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.65a11908c9bda4215c6f5d43f5373472.png" rel="external nofollow" style="background-color:rgb(255,255,255);">
+       <img alt="image.thumb.png.68948875a8f8e5dc80ae04f4885cf23c.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3746" src="images/uploads/image.thumb.png.68948875a8f8e5dc80ae04f4885cf23c.png" style="width:100px;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Trenne nun das lange weiße Lan Kabel für einige Sekunden von dem Netzteil (PoE Adapter) der Outdoor-Einheit und schließe dieses anschließend wieder an, damit die Outdoor-einheit neu startet.
+     </p>
+     <p>
+     </p>
+     <p>
+      Melde dich anschließend wieder bei der Konfigurationsseite der Outdoor-Einheit unter
+      <a href="https://192.168.0.1" rel="">
+       https://192.168.0.1
+      </a>
+      an.
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       2. Firewall der Outdoor-Einheit konfigurieren:
+      </strong>
+     </p>
+     <p>
+      Wieder zurück auf der Konfigurationsseite der Outdoor-Einheit ist der nächste Schritt die Konfiguration der Firewall.
+     </p>
+     <p>
+     </p>
+     <p>
+      Gehe dafür zu "Einstellungen" -&gt; "Sicherheit" -&gt; "Firewall-Schalter". Nicht vergessen auf "Anwenden" zu klicken! Das Übernehmen der Einstellung kann ein paar Sekunden dauern.
+     </p>
+     <p>
+      Auf einem PC, Laptop oder Tablet:
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.5110cf199c652c85c8704d5c1d4f3f79.png" rel="external nofollow">
+       <img alt="image.thumb.png.494da29a31e25cb84c84ab65b682561d.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3747" src="images/uploads/image.thumb.png.494da29a31e25cb84c84ab65b682561d.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Auf einem Handy oder Tablet:
+     </p>
+     <p>
+      <a data-fileid="3749" href="images/uploads/image.png.b0328d518ddb75cc7002bd852de568e6.png" rel="" title="Bild vergrößern">
+       <img alt="image.png.b0328d518ddb75cc7002bd852de568e6.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3749" src="images/uploads/image.png.b0328d518ddb75cc7002bd852de568e6.png" style="width:150px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Stelle nun die "Sicherheitsstufe" der Firewall von "Mittel" auf "Niedrig".
+     </p>
+     <p>
+      Auf einem PC, Laptop oder Tablet:
+     </p>
+     <p>
+     </p>
+     <p>
+      <a data-fileid="3750" href="images/uploads/image.thumb.png.78281ca861720cfe5b1739a6ef8a298d.png" rel="" title="Bild vergrößern">
+       <img alt="image.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3750" src="images/uploads/image.thumb.png.78281ca861720cfe5b1739a6ef8a298d.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Auf einem Handy oder Tablet:
+     </p>
+     <p>
+      <a data-fileid="3752" href="images/uploads/image.png.c932fbaa5ba0ba016153121f75d4ff1b.png" rel="" title="Bild vergrößern">
+       <img alt="image.png.c932fbaa5ba0ba016153121f75d4ff1b.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3752" src="images/uploads/image.png.c932fbaa5ba0ba016153121f75d4ff1b.png" style="width:150px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Damit ist die Firewall konfiguriert.
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       3. DMZ der Outdoor-Einheit Konfigurieren:
+      </strong>
+     </p>
+     <p>
+      Zur Konfiguration der DMZ wird die MAC-Adresse der Indoor-Einheit benötigt.
+     </p>
+     <p>
+      Rufe dafür auf der Konfigurationsseite der Indoor-Einheit unter
+      <a href="http://192.168.1.1" rel="">
+       http://192.168.1.1
+      </a>
+      auf.
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.a5f8f1e64871f1ea538fc25419ca436b.png" rel="external nofollow">
+       <img alt="image.thumb.png.eec9e6dd79b15ed53c2c55725031b469.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3753" src="images/uploads/image.thumb.png.eec9e6dd79b15ed53c2c55725031b469.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Zum Anmelden muss das Passwort, welches rechts unten auf dem großen Aufkleber auf Indoor-Einheit aufgedruckt ist, eingegeben werden.
+     </p>
+     <p>
+      Auf der Startseite der Konfigurationsseite wird die MAC Adresse direkt ausgegeben.
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.a8668a4f7e7d4cfc06700420d0a3981f.png" rel="external nofollow">
+       <img alt="image.thumb.png.2653fc5c7021db067b995b7a5cf84e8f.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3755" src="images/uploads/image.thumb.png.2653fc5c7021db067b995b7a5cf84e8f.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Diese kann nun kopiert werden.
+     </p>
+     <p>
+      Wechsle nun zurück zur Konfigurationsseite der Outdoor-Einheit und wechsle zu "Einstellungen" -&gt; "NAT" -&gt; "DMZ".
+     </p>
+     <p>
+      Auf einem PC, Laptop oder Tablet:
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.445eebaebead13e1b616aab154a663a3.png" rel="external nofollow">
+       <img alt="image.thumb.png.794a3defbcac1243018c63d06e3aa1d9.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3756" src="images/uploads/image.thumb.png.794a3defbcac1243018c63d06e3aa1d9.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+      Auf einem Handy oder Tablet:
+     </p>
+     <p>
+      <a data-fileid="3757" href="images/uploads/image.png.db8013940bb5c7d14bb5958b1e4764c0.png" rel="" title="Bild vergrößern">
+       <img alt="image.png.db8013940bb5c7d14bb5958b1e4764c0.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3757" src="images/uploads/image.png.db8013940bb5c7d14bb5958b1e4764c0.png" style="width:150px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Wähle nun die Option "DMZ MAC" und füge anschließend in das Textfeld "DMZ MAC adresse" die MAC Adresse der Indoor-Einheit ein. Nicht vergessen auf "Anwenden" zu klicken!
+     </p>
+     <p>
+      Auf einem PC, Laptop oder Tablet:
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.76371f7025580f6ce00e15d8573f77bb.png" rel="external nofollow" style="background-color:rgb(255,255,255);">
+       <img alt="image.thumb.png.b7001cde93e8c6b7495fea596d9efb2e.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3758" src="images/uploads/image.thumb.png.b7001cde93e8c6b7495fea596d9efb2e.png" style="width:300px;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Auf einem Handy oder Tablet:
+     </p>
+     <p>
+     </p>
+     <p>
+      <a data-fileid="3760" href="images/uploads/image.png.4f81da1013973fb0eb5ee7597e0db81c.png" rel="" title="Bild vergrößern">
+       <img alt="image.png.4f81da1013973fb0eb5ee7597e0db81c.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3760" src="images/uploads/image.png.4f81da1013973fb0eb5ee7597e0db81c.png" style="width:200px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+      <strong>
+       4. UPnP Einstellungen auf der Indoor-Einheit aktivieren:
+      </strong>
+     </p>
+     <p>
+      Wechsle nun wieder zurück zur Konfigurationsseite der Indoor-Einheit.
+     </p>
+     <p>
+     </p>
+     <p>
+      Gehe hier zu "Einstellungen" -&gt; "Sicherheit" -&gt; "UPnP".
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileid="3761" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.1354deca1fa3dd4c40678b779935ba42.png" rel="external nofollow">
+       <img alt="image.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3761" src="images/uploads/image.thumb.png.d252e21ba760b6d2324ebe3d17baaa87.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Stelle sicher das die Checkbox "UPnP aktivieren" aktiv ist.
+     </p>
+     <p>
+      Falls dies nicht der Fall ist, klicke diese einmal an. Anschließend nicht vergessen auf "Speichern" zu klicken!
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.b6974bbe8098ba9a438e5f8aed5b711a.png" rel="external nofollow">
+       <img alt="image.thumb.png.a807683f24f1ea82602e90fe3793b850.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3762" src="images/uploads/image.thumb.png.a807683f24f1ea82602e90fe3793b850.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+      <strong>
+       5. Fertig!
+      </strong>
+     </p>
+     <p>
+      Damit sollte nun ein Moderater NAT bzw. NAT-Typ B auf der Konsole möglich sein.
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+     <p>
+      Getestet wurde diese Anleitung mit dem Verbindungstest einer Nintendo Switch.
+     </p>
+     <p>
+      Sollte es Anmerkungen zu dieser Anleitung geben, bitte diese hier posten.
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+     @NTM
+    </a>
+    ich habe noch eine Frage zur "DMZ MAC" Einstellung. Ich habe gerade eine FritzBox 4060 bei der ODU angeschlossen und demenstprechend die MAC Adresse der FritzBox 4060 eingegeben. Firewall habe ich auf "Niedrig" belassen. Funktioniert auch alles problemlos und der NAT-Typ auf der PS4 ist auf "Moderat". Bevor ich jedoch die MAC-Adresse der FritzBox 4060 eingegeben habe, habe ich DMZ deaktiviert und einen Test bei der PS4 durchgeführt, hier hatte ich auch NAT-Typ "Moderat". Daher meine Frage, sollte die DMZ-MAC trotzdem aktiviert werden? Wofür ist die DMZ-MAC Einstellung genau, was macht diese?
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielen Dank im Voraus.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="3 yr" datetime="2022-07-13T14:47:42Z" title="2022-07-13 14:47 ">
+      Juli 13, 2022
+     </time>
+     von Rafael
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   SH12
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-07-24T15:50:19Z" title="2022-07-24 15:50 ">
+   Juli 24, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hätte noch eine ähnliche Frage an die Experten unter euch:
+   </p>
+   <p>
+    Ich kämpfe jetzt seit 2 Wochen damit eine Port-Weiterleitung von extern 5xxx auf 80 zu konfigurieren mit dem Outdoor Set 5G.
+   </p>
+   <p>
+    Magenta konnte / wollte mir bis dato trotz unzähliger Versuche nicht helfen:
+   </p>
+   <p>
+    Ich habe folgendes bereits umgesetzt:
+   </p>
+   <ol>
+    <li>
+     APN aus business.gprsinternet geändert wie beschrieben.
+    </li>
+    <li>
+     Firewall abgeschwächt oder ganz aufgehoben wie beschrieben
+    </li>
+    <li>
+     Alle obigen Schritte bzgl. NAT Typ durchgeführt.
+    </li>
+    <li>
+     Port Weiterleitung auf dem Router durchgeführt für fixe IP im Netzwerk (laut Magenta müssen mind. 2 Ports freigegeben werden, bei einem funktioniert es nicht)
+    </li>
+    <li>
+     Firewall am Router ist komplett ausgeschaltet.
+    </li>
+   </ol>
+   <p>
+    Trotzdem ist der Port auf meiner public IP nachhwievor geschlossen und auch der Zugriff nicht möglich.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hat jemand eine Idee was hier noch fehlen könnte?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   aoswald
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-01-02T17:30:44Z" title="2023-01-02 17:30 ">
+   Januar 2, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe die Indoor Einheit weggelassen und die Outdoor Unit im Brückenmodus mit dem APN gprsinternet und die Firewall abgeschalten.
+   </p>
+   <p>
+    Leider komme ich - was auch immer eingestellt wird nicht auf meine dyndns Domains die intern zugeteilt sind.
+   </p>
+   <p>
+    Der Support ist leider - wenn auch bemüht nicht unbedingt eine Hilfe. Hat vielleicht noch jemand einen Tipp was umgestellt werden muss, damit das funktioniert. Bzw hat jemand eine Konfiguration nur mit der Outdoor Unit wo der Zugriff auf interne Server von aussen funktioniert.
+   </p>
+   <p>
+    Danke
+   </p>
+   <p>
+    lG
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   aoswald
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-01-04T21:27:44Z" title="2023-01-04 21:27 ">
+   Januar 4, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="50465" data-ipsquote-contentid="7651" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1672680644" data-ipsquote-userid="95449" data-ipsquote-username="aoswald">
+    <div class="ipsQuote_citation">
+     Am 2.1.2023 um 18:30 schrieb aoswald:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich habe die Indoor Einheit weggelassen und die Outdoor Unit im Brückenmodus mit dem APN gprsinternet und die Firewall abgeschalten.
+     </p>
+     <p>
+      Leider komme ich - was auch immer eingestellt wird nicht auf meine dyndns Domains die intern zugeteilt sind.
+     </p>
+     <p>
+      Der Support ist leider - wenn auch bemüht nicht unbedingt eine Hilfe. Hat vielleicht noch jemand einen Tipp was umgestellt werden muss, damit das funktioniert. Bzw hat jemand eine Konfiguration nur mit der Outdoor Unit wo der Zugriff auf interne Server von aussen funktioniert.
+     </p>
+     <p>
+      Danke
+     </p>
+     <p>
+      lG
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Habe eine Lösung gefunden. Die Authentication am APN von Auto auf PAP umgestellt - nun funktioniert der Zugriff
+   </p>
+   <p>
+    lG
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Beni10
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-04-05T19:28:07Z" title="2023-04-05 19:28 ">
+   April 5, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo, kann mir vieleicht jemand helfen.
+   </p>
+   <p>
+    ich brauche die portfreigabe für meine ps5.
+   </p>
+   <p>
+    hab aber null plan wie ich vorgehen muss.
+   </p>
+   <p>
+   </p>
+   <p>
+    gruß beni
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Screenshot_20230405_084131_Facebook.jpg.0aabc67d28555a99b9b798be9b00a2d3.jpg">
+     <img alt="Screenshot_20230405_084131_Facebook.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="4741" src="images/uploads/Screenshot_20230405_084131_Facebook.thumb.jpg.7daf94fa5c38780618d8826b4a29f24e.jpg"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-04-05T22:04:19Z" title="2023-04-05 22:04 ">
+   April 5, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96871-beni10/?do=hovercard" data-mentionid="96871" href="https://community.magenta.at/profile/96871-beni10/" rel="">
+     @Beni10
+    </a>
+   </p>
+   <p>
+    Wenn es um die Magenta 5G Box Outdoor geht, hast du schon meine Anleitung im ersten Beitrag dieses Themas angesehen, wo alles Schritt für Schritt erklärt ist wie du zu einem entsprechenden NAT-Typ kommst, damit du online spielen kannst (ohne manuelle Portweiterleitung)?
+   </p>
+   <p>
+    Wenn es um ein anderes Gerät geht, würde sich ein anderes Thema wohl besser eignen.
+   </p>
+   <p>
+    LG NTM
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="2 yr" datetime="2023-04-05T22:06:27Z" title="2023-04-05 22:06 ">
+      April 5, 2023
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Beni10
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-04-13T11:38:39Z" title="2023-04-13 11:38 ">
+   April 13, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Ntm,
+   </p>
+   <p>
+   </p>
+   <p>
+    ja das hab ich gemacht und hat wunderbar geklappt. aber der eine aus FB (siehe foto) spricht von einer portfreigabe das ist ja denk ich wieder was anderes?
+   </p>
+   <p>
+   </p>
+   <p>
+    lg beni
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-03-25T11:23:12Z" title="2024-03-25 11:23 ">
+   März 25, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Super Box will sie auch kaufen aber meine Frage wie viel Mu Mimo hat der 4x4 oder 2x2 ? Man findet leider nur wenige Infos auch auf der Homepage von dieser Marke ! Eher unbekannt für mich! Möchte den Xiaomi aus Tauschen den AX5400 eigentlich auf die Outdoor Box !
+   </p>
+   <p>
+   </p>
+   <p>
+    Der Empfang ist ja für Outdoor aber geht der innen auch zur Not ! Eventuell Vermieter was dagegen!
+   </p>
+   <p>
+   </p>
+   <p>
+    Und Band N75 hat der auch ?
+   </p>
+   <p>
+   </p>
+   <p>
+    Wie seit ihr zufrieden damit zum Beispiel in Wien ?
+   </p>
+   <p>
+   </p>
+   <p>
+    Interessant wäre halt Band n75 und Mimo bei 5GHZ
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke mfg klaximaxi
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-03-25T11:23:55Z" title="2024-03-25 11:23 ">
+      März 25, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-03-25T13:41:22Z" title="2024-03-25 13:41 ">
+   März 25, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98130-klaximaxi43/?do=hovercard" data-mentionid="98130" href="https://community.magenta.at/profile/98130-klaximaxi43/" rel="">
+     @Klaximaxi43
+    </a>
+   </p>
+   <p>
+    Die Outdoor-Einheit hat kein n75. Das Produkt gibt es seit 2021, da gab es noch keine Geräte mit n75.
+    <br/>
+    Die Indoor-Einheit hat denke ich nur 2x2 MiMo. Aber vielleicht weiß da ein Admin oder Moderator mehr.
+   </p>
+   <p>
+    Nachdem du in Wien bist, ist bei dir denn kein Magenta Kabel-Internet verfügbar?
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   msk98
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-04-23T06:33:35Z" title="2024-04-23 06:33 ">
+   April 23, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi,
+   </p>
+   <p>
+    ich habe auch das Problem, dass ich auf NAT TYP 3 (strikt) an meiner PS5 bin,
+   </p>
+   <p>
+    Wollte gestern den Router ändern wie hier beschrieben, aber es gibt das Menü Einwahl und MPDN Management nicht einmal?
+   </p>
+   <p>
+    Des weiteren hängt meine PS5 an einem Lan kabel, das vom 1. Cube meines Meshnetzwerkes verbunden ist,also von dem Cube in dem das Lan Kabel auch vom Magenta Router reingeht. Ich habe das Mesh-System auf Bridge umgestellt von DHCP, aber hat jetzt auch nichts gebracht.
+   </p>
+   <p>
+   </p>
+   <p>
+    Leider bin ich absolut kein It- Profi und finde dieses rummurxen im Netzwerk nur für so ein Ps5 Dingsi finde ich unglaublich nervig. Aber mit einem 150er Ping braucht man nicht spielen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Freue mich um Hilfe.
+   </p>
+   <p>
+   </p>
+   <p>
+    mfg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-04-24T08:39:29Z" title="2024-04-24 08:39 ">
+   April 24, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Mache mal die Public apn rein glaube das hilft
+   </p>
+   <p>
+   </p>
+   <p>
+    Mein Sohn hatte damals sowas mit Nat das Problem aber war Nat 2 bzw im Router umstellen
+   </p>
+   <p>
+   </p>
+   <p>
+    Das sollte dein Problem lösen
+   </p>
+   <p>
+   </p>
+   <p>
+    APN: business.gprsinternet
+   </p>
+   <p>
+    Nutzername t-mobile
+   </p>
+   <p>
+    Passwort tm
+   </p>
+   <p>
+    Authentifizierungstyp PAP
+   </p>
+   <p>
+   </p>
+   <p>
+    P.s. wie zufrieden bist du mit den Outdoor router geht er auch innen oder echt nur aussen und Empfang??
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-04-24T08:43:35Z" title="2024-04-24 08:43 ">
+      April 24, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-04-24T11:17:36Z" title="2024-04-24 11:17 ">
+   April 24, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ist das eigentlich auch dabei der Stand danke
+   </p>
+   <p>
+   </p>
+   <p>
+    Kann das wer sagen ? Mfg
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/maxresdefault.jpg.b27c156ab109d1b24bf64bd7bb56fdfb.jpg">
+     <img alt="maxresdefault.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="5551" data-ratio="56.2" src="images/uploads/maxresdefault.thumb.jpg.f1006eac38e28686823bc63739f687e0.jpg" width="1000"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/4aa6852c4255b4fcee4f08423095.jpeg.330a4309a8f3c4b0df76e91af869ccd5.jpeg">
+     <img alt="4aa6852c4255b4fcee4f08423095.jpeg" class="ipsImage ipsImage_thumbnailed" data-fileid="5552" data-ratio="77.8" src="images/uploads/4aa6852c4255b4fcee4f08423095.thumb.jpeg.f2563ed40c62ac64da8f6a086efa7b3c.jpeg" width="964"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   msk98
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-04-24T13:58:37Z" title="2024-04-24 13:58 ">
+   April 24, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi,
+   </p>
+   <p>
+   </p>
+   <p>
+    der Stand war bei mir nicht dabei - ich werde das mit APN mal versuchen
+   </p>
+   <p>
+   </p>
+   <p>
+    ich bin sehr zufrieden ich habe jetzt stabile 250+ mb download und hatte vorher mit allen anderen max 100mbit, wohne in den Bergen usw. also von der Datenleistung bin ich äußerst happy
+   </p>
+   <p>
+    lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   msk98
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-04-24T14:04:21Z" title="2024-04-24 14:04 ">
+   April 24, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="57286" data-ipsquote-contentid="7651" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1713957456" data-ipsquote-userid="98130" data-ipsquote-username="Klaximaxi43">
+    <div class="ipsQuote_citation">
+     Am 24.4.2024 um 13:17 schrieb Klaximaxi43:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ist das eigentlich auch dabei der Stand danke
+     </p>
+     <p>
+     </p>
+     <p>
+      Kann das wer sagen ? Mfg
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="jpg" data-fileid="5551" href="images/uploads/maxresdefault.jpg.b27c156ab109d1b24bf64bd7bb56fdfb.jpg" rel="">
+       <img alt="maxresdefault.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="5551" data-ratio="56.2" src="images/uploads/maxresdefault.thumb.jpg.f1006eac38e28686823bc63739f687e0.jpg" width="1000"/>
+      </a>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="jpeg" data-fileid="5552" href="images/uploads/4aa6852c4255b4fcee4f08423095.jpeg.330a4309a8f3c4b0df76e91af869ccd5.jpeg" rel="">
+       <img alt="4aa6852c4255b4fcee4f08423095.jpeg" class="ipsImage ipsImage_thumbnailed" data-fileid="5552" data-ratio="77.8" src="images/uploads/4aa6852c4255b4fcee4f08423095.thumb.jpeg.f2563ed40c62ac64da8f6a086efa7b3c.jpeg" width="964"/>
+      </a>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="57284" data-ipsquote-contentid="7651" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1713947969" data-ipsquote-userid="98130" data-ipsquote-username="Klaximaxi43">
+    <div class="ipsQuote_citation">
+     Am 24.4.2024 um 10:39 schrieb Klaximaxi43:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Mache mal die Public apn rein glaube das hilft
+     </p>
+     <p>
+     </p>
+     <p>
+      Mein Sohn hatte damals sowas mit Nat das Problem aber war Nat 2 bzw im Router umstellen
+     </p>
+     <p>
+     </p>
+     <p>
+      Das sollte dein Problem lösen
+     </p>
+     <p>
+     </p>
+     <p>
+      APN: business.gprsinternet
+     </p>
+     <p>
+      Nutzername t-mobile
+     </p>
+     <p>
+      Passwort tm
+     </p>
+     <p>
+      Authentifizierungstyp PAP
+     </p>
+     <p>
+     </p>
+     <p>
+      P.s. wie zufrieden bist du mit den Outdoor router geht er auch innen oder echt nur aussen und Empfang??
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    kannst du mir erklären wo ich die APN einfügen muss?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-04-25T07:19:37Z" title="2024-04-25 07:19 ">
+   April 25, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey schau ganz oben im Thread da ist es beschrieben mit Bilder da ich die Box nicht habe gute Frage
+   </p>
+   <p>
+   </p>
+   <p>
+    Wollte sie zwar aus Spaß holen zum testen aber mit 2x2 Mimo und ohne den Stand lieber nicht
+   </p>
+   <p>
+   </p>
+   <p>
+    ZTE kann man vergessen
+   </p>
+   <p>
+   </p>
+   <p>
+    Xiaomi top
+   </p>
+   <p>
+   </p>
+   <p>
+    Zyxel geht so nicht zufrieden geht zurück
+   </p>
+   <p>
+   </p>
+   <p>
+    Heutzutage hat Xiaomi gewonnen bei mir
+    <span class="ipsEmoji">
+     😀
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-04-25T07:21:22Z" title="2024-04-25 07:21 ">
+      April 25, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-04-29T13:06:26Z" title="2024-04-29 13:06 ">
+   April 29, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Frage hätte mein Sohn eine Chance
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Pfeile sind die Fenster Seiten und das schwarze ein innen Hof also wie ein Quadrat die Wohnungen !
+   </p>
+   <p>
+   </p>
+   <p>
+    Blau ganz oben Nachbar
+   </p>
+   <p>
+   </p>
+   <p>
+    Lila meine Schwägerin andere Seite (senderkaster roter Pfeil Schwägerin Richtung Felder) !
+    <span class="ipsEmoji">
+     😄
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Grün wir oben
+   </p>
+   <p>
+   </p>
+   <p>
+    Gelb mein Sohn unter uns Fenster gleiche Seite und schaut eigentlich auf eine Mauer
+    <span class="ipsEmoji">
+     😜
+    </span>
+    Neubau
+   </p>
+   <p>
+   </p>
+   <p>
+    OK wir haben vollen Empfang
+   </p>
+   <p>
+   </p>
+   <p>
+    Aber mein Sohn unter uns gar keinen also nicht Mal Internet TV geht dann bei ihm etc
+    <span class="ipsEmoji">
+     😕
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Probiert mit mc888 pro , Xiaomi AX5400 , und Huawei b818 und mit Smartphones keine Chance
+   </p>
+   <p>
+   </p>
+   <p>
+    Wir und Nachbar haben ja top Empfang
+   </p>
+   <p>
+   </p>
+   <p>
+    Meine Schwägerin so halbwegs auf der anderen Seite
+   </p>
+   <p>
+   </p>
+   <p>
+    Also die Frage wäre hätte mein Sohn eine Chance mit den Outdoor router da ich ihn für 100 bekommen könnte heute morgen
+   </p>
+   <p>
+   </p>
+   <p>
+    Im Zeichnen war ich nie gut hehe Spaß keine Lust hehe
+   </p>
+   <p>
+   </p>
+   <p>
+    Notfalls von Nachbar oder uns ein Kabel runter aber ob erlaubt mmh wir dürfen hier nicht Mal eine sat Schüssel haben
+    <span class="ipsEmoji">
+     😡
+    </span>
+    und ja besser ist wäre jeder sein eigenes und daheim als wo anders das klar
+    <span class="ipsEmoji">
+     😄
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Am Balkon ging auch nix mit Indoor Router mmhh
+   </p>
+   <p>
+   </p>
+   <p>
+    Zur Not eine Teleskop Stange und oben montieren den Outdoor router ? Mfg
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5555" href="images/uploads/Screenshot_20240429-150243.png.5d918f7823f07d748be5933473ec9615.png" rel="">
+     <img alt="Screenshot_20240429-150243.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5555" data-ratio="166.67" src="images/uploads/Screenshot_20240429-150243.thumb.png.69ca6be826b1aa4bae851ce003e3c1ec.png" width="450"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5556" href="images/uploads/Screenshot_20240429-151017.png.3fd98f356b8fea920c20627a6cb7ca8c.png" rel="">
+     <img alt="Screenshot_20240429-151017.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5556" data-ratio="166.67" src="images/uploads/Screenshot_20240429-151017.thumb.png.ff00863ca02c99b25bcacbff19f100eb.png" width="450"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5557" href="images/uploads/Screenshot_20240429-151324.png.2d8733d93e960f5b6c43af9943d471c6.png" rel="">
+     <img alt="Screenshot_20240429-151324.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5557" data-ratio="166.67" src="images/uploads/Screenshot_20240429-151324.thumb.png.018bfdb3c0718a2129e5007909e38b5d.png" width="450"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Screenshot_20240429-151647.png.7ea5ea754c2d085a2eafd657abf8327b.png">
+     <img alt="Screenshot_20240429-151647.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5558" data-ratio="166.67" src="images/uploads/Screenshot_20240429-151647.thumb.png.6060e2143e94451373803fe56cffb20a.png" width="450"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-04-29T13:17:42Z" title="2024-04-29 13:17 ">
+      April 29, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-04-29T18:00:32Z" title="2024-04-29 18:00 ">
+   April 29, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es wird auf die Outdoor raus laufen da im Eck T-Mobile und a1 funktioniert es am Balkon am Eck der Rest wird sich ergeben also kaufe sie und er nimmt auch T-Mobile Karte dazu
+   </p>
+   <p>
+   </p>
+   <p>
+    Drei ist kein Empfang immer nur auf E Edge mmh
+   </p>
+   <p>
+   </p>
+   <p>
+    ZTE kommt nicht mehr in Frage bei uns in der Familie
+    <span class="ipsEmoji">
+     😉
+    </span>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-04-29T18:01:16Z" title="2024-04-29 18:01 ">
+      April 29, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-04-30T16:22:26Z" title="2024-04-30 16:22 ">
+   April 30, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    So gekauft für 100 top Zustand eigentlich für meinen Sohn aber was mich gleich stört 2x Strom ggrr dachte 1x eigentlich naja lesen sollte man ggrr gleich dünnes Bestellt LAN ! Falls er nix taugt weg damit und Indoor einfach am Balkon und fertig ! WLAN Router könnte man natürlich einen anderen nehmen das ja aber Strom bleibt ja 2x eigentlich ggrrr so ein Blödsinn! War zu spontan alles jetzt ggrr
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="jpg" data-fileid="5560" href="images/uploads/IMG_20240430_171120.jpg.d5896f1e441de603634e5e64ffeefb05.jpg" rel="">
+     <img alt="IMG_20240430_171120.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="5560" data-ratio="133.45" src="images/uploads/IMG_20240430_171120.thumb.jpg.04c3edddbc566a9f912aef8e54fa3819.jpg" width="562"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Screenshot_20240430-182309.png.efb373eb8c828e9b641b4a0a363b5bf1.png">
+     <img alt="Screenshot_20240430-182309.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5561" data-ratio="166.67" src="images/uploads/Screenshot_20240430-182309.thumb.png.7855fe02e571408c85e5a789a2def888.png" width="450"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-04-30T16:25:00Z" title="2024-04-30 16:25 ">
+      April 30, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-05-02T08:12:35Z" title="2024-05-02 08:12 ">
+   Mai 2, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey welches Update ist bei euch das letzte am Outlander Gerät und auf der Indoor Box kann das wer sagen aller letztes Update Versions Nummern von beide
+   </p>
+   <p>
+   </p>
+   <p>
+    Denke er macht das letzte nur mit T-Mobile Simkarte nicht mit a1 oder drei oder ?
+   </p>
+   <p>
+   </p>
+   <p>
+    Das mit Nat hat geklappt auf der Nintendo Switch
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke mfg
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-05-02T08:13:03Z" title="2024-05-02 08:13 ">
+      Mai 2, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-03-18T00:12:09Z" title="2022-03-18 00:12 ">
+   März 18, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    In dieser Anleitung erfährst du wie du den NAT Typ deiner Spielekonsole bei der Magenta 5G Box Outdoor ändern kannst.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     0. Vorbereitung:
+    </strong>
+   </p>
+   <p>
+    Die Anleitung setzt voraus, dass das 5G Outdoor Set bereits laut Anleitung/App eingerichtet wurde und ein Gerät mit einem Webbrowser (Handy, Tablet, Laptop, PC, etc.) per Lan oder W-Lan mit der Indoor-Einheit verbunden ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     1. Business APN auf der Outdoor-Einheit einrichten:
+    </strong>
+   </p>
+   <p>
+    Damit die Outdoor Unit eine öffentliche IP-Adresse bekommt, musst du den APN auf der Outdoor-Einheit ändern.
+   </p>
+   <p>
+    Der Business APN funktioniert auch für Privatkunden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Besuche mit deinem Gerät die Konfigurationsseite der Outdoor-Einheit unter
+    <a href="https://192.168.0.1" rel="">
+     https://192.168.0.1
+    </a>
+    . Es kann eine Meldung kommen, dass diese Verbindung nicht privat ist. In diesem Fall auf "Erweitert" und dann auf zum Beispiel "Weiter zu 192.168.0.1 (unsicher)" oder "Risiko akzeptieren und fortfahren" klicken.
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.011abdde7dc16eaf7bb09eac55ce2074.png" rel="external nofollow">
+     <img alt="image.thumb.png.0e1a7fb69e10658a85c4e12d9dfc8bec.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3741" src="images/uploads/image.thumb.png.0e1a7fb69e10658a85c4e12d9dfc8bec.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+    Auf der Konfigurationsseite angekommen müssen die Anmeldedaten eingegeben werden. Diese stehen auf der einem Aufkleber auf der Kurzanleitung, sowie auf einem Aufkleber unter dem vorderen Standfuß der Indoor-Einheit. Der Benutzername ist dabei immer "admin".
+   </p>
+   <p>
+   </p>
+   <p>
+    Nach dem Anmelden gehe zu "Einstellungen" -&gt; "Einwahl" -&gt; "MPDN-Management".
+   </p>
+   <p>
+    Auf einem PC, Laptop oder Tablet:
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.43345b6a1dd07849c5e173005591911e.png" rel="external nofollow">
+     <img alt="image.thumb.png.0855df6158d5a09a0a15a96aa5e29081.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3743" src="images/uploads/image.thumb.png.0855df6158d5a09a0a15a96aa5e29081.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+    Auf einem Handy oder Tablet:
+   </p>
+   <p>
+    <img alt="image.png.dadcd55228335a1c955ee7d11b45d7f5.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3744" src="images/uploads/image.png.dadcd55228335a1c955ee7d11b45d7f5.png" style="width:150px;height:auto;"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Konfiguriere hier den Business APN mit den folgenden Einstellungen.
+   </p>
+   <p>
+    Wähle aus der Liste APN-Name "business.gprsinternet" aus, stelle die Authentifizierung auf "PAP", gebe als Benutzername "t-mobile" ein und als Passwort "tm". Nicht vergessen auf "Anwenden" zu klicken!
+   </p>
+   <p>
+    Auf einem PC, Laptop oder Tablet:
+    <br>
+     <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.57b88b092667109c7a8f6c167c25d0df.png" rel="external nofollow">
+      <img alt="image.thumb.png.93c0e17abb239ba7e52954ef271f7036.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3745" src="images/uploads/image.thumb.png.93c0e17abb239ba7e52954ef271f7036.png" style="width:300px;height:auto;"/>
+     </a>
+    </br>
+   </p>
+   <p>
+    Auf einem Handy oder Tablet:
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.65a11908c9bda4215c6f5d43f5373472.png" rel="external nofollow" style="background-color:rgb(255,255,255);">
+     <img alt="image.thumb.png.68948875a8f8e5dc80ae04f4885cf23c.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3746" src="images/uploads/image.thumb.png.68948875a8f8e5dc80ae04f4885cf23c.png" style="width:100px;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Trenne nun das lange weiße Lan Kabel für einige Sekunden von dem Netzteil (PoE Adapter) der Outdoor-Einheit und schließe dieses anschließend wieder an, damit die Outdoor-einheit neu startet.
+   </p>
+   <p>
+   </p>
+   <p>
+    Melde dich anschließend wieder bei der Konfigurationsseite der Outdoor-Einheit unter
+    <a href="https://192.168.0.1" rel="">
+     https://192.168.0.1
+    </a>
+    an.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     2. Firewall der Outdoor-Einheit konfigurieren:
+    </strong>
+   </p>
+   <p>
+    Wieder zurück auf der Konfigurationsseite der Outdoor-Einheit ist der nächste Schritt die Konfiguration der Firewall.
+   </p>
+   <p>
+   </p>
+   <p>
+    Gehe dafür zu "Einstellungen" -&gt; "Sicherheit" -&gt; "Firewall-Schalter". Nicht vergessen auf "Anwenden" zu klicken! Das Übernehmen der Einstellung kann ein paar Sekunden dauern.
+   </p>
+   <p>
+    Auf einem PC, Laptop oder Tablet:
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.5110cf199c652c85c8704d5c1d4f3f79.png" rel="external nofollow">
+     <img alt="image.thumb.png.494da29a31e25cb84c84ab65b682561d.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3747" src="images/uploads/image.thumb.png.494da29a31e25cb84c84ab65b682561d.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf einem Handy oder Tablet:
+   </p>
+   <p>
+    <img alt="image.png.b0328d518ddb75cc7002bd852de568e6.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3749" src="images/uploads/image.png.b0328d518ddb75cc7002bd852de568e6.png" style="width:150px;height:auto;"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Stelle nun die "Sicherheitsstufe" der Firewall von "Mittel" auf "Niedrig".
+   </p>
+   <p>
+    Auf einem PC, Laptop oder Tablet:
+   </p>
+   <p>
+   </p>
+   <p>
+    <img alt="image.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3750" src="images/uploads/image.thumb.png.78281ca861720cfe5b1739a6ef8a298d.png" style="width: 300px; height: auto;"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf einem Handy oder Tablet:
+   </p>
+   <p>
+    <img alt="image.png.c932fbaa5ba0ba016153121f75d4ff1b.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3752" src="images/uploads/image.png.c932fbaa5ba0ba016153121f75d4ff1b.png" style="width:150px;height:auto;"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Damit ist die Firewall konfiguriert.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     3. DMZ der Outdoor-Einheit Konfigurieren:
+    </strong>
+   </p>
+   <p>
+    Zur Konfiguration der DMZ wird die MAC-Adresse der Indoor-Einheit benötigt.
+   </p>
+   <p>
+    Rufe dafür auf der Konfigurationsseite der Indoor-Einheit unter
+    <a href="http://192.168.1.1" rel="">
+     http://192.168.1.1
+    </a>
+    auf.
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.a5f8f1e64871f1ea538fc25419ca436b.png" rel="external nofollow">
+     <img alt="image.thumb.png.eec9e6dd79b15ed53c2c55725031b469.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3753" src="images/uploads/image.thumb.png.eec9e6dd79b15ed53c2c55725031b469.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Zum Anmelden muss das Passwort, welches rechts unten auf dem großen Aufkleber auf Indoor-Einheit aufgedruckt ist, eingegeben werden.
+   </p>
+   <p>
+    Auf der Startseite der Konfigurationsseite wird die MAC Adresse direkt ausgegeben.
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.a8668a4f7e7d4cfc06700420d0a3981f.png" rel="external nofollow">
+     <img alt="image.thumb.png.2653fc5c7021db067b995b7a5cf84e8f.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3755" src="images/uploads/image.thumb.png.2653fc5c7021db067b995b7a5cf84e8f.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Diese kann nun kopiert werden.
+   </p>
+   <p>
+    Wechsle nun zurück zur Konfigurationsseite der Outdoor-Einheit und wechsle zu "Einstellungen" -&gt; "NAT" -&gt; "DMZ".
+   </p>
+   <p>
+    Auf einem PC, Laptop oder Tablet:
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.445eebaebead13e1b616aab154a663a3.png" rel="external nofollow">
+     <img alt="image.thumb.png.794a3defbcac1243018c63d06e3aa1d9.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3756" src="images/uploads/image.thumb.png.794a3defbcac1243018c63d06e3aa1d9.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+    Auf einem Handy oder Tablet:
+   </p>
+   <p>
+    <img alt="image.png.db8013940bb5c7d14bb5958b1e4764c0.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3757" src="images/uploads/image.png.db8013940bb5c7d14bb5958b1e4764c0.png" style="width:150px;height:auto;"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Wähle nun die Option "DMZ MAC" und füge anschließend in das Textfeld "DMZ MAC adresse" die MAC Adresse der Indoor-Einheit ein. Nicht vergessen auf "Anwenden" zu klicken!
+   </p>
+   <p>
+    Auf einem PC, Laptop oder Tablet:
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.76371f7025580f6ce00e15d8573f77bb.png" rel="external nofollow" style="background-color:rgb(255,255,255);">
+     <img alt="image.thumb.png.b7001cde93e8c6b7495fea596d9efb2e.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3758" src="images/uploads/image.thumb.png.b7001cde93e8c6b7495fea596d9efb2e.png" style="width:300px;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf einem Handy oder Tablet:
+   </p>
+   <p>
+   </p>
+   <p>
+    <img alt="image.png.4f81da1013973fb0eb5ee7597e0db81c.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3760" src="images/uploads/image.png.4f81da1013973fb0eb5ee7597e0db81c.png" style="width:200px;height:auto;"/>
+   </p>
+   <p>
+    <strong>
+     4. UPnP Einstellungen auf der Indoor-Einheit aktivieren:
+    </strong>
+   </p>
+   <p>
+    Wechsle nun wieder zurück zur Konfigurationsseite der Indoor-Einheit.
+   </p>
+   <p>
+   </p>
+   <p>
+    Gehe hier zu "Einstellungen" -&gt; "Sicherheit" -&gt; "UPnP".
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="3761" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.1354deca1fa3dd4c40678b779935ba42.png" rel="external nofollow">
+     <img alt="image.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3761" data-unique="qfpifjz9d" src="images/uploads/image.thumb.png.d252e21ba760b6d2324ebe3d17baaa87.png" style="width: 300px; height: auto;"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Stelle sicher das die Checkbox "UPnP aktivieren" aktiv ist.
+   </p>
+   <p>
+    Falls dies nicht der Fall ist, klicke diese einmal an. Anschließend nicht vergessen auf "Speichern" zu klicken!
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2022_03/image.png.b6974bbe8098ba9a438e5f8aed5b711a.png" rel="external nofollow">
+     <img alt="image.thumb.png.a807683f24f1ea82602e90fe3793b850.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3762" src="images/uploads/image.thumb.png.a807683f24f1ea82602e90fe3793b850.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <p>
+    <strong>
+     5. Fertig!
+    </strong>
+   </p>
+   <p>
+    Damit sollte nun ein Moderater NAT bzw. NAT-Typ B auf der Konsole möglich sein.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Getestet wurde diese Anleitung mit dem Verbindungstest einer Nintendo Switch.
+   </p>
+   <p>
+    Sollte es Anmerkungen zu dieser Anleitung geben, bitte diese hier posten.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-05-02T20:49:24Z" title="2024-05-02 20:49 ">
+   Mai 2, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    So bekomme auch einen leider 120 Euro aber Versand dabei schon bin echt faszinierend von den Gerät
+   </p>
+   <p>
+   </p>
+   <p>
+    Empfehle es weiter
+    <span class="ipsEmoji">
+     😉
+    </span>
+    denke bis 2025 bleibt der mal fix
+   </p>
+   <p>
+   </p>
+   <p>
+    Sohn ist auch mehr als begeistert
+   </p>
+   <p>
+   </p>
+   <p>
+    P.s. das flache LAN Kabel passt auch perfekt dazu von Amazon empfehle es auch weiter
+   </p>
+   <p>
+   </p>
+   <p>
+    Mfg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-05-04T20:31:50Z" title="2024-05-04 20:31 ">
+   Mai 4, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    So nur noch 1 x Strom Kabel statt 2 mit dem oder sowas halt
+   </p>
+   <p>
+   </p>
+   <p>
+    <a href="https://www.amazon.de/REVODATA-Kompatibel-IEEE802-3af-PoE-Adapter-PS5712TG-25/dp/B09CYGW46K/ref=sr_1_4?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=KJKBGKYOLTIF&amp;dib=eyJ2IjoiMSJ9.-m0xuZNSq3rz4EjoQRwJI1JLOvNVCDutp5blbUhgitAsPFpUxe6eGbxBxyXuZfZ7HVZatvlU48v9AFs1Hxof7LE6FFxULxyhyCcePoMWFM8dHNV3qhedRhW09aQ2DmNx9WLxZ4te5SSSu1Cy2EdFUa9WBciFpJi_Cy_R5momMrQh-M1OEmlH36v9TDdzQcqQT6a7yEHPT4VXqSaI9FMQBL-JSD9ljn7NhVbwCrNHQCtYP3KUof6wZ664Ro7YhYlAA9YWhGfdK4mxiVz_4pw2Xpa90iK1l_Wkeo5FUVv9i8E.zNyp8VvWlAO3pxxOXFaJyZt69vg-CIG4tI_0gvCDjLk&amp;dib_tag=se&amp;keywords=Poe%2B12v%2B2A&amp;qid=1714854579&amp;s=ce-de&amp;sprefix=poe%2B12v%2B2a%2Celectronics%2C187&amp;sr=1-4&amp;th=1" rel="external nofollow">
+     https://www.amazon.de/REVODATA-Kompatibel-IEEE802-3af-PoE-Adapter-PS5712TG-25/dp/B09CYGW46K/ref=sr_1_4?__mk_de_DE=ÅMÅŽÕÑ&amp;crid=KJKBGKYOLTIF&amp;dib=eyJ2IjoiMSJ9.-m0xuZNSq3rz4EjoQRwJI1JLOvNVCDutp5blbUhgitAsPFpUxe6eGbxBxyXuZfZ7HVZatvlU48v9AFs1Hxof7LE6FFxULxyhyCcePoMWFM8dHNV3qhedRhW09aQ2DmNx9WLxZ4te5SSSu1Cy2EdFUa9WBciFpJi_Cy_R5momMrQh-M1OEmlH36v9TDdzQcqQT6a7yEHPT4VXqSaI9FMQBL-JSD9ljn7NhVbwCrNHQCtYP3KUof6wZ664Ro7YhYlAA9YWhGfdK4mxiVz_4pw2Xpa90iK1l_Wkeo5FUVv9i8E.zNyp8VvWlAO3pxxOXFaJyZt69vg-CIG4tI_0gvCDjLk&amp;dib_tag=se&amp;keywords=Poe%2B12v%2B2A&amp;qid=1714854579&amp;s=ce-de&amp;sprefix=poe%2B12v%2B2a%2Celectronics%2C187&amp;sr=1-4&amp;th=1
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Screenshot_20240504-223209.png.f503618332216b22050aa3bcdc358c19.png">
+     <img alt="Screenshot_20240504-223209.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5567" data-ratio="166.67" src="images/uploads/Screenshot_20240504-223209.thumb.png.5484a40577226ad2ea48d57838abdd30.png" width="450"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-05-04T20:32:43Z" title="2024-05-04 20:32 ">
+      Mai 4, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-05-07T07:44:39Z" title="2024-05-07 07:44 ">
+   Mai 7, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Habe noch als Gegentest den askey Outdoor 6300 gekauft war schnappi um 80 Euro mit Versand
+   </p>
+   <p>
+   </p>
+   <p>
+    Da der 4x4 Mimo lte hat und 6ghz Mimo 4x4 bei 5G
+   </p>
+   <p>
+   </p>
+   <p>
+    Bin gespannt wer gewinnt dann
+   </p>
+   <p>
+   </p>
+   <p>
+    Leider findet man bei wnc keine Daten oder die mail Support gibt es nicht mehr leider ! Mfg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-05-07T14:03:41Z" title="2024-05-07 14:03 ">
+   Mai 7, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Morgen kommt der Test habe den schnell dazu bestellt statt einer Fritzbox da ich die gar nicht mag
+   </p>
+   <p>
+   </p>
+   <p>
+    <a href="https://www.cudy.com/productinfo/1637722.html" rel="external nofollow">
+     https://www.cudy.com/productinfo/1637722.html
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Test kommt mit Askey und Cudy
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-05-08T19:31:39Z" title="2024-05-08 19:31 ">
+   Mai 8, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Sind beide top die Renner momentan für mich die 2 Outdoor router Magenta und askey + Cudy sind auch klasse irgendwie! Vom Speed her schafft der askey eine Spur mehr um ca 20-25 mbs ansonsten gleich alles und ja askey wird sehr heiß bei den kühler ohne Aufsatz unten
+    <span class="ipsEmoji">
+     😄
+    </span>
+    gerade aufgefallen
+   </p>
+   <p>
+   </p>
+   <p>
+    P.s, das ist mein original Bild von daheim habe es auf Media fire hochgeladen wegen isp Forum
+   </p>
+   <p>
+   </p>
+   <p>
+    P.s, was mir nicht klar wird beim Askey man kann nur das Original LAN verwenden das mit der Abdeckung Kein anderes passt leider
+    <span class="ipsEmoji">
+     😕
+    </span>
+    da hat Magenta Outdoor wieder einen Vorteil mehr !
+   </p>
+   <p>
+   </p>
+   <p>
+    Aber sind echt beide bis jetzt die besten was ich in den letzten Jahre hatte kein Scherz und hatte schon sehr viele Router
+    <span class="ipsEmoji">
+     😁
+    </span>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5582" href="images/uploads/Screenshot_20240508-185527.png.936af6f9435c0ae44febd640f14f813f.png" rel="">
+     <img alt="Screenshot_20240508-185527.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5582" data-ratio="166.67" src="images/uploads/Screenshot_20240508-185527.thumb.png.3fb7e40f5ad43ffb9a4c50716b8a1d17.png" width="450"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-05-08T19:34:11Z" title="2024-05-08 19:34 ">
+      Mai 8, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-05-09T10:09:59Z" title="2024-05-09 10:09 ">
+   Mai 9, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Einzige was ich noch immer Rätsel welcher Chip Satz in wnc Magenta Outdoor router ob 2x2 oder 4x4 Mimo selbe beim WLAN Router Magenta ob 2x2 oder 4x4 Mimo
+   </p>
+   <p>
+   </p>
+   <p>
+    Beim Askey und Cudy weiß ich es
+   </p>
+   <p>
+   </p>
+   <p>
+    Askey (Askey RTL6300). • 5G NR + LTE EN-DC. • 5G SA &amp; NSA. • LTE 4x4 MIMO &amp; 5G Sub 6GHz 4x4.
+   </p>
+   <p>
+   </p>
+   <p>
+    Und Cudy 3x3 Mimo
+   </p>
+   <p>
+   </p>
+   <p>
+    Weiß das echt keiner ? Nicht Mal wer von Magenta selber mmhh wnc ist nicht zum Erreichen! Mfg
+    <span class="ipsEmoji">
+     😂
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-05-10T08:17:29Z" title="2024-05-10 08:17 ">
+   Mai 10, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    So Lichter auch aus und anders Kabel hier wer laut hat kann da lesen von mir den Thread
+   </p>
+   <p>
+   </p>
+   <p>
+    Aber besten bleiben WNC Magenta und Askey 6300
+   </p>
+   <p>
+   </p>
+   <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedauthorid="98130" data-embedcontent="" data-embedid="embed4141408416" src="9459-schlechte-downloadrate-mit-5g-zte-mc888-pro-im-vergleich-zu-4g-huawei-b818-263/page/2.html&amp;comment=57382&amp;embedComment=57382&amp;embedDo=findComment#comment-57382" style="height:307px;max-width:500px;">
+   </iframe>
+   <p>
+    Schönes Wochenende
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-05-11T11:08:13Z" title="2024-05-11 11:08 ">
+   Mai 11, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wenn es wahr ist haben beide also einen x50 wnc + askey
+   </p>
+   <p>
+   </p>
+   <p>
+    Qualcomm Snapdragon X55 5G Modem weil x50 kann ja kein SA also also sollte es eigentlich ein x65 sein bzw ca von 51-60 einer weil ab x62 eher mit n75 wobei die x62 sind auch schon seit 2021 am Markt rein theoretisch ! Wenn man es genau wissen will zerlegen
+    <span class="ipsEmoji">
+     😁
+    </span>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-05-11T13:04:14Z" title="2024-05-11 13:04 ">
+      Mai 11, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-06-03T08:45:15Z" title="2024-06-03 08:45 ">
+   Juni 3, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Gibt es irgendwie eine Möglichkeit den Stand zum bekommen in Österreich bei Magenta natürlich würde ich was bezahlen dafür danke
+   </p>
+   <p>
+   </p>
+   <p>
+    Habe alles versucht aber bekomme ihn nicht
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/images(1).jpeg.9f8e3280e6d2df4b6e763a3efb59a075.jpeg">
+     <img alt="images (1).jpeg" class="ipsImage ipsImage_thumbnailed" data-fileid="5648" data-ratio="80.08" src="images/uploads/images(1).jpeg.9f8e3280e6d2df4b6e763a3efb59a075.jpeg" width="251"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/images.jpeg.c0ba0fb9b446c3a56c1bb7b0af1d6a3c.jpeg">
+     <img alt="images.jpeg" class="ipsImage ipsImage_thumbnailed" data-fileid="5649" data-ratio="100" src="images/uploads/images.jpeg.c0ba0fb9b446c3a56c1bb7b0af1d6a3c.jpeg" width="225"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-06-05T08:38:16Z" title="2024-06-05 08:38 ">
+   Juni 5, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Habe es wieder normal gemacht ohne dem Public und dmz da ich hin und wieder probleme hatte mit Seiten da sie nicht auf gegangen sind !
+   </p>
+   <p>
+   </p>
+   <p>
+    Keine Probleme bis jetzt ohne den ganzen alles normal auch mit der Switch
+    <span class="ipsEmoji">
+     😁
+    </span>
+   </p>
+   <p>
+   </p>
+   <p>
+    Hatte sie jetzt raus gehängt am Fenster aber bei mir ist es so egal ob drinnen oder draußen selber Empfang 4-5 Striche
+   </p>
+   <p>
+   </p>
+   <p>
+    Einzige wo es auf 2-3 geht wenn ich die aussen Rollo runter mache in der Nacht aber das ist nicht tragisch und sauber bleibt er auch immer innen
+    <span class="ipsEmoji">
+     😁
+    </span>
+    mfg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-06-07T06:12:13Z" title="2024-06-07 06:12 ">
+   Juni 7, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    was mich wundert mein sohn , mein bruder und ich haben alle das selbe Gerät wnc
+   </p>
+   <p>
+   </p>
+   <p>
+    aber jeder hat eine andere Firmware
+   </p>
+   <p>
+   </p>
+   <p>
+    mein Bruder hat 1.09.30 mein sohn 1.08.30 und ich 1.06.30 bei der ODU
+   </p>
+   <p>
+   </p>
+   <p>
+    bei der IDU alle gleich con 2023
+   </p>
+   <p>
+   </p>
+   <p>
+    komisch
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-06-07T11:33:48Z" title="2024-06-07 11:33 ">
+   Juni 7, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wie es aussieht kann doch Magenta es aktualisieren
+   </p>
+   <p>
+   </p>
+   <p>
+    vielen Dank für Ihre Nachricht.
+   </p>
+   <p>
+   </p>
+   <p>
+    Gerne helfen wir Ihnen weiter - dafür brauchen wir allerdings Ihre Unterstützung vor Ort.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bitte rufen Sie uns an, wenn Sie zu Hause sind, damit meine Kollegen vom technischen Support Ihr Anliegen rasch und zu Ihrer vollen Zufriedenheit klären können.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-06-07T14:59:26Z" title="2024-06-07 14:59 ">
+   Juni 7, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Klappt nicht mit den Support er kann es nicht
+   </p>
+   <p>
+   </p>
+   <p>
+    Also warum Magenta seit ihr so umständlich warum ladet ihr nicht einfach die verdammte .bin Firmware hoch die 01.09 für die Odu und die neue 2024 von der idu
+   </p>
+   <p>
+   </p>
+   <p>
+    Eigentlich habe ich es gewusst das der Support es nicht kann naja 1x in 20 Jahren kann man es ja 1x versuchen mit den Support aber das war es wieder für die nächsten 20 Jahre
+   </p>
+   <p>
+   </p>
+   <p>
+    Bzw
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
+     @Jonathan Dorian
+    </a>
+    ist ja e Best Friends vom Support lade du sie hoch einfach von der odu und idu
+   </p>
+   <p>
+   </p>
+   <p>
+    Bzw ich Wechsel halt notfalls wobei ich die wnc momentan top finde schade wegen Updates halt da fail eher leider
+   </p>
+   <p>
+   </p>
+   <p>
+    Mfg
+    <span class="ipsEmoji">
+     🤣
+    </span>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-06-07T15:02:25Z" title="2024-06-07 15:02 ">
+      Juni 7, 2024
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-06-08T18:17:55Z" title="2024-06-08 18:17 ">
+   Juni 8, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das letzte Update odu wäre vom 6.5.22 und vorher war das 17.01.22
+   </p>
+   <p>
+   </p>
+   <p>
+    Und wir haben das von 2021 also so schlau bin ich auch schon das zum raus finden also gibt es die Server von wnc nicht mehr tw Thailand
+   </p>
+   <p>
+   </p>
+   <p>
+    Letzte war 2023 von der idu
+   </p>
+   <p>
+   </p>
+   <p>
+    Also das Last Update v01.09.30.02_05062022 aber keiner kann es machen oder besorgen leider
+   </p>
+   <p>
+   </p>
+   <p>
+    Wäre schön auch wenn alt die neue Firmware
+   </p>
+   <p>
+   </p>
+   <p>
+    Mfg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-06-09T07:03:56Z" title="2024-06-09 07:03 ">
+   Juni 9, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Was mich wundert das noch immer welche verkauft hergeben werden neue original verpackte aber keine Updates man bekommt ! Da sollte Magenta nach Arbeiten bzw die Firmware für odu idu echt online stellen !
+   </p>
+   <p>
+   </p>
+   <p>
+    Habe sogar eine Firmware vom AX5400 eine .bin Datei die neue Firmware natürlich! Echt komisch
+    <span class="ipsEmoji">
+     😕
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klaximaxi43
+  </span>
+  <br/>
+  <time class="Mär 29" datetime="2025-03-29T22:07:48Z" title="2025-03-29 22:07 ">
+   März 29
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Einzige was ich bis heute nicht raus gefunden habe was aber nicht tragisch damit ich das https auf http umschalten kann ! Irgendwie in Menü Console! Es gibt zwar den Punkt Auto bei Passwort on Off aber geht auch nicht
+    <span class="ipsEmoji">
+     😜
+    </span>
+    wenn ganz umschalten ohne Konsole wäre besser !
+   </p>
+   <p>
+   </p>
+   <p>
+    So müsste man nicht immer Passwort eintragen ohne https da es gespeichert wird bei http
+   </p>
+   <p>
+   </p>
+   <p>
+    Login und Passwort umgehen geht eigentlich falls es wer verliert mal!
+   </p>
+   <p>
+   </p>
+   <p>
+    Mfg
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="Mär 29" datetime="2025-03-29T22:08:30Z" title="2025-03-29 22:08 ">
+      März 29
+     </time>
+     von Klaximaxi43
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   MJ36
+  </span>
+  <br/>
+  <time class="Jul 10" datetime="2025-07-10T06:54:07Z" title="2025-07-10 06:54 ">
+   Juli 10
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46990" data-ipsquote-contentid="7651" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1647562329" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     Am 18.3.2022 um 01:12 schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      In dieser Anleitung erfährst du wie du den NAT Typ deiner Spielekonsole bei der Magenta 5G Box Outdoor ändern kannst.
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       0. Vorbereitung:
+      </strong>
+     </p>
+     <p>
+      Die Anleitung setzt voraus, dass das 5G Outdoor Set bereits laut Anleitung/App eingerichtet wurde und ein Gerät mit einem Webbrowser (Handy, Tablet, Laptop, PC, etc.) per Lan oder W-Lan mit der Indoor-Einheit verbunden ist.
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       1. Business APN auf der Outdoor-Einheit einrichten:
+      </strong>
+     </p>
+     <p>
+      Damit die Outdoor Unit eine öffentliche IP-Adresse bekommt, musst du den APN auf der Outdoor-Einheit ändern.
+     </p>
+     <p>
+      Der Business APN funktioniert auch für Privatkunden.
+     </p>
+     <p>
+     </p>
+     <p>
+      Besuche mit deinem Gerät die Konfigurationsseite der Outdoor-Einheit unter
+      <a href="https://192.168.0.1" rel="external nofollow">
+       https://192.168.0.1
+      </a>
+      . Es kann eine Meldung kommen, dass diese Verbindung nicht privat ist. In diesem Fall auf "Erweitert" und dann auf zum Beispiel "Weiter zu 192.168.0.1 (unsicher)" oder "Risiko akzeptieren und fortfahren" klicken.
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="3741" href="//s3.mito.hu/telekom-at/monthly_2022_03/image.png.011abdde7dc16eaf7bb09eac55ce2074.png" rel="external nofollow">
+       <img alt="image.thumb.png.0e1a7fb69e10658a85c4e12d9dfc8bec.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3741" src="images/uploads/image.thumb.png.0e1a7fb69e10658a85c4e12d9dfc8bec.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+      Auf der Konfigurationsseite angekommen müssen die Anmeldedaten eingegeben werden. Diese stehen auf der einem Aufkleber auf der Kurzanleitung, sowie auf einem Aufkleber unter dem vorderen Standfuß der Indoor-Einheit. Der Benutzername ist dabei immer "admin".
+     </p>
+     <p>
+     </p>
+     <p>
+      Nach dem Anmelden gehe zu "Einstellungen" -&gt; "Einwahl" -&gt; "MPDN-Management".
+     </p>
+     <p>
+      Auf einem PC, Laptop oder Tablet:
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="3743" href="//s3.mito.hu/telekom-at/monthly_2022_03/image.png.43345b6a1dd07849c5e173005591911e.png" rel="external nofollow">
+       <img alt="image.thumb.png.0855df6158d5a09a0a15a96aa5e29081.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3743" src="images/uploads/image.thumb.png.0855df6158d5a09a0a15a96aa5e29081.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+      Auf einem Handy oder Tablet:
+     </p>
+     <p>
+      <a data-fileext="png" data-fileid="3744" href="images/uploads/image.png.dadcd55228335a1c955ee7d11b45d7f5.png" rel="" title="Bild vergrößern">
+       <img alt="image.png.dadcd55228335a1c955ee7d11b45d7f5.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3744" src="images/uploads/image.png.dadcd55228335a1c955ee7d11b45d7f5.png" style="width:150px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Konfiguriere hier den Business APN mit den folgenden Einstellungen.
+     </p>
+     <p>
+      Wähle aus der Liste APN-Name "business.gprsinternet" aus, stelle die Authentifizierung auf "PAP", gebe als Benutzername "t-mobile" ein und als Passwort "tm". Nicht vergessen auf "Anwenden" zu klicken!
+     </p>
+     <p>
+      Auf einem PC, Laptop oder Tablet:
+      <br/>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="3745" href="//s3.mito.hu/telekom-at/monthly_2022_03/image.png.57b88b092667109c7a8f6c167c25d0df.png" rel="external nofollow">
+       <img alt="image.thumb.png.93c0e17abb239ba7e52954ef271f7036.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3745" src="images/uploads/image.thumb.png.93c0e17abb239ba7e52954ef271f7036.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+      Auf einem Handy oder Tablet:
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="3746" href="//s3.mito.hu/telekom-at/monthly_2022_03/image.png.65a11908c9bda4215c6f5d43f5373472.png" rel="external nofollow" style="background-color:rgb(255,255,255);">
+       <img alt="image.thumb.png.68948875a8f8e5dc80ae04f4885cf23c.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3746" src="images/uploads/image.thumb.png.68948875a8f8e5dc80ae04f4885cf23c.png" style="width:100px;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Trenne nun das lange weiße Lan Kabel für einige Sekunden von dem Netzteil (PoE Adapter) der Outdoor-Einheit und schließe dieses anschließend wieder an, damit die Outdoor-einheit neu startet.
+     </p>
+     <p>
+     </p>
+     <p>
+      Melde dich anschließend wieder bei der Konfigurationsseite der Outdoor-Einheit unter
+      <a href="https://192.168.0.1" rel="external nofollow">
+       https://192.168.0.1
+      </a>
+      an.
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       2. Firewall der Outdoor-Einheit konfigurieren:
+      </strong>
+     </p>
+     <p>
+      Wieder zurück auf der Konfigurationsseite der Outdoor-Einheit ist der nächste Schritt die Konfiguration der Firewall.
+     </p>
+     <p>
+     </p>
+     <p>
+      Gehe dafür zu "Einstellungen" -&gt; "Sicherheit" -&gt; "Firewall-Schalter". Nicht vergessen auf "Anwenden" zu klicken! Das Übernehmen der Einstellung kann ein paar Sekunden dauern.
+     </p>
+     <p>
+      Auf einem PC, Laptop oder Tablet:
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="3747" href="//s3.mito.hu/telekom-at/monthly_2022_03/image.png.5110cf199c652c85c8704d5c1d4f3f79.png" rel="external nofollow">
+       <img alt="image.thumb.png.494da29a31e25cb84c84ab65b682561d.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3747" src="images/uploads/image.thumb.png.494da29a31e25cb84c84ab65b682561d.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Auf einem Handy oder Tablet:
+     </p>
+     <p>
+      <a data-fileext="png" data-fileid="3749" href="images/uploads/image.png.b0328d518ddb75cc7002bd852de568e6.png" rel="" title="Bild vergrößern">
+       <img alt="image.png.b0328d518ddb75cc7002bd852de568e6.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3749" src="images/uploads/image.png.b0328d518ddb75cc7002bd852de568e6.png" style="width:150px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Stelle nun die "Sicherheitsstufe" der Firewall von "Mittel" auf "Niedrig".
+     </p>
+     <p>
+      Auf einem PC, Laptop oder Tablet:
+     </p>
+     <p>
+     </p>
+     <p>
+      <a data-fileext="png" data-fileid="3750" href="images/uploads/image.thumb.png.78281ca861720cfe5b1739a6ef8a298d.png" rel="" title="Bild vergrößern">
+       <img alt="image.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3750" src="images/uploads/image.thumb.png.78281ca861720cfe5b1739a6ef8a298d.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Auf einem Handy oder Tablet:
+     </p>
+     <p>
+      <a data-fileext="png" data-fileid="3752" href="images/uploads/image.png.c932fbaa5ba0ba016153121f75d4ff1b.png" rel="" title="Bild vergrößern">
+       <img alt="image.png.c932fbaa5ba0ba016153121f75d4ff1b.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3752" src="images/uploads/image.png.c932fbaa5ba0ba016153121f75d4ff1b.png" style="width:150px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Damit ist die Firewall konfiguriert.
+     </p>
+     <p>
+     </p>
+     <p>
+      <strong>
+       3. DMZ der Outdoor-Einheit Konfigurieren:
+      </strong>
+     </p>
+     <p>
+      Zur Konfiguration der DMZ wird die MAC-Adresse der Indoor-Einheit benötigt.
+     </p>
+     <p>
+      Rufe dafür auf der Konfigurationsseite der Indoor-Einheit unter
+      <a href="http://192.168.1.1" rel="external nofollow">
+       http://192.168.1.1
+      </a>
+      auf.
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="3753" href="//s3.mito.hu/telekom-at/monthly_2022_03/image.png.a5f8f1e64871f1ea538fc25419ca436b.png" rel="external nofollow">
+       <img alt="image.thumb.png.eec9e6dd79b15ed53c2c55725031b469.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3753" src="images/uploads/image.thumb.png.eec9e6dd79b15ed53c2c55725031b469.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Zum Anmelden muss das Passwort, welches rechts unten auf dem großen Aufkleber auf Indoor-Einheit aufgedruckt ist, eingegeben werden.
+     </p>
+     <p>
+      Auf der Startseite der Konfigurationsseite wird die MAC Adresse direkt ausgegeben.
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="3755" href="//s3.mito.hu/telekom-at/monthly_2022_03/image.png.a8668a4f7e7d4cfc06700420d0a3981f.png" rel="external nofollow">
+       <img alt="image.thumb.png.2653fc5c7021db067b995b7a5cf84e8f.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3755" src="images/uploads/image.thumb.png.2653fc5c7021db067b995b7a5cf84e8f.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Diese kann nun kopiert werden.
+     </p>
+     <p>
+      Wechsle nun zurück zur Konfigurationsseite der Outdoor-Einheit und wechsle zu "Einstellungen" -&gt; "NAT" -&gt; "DMZ".
+     </p>
+     <p>
+      Auf einem PC, Laptop oder Tablet:
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="3756" href="//s3.mito.hu/telekom-at/monthly_2022_03/image.png.445eebaebead13e1b616aab154a663a3.png" rel="external nofollow">
+       <img alt="image.thumb.png.794a3defbcac1243018c63d06e3aa1d9.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3756" src="images/uploads/image.thumb.png.794a3defbcac1243018c63d06e3aa1d9.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+      Auf einem Handy oder Tablet:
+     </p>
+     <p>
+      <a data-fileext="png" data-fileid="3757" href="images/uploads/image.png.db8013940bb5c7d14bb5958b1e4764c0.png" rel="" title="Bild vergrößern">
+       <img alt="image.png.db8013940bb5c7d14bb5958b1e4764c0.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3757" src="images/uploads/image.png.db8013940bb5c7d14bb5958b1e4764c0.png" style="width:150px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Wähle nun die Option "DMZ MAC" und füge anschließend in das Textfeld "DMZ MAC adresse" die MAC Adresse der Indoor-Einheit ein. Nicht vergessen auf "Anwenden" zu klicken!
+     </p>
+     <p>
+      Auf einem PC, Laptop oder Tablet:
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="3758" href="//s3.mito.hu/telekom-at/monthly_2022_03/image.png.76371f7025580f6ce00e15d8573f77bb.png" rel="external nofollow" style="background-color:rgb(255,255,255);">
+       <img alt="image.thumb.png.b7001cde93e8c6b7495fea596d9efb2e.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3758" src="images/uploads/image.thumb.png.b7001cde93e8c6b7495fea596d9efb2e.png" style="width:300px;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Auf einem Handy oder Tablet:
+     </p>
+     <p>
+     </p>
+     <p>
+      <a data-fileext="png" data-fileid="3760" href="images/uploads/image.png.4f81da1013973fb0eb5ee7597e0db81c.png" rel="" title="Bild vergrößern">
+       <img alt="image.png.4f81da1013973fb0eb5ee7597e0db81c.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3760" src="images/uploads/image.png.4f81da1013973fb0eb5ee7597e0db81c.png" style="width:200px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+      <strong>
+       4. UPnP Einstellungen auf der Indoor-Einheit aktivieren:
+      </strong>
+     </p>
+     <p>
+      Wechsle nun wieder zurück zur Konfigurationsseite der Indoor-Einheit.
+     </p>
+     <p>
+     </p>
+     <p>
+      Gehe hier zu "Einstellungen" -&gt; "Sicherheit" -&gt; "UPnP".
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="3761" href="//s3.mito.hu/telekom-at/monthly_2022_03/image.png.1354deca1fa3dd4c40678b779935ba42.png" rel="external nofollow">
+       <img alt="image.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3761" src="images/uploads/image.thumb.png.d252e21ba760b6d2324ebe3d17baaa87.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Stelle sicher das die Checkbox "UPnP aktivieren" aktiv ist.
+     </p>
+     <p>
+      Falls dies nicht der Fall ist, klicke diese einmal an. Anschließend nicht vergessen auf "Speichern" zu klicken!
+     </p>
+     <p>
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="3762" href="//s3.mito.hu/telekom-at/monthly_2022_03/image.png.b6974bbe8098ba9a438e5f8aed5b711a.png" rel="external nofollow">
+       <img alt="image.thumb.png.a807683f24f1ea82602e90fe3793b850.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3762" src="images/uploads/image.thumb.png.a807683f24f1ea82602e90fe3793b850.png" style="width:300px;height:auto;"/>
+      </a>
+     </p>
+     <p>
+      <strong>
+       5. Fertig!
+      </strong>
+     </p>
+     <p>
+      Damit sollte nun ein Moderater NAT bzw. NAT-Typ B auf der Konsole möglich sein.
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+     <p>
+      Getestet wurde diese Anleitung mit dem Verbindungstest einer Nintendo Switch.
+     </p>
+     <p>
+      Sollte es Anmerkungen zu dieser Anleitung geben, bitte diese hier posten.
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hallo! Zuerst einmal danke für die super Anleitung. Bei mir hat es damit funktioniert einen offen NAT-Typ auf meiner Spielkonsole und schnelles Internet auf allen anderen Endgeräten zu bekommen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Der einzige Wermutstropfen momentan ist, dass ich scheinbar nach jeden Neustart des Routers, meistens schalte ich den abends aus, die DMZ in der ODU neu anwenden muss. Die Mac-Adresse ist unter DMZ eingetragen und richtig, allerdings habe ich erst nach einer erneuten Anwendung dieser auch wieder den NAT-Typ offen auf meiner Konsole. Kann das am Injektor liegen? Außerdem hab ich hin und wieder auch Phasen wo ich am Smarthphone ohne Internet verbunden bin obwohl die Spielkonsole, mit Lanverbindung, Internet hat.
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielleicht hat hier ja jemand eine Idee.
+   </p>
+   <p>
+   </p>
+   <p>
+    Edit: Ich glaube fast, dass das Problem mit den hinterlegten Dns Server zu tun hat. Ich hatte für kurze Zeit die Google Dns Server hinterlegt. Allerdings konnten sich danach einige Geräte nicht mit dem Internet verbinden. Daher habe ich momentan automatisch hinterlegt.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="Jul 10" datetime="2025-07-10T10:08:53Z" title="2025-07-10 10:08 ">
+      Juli 10
+     </time>
+     von MJ36
+    </strong>
+    <br>
+     Beitrag ergänzt
+    </br>
+   </span>
+  </div>
+  <hr/>
+ </body>
+</html>

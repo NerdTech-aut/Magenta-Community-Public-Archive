@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   DDNS-Zugriff auf Router hinter Alcatel HH71VM einrichten -  Welche Einstellungen sind erforderlich?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   DDNS-Zugriff auf Router hinter Alcatel HH71VM einrichten -  Welche Einstellungen sind erforderlich?
+  </h1>
+  <span class="author">
+   Lazi
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-08T13:28:38Z" title="2024-01-08 13:28 ">
+   Januar 8, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+    ich habe das Alcatel HH71VM, address 192.168.1.1, DHCP ist off, per Kabel habe ich einen Router verbunden, static IP X.X.X.12. Diesen Router möchte ich gerne per DDNS erreichen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Was muss ich am HH71VM einstellen, damit ich den dahinterliegenden Router erreiche?
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke
+    <span>
+     <span class="ipsEmoji">
+      🙂
+     </span>
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-08T14:56:36Z" title="2024-01-08 14:56 ">
+   Januar 8, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <span>
+     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98491-lazi/?do=hovercard" data-mentionid="98491" href="https://community.magenta.at/profile/98491-lazi/" rel="">
+      @Lazi
+     </a>
+    </span>
+   </p>
+   <p>
+    <span>
+     Hast du schon den Business APN eingerichtet, damit der HH71 eine öffentliche IPv4 Adresse bekommt?
+    </span>
+   </p>
+   <p>
+    Denn nur wenn der HH71 eine öffentliche IPv4 erhält, kann dieser dem DDNS-Dienst eine brauchbare IPv4 mitteilen.
+   </p>
+   <p>
+    <span>
+     Wenn nicht hier die Anleitung:
+     <a href="https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-flex/box-hh71/topic/sicherheit/apn-nat-typ-andern" rel="external nofollow">
+      https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-flex/box-hh71/topic/sicherheit/apn-nat-typ-andern
+     </a>
+    </span>
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Lazi
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-08T22:31:40Z" title="2024-01-08 22:31 ">
+   Januar 8, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi @NTM
+   </p>
+   <p>
+    vielen Dank, hatte ich nicht. Ich war der Meinung, eine private Adresse ist zb. 192.168.x.x, die vom ISP zugewiesene ist immer eine öffentliche. Da muss ich dann noch etwas lernen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Jetzt habe ich das neue APN Profil erstellt und als Standard gesetzt, Was muss ich dann noch machen?
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-09T00:32:26Z" title="2024-01-09 00:32 ">
+   Januar 9, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98491-lazi/?do=hovercard" data-mentionid="98491" href="https://community.magenta.at/profile/98491-lazi/" rel="">
+     @Lazi
+    </a>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56340" data-ipsquote-contentid="9334" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1704753100" data-ipsquote-userid="98491" data-ipsquote-username="Lazi">
+    <div class="ipsQuote_citation">
+     Am 8.1.2024 um 23:31 schrieb Lazi:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich war der Meinung, eine private Adresse ist zb. 192.168.x.x, die vom ISP zugewiesene ist immer eine öffentliche. Da muss ich dann noch etwas lernen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Da es nicht so viele IPv4 Adressen gibt ist Sparen angesagt. Deswegen wird CG-NAT (Carrier Grade Network Address Translation) eingesetzt. Zum Vergleich dein HH71 verwendet NAT, weswegen dein anderer Router eine private IPv4 verwendet.
+   </p>
+   <p>
+   </p>
+   <p>
+    Inwiefern möchtest du den Router hinter dem HH71 genau erreichen?
+   </p>
+   <p>
+    Hast du einen bestimmten Dienst im Auge (z.B. Webserver)?
+   </p>
+   <p>
+    Für die Dienste, welche du erreichen möchtest, musst du am HH71 Portweiterleitungen einrichten. Wenn die Dienste nicht direkt am Router laufen, sondern auf einem weiteren Gerät dahinter, musst du auch auf deinem Router entsprechende Portweiterleitungen einrichten.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Lazi
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-09T11:27:53Z" title="2024-01-09 11:27 ">
+   Januar 9, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Vielen Dank
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+     @NTM
+    </a>
+    für deine ausführliche Erklärung. Werde ich am Abend gleich mal probieren.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

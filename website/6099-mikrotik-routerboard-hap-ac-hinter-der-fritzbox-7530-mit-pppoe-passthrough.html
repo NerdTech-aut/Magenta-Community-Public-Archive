@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Mikrotik Routerboard HAP AC hinter der Fritzbox 7530 mit PPPOE Passthrough
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Mikrotik Routerboard HAP AC hinter der Fritzbox 7530 mit PPPOE Passthrough
+  </h1>
+  <span class="author">
+   realrob
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-24T20:36:35Z" title="2020-09-24 20:36 ">
+   September 24, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi all,
+   </p>
+   <p>
+   </p>
+   <p>
+    Hallo!
+   </p>
+   <p>
+   </p>
+   <p>
+    Wir haben gestern unseren VDSL-Anschluss (in NÖ) von Magenta/UPC/T-Mobile bekommen.
+   </p>
+   <p>
+    Dabei ist eine fritzbox 7530 mit der der DSL-Anschluss auch funktioniert.
+   </p>
+   <p>
+    Gleich hinter der Fritzbox hängt ein Mikrotik Routerboard HAP AC, das die öffentliche IP beziehen soll. Der Router ist Teil eines Site2Site VPNs und spielt auch so VPN Server uns ist unsere Firewall nach aussen. Bis dato hat es bei anderen Providern Zb DREI LTE genügt, das Modem zu bridgen und dann auf dem WANPORT des Mikrotiks die öffentliche Adresse zu beziehen. Aber nun ist es ja eine PPPOE besser VSDL2 Verbindung die das Routerboard aufbauen muss.
+    <br/>
+    Dazu habe ich mal auf der Fritzbox pppoe passthrough aktiviert, damit das Routerboard über ein DSL Interface, das ich einrichten muss die öffentliche IP beziehen kann. Weiss jemand von Euch, wie ich dieses Interface einrichten kann? Soweit ich weiss brauche ich keine Zugangsdaten mehr bei VDSL2. Wäre Euch über jeden Tipp sehr dankbar.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-25T07:13:35Z" title="2020-09-25 07:13 ">
+   September 25, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Geht nicht.
+   </p>
+   <p>
+    Die Fritz Box kann ziemlich viele Protokolle durchschleifen. Vielleicht hilft das weiter.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   realrob
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-27T20:57:15Z" title="2020-09-27 20:57 ">
+   September 27, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Tja, stimmt schon. Insbesondere PPPoe. Siehe auch
+    <a href="https://administrator.de/content/detail.php?id=607659&amp;token=756#comment-1481938" rel="external nofollow">
+     https://administrator.de/content/detail.php?id=607659&amp;token=756#comment-1481938
+    </a>
+   </p>
+   <p>
+    Dort diskutieren wir das Problem intensiv. Scheinbar bin ich der erste der eine eigene Firewall mit öffentlicher IP baut.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-28T06:09:59Z" title="2020-09-28 06:09 ">
+   September 28, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das Thema wurde hier schon diskutiert. Da Magenta, soweit es sich herauslesen ließ, IPoE verwendet, hilft PPPoE nicht weiter.
+   </p>
+   <p>
+    Eine Möglichkeit, die funktionieren könnte, wäre die Mac der Fritzbox zu clonen und dann mit einem Bridge Modem eine Einwahl zu versuchen.
+   </p>
+   <p>
+    Das ist aber so auf dem Level, kann funktionieren wird aber eher nicht funktionieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    Um welches VPN geht es denn?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   realrob
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-30T13:37:22Z" title="2020-09-30 13:37 ">
+   September 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    welches Modem käme da in Frage Deiner Meinung nach?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-30T13:40:57Z" title="2020-09-30 13:40 ">
+   September 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es gibt nur ein einziges Bridge Modem auf der Whitelist. Das Zyxel VMG4005-b50a.
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   realrob
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-09-30T21:58:17Z" title="2020-09-30 21:58 ">
+   September 30, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Was spricht gegen VMG1312-B30A? kann auch VDSL2 Vectoring.  Bzw wo könnte ich die Whitelist einsehen?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-10-01T06:12:05Z" title="2020-10-01 06:12 ">
+   Oktober 1, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a href="https://cdn12.a1.net/m/resources/media/pdf/Virtuelle-Entbuendelung.pdf" rel="external nofollow">
+     https://cdn12.a1.net/m/resources/media/pdf/Virtuelle-Entbuendelung.pdf
+    </a>
+   </p>
+   <p>
+    Ich würde eher ein DSL Modem nehmen, was zumindest von einem Virtuellen Entbündler eingesetzt wird.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   realrob
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-10-02T14:46:48Z" title="2020-10-02 14:46 ">
+   Oktober 2, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wow danke umfassend!
+   </p>
+   <p>
+    Aber nachdem es eine VDSL2 Connection ist warum kein VDSL2 Modem nehmen und FB klonen? = Zyxel VDSL2 Wireless Modem mit Router und 4FE-LAN Ports, 1 USB-Port WLAN 802.11n 2x2, IPv6, Bridge-Modus, Version nur für DE [VMG1312-B30A]
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2020-10-02T16:22:18Z" title="2020-10-02 16:22 ">
+   Oktober 2, 2020
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich würde sagen, es spricht nichts direkt dagegen, aus FE Ethernet LAN Ports und dass es vieles kann was du nicht benötigst.
+   </p>
+   <p>
+    Auf dem Modem muss nichts gecloned werden sonder nur am Router, da das Modem das VLAN durchreicht.
+   </p>
+   <p>
+    Welches VLAN das ist, muss  man aus Konfiguration der FB auslesen.
+   </p>
+   <p>
+   </p>
+   <p>
+    VMG1312-B30A -&gt; nach dem es eine DSL over ISDN Version ist könnte es sein, dass der DSLAM damit nicht arbeiten möchte. Das ist aber sehr stark vom DSLAM abhängig. Sollte das Modem andere Kunden störren, wird dein Leitung gekappt.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

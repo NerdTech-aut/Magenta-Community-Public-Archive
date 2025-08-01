@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   VPN bei Mesh-Router und zweiten Router einrichten
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   VPN bei Mesh-Router und zweiten Router einrichten
+  </h1>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-07T11:42:55Z" title="2021-04-07 11:42 ">
+   April 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo zusammen, ich versuche gerade Bekannte zu helfen, folgendes: Internet kommt über 5G zu einem Mesh-Router von Magenta, das Internet teilen sich 2 Familien, der Mesh-Router steht in Familie 1, die zweite Familie ist über einen Router mit dem Haupt-Mesh-Router per Kabel verbunden. Jetzt wäre ja der Wunsch in der zweiten Familie über VPN auf das Hausnetzwerk zugreifen zu können, wie mache ich das, muss ich VPN im ersten Router und im zweiten aktivieren und brauche ich 2 dynamischen IP-Adressen oder wie bekomme ich das hin, geht das überhaupt?
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-04-07T11:47:39Z" title="2021-04-07 11:47 ">
+      April 7, 2021
+     </time>
+     von tererecool
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   Rexalius2000
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-07T11:57:03Z" title="2021-04-07 11:57 ">
+   April 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/89120-tererecool/?do=hovercard" data-mentionid="89120" href="https://community.magenta.at/profile/89120-tererecool/" rel="">
+     @tererecool
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Schau mal
+    <a href="5072-public-ip-f%C3%BCr-privatkunden/?page=0#comment-29944" rel="">
+     hier
+    </a>
+    vorbei.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-07T13:39:54Z" title="2021-04-07 13:39 ">
+   April 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hey
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/89120-tererecool/?do=hovercard" data-mentionid="89120" href="https://community.magenta.at/profile/89120-tererecool/" rel="">
+     @tererecool
+    </a>
+   </p>
+   <p>
+    Also zwei Familien teilen sich einen Internetzugang (hier halt über 5G). Und ihr habt ein Mesh System von Magenta.
+   </p>
+   <p>
+    Bei einer Familie steht der Router sowie der Haupt-Mesh-Router (Familie 2) und bei der anderen der zweite Mesh Router (Familie 1).
+   </p>
+   <p>
+    Sofern der Betriebsmodus der Mesh Beacons nicht geändert wurde (standard wäre Bridge), sollten alle Geräte welche per Lan/W-Lan mit einem der Beacons oder dem Router verbunden sind untereinander erkennen können.
+   </p>
+   <p>
+    Jetzt will Familie 2 von außen/unterwegs auf das Netzwerk zugreifen können, habe ich das richtig verstanden?
+   </p>
+   <p>
+    Ich nehme mal an ihr hab den Huawei 5G CPE Pro 2. Dieser hat keinen VPN Server eingebaut, nur einen VPN Client. Und die Nokia Mesh Beacons haben weder VPN Server nicht Client. Um eine VPN-Verbindung ins Heimnetz aufzubauen ist ein zusätzliches Gerät nötig, welches als VPN Server fungiert. Dies kann z.B. ein entsprechender Router (nicht jeder ist geeignet), eine NAS, oder ein Raspberry Pi sein.
+   </p>
+   <p>
+    Wichtig ist, dass für den Zugriff von außen der Business APN am 5G Router hinterlegt ist (
+    <a href="https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-5g/box-pro2/topic/sicherheit/apn-nat-typ-andern/1" rel="external nofollow">
+     Anleitung
+    </a>
+    ).
+   </p>
+   <p>
+    LG NTM
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    PS: Hier ist meine Interpretation von deiner Beschreibung, wie das Netzwerk aussieht:
+    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2021_04/606db5f08d716_Bild2.png.8991a1fcba441b4832292266a06038cb.png" rel="external nofollow">
+     <img alt="606db5f1275be_Bild2.thumb.png.0319af43fd0dafb78599b2f40421da35.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3030" src="images/uploads/606db5f1275be_Bild2.thumb.png.0319af43fd0dafb78599b2f40421da35.png" style="width:300px;height:auto;"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-04-07T13:41:07Z" title="2021-04-07 13:41 ">
+      April 7, 2021
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-07T13:49:27Z" title="2021-04-07 13:49 ">
+   April 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Familie 1 hat den Haupt-Mesh-Router, der zweite Router von Familie 2 ist nicht per Mesh verbunden, ist ein separater Router (mit VPN-Server Funktion) und auch nicht so gedacht/gewollt, dass Roaming zwischen den Familien geht (eventuell wäre das eh eine interessante Idee aber ich denke schon zu spät dafür)
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-04-07T13:52:28Z" title="2021-04-07 13:52 ">
+      April 7, 2021
+     </time>
+     von tererecool
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-07T13:57:34Z" title="2021-04-07 13:57 ">
+   April 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Okay und was für ein Router ist bei Familie 2?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-07T13:59:51Z" title="2021-04-07 13:59 ">
+   April 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="41503" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1617803854" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 3 Minuten schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Okay und was für ein Router ist bei Familie 2?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Asus RT-AX58U bei Familie 2. Und Familie 1 bekommt ja das Internet zuerst, deswegen die Frage ob das überhaupt möglich ist :S
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-04-07T14:02:11Z" title="2021-04-07 14:02 ">
+      April 7, 2021
+     </time>
+     von tererecool
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-07T15:24:19Z" title="2021-04-07 15:24 ">
+   April 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="41504" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1617803991" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 5 Minuten schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Asus RT-AX58U bei Familie 2. Und Familie 1 bekommt ja das Internet zuerst, deswegen die Frage ob das überhaupt möglich ist :S
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Den VPN Server an sich könnte der Asus machen. Das Problem ist eher wie man zu dem VPN Server kommt. Im Idealfall hätte Asus es nämlich am liebsten, wenn der Router direkt am Modem hängt und das Modem die öffentliche IP-Adresse an den Asus Router weiterreicht (das wird Bridge-Mode, Modem Modus oder Single User genannt).
+   </p>
+   <p>
+    Also in diesem Fall sollte man folgendermaßen vorgehen:
+   </p>
+   <ul>
+    <li>
+     Zuerst braucht der 5G Router eine öffentliche dynamische IP-Adresse mittels des Business APN (Anleitung oben verlinkt).
+    </li>
+    <li>
+     Dann braucht es eine Portweiterleitung vom 5G Router auf den Asus Router. Ich würde als VPN Server Lösung OpenVPN Empfehlen (hat Asus eingebaut). Für Open VPN wäre der Port 1194 weiterzuleiten (Standardport kann aber am Asus geändert werden), am besten gleich TCP und UDP. Vergebt für den Asus auch eine statische IP-Adresse damit sich diese nicht ändert. Sofern es sich bei dem 5G Router um den Huawei 5G CPE Pro 2 handelt sollte dies unter Erweitert -&gt; Router -&gt; DHCP in der Tabelle möglich sein
+    </li>
+    <li>
+     Als nächstes den VPN Server am Asus aktivieren. Dazu am Asus unter VPN -&gt; VPN-Server -&gt; OpenVPN den Schalter umlegen und wie gewünscht die Konfiguration anpassen.
+    </li>
+    <li>
+     Nun ist die Frage, wohin sich die VPN Client Geräte verbinden sollen. Normalerweise würde dies per DynDNS (DDNS) geschehen. Ein DynDNS nimmt die öffentliche IP-Adresse (welche sich ändern kann) und verknüpft diese mit einer URL, welche sich nicht ändert und leichter zu merken ist. Allerdings funktioniert die Asus DynDNS Implementierung nur wenn die öffentliche IP direkt am Router anliegt, was in diesem Fall nicht möglich ist (und vom 5G Router nicht unterstützt). Es kann zwar bei der Konfiguration des OpenVPN Client die aktuelle IP-Adresse des Anschlusses eingetragen werden, nachdem sich diese aber ändern ist dies unpraktisch. Am Huawei 5G CPE Pro 2 sollte es unter Erweitert -&gt; Router -&gt; DDNS die Möglichkeit geben einen DynDNS Dienst zu konfigurieren. Von no-ip gibt es auch eine kostenlose Variante, wobei der Account alle 30 Tage bestätigt werden muss (Account erstellen:
+     <a href="https://www.noip.com/" rel="external nofollow">
+      https://www.noip.com/
+     </a>
+     ).
+    </li>
+    <li>
+     Nun kann die OpenVPN Konfigurationsdatei vom Asus Router für die Client Geräte exportiert werden. Allerdings muss in der Datei nun die am Huawei konfigurierte DynDNS Adresse eingetragen werden. Öffne die Datei dazu mit einem Textbearbeitungsprogram (z.B. Editor) und ersetze die IP-Adresse in der ersten Zeile durch die DynDNS URL (ohne http/https oder www davor).
+    </li>
+    <li>
+     Nun kann die Datei in der OpenVPN App auf einem Client Gerät importiert werden. Der Standard VPN User ist außerdem derselbe mit dem man sich beim Router einloggt.
+    </li>
+   </ul>
+   <p>
+    Ich hoffe das hilft etwas weiter.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-07T16:08:26Z" title="2021-04-07 16:08 ">
+   April 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wir probieren es am We. aus, mal schauen, sieht sehr kompliziert aus.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-05T20:30:18Z" title="2021-05-05 20:30 ">
+   Mai 5, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    So, ich bin erst jetzt dazugekommen es zu probieren und folgende Hürden gibt es:
+   </p>
+   <p>
+   </p>
+   <p>
+    1.  "Zuerst braucht der 5G Router eine öffentliche dynamische IP-Adresse mittels des Business APN (Anleitung oben verlinkt)." Ist es damit wirklich getan und ist das Ergebiss überprüfbar? Sollte ich z.B. nun aus einem extern PC einen Ping senden können und eine Antwort bekommen? Antwort auf Ping bekomme ich aktuell nämlich nicht. In der ersten Antwort von Rexalius2000 ist ein Link verlinkt wo die Rede davon ist, dass man eine öffentliche IP eig. zuerst beantragen muss, war das vielleicht früher der Fall und jetzt nicht mehr, oder warum behaupten dies einige?
+   </p>
+   <p>
+   </p>
+   <p>
+    2. "Dann braucht es eine Portweiterleitung vom 5G Router auf den Asus Router." Wie geht das? Das Modem ist das
+    <strong>
+     H122-373 (
+    </strong>
+    Huawei 5G CPE Pro 2
+    <strong>
+     ).
+    </strong>
+    Ich sehe in den Menüpunkten nichts mit Port-forwarding.
+   </p>
+   <p>
+   </p>
+   <p>
+    3. "Vergebt für den Asus auch eine statische IP-Adresse"
+   </p>
+   <p>
+    Das komische dabei war, in der Liste von Geräten habe ich eine MAC-Adresse ausgewählt wo ich glaube, dass diese die vom Router in Familie 2 ist, da wo der VPN-Server laufen sollte. Auf der rechten Seite stand "Mein Gerät" ist diese Bezeichnung bekannt?, kommt das vom Modem selbst oder hast eine Ahnung wo das herkommen kann?, wir waren verwirrt warum nur dieser eine Listeneintrag "Mein Gerät" daneben hat.
+   </p>
+   <p>
+   </p>
+   <p>
+    4. "OpenVPN den Schalter umlegen und wie gewünscht die Konfiguration anpassen." Reicht die default-config oder braucht man normalerweise etwas unter "Erweitert" ?
+   </p>
+   <p>
+   </p>
+   <p>
+    5. "Am Huawei 5G CPE Pro 2 sollte es unter Erweitert -&gt; Router -&gt; DDNS die Möglichkeit geben einen DynDNS Dienst zu konfigurieren."
+   </p>
+   <p>
+    Wenn man dyndns googelt erscheinen mehrere Einträge und das Magenta-Modem zeigt nur DynDNS
+    <strong>
+     .org
+    </strong>
+    und NoIp, heißt das wirklich, dass nur dyndsn.org unterstützt wird und sowas wie dyndns
+    <strong>
+     .de
+    </strong>
+    nicht? dyndns.de ist nämlich kostenlos, .org nicht.
+   </p>
+   <p>
+    Jedenfalls haben wir eine Domäne auf dyndns.de angelegt, wie kann dieser Dienst die eigene IP-Adresse eig. wissen? Bin voll verwirrt wie das gehen sollte. Ich habe einen Ping an die angelegte Domäne gesendet und es kam keine Antwort, die angezeigte IP stimmt aber mit der die erscheint wenn ich "my-ip" im Browser suche überein.
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-05T23:48:12Z" title="2021-05-05 23:48 ">
+   Mai 5, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    zu 1.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42193" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1620246618" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 1 Stunde schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      "Zuerst braucht der 5G Router eine öffentliche dynamische IP-Adresse mittels des Business APN (Anleitung oben verlinkt)." Ist es damit wirklich getan und ist das Ergebiss überprüfbar?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ja damit sollte es wirklich getan sein. Wenn die IP-Adresse im Router Menü unter Erweitert -&gt; System -&gt; Geräteinformationen -&gt; WAN-IP-Adresse gleich ist wie auf bei
+    <a href="https://www.google.com/search?q=whats+my+ip&amp;oq=whats+my+ip" rel="external nofollow">
+     Google nach "whats my ip" suchst
+    </a>
+    .
+   </p>
+   <p>
+    In dem von
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77193-rexalius2000/?do=hovercard" data-mentionid="77193" href="https://community.magenta.at/profile/77193-rexalius2000/" rel="">
+     @Rexalius2000
+    </a>
+    verlinken Thread geht es um einen Coax-Kabel Anschluss und nicht um Mobilfunkt. Das sind zwei verschiedene Themen.
+   </p>
+   <p>
+   </p>
+   <p>
+    zu 2.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42193" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1620246618" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich sehe in den Menüpunkten nichts mit Port-forwarding.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Gut das heißt hier Virtueller Server. Ist zu finden unter Erweitert -&gt; Sicherheit -&gt; Virtueller Server
+   </p>
+   <p>
+   </p>
+   <p>
+    zu 3.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42193" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1620246618" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das komische dabei war, in der Liste von Geräten habe ich eine MAC-Adresse ausgewählt wo ich glaube, dass diese die vom Router in Familie 2 ist, da wo der VPN-Server laufen sollte. Auf der rechten Seite stand "Mein Gerät" ist diese Bezeichnung bekannt?, kommt das vom Modem selbst oder hast eine Ahnung wo das herkommen kann?, wir waren verwirrt warum nur dieser eine Listeneintrag "Mein Gerät" daneben hat.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Der Asus gibt seinen Namen nicht nach "außen" über den WAN Port mit (macht meiner auch nicht).
+   </p>
+   <p>
+    Es muss aber wohl irgendetwas im Namensfeld eingetragen sein, deswegen wird dann halt "Mein Gerät" eingetragen.
+   </p>
+   <p>
+    Die MAC Adresse des WAN Port vom Asus steht auch unten am weißen Aufkleber.
+   </p>
+   <p>
+   </p>
+   <p>
+    zu 4.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42193" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1620246618" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      "OpenVPN den Schalter umlegen und wie gewünscht die Konfiguration anpassen." Reicht die default-config oder braucht man normalerweise etwas unter "Erweitert" ?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Normal reicht die Standardkonfiguration. Ich habe nichts unter erweitert angepasst.
+   </p>
+   <p>
+    Hier meine Config:
+   </p>
+   <p>
+    <img alt="image.png.fb50da364e09f824e69a2b082ee85eb0.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3114" src="images/uploads/image.png.fb50da364e09f824e69a2b082ee85eb0.png" style="width:250px;height:auto;"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    zu 5.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42193" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1620246618" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      "Am Huawei 5G CPE Pro 2 sollte es unter Erweitert -&gt; Router -&gt; DDNS die Möglichkeit geben einen DynDNS Dienst zu konfigurieren."
+     </p>
+     <p>
+      Wenn man dyndns googelt erscheinen mehrere Einträge und das Magenta-Modem zeigt nur DynDNS
+      <strong>
+       .org
+      </strong>
+      und NoIp, heißt das wirklich, dass nur dyndsn.org unterstützt wird und sowas wie
+      <span>
+      </span>
+      dyndns
+      <strong>
+       .de
+      </strong>
+      nicht? dyndns.de ist nämlich kostenlos, .org nicht.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Nur die im Webinterface werden vom Huawei unterstützt.
+   </p>
+   <p>
+    Du meinst wohl ddnss.de nicht dyndns.de, oder?
+   </p>
+   <p>
+    Mehr Anbieter wären nur mit zusätzlicher Hardware möglich. Falls eine NAS vorhanden ist, kann auch diese wahrscheinlich auch als DynDNS Client fungieren. Ansonsten könnte es auch mit einem Raspberry Pi ungesetzt werden.
+   </p>
+   <p>
+    Von ddnss.de gäbe es auch einen Windows Client, sollte bei euch ein Windows Gerät durchgehend im Betrieb sein.
+    <a href="https://ddnss.de/info.php" rel="external nofollow">
+     https://ddnss.de/info.php
+    </a>
+    -&gt; DDNS-Service Updater
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42193" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1620246618" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 3 Stunden schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Jedenfalls haben wir eine Domäne auf dyndns.de angelegt, wie kann dieser Dienst die eigene IP-Adresse eig. wissen? Bin voll verwirrt wie das gehen sollte. Ich habe einen Ping an die angelegte Domäne gesendet und es kam keine Antwort, die angezeigte IP stimmt aber mit der die erscheint wenn ich "my-ip" im Browser suche überein.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Indem das Gerät meldet, diese IP gehört diesem User und zu der Domäne.
+   </p>
+   <p>
+    Eigentlich sollte der Dienst so gar nicht wissen welche IP zu der Domäne gehört, außer er hat sich mal die Adresse, von welcher aus die Registrierung vorgenommen wurde, gemerkt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-06T04:44:30Z" title="2021-05-06 04:44 ">
+   Mai 6, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Dankesehr @NTM, das hilft schon enorm weiter, ich schaue am Abend wieder weiter.
+   </p>
+   <p>
+   </p>
+   <p>
+    "Allerdings funktioniert die Asus DynDNS Implementierung nur wenn die öffentliche IP direkt am Router anliegt, was in diesem Fall nicht möglich ist"
+   </p>
+   <p>
+    In welchem Fall würde die IP direkt am Router liegen? Man braucht doch immer ein Moden davor?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-06T08:08:50Z" title="2021-05-06 08:08 ">
+   Mai 6, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42196" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1620276270" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 3 Stunden schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      "Allerdings funktioniert die Asus DynDNS Implementierung nur wenn die öffentliche IP direkt am Router anliegt, was in diesem Fall nicht möglich ist"
+     </p>
+     <p>
+      In welchem Fall würde die IP direkt am Router liegen? Man braucht doch immer ein Moden davor?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ja, allerdings haben einige (aber nicht alle) 5G/4G/DSL/Coax-Router einen so genannten Bridge Mode (heißt je nach Hersteller nicht unbedingt Bridge Mode). Mit dem Bridge Mode wird die öffentliche IP an den dahinter angeschlossenen Router weitergereicht.
+   </p>
+   <p>
+    Da die öffentliche IP dann an dem nachgeschalteten Router anliegt müssen alle anderen Geräte im Netzwerk an diesen Router angeschlossen werden. In diesem Fall würde dies aber nichts bringen, da der Asus direkt hinter dem Huawei hängen müsste und am Asus dann das Mesh und alle weiteren Endgeräte angeschlossen werden müssten.
+   </p>
+   <p>
+    Leider wird so ein Bridge Modus aber von allen Mobilfunkroutern, welche Magenta ausgibt, nicht unterstützt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-06T18:09:08Z" title="2021-05-06 18:09 ">
+   Mai 6, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Für VPN musste ich ja das eine APN-Profil am Modem hinzufügen, dieses Profil sollte nicht das default-Profil sein, oder? Ich habe nämlich unabsichtlich beim anlegen des Profil die Checkbox default ausgewählt und weiß jetzt nicht mehr welches das default normalerweise sein sollte, es gibt das standard internet-t-mobile.at und ein zweites "homenet". Macht es einen Unterschied welches Profil das default ist?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-06T20:11:55Z" title="2021-05-06 20:11 ">
+   Mai 6, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das ist eine Geburt!
+    <img alt=":D" data-emoticon="" height="20" src="images/emoticons/tma_laughing-o.png" srcset="images/emoticons/tma_laughing-o@2x.png 2x" title=":D" width="20"/>
+    Schon viele Hürden gelöst aber die Verbindung klappt noch nicht.
+   </p>
+   <p>
+    - Öffentlich IP haben wir, fängt mit 40 an
+   </p>
+   <p>
+    - DDNS von no-IP am Modem eingetragen und "online"
+   </p>
+   <p>
+    - Asus Router KEIN DDNS aktiv
+   </p>
+   <p>
+    - Asus Router hat eine statische IP vom DHCP-Server
+   </p>
+   <p>
+    - Asus Router OpenVPN aktiv mit angelegtem user + pass, von der config nur RSA von 1024 auf 2048bits gewechselt
+   </p>
+   <p>
+    - Config file mit domäne von no-IP ohne http/s und mit Port am Ende
+   </p>
+   <p>
+    - Auf iOS wird die Verbindung eine Zeit versucht und dann schlägt es fehl.
+   </p>
+   <p>
+    - Das einzige wo ich mir unsicher bin ist ob das Port-Forwarding stimmt:
+   </p>
+   <p>
+    Liste virtuelle Server:
+   </p>
+   <p>
+    Name: XY
+   </p>
+   <p>
+    WAN-Port: 1194-1194
+   </p>
+   <p>
+    LAN-IP-Adresse 192.168.8.60 (ist ja die statische vom Asus Router)
+   </p>
+   <p>
+    Lan-Port: 1194-1194
+   </p>
+   <p>
+    Protokoll: TCP/UDP
+   </p>
+   <p>
+    Status: toggle blau nach rechts.
+   </p>
+   <p>
+   </p>
+   <p>
+    Sieht das richtig aus? Ich weiß jetzt nicht wo ich nach dem Problem suchen sollte, scheint alles richtig konfiguriert zu sein. Kann es vielleicht sein weil das Smartphone wo die VPN-Verbindung startet im WLAN hängt? oder sollte dies nichts ausmachen?
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-06T20:31:13Z" title="2021-05-06 20:31 ">
+   Mai 6, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42213" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1620331915" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 15 Minuten schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Kann es vielleicht sein weil das Smartphone wo die VPN-Verbindung startet im WLAN hängt? oder sollte dies nichts ausmachen?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ja bitte wirklich von außen testen. Also das Smartphone direkt mit dem Mobilfunknetz verbinden oder mit einem W-Lan eines anderen Internet-Anschluss.
+   </p>
+   <p>
+    Es kann nämlich gut sein, dass der Huawei 5G CPE Pro2 kein Reverse DNS Lookup kann.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-06T20:41:15Z" title="2021-05-06 20:41 ">
+   Mai 6, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ok, das können wir erst morgen wieder ausprobieren, aber eig. weiß nicht ob das Sinn macht, wäre komisch, stellt dir vor du hast eine App um Geräte deines Hauses zu steuern, verwendest dafür VPN um aus der Entfernung die Steuerungen zu bedienen, dann bist daheim und musst extra VPN ausschalten, du kannst nicht automatisieren, dass diese App nur bei Bedarf VPN verwendet :S
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-05-06T20:41:58Z" title="2021-05-06 20:41 ">
+      Mai 6, 2021
+     </time>
+     von tererecool
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-07T08:21:57Z" title="2021-05-07 08:21 ">
+   Mai 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+     @NTM
+    </a>
+    hat leider nicht funktioniert, ich werde heute mal VPn direkt aufm Modem einrichten und es mit einem Windows Client ausprobieren, muss herausfinden wo es hackt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-07T10:22:02Z" title="2021-05-07 10:22 ">
+   Mai 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42217" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1620375717" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 1 Stunde schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+       NTM
+      </a>
+      hat leider nicht funktioniert, ich werde heute mal VPn direkt aufm Modem einrichten und es mit einem Windows Client ausprobieren, muss herausfinden wo es hackt.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hat der 5G CPE Pro 2 wirklich eine VPN Server Funktion?
+   </p>
+   <p>
+    Ein VPN Client sollte vorhanden sein, aber wenn er auch als VPN Server eingesetzt werden kann, wäre das eine positive Überraschung.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-07T14:31:23Z" title="2021-05-07 14:31 ">
+   Mai 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nein, eig. nicht. Jetzt konnte ich das Problem finden, das angelegte APN Profil war nicht als default markiert deswegen war die IP gar nicht mehr öffentlich, weiß noch nicht welche Auswirkung dies auf die anderen angelegten Profile haben könnte.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-05-07T14:31:47Z" title="2021-05-07 14:31 ">
+      Mai 7, 2021
+     </time>
+     von tererecool
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-07T14:33:02Z" title="2021-05-07 14:33 ">
+   Mai 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42214" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1620333073" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 18 Stunden schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ja bitte wirklich von außen testen. Also das Smartphone direkt mit dem Mobilfunknetz verbinden oder mit einem W-Lan eines anderen Internet-Anschluss.
+     </p>
+     <p>
+      Es kann nämlich gut sein, dass der Huawei 5G CPE Pro2 kein Reverse DNS Lookup kann.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Zumindest von außen geht es, im WLAN nicht.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-07T14:52:31Z" title="2021-05-07 14:52 ">
+   Mai 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42222" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1620397883" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 21 Minuten schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      weiß noch nicht welche Auswirkung dies auf die anderen angelegten Profile haben könnte.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Wichtig ist nur das Profil für die öffentliche IP-Adresse, die anderen kannst du ignorieren.
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42223" data-ipsquote-contentid="6776" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1620397982" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 20 Minuten schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Zumindest von außen geht es, im WLAN nicht.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Super das es endlich funktioniert!
+   </p>
+   <p>
+    Von innen ist die VPN Verbindung ja auch eigentlich nicht nötig.
+   </p>
+   <p>
+    Ich würde mich nicht immer mit meinem VPN Server verbinden, sondern nur wenn es nötig ist, da ansonsten die Datenübertragungsraten am Handy vom heimischen Internet-Anschluss abhängig sind, auch wenn man unterwegs ist.
+   </p>
+   <p>
+    Mit einem Bridge Modus fähigen Gerät könnte man dies umgehen, aber 5G Router, die einen Bridge Mode haben, sind noch ziemlich teuer.
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-05-07T14:53:21Z" title="2021-05-07 14:53 ">
+      Mai 7, 2021
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2022-06-29T17:21:11Z" title="2022-06-29 17:21 ">
+   Juni 29, 2022
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Seit heute geht die Verbindung plötzlich nicht mehr
+   </p>
+   <p>
+    Error: ssl_cleartext BIO_read failed
+   </p>
+   <p>
+    OpenSSL error:1416F086 tls_process_server_certificate:certificate verify failed
+   </p>
+   <p>
+    Ich glaube das Modem müsste ein Firmware-Update bekommen haben, was anderes kann ich mir gerade nicht erklären, muss ich mir genauer anschauen.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

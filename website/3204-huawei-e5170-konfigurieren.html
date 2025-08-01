@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Huawei E5170 konfigurieren?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Huawei E5170 konfigurieren?
+  </h1>
+  <span class="author">
+   Gast Oliver Z.
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-01-12T23:00:00Z" title="2016-01-12 23:00 ">
+   Januar 12, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo!
+   </p>
+   <p>
+    Ich interessiere mich für "HomeNet LTE" mit der Huawei Box E5170.
+   </p>
+   <p>
+    Bevor ich nun die "Katze im Sack kaufe" möchte ich mich im Vorfeld gerne schlau machen ... und habe da einige Fragen (via Chat wurde ich auf dieses Forum verwiesen).
+   </p>
+   <p>
+    Ich habe bisher keine Konfiugurationsanleitung zur Huawei Box E5170 (zb. als PDF) gefunden. Wenn es eine solche gibt, wo finde ich die?
+   </p>
+   <p>
+    Weil ich eben keine Anleitung gefunden habe ergeben sich folgende Fragen:
+   </p>
+   <p>
+    - Welche IP hat die Box als Gateway und kann man diese ändern?
+    <br/>
+    (viele WLAN-Router verwenden 192.168.1.1, ich möchte 192.168.0.1 einstellen - weil es einfacher ist ein Gerät zu konfigurieren, als alle Anderen ;).
+   </p>
+   <p>
+    - Kann man WLAN deaktivieren (angeblich ja, lt. einigen Foren aber angeblich nicht - mag sein, dass es an der Firmware liegt)? - lt. tech.Daten gibt es ja einen LAN Anschluss, den ich statt dessen verwenden möchte.
+   </p>
+   <p>
+    - Kann man die DHCP-Range einstellen - einige Geräte haben eine fixe-IP (z.b. Drucker) - und kann man die Lease Time einstellen, bzw. kann man für bestimmte mac-Adresse die DHCP-Adresse fixieren?
+   </p>
+   <p>
+    Warum das alles?
+    <br/>
+    Weil ich meine derzeitige DSL Verbindung kündigen (versprochene Bandbreite wird bei Weitem nicht erreicht und dann auch noch zu teuer) und den momentan vorhandenen DSL Router durch die LTE-Box ersetzen möchte."Dahinter" - also via LAN hängt ein WLAN-Router (ohne DHCP - das soll die LTE-BOX machen), der WLAN und alle anderen Einstellungen über hat. Alle daran angeschlossenen Geräte (insgesamt max. 7 via LAN, 9 via WLAN - davon max. 3 gleichzeitig "im Internet") gehen über diesen Router und suchen ihr Gateway auf 192.168.0.1.
+   </p>
+   <p>
+    Ich will jetzt nicht das ganze Netz umkrempeln müssen ;)
+   </p>
+   <p>
+    Vielen Dank
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-01-12T23:00:00Z" title="2016-01-12 23:00 ">
+   Januar 12, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo!
+   </p>
+   <p>
+    <strong>
+     - Welche IP hat die Box als Gateway und kann man diese ändern?
+    </strong>
+    <br/>
+    Die Standard-IP ist 192.168.1.1, kann aber ganz einfach über die Weboberfläche geändert werden.
+   </p>
+   <p>
+    <strong>
+     - Kann man WLAN deaktivieren?
+    </strong>
+    <br>
+     Ja das geht auch über die Weboberfläche
+    </br>
+   </p>
+   <p>
+    <strong>
+     - Kann man die DHCP-Range einstellen
+    </strong>
+    <br>
+     Ja das geht auch über die Weboberfläche
+    </br>
+   </p>
+   <p>
+    Aber eines verstehe ich nicht: Warum stellst du dir das Setup so kompliziert vor? Wenn du sowieso einen WLAN Router hinter der Box stehen hast, dann lass die Konfiguration von der Box so wie sie ist und richte dein Netzwerk über den WLAN Router ein. Da hast du auch bestimmt mehr Einstellungsmöglichkeiten und es macht das ganze wesentlich einfacher und übersichtlicher.
+   </p>
+   <p>
+    Abgesehen davon kann das ja gar nicht funktionieren, wenn du am WLAN Router DHCP abdrehst und das die HomeNet Box übernehmen soll. Die hat nur einen Anschluss und DHCP funktioniert ja nur auf die physikalisch angeschlossenen Geräte. Außer sie hängen im WLAN von der HomeNet Box.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Oliver Z.
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-01-13T23:00:00Z" title="2016-01-13 23:00 ">
+   Januar 13, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Servus!
+   </p>
+   <p>
+    Erstmal danke für die Antwort!
+   </p>
+   <p>
+    Wenn ich in die Konfig muss, um die IP des Gateways zu ändern, kann ich im Zuge dessen auch den Rest machen.
+   </p>
+   <p>
+    Vermutlich wäre es einfacher die DHCP Konfig im WLAN Router einzustellen - mal sehen.
+   </p>
+   <p>
+    Warum sollte das über die BOX übrigens nicht funktionieren?
+    <br>
+     LTE-BOX -&gt; WLAN-Router (fungiert im Grunde auch "nur" als Switch für LAN und WLAN) -&gt; Switch -&gt; div. Endgeräte am LAN. Ging ja bisher auch bestens (halt mit einem DSL Router). Es haben sogar einwandfrei beide WLANs nebeneinander funktioniert - brauche ich halt nicht, deshalb drehe ich eines ab.
+    </br>
+   </p>
+   <p>
+    Bin allerdings noch am Überlegen, ob es die BOX E5170 oder der Router B315 wird ...
+   </p>
+   <p>
+    Tipps, Erfahrungen etc. dazu?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   sunshine
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-01-13T23:00:00Z" title="2016-01-13 23:00 ">
+   Januar 13, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Zur technischen Seite kann ich dir leider keine Tipps geben. Mir gefällt die Box einfach optisch besser und zusätzlich hat sie auch noch `nen Akku.
+    <img alt="Zwinkern" class="dynImage maxSize_23x23" height="23" src="http://forum.t-mobile.at/common/js/ckeditor/plugins/smiley/images/wink_smile.png" title="Zwinkern" width="23"/>
+    <br>
+     LG Sunshine
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="9 yr" datetime="2016-01-16T23:00:00Z" title="2016-01-16 23:00 ">
+   Januar 16, 2016
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich würde sagen, dass die Box praktisch ist, wenn du viel unterwegs bist und sie mitnehmen möchtest. Einen Akku hat sie auch.
+   </p>
+   <p>
+    Der Router hat noch mehr LAN Ports als die Box.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

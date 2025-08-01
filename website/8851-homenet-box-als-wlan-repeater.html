@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Homenet Box als WLAN Repeater
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Homenet Box als WLAN Repeater
+  </h1>
+  <span class="author">
+   Lauschensky
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-07-12T19:11:21Z" title="2023-07-12 19:11 ">
+   Juli 12, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Kann ich die alte und ausgediente Huawei HomeNet Box AF22 als WLAN Repeater beim neuen 5G WLAN Router AX5400 verwenden? Wie muss man das Gerät dafür konfigurieren?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-07-12T23:48:22Z" title="2023-07-12 23:48 ">
+   Juli 12, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/97758-lauschensky/?do=hovercard" data-mentionid="97758" href="https://community.magenta.at/profile/97758-lauschensky/" rel="">
+     @Lauschensky
+    </a>
+    <br>
+     Der Einsatz des Huawei E5170 als W-Lan Repeater ist nicht möglich, aber er könnte als kabelgebundener W-Lan Access Point eingesetzt werden (also Kabelverbindung zwischen AX5400 und E5170).
+    </br>
+   </p>
+   <p>
+    Auf der Weboberfläche (unter 192.168.8.1) unter Einstellungen -&gt; Ethernet -&gt; Ethernet-Einstellungen den Verbindungsmodus auf "Nur Lan" einstellen (Übernehmen klicken nicht vergessen) und unter Einstellungen -&gt; WLAN -&gt; DHCP -&gt; DHCP-Server von Aktivieren auf Deaktivieren ändern (Übernehmen klicken nicht vergessen). Wenn du den E5170 einmal neu startest, damit sich alle Geräte neu verbinden müssen, würde dieser nun als W-Lan Access Point fungieren. In diesen Zustand kann nicht mehr auf die Weboberfläche des E5170 zugegriffen werden. Für Zugriff zur Weboberfläche müsste nun auf einem Endgerät (PC, Handy, etc.), welches mit dem E5170 verbunden ist, eine statische IP-Adresse wie z.B. 192.168.8.101 mit der Subnetzmaske 255.255.255.0 oder /24 konfiguriert werden. Also die W-Lan Stellungen am besten vorher anpassen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Edit: Bedenke, dass mit dem E5170 aufgrund des 10/100 Fast-Ethernet Anschlusses maximal 100 Mbit/s Datenübertragung möglich ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG NTM
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-07-12T23:50:50Z" title="2023-07-12 23:50 ">
+      Juli 12, 2023
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+ </body>
+</html>

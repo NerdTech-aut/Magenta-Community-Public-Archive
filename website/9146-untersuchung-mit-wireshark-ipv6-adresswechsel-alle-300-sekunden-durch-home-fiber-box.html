@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Untersuchung mit Wireshark -  IPv6-Adresswechsel alle 300 Sekunden durch Home Fiber Box!
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Untersuchung mit Wireshark -  IPv6-Adresswechsel alle 300 Sekunden durch Home Fiber Box!
+  </h1>
+  <span class="author">
+   sjkljlkd
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-17T15:29:30Z" title="2023-09-17 15:29 ">
+   September 17, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es scheint, als hätte sich vor etwa 2-3 Monaten etwas an der IPv6-Konfiguration der Internet Home Fiber Box geändert.
+   </p>
+   <p>
+   </p>
+   <p>
+    Eine Untersuchung mit Wireshark ergab, dass das von der Home Fiber Box gesendete IPv6 "Router Advertisement"-Paket einen Wert von 300 Sekunden für die "Valid Lifetime" und "Preferred Lifetime" des Präfixes angibt. Das bedeutet, dass alle 300 Sekunden jedes lokale Gerät im Netzwerk eine neue IPv6-Adresse über SLAAC generiert und die alte sofort entsorgt, wodurch alle bestehenden IPv6-Verbindungen unterbrochen werden.
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="jpg" data-fileid="5102" href="images/uploads/magenta2.jpg.d1e8ccac7dc90dbfe419394f4411a76c.jpg" rel="">
+     <img alt="magenta2.thumb.jpg.18b983065c15516157d3c03ddae7f7ab.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="5102" data-ratio="51.60" src="images/uploads/magenta2.thumb.jpg.18b983065c15516157d3c03ddae7f7ab.jpg" width="1000"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Diese Werte sind viel zu klein - sie sollten in Tagen oder Stunden gemessen werden, nicht in Minuten, und "Valid Lifetime" sollte viel größer sein als "Preferred Lifetime", um einen reibungslosen Übergang von langlebigen Verbindungen zu ermöglichen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Bei meinen Android-Geräten macht sich das so bemerkbar, dass die WiFi-Verbindung vorübergehend abbricht und alle aktiven Verbindungen unterbrochen werden. Das Gerät schaltet vorübergehend auf 4G um. Leider ist es bei neueren Android-Versionen nicht möglich, IPv6 zu deaktivieren
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    MacOS-Geräte scheinen mit der Situation besser umzugehen, aber jeder Download über IPv6 wird alle 10 Minuten (2*300 Sekunden = 600 Sekunden) unterbrochen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Man kann dies sehen, wenn man von einem IPv6-Server mehr als 10 Minuten lang herunterlädt, zum Beispiel vom Magenta-Testserver:
+   </p>
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="">
+    <div class="ipsQuote_citation">
+     Quote
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      ~ wget -v --limit-rate=500K "https://disi.magenta.at:8089/fw-speedtest/backend/garbage.xyz" -O /dev/null
+      <br/>
+      --2023-09-17 15:24:47--
+      <a href="https://disi.magenta.at:8089/fw-speedtest/backend/garbage.xyz" rel="external nofollow">
+       https://disi.magenta.at:8089/fw-speedtest/backend/garbage.xyz
+      </a>
+      <br/>
+      Resolving disi.magenta.at (disi.magenta.at)... 2a02:8383:c:bbf:195:34:129:99, 195.34.129.99
+      <br/>
+      Connecting to disi.magenta.at (disi.magenta.at)|2a02:8383:c:bbf:195:34:129:99|:8089... connected.
+      <br>
+       HTTP request sent, awaiting response... 200 OK
+       <br>
+        Length: 1000000000 (954M) [application/octet-stream]
+        <br>
+         Saving to: ‘/dev/null’
+        </br>
+       </br>
+      </br>
+     </p>
+     <p>
+      /dev/null                          2%[&gt;                                                        ]  19.10M  --.-KB/s    in 49s
+     </p>
+     <p>
+      2023-09-17 15:25:36 (403 KB/s) - Read error at byte 20029038/1000000000 (No route to host). Retrying.
+     </p>
+     <p>
+      --2023-09-17 15:25:37--  (try: 2)
+      <a href="https://disi.magenta.at:8089/fw-speedtest/backend/garbage.xyz" rel="external nofollow">
+       https://disi.magenta.at:8089/fw-speedtest/backend/garbage.xyz
+      </a>
+      <br/>
+      Connecting to disi.magenta.at (disi.magenta.at)|2a02:8383:c:bbf:195:34:129:99|:8089... connected.
+      <br/>
+      HTTP request sent, awaiting response... 206 Partial Content
+      <br/>
+      Length: 1000000000 (954M), 979970962 (935M) remaining [application/octet-stream]
+      <br/>
+      Saving to: ‘/dev/null’
+     </p>
+     <p>
+      /dev/null                         34%[+=================&gt;                                      ] 329.38M  --.-KB/s    in 10m 53s
+     </p>
+     <p>
+      2023-09-17 15:36:30 (487 KB/s) - Read error at byte 345382066/1000000000 (No route to host). Retrying.
+     </p>
+     <p>
+      --2023-09-17 15:36:32--  (try: 3)
+      <a href="https://disi.magenta.at:8089/fw-speedtest/backend/garbage.xyz" rel="external nofollow">
+       https://disi.magenta.at:8089/fw-speedtest/backend/garbage.xyz
+      </a>
+      <br/>
+      Connecting to disi.magenta.at (disi.magenta.at)|2a02:8383:c:bbf:195:34:129:99|:8089... connected.
+      <br/>
+      HTTP request sent, awaiting response... 206 Partial Content
+      <br/>
+      Length: 1000000000 (954M), 654617934 (624M) remaining [application/octet-stream]
+      <br/>
+      Saving to: ‘/dev/null’
+     </p>
+     <p>
+      /dev/null                         61%[+++++++++++++++++++===============&gt;                      ] 590.35M  --.-KB/s    in 9m 4s
+     </p>
+     <p>
+      2023-09-17 15:45:37 (491 KB/s) - Read error at byte 619023093/1000000000 (No route to host). Retrying.
+     </p>
+     <p>
+      --2023-09-17 15:45:40--  (try: 4)
+      <a href="https://disi.magenta.at:8089/fw-speedtest/backend/garbage.xyz" rel="external nofollow">
+       https://disi.magenta.at:8089/fw-speedtest/backend/garbage.xyz
+      </a>
+      <br/>
+      Connecting to disi.magenta.at (disi.magenta.at)|2a02:8383:c:bbf:195:34:129:99|:8089... connected.
+      <br/>
+      HTTP request sent, awaiting response... 206 Partial Content
+      <br/>
+      Length: 1000000000 (954M), 380976907 (363M) remaining [application/octet-stream]
+      <br/>
+      Saving to: ‘/dev/null’
+     </p>
+     <p>
+      /dev/null                        100%[+++++++++++++++++++++++++++++++++++=====================&gt;] 953.67M   517KB/s    in 12m 24s
+     </p>
+     <p>
+      2023-09-17 15:58:04 (500 KB/s) - ‘/dev/null’ saved [1000000000/1000000000]
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-18T15:26:24Z" title="2023-09-18 15:26 ">
+   September 18, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55328" data-ipsquote-contentid="9146" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1694964570" data-ipsquote-userid="97949" data-ipsquote-username="sjkljlkd">
+    <div class="ipsQuote_citation">
+     Am 17.9.2023 um 17:29 schrieb sjkljlkd:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Es scheint, als hätte sich vor etwa 2-3 Monaten etwas an der IPv6-Konfiguration der Internet Home Fiber Box geändert.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hast du das Modem schon mal auf Werkseinstellung zurück gesetzt? Ändert sich dadurch was an der "Lifetime"?
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   sjkljlkd
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-18T16:36:05Z" title="2023-09-18 16:36 ">
+   September 18, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55340" data-ipsquote-contentid="9146" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1695050784" data-ipsquote-userid="77318" data-ipsquote-username="Jonathan Dorian">
+    <div class="ipsQuote_citation">
+     On 9/18/2023 at 5:26 PM, Jonathan Dorian said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Hast du das Modem schon mal auf Werkseinstellung zurück gesetzt? Ändert sich dadurch was an der "Lifetime"?
+     </p>
+     <p>
+     </p>
+     <p>
+      LG JD.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Hallo JD,
+   </p>
+   <p>
+    Habe schon vor ein paar Wochen auf Werkseinstellungen zurückgesetzt, da kamen die Unterbrechungsprobleme wieder zurück. Habe es aber damals nicht mit Wireshark überprüft.
+   </p>
+   <p>
+   </p>
+   <p>
+    Gerade jetzt habe ich es noch einmal versucht und sehe folgende Werte:
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="jpg" data-fileid="5106" href="images/uploads/magenta3.jpg.5e0094e71dc6fa9650e964466d80a896.jpg" rel="">
+     <img alt="magenta3.thumb.jpg.29c5b10f5f8bb6a90eb47562b7a16b47.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="5106" data-ratio="51.60" src="images/uploads/magenta3.thumb.jpg.29c5b10f5f8bb6a90eb47562b7a16b47.jpg" width="1000"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Das sind immer noch falsche Werte... aber wenigstens kommen die Verbindungsabbrüche jetzt nur noch alle 1 Stunde (3600 Sekunden)...
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich werde Sie wissen lassen, ob es nach einer Weile wieder zu einer schlechten Konfiguration zurückkehrt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Klobesen
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-19T12:45:09Z" title="2023-09-19 12:45 ">
+   September 19, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi sjkijlkd,
+   </p>
+   <p>
+   </p>
+   <p>
+    habe genau das gleiche Problem mit meinem Modem! Muß ich das Modem auf Werkseinstellungen zurücksetzen damit der Wert zumindest auf 3600 geändert ist oder ist der Wert automatisch jetzt schon vorhanden?
+    <br>
+    </br>
+   </p>
+   <p>
+    Danke für deine Info!
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   sjkljlkd
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-19T17:54:00Z" title="2023-09-19 17:54 ">
+   September 19, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Leider ist heute Morgen wieder der schlechte Wert von 300 Sekunden zu sehen, und es kommt regelmäßig zu Verbindungsabbrüchen:
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="jpg" data-fileid="5107" href="images/uploads/magenta4.jpg.6e403b4c251ae6962f1cfb66dbd5076f.jpg" rel="">
+     <img alt="magenta4.thumb.jpg.0e7ff9dc29aa84ffb81d0563691395c5.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="5107" data-ratio="50.70" src="images/uploads/magenta4.thumb.jpg.0e7ff9dc29aa84ffb81d0563691395c5.jpg" width="1000"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Das Zurücksetzen auf die Werkseinstellungen funktioniert also überhaupt nicht.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-09-20T15:36:07Z" title="2023-09-20 15:36 ">
+   September 20, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55364" data-ipsquote-contentid="9146" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1695146040" data-ipsquote-userid="97949" data-ipsquote-username="sjkljlkd">
+    <div class="ipsQuote_citation">
+     Am 19.9.2023 um 19:54 schrieb sjkljlkd:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das Zurücksetzen auf die Werkseinstellungen funktioniert also überhaupt nicht.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Melde dich mal bei unseren Techniker:innen unter 0676 200 7777 und frage nach, ob hier vielleicht ein Tausch des Modems eine Lösungsmaßnahme ist.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   momygml
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-10-02T12:56:26Z" title="2023-10-02 12:56 ">
+   Oktober 2, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="55328" data-ipsquote-contentid="9146" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1694964570" data-ipsquote-userid="97949" data-ipsquote-username="sjkljlkd">
+    <div class="ipsQuote_citation">
+     Am 17.9.2023 um 18:29 schrieb sjkljlkd:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Es scheint, als hätte sich vor etwa 2-3 Monaten etwas an der IPv6-Konfiguration der Internet Home Fiber Box geändert.
+     </p>
+     <p>
+     </p>
+     <p>
+      Eine Untersuchung mit Wireshark ergab, dass das von der Home Fiber Box gesendete IPv6 "Router Advertisement"-Paket einen Wert von 300 Sekunden für die "Valid Lifetime" und "Preferred Lifetime" des Präfixes angibt. Das bedeutet, dass alle 300 Sekunden jedes lokale Gerät im Netzwerk eine neue IPv6-Adresse über SLAAC generiert und die alte sofort entsorgt, wodurch alle bestehenden IPv6-Verbindungen unterbrochen werden.
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileext="jpg" data-fileid="5102" href="images/uploads/magenta2.jpg.d1e8ccac7dc90dbfe419394f4411a76c.jpg" rel="">
+       <img alt="magenta2.thumb.jpg.18b983065c15516157d3c03ddae7f7ab.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="5102" data-ratio="51.60" src="images/uploads/magenta2.thumb.jpg.18b983065c15516157d3c03ddae7f7ab.jpg" width="1000"/>
+      </a>
+     </p>
+     <p>
+     </p>
+     <p>
+      Diese Werte sind viel zu klein - sie sollten in Tagen oder Stunden gemessen werden, nicht in Minuten, und "Valid Lifetime" sollte viel größer sein als "Preferred Lifetime", um einen reibungslosen Übergang von langlebigen Verbindungen zu ermöglichen.
+     </p>
+     <p>
+      Dieses Problem macht mich schon wütend, ich bin gerade über
+      <a href="https://rentola.at/" rel="external nofollow">
+       rentola.at
+      </a>
+      umgezogen
+     </p>
+     <p>
+      Bei meinen Android-Geräten macht sich das so bemerkbar, dass die WiFi-Verbindung vorübergehend abbricht und alle aktiven Verbindungen unterbrochen werden. Das Gerät schaltet vorübergehend auf 4G um. Leider ist es bei neueren Android-Versionen nicht möglich, IPv6 zu deaktivieren
+      <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+     </p>
+     <p>
+     </p>
+     <p>
+      MacOS-Geräte scheinen mit der Situation besser umzugehen, aber jeder Download über IPv6 wird alle 10 Minuten (2*300 Sekunden = 600 Sekunden) unterbrochen.
+     </p>
+     <p>
+     </p>
+     <p>
+      Man kann dies sehen, wenn man von einem IPv6-Server mehr als 10 Minuten lang herunterlädt, zum Beispiel vom Magenta-Testserver:
+     </p>
+     <p>
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich habe das gleiche Problem, obwohl ich es kürzlich gekauft habe und jetzt auch damit zu kämpfen habe. Ich habe tatsächlich das ganze Wochenende damit verbracht, das herauszufinden.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   WilleHelm
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-18T13:59:17Z" title="2023-11-18 13:59 ">
+   November 18, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ein Freund von mir berichtete von demselben Problem. Allerdings hat er es seit ein paar Wochen nicht mehr. Vielleicht hat sich das allg. gelöst und man kann das Thema abhaken?
+    <span>
+     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   gunnar
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-15T20:28:14Z" title="2024-01-15 20:28 ">
+   Januar 15, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Kann berichten, meine Connect-Box CH7465LG-LC im IPv6 DS-Lite Modus läuft mit:
+   </p>
+   <p>
+    Software Version:CH7465LG-NCIP-6.15.32p2TM-GA-NOSH
+   </p>
+   <p>
+    WAN IP Einstellungen: IPv6 lease time 3 Tage 20h nach Neustart der Box
+   </p>
+   <p>
+    Windows-PCs erhalten per ICMPv6 Router Advertisement:
+    <br>
+     Valid Lifetime 932798 ... das sind also ca. 10,8 Tage
+    </br>
+   </p>
+   <p>
+    Preferred Lifetime: 327998 ... das sind also ca. 3,8 Tage
+   </p>
+   <p>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2024-01-15T20:29:49Z" title="2024-01-15 20:29 ">
+      Januar 15, 2024
+     </time>
+     von gunnar
+    </strong>
+    <br>
+     typo
+    </br>
+   </span>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Connect Box Bridge Mode Probleme
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Connect Box Bridge Mode Probleme
+  </h1>
+  <span class="author">
+   audiopathik
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-21T14:24:25Z" title="2021-04-21 14:24 ">
+   April 21, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi!
+   </p>
+   <p>
+    Ich habe schon seit mehreren Jahren die UPC Connect Box im Bridge Mode hinter meinem ASUS GT-5300. Gestern Nacht gabs ein Erdbeben und danach ging das Internet nicht mehr. Nach mehreren Stunden warten und Neustarts, komplett alles abstecken, schrittweise wieder anstecken habe ich ein Factory Reset gemacht und nun habe ich Probleme das Internet wieder einzurichten.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn die Connect Box im Router Mode ist kann ich per LAN und WLAN normal surfen, aber im Bridge Mode bekomme ich über meinen ASUS einfach kein Internet obwohl ich die selben Einstellungen wie zuvor verwende (Automatische IP, keine Authentifizierung) habe auch den ASUS bereits mehrmals auf Werkseinstellung zurückgesetzt und frisch eingerichtet und mein Internetzugang ist nicht IPv6. Habe bereits mehrmals die Hotline angerufen die immer nur sagen 'alles abstecken, eine Minute warten, wieder anstecken, wenn die Lichter nicht mehr blinken 30 Sekunden Reset drücken' (Factory Reset) dann sollte es gehen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Konfigurationsmöglichkeiten auf dem ASUS sind sehr umfangreich, was die WAN-Einstellungen betrifft bin ich mir nicht 100% sicher was bei allem richtig ist. Die Dame der Hotline meinte jedenfalls 'nichts Einstellen. Einfach anstecken'.
+   </p>
+   <p>
+   </p>
+   <p>
+    Der richte WAN-Modus ist ja denke ich nicht PPPoE sondern Automatische IP und es ist keine  Authentifizierungen (Benutzername/PW) notwendig, richtig?
+   </p>
+   <p>
+   </p>
+   <p>
+    Interessanterweise erhält der Router eine (richtige?) WAN IP vom Moden und auf der Weboberfläche vom ASUS kann ich Seiten wie zB Google, Wiki &amp; Co erfolgreich pingen, am Desktop unter Windows aber leider nicht.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hab ein paar Bilder angehängt auf denen die Weboberfläche vom ASUS zu sehen ist. Auf dem Ersten ist zu sehen, dass er 'Verbunden' anzeigt, zudem eine gültige WAN IP erhält und diverse Gameserver weltweit erreicht und deren Latenz ermitteln kann.
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf dem Zweiten sind die Konfigurationsmöglichkeiten für WAN-Modus 'Automatische IP' zu sehen (für PPPoE, PPTP/L2TP [VPN?] sind andere Einstellungen vorhanden)
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf dem Dritten ist die Routing-Tabelle von netstat zu sehen, es fällt das Gateway 80-108-195-1.ca auf, es ist so sicherlich nicht richtig.
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf dem Vierten ist zu sehen, dass der ASUS-Router Google, Youtube, Facebook usw erreicht. Leider meine Endgeräte aber nicht.
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="3075" href="images/uploads/Screenshot_20210421-155749_Chrome.jpg.fd94323277fa269ade63ba5a38612c0d.jpg" rel="">
+     <img alt="Screenshot_20210421-155749_Chrome.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3075" src="images/uploads/Screenshot_20210421-155749_Chrome.thumb.jpg.1764cd42e282dedd63b277b9b6e4e58f.jpg"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="3076" href="images/uploads/Screenshot_20210421-155856_Chrome.jpg.1279fdd828a650f4a60397dbc8baadb2.jpg" rel="">
+     <img alt="Screenshot_20210421-155856_Chrome.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3076" src="images/uploads/Screenshot_20210421-155856_Chrome.thumb.jpg.d6de10b2205dc0de39db89e3765fe558.jpg"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="3077" href="images/uploads/Screenshot_20210421-155947_Chrome.jpg.7b81add71609949aa2e7a4760ab007cf.jpg" rel="">
+     <img alt="Screenshot_20210421-155947_Chrome.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3077" src="images/uploads/Screenshot_20210421-155947_Chrome.thumb.jpg.f74321d41a0057ef99164d5a09244653.jpg"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Screenshot_20210421-185149_Chrome.jpg.c6fee65a09a249c9e34b2dbc1cb7b2dd.jpg">
+     <img alt="Screenshot_20210421-185149_Chrome.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3079" src="images/uploads/Screenshot_20210421-185149_Chrome.thumb.jpg.57521f001a7e189b6fa7ddad06cf5e6a.jpg"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-04-21T17:39:18Z" title="2021-04-21 17:39 ">
+      April 21, 2021
+     </time>
+     von audiopathik
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-21T15:04:26Z" title="2021-04-21 15:04 ">
+   April 21, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es sieht nach einem Schaden im Netzwerk aus.
+   </p>
+   <p>
+   </p>
+   <p>
+    Welche LEDs leuchten auf der Connect Box, eigentlich müsste da seitens der Hotline ein Fehler aufgefallen sein.
+   </p>
+   <p>
+    Oder der Asus Router hat das Erdbeben nicht überlebt.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   audiopathik
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-21T16:25:03Z" title="2021-04-21 16:25 ">
+   April 21, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="41881" data-ipsquote-contentid="6836" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1619017466" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Es sieht nach einem Schaden im Netzwerk aus.
+     </p>
+     <p>
+     </p>
+     <p>
+      Welche LEDs leuchten auf der Connect Box, eigentlich müsste da seitens der Hotline ein Fehler aufgefallen sein.
+     </p>
+     <p>
+      Oder der Asus Router hat das Erdbeben nicht überlebt.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Nur das grüne Status-LED durchgehend, nicht blinkend.
+   </p>
+   <p>
+    Laut Hotline ist das Signal von und zum Modem in Ordnung. Wie gesagt ich komme im Router-Modus normal ins Internet.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich denke nicht dass das kurze Wackeln einen Einfluss auf die Geräte hatte, wenn man das Gerät hochhebt sind das deutlich stärkere Erschütterungen. Zudem gibt es ja keine anderen Anzeichen auf Fehler, ich kann sogar Google, Facebook, Youtube, Twitter, Wikipedia über die Weboberfläche vom ASUS erreichen (siehe angehängten Screenshot), aber nicht über die Endgeräte. Es scheint sich also um ein Konfigurationsproblem zu handeln.
+   </p>
+   <p>
+   </p>
+   <p>
+    Es gab nach dem Erbeben einen kurzen Internetausfall und dann wenige Stunden später einen langen. Laut Magenta Störungsabfrage wurden da im Bezirk Wartungsarbeiten durchgeführt. Ich habe dann die Connect Box neu gestartet und auf Werkseinstellungen zurückgesetzt und nun habe ich Probleme das Internet wieder einzurichten. Die Connect Box ist im Bridge-Modus und nicht auf IPv6 gestellt, der ASUS-Router per Cat6-Kabel vom eigenen WAN-Port auf LAN1-Port der Connect Box angeschlossen.
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="3078" href="images/uploads/Screenshot_20210421-185149_Chrome.jpg.00909ffdae62781cb205dbbebf9215a8.jpg" rel="">
+     <img alt="Screenshot_20210421-185149_Chrome.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3078" src="images/uploads/Screenshot_20210421-185149_Chrome.thumb.jpg.d2ed0fb743f54d80b2c13337f09ada4d.jpg"/>
+    </a>
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-04-21T17:30:31Z" title="2021-04-21 17:30 ">
+      April 21, 2021
+     </time>
+     von audiopathik
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   audiopathik
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-26T14:54:15Z" title="2021-04-26 14:54 ">
+   April 26, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Bump
+   </p>
+   <p>
+    Vielleicht hat ja noch jemand einen Hinweis.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-26T20:05:44Z" title="2021-04-26 20:05 ">
+   April 26, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das würde mir noch zu dem Thema einfallen was du noch versuchen könntest:
+   </p>
+   <ul>
+    <li>
+     ob ein komplettes Neueinspielen der Firmware des Asus mittels
+     <a href="https://www.asus.com/de/support/FAQ/1000814/" rel="external nofollow">
+      Recovery Modus
+     </a>
+     was bringt (Software Fehler des Asus als Fehlerquelle ausschließen)
+    </li>
+    <li>
+     ob alles funktioniert, wenn du den PC direkt an die FiberBox/ConnectBox im Modem Modus (Asus Router als Fehlerquelle ausschließen)
+    </li>
+    <li>
+     oder ob es funktioniert, wenn du am Asus das Dual Wan Feature aktivierst und einen der Lan Ports als Wan Port verwendest (Anschluss an sich als Fehlerquelle ausschließen)
+    </li>
+   </ul>
+   <p>
+    Wenn das alles nicht funktioniert könntest du mal schauen, ob die FiberBox/ConnectBox mal getauscht werden kann.
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   audiopathik
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-27T15:03:50Z" title="2021-04-27 15:03 ">
+   April 27, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="41968" data-ipsquote-contentid="6836" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1619467544" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 18 Stunden schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das würde mir noch zu dem Thema einfallen was du noch versuchen könntest:
+     </p>
+     <ul>
+      <li>
+       ob ein komplettes Neueinspielen der Firmware des Asus mittels
+       <a href="https://www.asus.com/de/support/FAQ/1000814/" rel="external nofollow">
+        Recovery Modus
+       </a>
+       was bringt (Software Fehler des Asus als Fehlerquelle ausschließen)
+      </li>
+      <li>
+       ob alles funktioniert, wenn du den PC direkt an die FiberBox/ConnectBox im Modem Modus (Asus Router als Fehlerquelle ausschließen)
+      </li>
+      <li>
+       oder ob es funktioniert, wenn du am Asus das Dual Wan Feature aktivierst und einen der Lan Ports als Wan Port verwendest (Anschluss an sich als Fehlerquelle ausschließen)
+      </li>
+     </ul>
+     <p>
+      Wenn das alles nicht funktioniert könntest du mal schauen, ob die FiberBox/ConnectBox mal getauscht werden kann.
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Also die Connect Box kommt wie gesagt ins Internet, im Router Modus (Connect Box als Modem+Router) komm ich per LAN und WLAN normal rein, im Bridge (Modem) Modus kommt der ASUS-Router selbst auch ins Internet, erreicht Google, Twitter, ..., Gameserver und kann Speedtests machen, erreicht meine volle Geschwindigkeit, aber keines meiner Endgeräte (PC, Smartphone) kommt ins Internet.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn ich den Router per Dual-WAN an LAN-Port 1 &amp; 2 der Connect Box anschließe können meine Endgeräte seltsamerweise tatsächlich ins Internet, aber nur wenn die Option 'Web-Zugriff über WAN aktivieren' in den System-Administrationsoptionen des ASUS deaktiviert ist. Diese Funktion dient dazu den Router über Internet und Android-App zu steuern können. Die Endgeräte sind ja per Wlan mit dem ASUS verbunden und der kommt ja ins Internet auch ohne Dual-Wan und mit aktiviertem Web-Zugriff über WAN, insofern verstehe ich nicht wie das einen Unterschied für die Endgeräte machen kann.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hab den Recovery Modus auf dem ASUS heute nach der Anleitung aktiviert aber die Firmware Restoration Software meldet 'Kein drahtloser Router im Recovery Modus erreichbar'.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Screenshot_20210427-165945_Chrome.jpg.6f9e6b67f3623f3c680649e44189e526.jpg">
+     <img alt="Screenshot_20210427-165945_Chrome.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3085" src="images/uploads/Screenshot_20210427-165945_Chrome.thumb.jpg.b1e724d7441e649267f9f3fe4eeefda7.jpg"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-28T06:08:37Z" title="2021-04-28 06:08 ">
+   April 28, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wenn auch du einen Asus-Router besitzt kannst du mir bitte sagen wie die App bei dir normalerweise vor diesem Problem aussah, gingen da bei dir immer alle TCP und DNS durch oder gabs es auch Male wo das Internet problemlos ging die Tests aber trotzdem nur teilweise durchgingen?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   audiopathik
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-28T20:57:04Z" title="2021-04-28 20:57 ">
+   April 28, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42007" data-ipsquote-contentid="6836" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1619590117" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 14 Stunden schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Wenn auch du einen Asus-Router besitzt kannst du mir bitte sagen wie die App bei dir normalerweise vor diesem Problem aussah, gingen da bei dir immer alle TCP und DNS durch oder gabs es auch Male wo das Internet problemlos ging die Tests aber trotzdem nur teilweise durchgingen?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Welche Tests meinst du genau?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-28T21:17:37Z" title="2021-04-28 21:17 ">
+   April 28, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Da gibt es eine Test-Funktion in der App, ganz oben Videokonferenz, Videos HD, Spiele, dann kommt eine Reihe Qualitätstests, Website... Dns, tcp ports, udp ports, etc.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   audiopathik
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-29T06:23:06Z" title="2021-04-29 06:23 ">
+   April 29, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42033" data-ipsquote-contentid="6836" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1619644657" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 8 Stunden schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Da gibt es eine Test-Funktion in der App, ganz oben Videokonferenz, Videos HD, Spiele, dann kommt eine Reihe Qualitätstests, Website... Dns, tcp ports, udp ports, etc.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Du meinst die Smartphone-App?
+   </p>
+   <p>
+    Bei mir sind da keine Tests zu Website, DNS, TCP/UDP ports usw
+   </p>
+   <p>
+   </p>
+   <p>
+    Videokonferenz, Video HD klingt nach dem QoS-Modus. Damit kann man einstellen welche Dinge im Netzwerk priorisiert werden sollen, also im zweifelsfall bessere Geschwindigkeit bekommen. Video Streaming, Gaming, Datendownloads, usw
+   </p>
+   <p>
+   </p>
+   <p>
+    DNS sind die nameserver, notwendig um domains mit ihrem Namen statt IP aufzurufen, also Google.com statt 10.0.0.1,
+   </p>
+   <p>
+    TCP/UDP ports sind wichtig für port forwarding
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich weiß nicht ob du da was verwechselst, kannst du vielleicht genauer beschreiben unter welchem Menupunkt ich das finde?
+   </p>
+   <p>
+   </p>
+   <p>
+    Um deine ursprüngliche Frage nochmal aufzugreifen, als das Problem bei mir war liefen die Tests (Ping, Speedtest) auf dem ASUS selbst trotzdem problemfrei durch, also hatte meine volle Geschwindigkeit ohne Paketverluste, aber eben nur auf der Weboberfläche vom ASUS, meine Geräte (PC, Smartphone) konnten gar nicht ins Internet.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich hab dir übrigens in deinem Post geantwortet, hast du den Repeater-Modus schon versucht?
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/608a5084e78d8_Screenshot_20210429-082140_ASUSRouter.jpg.930741fb404f1f55c383d6b6fedf1268.jpg">
+     <img alt="Screenshot_20210429-082140_ASUS Router.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3088" src="images/uploads/608a50852b026_Screenshot_20210429-082140_ASUSRouter.thumb.jpg.0d9c036b42c0b03f0f98bdaec434d6fd.jpg"/>
+    </a>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/608a50937d55b_Screenshot_20210429-081010_ASUSRouter.jpg.976fbac84e2ad8c984c652acb2e61ef8.jpg">
+     <img alt="Screenshot_20210429-081010_ASUS Router.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3089" src="images/uploads/608a5093a8d28_Screenshot_20210429-081010_ASUSRouter.thumb.jpg.ed7d222c720f2392433495fe9538c97c.jpg"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-29T09:07:43Z" title="2021-04-29 09:07 ">
+   April 29, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42036" data-ipsquote-contentid="6836" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1619677386" data-ipsquote-userid="89327" data-ipsquote-username="audiopathik">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb audiopathik:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich hab dir übrigens in deinem Post geantwortet, hast du den Repeater-Modus schon versucht?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Nein, ich denke nicht, dass Repeater richtig ist, ich will ja nicht das WLAN repeaten, ab dem Router soll es ein eigenes Netzwerk sein, und es ist auch nicht so, dass es überhaupt nicht geht, nur die Verbindung hat extrem gehackt, ich habe nun die Firmware aktualisiert, die war nicht aktuell, dabei wurde der Router natürlich neu gestartet, derweil geht es wieder richtig, mal schauen bis morgen ob das Problem wieder auftritt.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-04-29T09:08:38Z" title="2021-04-29 09:08 ">
+      April 29, 2021
+     </time>
+     von tererecool
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-29T09:11:54Z" title="2021-04-29 09:11 ">
+   April 29, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42036" data-ipsquote-contentid="6836" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1619677386" data-ipsquote-userid="89327" data-ipsquote-username="audiopathik">
+    <div class="ipsQuote_citation">
+     vor 2 Stunden schrieb audiopathik:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich weiß nicht ob du da was verwechselst, kannst du vielleicht genauer beschreiben unter welchem Menupunkt ich das finde?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Siehe Screenshot.
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Screenshot_20210429-110944_WhatsApp.jpg.acb82b5cd490e56317eb73b4be8b808f.jpg">
+     <img alt="Screenshot_20210429-110944_WhatsApp.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3090" src="images/uploads/Screenshot_20210429-110944_WhatsApp.thumb.jpg.a4ad2b779aaa586606c40c22082ff7ef.jpg"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   audiopathik
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-29T11:05:56Z" title="2021-04-29 11:05 ">
+   April 29, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42042" data-ipsquote-contentid="6836" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1619687514" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 1 Stunde schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Siehe Screenshot.
+     </p>
+     <p>
+      <a class="ipsAttachLink ipsAttachLink_image" data-fileid="3090" href="images/uploads/Screenshot_20210429-110944_WhatsApp.jpg.acb82b5cd490e56317eb73b4be8b808f.jpg" rel="">
+       <img alt="Screenshot_20210429-110944_WhatsApp.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3090" src="images/uploads/Screenshot_20210429-110944_WhatsApp.thumb.jpg.a4ad2b779aaa586606c40c22082ff7ef.jpg"/>
+      </a>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich weiß nicht welche App das ist, leider.
+   </p>
+   <p>
+   </p>
+   <p>
+    Das Ergebnis sieht jedenfalls nicht besorgniserregend aus kannst du denn auf die einzelnen Einträge tippen um mehr Details zu sehen welche Ports nun genau offen oder doch nicht sind?
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-29T11:20:55Z" title="2021-04-29 11:20 ">
+   April 29, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42046" data-ipsquote-contentid="6836" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1619694356" data-ipsquote-userid="89327" data-ipsquote-username="audiopathik">
+    <div class="ipsQuote_citation">
+     vor 14 Minuten schrieb audiopathik:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Ich weiß nicht welche App das ist, leider.
+     </p>
+     <p>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Das ist die Asus Router App, was sonst?
+   </p>
+   <p>
+    <a href="https://play.google.com/store/apps/details?id=com.asus.aihome" rel="external nofollow">
+     https://play.google.com/store/apps/details?id=com.asus.aihome
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   audiopathik
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-04-29T18:24:56Z" title="2021-04-29 18:24 ">
+   April 29, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42047" data-ipsquote-contentid="6836" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1619695255" data-ipsquote-userid="89120" data-ipsquote-username="tererecool">
+    <div class="ipsQuote_citation">
+     vor 7 Stunden schrieb tererecool:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Das ist die Asus Router App, was sonst?
+     </p>
+     <p>
+      <a href="https://play.google.com/store/apps/details?id=com.asus.aihome" rel="external nofollow">
+       https://play.google.com/store/apps/details?id=com.asus.aihome
+      </a>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Sieht ganz anders aus bei mir, hab diese Optionen auch nicht.
+   </p>
+   <p>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/608af9d640e1e_Screenshot_20210429-202224_ASUSRouter.jpg.3fcdd5b5d811b610ea8a26e94f39ca1f.jpg">
+     <img alt="Screenshot_20210429-202224_ASUS Router.jpg" class="ipsImage ipsImage_thumbnailed" data-fileid="3092" src="images/uploads/608af9d66c371_Screenshot_20210429-202224_ASUSRouter.thumb.jpg.5e92dd9c4558e47b175977a9c7d82ff3.jpg"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

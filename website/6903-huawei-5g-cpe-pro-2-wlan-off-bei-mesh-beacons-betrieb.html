@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Huawei 5G CPE Pro 2 WLAN OFF bei Mesh Beacons Betrieb?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Huawei 5G CPE Pro 2 WLAN OFF bei Mesh Beacons Betrieb?
+  </h1>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-07T09:45:18Z" title="2021-05-07 09:45 ">
+   Mai 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo zusammen, wenn man das Huawei 5G CPE Pro 2 Modem mit Mesh Beacons betreib, stimmt das, dass man das WLAN vom HUAWEI 5G deaktivieren muss? Hätte mir gedacht, dass ein Mesh System so funktioniert, dass schon das erste Gerät auch als WLAN-AccessPoint arbeiten kann und nicht nur die angeschloßenen Beacons? :S
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-07T11:13:15Z" title="2021-05-07 11:13 ">
+   Mai 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Es kommt auf die Umsetzung des Mesh System an.
+   </p>
+   <p>
+    In diesem Fall stammt der Router von Huawei und das Mesh System von Nokia.
+   </p>
+   <p>
+   </p>
+   <p>
+    Die Nokia Beacons kann nur ein Mesh mit anderen Nokia Geräten bilden.
+   </p>
+   <p>
+    Wäre der Router als ein Nokia FastMile 5G Gateway, könnte dieser als Mesh Master fungieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    Da dies nicht der Fall ist, muss einer der Beacons der Mesh Master sein.
+   </p>
+   <p>
+    In weiterer Folge hast du zwei getrennte W-Lans, einmal vom Mesh System und einmal von Huawei Router (auch wenn diese gleich heißen).
+   </p>
+   <p>
+    Das Mesh System kann deine Endgeräte zwischen den einzelnen Knoten hin und her schieben, aber um ins W-Lan des Huawei Router zu kommen, muss das Endgerät selbst aktiv werden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Es wir gesagt, dass das W-Lan von Router ausgeschalten werden soll, da es besser ist, wenn so wenige W-Lans wie möglich aktiv sind, damit sich diese nicht gegenseitig stören können.
+   </p>
+   <p>
+    Wobei wenn die W-Lan Reichweite des Huawei 5G CPE Pro2 ausreichend ist, sollte dieses bevorzugt werden, da der 5G CPE Pro2 bereits WiFi 6 unterstützt und 4x4 MiMo kann und damit fast die dreifache W-Lan Kapazität hat, als die Nokia Beacon 1.
+   </p>
+   <p>
+   </p>
+   <p>
+    Es gibt auch andere Mesh Systeme bei denen der mit Modem ausgestattete Router als Mesh Master fungieren kann.
+   </p>
+   <p>
+    z.B. Die Mesh Lösung von AVM oder Netgear mit dem Orbi LBR20
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="4 yr" datetime="2021-05-07T11:18:14Z" title="2021-05-07 11:18 ">
+      Mai 7, 2021
+     </time>
+     von NTM
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   tererecool
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-05-07T12:20:17Z" title="2021-05-07 12:20 ">
+   Mai 7, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Interessant, gibt es aktuell bessere Beacons die besser kompatibel sind und auch WiFi6 unterstützen?
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

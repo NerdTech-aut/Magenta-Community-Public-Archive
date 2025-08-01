@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Anleitung gesucht -  Wie konfiguriere ich Ports auf der Internet Fiber Box für PS5?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Anleitung gesucht -  Wie konfiguriere ich Ports auf der Internet Fiber Box für PS5?
+  </h1>
+  <span class="author">
+   Mario75
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-04T12:23:23Z" title="2024-01-04 12:23 ">
+   Januar 4, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo, bin gerade am rätseln wie ich bei der Fiber Box die Ports frei gebe. Einstellungen kann ich machen bzw. habe ich mir umstellen lassen, Menü habe ich also aber was muss ich wie hinterlegen. Laut Sony_PS5 "
+    <strong>
+     TCP Ports: 80, 443, 5223, und 10070 bis 10080 &amp; UDP Ports: 3478, 3479, 3658 und 10070
+    </strong>
+    "
+   </p>
+   <p>
+   </p>
+   <p>
+    Lokale IP
+    <strong>
+     ?
+    </strong>
+    (
+    <em>
+     PS5 hat aktuell keine feste IP eingestellt!!!
+    </em>
+    )
+   </p>
+   <p>
+    Lokaler Start Port
+    <strong>
+     ?
+    </strong>
+   </p>
+   <p>
+    Lokaler End Port
+    <strong>
+     ?
+    </strong>
+   </p>
+   <p>
+    Externer Start Port
+    <strong>
+     ?
+    </strong>
+   </p>
+   <p>
+    Externer End Port
+    <strong>
+     ?
+    </strong>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe zwar schon auf routern ports freigeschalten, da ich aber kein Profi bin und es hier anders aussieht habe ich erst mal keinen Plan wie ich was eingeben muss..   Kann mir da jemand Tips geben bitte bzw. eine Hilfe? DANKE!
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-04T13:00:53Z" title="2024-01-04 13:00 ">
+   Januar 4, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56289" data-ipsquote-contentid="9326" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1704371003" data-ipsquote-userid="98466" data-ipsquote-username="Mario75">
+    <div class="ipsQuote_citation">
+     Am 4.1.2024 um 13:23 schrieb Mario75:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Kann mir da jemand Tips geben
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hey,
+   </p>
+   <p>
+   </p>
+   <p>
+    Um Ports auf der Internet Fiber Box zu konfigurieren, müssen Sie sich zunächst in das Web-Bedienmenü der Box einloggen. Geben Sie dazu die IP-Adresse der Box in Ihren Browser ein. Die Standard-IP-Adresse ist 192.168.1.1.
+   </p>
+   <p>
+   </p>
+   <p>
+    Sobald Sie sich im Web-Bedienmenü angemeldet haben, klicken Sie auf den Menüpunkt Netzwerk und dann auf Port-Weiterleitung.
+   </p>
+   <p>
+   </p>
+   <p>
+    Auf der Seite Port-Weiterleitung geben Sie folgende Informationen ein:
+   </p>
+   <p>
+    - Protokoll: Wählen Sie das Protokoll aus, das Sie weiterleiten möchten. Die verfügbaren Protokolle sind TCP, UDP und beides.
+   </p>
+   <p>
+    - Startport: Geben Sie den Anfang des Portbereichs ein, den Sie weiterleiten möchten.
+   </p>
+   <p>
+    - Endport: Geben Sie das Ende des Portbereichs ein, den Sie weiterleiten möchten.
+   </p>
+   <p>
+    - Lokales Gerät: Geben Sie die IP-Adresse des Geräts im Netzwerk ein, zu dem die Verbindungen hergestellt werden sollen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn Sie eine DMZ einrichten möchten, aktivieren Sie das Kontrollkästchen DMZ und geben Sie die IP-Adresse des Host-Geräts ein.
+   </p>
+   <p>
+    Klicken Sie auf Änderungen übernehmen, um Ihre Änderungen zu speichern.
+   </p>
+   <p>
+    Beispiel:
+   </p>
+   <p>
+    Wenn Sie einen FTP-Server auf Ihrem Computer mit der IP-Adresse 192.168.1.100 betreiben möchten, müssen Sie folgende Informationen eingeben:
+   </p>
+   <p>
+    - Protokoll: TCP
+   </p>
+   <p>
+    - Startport: 21
+   </p>
+   <p>
+    - Endport: 21
+   </p>
+   <p>
+    - Lokales Gerät: 192.168.1.100
+   </p>
+   <p>
+   </p>
+   <p>
+    Hinweise:
+   </p>
+   <p>
+    Stellen Sie sicher, dass das Gerät, zu dem Sie die Verbindungen weiterleiten möchten, den gewünschten Port geöffnet hat.
+   </p>
+   <p>
+    Wenn Sie eine DMZ einrichten, ist das Host-Gerät für alle eingehenden Verbindungen offen. Dies kann ein Sicherheitsrisiko darstellen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Weitere Informationen zur Port-Weiterleitung auf der Internet Fiber Box finden Sie im
+    <a href="https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-fiber/box/topic/installationsanleitung/installationsanleitung-herunterladen" rel="external nofollow">
+     Benutzerhandbuch der Box
+    </a>
+    .
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Mario75
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-05T10:06:19Z" title="2024-01-05 10:06 ">
+   Januar 5, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Super danke für die schnelle Info. Die Fiber BOX erreiche ich mit 192.168.0.1 (falls jemand mitliest und nicht auf den Router kommt)
+   </p>
+   <p>
+   </p>
+   <p>
+    Was versteht man unter Lokaler Start/End Port und Externer Start/End Port, hab mitbekommen das ich die Ports in beide Felder eintragen muss, es darf keines leer sein. Geht es hierbei um die quasi Richtung welche Seite wo anfragt? Wobei ich in der Betriebsanleitung gesehen habe das es für intern und extern auch unterschiedliche ports geben kann. LT. Playstation wurde hier nicht auf intern/extern eingegangen, daher würde ich davon ausgehen das ich bei intern/extern immer die gleichen Werte verwende?
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke nochmals für die Hilfe!
+   </p>
+   <p>
+    LG MM
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-05T10:28:06Z" title="2024-01-05 10:28 ">
+   Januar 5, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56304" data-ipsquote-contentid="9326" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1704449179" data-ipsquote-userid="98466" data-ipsquote-username="Mario75">
+    <div class="ipsQuote_citation">
+     Am 5.1.2024 um 11:06 schrieb Mario75:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Was versteht man unter....
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Lokaler Start/End Port und Externer Start/End Port beziehen sich auf die Ports, die von einem Gerät in Ihrem Netzwerk und von einem Gerät außerhalb Ihres Netzwerks verwendet werden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Der lokale Port ist der Port, der von dem Gerät in Ihrem Netzwerk verwendet wird, das Sie mit der Außenwelt verbinden möchten. Der externe Port ist der Port, der von Geräten außerhalb Ihres Netzwerks verwendet wird, um mit dem Gerät in Ihrem Netzwerk zu kommunizieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    In den meisten Fällen müssen Sie die gleichen Ports für den lokalen und den externen Port verwenden. Dies liegt daran, dass die beiden Geräte denselben Port verwenden, um miteinander zu kommunizieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    Es gibt jedoch einige Ausnahmen von dieser Regel. In einigen Fällen müssen Sie unterschiedliche Ports für den lokalen und den externen Port verwenden. Dies ist zum Beispiel der Fall, wenn Sie eine Portweiterleitung für einen Server einrichten, der sowohl TCP- als auch UDP-Verbindungen akzeptiert. In diesem Fall müssen Sie einen Port für TCP und einen Port für UDP angeben.
+   </p>
+   <p>
+   </p>
+   <p>
+    In der Betriebsanleitung der Internet Fiber Box finden Sie eine Tabelle mit den Standardports für verschiedene Anwendungen. Wenn Sie eine Portweiterleitung für eine dieser Anwendungen einrichten möchten, können Sie die Standardports verwenden.
+   </p>
+   <p>
+   </p>
+   <p>
+    <img alt="image.png.a265221e0d4ae59a8f26eaed0808d93c.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5291" data-ratio="54.34" src="images/uploads/image.png.a265221e0d4ae59a8f26eaed0808d93c.png" width="692"/>
+   </p>
+   <p>
+   </p>
+   <p>
+    Für eine PlayStation müssen Sie die gleichen Ports für den lokalen und den externen Port verwenden. Die PlayStation verwendet den Port 80 für HTTP-Verbindungen und den Port 443 für HTTPS-Verbindungen.
+   </p>
+   <p>
+    Hier ist ein Beispiel für die Eingabe der Ports für eine Portweiterleitung für eine PlayStation:
+   </p>
+   <p>
+    Lokaler Start/End Port: 80, 443 Externer Start/End Port: 80, 443
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn Sie die Ports für eine Portweiterleitung eingeben, müssen Sie auch das Protokoll angeben. Das Protokoll ist der Typ der Daten, die über den Port übertragen werden. Für die PlayStation müssen Sie das Protokoll TCP verwenden.
+   </p>
+   <p>
+   </p>
+   <p>
+    Nachdem Sie die Ports und das Protokoll eingegeben haben, müssen Sie die Portweiterleitung aktivieren.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Mario75
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-05T18:10:49Z" title="2024-01-05 18:10 ">
+   Januar 5, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo, danke für die sehr ausfühliche Erklärung. Ich habe alles eingegeben, das Problem mit der Verbindung zu den PSN-Servern funktioniert aber immer noch nicht so wie es sollte. Kann ich prüfen ob die Ports offen sind?
+   </p>
+   <p>
+   </p>
+   <p>
+    Liebe Grüße MM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-09T15:39:07Z" title="2024-01-09 15:39 ">
+   Januar 9, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56309" data-ipsquote-contentid="9326" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1704478249" data-ipsquote-userid="98466" data-ipsquote-username="Mario75">
+    <div class="ipsQuote_citation">
+     Am 5.1.2024 um 19:10 schrieb Mario75:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Kann ich prüfen ob die Ports offen sind?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ja, Sie können prüfen, ob die Ports offen sind. Hier sind einige Möglichkeiten, wie Sie dies tun können:
+   </p>
+   <p>
+   </p>
+   <p>
+    Verwenden Sie die Eingabeaufforderung: Öffnen Sie die Eingabeaufforderung und geben Sie den folgenden Befehl ein:
+   </p>
+   <p>
+    netstat -an | findstr ":"
+   </p>
+   <p>
+    Dieser Befehl listet alle offenen Ports auf Ihrem Computer auf. Die Portnummern werden in der Spalte "Lokaler Port" angezeigt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Verwenden Sie ein Online-Tool: Es gibt mehrere Online-Tools, die Sie verwenden können, um Ports zu überprüfen. Ein Beispiel ist die Website
+    <a href="https://www.yougetsignal.com/tools/open-ports/" rel="external nofollow">
+     https://www.yougetsignal.com/tools/open-ports/
+    </a>
+    .
+   </p>
+   <p>
+   </p>
+   <p>
+    Geben Sie auf dieser Website die IP-Adresse oder den Hostnamen Ihres Computers sowie die Portnummer ein, die Sie überprüfen möchten. Klicken Sie dann auf die Schaltfläche "Check". Wenn der Port offen ist, wird die Meldung "Port XXX is open on XXX.XXX.XXX.XXX" angezeigt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Verwenden Sie ein Portscanner-Tool: Ein Portscanner ist ein Tool, das verwendet wird, um Ports auf einem Computer oder Netzwerk zu scannen. Es gibt viele verschiedene Portscanner-Tools verfügbar, sowohl kostenlose als auch kostenpflichtige.
+   </p>
+   <p>
+   </p>
+   <p>
+    Starten Sie den Portscanner und geben Sie die IP-Adresse oder den Hostnamen Ihres Computers an. Der Portscanner wird dann alle Ports auf Ihrem Computer scannen und die Ergebnisse anzeigen. Wenn der Port offen ist, wird er in der Liste der offenen Ports angezeigt.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn Sie die Ports mit einem der oben genannten Methoden überprüft haben und festgestellt haben, dass sie offen sind, kann das Problem mit der Verbindung zu den PSN-Servern an etwas anderem liegen. Sie können versuchen, die PlayStation neu zu starten, Ihr Modem oder Router neu zu starten oder sich an den PlayStation-Support zu wenden.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Mario75
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-09T16:49:09Z" title="2024-01-09 16:49 ">
+   Januar 9, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    OK, dann sind die eingetragenen ports nicht offen...   es gibt einträge welche "Automatisch hinzugefügt durch UPnP" aber auch diese nicht nicht offen...
+   </p>
+   <p>
+   </p>
+   <p>
+    Der PS5 hab ich eine fixe IP zugeteilt, welche ich so dann eingegeben habe mit den entsprechenden ports... eigenartig. bei meinem letzten Anbieter war das öffnen von ports überhaupt kein Problem.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Doped
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-16T17:40:37Z" title="2024-01-16 17:40 ">
+   Januar 16, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+   </p>
+   <p>
+   </p>
+   <p>
+    hane heute meine neue fiber box (schwarz) bekommen.
+    <br/>
+    Und meine ports bei der ps5 gehen auch nicht auf..
+   </p>
+   <p>
+    ipv4 logisch ps5 auch fiix
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5311" href="images/uploads/1C36DEC1-324B-4E4D-805B-C37C376422D8.png.564b91731e60661604f329bbc5f78c0b.png" rel="">
+     <img alt="1C36DEC1-324B-4E4D-805B-C37C376422D8.thumb.png.47cef277e444d76799c3de5ec5dde4f7.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5311" data-ratio="133.45" src="images/uploads/1C36DEC1-324B-4E4D-805B-C37C376422D8.thumb.png.47cef277e444d76799c3de5ec5dde4f7.png" width="562"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Karo
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-17T11:58:22Z" title="2024-01-17 11:58 ">
+   Januar 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Habt ihr euch auch schon beim Technikteam gemeldet und um Unterstützung gebeten?
+    <br/>
+    Vielleicht passt bei den Einstellungen etwas nicht. LG Karo
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Jonathan Dorian
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-17T14:37:28Z" title="2024-01-17 14:37 ">
+   Januar 17, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56400" data-ipsquote-contentid="9326" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1705426837" data-ipsquote-userid="98526" data-ipsquote-username="Doped">
+    <div class="ipsQuote_citation">
+     Am 16.1.2024 um 18:40 schrieb Doped:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Und meine ports bei der ps5 gehen auch nicht auf..
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Hey, Es gibt mehrere mögliche Ursachen dafür, dass die Ports bei Ihrer PlayStation 5 nicht aufgehen.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     1. Stellen Sie sicher, dass die Portweiterleitung richtig eingerichtet ist.
+    </strong>
+   </p>
+   <p>
+    Die PlayStation 5 benötigt für Online-Multiplayer-Spiele die Ports 80, 443, 3478-3480 und 3074-3075 geöffnet. Sie können diese Ports in den Einstellungen Ihres Routers weiterleiten.
+   </p>
+   <p>
+    Die Anleitung zum Einrichten der Portweiterleitung finden Sie auf der
+    <a href="https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-fiber/home-box" rel="external nofollow">
+     Magenta-Website
+    </a>
+    .
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     2. Überprüfen Sie, ob UPnP aktiviert ist.
+    </strong>
+   </p>
+   <p>
+    UPnP ist eine Funktion, die es Geräten im Netzwerk automatisch ermöglicht, Ports weiterzuleiten. Wenn UPnP aktiviert ist, sollten Sie die Portweiterleitung nicht manuell konfigurieren müssen.
+   </p>
+   <p>
+    Die Anleitung zum Aktivieren von UPnP finden Sie ebenfalls auf der Magenta-Website.
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     3. Setzen Sie den Router zurück.
+    </strong>
+   </p>
+   <p>
+    Wenn Sie alle oben genannten Schritte ausgeführt haben und die Ports immer noch nicht aufgehen, können Sie versuchen, den Router zurückzusetzen. Dadurch werden alle Einstellungen auf die Werkseinstellungen zurückgesetzt.
+   </p>
+   <p>
+    Die Anleitung zum Zurücksetzen des Routers finden Sie in der
+    <a href="https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-fiber/home-box" rel="external nofollow">
+     Bedienungsanleitung des Routers
+    </a>
+    .
+   </p>
+   <p>
+   </p>
+   <p>
+    <strong>
+     4. Wenden Sie sich an den Magenta-Kundenservice.
+    </strong>
+   </p>
+   <p>
+    Wenn Sie alle oben genannten Schritte ausgeführt haben und die Ports immer noch nicht aufgehen, wenden Sie sich an den Magenta-Kundenservice. Der Kundenservice kann Ihnen weiterhelfen, die Ursache des Problems zu ermitteln.
+   </p>
+   <p>
+   </p>
+   <p>
+    Hier sind die Schritte, die Sie befolgen können, um den Magenta-Kundenservice zu kontaktieren:
+   </p>
+   <p>
+    - Rufen Sie die
+    <strong>
+     Magenta-Hotline unter 0676 200 7777
+    </strong>
+    an.
+   </p>
+   <p>
+    - Wählen Sie die Option "Technische Unterstützung".
+   </p>
+   <p>
+    - Geben Sie Ihre Kundennummer und Ihre Anschrift an.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG JD.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Karo
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-18T07:22:03Z" title="2024-01-18 07:22 ">
+   Januar 18, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo zusammen,
+   </p>
+   <p>
+    ich habe bezüglich des Themas, das Port-Forwarding über die App nicht eingestellt werden kann, nochmals mit einem Kollegen vom Technikteam Rücksprache gehalten.
+   </p>
+   <p>
+    Ich habe folgende Infos bezüglich eventueller Fehlermöglichkeiten erhalten:
+   </p>
+   <p>
+    -) Zielgerät hat andere Ports offen (Es wurde nicht der richtige Port weitergeleitet)
+   </p>
+   <p>
+    -) Zielgerät hat nach Neustart andere IP (Du hattest zwar richtiges Port-Forwarding eingerichtet, aber nach Neustart hat Endgerät eine neue IP)
+   </p>
+   <p>
+    -) Zielgerät ist ein anderes Gerät (Es wurde ein anderes Gerät ausgewählt - Beispiel statt Playstation der Laptop)
+   </p>
+   <p>
+    -) Am Zielgerät ist eine Firewall aktiv, die noch abgeschaltet werden muss
+   </p>
+   <p>
+    Geht das bitte mal durch. Vielleicht kommt ihr so auf den möglichen Fehler.
+   </p>
+   <p>
+    Wenn nicht, bitte beim Technikteam melden. LG Karo
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

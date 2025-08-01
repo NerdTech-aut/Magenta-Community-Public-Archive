@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   5G Outdoor Box
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   5G Outdoor Box
+  </h1>
+  <span class="author">
+   BertL
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-03-07T15:00:16Z" title="2023-03-07 15:00 ">
+   März 7, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich habe auf dem indoor router eine festplatte mit medien angeschlossen und kann diese wenn ich im wlan verbunden bin abrufen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Meine Frage: Kann ich mit einem Iphone von ausserhalb auch irgendwie auf diese Medien zugreifen??
+   </p>
+   <p>
+   </p>
+   <p>
+    Es gibt eine Ftp option aber die geht leider nur wenn ich in meinem netzwerk bin, oder verstehe ich da etwas falsch?
+   </p>
+   <p>
+   </p>
+   <p>
+    Lg Robert
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4659" href="images/uploads/1ACA8ECF-1120-45A8-B0C4-39CE0FF6FE94.png.74560c95f87427fd85444d103c37091d.png" rel="">
+     <img alt="1ACA8ECF-1120-45A8-B0C4-39CE0FF6FE94.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4659" src="images/uploads/1ACA8ECF-1120-45A8-B0C4-39CE0FF6FE94.thumb.png.60c2a46748eb910a00eb54f912fb5882.png"/>
+    </a>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-03-08T10:44:23Z" title="2023-03-08 10:44 ">
+   März 8, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/61465-bertl/?do=hovercard" data-mentionid="61465" href="https://community.magenta.at/profile/61465-bertl/" rel="">
+     @BertL
+    </a>
+    <br/>
+    Der FTP-Server ist tatsächlich über den WAN-Port der Indoor-Einheit erreichbar.
+   </p>
+   <p>
+    Damit der FTP-Server aber auch über das Internet verfügbar wäre, sind aber noch weitere Schritte notwendig.
+   </p>
+   <p>
+    Es ist allerdings keine eine gute Idee eine unverschlüsselte FTP-Verbindung über das Internet zu verwenden.
+   </p>
+   <p>
+    Dass der FTP-Server standardmäßig nicht nur im lokalen Netz, sondern auch über den WAN-Port der Indoor-Einheit erreichbar ist ohne Möglichkeit dies zu deaktivieren ist sicherheitsmäßig auch bedenklich.
+    <br/>
+    <br/>
+    Es gäbe zwei Wege um den FTP-Server der Indoor-einheit über das Internet zugänglich zu machen:
+   </p>
+   <ol>
+    <li>
+     Die erste Variante führt über den versteckten Bridge Mode der Outdoor-Einheit. Auf der Outdoor-Einheit muss der Business APN konfiguriert werden. Dieser kann unter https://192.168.0.1 (Anmeldedaten finden sich auf der Anleitung oder am vorderen Standfuß der Indoor-Einheit) -&gt; Einstellungen -&gt; Einwahl -&gt; MPDN-Management. Hier einen neuen APN-Anlegen mit APN-Name "business.gprsinternet", Authentifizierung "PAP", Benutzername "t-mobile", Passwort "tm" und IP Typ "IPv4". Als letztes gibt es das Feld für die Betriebsart welches ausgegraut ist. Um dieses zu aktivieren, muss der HTML-Code der Seite leicht angepasst werden.
+     <a href="7370-magenta-5g-box-outdoor-xbox-nat-typ-strikt/?do=findComment&amp;comment=46326" rel="">
+      In diesem Beitrag
+     </a>
+     von mir kannst du nachlesen, wie dies funktioniert. Nun kannst du die Betriebsart vom Routermodus in den Brückenmodus ändern. Nun kannst du die Änderungen anwenden. Damit bekommt die Indoor-einheit nun eine IP-Adresse, welche aus dem Internet erreichbar ist, und damit ist der FTP-Server ebenfalls über das Internet erreichbar.
+    </li>
+    <li>
+     Die zweite Variante setzt auf Portweiterleitungen auf der Outdoor-Einheit. Wie bei der ersten Variante muss zunächst der Business APN konfiguriert werden, allerdings dieses Mal mit der Standardbetriebsart Routermodus. Also unter https://192.168.0.1 (Anmeldedaten finden sich auf der Anleitung oder am vorderen Standfuß der Indoor-Einheit) -&gt; Einstellungen -&gt; Einwahl -&gt; MPDN-Management einen neuen APN-Anlegen mit APN-Name "business.gprsinternet", Authentifizierung "PAP", Benutzername "t-mobile", Passwort "tm" und IP Typ "IPv4" und diesen Anwenden. Dann auf der Outdoor-Einheit unter Einstellungen -&gt; Sicherheit -&gt; Firewall-Schalter die Sicherheitsstufe von Mittel auf Niedrig stellen. Für die Portweiterleitung empfiehlt es sich der Indoor-Einheit eine statische IP-Adresse zu geben, damit die Portweiterleitung auf Dauer funktioniert. Dazu musst du auf der Outdoor-Einheit unter Einstellungen -&gt; LAN -&gt; Reservierte IP einen neuen Eintrag hinzufügen. Für diesen Eintrag benötigst du die MAC-Adresse der Indoor-Einheit diese findest du unten am Gerät oder auf der Startseite unter http:// 192.168.1.1 nach dem Anmelden. Als IP-Adresse kannst du die IP-Adresse, welche die Indoor-Einheit derzeit hat, oder z.B. 192.168.0.15 verwenden. Nachdem du dies Angewendet hast geht es zur eigentlichen Portweiterleitung. Diese kann auf der Outdoor-Einheit unter Einstellungen -&gt; NAT -&gt; Virtual Server konfiguriert werden. Zuerst Portweiterleitungen aktvieren und dann einen neuen Eintrag hinzufügen. Als WAN-Port und LAN-Port Port 21 eintragen, als LAN IP Adresse die IP-Adresse der Indoor-Einheit, welche wir ihr gerade gegeben haben und als Protokoll TCP. Und nicht vergessen die Änderungen anzuwenden.
+    </li>
+   </ol>
+   <p>
+    In beiden Fällen empfiehlt es sich die Outdoor-Einheit und die Indoor-Einheit nun neu zu starten.
+   </p>
+   <p>
+    Der FTP-Server ist nun über die öffentliche IP-Adresse erreichbar. Bei der ersten Variante kann diese auf der Startseite der Indoor-Einheit ausgelesen werden. Bei der zweiten Variante von der Startseite der Outdoor-Einheit. Die öffentliche IP-Adresse kann auch auf Seiten wie
+    <a href="https://www.wieistmeineip.de/" rel="external nofollow">
+     https://www.wieistmeineip.de/
+    </a>
+    eingesehen werden (bei Verbindung zur Indoor-Einheit). Diese öffentliche IP-Adresse ist allerdings nicht statisch, sondern dynamisch und wird sich immer wieder ändern. Bei der ersten Variante kannst du dies lösen, indem du den DDNS-Client der Indoor-Einheit verwendest. Hierfür benötigst du einen Account für
+    <a href="https://account.dyn.com/" rel="external nofollow">
+     dyndns.org
+    </a>
+    (kostenpflichtig) oder
+    <a href="https://www.noip.com/de-DE/remote-access" rel="external nofollow">
+     no-ip.com
+    </a>
+    (kostenlos mit Accountbestätigung alle 30 Tage oder kostenpflichtig). Wenn du bei einem dieser Anbieter einen Account angelegt und einen Hostnamen (=URL) ausgewählt hast kannst du diesen Account und Hostnamen auf der Indoor-Einheit unter Einstellungen -&gt; Sicherheit -&gt; DDNS eintragen. Damit wird die öffentliche IP-Adresse deines Internetanschluss und der Hostname miteinander verknüpft. Nun kannst du den Hostnamen statt der IP-Adresse verwenden und im Hintergrund wird der Hostname auf die aktuelle IP-Adresse aufgelöst.
+    <br>
+     LG NTM
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   BertL
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-03-08T16:40:46Z" title="2023-03-08 16:40 ">
+   März 8, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo nochmal.
+   </p>
+   <p>
+    Ich habe mich für variante 2 entschieden. Ich habe alles so eingegeben wie du es mir geschrieben hast nur wo finde ich die WAN IP Adresse??
+   </p>
+   <p>
+    Wenn ich das alles eingetragen habe, funktioniert das dann schon ??
+   </p>
+   <p>
+   </p>
+   <p>
+    Lg Robert
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-03-09T11:11:49Z" title="2023-03-09 11:11 ">
+   März 9, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Die WAN-IP findest du bei der zweiten Variante auf der Startseite der Outdoor-Einheit. Siehe Screenshot (grün eingerahmt):
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4667" href="images/uploads/image.png.18f3ebde2b1d300967c164c00f322228.png" rel="">
+     <img alt="image.thumb.png.df0c6f74bbf12e1e673de463fc4f72c8.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4667" src="images/uploads/image.thumb.png.df0c6f74bbf12e1e673de463fc4f72c8.png"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn du alles eingetragen hast, und der FTP-Server aktiviert wurde, sollte es bereits funktionieren.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   BertL
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-03-09T11:14:01Z" title="2023-03-09 11:14 ">
+   März 9, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wie komme ich dann auf meine dateien ? über die ip adresse oder muss ich trotzdem auf ddns einstellen ? Lg Robert
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-03-09T11:21:34Z" title="2023-03-09 11:21 ">
+   März 9, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Von außerhalb kannst du über die WAN IP-Adresse zugreifen.
+   </p>
+   <p>
+    Allerdings wird ein Anschluss nicht immer dieselbe WAN IP-Adresse zugewiesen.
+   </p>
+   <p>
+    Also müsstest du manuell nachsehen welche IP-Adresse dein Anschluss hat.
+   </p>
+   <p>
+    Wenn du zu Hause im Lan/W-Lan bist geht dies auch mit
+    <a href="https://www.wieistmeineip.de/" rel="external nofollow">
+     https://www.wieistmeineip.de/
+    </a>
+    .
+   </p>
+   <p>
+    Die IP-Adresse auf
+    <a href="https://www.wieistmeineip.de/" rel="external nofollow">
+     https://www.wieistmeineip.de/
+    </a>
+    und laut Outdoor-Einheit sollten identisch sein.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   BertL
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-03-09T11:24:12Z" title="2023-03-09 11:24 ">
+   März 9, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ok danke die für die hilfe. Ich meld mich wenn ich noch etwas benötige 👍
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   BertL
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-03-09T17:17:58Z" title="2023-03-09 17:17 ">
+   März 9, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Nochmal. Dadurch das es bei mir nicht funktioniert hat mit variante 2 habe ich jetzt den router zurückgesetzt und variante eins eingestellt und jetzt muss ich schauen ob das dann funktioniert. Wie kann ich bei no-ip dass dann einstellen damit der speicher über die hostadresse erreichbar ist ? Damit die ip automatisch geändert wird ?
+   </p>
+   <p>
+    Lg Robert
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   BertL
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-03-09T18:58:32Z" title="2023-03-09 18:58 ">
+   März 9, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Update:
+   </p>
+   <p>
+    Mit variante 1 getestet und es hat schwammig funktioniert und das wlan im haus hat die geräte nicht mehr mit internet versorgt. Beim Sky receiver via wlan immer verbindung und dann keine verbindung. Beim indoor router hat die netzwerk lampe geleuchtet und dann hat sie eine zeit geblinkt und dann immer das selbe.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarkoDjukic
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-03-28T14:54:08Z" title="2023-03-28 14:54 ">
+   März 28, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo ich habe Magenta 5g Outdoor set gekauft, und funktionieren super. Nun meine Frage ist  Ethernet Kabel von Outdoor Modem wasserfest?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-03-30T08:32:23Z" title="2023-03-30 08:32 ">
+   März 30, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Das Ethernetkabel dass dabei ist, sollte auf alle Fälle witterungsbeständig sein.
+    <br>
+     Das Kabel ansich ganz sicher - wichtig sind die Stecker, dass die ordentlich verbunden sind.
+    </br>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

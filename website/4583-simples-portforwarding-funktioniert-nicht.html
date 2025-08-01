@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Simples Portforwarding funktioniert nicht
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Simples Portforwarding funktioniert nicht
+  </h1>
+  <span class="author">
+   bufferl
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-06-29T06:57:00Z" title="2018-06-29 06:57 ">
+   Juni 29, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+    <br/>
+    <br/>
+    Ich besitze eine T-Mobile Homebox und möchte von extern (Internet) auf meinen Computer zugreifen.
+    <br/>
+    Normalerweise ziemlich straightforward, nur funktioniert es einfach nicht - es haben auch viele viele andere Leute dieses Problem.
+    <br>
+     <br>
+      Meine Einstellungen:
+      <br>
+       - Verbindungsaufbau / Profilverwaltung: APN = business.gprsinternet
+       <br>
+        - Sicherheit / Portweiterleitung: WAN Port: 80-80, LAN-IP-Adresse: 192.168.8.120 (mein PC im Netzwerk auf den ich zugreifen möchte), LAN-Port: 80-80, Protokoll: TCP/UDP, Status: AN
+        <br/>
+        <br/>
+        Sonst ist alles Standard!
+        <br/>
+        Jetzt habe ich eine IP Adresse wovon ich extern zugreifen kann. Check!
+        <br/>
+        Die Weiterleitung funktioniert aber nicht wie sie soll. Anstatt auf 192.168.8.120:80 zu routen, werde ich immer auf die T-Mobile HomeBOX Administration Seite weitergeleitet???????
+        <br/>
+        Auf 192.168.8.120:80 läuft ein simpler Apache Webserver &amp; am PC sind alle Firewalls ausgeschaltet. HomeBOX restarten etc. alles ohne Erfolg.
+        <br/>
+        <br/>
+        So liebes T-Mobile Team: Ich bitte um eine klare und rasche Antwort - keine Fragen welche Einstellungen ich sonst so habe, sondern eine ganz einfache Step by Step Sache. Die habt ihr ja irgendwo nur sie funktioniert bei mir und etlichen anderen auch nicht. Für mich ist das Ganze ein Vertragsauflösungs- bzw. Kündigungsgrund, falls es nicht funktionieren sollte, benötige ich es doch und laut Vertrag und Service sollte dies ohne Probleme möglich sein.
+        <br/>
+        <br/>
+        Sie sind am Zug, danke =)
+        <br/>
+        <br/>
+        LG
+       </br>
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Käthe
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-07-02T10:17:26Z" title="2018-07-02 10:17 ">
+   Juli 2, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Servus
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/76475-bufferl/?do=hovercard" data-mentionid="76475" href="https://community.magenta.at/profile/76475-bufferl/" rel="">
+     @bufferl
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Unsere T-Mobile Community beruht auf dem UserHelfenUser Prinzip. Du kannst hier gerne technischen Fragen hochladen und unsere User versuchen dir gerne weiterzuhelfen.
+   </p>
+   <p>
+    Bei Fragen, die du direkt an unsere Mitarbeiter stellen willst, kontaktiere bitte die richtigen Kanäle. Du findest sie auch
+    <a href="https://www.t-mobile.at/service" rel="external nofollow">
+     hier
+    </a>
+    .
+   </p>
+   <p>
+   </p>
+   <p>
+    LG, Käthe
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Fichtlwichtl
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-07-03T07:22:06Z" title="2018-07-03 07:22 ">
+   Juli 3, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Dürft ich fragen wie du den Zugriff auf das Forwarding Ziel genau versucht hast?
+   </p>
+   <p>
+    Mir sieht es so aus, als wäre der Zugriff vom Lokalen Netz aus versucht worden, mit z.B. der Eingabe im Browser 78.x.x.x:80. (also PublicIP+Port)
+   </p>
+   <p>
+    Das ist mir mal passiert und ich hab mich gewundert, warum es nicht funktioniert.
+   </p>
+   <p>
+    Selbes Ergebnis wenn du ausserhalb des Lokalen Netzes versuchst zuzugreifen, also vom Handy aus per LTE z.B.?
+   </p>
+   <p>
+    LGFW
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-07-04T07:23:25Z" title="2018-07-04 07:23 ">
+   Juli 4, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26477" data-ipsquote-contentid="4583" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1530255420" data-ipsquote-userid="76475" data-ipsquote-username="bufferl">
+    <div class="ipsQuote_citation">
+     Am 6/29/2018 um 08:57 schrieb bufferl:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      So liebes T-Mobile Team: Ich bitte um eine klare und rasche Antwort - keine Fragen welche Einstellungen ich sonst so habe, sondern eine ganz einfache Step by Step Sache. Die habt ihr ja irgendwo nur sie funktioniert bei mir und etlichen anderen auch nicht. Für mich ist das Ganze ein Vertragsauflösungs- bzw. Kündigungsgrund, falls es nicht funktionieren sollte, benötige ich es doch und laut Vertrag und Service sollte dies ohne Probleme möglich sein.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Aber irgendwie müssen wir ja nachfragen, welche Einstellungen du getroffen hast - vielleicht gibts doch etwas, was noch fehlt.
+    <br>
+     Und ich glaube nicht, dass das ein Kündigungsgrund ist.
+    </br>
+   </p>
+   <p>
+    Welche HomeNet Box hast du denn genau? Sprich welche Version?
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26490" data-ipsquote-contentid="4583" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1530602526" data-ipsquote-userid="61502" data-ipsquote-username="Fichtlwichtl">
+    <div class="ipsQuote_citation">
+     Am 7/3/2018 um 09:22 schrieb Fichtlwichtl:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Dürft ich fragen wie du den Zugriff auf das Forwarding Ziel genau versucht hast?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Guter Punkt. Im internen Netzwerk kommst du drauf?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   bufferl
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-07-04T08:05:55Z" title="2018-07-04 08:05 ">
+   Juli 4, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26492" data-ipsquote-contentid="4583" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1530689005" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     vor 10 Minuten schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Aber irgendwie müssen wir ja nachfragen, welche Einstellungen du getroffen hast - vielleicht gibts doch etwas, was noch fehlt.
+      <br>
+       Und ich glaube nicht, dass das ein Kündigungsgrund ist.
+      </br>
+     </p>
+     <p>
+      Welche HomeNet Box hast du denn genau? Sprich welche Version?
+     </p>
+     <p>
+      Guter Punkt. Im internen Netzwerk kommst du drauf?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Hello, guten Morgen und danke für die Antworten bzw. Teilnahme!
+    <br>
+     <br>
+      Vorab: Ich habe es geschafft, dank nur einer wertvoller Information: Port 80 ist für T-Mobile Techniker reserviert und hardcoded in der Firmware. Man wird immer auf die Routerseite weitergeleitet wenn man diesen Port versucht. Diese Information ist essentiell und ich frage mich, warum diese nicht wirklich nach außen kommuniziert wird. Ich habe die Techniker-Hotline angerufen die Geld kostet. Von der Port 80 Belegung und so hatte mir der Mitarbeiter nichts gesagt. Die Aussage war: "Sollte alles funktionieren, falls nicht, liegt es an der Firmware die vielleicht nicht richtig funktioniert -&gt; Gerät austauschen". Beim T-Mobile Shop hat mir ein privater Typ dann gesagt, was Sache ist, der Mitarbeiter konnte mir auch nicht weiterhelfen. Das ist schon eine Aussage für sich, ohne einen Mitarbeiter irgendetwas anzukreiden zu wollen.
+      <br/>
+      <br/>
+      Um die Fragen zu beantworten
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/64518-mariom/?do=hovercard" data-mentionid="64518" href="https://community.magenta.at/profile/64518-mariom/" rel="">
+       @MarioM
+      </a>
+      und
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/61502-fichtlwichtl/?do=hovercard" data-mentionid="61502" href="https://community.magenta.at/profile/61502-fichtlwichtl/" rel="">
+       @Fichtlwichtl
+      </a>
+      :
+      <br/>
+      <br/>
+      - Gerät: Huawei B529s-23a
+      <br/>
+      - Wie komme ich auf mein Netzwerk: intern mit lokaler IP-Range und extern von einem anderen Netz natürlich
+      <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+      <br/>
+      - Kündigungsgrund: Natürlich ist das ein Künidgungsgrund. Nicht seitens T-Mobile aber seitens Konsumentenschutz. Wenn du ein Service anbietest welches du bezahlst aber nicht funktioniert, dann muss dich der Vertragspartner herauslassen, egal was die AGB"s besagen. Und bitte keine Replies zum Konsumentenschutz-Thema. Das wäre mein allerletzter Weg gewesen, falls es nicht geklappt hätte ...
+      <br/>
+      <br/>
+      Zusammengefasst: Ich habe mehrere Stunden und Kosten aufwenden müssen um ein Problem zu lösen, welches von T-Mobile produziert wurde und wird. Ich fordere T-Mobile auf die Information mit der Port 80 Belegung in den FAQ zu übernehmen. Es wäre ein zusätzlicher Satz der den Aufwand bei T-Mobile und deren Kunden verringert, da jeder unnötiger Aufwand kostet - auf beiden Seiten.
+      <br/>
+      <br/>
+      Danke und baba
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-07-04T08:18:06Z" title="2018-07-04 08:18 ">
+   Juli 4, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26494" data-ipsquote-contentid="4583" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1530691555" data-ipsquote-userid="76475" data-ipsquote-username="bufferl">
+    <div class="ipsQuote_citation">
+     vor 9 Minuten schrieb bufferl:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Wenn du ein Service anbietest welches du bezahlst aber nicht funktioniert, dann muss dich der Vertragspartner herauslassen, egal was die AGB"s besagen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Naja wenn Port 80 nicht funktioniert nimmst du einen anderen
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26494" data-ipsquote-contentid="4583" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1530691555" data-ipsquote-userid="76475" data-ipsquote-username="bufferl">
+    <div class="ipsQuote_citation">
+     vor 11 Minuten schrieb bufferl:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Vorab: Ich habe es geschafft, dank nur einer wertvoller Information: Port 80 ist für T-Mobile Techniker reserviert und hardcoded in der Firmware.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Normalerweise hat jeder Router einen sogenannten Management Port. Blöd, dass bei T-Mobile das gerade Port 80 ist ...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-07-04T16:24:15Z" title="2018-07-04 16:24 ">
+   Juli 4, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Naja, management port wenn es sein muss, dann bitte über ein eigenes APN.
+   </p>
+   <p>
+    Ich bin persönlich kein fan von so management Sachen, vor allem wenn dem Kunden diese nicht kommuniziert werden. Eigentlich kauft der Kunde die Box..... Oder?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2018-07-04T17:05:28Z" title="2018-07-04 17:05 ">
+   Juli 4, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26496" data-ipsquote-contentid="4583" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1530721455" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+    <div class="ipsQuote_citation">
+     vor 40 Minuten schrieb IT-Freak:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Naja, management port wenn es sein muss, dann bitte über ein eigenes APN.
+     </p>
+     <p>
+      Ich bin persönlich kein fan von so management Sachen, vor allem wenn dem Kunden diese nicht kommuniziert werden. Eigentlich kauft der Kunde die Box..... Oder?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Das schon aber 95% der Kunden brauchen nur die Standardfunktionen
+    <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

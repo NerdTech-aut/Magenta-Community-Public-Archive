@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   IPv6 prefix delegation mit der Internet Fiber Box
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   IPv6 prefix delegation mit der Internet Fiber Box
+  </h1>
+  <span class="author">
+   BeppoT
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-04T18:30:23Z" title="2019-06-04 18:30 ">
+   Juni 4, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Kann man mit der Internet Fiber Box über Prefix Delegation einem dahintergeschalteten Router die SLAAC-basierte Adressvergabe überlassen? Ich habe meinen eigenen Router, und würde gerne an diesem meinen Hauptrechner anhängen, während Gäste sich an die Fiber Box direkt anschließen können. Das erfordert halt, daß die Fiber Box den IPv6-Präfix weiterleiten kann.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-05T04:37:52Z" title="2019-06-05 04:37 ">
+   Juni 5, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich bezweifle das dies möglich ist, den dazu würden 2 sub netz gebraucht.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   BeppoT
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-05T06:55:16Z" title="2019-06-05 06:55 ">
+   Juni 5, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Alternativ dazu: Kann die Box als Bridge betrieben werden?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-05T07:06:41Z" title="2019-06-05 07:06 ">
+   Juni 5, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Die Fiber Box (ehm Connect Box) kann im Bridge Mode betrieben werden, aber nur mit IPv4-only. Musst wahrscheinlich davor eine öffentliche IPv4 vom Support holen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   BeppoT
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-05T07:17:53Z" title="2019-06-05 07:17 ">
+   Juni 5, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hm. Also kein DHCPv6 Prefix Delegation im Bridge-Modus? Seltsam.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe aber bereits eine fixe IP, da ich schon lange UPC-Kunde bin. Ich hoffe mal, daß die fortgeführt werden könnte.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-05T11:15:55Z" title="2019-06-05 11:15 ">
+   Juni 5, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Technisch gesehen ist IPv6 &amp; IPv4 im Bridge Mode möglich.
+   </p>
+   <p>
+    Zu der jetzigen Konfig, bekommt das Modem am V4 Interface eine (öffentliche) IP oder gar keine IP?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   BeppoT
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-05T17:03:30Z" title="2019-06-05 17:03 ">
+   Juni 5, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Eine öffentliche fixe IP hab ich. Die verwend ich ja auch, um z.B. den SSH-Server meiner Workstation zuhause anzusprechen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   BeppoT
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-05T18:28:28Z" title="2019-06-05 18:28 ">
+   Juni 5, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Und, noch eine Frage, die dazu passt: Wenn Geräte ja ihre eigene IPv6-Adresse kriegen, kann man dann von außen auf diese zugreifen? NAT o.ä. ist ja unnötig bei IPv6.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2019-06-05T19:08:28Z" title="2019-06-05 19:08 ">
+   Juni 5, 2019
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nat ist bei IPv6 unnötig. Punkto Zugriff von außen ist es abhängig von der firewall in dem Router. Ich kenne leider die Connectbox nicht, deshalb kann ich nicht sagen ob da standardmäßig alles durch darf und ob da eine Firewall Regel in ähnlicher Form wie die Portweiterleitung benötigt wird
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   TheFox
+  </span>
+  <br/>
+  <time class="timestamp" datetime="2023-05-09T12:35:07Z" title="2023-05-09 12:35 ">
+   Mai 9, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wann kann man damit rechnen, dass IPv6 prefix delegation auch im Bridge-modus funktioniert? Falls das doch schon gehen sollte, was muss man machen, damit man hinter dem Modem auf einem Router eine IPv6 Adresse gekommt?
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

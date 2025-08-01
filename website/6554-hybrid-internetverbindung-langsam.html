@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Hybrid Internetverbindung langsam
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Hybrid Internetverbindung langsam
+  </h1>
+  <span class="author">
+   simonp
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-01-14T22:32:29Z" title="2021-01-14 22:32 ">
+   Januar 14, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi!
+    <br/>
+    <br/>
+    Ich habe vor 2 Monaten einen Magenta Hybrid Vertrag abgeschlossen (150 Mb/s werden da angepriesen). Mir war schon im vornherein klar, diesen Wert nicht erreichen zu können, allerdings habe ich mir 90 Mb/s erhofft und die bekam ich auch zur überwiegenden Zeit geliefert.
+    <br/>
+    <br>
+     Aber am 9.1.2021 um 17:30 hat sich daran etwas verändert:
+    </br>
+   </p>
+   <p>
+    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2825" href="images/uploads/image.png.374ef71df7610d5c182b8594b880665e.png" rel="">
+     <img alt="image.thumb.png.973919991ed2c6b3e95f9e02d3d7621c.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2825" src="images/uploads/image.thumb.png.973919991ed2c6b3e95f9e02d3d7621c.png"/>
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Es sollte mit freien Auge erkennbar sein, dass sich hier plötzlich etwas verändert hat...
+    <br/>
+    Quelle der Werte ist Speedtest.net, ich kann leider die API vom RTR Netztest nicht verwenden...
+    <br/>
+    <br/>
+    Speed ist nun maximal bei 74 Mb/s, dafür relativ konstant.
+    <br/>
+    <br/>
+    Konnte dieses Phänomen auch von jemand anderen beobachtet werden?
+   </p>
+   <p>
+   </p>
+   <p>
+    MfG
+   </p>
+   <p>
+    simonp
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Rexalius2000
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-01-14T23:01:51Z" title="2021-01-14 23:01 ">
+   Januar 14, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/87917-simonp/?do=hovercard" data-mentionid="87917" href="https://community.magenta.at/profile/87917-simonp/" rel="">
+     @simonp
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Das kann einige Gründe haben wie z.B:
+   </p>
+   <ul>
+    <li>
+     DSL Geschwindigkeit wurde gesenkt (siehe im web interface deiner Hybrid Box)
+    </li>
+    <li>
+     Netz Auslastung wurde höher(mehr Kunden in der Mobilfunkzelle-shared Medium
+    </li>
+   </ul>
+   <p>
+   </p>
+   <p>
+    Meistens trifft aber der 2 Punkt zu was jetzt in Zeiten von Homeoffice und co. nicht wirklich außergewöhnlich ist.  Ich nehme mal an du führt  den Speedtest über LAN bzw. WiFI 5 GHz durch? Trotzdem sehr gute Werte für Hybrid
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   simonp
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-01-15T06:26:05Z" title="2021-01-15 06:26 ">
+   Januar 15, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja, teste über Lan.
+    <br>
+     <br>
+      Im Router nach zu sehn war eine sehr gute Idee
+      <img alt=":glad:" data-emoticon="" height="20" src="images/emoticons/tma_glad-o.png" srcset="images/emoticons/tma_glad-o@2x.png 2x" title=":glad:" width="20"/>
+      . Da hab ich dan die Erklärung gefunden: Der Bonding Tunnel war Down weil LTE mich rausgeschmissen hat.
+      <br/>
+      <br/>
+      Neustart vom Router und alles hat wieder funktioniert...
+      <br/>
+     </br>
+    </br>
+   </p>
+   <p>
+    Also ist DSL bei mir wirklich sehr gut und konstant, hätte ich das auch einmal getestet haha
+    <img alt=":D" data-emoticon="" height="20" src="images/emoticons/tma_laughing-o.png" srcset="images/emoticons/tma_laughing-o@2x.png 2x" title=":D" width="20"/>
+    .
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Rexalius2000
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-01-15T08:39:28Z" title="2021-01-15 08:39 ">
+   Januar 15, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    DSL unterliegt nicht dem shared Medium ,du teilst dir die Bandbreite nicht mit anderen Kunden sowie bei LTE, daher ist es stabil.
+   </p>
+   <p>
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Nur eine bestimmte Internet-Seite kann manchmal tagelang nicht geladen werden, DNS Fehler
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Nur eine bestimmte Internet-Seite kann manchmal tagelang nicht geladen werden, DNS Fehler
+  </h1>
+  <span class="author">
+   karottentorte
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-11-14T21:02:23Z" title="2017-11-14 21:02 ">
+   November 14, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Seitdem ich die T-Mobile Homenet-Box von Huawei hab kann die Seite "interwetten.com" mit dem Laptop manchmal nicht geladen werden, alles andere funktioniert aber, dort steht dann:
+   </p>
+   <p>
+    <strong>
+     Die Seite ist nicht erreichbar. Vorübergehender DNS Fehler.
+    </strong>
+   </p>
+   <p>
+    Interessant ist, dass ich die Seite mit dem Handy erreiche (Handy ist auch mit WLAN der HomeNetBox verbunden)
+   </p>
+   <p>
+    Hab eine Netzwerkdiagnose gemacht, dort stand:
+   </p>
+   <p>
+    <strong>
+     Ressource (interwetten.com) ist online, antwortet jedoch nicht auf Verbindungsversuche. Der Remotecomputer antwortet nicht auf Verbindungen an Port 443. Dies kann an den Firewall bzw. Sicherheitsrichtlinieneinstellungen liegen. Es wurden keine Probleme mit der Firewall des Computers festgestellt.
+    </strong>
+   </p>
+   <p>
+    Und weiter:
+    <strong>
+     Wenden Sie sich an den Dienstanbieter oder Besitzer des Remotesystems um weitere Unterstützung zu erhalten.
+    </strong>
+   </p>
+   <p>
+    Kann man dieses Problem irgendwie lösen? Warum funktioniert nur diese Seite nicht?
+   </p>
+   <p>
+    Hab eine Email an interwetten.com geschrieben, die meinen bei ihren Servern wäre alles in Ordnung.
+   </p>
+   <p>
+    Hat vielleicht sonst jemand ein ähnliches Problem, wenn auch mit einer anderen Internet-Seite?
+   </p>
+   <p>
+    Lg Dani
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-11-15T20:25:28Z" title="2017-11-15 20:25 ">
+   November 15, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hello,
+    <br/>
+    verwendest du einen Virenschutz am Laptop? Wenn ja welchen?
+   </p>
+   <p>
+    Das könnte ein Anzeichen dafür sein, dass es am Laptop manchmal nicht geht, aber am Handy schon.
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   karottentorte
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-11-16T20:11:37Z" title="2017-11-16 20:11 ">
+   November 16, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja ich verwende G-Data Internet Security. Aber auch am Handy hab ich G-Data für Android.
+   </p>
+   <p>
+    Aber am Handy ist es ja die Mobile Version der Internet-Seite, vielleicht geht's deshalb am Handy.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   karottentorte
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-11-16T21:08:52Z" title="2017-11-16 21:08 ">
+   November 16, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hab gerade eine interessante Entdeckung gemacht...
+   </p>
+   <p>
+    Hab mein Virenprogramm G-Data geöffnet, bin dann auf "Webschutz", dann auf "Weitere Einstellungen" und auf "Erweitert". Dort steht: Serverportnummern, die überwacht werden sollen: 80, 443
+   </p>
+   <p>
+    Hab das Häkchen bei "Zeitüberschreitung im Browser vermeiden" entfernt und jetzt geht die Seite... zumindest bis jetzt
+   </p>
+   <p>
+    Trotzdem würde mich interessieren was das eigentlich bedeutet und ob das schlechte Auswirkungen auf die Websicherheit hat. Aber scheinbar ist das die Lösung des Problems
+    <img alt=":$" data-emoticon="" height="20" src="images/emoticons/tma_blushing-o.png" srcset="images/emoticons/tma_blushing-o@2x.png 2x" title=":$" width="20"/>
+   </p>
+   <p>
+    Danke für den Hinweis, Lg
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   karottentorte
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-11-17T19:44:59Z" title="2017-11-17 19:44 ">
+   November 17, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    War doch ein bisschen übereilt das als Lösung zu markieren...
+   </p>
+   <p>
+    Die Seite funktioniert wieder nicht, wieder das selbe, hab alles mögliche probiert, Proxyeinstellungen geändert, die Seite auf die Liste der Ausnahmen im Webschutz gesetzt, die Portnummer 443 bei der Überwachung rausgelöscht, Computer neu gestartet, verschiedene Browser verwendet, den Webschutz komplett ausgeschaltet...
+   </p>
+   <p>
+    So wie es aussieht muss ich mich damit abfinden ohne diese Seite zu leben...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-11-20T07:29:51Z" title="2017-11-20 07:29 ">
+   November 20, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="24001" data-ipsquote-contentid="4059" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1510947899" data-ipsquote-userid="74414" data-ipsquote-username="karottentorte">
+    <div class="ipsQuote_citation">
+     Am 11/17/2017 um 20:44 schrieb karottentorte:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      War doch ein bisschen übereilt das als Lösung zu markieren...
+     </p>
+     <p>
+      Die Seite funktioniert wieder nicht, wieder das selbe, hab alles mögliche probiert, Proxyeinstellungen geändert, die Seite auf die Liste der Ausnahmen im Webschutz gesetzt, die Portnummer 443 bei der Überwachung rausgelöscht, Computer neu gestartet, verschiedene Browser verwendet, den Webschutz komplett ausgeschaltet...
+     </p>
+     <p>
+      So wie es aussieht muss ich mich damit abfinden ohne diese Seite zu leben...
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Die Frage ist, wenn du den Virenschutz ausschaltest, kanns sein, dass vielleicht der Windows eigenen Schutz dazwischenschaltet?
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   karottentorte
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-11-26T18:54:25Z" title="2017-11-26 18:54 ">
+   November 26, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Keine Chance... die Seite geht einfach nur wann sie will egal was ich mache...
+   </p>
+   <p>
+    Hab mit einem T-Mobile Mitarbeiter gesprochen, der meinte ich soll diese kostenpflichtige Technik-Hotline anrufen aber ob die dann wirklich was machen können... Vielleicht probier ich das mal...
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="7 yr" datetime="2017-11-27T08:29:55Z" title="2017-11-27 08:29 ">
+   November 27, 2017
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="24175" data-ipsquote-contentid="4059" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1511722465" data-ipsquote-userid="74414" data-ipsquote-username="karottentorte">
+    <div class="ipsQuote_citation">
+     vor 13 Stunden schrieb karottentorte:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Keine Chance... die Seite geht einfach nur wann sie will egal was ich mache...
+     </p>
+     <p>
+      Hab mit einem T-Mobile Mitarbeiter gesprochen, der meinte ich soll diese kostenpflichtige Technik-Hotline anrufen aber ob die dann wirklich was machen können... Vielleicht probier ich das mal...
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Was du noch probieren kannst ist den Virenschutz mal komplett zu entfernen. Sollte jetzt nicht so tragisch sein, wenn du nur die eine Webseite versuchst aufzumachen. Und dann testen und gleich wieder installieren. Oder du probierst es mit einem anderen Virenschutz.
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

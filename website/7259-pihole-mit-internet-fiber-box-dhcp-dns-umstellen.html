@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   PiHole mit Internet Fiber Box [DHCP / DNS umstellen]
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   PiHole mit Internet Fiber Box [DHCP / DNS umstellen]
+  </h1>
+  <span class="author">
+   max12
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-27T10:40:19Z" title="2021-10-27 10:40 ">
+   Oktober 27, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi zusammen,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe kürzlich mein Internetanschluss auf "Gigakraft Gaming 300" umgestellt und von Magenta eine dieser "Internet Fiber Boxen" bekommen. Nun möchte ich wieder meinen
+    <a href="https://pi-hole.net/" rel="external nofollow">
+     PiHole Netzwerk-Adblocker
+    </a>
+    verwenden, aber dies funktioniert derzeit nur in dem ich auf jedem einzelnen Gerät zuhause die DNS Einstellungen ändere (auf die PiHole Adresse 192.168.0.15).
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich würde also gerne automatisch den PiHole als DNS Server für alle Geräte im Netzwerk nutzen. Bei jedem anderen Router gibt es dazu eine DHCP Einstellung, aber bei der Internet Fiber Box ist das nicht freigegeben. Als Alternative habe ich den IPv4 DHCP Server in der Internet Fiber Box ganz abgedreht, und verwende meinen eigenen IPv4 DHCP Server. Jetzt funktioniert das automatische Adblocking ab und zu, aber meist nicht. Wenn ich mir die Name Server anschaue die mein Mac bekommen hat. sehe ich dass dort der richtige IPv4 Name Server eingetragen ist (192.168.0.15) aber nicht der richtige Ipv6 Name Server. Nun meine Fragen:
+   </p>
+   <p>
+   </p>
+   <p>
+    - Hat schon jemand erfolgreich den PiHole mit der Internet Fiber Box im Einsatz, sodass automatisch alle DNS Anfragen zum PiHole gehen? Und wenn ja wie?
+   </p>
+   <p>
+    - Kann man den IPv6 DHCP Server irgendwie abschalten? Diese Option sehe ich nämlich auch nicht....
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke
+   </p>
+   <p>
+    Lg Max
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="3 yr" datetime="2021-10-27T11:38:35Z" title="2021-10-27 11:38 ">
+   Oktober 27, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Eine Möglichkeit wäre den Anschluss über den Support auf IPv4 umstellen zu lassen, dann hättest du zwar kein IPv6, aber eben auch keinen IPv6 DHCP Server mehr.
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

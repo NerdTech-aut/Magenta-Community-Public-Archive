@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Alexa Show Videoanruf funktioniert nicht
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Alexa Show Videoanruf funktioniert nicht
+  </h1>
+  <span class="author">
+   cantado
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-02T09:45:17Z" title="2021-02-02 09:45 ">
+   Februar 2, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich verwende den Router Huawei B535 von Magenta.
+    <a href="https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-flex/router-535s" rel="external nofollow">
+     https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-flex/router-535s
+    </a>
+   </p>
+   <p>
+    Allerdings kann ich damit keine Videoanrufe von meiner Alexa Show tätigen noch annehmen. Ich habe bereits mit dem Support von Amazon kommuniziert. Irgendwann haben sie mir gesagt, dass ich folgende Ports im Router öffnen muss:
+   </p>
+   <p>
+    UDP &amp; TCP ports 3478 und 5349
+    <br/>
+    UDP ports 49152 bis 65535
+    <br/>
+    <br/>
+    Außerdem haben die noch geschrieben, ob die Firewall Einstellungen zu stark eingestellt sind. (Hab alles deaktiviert, ohne erfolg. Ist wieder alles aktiviert)
+    <br>
+     Und dass ich Router-Funktionen wie "UPnP" (Universal Plug and Play) aktivieren kann. (Ich hab keine Ahnung wo ich sowas finden sollte)
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    So bin ich auf die Idee gekommen, dass der Router das Problem ist. Also habe ich einen Videoanruf von meinem Smartphone gemacht, ohne das ich im WLAN bin und es hat funktioniert. Sobald ich im WLAN bin, geht es nicht mehr.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe also versucht dieser Ports weiterzuleiten. Dazu habe ich als Gerät mein Smartphone ausgewählt.
+    <br/>
+    Leider konnte ich nicht alle Ports weiterleiten, da 50000-50020 reserviert sind.
+    <br/>
+    Nachdem ich die nicht-reservierten Ports weitergeleitet habe hat es leider immer noch nicht funktioniert.
+    <br/>
+    <br/>
+    Hat noch jemand solch ein Problem gehabt oder weiß, was ich noch Probieren kann?
+    <img alt="" class="ipsImage ipsImage_thumbnailed" data-fileid="o_1eth1udp413jm1h5s1ds143cjq3b" src=""/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-02T10:12:15Z" title="2021-02-02 10:12 ">
+   Februar 2, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Für Portweiterleitungen brauchst du eine öffentliche IP-Adresse, welche du mit dem Business APN bekommst (
+    <a href="https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-flex/router-535s/topic/sicherheit/apn-nat-typ-andern/1" rel="external nofollow">
+     Anleitung
+    </a>
+    ).
+   </p>
+   <p>
+    Verwendest du derzeit den Business APN (geht auch für Privatkunden)?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-02T10:14:37Z" title="2021-02-02 10:14 ">
+   Februar 2, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Spannend.
+    <br>
+     Ich hab auch einen Show aber mit dem B525 funktioniert das problemlos.
+     <br>
+      Einen Factoryreset hast du schon mal probiert oder?
+      <br/>
+      Wenn das mit einem HandyHotspot funktioniert, muss das wohl am Router liegen aber in der Regel sind die ja offen.
+      <br/>
+      Damit wir alles ausschließen - du hast das sowohl im 2,4, als auch im 5 GHz WLAN getestet oder?
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-02T10:16:00Z" title="2021-02-02 10:16 ">
+   Februar 2, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="40040" data-ipsquote-contentid="6606" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1612260735" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+    <div class="ipsQuote_citation">
+     vor 3 Minuten schrieb NTM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Für Portweiterleitungen brauchst du eine öffentliche IP-Adresse, welche du mit dem Business APN bekommst (
+      <a href="https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-flex/router-535s/topic/sicherheit/apn-nat-typ-andern/1" rel="external nofollow">
+       Anleitung
+      </a>
+      ).
+     </p>
+     <p>
+      Verwendest du derzeit den Business APN (geht auch für Privatkunden)?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich denke aber, dass der Show ja durchaus ein Massenprodukt ist und wäre da ein generelles Problem, sollte das schon bekannt sein.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-02T16:55:12Z" title="2021-02-02 16:55 ">
+   Februar 2, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="40037" data-ipsquote-contentid="6606" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1612259117" data-ipsquote-userid="88225" data-ipsquote-username="cantado">
+    <div class="ipsQuote_citation">
+     7 hours ago, cantado said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Allerdings kann ich damit keine Videoanrufe von meiner Alexa Show tätigen noch annehmen.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Kommen die Anrufe gar nicht erst durch? Oder kannst du Sie nur nicht annehmen/tätigen?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   cantado
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-04T14:56:10Z" title="2021-02-04 14:56 ">
+   Februar 4, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="40044" data-ipsquote-contentid="6606" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1612284912" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+    <div class="ipsQuote_citation">
+     Am 2.2.2021 um 17:55 schrieb MarioM:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Kommen die Anrufe gar nicht erst durch? Oder kannst du Sie nur nicht annehmen/tätigen?
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Die Anrufe sind erst gar nicht durchgekommen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe das Problem anders gelöst: Ich habe mir einen neuen Router angeschafft und es funktioniert.
+   </p>
+   <p>
+   </p>
+   <p>
+    Trotzdem vielen Dank für die schnelle Hilfe. Ein großes Lob für die schnellen und kompetenten Antworten.
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielleicht hat doch jemand Anderes das selbe Problem und findet mit diesen Antworten eine Lösung.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-04T14:57:39Z" title="2021-02-04 14:57 ">
+   Februar 4, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="40058" data-ipsquote-contentid="6606" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1612450570" data-ipsquote-userid="88225" data-ipsquote-username="cantado">
+    <div class="ipsQuote_citation">
+     1 minute ago, cantado said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Die Anrufe sind erst gar nicht durchgekommen.
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich habe das Problem anders gelöst: Ich habe mir einen neuen Router angeschafft und es funktioniert.
+     </p>
+     <p>
+     </p>
+     <p>
+      Trotzdem vielen Dank für die schnelle Hilfe. Ein großes Lob für die schnellen und kompetenten Antworten.
+     </p>
+     <p>
+     </p>
+     <p>
+      Vielleicht hat doch jemand Anderes das selbe Problem und findet mit diesen Antworten eine Lösung.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Cool.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ja die Portweiterleitung bzw. Einstellungen am Default Magenta Router sind immer sehr heikel. Wenn irgendwas nicht passt, geht gar nix mehr
+    <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-04T15:09:00Z" title="2021-02-04 15:09 ">
+   Februar 4, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Jetzt würde mich aber interessieren - neuer Router hängt hinter dem alten Router oder ersetzt den alten Router?
+    <br>
+     Und welcher Router ist es denn geworden?
+     <br>
+      Ich denke da sollten wir noch dran bleiben, denn mich würde schon interessieren, an was es da scheitert - immerhin gibt es draußen sicher viele solche Echo Geräte und ich kann mir noch nicht vorstellen, dass das niemanden aufgefallen ist.
+      <br>
+       Oder der Router hat sein eigenes Problem.
+       <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+      </br>
+     </br>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-11T09:44:58Z" title="2021-02-11 09:44 ">
+   Februar 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    <span>
+     <span>
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/88225-cantado/?do=hovercard" data-mentionid="88225" href="https://community.magenta.at/profile/88225-cantado/" rel="">
+       @cantado
+      </a>
+      Du hast nicht zufällig auch das Internetschutzpaket aktiviert?
+     </span>
+    </span>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   cantado
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-11T10:06:24Z" title="2021-02-11 10:06 ">
+   Februar 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="40061" data-ipsquote-contentid="6606" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1612451340" data-ipsquote-userid="70315" data-ipsquote-username="Christian_E">
+    <div class="ipsQuote_citation">
+     Am 4.2.2021 um 16:09 schrieb Christian_E:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Jetzt würde mich aber interessieren - neuer Router hängt hinter dem alten Router oder ersetzt den alten Router?
+      <br>
+       Und welcher Router ist es denn geworden?
+       <br>
+        Ich denke da sollten wir noch dran bleiben, denn mich würde schon interessieren, an was es da scheitert - immerhin gibt es draußen sicher viele solche Echo Geräte und ich kann mir noch nicht vorstellen, dass das niemanden aufgefallen ist.
+        <br>
+         Oder der Router hat sein eigenes Problem.
+         <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
+        </br>
+       </br>
+      </br>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+   </p>
+   <p>
+    Der neue Router (Huawei h122-373) ersetzt den alten Router.
+    <br>
+     Der alte wird nicht mehr verwendet.
+    </br>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich finde es faszinierend, dass anscheinend niemand Probleme damit hat. Entweder nutzt niemand den Videoanruf von Alexa oder mein Router ist wirklich die Ausnahme gewesen.
+    <br/>
+    Immerhin funktioniert der Videoanruf mit dem neuen Router ohne etwas einstellen zu müssen.
+   </p>
+   <p>
+   </p>
+   <p>
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/64518-mariom/?do=hovercard" data-mentionid="64518" href="https://community.magenta.at/profile/64518-mariom/" rel="">
+     @MarioM
+    </a>
+    Wo sehe ich das? Ich hätte es probiert, alle Sicherheitseinstellungen zu deaktivieren. Ohne Erfolg.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-11T10:25:41Z" title="2021-02-11 10:25 ">
+   Februar 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="40318" data-ipsquote-contentid="6606" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1613037984" data-ipsquote-userid="88225" data-ipsquote-username="cantado">
+    <div class="ipsQuote_citation">
+     18 minutes ago, cantado said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/64518-mariom/?do=hovercard" data-mentionid="64518" href="https://community.magenta.at/profile/64518-mariom/" rel="">
+       @MarioM
+      </a>
+      Wo sehe ich das? Ich hätte es probiert, alle Sicherheitseinstellungen zu deaktivieren. Ohne Erfolg.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ich glaube das solltest du online in deinem Account sehen.
+    <br>
+     Genau kann ich es dir nicht sagen, ich selbst verwende das nicht.
+     <br/>
+     <br/>
+     Aber es wäre ein heißer Tipp,weil der grundsätzlich mal relativ viel blockiert
+     <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
+    </br>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-11T11:16:03Z" title="2021-02-11 11:16 ">
+   Februar 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="40318" data-ipsquote-contentid="6606" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1613037984" data-ipsquote-userid="88225" data-ipsquote-username="cantado">
+    <div class="ipsQuote_citation">
+     vor einer Stunde schrieb cantado:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+     </p>
+     <p>
+      Der neue Router (Huawei h122-373) ersetzt den alten Router.
+      <br>
+       Der alte wird nicht mehr verwendet.
+      </br>
+     </p>
+     <p>
+     </p>
+     <p>
+      Ich finde es faszinierend, dass anscheinend niemand Probleme damit hat. Entweder nutzt niemand den Videoanruf von Alexa oder mein Router ist wirklich die Ausnahme gewesen.
+      <br/>
+      Immerhin funktioniert der Videoanruf mit dem neuen Router ohne etwas einstellen zu müssen.
+     </p>
+     <p>
+     </p>
+     <p>
+      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/64518-mariom/?do=hovercard" data-mentionid="64518" href="https://community.magenta.at/profile/64518-mariom/" rel="">
+       @MarioM
+      </a>
+      Wo sehe ich das? Ich hätte es probiert, alle Sicherheitseinstellungen zu deaktivieren. Ohne Erfolg.
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Alles klar!
+    <br/>
+    Dann gehe ich mal davon aus, dass es ein HW Problem war.
+    <br/>
+    Internetschutz ist sicher auch ein sehr guter Tipp aber wenn der neue Router geht, tippe ich darauf eher weniger. Aber ausgeschlossen ist es natürlich nicht.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   MarioM
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-11T11:17:18Z" title="2021-02-11 11:17 ">
+   Februar 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="40322" data-ipsquote-contentid="6606" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1613042163" data-ipsquote-userid="70315" data-ipsquote-username="Christian_E">
+    <div class="ipsQuote_citation">
+     Just now, Christian_E said:
+    </div>
+    <div class="ipsQuote_contents">
+     <p>
+      Alles klar!
+      <br>
+       Dann gehe ich mal davon aus, dass es ein HW Problem war.
+       <br/>
+       Internetschutz ist sicher auch ein sehr guter Tipp aber wenn der neue Router geht, tippe ich darauf eher weniger. Aber ausgeschlossen ist es natürlich nicht.
+      </br>
+     </p>
+    </div>
+   </blockquote>
+   <p>
+    Ja stimmt - das habe ich übersehen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Wenn der neue Router geht liegt es vermutlich an der FW des alten Routers
+    <img alt=":O" data-emoticon="" height="20" src="images/emoticons/tma_wow-o.png" srcset="images/emoticons/tma_wow-o@2x.png 2x" title=":O" width="20"/>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Christian_E
+  </span>
+  <br/>
+  <time class="4 yr" datetime="2021-02-11T11:18:21Z" title="2021-02-11 11:18 ">
+   Februar 11, 2021
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ja aber du hast schon recht.
+    <br>
+     An den Internetschutz denke ich immer zu wenig aber der hätte bei diesem Problem auch gut gepasst.
+    </br>
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

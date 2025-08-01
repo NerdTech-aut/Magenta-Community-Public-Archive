@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Fritz!Box an Fiber Box (Bridge Mode) - welche Einstellungen?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Fritz!Box an Fiber Box (Bridge Mode) - welche Einstellungen?
+  </h1>
+  <span class="author">
+   KiNdGi4nT
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-12T17:56:31Z" title="2023-08-12 17:56 ">
+   August 12, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo zusammen,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe bereits die „Suche“ verwendet und habe unter den Ergebnissen nicht wirklich eine Antwort auf meine Frage erhalten:
+   </p>
+   <p>
+   </p>
+   <p>
+    ich habe die weiße Fiber Box und habe mir jetzt eine Fritzbox 7590 gekauft.
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich bilde mir ein, dass ich mal in der Web-Oberfläche der Firber Box den Bridge Mode eingeschaltet hatte (ist das das selbe, was auch die magenta Hotline einstellt, wenn man dort anruft und denen sagt, dass man eine eigene Fritzbox an die Fiber Box dran hängen möchte ?) - evtl. war es diese Anleitung:
+    <a href="https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-fiber/box/topic/business/so-aktivieren-sie-den-bridge-modus/1" rel="external nofollow">
+     https://www.magenta.at/hilfe-service/services/hardwaresupport/device/internet-fiber/box/topic/business/so-aktivieren-sie-den-bridge-modus/1
+    </a>
+    .
+   </p>
+   <p>
+    Bisher waren so TP-Link Deco Mesh teile an der Fiber Box angeschlossen - mit der 192.168.0.1 landete man auch bei der Web Oberfläche von den Deco Teilen.
+   </p>
+   <p>
+   </p>
+   <p>
+    Jetzt habe ich also an der Fiber Box (LAN 1) die Fritzbox (WAN Anschluss) angeschlossen. Im Internet habe ich dann verschiedenes gefunden: man soll in der Fritzbox unter „Internetzugang“ bei den Anbietern „Magenta“ wählen und die Magenta Zugangsdaten eintragen (dabei sollte das ja nicht nötig sein, weil die Fiber Box ja an der Fritzbox hängst?). Dann habe ich was anderes gefunden: man soll in der Fritzbox unter „Internetzugang“ doch „weitere Internetanbieter" auswählen und dann die Option "Anschluss an externes Modem oder Router".
+   </p>
+   <p>
+   </p>
+   <p>
+    Letzteres habe ich schließlich gemacht und dennoch funktioniert das Internet nicht über die Fritzbox. (oder muss zusätzlich von der Magenta Hotline was eingerichtet werden? - obwohl in meiner Fiber Box das mit dem Bridge Mode eingestellt ist)? Wen dem so ist: warum haben dann die TP-Link Deco Teile funktioniert, als die an der Fiber Box hingen?
+   </p>
+   <p>
+   </p>
+   <p>
+    hat wer die Fiber Box mit der Fritzbox 7590 bei sich in Betrieb und könnte mir sagen, was alles eingestellt &amp; angesteckt werden soll, damit das Internet über die Fritzbox funktioniert?
+   </p>
+   <p>
+   </p>
+   <p>
+    wäre für Tipps sehr dankbar!
+   </p>
+   <p>
+   </p>
+   <p>
+    Servus und schönen Abend.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-13T00:30:23Z" title="2023-08-13 00:30 ">
+   August 13, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/97841-kindgi4nt/?do=hovercard" data-mentionid="97841" href="https://community.magenta.at/profile/97841-kindgi4nt/" rel="">
+     @KiNdGi4nT
+    </a>
+    <br/>
+    Wenn der Bridge Modus auf der Fiber Box aktiv ist, sollte die Weboberfläche zur Konfiguration unter der IP-Adresse 192.168.100.1 erreichbar sein statt 192.168.0.1 im Router Modus. Im Bridge Modus bietet die Weboberfläche der Fiber Box auch nur die essenziellsten Optionen, welche in diesem Modus nötig sind (keine W-Lan Einstellungen, keine Portweiterleitungen, etc.).
+   </p>
+   <p>
+   </p>
+   <p>
+    Zugangsdaten werden für den eigenen Router hinter der Fiber Box keine benötigt.
+   </p>
+   <p>
+   </p>
+   <p>
+    In deinem Fall solltest du deine Fritz!Box als kaskadierten Router einrichten:
+   </p>
+   <p>
+    <a href="https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7590/3229_FRITZ-Box-als-kaskadierten-Router-einrichten/" rel="external nofollow">
+     https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7590/3229_FRITZ-Box-als-kaskadierten-Router-einrichten/
+    </a>
+   </p>
+   <p>
+    Es sollte nur "1 Betriebsart einrichten" relevant sein.
+   </p>
+   <p>
+    Wichtiger Unterschied zu den anderen Anleitungen von AVM ist, dass als Betriebsart in Unterpunkt 5 die Option "Internetverbindung selbst aufbauen" zu wählen ist, statt der Option "Vorhandene Internetverbindung mitbenutzen (IP-Client-Modus)", welche in anderen Anleitungen bevorzugt wird.
+   </p>
+   <p>
+    Bei Unterpunkt 9 die Option "IP-Adresse automatisch über DHCP beziehen" auswählen und 9a bis 9d überspringen.
+   </p>
+   <p>
+   </p>
+   <p>
+    LG NTM
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   KiNdGi4nT
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-13T07:57:21Z" title="2023-08-13 07:57 ">
+   August 13, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo,
+   </p>
+   <p>
+   </p>
+   <p>
+    danke für deine Antwort!
+   </p>
+   <p>
+   </p>
+   <p>
+    Bedeutet das, dass ich keine andere Möglichkeit habe, außer per Kaskade die Fritzbox anzuschließen?
+   </p>
+   <p>
+   </p>
+   <p>
+    Wobei eine kaskade doch nur dann gemacht wird, wenn ein Router an einen anderen hängt und man das eine Netz vom anderen trennen möchte? Warum ist hier bei der Fiber Box im Bridge Mode (die eigtl. nur als Modem agieren sollte) eine Kaskade nötig?
+   </p>
+   <p>
+   </p>
+   <p>
+    Es müsste doch eine Möglichkeit geben, die Fiber Box als quasi Modem und die Fritzbox dahinter als Router laufen zu lassen?
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke für die Hilfe!
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   KiNdGi4nT
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-08-13T13:10:46Z" title="2023-08-13 13:10 ">
+   August 13, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Tag,
+   </p>
+   <p>
+   </p>
+   <p>
+    ich konnte das Problem lösen: der Port LAN 1 an der Fiber Box ist defekt und deswegen hatte das Internet über die Fritzbox nicht funktioniert. Die Fiber Box habe ich resettet und dann den Bridge Mode aktiviert. Danach die Firtzbox (WAN Port) mit der Fiber Box (LAN 2 Port) angeschlossen und in der Fritzbox unter „Internetzugang“ &gt; „weitere Internetanbieter" ausgewählt und dann die Option "Anschluss an externes Modem oder Router" gesetzt.
+    <br/>
+    <br/>
+    Funktioniert jetzt einwandfrei!
+   </p>
+   <p>
+   </p>
+   <p>
+    Danke für die Hilfsversuche und vielleicht ist dieser Beitrag ja für wen anders hilfreich.
+   </p>
+   <p>
+   </p>
+   <p>
+    Servus und einen schönen Sonntag!
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>

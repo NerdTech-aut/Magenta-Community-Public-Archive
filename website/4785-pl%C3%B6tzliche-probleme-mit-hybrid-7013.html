@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Plötzliche Probleme mit Hybrid 70/13
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Plötzliche Probleme mit Hybrid 70/13
+  </h1>
+  <span class="author">
+   letmein
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-12-21T14:56:41Z" title="2018-12-21 14:56 ">
+   Dezember 21, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo!
+   </p>
+   <p>
+    Seit einigen Tagen habe ich das Problem, dass ich im TeamSpeak sehr viel Paketloss habe, somit verstehe ich Gesprächspartner kaum, bzw. diese mich auch nicht.
+   </p>
+   <p>
+    Auch in Spielen wie Battlfield V auf Deutschen Servern, springt der Ping von den üblichen ~40 ständig rauf auf 120, dann wieder runter etc. Interessanter weise besteht das Problem bei den britischen Servern nicht. Da habe ich konstante 60ms.
+   </p>
+   <p>
+    Auffallend ist auch, dass dies meist Nachmittags so ist. Vormittags laufen die dt. Server auch perfekt.
+   </p>
+   <p>
+    Alles mögliche schon probiert, von unzähligen Neustarts, DSL only, LTE only etc. aber alles nützt nichts.
+   </p>
+   <p>
+    Auch wenn ich die Server über cmd und ping -t manuell anpinge, habe ich zwischen drin immer weider "Zeitüberschreitung der Anforderung"
+   </p>
+   <p>
+    Was kann ich machen? Vor wenigen Tagen lief doch alles ohne Probleme hier.....
+   </p>
+   <p>
+    Falls sich das jemand aus der Technik ansehen möchte: es handelt sich um Nr. Gelöscht
+   </p>
+   <p>
+    Im Anhang ein Screenshot des Battlefield internen Netzwerkgraphen (siehe hier Paketverlust) und einen WinMTR Mitschnitt des selben BF Servers
+   </p>
+   <p>
+    <a href="https://abload.de/image.php?img=nachmittagh3flt.jpg" rel="external nofollow">
+     https://abload.de/image.php?img=nachmittagh3flt.jpg
+    </a>
+   </p>
+   <p>
+    Danke!!
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2018-12-24T13:10:06Z" title="2018-12-24 13:10 ">
+      Dezember 24, 2018
+     </time>
+     von letmein
+    </strong>
+    <br>
+     Screenshot
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   baloo1986
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-12-21T17:01:00Z" title="2018-12-21 17:01 ">
+   Dezember 21, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Wie sieht dein traceroute aus?
+   </p>
+   <p>
+    Habe das selbe problem auch bei UPC das liegt an einem hop (aorta.net) das ist die int. Verbindung zwischen Österr und Deutschl.
+   </p>
+   <p>
+   </p>
+   <p>
+    Mach mal traceroute oder mtr
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   letmein
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-12-21T17:10:19Z" title="2018-12-21 17:10 ">
+   Dezember 21, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    hi hab mtr angehängt.
+   </p>
+   <p>
+    was heißt das nun für uns? kann da was gemacht werden?
+   </p>
+   <p>
+    ist ja erst seit neuem so.... und wie gesagt, vormittags läufts butterweich.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2018-12-21T17:11:48Z" title="2018-12-21 17:11 ">
+      Dezember 21, 2018
+     </time>
+     von letmein
+    </strong>
+    <br>
+     Ergänzung
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-12-21T20:10:22Z" title="2018-12-21 20:10 ">
+   Dezember 21, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    100 MS ist für mein Verständnis noch in einem einigermaßen brauchbaren Bereich.
+   </p>
+   <p>
+    Ich tippe auf eine Wartung.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   letmein
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-12-21T21:17:32Z" title="2018-12-21 21:17 ">
+   Dezember 21, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    100ms im schnitt. Aber das Schlimmere ist ja das fast 20% Paketloss da sind
+   </p>
+   <p>
+    Liegt wohl an telia.net. zumindest hat google da einiges geliefert, dass es da überlastungen gibt, in diversen foren.
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="6 yr" datetime="2018-12-21T21:19:30Z" title="2018-12-21 21:19 ">
+      Dezember 21, 2018
+     </time>
+     von letmein
+    </strong>
+    <br>
+     .
+    </br>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-12-24T12:40:40Z" title="2018-12-24 12:40 ">
+   Dezember 24, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Uh, Paketloss ist dann schon unschon.  Tritt das nur bei gewissen Diensten/Seiten auf oder allgemein?
+   </p>
+   <p>
+    By the Way, bitte keine Nummer oder ähnliches Posten.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   letmein
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-12-24T12:49:30Z" title="2018-12-24 12:49 ">
+   Dezember 24, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo.
+   </p>
+   <p>
+    Fällt vor allem bei Diensten in/nach Deutschland auf. Eben dt. Battlefield Server, Teamspeak.
+   </p>
+   <p>
+    Ob hier wohl die technische Hotline helfen kann, aber dass mal so einfach beschreiben, erklären wird halt schwierig
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   IT-Freak
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-12-24T16:10:39Z" title="2018-12-24 16:10 ">
+   Dezember 24, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Ich bezweifel irgendwie auch, dass die normale Hotline dabei helfen kann, jedoch irgendwie muss ja das richtige Team für den Fehler informiert werden.
+   </p>
+   <p>
+    Un der Ping zu AT Server  oder Google Server passt?
+   </p>
+   <p>
+    Mit Telia gab es in letzter Zeit schon einmal Probleme in Österreich.
+   </p>
+   <p>
+    Vielleicht kann ein Moderator die Info weiterreichen.
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   letmein
+  </span>
+  <br/>
+  <time class="6 yr" datetime="2018-12-24T21:06:17Z" title="2018-12-24 21:06 ">
+   Dezember 24, 2018
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Nein, betrifft nur die Schnittstelle zu Deutschland. Britische Server gehen ohne Paketloss oder dergleichen. Nur im Teamspeak ist es halt mega nervig wenn die Hälfte meist verschluckt wird.
+   </p>
+   <p>
+    Wäre echt super, wenn ein Moderator dieses Problem an den richtigen Kanal weiter geben könnte.
+   </p>
+   <p>
+    Lg
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>
