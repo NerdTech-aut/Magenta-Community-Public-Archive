@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Neuer Magenta 5G Tarif und Fritz!Box 6850 -  Wie richte ich Dyndns ein, um die öffentliche IP automatisch zu aktualisieren? Brauche ich zusätzlich eine IPv4 und wie kann ich sie hinzufügen?
+  </title>
+  <meta charset="utf-8"/>
+  <link href="style/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <h1>
+   Neuer Magenta 5G Tarif und Fritz!Box 6850 -  Wie richte ich Dyndns ein, um die öffentliche IP automatisch zu aktualisieren? Brauche ich zusätzlich eine IPv4 und wie kann ich sie hinzufügen?
+  </h1>
+  <span class="author">
+   Obi_wan
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-25T14:17:51Z" title="2023-11-25 14:17 ">
+   November 25, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo Zusammen,
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich habe mir gestern einen neuen Magenta Tarif mit 5G gekauft (GSM Karte) und heute alles installiert.
+   </p>
+   <p>
+    Als Router habe ich mir eine Fritz!Box 6850 5G besorgt und alles bis auf
+    <strong>
+     Dyndns
+    </strong>
+    (die Zuteilung der öffentlichen IP, mir ist klar dass hier die öffentliche IP weitergeleitet werden muss zu meiner Fritz!Box)
+    <strong>
+    </strong>
+    funktioniert einwandfrei. Könnt Ihr mir bitte weiterhelfen und mir sagen wie es geht dass sich die IP automatisch aktualisiert. Oder muss ich eine IPV4 dazubuchen? Geht das überhaupt?
+   </p>
+   <p>
+   </p>
+   <p>
+    Vielen Dank Obi_wan
+   </p>
+   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+    <strong>
+     Bearbeitet
+     <time data-short="1 yr" datetime="2023-11-25T14:23:56Z" title="2023-11-25 14:23 ">
+      November 25, 2023
+     </time>
+     von Obi_wan
+    </strong>
+   </span>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-11-25T17:54:47Z" title="2023-11-25 17:54 ">
+   November 25, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hi
+    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98293-obi_wan/?do=hovercard" data-mentionid="98293" href="https://community.magenta.at/profile/98293-obi_wan/" rel="">
+     @Obi_wan
+    </a>
+   </p>
+   <p>
+    Bei was genau brauchst du nun Unterstützung? Bei der Einrichtung des MyFritz DynDNS oder bei der Einrichtung einer öffentlichen IPv4 Adresse?
+   </p>
+   <p>
+    Welche Arten von IP-Adressen dein Router bekommt kannst du bei Magenta über die APN-Einstellungen steuern.
+   </p>
+   <p>
+    Dein Router kann entweder nur eine IPv4 Adresse bekommen (je nach eingestelltem APN private CG-NAT Adresse oder öffentliche Adresse) oder private IPv4 zusammen mit öffentlicher IPv6 Adresse. Die Kombination öffentliche IPv4 und IPv6 ist nicht verfügbar.
+   </p>
+   <p>
+    Wenn du eine öffentliche IPv4 Adresse haben möchtest, musst du die APN/Zugangspunkt-Einstellungen anpassen mit folgenden werden.
+   </p>
+   <p>
+    APN: business.gprsinternet
+   </p>
+   <p>
+    Benutzername: t-mobile
+   </p>
+   <p>
+    Kennwort: tm
+   </p>
+   <p>
+    Authentifizierungstyp: PAP
+   </p>
+   <p>
+   </p>
+   <p>
+    LG NTM
+   </p>
+   <p>
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Obi_wan
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2023-12-31T14:57:08Z" title="2023-12-31 14:57 ">
+   Dezember 31, 2023
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Hallo und danke für deine hilfe.
+   </p>
+   <p>
+    Mittlerweile habe ich eine öffentliche IPV4 dank deiner Anleitung mit dem APN. Allerdings kann ich auf keine Freigabe zugreifen. ping ist möglich - bei telnet werden die ports als geschlossen angezeigt.
+   </p>
+   <p>
+   </p>
+   <p>
+    hast du neh ahnung woran es liegen kann?
+   </p>
+   <p>
+    lg Obi_wan
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   NTM
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-02T00:58:03Z" title="2024-01-02 00:58 ">
+   Januar 2, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Besonders für den Remote-Zugriff mittels nicht sicherer Protokolle, wie Telnet, würde ich empfehlen den VPN-Server auf der Fritz!Box einzurichten statt eine einfach Portweiterleitung zu verwenden. Damit würdest du auch Portsperren seitens des Routers oder des Netzbetreibers umgehen.
+   </p>
+   <p>
+    <a href="https://avm.de/service/vpn/wireguard-vpn-zur-fritzbox-am-computer-einrichten/" rel="external nofollow">
+     https://avm.de/service/vpn/wireguard-vpn-zur-fritzbox-am-computer-einrichten/
+    </a>
+   </p>
+   <p>
+    <a href="https://avm.de/service/vpn/wireguard-vpn-zur-fritzbox-am-smartphone-oder-tablet-einrichten/" rel="external nofollow">
+     https://avm.de/service/vpn/wireguard-vpn-zur-fritzbox-am-smartphone-oder-tablet-einrichten/
+    </a>
+   </p>
+   <p>
+   </p>
+   <p>
+    Ich denke die Fritz!Boxen unterstützen NAT-Loopback, aber trotzdem die Frage: Hast du versucht über einen anderen Internet-Anschluss (über die 4G/5G Verbindung des Handys oder über ein anderes Lan/W-Lan) oder über dein Heimnetzwerk die Portweiterleitungen zu nutzen?
+   </p>
+   <p>
+   </p>
+   <p>
+    Verwendest du den Standard Telnet Port (Port 23)?
+   </p>
+  </div>
+  <hr/>
+  <span class="author">
+   Obi_wan
+  </span>
+  <br/>
+  <time class="1 yr" datetime="2024-01-02T09:11:13Z" title="2024-01-02 09:11 ">
+   Januar 2, 2024
+  </time>
+  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+   <p>
+    Guten Morgen,
+   </p>
+   <p>
+    und gutes neues Jahr, ich habe nur mit telnet versucht auf einen offenen port zuzugreifen. Port 1234. telnet zeigt ja an ob der port geöffnet ist. das war der plan. ich habe auch versucht über ein Linux System auf den Port zuzugreifen, auch keine funktion.
+   </p>
+   <p>
+    vpn kann ich leider nicht machen, da dies mit der zwei faktor auth. bestätigt werden muss, und brauche ich auch nicht.
+   </p>
+   <p>
+    vg Obi_wan
+   </p>
+  </div>
+  <hr/>
+ </body>
+</html>
