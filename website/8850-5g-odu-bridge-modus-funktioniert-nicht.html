@@ -1,167 +1,168 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    5G ODU Bridge Modus funktioniert nicht
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    5G ODU Bridge Modus funktioniert nicht
   </h1>
-  <span class="author">
+<span class="author">
    freaky-guy
   </span>
-  <br/>
-  <time class="1 yr" datetime="2023-07-12T08:26:24Z" title="2023-07-12 08:26 ">
+<br/>
+<time class="1 yr" datetime="2023-07-12T08:26:24Z" title="2023-07-12 08:26 ">
    Juli 12, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
+<p>
     ich habe mal wieder Probleme mit meiner 5G ODU.
    </p>
-   <p>
+<p>
     Da ich eine öffentliche IP-Adresse benötige, verwende ich diese im Bridge-Modus.
    </p>
-   <p>
+<p>
     Leider wird mir neuerdings die publicIp nichtmehr durchgereicht. Ich bekomme also auf meine dahinter liegende Firewall eine private IP im 192.168.x.x Netz. Scheinbar hat das auch zur folge, dass die MTU-Size im VPN sehr stark schwankt, permanent fragmentiert wird, und die Verbindung extrem langsam ist. Kennt jemand das Thema oder kann mir helfen?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    totenmann
   </span>
-  <br/>
-  <time class="1 yr" datetime="2023-07-13T09:12:16Z" title="2023-07-13 09:12 ">
+<br/>
+<time class="1 yr" datetime="2023-07-13T09:12:16Z" title="2023-07-13 09:12 ">
    Juli 13, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Scheinbar sind die Techniker bei Magenta mit dieser Box selber überfordert.
    </p>
-   <p>
+<p>
     Ich warte zu einem ähnlichen Thema seit Tagen auf einen Rückruf der Technik und hab schon mit 4 verschiedenen Technikern telefoniert.
    </p>
-   <p>
+<p>
     Traurig traurig.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    freaky-guy
   </span>
-  <br/>
-  <time class="1 yr" datetime="2023-07-13T09:18:17Z" title="2023-07-13 09:18 ">
+<br/>
+<time class="1 yr" datetime="2023-07-13T09:18:17Z" title="2023-07-13 09:18 ">
    Juli 13, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Nachdem ich mich den gesamten gestrigen Tag damit auseinander gesetzt habe, kann ich dir vielleicht helfen!
    </p>
-   <p>
+<p>
     Zuerst: Ja! Die sind überfordert und mir wurde bereits der eine oder andere Bug in der Firmware bestätigt. Leider scheint hier eher wenig Interesse an einer Verbesserung zu bestehen.
    </p>
-   <p>
+<p>
     Der Grund, warum die IP nicht durchgereicht wird ist, weil du 2 MPN-Profile einrichten musst um in den Bridge-Modus zu gelangen.
    </p>
-   <p>
+<p>
     Jedoch lässt sich der modus im ersten Profil nicht ändern. Das kann man durch etwas Wissen und F12 (!!) ändern, und dann wird die public-IP auch durchgereicht. Aber Achtung: Dadurch verlierst du den Zugang auf das Webinterface über 192.168.0.1 und auf eine andere IP reagiert das Teil nicht.
    </p>
-   <p>
+<p>
     Ich verwende eine Enterprise-Firewall und hier kann man durch virtuelle-IP-Adressen auch dieses Thema umgehen. Ist aber enorm kompliziert und nur mit Wissen möglich!
    </p>
-   <p>
+<p>
     Mein MTU-Problem ist aber dadurch nicht gelöst!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Schade dass hier bei Magenta nur wenig in diese Richtung unternommen wird!
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Roman Schreiber
   </span>
-  <br/>
-  <time class="1 yr" datetime="2023-08-04T12:58:23Z" title="2023-08-04 12:58 ">
+<br/>
+<time class="1 yr" datetime="2023-08-04T12:58:23Z" title="2023-08-04 12:58 ">
    August 4, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey, sobald sich zum dem Thema was tut, teilt bitte eure Erfahrungen hier mit oder was gemacht wurde. Das wäre super! Danke LG RS.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Andy123
   </span>
-  <br/>
-  <time class="1 yr" datetime="2023-08-10T15:34:22Z" title="2023-08-10 15:34 ">
+<br/>
+<time class="1 yr" datetime="2023-08-10T15:34:22Z" title="2023-08-10 15:34 ">
    August 10, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54435" data-ipsquote-contentid="8850" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1689239897" data-ipsquote-userid="92530" data-ipsquote-username="freaky-guy">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="54435" data-ipsquote-contentid="8850" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1689239897" data-ipsquote-userid="92530" data-ipsquote-username="freaky-guy">
+<div class="ipsQuote_citation">
      Am 13.7.2023 um 11:18 schrieb freaky-guy:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Nachdem ich mich den gesamten gestrigen Tag damit auseinander gesetzt habe, kann ich dir vielleicht helfen!
      </p>
-     <p>
+<p>
       Zuerst: Ja! Die sind überfordert und mir wurde bereits der eine oder andere Bug in der Firmware bestätigt. Leider scheint hier eher wenig Interesse an einer Verbesserung zu bestehen.
      </p>
-     <p>
+<p>
       Der Grund, warum die IP nicht durchgereicht wird ist, weil du 2 MPN-Profile einrichten musst um in den Bridge-Modus zu gelangen.
      </p>
-     <p>
+<p>
       Jedoch lässt sich der modus im ersten Profil nicht ändern. Das kann man durch etwas Wissen und F12 (!!) ändern, und dann wird die public-IP auch durchgereicht. Aber Achtung: Dadurch verlierst du den Zugang auf das Webinterface über 192.168.0.1 und auf eine andere IP reagiert das Teil nicht.
      </p>
-     <p>
+<p>
       Ich verwende eine Enterprise-Firewall und hier kann man durch virtuelle-IP-Adressen auch dieses Thema umgehen. Ist aber enorm kompliziert und nur mit Wissen möglich!
      </p>
-     <p>
+<p>
       Mein MTU-Problem ist aber dadurch nicht gelöst!
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Schade dass hier bei Magenta nur wenig in diese Richtung unternommen wird!
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Ich habe das selbe Problem.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich bekomme durch die 2 MPDN Profile eine ganz komische IP. Die wird zwar durchgereicht aber von extern komme ich trotzdem nicht durch.
    </p>
-   <p>
+<p>
     Die Interne-IP die ich erhalte wenn ich das Standard MPDN Profil erhalte bringt mir nichts.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn ich nicht mehr auf das Webinterface zugreifen kann ist das nicht so schlimm da ich das Modem eh über Bluetooth und das APP zurücksetzen kann.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Welche Einstellungen wären denn vorher im Webinterface zu machen die echte externe IP durchgereicht wird?  Also mit nur einem Profil?
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
- </body>
+<p>
+</p>
+<p>
+</p>
+</div>
+<hr/>
+</body>
 </html>

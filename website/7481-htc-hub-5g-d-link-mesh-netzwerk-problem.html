@@ -1,171 +1,172 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    HTC Hub 5G - D-Link Mesh Netzwerk Problem
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    HTC Hub 5G - D-Link Mesh Netzwerk Problem
   </h1>
-  <span class="author">
+<span class="author">
    VertexOnEdge
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-17T18:42:00Z" title="2022-01-17 18:42 ">
+<br/>
+<time class="3 yr" datetime="2022-01-17T18:42:00Z" title="2022-01-17 18:42 ">
    Januar 17, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Magenta Community.
     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Hab ein kleines bis etwas größeres Problem. Je nach dem wie man es betrachten will.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bin im besitz eines HTC 5g hubs und habe es nun mit dem D-Link COVR-1100 erweitert.
    </p>
-   <p>
+<p>
     Ich möchte das mein D-Link als Router agiert und mein hub einfach nur die Daten weiterleitet.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Alles in allem muss ich sagen funktioniert es...
    </p>
-   <p>
+<p>
     Außer bei einigen technischen Geräten gibt es ein paar Problem.
    </p>
-   <p>
+<p>
     Wie zum Beispiel meiner XBox Series X. Dort bekomme ich einen Doppel Nat.
    </p>
-   <p>
+<p>
     Das HTC hat lediglich mobile daten an. Deswegen verstehe ich gerade nicht warum
    </p>
-   <p>
+<p>
     dies so ist.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Jemand von euch vllt eine Ahnung woran es liegen könnte das ich einen Doppel Nat bekomme?
     <img alt="O.o" data-emoticon="" height="20" src="images/emoticons/tma_confused-o.png" srcset="images/emoticons/tma_confused-o@2x.png 2x" title="O.o" width="20"/>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-18T01:04:23Z" title="2022-01-18 01:04 ">
+<br/>
+<time class="3 yr" datetime="2022-01-18T01:04:23Z" title="2022-01-18 01:04 ">
    Januar 18, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/92133-vertexonedge/?do=hovercard" data-mentionid="92133" href="https://community.magenta.at/profile/92133-vertexonedge/" rel="">
      @VertexOnEdge
     </a>
-   </p>
-   <p>
+</p>
+<p>
     Der HTC 5G Hub arbeitet immer als Router mit NAT.
    </p>
-   <p>
+<p>
     Das D-Link System hat auch einen Router mit NAT und somit hast du eine Doppel-NAT im Heimnetzwerk.
    </p>
-   <p>
+<p>
     Da könnte eben entweder das erste Gerät in der Kette (also der 5G Hub) durch einen Mobilfunkrouter mit Bridge Mode ersetzt werden oder beim Mesh auf das
     <a href="https://www.magenta.at/internet/mesh-wlan" rel="external nofollow">
      Magenta/Nokia Mesh W-Lan
     </a>
     gesetzt werden, da dieses Standardmäßig einfach das IP-Netz des bereits existierenden Routers nutzt und kein NAT macht
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Doppel-NAT sollte typisch aber kein Problem sein, wenn der zweite Router am ersten Router in die DMZ eingetragen wird. Aber der HTC 5G Hub hat keine DMZ, soweit ich weiß. Also könnte man versuchen nur mit UPnP oder Portweiterleitungen zum Ziel zu kommen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn die Series X direkt mit dem 5G Hub verbunden ist, funktioniert es nehme ich an? Also Business APN für öffentlich IP-Adresse wurde eingerichtet.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Der 5G Hub ist ein ziemlich spannendes Gerät, wobei sehr viele Ähnlichkeiten zu einem Android Smartphone, welches als Hotspot verwendet wird, vorhanden sind, da der 5G Hub auch Android basiert ist. Sobald bereits etwas mehr gemacht werden soll, kommt der 5G Hub leider schnell an seine Grenzen
    </p>
-   <p>
+<p>
     LG NTM
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    VertexOnEdge
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-21T11:48:09Z" title="2022-01-21 11:48 ">
+<br/>
+<time class="3 yr" datetime="2022-01-21T11:48:09Z" title="2022-01-21 11:48 ">
    Januar 21, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey NTM.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke dir vielmals für deine Antwort.
    </p>
-   <p>
+<p>
     Ich hab eigentlich nichts gegen den HTC Hub, doch fehlen
    </p>
-   <p>
+<p>
     leider ein paar Einstellungsmöglichkeiten wie zb eine Kindersicherung.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Diese Möglichkeit wäre mit dem D-Link gegeben.
    </p>
-   <p>
+<p>
     Zudem halte ich wenig von WLAN-Repeater.
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46090" data-ipsquote-contentid="7481" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1642467863" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46090" data-ipsquote-contentid="7481" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1642467863" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+<div class="ipsQuote_citation">
      Am 18.1.2022 um 02:04 schrieb NTM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Also könnte man versuchen nur mit UPnP oder Portweiterleitungen zum Ziel zu kommen.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Ok. Da sind wir jetzt bei einem Problem angekommen.
     <br/>
-    <br/>
+<br/>
     Das Problem liegt an meiner Unwissenheit in diesem Bereich.
     <img alt="xD" data-emoticon="" height="20" src="images/emoticons/tma_party-o.png" srcset="images/emoticons/tma_party-o@2x.png 2x" title="xD" width="20"/>
-   </p>
-   <p>
+</p>
+<p>
     Aber werde mal versuchen ob ich das irgendwie lösen kann.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke dir vielmals.
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

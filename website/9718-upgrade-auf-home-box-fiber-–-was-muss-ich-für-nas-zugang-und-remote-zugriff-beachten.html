@@ -1,25 +1,26 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Upgrade auf Home Box Fiber – Was muss ich für NAS-Zugang und Remote-Zugriff beachten?
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Upgrade auf Home Box Fiber – Was muss ich für NAS-Zugang und Remote-Zugriff beachten?
   </h1>
-  <span class="author">
+<span class="author">
    Peter Manfredini
   </span>
-  <br/>
-  <time class="Nov 19" datetime="2024-11-19T22:31:47Z" title="2024-11-19 22:31 ">
+<br/>
+<time class="Nov 19" datetime="2024-11-19T22:31:47Z" title="2024-11-19 22:31 ">
    November 19, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Liebe Leute,
     <br/>
     ich habe derzeit die weiße Connect Box und dahinter einen Cisco Router, an dem auch über Ethernet mein NAS hängt. Nun überlege ich, auf die neue Home Box Fiber upzugraden, weil ich deren Performance beeindruckend finde (bei meiner Frau gemessene 500 MB WLAN). Die Home Box hat aber – was ich gelesen habe – keinen Bridge Mode.
@@ -28,17 +29,17 @@
     <br/>
     Danke im voraus für Antworten!
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Nov 20" datetime="2024-11-20T09:04:39Z" title="2024-11-20 09:04 ">
+<br/>
+<time class="Nov 20" datetime="2024-11-20T09:04:39Z" title="2024-11-20 09:04 ">
    November 20, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo und willkommen
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/97992-peter-manfredini/?do=hovercard" data-mentionid="97992" href="https://community.magenta.at/profile/97992-peter-manfredini/" rel="">
      @Peter Manfredini
@@ -47,190 +48,188 @@
     <span class="ipsEmoji">
      👋
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Das klingt nach einer spannenden Überlegung!
     <span class="ipsEmoji">
      😊
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+</p>
+<p>
+</p>
+<p>
+<strong>
      Die Home Box Fiber ist definitiv ein leistungsstarkes Gerät
     </strong>
     , und die WLAN-Performance ist – wie du schon richtig festgestellt hast – beeindruckend. Wenn du sie als Router einsetzt, dann wird der Betrieb deines NAS im lokalen LAN definitiv problemlos funktionieren. Du kannst dein NAS einfach an einen der freien LAN-Ports der Home Box anschließen und über Ethernet darauf zugreifen.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Was den Remote-Zugriff betrifft, gibt es bei der Home Box Fiber tatsächlich einen kleinen Haken:
     </strong>
     Sie bietet standardmäßig keinen Bridge Mode, wie du das von deiner aktuellen Connect Box gewohnt bist. Ohne den Bridge Mode wird die Home Box die öffentliche IP-Adresse für dein Heimnetzwerk übernehmen und eventuell NAT-Probleme (Network Address Translation) verursachen, die den Remote-Zugriff auf dein NAS erschweren können.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Hier ist der Trick:
     </strong>
     Du kannst bei unserem Technikteam unter 0676 200 7777 anfragen, ob der Bridge Mode für dich aktiviert werden kann. Sobald das erledigt ist, kannst du deinen Cisco Router wieder als Hauptgerät im Netzwerk verwenden, das die externe IP übernimmt, und so wie gewohnt auf dein NAS zugreifen – auch von unterwegs. Wenn der Bridge Mode nicht aktiviert werden kann oder du keine weiteren Geräte einrichten möchtest, könntest du in Betracht ziehen, auf eine VPN-Lösung zurückzugreifen, die den sicheren Remote-Zugriff auf dein NAS ermöglicht.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Zusammengefasst:
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     - NAS im LAN funktioniert auch ohne Bridge Mode.
    </p>
-   <p>
+<p>
     - Für Remote-Zugriff via Internet brauchst du entweder Bridge Mode oder eine VPN-Lösung.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich hoffe, das hilft dir weiter! Wenn du noch mehr Fragen hast, immer her damit!
     <span class="ipsEmoji">
      😊
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Liebe Grüße, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    Peter Manfredini
   </span>
-  <br/>
-  <time class="Nov 20" datetime="2024-11-20T13:06:11Z" title="2024-11-20 13:06 ">
+<br/>
+<time class="Nov 20" datetime="2024-11-20T13:06:11Z" title="2024-11-20 13:06 ">
    November 20, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Danke für die ausführliche Info. Das klingt machbar.
-    <br>
+    <br/>
      Frage dazu: Synology bietet als Verbindung auch die eigene Software QuickConnect an. Brauche ich dafür den Bridge Mode oder kann ich das am Standardbetrieb der Home Box verwenden? Das wäre dann am Einfachsten.
-     <br>
-      <a href="https://kb.synology.com/de-de/DSM/tutorial/Quick_Start_External_Access" rel="external nofollow">
+     <br/>
+<a href="https://kb.synology.com/de-de/DSM/tutorial/Quick_Start_External_Access" rel="external nofollow">
        https://kb.synology.com/de-de/DSM/tutorial/Quick_Start_External_Access
       </a>
-     </br>
-    </br>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Nov 21" datetime="2024-11-21T07:18:15Z" title="2024-11-21 07:18 ">
+<br/>
+<time class="Nov 21" datetime="2024-11-21T07:18:15Z" title="2024-11-21 07:18 ">
    November 21, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/97992-peter-manfredini/?do=hovercard" data-mentionid="97992" href="https://community.magenta.at/profile/97992-peter-manfredini/" rel="">
      @Peter Manfredini
     </a>
     ,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     da bin ich etwas überfragt, daher habe ich meine KI um Rat gefragt. Diese teilt folgendes mit:
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      QuickConnect von Synology funktioniert auch ohne den Bridge Mode
     </strong>
     und ist eine super praktische Möglichkeit, von unterwegs auf dein NAS zuzugreifen, ohne komplexe Portweiterleitungen einrichten zu müssen.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Wie funktioniert QuickConnect?
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     QuickConnect ist eine cloudbasierte Lösung von Synology, die es ermöglicht, über das Internet auf dein NAS zuzugreifen, ohne dass du manuell Portweiterleitungen oder DNS-Dienste konfigurieren musst. Es handelt sich im Wesentlichen um einen P2P-Verbindungsmechanismus, der das NAS mit den Synology-Servern verbindet und dir eine einfache Möglichkeit bietet, über die QuickConnect-ID auf deine Dateien und Dienste zuzugreifen.
    </p>
-   <p>
-   </p>
-   <p>
-    <u>
-     <strong>
+<p>
+</p>
+<p>
+<u>
+<strong>
       Vorteile:
      </strong>
-    </u>
-   </p>
-   <p>
-    <strong>
+</u>
+</p>
+<p>
+<strong>
      Kein Bridge Mode nötig:
     </strong>
     Du kannst QuickConnect direkt im Standardbetrieb der Home Box verwenden. Du musst keine Änderungen am Router vornehmen (außer sicherzustellen, dass dein NAS mit dem Internet verbunden ist). QuickConnect funktioniert auch hinter Routern, die NAT (Network Address Translation) verwenden, wie es bei der Home Box der Fall ist.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Einfache Einrichtung:
     </strong>
     Es genügt, QuickConnect auf deinem Synology NAS zu aktivieren und die entsprechenden Einstellungen vorzunehmen. Sobald das erledigt ist, kannst du über die Synology-Apps oder einen Webbrowser mit deiner QuickConnect-ID auf dein NAS zugreifen.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Keine Portweiterleitungen erforderlich:
     </strong>
     QuickConnect macht die Umgehung von Portweiterleitungen und VPNs überflüssig. Das ist besonders nützlich, wenn du nicht die Zeit oder Lust hast, in die Router-Einstellungen einzugreifen.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Fazit:
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Wenn dir der einfachste Weg wichtig ist und du keine tiefgreifende Kontrolle über dein Netzwerk benötigst, dann ist QuickConnect die ideale Lösung – und du kannst das ganz einfach im Standardbetrieb der Home Box nutzen, ohne den Bridge Mode zu aktivieren.
    </p>
-   <p>
+<p>
     Natürlich, falls du irgendwann mehr Kontrolle oder spezifische Netzwerkeinstellungen brauchst, könntest du dann den Bridge Mode oder Portweiterleitungen in Betracht ziehen, aber für den Zugriff auf das NAS ist QuickConnect eine prima Wahl.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn noch Fragen offen sind, stehe ich jederzeit zur Verfügung!
     <span class="ipsEmoji">
      🙂
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Liebe Grüße, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>

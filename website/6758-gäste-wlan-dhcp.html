@@ -1,105 +1,106 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Gäste-WLAN DHCP
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Gäste-WLAN DHCP
   </h1>
-  <span class="author">
+<span class="author">
    HiPhil
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-03-30T16:35:14Z" title="2021-03-30 16:35 ">
+<br/>
+<time class="4 yr" datetime="2021-03-30T16:35:14Z" title="2021-03-30 16:35 ">
    März 30, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bin seit ca. 2 wochen gigakraft gaming 100 kunde und muss sagen bin von der geschwindigkeit und stabilität und der einfachheit der einrichtung begeistert. Leider vom Funktionsumfang der Fiber Box 2 maßlos entsetzt. Bevor ich meine eigentliche Frage stelle schreib ich mir kurz den Frust von der Seele, bitte wen's nicht interessiert einfach den nächsten Absatz überspringen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Eigene interne IP des routers ist fix 192.168.0.1 -&gt; lässt sich nicht ändern. Dadurch muss ich alle geräte im LAN umkonfigurieren... seufz.
    </p>
-   <p>
+<p>
     Nachdem ich meinen eigenen DNS Server betreibe (Pihole) möchte ich natürlich auch über DHCP diesen automatisch eintragen. Das geht schonmal nicht (kann die DHCP settings nicht ändern ausser den range zu definieren, aber weder Gateway noch DNS server ändern)... seufz.
    </p>
-   <p>
+<p>
     Ich möchte meinen Medien-Server von extern über SNMP monitoren. Portforwarding geht nicht (standard ports dürfen nicht geforwarded werden).  Na gut ich kann snmp auch auf einem anderen port als 161 betreiben... *seufz*.
    </p>
-   <p>
+<p>
     Ja ich weiss die logische Antwort ist: Bridge Mode und eigenen Router betreiben. Will ich aus verschiedenen Gründen aber eigentlich überhaupt nicht.
    </p>
-   <p>
+<p>
     Einerseits weil die Fibre Box das theoretisch alles kann, sind ja Basisfunktionalitäten, nur im GUI halt nicht implementiert.
    </p>
-   <p>
+<p>
     1) Ich habe keinen router, und ich will auch keinen extra dafür kaufen.
    </p>
-   <p>
+<p>
     2) Noch ein kastl mehr dass ständig am Strom hängt und dass eignetlich nicht notwendig ist (weil die box ja alles könnte).
    </p>
-   <p>
+<p>
     3) Jeder Router dazwischen drückt erst wieder die bandbreite und den ping, das führt ja das gaming internet ad absurdum.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     So jetzt zur eigentlichen Frage:
    </p>
-   <p>
+<p>
     Soweit hab ich für alles workarounds finden können (eigener DHCP server etc). Aber: GästeWLAN ist aktiv, man kann sich auch verbinden aber man kriegt jetzt keine IP Adresse mehr (autoconfigure 169.254.x.x)  und erreicht damit natürlich nix mehr. Kann es sein dass derselbe DHCP der für das 2,4 und das 5GHz WLAN arbeitet auch fürs gästeWLAN IPs vergibt? Wie würde denn da ein workaround aussehen? Welche IPs vergibt der normalerweise im GästeWLAN? Ist das ein eigenes VLAN mit routing auf der Fibre Box oder nur per Firewall rules vom restlichen LAN getrennt?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke und LG
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Christian_E
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-04-22T06:21:55Z" title="2021-04-22 06:21 ">
+<br/>
+<time class="4 yr" datetime="2021-04-22T06:21:55Z" title="2021-04-22 06:21 ">
    April 22, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Leider bisher keine Antwort aus der Community.
     <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
-    <br/>
+<br/>
     Hast du dafür schon die Hotline angerufen?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Karo
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-04-22T11:43:19Z" title="2021-04-22 11:43 ">
+<br/>
+<time class="4 yr" datetime="2021-04-22T11:43:19Z" title="2021-04-22 11:43 ">
    April 22, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/89045-hiphil/?do=hovercard" data-mentionid="89045" href="https://community.magenta.at/profile/89045-hiphil/" rel="">
      @HiPhil
     </a>
     hast du dich inzwischen beim Technikteam unter 0676 200 7777 gemeldet und nachgefragt? LG Karo
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

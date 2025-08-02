@@ -1,136 +1,137 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    WLAN - langsames surfen trotz schnellem Speedtest
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    WLAN - langsames surfen trotz schnellem Speedtest
   </h1>
-  <span class="author">
+<span class="author">
    Stefan1234
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-09-22T08:16:43Z" title="2022-09-22 08:16 ">
+<br/>
+<time class="timestamp" datetime="2022-09-22T08:16:43Z" title="2022-09-22 08:16 ">
    September 22, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe seit ein paar Wochen die 5G Outdoorbox mit der kleinen weißen dazugehörigen Innenenheit - Tarif "gigakraft 5G 250"
    </p>
-   <p>
+<p>
     Um das WLan im ganzen Haus vernünftig verteilen zu können habe ich mir noch das Mesh W-Lan Starterpaket mit 2 Beacons dazu genommen.
    </p>
-   <p>
+<p>
     Es ist alles installiert (Outdoorbox zeigt 5G) und das W-Lan der Inneneinheit wurde wie in der Beschreibung gefordert deaktiviert damit, damit alles reibungslos über die die Mesh-Beacons laufen kann. Wenn ich nun Speedtests mache (OHNE  LAN-Kabel) komme ich auf einen Download zwischen 190Mbit/s und 235Mbit/s je nach Tageszeit, was ja absolut ok ist.
    </p>
-   <p>
+<p>
     Nun aber das Problem:
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Der Speedtest zeigt zwar super Downloadgeschwindigkeiten, wenn ich dann aber im Netz surfen will, egal welche Websites, ist alles extrem träge und jede Homepage lädt sehr lange. Ich hatte vorher ein günstiges W-Lan von HOT mit VIEL weniger Download und das war in etwa gleich schnell.
    </p>
-   <p>
+<p>
     Gewechselt habe ich hauptsächlich wegen Homeoffice, weil das alte Internet für Videocalls etc. zu schwach war, aber immerhin konnte ich arbeiten im Gegensatz zu jetzt. Wenn ich mit dem Firmenlaptop im W-Lan bin (auch VPN ist verbunden), kann ich nicht mal mehr ins Internet, Outlook oder ähnliches. Meine IT in der Firma hat sich das angesehen und meinte dass mein W-Lan zu langsam sei und es daher nicht funktioniert.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Irgendeine Idee woran das liegen kann? Die Kombination aus "schnellem Speedtest" und "trotzdem unfassbar langsamen surfen" passt für mich irgendwie nicht zusammen. Also ich kann es mir nicht erklären.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke vorab falls jemand eine Idee hat!
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-09-22T10:26:17Z" title="2022-09-22 10:26 ">
+<br/>
+<time class="timestamp" datetime="2022-09-22T10:26:17Z" title="2022-09-22 10:26 ">
    September 22, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey
     <span>
-     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94344-stefan1234/?do=hovercard" data-mentionid="94344" href="https://community.magenta.at/profile/94344-stefan1234/" rel="">
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94344-stefan1234/?do=hovercard" data-mentionid="94344" href="https://community.magenta.at/profile/94344-stefan1234/" rel="">
       @Stefan1234
      </a>
-     <br/>
+<br/>
      Der Aufbau ist zwar recht leicht umzusetzen, aber du hast damit viele Köche, um dir die Suppe zu versalzen.
     </span>
-   </p>
-   <p>
-    <span>
+</p>
+<p>
+<span>
      Ich würde die Anzahl der eingesetzten Geräte so weit wie möglich reduzieren.
     </span>
-   </p>
-   <p>
-    <span>
+</p>
+<p>
+<span>
      Die Outdoor-
     </span>
     Einheit
     <span>
      brauchst du natürlich weiterhin, aber die Indoor-Einheit würde ich weglassen.
     </span>
-   </p>
-   <p>
+</p>
+<p>
     Dazu müsstest du beim Mesh W-Lan in der Nokia WiFi App den Netzwerkmodus von Bridge auf DHCP ändern (Neustart erforderlich) und das Lan Kabel zur Outdoor-Einheit für ein paar Minuten vom Netzteil ausstecken. Dann kannst du den ersten Mesh Beacon statt der Indoor-Einheit an das Netzteil der Outdoor-Einheit anstecken und auch die Outdoor-Einheit wieder mit dem Netzteil verbinden.
    </p>
-   <p>
+<p>
     Versuche dies bitte mal und berichte, ob eine Verbesserung bemerkbar ist.
    </p>
-   <p>
+<p>
     LG NTM
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Stefan1234
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-09-23T06:19:26Z" title="2022-09-23 06:19 ">
+<br/>
+<time class="timestamp" datetime="2022-09-23T06:19:26Z" title="2022-09-23 06:19 ">
    September 23, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo NTM!
    </p>
-   <p>
+<p>
     Vielen lieben Dank für deine Nachricht, ich habe dies gestern Abend auch gleich umgesetzt und siehe da, es hat funktioniert! Die Indooreinheit ist aus dem Spiel und ich bediene den ersten Mesh direkt mit der Außeneinheit. Läuft wie geschmiert
     <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
-   </p>
-   <p>
+</p>
+<p>
     Danke vielmals, ich danke das wird auch vielen anderen Usern noch nützlich sein!
    </p>
-   <p>
+<p>
     Schönes Wochenende!
    </p>
-   <p>
+<p>
     LG
    </p>
-   <p>
+<p>
     Stefan1234
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

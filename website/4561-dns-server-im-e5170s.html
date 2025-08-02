@@ -1,150 +1,151 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    DNS-Server im E5170s
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    DNS-Server im E5170s
   </h1>
-  <span class="author">
+<span class="author">
    cgaertner
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T13:00:21Z" title="2018-05-28 13:00 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T13:00:21Z" title="2018-05-28 13:00 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Liebe Leute,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     der E5170s hat unter "Ethernet" die Option, benutzerdefinierte DNS-Server einzutragen. Diese gelten aber nur für das LAN und nicht für das WLAN: wenn ich dort einen Server eintrage bekommen die Clients über DHCP trotzdem 192.168.1.1 als DNS-Server übermittelt (getestet mit "ipconfig /all").
    </p>
-   <p>
+<p>
     Klar, der Eintrag steht ja auch unter "Ethernet" ... aber ich würde gerne den WLAN-Clients einen benutzerdefinierte DNS-Server mitgeben, aber bei den WLAN-Einstellungen finde ich keine entsprechende Option. Ist das tatsächlich nur für den LAN-Port möglich???
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     LG Christian
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T13:11:23Z" title="2018-05-28 13:11 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T13:11:23Z" title="2018-05-28 13:11 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hast du ein  ipconfig /release bei den Clients probiert um wirklich davon auszugehen, dass die Konfiguration stimmt. Und dann anschließend ein ipconfig/all?
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="7 yr" datetime="2018-05-28T13:11:54Z" title="2018-05-28 13:11 ">
       Mai 28, 2018
      </time>
      von MarioM
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    cgaertner
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T13:20:25Z" title="2018-05-28 13:20 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T13:20:25Z" title="2018-05-28 13:20 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26330" data-ipsquote-contentid="4561" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1527513083" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26330" data-ipsquote-contentid="4561" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1527513083" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+<div class="ipsQuote_citation">
      vor 2 Minuten schrieb MarioM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Hast du ein  ipconfig /release bei den Clients probiert um wirklich davon auszugehen, dass die Konfiguration stimmt. Und dann anschließend ein ipconfig/all?
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Ja, das habe ich gemacht.
    </p>
-   <p>
+<p>
     Wobei mir jetzt gerade ein Gedanke kommt: vielleicht ist ja diese Einstellung so zu verstehen, daß der Router immer seine Adresse als DNS-Server per DHCP ausliefert und er lediglich die DNS-Anfragen dann entweder an den Default-T-Mobile-DNS-Server weiterleitet oder eben an die manuell eingetragenen Server.
    </p>
-   <p>
+<p>
     Dann würde im ipconfig /all natürlich immer der Router als DNS-Server stehen, nur anschließend wird die Anfrage dann eben dahin oder dorthin weitergeleitet. Vielleicht muß das ja so sein, weil sonst ja gewisse Funktionen (Filterlisten o.ä.) nicht funktionieren würden??
    </p>
-   <p>
+<p>
     Da muß ich jetzt mal schauen, wie ich herausfinde, welcher DNS-Server eine Anfrage
     <em>
      wirklich
     </em>
     beantwortet.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T13:24:18Z" title="2018-05-28 13:24 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T13:24:18Z" title="2018-05-28 13:24 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Das könnte natürlich sein ...
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    cgaertner
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-29T20:33:59Z" title="2018-05-29 20:33 ">
+<br/>
+<time class="7 yr" datetime="2018-05-29T20:33:59Z" title="2018-05-29 20:33 ">
    Mai 29, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Leider - es wäre ja auch zu schön gewesen. :-(
    </p>
-   <p>
+<p>
     Die Angaben "DNS-Server" im Menü "Ethernet" beziehen sich vielleicht auf Verbindungen über den LAN-Port (nicht getestet), aber
     <u>
      definitiv nicht
     </u>
     auf Verbindungen über WLAN. Das bedeutet also, daß man im E5170s für WLAN-Verbindungen keinen eignen DNS-Server festlegen kann. Ärgerlich! :-(
    </p>
-   <p>
+<p>
     LG Christian
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-30T09:31:40Z" title="2018-05-30 09:31 ">
+<br/>
+<time class="7 yr" datetime="2018-05-30T09:31:40Z" title="2018-05-30 09:31 ">
    Mai 30, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Das ist wirklich ärgerlich
     <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
     Da kannst du dir wirklich nur ein gescheites Gerät kaufen statt der Box oder einen Router dahinter
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

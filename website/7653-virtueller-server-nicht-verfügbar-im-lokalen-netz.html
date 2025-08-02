@@ -1,127 +1,128 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Virtueller Server nicht verfügbar im lokalen Netz
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Virtueller Server nicht verfügbar im lokalen Netz
   </h1>
-  <span class="author">
+<span class="author">
    Zumpel
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-03-22T10:53:36Z" title="2022-03-22 10:53 ">
+<br/>
+<time class="3 yr" datetime="2022-03-22T10:53:36Z" title="2022-03-22 10:53 ">
    März 22, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich hab einen lokalen Ubuntu Server. Dem hab ich eine statische IP zugewiesen und kann ich auch lokal mit seiner IP über PuTty, etc. erreichen. Ich wollte den Server jetzt zugänglich machen und hab deshalb mal den default KeyCloak server auf port 8080 freigeben wollen. Den Server kann ich über seine lokale IP, ohne Probleme, erreichen. Ich hab mir bereits von Magenta eine statische IP zuweisen lassen und das funktioniert soweit auch. Wenn ich jetzt also auf
     <a href="https://canyouseeme.org/" rel="external nofollow">
      https://canyouseeme.org/
     </a>
     gehe, dort meine zugewiesene öffentliche IP eingeb und Port 8080, erhalte ich die Meldung, dass der Port auch offen ist.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn ich jetzt aber auf Chrome/Edge/FF gehe und dort auf meine öffentliche IP zugreifen will, erhalte ich "ERR_CONNECTION_REFUSED". Das Lustige: Sobald ich aus dem Netzwerk rausgeh (z.B. bei meinem Handy), komm ich ohne Probleme drauf. Das heißt, ich komm nicht auf den Server, wenn ich in meinem lokalen Netz bin.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich hab, weils ja jetzt natürlich von extern zugreifbar sein sollte, probiert mal einen A-Entry von meinem DNS (World4You) auf die öffentliche IP zeigen zu lassen. Das funktioniert lustigerweise dann auch nicht und ich bekomm dort dann ebenfalls die Fehlermeldung "ERR_CONNECTION_REFUSED".
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Kurzfassung und Randnotizen:
    </p>
-   <p>
+<p>
     - Port 8080 ist am Ubuntu Server freigegeben (TCP und UDP)
    </p>
-   <p>
+<p>
     - Lokal kann von meinem PC, als auch Handy zugegriffen werden
    </p>
-   <p>
+<p>
     - Öffentlich kann nur von externen Geräten zugegriffen werden
    </p>
-   <p>
+<p>
     - DNS leitet auf Server weiter, allerdings kommt dann auch beim öffentlichen Zugriff die Fehlermeldung
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Vielleicht kann mir da ja jemand helfen, weil ich da langsam echt ansteh.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke und LG
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="3 yr" datetime="2022-03-22T10:54:11Z" title="2022-03-22 10:54 ">
       März 22, 2022
      </time>
      von Zumpel
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-03-22T23:17:59Z" title="2022-03-22 23:17 ">
+<br/>
+<time class="3 yr" datetime="2022-03-22T23:17:59Z" title="2022-03-22 23:17 ">
    März 22, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey
     <span>
-     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/92756-zumpel/?do=hovercard" data-mentionid="92756" href="https://community.magenta.at/profile/92756-zumpel/" rel="">
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/92756-zumpel/?do=hovercard" data-mentionid="92756" href="https://community.magenta.at/profile/92756-zumpel/" rel="">
       @Zumpel
      </a>
-     <br/>
+<br/>
      Der eingesetzte Router wird wohl kein NAT Loopback unterstützen, weshalb intern mit der öffentlichen IP-Adresse nicht zugegriffen werden kann. Ich schätze du verwendest das Gerät, welches von Magenta beim Vertag dabei war?
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
-    <span>
+</p>
+<p>
+</p>
+<p>
+<span>
      Warum es über die Domain nicht geht von extern ist spannend, weil die Domain nur auf die IP-Adresse auflöst.
     </span>
-   </p>
-   <p>
-    <span>
+</p>
+<p>
+<span>
      Hast du den Port 8080 bei den Versuchen von externen mit der Domain angegeben?
     </span>
-   </p>
-   <p>
-    <span>
+</p>
+<p>
+<span>
      Also: https://name.at:8080
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
-    <span>
+</p>
+<p>
+</p>
+<p>
+<span>
      LG NTM
     </span>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>

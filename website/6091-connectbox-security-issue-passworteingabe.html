@@ -1,542 +1,543 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    ConnectBox Security Issue - Passworteingabe
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    ConnectBox Security Issue - Passworteingabe
   </h1>
-  <span class="author">
+<span class="author">
    josef123
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-09-20T08:29:14Z" title="2020-09-20 08:29 ">
+<br/>
+<time class="4 yr" datetime="2020-09-20T08:29:14Z" title="2020-09-20 08:29 ">
    September 20, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     mich stört schon seit einiger Zeit, dass das Passwort der ConnectBox beim Login im Klartext angezeigt wird. Es gehört eigentlich seit über 30 Jahren zu den Best Practices in der IT, ein Passwort bei der Eingabe zu obfuscaten - also zum Beispiel "****" anstatt des echten Passworts anzuzeigen.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Es ist mir einfach unbegreiflich, wie ein Netzwerkinfrastruktur-Unternehmen mit der Größe und Bedeutung Magentas, welches im Internet operiert und somit bei Security Vorbildwirkung haben sollte, soetwas in Produktion releasen kann.
     </strong>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Vielleicht kann ja mal jemand in den Firmware-Source gehen, und auf der Login-Page des Modems aus...
    </p>
-   <p>
-    <em>
+<p>
+<em>
      &lt;input type="text" id="loginPassword" name='loginPassword' value=""
     </em>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     das hier machen:
    </p>
-   <p>
-    <em>
+<p>
+<em>
      &lt;input type="password" id="loginPassword" name='loginPassword' value=""
     </em>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Hab da schonmal vor einem Jahr beim Helpdesk angefragt, aber da kam nur "jaja leiten das weiter blabla" (Amazing Security (TM)).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Vielleicht könnte man diese Info jemandem zuführen, der mit ITSEC etwas anfangen kann.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke!
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-09-21T06:45:22Z" title="2020-09-21 06:45 ">
+<br/>
+<time class="4 yr" datetime="2020-09-21T06:45:22Z" title="2020-09-21 06:45 ">
    September 21, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36234" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1600590554" data-ipsquote-userid="82484" data-ipsquote-username="josef123">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36234" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1600590554" data-ipsquote-userid="82484" data-ipsquote-username="josef123">
+<div class="ipsQuote_citation">
      22 hours ago, josef123 said:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Hallo,
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       mich stört schon seit einiger Zeit, dass das Passwort der ConnectBox beim Login im Klartext angezeigt wird. Es gehört eigentlich seit über 30 Jahren zu den Best Practices in der IT, ein Passwort bei der Eingabe zu obfuscaten - also zum Beispiel "****" anstatt des echten Passworts anzuzeigen.
      </p>
-     <p>
-     </p>
-     <p>
-      <strong>
+<p>
+</p>
+<p>
+<strong>
        Es ist mir einfach unbegreiflich, wie ein Netzwerkinfrastruktur-Unternehmen mit der Größe und Bedeutung Magentas, welches im Internet operiert und somit bei Security Vorbildwirkung haben sollte, soetwas in Produktion releasen kann.
       </strong>
-     </p>
-     <p>
-     </p>
-     <p>
+</p>
+<p>
+</p>
+<p>
       Vielleicht kann ja mal jemand in den Firmware-Source gehen, und auf der Login-Page des Modems aus...
      </p>
-     <p>
-      <em>
+<p>
+<em>
        &lt;input type="text" id="loginPassword" name='loginPassword' value=""
       </em>
-     </p>
-     <p>
-     </p>
-     <p>
+</p>
+<p>
+</p>
+<p>
       das hier machen:
      </p>
-     <p>
-      <em>
+<p>
+<em>
        &lt;input type="password" id="loginPassword" name='loginPassword' value=""
       </em>
-     </p>
-     <p>
-     </p>
-     <p>
+</p>
+<p>
+</p>
+<p>
       Hab da schonmal vor einem Jahr beim Helpdesk angefragt, aber da kam nur "jaja leiten das weiter blabla" (Amazing Security (TM)).
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Vielleicht könnte man diese Info jemandem zuführen, der mit ITSEC etwas anfangen kann.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Danke!
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Ich verstehe deine Bedenken, möchte aber auch gleich mal vorweg sagen, dass ein &lt;input type="password" /&gt; bei weiten mich sicher ist ... das sagt nur, dass derjenige der hinter dir steht das Passwort nicht direkt sieht ...
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    josef123
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-09-24T18:24:29Z" title="2020-09-24 18:24 ">
+<br/>
+<time class="4 yr" datetime="2020-09-24T18:24:29Z" title="2020-09-24 18:24 ">
    September 24, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36248" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1600670722" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36248" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1600670722" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+<div class="ipsQuote_citation">
      Am 21.9.2020 um 08:45 schrieb MarioM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Ich verstehe deine Bedenken, möchte aber auch gleich mal vorweg sagen, dass ein &lt;input type="password" /&gt; bei weiten mich sicher ist ... das sagt nur, dass derjenige der hinter dir steht das Passwort nicht direkt sieht ...
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     ...und genau darum gehts auch in meiner Kritik, insofern ist es eine einfache, ausreichende und valide Lösung des geschilderten Problems. Man könnte natürlich auch endlos darüber philosophieren, wie sicher Passwörter sind, aber das ist hier nicht das Ziel.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-09-25T09:53:24Z" title="2020-09-25 09:53 ">
+<br/>
+<time class="4 yr" datetime="2020-09-25T09:53:24Z" title="2020-09-25 09:53 ">
    September 25, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Es gibt Situationen wo es sogar sicherer ist, das Passwort anzuzeigen. Denn dadurch kann man dann hergehen und die Fehlversuchtolleranz zu reduzieren.
    </p>
-   <p>
+<p>
     Bei einer Firma im Bereich kritischer Infrastruktur war es so, dass erst einmal ab 10 000 Fehlversuche eine Notification aufgetaucht ist. (Kein Alarm)
    </p>
-   <p>
+<p>
     Wenn ich das vergleiche mit anderen Firmen, wo nach 3 Versuchen ein Alarm auftritt und der User gesperrt wird, hat es mich nicht gewundern, als in den Nachrichten von der Firma berichtet wurde, weil sie gehackt wurden.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-09-25T10:15:34Z" title="2020-09-25 10:15 ">
+<br/>
+<time class="4 yr" datetime="2020-09-25T10:15:34Z" title="2020-09-25 10:15 ">
    September 25, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36308" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1600971869" data-ipsquote-userid="82484" data-ipsquote-username="josef123">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36308" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1600971869" data-ipsquote-userid="82484" data-ipsquote-username="josef123">
+<div class="ipsQuote_citation">
      15 hours ago, josef123 said:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
-     </p>
-     <p>
+<div class="ipsQuote_contents">
+<p>
+</p>
+<p>
       ...und genau darum gehts auch in meiner Kritik, insofern ist es eine einfache, ausreichende und valide Lösung des geschilderten Problems. Man könnte natürlich auch endlos darüber philosophieren, wie sicher Passwörter sind, aber das ist hier nicht das Ziel.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Was ich damit sagen will, wenn dein Passwort das Gebutsdatum von Margarete, Gräfin von Henneberg-Coburg ist, dann hilft auch das Passworteingabe Feld nicht
     <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
     ...
     <br/>
     Also es beruhigt vielleicht den einen oder anderen, wenn er das Passwort als Punkte dargestellt bekommt - dafür, natürlich
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-09-25T10:17:41Z" title="2020-09-25 10:17 ">
+<br/>
+<time class="4 yr" datetime="2020-09-25T10:17:41Z" title="2020-09-25 10:17 ">
    September 25, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Richtig schlimm ist es, wenn es Punkte gibt aber das Passwort im Value mitgeschickt wird.
    </p>
-   <p>
+<p>
     Gibt da Hersteller von Modems die das machen/gemacht haben
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    josef123
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-09-26T18:55:23Z" title="2020-09-26 18:55 ">
+<br/>
+<time class="4 yr" datetime="2020-09-26T18:55:23Z" title="2020-09-26 18:55 ">
    September 26, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36340" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1601028934" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36340" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1601028934" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+<div class="ipsQuote_citation">
      Am 25.9.2020 um 12:15 schrieb MarioM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Was ich damit sagen will, wenn dein Passwort das Gebutsdatum von Margarete, Gräfin von Henneberg-Coburg ist, dann hilft auch das Passworteingabe Feld nicht
       <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
       ...
       <br/>
       Also es beruhigt vielleicht den einen oder anderen, wenn er das Passwort als Punkte dargestellt bekommt - dafür, natürlich
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Ich verstehe leider nicht ganz, was genau du mir damit sagen möchtest. Es ist auch völlig Powidl was das eigentliche Passwort ist, es während der Eingabe anzuzeigen ist ein nogo. Kann schon sein, dass man sich damit ein paar Hotline-Anrufe erspart, weil sich die Oma bei der Eingabe ständig vertippt, aber auch dafür gibt es sicherheitskonforme Lösungen ;-)
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-09-28T08:11:55Z" title="2020-09-28 08:11 ">
+<br/>
+<time class="4 yr" datetime="2020-09-28T08:11:55Z" title="2020-09-28 08:11 ">
    September 28, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36390" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1601146523" data-ipsquote-userid="82484" data-ipsquote-username="josef123">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36390" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1601146523" data-ipsquote-userid="82484" data-ipsquote-username="josef123">
+<div class="ipsQuote_citation">
      On 26/09/2020 at 8:55 PM, josef123 said:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
-     </p>
-     <p>
+<div class="ipsQuote_contents">
+<p>
+</p>
+<p>
       Ich verstehe leider nicht ganz, was genau du mir damit sagen möchtest. Es ist auch völlig Powidl was das eigentliche Passwort ist, es während der Eingabe anzuzeigen ist ein nogo. Kann schon sein, dass man sich damit ein paar Hotline-Anrufe erspart, weil sich die Oma bei der Eingabe ständig vertippt, aber auch dafür gibt es sicherheitskonforme Lösungen ;-)
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Was ich sagen möchte, jegliche sicherkeintskonforme Lösung ist für den Hugo, wenn dein Passwort 1234 ist zum Beispiel ...
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-09-28T09:46:16Z" title="2020-09-28 09:46 ">
+<br/>
+<time class="4 yr" datetime="2020-09-28T09:46:16Z" title="2020-09-28 09:46 ">
    September 28, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Wenn du unbedingt ein Security Ticket aufmachen möchtest, kann du das gerne machen.
    </p>
-   <p>
+<p>
     E-Mail Adresse siehe PN. Wobei ich stark zweifle, dass sich da etwas ändern wird.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    josef123
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-09-29T18:15:37Z" title="2020-09-29 18:15 ">
+<br/>
+<time class="4 yr" datetime="2020-09-29T18:15:37Z" title="2020-09-29 18:15 ">
    September 29, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36395" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1601280715" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36395" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1601280715" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+<div class="ipsQuote_citation">
      Am 28.9.2020 um 10:11 schrieb MarioM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Was ich sagen möchte, jegliche sicherkeintskonforme Lösung ist für den Hugo, wenn dein Passwort 1234 ist zum Beispiel ...
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     OK, da bin ich natürlich ganz bei dir
     <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     lg
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    josef123
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-09-29T18:17:31Z" title="2020-09-29 18:17 ">
+<br/>
+<time class="4 yr" datetime="2020-09-29T18:17:31Z" title="2020-09-29 18:17 ">
    September 29, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36402" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1601286376" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36402" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1601286376" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+<div class="ipsQuote_citation">
      Am 28.9.2020 um 11:46 schrieb IT-Freak:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Wenn du unbedingt ein Security Ticket aufmachen möchtest, kann du das gerne machen.
      </p>
-     <p>
+<p>
       E-Mail Adresse siehe PN. Wobei ich stark zweifle, dass sich da etwas ändern wird.
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Danke, werde ich machen. Na ich hoffe mal das Gegenteil, sollte für jeden, der etwas von Security versteht ein no-brainer sein.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-09-30T19:29:47Z" title="2020-09-30 19:29 ">
+<br/>
+<time class="4 yr" datetime="2020-09-30T19:29:47Z" title="2020-09-30 19:29 ">
    September 30, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Freut mich, wenn dir das geholfen hat. Wobei ich würde da nicht die zu viel erwarten. Ich denke, dass dies nicht die höchste Priorität haben wird.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    josef123
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-10-17T19:29:24Z" title="2020-10-17 19:29 ">
+<br/>
+<time class="4 yr" datetime="2020-10-17T19:29:24Z" title="2020-10-17 19:29 ">
    Oktober 17, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36471" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1601494187" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36471" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1601494187" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+<div class="ipsQuote_citation">
      Am 30.9.2020 um 21:29 schrieb IT-Freak:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Freut mich, wenn dir das geholfen hat. Wobei ich würde da nicht die zu viel erwarten. Ich denke, dass dies nicht die höchste Priorität haben wird.
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Ja da hast du sicher recht. Alleine die Tatsache, dass es so beim Testen abgesegnet und auch released wurde, lässt nicht viel erwarten.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Mir ist noch eine andere Folgeerscheinung dieser etwas unglücklichen Passworteingabe aufgefallen: die Android-Tastatur merkt sich das Passwort nach der Eingabe (da sie aufgrund des falschen Feldtyps nicht weiß, dass es sich um ein Passwort handelt, und glaubt, ein neues Wort gelernt zu haben), und schlägt mir das Passwort im Klartext jetzt immer in allen anderen Anwendungen vor, wenn ich den Anfangsbuchstaben tippe.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Super-nervig das Ganze.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-10-18T12:13:05Z" title="2020-10-18 12:13 ">
+<br/>
+<time class="4 yr" datetime="2020-10-18T12:13:05Z" title="2020-10-18 12:13 ">
    Oktober 18, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Das Phänomen kenne ich auch, aber bei mir wüsste eigentlich die Tastatur das es ein Passwort ist
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-10-19T06:12:21Z" title="2020-10-19 06:12 ">
+<br/>
+<time class="4 yr" datetime="2020-10-19T06:12:21Z" title="2020-10-19 06:12 ">
    Oktober 19, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36847" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1603023185" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36847" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1603023185" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+<div class="ipsQuote_citation">
      17 hours ago, IT-Freak said:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Das Phänomen kenne ich auch, aber bei mir wüsste eigentlich die Tastatur das es ein Passwort ist
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Woher sollte sie es wissen, wenn das Feld den falschen Typ hat?
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36829" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1602962964" data-ipsquote-userid="82484" data-ipsquote-username="josef123">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36829" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1602962964" data-ipsquote-userid="82484" data-ipsquote-username="josef123">
+<div class="ipsQuote_citation">
      On 17/10/2020 at 9:29 PM, josef123 said:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
-     </p>
-     <p>
+<div class="ipsQuote_contents">
+<p>
+</p>
+<p>
       Ja da hast du sicher recht. Alleine die Tatsache, dass es so beim Testen abgesegnet und auch released wurde, lässt nicht viel erwarten.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Mir ist noch eine andere Folgeerscheinung dieser etwas unglücklichen Passworteingabe aufgefallen: die Android-Tastatur merkt sich das Passwort nach der Eingabe (da sie aufgrund des falschen Feldtyps nicht weiß, dass es sich um ein Passwort handelt, und glaubt, ein neues Wort gelernt zu haben), und schlägt mir das Passwort im Klartext jetzt immer in allen anderen Anwendungen vor, wenn ich den Anfangsbuchstaben tippe.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Super-nervig das Ganze.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Sowas darf natürlich nicht passieren - das ist ja wirklich ein großer Käse ...
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-10-19T07:01:11Z" title="2020-10-19 07:01 ">
+<br/>
+<time class="4 yr" datetime="2020-10-19T07:01:11Z" title="2020-10-19 07:01 ">
    Oktober 19, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Jup, unter Android wird das der Tastatur gesagt, was es ist.
    </p>
-   <p>
+<p>
     Passwort:
    </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2443" href="images/uploads/Screenshot_20201019-085907_Chrome.png.c779596f40998feb8fec32769cc824cd.png" rel="">
-     <img alt="Screenshot_20201019-085907_Chrome.thumb.png.830abb230ed41f5bccaec9989b92ee95.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2443" src="images/uploads/Screenshot_20201019-085907_Chrome.thumb.png.830abb230ed41f5bccaec9989b92ee95.png"/>
-    </a>
-   </p>
-   <p>
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" data-fileid="2443" href="images/uploads/Screenshot_20201019-085907_Chrome.png.c779596f40998feb8fec32769cc824cd.png" rel="">
+<img alt="Screenshot_20201019-085907_Chrome.thumb.png.830abb230ed41f5bccaec9989b92ee95.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2443" src="images/uploads/Screenshot_20201019-085907_Chrome.thumb.png.830abb230ed41f5bccaec9989b92ee95.png"/>
+</a>
+</p>
+<p>
     Text:
    </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="2442" href="images/uploads/Screenshot_20201019-085914_Chrome.png.58e86be091653053c2b0d4d7e5d7012b.png" rel="">
-     <img alt="Screenshot_20201019-085914_Chrome.thumb.png.86a7c67db2c2a9dfbc396e860cb2ba39.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2442" src="images/uploads/Screenshot_20201019-085914_Chrome.thumb.png.86a7c67db2c2a9dfbc396e860cb2ba39.png"/>
-    </a>
-   </p>
-   <p>
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" data-fileid="2442" href="images/uploads/Screenshot_20201019-085914_Chrome.png.58e86be091653053c2b0d4d7e5d7012b.png" rel="">
+<img alt="Screenshot_20201019-085914_Chrome.thumb.png.86a7c67db2c2a9dfbc396e860cb2ba39.png" class="ipsImage ipsImage_thumbnailed" data-fileid="2442" src="images/uploads/Screenshot_20201019-085914_Chrome.thumb.png.86a7c67db2c2a9dfbc396e860cb2ba39.png"/>
+</a>
+</p>
+<p>
     Beim Passwort gibt es die Funktion Passwort generieren bzw aufrufen.
    </p>
-   <p>
+<p>
     Die Tastatur ist bei mir GBoard
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    josef123
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-10-22T15:01:45Z" title="2020-10-22 15:01 ">
+<br/>
+<time class="4 yr" datetime="2020-10-22T15:01:45Z" title="2020-10-22 15:01 ">
    Oktober 22, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36867" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1603090871" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="36867" data-ipsquote-contentid="6091" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1603090871" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+<div class="ipsQuote_citation">
      Am 19.10.2020 um 09:01 schrieb IT-Freak:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Jup, unter Android wird das der Tastatur gesagt, was es ist.
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Grundsätzlich ja, aber das geht natürlich nur, wenn das Feld im HTML auch korrekt als Passwort deklariert ist, womit wir wieder bei meinem ursprünglichen Anliegen gelandet wären....
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     So wie es derzeit ist, wissen weder Browser noch Tastatur, dass es sich um ein Passwortfeld handelt, daher wird alles eingegebene angezeigt und evt. auch gespeichert (verwende auch gboard).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     lg Josef
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

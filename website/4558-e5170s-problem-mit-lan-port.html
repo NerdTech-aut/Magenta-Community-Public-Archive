@@ -1,269 +1,270 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    E5170s - Problem mit LAN-Port
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    E5170s - Problem mit LAN-Port
   </h1>
-  <span class="author">
+<span class="author">
    cgaertner
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-27T21:35:16Z" title="2018-05-27 21:35 ">
+<br/>
+<time class="7 yr" datetime="2018-05-27T21:35:16Z" title="2018-05-27 21:35 ">
    Mai 27, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Liebe Leute!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe einen E5170s-22 für den Internet-Zugang mittels LTE und habe den seit längerem problemlos mit WLAN verwendet. Nun möchte ich einen lokalen DHCP-Server betreiben, der auf einem Raspberry Pi laufen soll, der am LAN-Port des E5170s steckt.
    </p>
-   <p>
-    <strong>
+<p>
+<strong>
      Sobald ich DHCP im E5170s deaktiviere
     </strong>
     und einen Computer am LAN-Port anschließe, deaktiviert sich am E5170s ca. 10 Sekunden später das WLAN (die drei blauen LEDs gehen aus und das WLAN ist nicht mehr verfügbar). Sobald ich den Computer vom LAN-Port abstecke, ist das WLAN wieder da (blaue LEDs gehen an und WLAN ist wieder verfügbar). Dabei macht es keinen Unterschied, ob auf der angesteckte Computer ein Raspberry Pi mit oder ohne DHCP-Server ist oder ein ganz normales Notebook.
    </p>
-   <p>
-    <strong>
+<p>
+<strong>
      Wenn DHCP im E5170s aktiviert ist
     </strong>
     , kann ich Computer problemlos am LAN-Port betreiben.
    </p>
-   <p>
+<p>
     Über WLAN funktioniert der DHCP-Server problemlos, er vergibt IP-Adressen, diese Geräte kommen auch ins Internet usw. - an dem liegt es also nicht.
    </p>
-   <p>
-   </p>
-   <p>
-    <u>
+<p>
+</p>
+<p>
+<u>
      Meine restlichen Einstellungen:
     </u>
-   </p>
-   <p>
+</p>
+<p>
     Router: IP-Adresse 192.168.1.1, Subnetzmaske 255.255.255.0
    </p>
-   <p>
+<p>
     Stromversorgung des E5170s ist unten (neben dem LAN-Port) angesteckt
    </p>
-   <p>
+<p>
     Computer: fixe IP-Adresse aus dem gleichen Netz wie der E5170s (weil DHCP ja deaktivert ist), zum Beispiel 192.168.1.7
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Eine Suche bei Google hat keine vernünftigen Treffer ergeben ... hat hier jemand eine Idee?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke, Christian
    </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T07:06:57Z" title="2018-05-28 07:06 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T07:06:57Z" title="2018-05-28 07:06 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hello,
     <br/>
     also wenn ich das richtig verstehe: Wenn du DHCP aktiviert hast, dann geht LAN und WLAN gleichzeitig?
    </p>
-   <p>
+<p>
     Lg
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    cgaertner
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T12:37:34Z" title="2018-05-28 12:37 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T12:37:34Z" title="2018-05-28 12:37 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26319" data-ipsquote-contentid="4558" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1527491217" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26319" data-ipsquote-contentid="4558" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1527491217" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+<div class="ipsQuote_citation">
      vor 5 Stunden schrieb MarioM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Hello,
       <br/>
       also wenn ich das richtig verstehe: Wenn du DHCP aktiviert hast, dann geht LAN und WLAN gleichzeitig?
      </p>
-     <p>
+<p>
       Lg
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Stimmt: mit DHCP geht LAN und WLAN, ohne DHCP schaltet sich das WLAN ab, sobald ein Gerät an den LAN-Port gehängt wird.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     LG Christian
    </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T12:43:12Z" title="2018-05-28 12:43 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T12:43:12Z" title="2018-05-28 12:43 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Oh Mann, das is echt blöd. Du hast nicht zufällig noch einen Router, den du dahinter stellen kannst? Der das alles erldigen kann inkl. DHCP Server?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    cgaertner
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T12:54:03Z" title="2018-05-28 12:54 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T12:54:03Z" title="2018-05-28 12:54 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26324" data-ipsquote-contentid="4558" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1527511392" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26324" data-ipsquote-contentid="4558" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1527511392" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+<div class="ipsQuote_citation">
      vor 7 Minuten schrieb MarioM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Oh Mann, das is echt blöd. Du hast nicht zufällig noch einen Router, den du dahinter stellen kannst? Der das alles erldigen kann inkl. DHCP Server?
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Du meinst, einen "wirklichen" Router? Weil den würde ich ja auch per LAN-Port anschließen und da fürchte ich, daß ich dann genau das gleiche Problem haben werde ... weil es ja keinen Unterschied macht, ob ich ein Notebook oder einen Raspberry mit oder ohne DHCP-Server dahinterhänge, sobald was am LAN-Port hängt, ist das WLAN weg. :-(
    </p>
-   <p>
+<p>
     In weiterer Folge soll auf dem Raspberry, der am LAN-Port hängt, sowohl ein DHCP-Server als auch Pi-Hole laufen und dafür reicht ein normaler Router ja nicht mehr.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T12:59:40Z" title="2018-05-28 12:59 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T12:59:40Z" title="2018-05-28 12:59 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ja einen Router, der auch WLAN fähig ist. Damit könntest du das Problem eventuell löse, wenn du ein wenig Geld in die Hand nehmen willst.
    </p>
-   <p>
+<p>
     Leider sind die Standardboxen immer sehr beschränkt
     <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
-    <br/>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<br/>
+</p>
+</div>
+<hr/>
+<span class="author">
    cgaertner
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T13:02:37Z" title="2018-05-28 13:02 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T13:02:37Z" title="2018-05-28 13:02 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ja, warum nicht. Hast Du eine Empfehlung für ein gutes Modell?
    </p>
-   <p>
+<p>
     Beziehungsweise weißt Du, ob das bei den nächstgrößeren T-Mobile-Homenet-Boxen (da gibt es ja noch zwei Modelle, die nicht kostenlos dabei waren) geht?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T13:05:21Z" title="2018-05-28 13:05 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T13:05:21Z" title="2018-05-28 13:05 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Gute Frage - du könntest mal hier im Form suchen, ob jemand schon das Thema behandelt hat. Leider weiß ich das jetzt nicht auswendig.
    </p>
-   <p>
+<p>
     Ich bin bis jetzt immer gut mit Asus Routern gefahren. Habe selbst auch einen zu Hause stehen, der alles andere managed. Also die Box verwende ich wirklich nur um das Internet zu empfangen
     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    cgaertner
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T13:14:15Z" title="2018-05-28 13:14 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T13:14:15Z" title="2018-05-28 13:14 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26329" data-ipsquote-contentid="4558" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1527512721" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26329" data-ipsquote-contentid="4558" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1527512721" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+<div class="ipsQuote_citation">
      vor 8 Minuten schrieb MarioM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Gute Frage - du könntest mal hier im Form suchen, ob jemand schon das Thema behandelt hat. Leider weiß ich das jetzt nicht auswendig.
      </p>
-     <p>
+<p>
       Ich bin bis jetzt immer gut mit Asus Routern gefahren. Habe selbst auch einen zu Hause stehen, der alles andere managed. Also die Box verwende ich wirklich nur um das Internet zu empfangen
       <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
-     </p>
-    </div>
-   </blockquote>
-   <p>
+</p>
+</div>
+</blockquote>
+<p>
     Vielen Dank, das werde ich machen!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     LG Christian
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-05-28T13:15:56Z" title="2018-05-28 13:15 ">
+<br/>
+<time class="7 yr" datetime="2018-05-28T13:15:56Z" title="2018-05-28 13:15 ">
    Mai 28, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Halte uns auf jeden Fall auf dem Laufenden
     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
     Bin gespannt für welche Variante du dich entscheidest.
    </p>
-   <p>
+<p>
     Lg
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

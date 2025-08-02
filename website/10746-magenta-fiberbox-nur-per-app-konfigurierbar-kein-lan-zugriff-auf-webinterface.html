@@ -1,49 +1,50 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Magenta Fiberbox nur per App konfigurierbar? Kein LAN-Zugriff auf Webinterface!
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Magenta Fiberbox nur per App konfigurierbar? Kein LAN-Zugriff auf Webinterface!
   </h1>
-  <span class="author">
+<span class="author">
    Thorsten Artner
   </span>
-  <br/>
-  <time class="Mai 12" datetime="2025-05-12T20:54:04Z" title="2025-05-12 20:54 ">
+<br/>
+<time class="Mai 12" datetime="2025-05-12T20:54:04Z" title="2025-05-12 20:54 ">
    Mai 12
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Habe gerade heute meine neue Magenta Home Box Fiber bekommen, dachte eigentlich ich bekomme nur ein Modem.
     <br/>
     Ich bin mit meinem Computer per LAN verbunden.
    </p>
-   <p>
+<p>
     Die Fiberbox ist auf 192.168.0.1
    </p>
-   <p>
+<p>
     Ein portscan mit netcat  -&gt; for ((i=1; i&lt;2000; i++)) do netcat -w 8 -v 192.168.0.1 $i; done
     <br/>
     zeigt
     <br/>
     netcat: connect to 192.168.0.1 port 1 -&gt; 21 (tcp) failed: Connection refused
-    <br>
+    <br/>
      netcat: connect to 192.168.0.1 port 22 (tcp) timed out: Operation now in progress
-     <br>
+     <br/>
       netcat: connect to 192.168.0.1 port 23 (tcp) timed out: Operation now in progress
-      <br>
+      <br/>
        netcat: connect to 192.168.0.1 port 24 -&gt;52 (tcp) failed: Connection refused
-       <br/>
+       <br>
        Connection to 192.168.0.1 53 port [tcp/domain] succeeded!
-       <br/>
+       <br>
        netcat: connect to 192.168.0.1 port 54 -&gt;79 (tcp) failed: Connection refused
-       <br/>
+       <br>
        netcat: connect to 192.168.0.1 port 80 (tcp) timed out: Operation now in progress
        <br/>
        netcat: connect to 192.168.0.1 port 81 -&gt;110 (tcp) failed: Connection refused
@@ -54,18 +55,18 @@
        <br/>
        netcat: connect to 192.168.0.1 port 443 (tcp) timed out: Operation now in progress
       </br>
-     </br>
-    </br>
-   </p>
-   <p>
-   </p>
-   <p>
+</br>
+</br>
+</p>
+<p>
+</p>
+<p>
     Das einzige Port das erfolgreich war ist port 53 DNS resolve port.
    </p>
-   <p>
+<p>
     Bei http port 80 und https port 443 sehe ich, das was laufen muß aber die Fiberbox blockt, Das ganze lief mit einem 8sec timeout.
     <br/>
-    <br/>
+<br/>
     Ich komme über LAN nicht in die Fiberbox. Jetzt lese ich, ich brauche eine Magenta App.
     <br/>
     Stimmt das, ich muß übers Smartphone oder zu mindest über ein Android Gerät
@@ -76,223 +77,218 @@
     <br/>
     oder sind eh nur WLAN Zugriffe erlaubt?
     <br/>
-    <br/>
+<br/>
     Was ich eigentlich will. Ich will meine Fiberbox in den Bridge Modus schalten, und mein Netgear Router managed mein LAN.
    </p>
-   <p>
+<p>
     Ich brauche die Fiberbox nur als Modem. Ich brauche auch keine Magenta APP, wo ist, wie bei jeden normalen Router,das https web management auf port 443.
     <br/>
     MFG Thorsten Artner
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="Mai 12" datetime="2025-05-12T21:25:09Z" title="2025-05-12 21:25 ">
+<br/>
+<time class="Mai 12" datetime="2025-05-12T21:25:09Z" title="2025-05-12 21:25 ">
    Mai 12
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99027-thorsten-artner/?do=hovercard" data-mentionid="99027" href="https://community.magenta.at/profile/99027-thorsten-artner/" rel="">
      @Thorsten Artner
     </a>
-   </p>
-   <p>
+</p>
+<p>
     Ja die Home Box Fiber hat keine Web-Oberfläche und es gibt nur ein paar wenige Einstellungen in der Mein Magenta App mit einem Magenta Account.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Für die Umstellung der Home Box Fiber auf Bridge Mode musst du den Support von Magenta kontaktieren.
    </p>
-   <p>
+<p>
     LG NTM
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Thorsten Artner
   </span>
-  <br/>
-  <time class="Mai 12" datetime="2025-05-12T21:30:26Z" title="2025-05-12 21:30 ">
+<br/>
+<time class="Mai 12" datetime="2025-05-12T21:30:26Z" title="2025-05-12 21:30 ">
    Mai 12
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     hallo
     <span>
      @
     </span>
     NTM.. Ich hoffe man kann den Zugriff durch Magenta APP blockieren. Macht das auch der Support. Ist das nicht ein Sicherheitsrisiko für das ganze LAN. Wer lässt sich sowas einfallen??????????????
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="Mai 12" datetime="2025-05-12T21:32:32Z" title="2025-05-12 21:32 ">
       Mai 12
      </time>
      von Thorsten Artner
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="Mai 12" datetime="2025-05-12T22:55:25Z" title="2025-05-12 22:55 ">
+<br/>
+<time class="Mai 12" datetime="2025-05-12T22:55:25Z" title="2025-05-12 22:55 ">
    Mai 12
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ich selber habe die Box nicht, kann also nicht alles beantworten.
    </p>
-   <p>
+<p>
     Aber sobald die Box im Bridge Modus ist, gibt es sowieso nichts mehr zum Einstellen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Mit der Mein Magenta App können eben nur sehr wenige Einstellungen getroffen werden:
    </p>
-   <p>
+<p>
     W-Lan Name und Passwort ändern
    </p>
-   <p>
+<p>
     DHCP-Server IP-Range und Lease-Time konfigurieren
    </p>
-   <p>
+<p>
     IPs für Geräte reservieren
    </p>
-   <p>
+<p>
     Portweiterleitungen eintragen, falls der Anschluss über den Kundenservice auf IPv4 umgestellt wurde, was nur wenige machen werden
    </p>
-   <p>
-    <a href="https://www.magenta.at/content/dam/magenta_at/pdfs/consumer/faq/Anleitung_Magenta_Home_Box_Fiber_WEB.pdf" rel="external nofollow">
+<p>
+<a href="https://www.magenta.at/content/dam/magenta_at/pdfs/consumer/faq/Anleitung_Magenta_Home_Box_Fiber_WEB.pdf" rel="external nofollow">
      https://www.magenta.at/content/dam/magenta_at/pdfs/consumer/faq/Anleitung_Magenta_Home_Box_Fiber_WEB.pdf
     </a>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Der mögliche Schaden dürfte sich also in Grenzen halten.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Im Festnetz-Bereich können die Anbieter ihre Geräte sowieso jederzeit fernwarten.
    </p>
-   <p>
+<p>
     Also wäre ein interner Account mit mehr Rechten für einen Angreifer eher von Interesse.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Es gibt Marken welche die Konfiguration von Consumer-Netzwerkhardware über einen Could Account anbieten, aber oft gibt es dennoch die Option die klassische Web-Oberfläche zu verwenden.
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="Mai 12" datetime="2025-05-12T22:57:42Z" title="2025-05-12 22:57 ">
       Mai 12
      </time>
      von NTM
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Mai 13" datetime="2025-05-13T08:23:38Z" title="2025-05-13 08:23 ">
+<br/>
+<time class="Mai 13" datetime="2025-05-13T08:23:38Z" title="2025-05-13 08:23 ">
    Mai 13
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99027-thorsten-artner/?do=hovercard" data-mentionid="99027" href="https://community.magenta.at/profile/99027-thorsten-artner/" rel="">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99027-thorsten-artner/?do=hovercard" data-mentionid="99027" href="https://community.magenta.at/profile/99027-thorsten-artner/" rel="">
      @Thorsten Artner
     </a>
     ,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hi,
     <span class="ipsEmoji">
      👋
     </span>
-   </p>
-   <p>
+</p>
+<p>
     welche Bedenken hast du bezüglich Sicherheitsrisiko genau? Teile uns dein Feedback und Verbesserungsvorschläge gerne hier mit. Ich leite diese direkt an unsere zuständigen Techniker:innen weiter.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Liebe Grüße, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    Thorsten Artner
   </span>
-  <br/>
-  <time class="Mai 13" datetime="2025-05-13T09:55:05Z" title="2025-05-13 09:55 ">
+<br/>
+<time class="Mai 13" datetime="2025-05-13T09:55:05Z" title="2025-05-13 09:55 ">
    Mai 13
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo @Jonathan Dorian.   Ich habe zum Beispiel selbst 2 Desktop Computer wobei einer ein Mini PC ist, aber nur einen Monitor, 1 Maus, 1 Keyboard.  Die Eingabegeräte sind am Hauptcomputer angeschlossen. Am Mini PC, ist ein TigerVNC server installiert, damit kann ich vom Hauptcomputer den gesamten Mini PC steuern, natürlich unverschlüsselt und ohne Passwort. Es ist ja in meinem eigenen LAN!!!
-    <br>
+    <br/>
      Nebenbei habe ich einen Netzwerk Drucker.
-     <br>
+     <br/>
       Ein Angreifer der mein Magenta Konto kompromitiert. Sieht genau welche Geräte ich habe und kann eine Portweiterleitung über NAT von aussen an meinen TigerVnc veranlassen, damit hat er sämtliche Kontrolle über meinen Mini PC, sogar mit Linux GUI Cinnamon.
-      <br>
+      <br/>
        Das selbe gilt für meinen Netzwerkdrucker.
-       <br>
+       <br/>
         Weiters kann er mein ganzes Netz lahmlegen!!
-        <br>
-         <strong>
+        <br/>
+<strong>
           Generell:
          </strong>
-        </br>
-       </br>
-      </br>
-     </br>
-    </br>
-   </p>
-   <p>
-    <em>
+</p>
+<p>
+<em>
      - Deaktivierung von Sicherheitsfunktionen (z.B. WPA2 auf dem WLAN, Portweiterleitungen einrichten, etc.).
     </em>
-   </p>
-   <p>
-    <em>
+</p>
+<p>
+<em>
      - Überwachung oder Mitlesen des Internetverkehrs.
     </em>
-   </p>
-   <p>
-    <em>
+</p>
+<p>
+<em>
      - Zugang zu den verbundenen Geräten über Portweiterleitungen.
     </em>
-   </p>
-   <p>
-    <em>
+</p>
+<p>
+<em>
      - Manipulation der IP-Adresszuweisung und der DHCP-Einstellungen, was zu Netzwerkausfällen oder Konflikten führen könnte.
     </em>
-    <br/>
-    <br/>
-    <strong>
+<br/>
+<br/>
+<strong>
      Schlechter Scherz, das mit der Magenta App oder? Hast du keine Bedenken oder hast du diesen Router gar nicht.?
     </strong>
-    <br/>
-    <br/>
+<br/>
+<br/>
     Außerdem netcat zeigt, das auf port 80 und port 443 ein timeout passiert. Ich habs auf 8 Sekunden gestellt und es steht
     <br/>
     operation now in progress und nicht connection refused.
@@ -305,88 +301,88 @@
     <br/>
     Sie reagiert einfach auf diesen Port nicht, dass zeig operation now in progress.
    </p>
-   <p>
+<p>
     MFG Thorsten Artner
     <br/>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="Mai 13" datetime="2025-05-13T10:20:16Z" title="2025-05-13 10:20 ">
       Mai 13
      </time>
      von Thorsten Artner
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Mai 13" datetime="2025-05-13T11:10:20Z" title="2025-05-13 11:10 ">
+<br/>
+<time class="Mai 13" datetime="2025-05-13T11:10:20Z" title="2025-05-13 11:10 ">
    Mai 13
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99027-thorsten-artner/?do=hovercard" data-mentionid="99027" href="https://community.magenta.at/profile/99027-thorsten-artner/" rel="">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99027-thorsten-artner/?do=hovercard" data-mentionid="99027" href="https://community.magenta.at/profile/99027-thorsten-artner/" rel="">
      @Thorsten Artner
     </a>
     ,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Das ist wirklich ein beachtliches Netzwerk, das du da aufgebaut hast – alle Achtung!
     <span class="ipsEmoji">
      🙂
     </span>
     Mein eigenes Setup mit PC, Mobilgeräten, Fernsehern, Tablets und Drucker ist da etwas einfacher gehalten. Ich nutze auch schon seit rund zehn Jahren meine treue Internet Fiber Box (Compal Modem).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Die Sicherheit eines so umfangreichen Netzwerks ist natürlich ein wichtiges Thema, und es ist verständlich, dass du dir Gedanken über den Schutz vor externen Zugriffen oder Störungen machst. Ich wünsche dir, dass dein System immer sicher und zuverlässig läuft.
     <span class="ipsEmoji">
      🙂
     </span>
-   </p>
-   <p>
+</p>
+<p>
     Deine Bedenken hierzu gebe ich selbstverständlich gerne an die zuständigen Stellen weiter.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn du weitere Fragen oder andere Anliegen hast, freuen wir uns immer über weiter Beiträge von dir hier in der Community.
     <span class="ipsEmoji">
      🙂
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Liebe Grüße, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    Thorsten Artner
   </span>
-  <br/>
-  <time class="Mai 13" datetime="2025-05-13T11:45:05Z" title="2025-05-13 11:45 ">
+<br/>
+<time class="Mai 13" datetime="2025-05-13T11:45:05Z" title="2025-05-13 11:45 ">
    Mai 13
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     So umfangreich ist es nicht . Ich habe auch tablets, paar Smartphones (Lebensgefährtin und meines), Drucker, Fernseher, Onkyo Verstärker bzw Heimkino, wo man über pulseaudio durchs Netzwerk seine Audio files abspielen kann und an dem Verstärker ist eine Sound Anlage angeschlossen (natrülcih auch der Fernseher), die TVBox von Magenta, Netzwerkdrucker, und natürlich den ferngesteuerten Mini PC, der als webserver dient, und als lokaler medien server. Den meisten Schaden hätte ich am Mini PC. Wenn der Angreifer über meine Sound Anlage sound files abspielt. oder meinen Netzwerkdrucker mit Druckaufträgen spooft, dann wären das maximal Kosten von Tintenpatronen,, oder Kosten von Lautsprecher Boxen ersetzen, wenn er die Verstärkung auf maximal stellt und meine Boxen abschießt. Natürlich hätte das auch ein Gespräch mit meinen Nachbarn zur Folge (Lärmbelästigung).
-    <br>
-     <br>
+    <br/>
+<br/>
       Aber laut ntm ist für eine Portweiterleitung NAT, überhaupt eine IP4 Umstellung beim Support notwendig.
-      <br/>
-      <br/>
+      <br>
+<br>
       Bei IP6 gibt es keine Portweiterleitung mehr, weil IP6 genug Adressspielraum hat um jedem Kundengerät (Fernseher, tablet, smartphone) eine eigenständig globale IP im Netz zuzuordnen. Dabei gibt es einen Provider Präfix der normal  32bit ist in der IP6-IP.
       <br/>
       Der Provider müsste 2^(128-32) mögliche globale IP Adressen in seinen subnetz vergeben können. Das ist eine unvorstellbare Große Zahl.
@@ -395,120 +391,120 @@
       <br/>
       Meistens wird die MAC Adresse der Geräte noch zusätzlich in die IP integriert. Also die globale IP6 Adresse, wäre die ersten 32bit Provider präfix. dann noch ein paar bits für kundenerkennung. und dann die 64 bit mac adresse. ergibt eine globale IP für ein Gerät im lokalen Netzwerk.
       <br/>
-      <br/>
+<br/>
       Keine Ahnung ob man auch globale IP6 Adressen für Geräte über die Box einstellen kann, bzw magenta schon globale Ip6 zulässt.
       <br/>
       MFG Thorsten Artner
       <br/>
-      <br/>
-     </br>
-    </br>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<br/>
+</br>
+</br>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="Mai 13" datetime="2025-05-13T11:59:02Z" title="2025-05-13 11:59 ">
       Mai 13
      </time>
      von Thorsten Artner
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Mai 13" datetime="2025-05-13T12:16:49Z" title="2025-05-13 12:16 ">
+<br/>
+<time class="Mai 13" datetime="2025-05-13T12:16:49Z" title="2025-05-13 12:16 ">
    Mai 13
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99027-thorsten-artner/?do=hovercard" data-mentionid="99027" href="https://community.magenta.at/profile/99027-thorsten-artner/" rel="">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99027-thorsten-artner/?do=hovercard" data-mentionid="99027" href="https://community.magenta.at/profile/99027-thorsten-artner/" rel="">
      @Thorsten Artner
     </a>
     ,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     auch wenn dein Netzwerk vielleicht nicht so riesig ist, so ist es doch durchdacht und auf deine Bedürfnisse zugeschnitten, besonders mit dem Mini-PC als Web- und Medienserver und der netzwerkgesteuerten Audioanlage.
     <span class="ipsEmoji">
      🙂
     </span>
     Die von dir genannten potenziellen Risiken, wie unerwünschte Soundwiedergabe oder Druckaufträge, sind nachvollziehbar, ebenso wie die möglichen Folgen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Zu deinen technischen Anmerkungen und Fragen bezüglich Portweiterleitung und IP-Adressen bei Magenta:
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Portweiterleitung mit IPv4:
     </strong>
-    <br>
+<br/>
      Deine Information, dass für eine klassische Portweiterleitung (NAT) bei IPv4 eine Umstellung auf eine öffentliche IPv4-Adresse durch den Support notwendig ist, ist korrekt. Standardmäßig wird bei Kabelanschlüssen eine öffentliche IPv6-Adresse bereitgestellt. Die Option zur Portweiterleitung bei der Home Box Fiber wird in der Regel erst nach der Zuweisung einer öffentlichen IPv4-Adresse durch den Support freigeschaltet. Nach einer solchen Umstellung ist es oft auch notwendig, das Modem auf Werkseinstellungen zurückzusetzen.
-    </br>
+    
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Gleichzeitige Nutzung von öffentlicher IPv4 und IPv6
     </strong>
-    <br/>
+<br/>
     Du hast dich auch gefragt, ob man beides gleichzeitig nutzen kann – also eine öffentliche IPv4-Adresse für Portweiterleitung und gleichzeitig die volle IPv6-Funktionalität. Hier gibt es tatsächlich Einschränkungen, oft bedingt durch die Hardware. Wenn du eine öffentliche IPv4-Adresse für Port Forwarding anforderst, kann es sein, dass du dadurch deine öffentliche IPv6-Adresse verlierst oder die Konstellation nicht mehr so ist wie im Standard-Dual-Stack-Lite-Betrieb. Du musst dich zwischen einer öffentlichen IPv4-Adresse oder der Standardkonfiguration mit öffentlicher IPv6 entscheiden - das ist mein Wissensstand.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich hoffe, diese Infos helfen dir weiter! Wenn du weitere Fragen hast, melde dich gerne wieder.
     <span class="ipsEmoji">
      🙂
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     LG, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    Thorsten Artner
   </span>
-  <br/>
-  <time class="Mai 13" datetime="2025-05-13T19:03:35Z" title="2025-05-13 19:03 ">
+<br/>
+<time class="Mai 13" datetime="2025-05-13T19:03:35Z" title="2025-05-13 19:03 ">
    Mai 13
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
      @Jonathan Dorian
     </a>
-    <em>
-     <strong>
+<em>
+<strong>
       quote "Gleichzeitige Nutzung von öffentlicher IPv4 und IPv6
-      <br>
+      <br/>
        Du hast dich auch gefragt, ob man beides gleichzeitig nutzen kann – also eine öffentliche IPv4-Adresse für Portweiterleitung und gleichzeitig die volle IPv6-Funktionalität."
-      </br>
+      
      </strong>
-    </em>
-    <br/>
+</em>
+<br/>
     Das hast du falsch verstanden. Es ging um Portweiterleitungen. Diese betreffen IP4.
     <br/>
     IP6 kennt keine und braucht keine Portweiterleitungen, weil der Adressraum gewaltig riesengroß ist.
    </p>
-   <p>
+<p>
     IP6 ist daher nicht weniger schlimm und bietet natürlich auch gewaltige Vorteile.
    </p>
-   <p>
+<p>
     Eine IP6 Addresse hat 16 bytes -&gt; Das sind 128bits.
     <br/>
     Die ersten 32 bit sind normalerweise Provider Prefix.
@@ -529,18 +525,18 @@
     <em>
      xxxx:xxxx:xxxx:xxxx:xxxx:xxxx
     </em>
-    <br/>
+<br/>
     nun kann er einen Kundenpräfix vergeben sagen wir auf 56 bit. das wären 24 bit 3bytes für jeden Kunden.  das erlaubt 16777216 Kunden mit eindeutiger Kennung. ich schreibe die Kunden bits als k.
     <br/>
     IP6 range :
     <strong>
      2100:8923:kkkk:kk
     </strong>
-    <em>
+<em>
      xx:xxxx:xxxx:xxxx:xxxx
     </em>
-   </p>
-   <p>
+</p>
+<p>
     Dieser Teil
     <strong>
      2100:8923:kkkk:kk
@@ -557,15 +553,15 @@
     </strong>
     :xxxx:xxxx:xxxx:xxxx
     <br/>
-    <strong>
+<strong>
      Bleiben 64 bit für Kundengeräte, die alle mit einer eigenen globalen IP Adresse ausgestattet werden könnten, also mit einer eigenen Identifizierung im Internet.  Das wäre z.b Die MAC Adresse meines Gerätes, des NetzwerkDruckers.
     </strong>
-    <br/>
+<br/>
     Sagen wir mein Netzwerkdrucker hat die MAC Adresse A0:CE:FF:12:45:23:78:97.
     <br/>
     Die globale Internetadresse meines Netzwerkdruckers wäre.
     <br/>
-    <strong>
+<strong>
      2100:8923:kkkk:kkss
      <span>
       :
@@ -574,60 +570,60 @@
      <br/>
      Bei IP6 ist keine Portweiterleitung nötig auf Grund des Riesengroßen Adressspielraums.
      <br/>
-     <br/>
+<br/>
      Die Frage ist, was Magenta momentan an IP6 unterstützt, und ich habe hier auch gelesen, dass etliche eine Umstellung auf IP4 wollen und eine Portweiterleitung einstellen. Für was???? mit IP6 könnte man globale IP6 verteilen fürs seine eigenen Geräte. Für was Umstellung auf IP4 und dann Portweiterleitung?=
      <br/>
-     <br/>
+<br/>
      Ich werde auf jedenFall einen Bridge Modus beantragen und dann schauen was bei IP6 bei magenta möglich ist.
      <br/>
      MFG.
     </strong>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Mai 14" datetime="2025-05-14T10:09:52Z" title="2025-05-14 10:09 ">
+<br/>
+<time class="Mai 14" datetime="2025-05-14T10:09:52Z" title="2025-05-14 10:09 ">
    Mai 14
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="60075" data-ipsquote-contentid="10746" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1747163015" data-ipsquote-userid="99027" data-ipsquote-username="Thorsten Artner">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="60075" data-ipsquote-contentid="10746" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1747163015" data-ipsquote-userid="99027" data-ipsquote-username="Thorsten Artner">
+<div class="ipsQuote_citation">
      Am 13.5.2025 um 21:03 schrieb Thorsten Artner:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Die Frage ist, was Magenta momentan an IP6 unterstützt, und ich habe hier auch gelesen, dass etliche eine Umstellung auf IP4 wollen und eine Portweiterleitung einstellen. Für was???? mit IP6 könnte man globale IP6 verteilen fürs seine eigenen Geräte. Für was Umstellung auf IP4 und dann Portweiterleitung?=
      </p>
-    </div>
-   </blockquote>
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99027-thorsten-artner/?do=hovercard" data-mentionid="99027" href="https://community.magenta.at/profile/99027-thorsten-artner/" rel="">
+</div>
+</blockquote>
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99027-thorsten-artner/?do=hovercard" data-mentionid="99027" href="https://community.magenta.at/profile/99027-thorsten-artner/" rel="">
      @Thorsten Artner
     </a>
     ,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     die IPv4 Umstellung ist erforderlich, damit du das Magenta-Modem in den Bridgemode setzen kannst. Danach kann man auch Portweiterleitungen einstellen. Ganz so wie du es hier in der Community schon gelesen hast.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Falls du weitere Fragen dazu hast, gib gerne Bescheid.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Liebe Grüße, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>

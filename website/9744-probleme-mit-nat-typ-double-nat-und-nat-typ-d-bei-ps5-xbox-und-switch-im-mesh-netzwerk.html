@@ -1,28 +1,29 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Probleme mit NAT-Typ (Double NAT und NAT Typ D) bei PS5, Xbox und Switch im Mesh-Netzwerk
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Probleme mit NAT-Typ (Double NAT und NAT Typ D) bei PS5, Xbox und Switch im Mesh-Netzwerk
   </h1>
-  <span class="author">
+<span class="author">
    Creature
   </span>
-  <br/>
-  <time class="Dez 9" datetime="2024-12-09T18:44:35Z" title="2024-12-09 18:44 ">
+<br/>
+<time class="Dez 9" datetime="2024-12-09T18:44:35Z" title="2024-12-09 18:44 ">
    Dezember 9, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ich brauch mal euer Schwarmwissen bzgl NAT-Typ für PS5, Xbox und Switch
    </p>
-   <p>
+<p>
     Folgendes Szenario:
     <br/>
     Ich habe den Xiaomi Ax5400 von Magenta in Bridge Modus und den Open NAT APN eingestellt.
@@ -30,46 +31,46 @@
     Dahinter den TP Link Archer C6 als Router - dazu ein Mesh WLAN als Access Point von TP Link (Deco M4).
     <br/>
     Die Ps5 hängt per lan an den Router - NAT Typ 2 (ist ok)
-    <br>
+    <br/>
      Die Xbox hängt per LAN an einem Deco Accesspoint NAT Typ strikt Double NAT
-     <br>
+     <br/>
       Die Switch per wifi an den Decos NAT Typ D
-     </br>
-    </br>
+     
+    
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Schema des Netzwerks:
    </p>
-   <p>
+<p>
     AX5400 Bridge Mode + APN Business…
    </p>
-   <p>
+<p>
     dahinter Archer C6
    </p>
-   <p>
+<p>
     an den Archer hängen 3 LAN Dosen und ein Lananschluss für die Deco.
    </p>
-   <p>
+<p>
     Der Router ist im Modus WLAN Router, die Decos als Access Point
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Der Fehler liegt definitiv bei den decos, aber wie kann ich das ändern? Was mache ich falsch?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Dez 10" datetime="2024-12-10T09:51:10Z" title="2024-12-10 09:51 ">
+<br/>
+<time class="Dez 10" datetime="2024-12-10T09:51:10Z" title="2024-12-10 09:51 ">
    Dezember 10, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94876-creature/?do=hovercard" data-mentionid="94876" href="https://community.magenta.at/profile/94876-creature/" rel="">
      @Creature
@@ -78,208 +79,208 @@
     <span class="ipsEmoji">
      👋
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     KI zufolge:
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Das Problem mit den NAT-Typen in deinem Netzwerk scheint auf die Konfiguration der TP-Link Deco M4-Einheiten zurückzuführen zu sein. Hier ist eine detaillierte Analyse und Lösungsvorschläge:
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Ursache des Problems:
     </strong>
-   </p>
-   <p>
-    <strong>
+</p>
+<p>
+<strong>
      Doppelte NAT (Double NAT):
     </strong>
     Die Xbox zeigt einen strikten NAT-Typ und "Double NAT" an, was darauf hinweist, dass sowohl der TP-Link Archer C6 als auch die Deco M4 Einheiten als Router agieren. Dies führt zu einer doppelten NAT-Schicht, die Verbindungsprobleme verursacht.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Deco M4 im Access Point-Modus:
     </strong>
     Obwohl du angegeben hast, dass die Decos im Access Point-Modus arbeiten, scheint es möglich, dass sie dennoch Routing-Funktionen wie NAT ausführen, was das Problem verschärfen könnte.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Lösungsvorschläge:
     </strong>
-   </p>
-   <p>
-    <strong>
+</p>
+<p>
+<strong>
      1. Überprüfung und Anpassung des Access Point-Modus der Deco M4
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Stelle sicher, dass die Deco M4-Einheiten tatsächlich im Access Point-Modus konfiguriert sind. Im Access Point-Modus deaktivieren die Decos NAT und DHCP und erweitern lediglich das bestehende Netzwerk des Archer C6.
    </p>
-   <p>
+<p>
     Öffne die TP-Link Deco App:
    </p>
-   <p>
+<p>
     Gehe zu Mehr &gt; Erweiterte Einstellungen &gt; Betriebsmodus und wähle Access Point-Modus aus.
    </p>
-   <p>
+<p>
     Starte anschließend alle Geräte neu (Router, Deco-Einheiten und Konsolen), um sicherzustellen, dass die Änderungen wirksam werden
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      2. Portweiterleitung oder DMZ für Xbox und Switch
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Richte auf dem Archer C6 Portweiterleitungen für die Xbox und Nintendo Switch ein:
    </p>
-   <p>
+<p>
     Für Xbox: TCP/UDP 3074, UDP 88, UDP 500, UDP 3544, UDP 4500.
    </p>
-   <p>
+<p>
     Für Nintendo Switch: TCP/UDP 1-65535 (oder spezifische Ports je nach Spiel).
    </p>
-   <p>
+<p>
     Alternativ kannst du eine DMZ (Demilitarisierte Zone) für die IP-Adressen der Konsolen auf dem Archer C6 einrichten. Dies sorgt dafür, dass alle eingehenden Verbindungen an diese Geräte weitergeleitet werden
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      3. Statische IP-Adressen für Konsolen
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Weise der PS5, Xbox und Switch statische IP-Adressen zu:
    </p>
-   <p>
+<p>
     Gehe in den DHCP-Einstellungen des Archer C6 zur "Adressreservierung".
    </p>
-   <p>
+<p>
     Reserviere IP-Adressen basierend auf den MAC-Adressen der Konsolen.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      4. UPnP aktivieren
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Aktiviere Universal Plug and Play (UPnP) auf dem Archer C6:Dies ermöglicht den Konsolen, automatisch Ports zu öffnen, ohne manuelle Konfigurationen vorzunehmen
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      5. Überprüfung der öffentlichen IP-Adresse
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Vergewissere dich, dass dein Internetanbieter dir eine öffentliche IPv4-Adresse bereitstellt. Wenn dein Anbieter CGNAT (Carrier Grade NAT) verwendet, kannst du keine offenen NAT-Typen erreichen. Kontaktiere deinen Anbieter und fordere eine öffentliche IPv4-Adresse an
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Zusammenfassung
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Das Hauptproblem liegt wahrscheinlich an der doppelten NAT-Konfiguration durch den Archer C6 und die Deco M4-Einheiten. Stelle sicher, dass die Decos korrekt im Access Point-Modus arbeiten und richte Portweiterleitungen oder eine DMZ für deine Konsolen ein. Zudem kann eine Aktivierung von UPnP und das Anfordern einer öffentlichen IP-Adresse bei deinem ISP helfen.Mit diesen Anpassungen sollte es möglich sein, offene oder moderate NAT-Typen für alle Geräte in deinem Netzwerk zu erreichen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bitte gib Bescheid, ob dir das weitergeholfen hat.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Liebe Grüße, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    Creature
   </span>
-  <br/>
-  <time class="Dez 10" datetime="2024-12-10T19:02:58Z" title="2024-12-10 19:02 ">
+<br/>
+<time class="Dez 10" datetime="2024-12-10T19:02:58Z" title="2024-12-10 19:02 ">
    Dezember 10, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/77318-jonathan-dorian/?do=hovercard" data-mentionid="77318" href="https://community.magenta.at/profile/77318-jonathan-dorian/" rel="">
      @Jonathan Dorian
     </a>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     danke für deine Antwort.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Die Decos sind definitiv in Access Point Modus, mehrmals auf Werkseinstellung zurückgesetzt und wieder auf Access Point installiert
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Im Archer ist UPNP aktiviert, DMZ habe ich die Haupt-Deco Einheit konfiguriert ohne Ergebnis (im Archer C6 kann man leider nur eine IP als DMZ angeben)
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Portweiterleitung für die Xbox ist eingegeben
    </p>
-   <p>
+<p>
     bei Switch die Range 1-65536 funktioniert nicht aufgrund eines Konfliktes laut Archer C6
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     eine öffentliche IP Adresse habe ich durch den Business.gprsinternet APNs
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Alle Konsolen haben eine fix zugewiesene IP Adresse
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Dass der Fehler bei den Decos hängt weiß ich, ich kann es nur nicht verstehen.
    </p>
-   <p>
+<p>
     Auch gibt es keine Alternative um 3 Etagen abzudecken, denn mit wifi repeater möchte ich nicht arbeiten
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Dez 11" datetime="2024-12-11T08:31:27Z" title="2024-12-11 08:31 ">
+<br/>
+<time class="Dez 11" datetime="2024-12-11T08:31:27Z" title="2024-12-11 08:31 ">
    Dezember 11, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94876-creature/?do=hovercard" data-mentionid="94876" href="https://community.magenta.at/profile/94876-creature/" rel="">
      @Creature
@@ -288,133 +289,133 @@
     <span class="ipsEmoji">
      👋
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     durch deine weitere Schilderung ergibt sich folgender Sachverhalt:
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Analyse des Problems
     </strong>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     1.
     <strong>
      Doppelte NAT (Double NAT):
     </strong>
-    <br>
+<br/>
      Obwohl dein Xiaomi AX5400 im Bridge-Modus arbeitet, könnte es sein, dass der Archer C6 und/oder die Deco M4-Einheiten weiterhin NAT-Funktionen ausführen. Dies führt zu einer doppelten NAT-Schicht, insbesondere bei Geräten, die an den Decos angeschlossen sind.
-    </br>
+    
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     2.
     <strong>
      Deco M4 im Access Point-Modus:
     </strong>
-    <br>
+<br/>
      Du hast bestätigt, dass die Deco M4 im Access Point-Modus arbeiten. Dennoch könnten spezifische Einstellungen oder Probleme in der Kommunikation zwischen dem Archer C6 und den Decos dazu führen, dass NAT-Probleme auftreten.
-    </br>
+    
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     3.
     <strong>
      Portweiterleitungen und DMZ:
     </strong>
-    <br>
+<br/>
      Obwohl du Portweiterleitungen eingerichtet hast und eine DMZ für die Haupt-Deco konfiguriert ist, scheint dies nicht ausreichend zu sein, um die NAT-Probleme zu lösen.
-    </br>
+    
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     4.
     <strong>
      IPv4-Adresse:
     </strong>
-    <br/>
+<br/>
     Du hast eine öffentliche IPv4-Adresse über den Business APN von Magenta – das ist gut, schließt aber nicht aus, dass es Konfigurationsprobleme im internen Netzwerk gibt.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Lösungsvorschläge
     </strong>
-   </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
     5.
     <strong>
      Netzwerkstruktur vereinfachen
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Überlege, ob du eine direkte Verbindung der Xbox mit dem Archer C6 herstellen kannst (ohne über die Decos zu gehen). Dies könnte das Problem des Double NAT umgehen.
    </p>
-   <p>
+<p>
     Alternativ könntest du prüfen, ob ein hochwertigerer Mesh-Router wie ein TP-Link Deco X60 oder X90 besser geeignet wäre.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     6.
     <strong>
      Firmware-Updates
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Aktualisiere die Firmware des TP-Link Archer C6 und der Deco M4 auf die neuesten Versionen. Firmware-Probleme könnten ebenfalls Ursache für unerwartetes Verhalten sein.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     7.
     <strong>
      Alternative Lösungen für Mesh-Netzwerke
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Wenn du drei Etagen abdecken musst und keine Repeater verwenden möchtest, könntest du Powerline-Adapter mit integriertem WLAN in Betracht ziehen (z.B. TP-Link AV1300). Diese bieten eine stabile Verbindung ohne zusätzliche NAT-Schichten.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Zusammenfassung
     </strong>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Das Hauptproblem liegt höchstwahrscheinlich bei einer unvollständigen Kommunikation zwischen dem Archer C6 und den Deco M4-Einheiten sowie möglichen Konflikten bei Portweiterleitungen oder der DMZ-Konfiguration. Indem du die oben genannten Schritte durchführst – insbesondere das Entfernen der DMZ für die Haupt-Deco und das direkte Einrichten von Portweiterleitungen auf dem Archer C6 – solltest du in der Lage sein, offene oder moderate NAT-Typen für alle Geräte zu erreichen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn dir all diese Informationen nicht weiterhelfen sollten, empfehle ich dir einen Netzwerkspezialisten deines Vertrauens zu fragen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Liebe Grüße, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>

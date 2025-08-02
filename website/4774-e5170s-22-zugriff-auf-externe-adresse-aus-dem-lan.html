@@ -1,31 +1,32 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    E5170s-22 - Zugriff auf externe Adresse aus dem LAN
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    E5170s-22 - Zugriff auf externe Adresse aus dem LAN
   </h1>
-  <span class="author">
+<span class="author">
    gs1969
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-12-08T13:11:22Z" title="2018-12-08 13:11 ">
+<br/>
+<time class="6 yr" datetime="2018-12-08T13:11:22Z" title="2018-12-08 13:11 ">
    Dezember 8, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Leute,
    </p>
-   <p>
+<p>
     ich betreibe hinter der homenet-box einen server, auf den ich von außen problemlos zugreifen kann.
    </p>
-   <p>
+<p>
     BEISPIEL:
     <br/>
     fremderhost (irgendwo im Internet) -&gt; aufruf
@@ -34,97 +35,97 @@
     </a>
     -&gt; homenetbox -&gt; 192.168.1.99
    </p>
-   <p>
+<p>
     Dazu habe ich einen virtuellen Server in der homenetbox definiert, klappt auch bestens. Port 80 WAN -&gt; Port 80 LAN
    </p>
-   <p>
+<p>
     Was aber nicht funktioniert, ist der Zugriff auf die externe Adresse
     <a href="https://dynamischblahblah.dyndns.org" rel="external nofollow">
      https://dynamischblahblah.dyndns.org
     </a>
     aus demselben Netzwerk, in dem der Webserver läuft - da läuft der Request in ein Timeout. IP wird richtig aufgelöst, DNS-Problem ist es also keins.
    </p>
-   <p>
+<p>
     Hat jemand eine Idee, ob sich da im E5170s-22 etwas einstellen lässt, damit das klappt?
     <br/>
-    <br/>
+<br/>
     Hinweis: Workaround Direktzugriff auf http://192.168.1.99 ist keine Option für mich, ich möchte die dynamisch zugeteilte adresse "von aussen" verwenden.
    </p>
-   <p>
+<p>
     DANKE!
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-12-08T13:56:24Z" title="2018-12-08 13:56 ">
+<br/>
+<time class="6 yr" datetime="2018-12-08T13:56:24Z" title="2018-12-08 13:56 ">
    Dezember 8, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     So wie es aussieht, macht der E5170 kein NAT Loopback.
    </p>
-   <p>
+<p>
     Was funktionieren könnte, wäre einen Lokalen DNS Server aufsetzen und dort die Lokal IP zu dem DNS Namen eintragen.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    gs1969
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-12-08T14:43:29Z" title="2018-12-08 14:43 ">
+<br/>
+<time class="6 yr" datetime="2018-12-08T14:43:29Z" title="2018-12-08 14:43 ">
    Dezember 8, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27776" data-ipsquote-contentid="4774" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1544277384" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27776" data-ipsquote-contentid="4774" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1544277384" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+<div class="ipsQuote_citation">
      vor 7 Minuten schrieb IT-Freak:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       So wie es aussieht, macht der E5170 kein NAT Loopback.
-      <br>
+      <br/>
        Was funktionieren könnte, wäre einen Lokalen DNS Server aufsetzen und dort die Lokal IP zu dem DNS Namen eintragen.
-      </br>
+      
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Vielen Dank!
-    <br>
+    <br/>
      Sowas in der Art hatte ich befürchtet, wußte bloß nicht daß sich diese Funktion "NAT Loopback" nennt.
-     <br>
-      <br/>
+     <br/>
+<br>
       Hier habe ich ein Posting ergoogled, welches das Problem schön beschreibt:
-      <br/>
-      <a href="http://www.tomshardware.co.uk/answers/id-3248137/nat-loopback-enabled-disabled.html" rel="external nofollow">
+      <br>
+<a href="http://www.tomshardware.co.uk/answers/id-3248137/nat-loopback-enabled-disabled.html" rel="external nofollow">
        http://www.tomshardware.co.uk/answers/id-3248137/nat-loopback-enabled-disabled.html
       </a>
-      <br/>
-      <br/>
+<br/>
+<br/>
       Nachdem mich der eingeschränkte Leistungsumfang vom E5170s-22 mich nun zum wiederholten Male nervt, denke ich an einen neuen LTE-Router. Natürlich könnte ich einen eigenen DNS betreiben, aber ich möchte nicht, daß die weiteren Endgeräte (sind einige) von einer weiteren Komponente abhängig sind, die dann natürlich auch 24/7 laufen muß und Strom verbrät.
      </br>
-    </br>
-   </p>
-   <p>
+</br>
+</p>
+<p>
     Mein Wunschzettel:
     <br/>
-    <br/>
+<br/>
     * übersichtliches, gut dokumentiertes GUI (CLI wäre schön, aber nicht unbedingt nötig)
     <br/>
     * WLAN (auch 5GHz)
@@ -139,11 +140,11 @@
     <br/>
     * Und natürlich sollte er am LTE-Netz von T-Mobile funktionieren.
     <br/>
-    <br/>
+<br/>
     Ich freue mich über Vorschläge!
     <br/>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>

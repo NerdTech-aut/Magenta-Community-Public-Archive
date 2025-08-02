@@ -1,249 +1,250 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Huawei B315s-22 mit eigenem DHCP Server
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Huawei B315s-22 mit eigenem DHCP Server
   </h1>
-  <span class="author">
+<span class="author">
    smitti
   </span>
-  <br/>
-  <time class="7 yr" datetime="2017-09-29T15:02:23Z" title="2017-09-29 15:02 ">
+<br/>
+<time class="7 yr" datetime="2017-09-29T15:02:23Z" title="2017-09-29 15:02 ">
    September 29, 2017
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
      Ich habe das Problem, dass sich beim Router Huawei B315s-22 der DHCP Dienst nicht korrekt deaktivieren lässt. In der Oberfläche kann man die Funktion zwar deaktivieren und der Router verteilt dann auch keine IP Adressen mehr, jedoch werden alternative DHCP Server im Netz vom Huawei Router blockiert. Sowohl ein DHCP Server auf Windows als auch auf einem Raspberry Pi.
     </span>
-    <br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
-    <span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
+<br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
+<span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
      Das Setup ist folgendes:
     </span>
-    <br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
-    <br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
-    <span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
+<br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
+<br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
+<span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
      - Alle Clients per LAN Kabel (um etwaige WLAN Probleme auszuschließen) direkt an den LAN-Ports am Huawei Router.
     </span>
-    <br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);">
-     <span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
+<br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
+<span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
       - Windows Rechner mit DHCP Server auch per LAN Kabel direkt am Huawei Router (alternativ anstatt den Win PC einen Raspberry Pi mit laufendem DHCP Server)
      </span>
-     <br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);">
-      <span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
+<br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
+<span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
        - DHCP Server hat jeweils eine fixe IP
       </span>
-      <br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);">
-       <span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
+<br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
+<span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
         - DHCP am Router deaktiviert
        </span>
-       <br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);">
-        <span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
+<br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
+<span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
          - 1 Linux und 1 Windows Client auch per LAN Kabel am Router
         </span>
-        <br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
-        <br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
-        <span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
+<br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);">
+<br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);">
+<span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
          Beim Verbinden des Windows clients erfolgt ein DHCP Request ins Netz, jedoch wird hier nun durch den Huawei Router die Antwort anscheinend in irgendwelcher Form blockiert.
         </span>
-        <br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
-        <br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);"/>
-        <span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
+<br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);">
+<br style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);">
+<span style="font-family:'Roboto Slab', 'Times New Roman', serif;font-size:14px;font-style:normal;font-weight:normal;letter-spacing:normal;text-indent:0px;text-transform:none;white-space:pre-wrap;word-spacing:0px;background-color:rgb(250,250,250);float:none;">
          Wenn ich beim ganzen Setup den Huawei Router gegen einen anderen Router mit deaktiviertem DHCP ersetze, verteilen sowohl Windows PC als auch Rasperry Pi IP Adressen.
         </span>
-       </br>
-      </br>
-     </br>
-    </br>
-   </p>
-   <p>
+</br>
+</br>
+</br>
+</br>
+</p>
+<p>
     Hat jemand schonmal ein ähnliches Setup probiert bzw. das hinbekommen?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2017-09-29T20:43:57Z" title="2017-09-29 20:43 ">
+<br/>
+<time class="7 yr" datetime="2017-09-29T20:43:57Z" title="2017-09-29 20:43 ">
    September 29, 2017
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hello,
-    <br>
+    <br/>
      Unterscheiden sich der T-Mobile Router und der andere Router konfigurationstechnisch voneinander?
-    </br>
+    
    </p>
-   <p>
+<p>
     Hast du schon mal versucht einem Client die IP Adresse manuell zuzuweisen und zu schauen, ob du überhaupt den DHCP Server pingen kannst?
    </p>
-   <p>
+<p>
     Lg
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    smitti
   </span>
-  <br/>
-  <time class="7 yr" datetime="2017-09-29T20:56:39Z" title="2017-09-29 20:56 ">
+<br/>
+<time class="7 yr" datetime="2017-09-29T20:56:39Z" title="2017-09-29 20:56 ">
    September 29, 2017
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Danke schonmal für die Antwort. Und Ja, mit fixer IP am client ist der DHCP ganz normal erreichbar.
    </p>
-   <p>
+<p>
     Der andere Router ist ein reiner Router ohne LTE modem (also kein internet beim testen, sollte aber für sen dhcp server keinen Unterschied machen)
    </p>
-   <p>
+<p>
     Ansonsten ist sowohl der Huawei als auch der andere auf default Einstellungen.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2017-09-29T21:07:12Z" title="2017-09-29 21:07 ">
+<br/>
+<time class="7 yr" datetime="2017-09-29T21:07:12Z" title="2017-09-29 21:07 ">
    September 29, 2017
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Sehr spannend ...
    </p>
-   <p>
+<p>
     D.h du hast auch mal deinen Netzwerktraffic ein wenig analysiert mit z.B.: Wireshark?
    </p>
-   <p>
+<p>
     Lg
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    smitti
   </span>
-  <br/>
-  <time class="7 yr" datetime="2017-09-30T09:02:14Z" title="2017-09-30 09:02 ">
+<br/>
+<time class="7 yr" datetime="2017-09-30T09:02:14Z" title="2017-09-30 09:02 ">
    September 30, 2017
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ja, der client probiert 4x per broadcast ein dhcp discover aber bekommt eben keine Antwort. Weißt du zufällig ob es alternative Firmware für das Huawei gibt, bzw. irgendwo die Huawei Stock firmware? Vermutl. ist dann die Garantie von T-Mobile weg, schätz ich mal, od?
    </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/dhcp.PNG.05970379ff4db80ec74d779aa3fd2be7.PNG">
-     <img alt="dhcp.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="505" src="images/uploads/dhcp.thumb.PNG.19831f71793fd2ffa0ca958391ac0b62.PNG"/>
-    </a>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/dhcp.PNG.05970379ff4db80ec74d779aa3fd2be7.PNG">
+<img alt="dhcp.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="505" src="images/uploads/dhcp.thumb.PNG.19831f71793fd2ffa0ca958391ac0b62.PNG"/>
+</a>
+</p>
+</div>
+<hr/>
+<span class="author">
    smitti
   </span>
-  <br/>
-  <time class="7 yr" datetime="2017-09-30T09:51:31Z" title="2017-09-30 09:51 ">
+<br/>
+<time class="7 yr" datetime="2017-09-30T09:51:31Z" title="2017-09-30 09:51 ">
    September 30, 2017
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Nach ein wenig googlen habe ich nun auch eine Amazon Bewertung mit ähnlichem Verhalten gefunden.
    </p>
-   <p>
+<p>
     Siehe Punkt 2 von der Rezension:
    </p>
-   <p>
-    <a href="https://www.amazon.de/gp/customer-reviews/R1TCR69V8P5UZ4/ref=cm_cr_arp_d_rvw_ttl?ie=UTF8&amp;ASIN=B015E3MKSW" rel="external nofollow">
+<p>
+<a href="https://www.amazon.de/gp/customer-reviews/R1TCR69V8P5UZ4/ref=cm_cr_arp_d_rvw_ttl?ie=UTF8&amp;ASIN=B015E3MKSW" rel="external nofollow">
      https://www.amazon.de/gp/customer-reviews/R1TCR69V8P5UZ4/ref=cm_cr_arp_d_rvw_ttl?ie=UTF8&amp;ASIN=B015E3MKSW
     </a>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2017-10-02T07:55:46Z" title="2017-10-02 07:55 ">
+<br/>
+<time class="7 yr" datetime="2017-10-02T07:55:46Z" title="2017-10-02 07:55 ">
    Oktober 2, 2017
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="23145" data-ipsquote-contentid="3957" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1506762134" data-ipsquote-userid="69757" data-ipsquote-username="smitti">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="23145" data-ipsquote-contentid="3957" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1506762134" data-ipsquote-userid="69757" data-ipsquote-username="smitti">
+<div class="ipsQuote_citation">
      Am 9/30/2017 um 11:02 schrieb smitti:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Ja, der client probiert 4x per broadcast ein dhcp discover aber bekommt eben keine Antwort. Weißt du zufällig ob es alternative Firmware für das Huawei gibt, bzw. irgendwo die Huawei Stock firmware? Vermutl. ist dann die Garantie von T-Mobile weg, schätz ich mal, od?
      </p>
-     <p>
-      <a class="ipsAttachLink ipsAttachLink_image" data-fileid="505" href="images/uploads/dhcp.PNG.05970379ff4db80ec74d779aa3fd2be7.PNG" rel="external nofollow">
-       <img alt="dhcp.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="505" src="images/uploads/dhcp.thumb.PNG.19831f71793fd2ffa0ca958391ac0b62.PNG"/>
-      </a>
-     </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" data-fileid="505" href="images/uploads/dhcp.PNG.05970379ff4db80ec74d779aa3fd2be7.PNG" rel="external nofollow">
+<img alt="dhcp.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="505" src="images/uploads/dhcp.thumb.PNG.19831f71793fd2ffa0ca958391ac0b62.PNG"/>
+</a>
+</p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Eine Firmware findest du sicher irgendwo, aber wie du schon sagst, wenn du das auf eigene Hand flasht, dann wird die Garantie weg sein ... Bzw, das Problem könnte sein, dass du die Originalfirmware nicht bekommst, falls was schief geht ..
     <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2017-10-02T08:05:09Z" title="2017-10-02 08:05 ">
+<br/>
+<time class="7 yr" datetime="2017-10-02T08:05:09Z" title="2017-10-02 08:05 ">
    Oktober 2, 2017
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ich finde es trotzdem eigenartig, dass das irgendwie nicht funktioniert
     <img alt="&lt;3" data-emoticon="" height="20" src="images/emoticons/tma_indifferent-o.png" srcset="images/emoticons/tma_indifferent-o@2x.png 2x" title="&lt;3" width="20"/>
     ...
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    smitti
   </span>
-  <br/>
-  <time class="7 yr" datetime="2017-10-02T14:44:39Z" title="2017-10-02 14:44 ">
+<br/>
+<time class="7 yr" datetime="2017-10-02T14:44:39Z" title="2017-10-02 14:44 ">
    Oktober 2, 2017
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ja ich auch, aber es scheint tatsächlich der Router in irgendwelcher Form zu sein.
    </p>
-   <p>
+<p>
     Ich habs am WE auch jemand mit dem selben Router probieren lassen mit einer Apple Time Capsule als DHCP Server. Die Geräte die sich direkt über WLAN zur Capsule verbunden haben, bekamen eine IP, die die per LAN am Router hingen nicht.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2017-10-02T14:49:46Z" title="2017-10-02 14:49 ">
+<br/>
+<time class="7 yr" datetime="2017-10-02T14:49:46Z" title="2017-10-02 14:49 ">
    Oktober 2, 2017
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <img alt=":O" data-emoticon="" height="20" src="images/emoticons/tma_wow-o.png" srcset="images/emoticons/tma_wow-o@2x.png 2x" title=":O" width="20"/>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<img alt=":O" data-emoticon="" height="20" src="images/emoticons/tma_wow-o.png" srcset="images/emoticons/tma_wow-o@2x.png 2x" title=":O" width="20"/>
     Sehr spannend. Eigentlich sollte man da mal beim Hersteller nachfragen. Oder mal bei T-Mobile ob die wirklich was an der Firmware gedreht haben - weil das dürfte grundsätzlich nicht passieren ...
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

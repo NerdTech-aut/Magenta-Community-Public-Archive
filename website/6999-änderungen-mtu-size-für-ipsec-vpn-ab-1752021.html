@@ -1,63 +1,64 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Änderungen MTU-Size für IPSec-VPN ab 17.5.2021
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Änderungen MTU-Size für IPSec-VPN ab 17.5.2021
   </h1>
-  <span class="author">
+<span class="author">
    murli
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-06-23T06:45:18Z" title="2021-06-23 06:45 ">
+<br/>
+<time class="4 yr" datetime="2021-06-23T06:45:18Z" title="2021-06-23 06:45 ">
    Juni 23, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Wir haben mit allen Magenta-Kabel-Anschlüssen seit dem 17.5.2021 Probleme bei der Nutzung von IPSEC-Verbindungen auf Port 4500. Scheinbar wurde hier um dieses Datum herum etwas an der Konfiguration der Kabelmodems oder des dahinterliegenden Netzwerks gemacht, es kommen die Pakete auf Grund von vermutlich verkleinerter MTU-Größe nicht mehr an. Das betrifft sowohl IPv4- als auch IPv6-Anschlüsse, ein mit gleichem Router dahinter betriebener A1-DSL-Anschluss sowie mehrere LTE-Modems machen keinerlei Probleme somit muss es hier Änderungen im Magenta/UPC-Netz gegeben haben. Kann hier eine Umstellung/Änderung seitens Magenta bestätigt werden?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-06-23T10:38:19Z" title="2021-06-23 10:38 ">
+<br/>
+<time class="4 yr" datetime="2021-06-23T10:38:19Z" title="2021-06-23 10:38 ">
    Juni 23, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ähnliche berichte sind hier schon vor einiger Zeit auch aufgetaucht. Da hatte sich das Problem irgendwie gelöst, aber keine Ahnung, was wie und wo.
    </p>
-   <p>
+<p>
     Man könnte probieren einen IPv6 Endpunkt fürs VPN anzubieten, wo man vielleicht etwas höhere MTU fahren könnte als über IPv4 im Magenta Netz.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    murli
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-06-23T12:42:33Z" title="2021-06-23 12:42 ">
+<br/>
+<time class="4 yr" datetime="2021-06-23T12:42:33Z" title="2021-06-23 12:42 ">
    Juni 23, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     das Phänomen taucht auch bei IPV6-Anschlüssen auf, bei den Anschlüssen wurde das Modem scheinbar resetted und im Tagesverlauf des 18.5. ging dann einmal der IPSEC-Tunnel auf IP 4500 UDP nicht mehr ... das ganze Problem ist ähnlicherweise hier geschildert:
     <a href="https://community.upc.ch/d/11812-connect-box-installiert-vpn-zur-firma-funktioniert-nicht-mehr/19" rel="external nofollow">
      https://community.upc.ch/d/11812-connect-box-installiert-vpn-zur-firma-funktioniert-nicht-mehr/19
     </a>
-   </p>
-   <p>
+</p>
+<p>
     Leider gibts im Bridge Modus die Option "Blockierung von fragmentierten IP Paketen" nicht, das wäre eine plausible Erklärung ... vielleicht ist das auch global eingeführt worden ...
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

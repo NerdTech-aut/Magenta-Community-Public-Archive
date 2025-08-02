@@ -1,166 +1,167 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Anschluss Fritzbox 7590 an Connect Box - Einrichtung Telefon und Internet
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Anschluss Fritzbox 7590 an Connect Box - Einrichtung Telefon und Internet
   </h1>
-  <span class="author">
+<span class="author">
    technix
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-21T19:29:47Z" title="2022-01-21 19:29 ">
+<br/>
+<time class="3 yr" datetime="2022-01-21T19:29:47Z" title="2022-01-21 19:29 ">
    Januar 21, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo in die Runde.
    </p>
-   <p>
+<p>
     Seit Dezember bin ich Kunde bei Magenta, ein Gründe für den Umstieg von A1 zu Magenta waren die besseren Verbindungsgeschwindigkeiten, aber auch die Festnetz-Flat. Ich konnte die Telefonie bisher aber nicht so nutzen wie gewünscht (Zielvorstellung s. unten). Da ich es heute geschafft habe, möchte ich meinen Lösungsweg hier teilen, damit anderen hoffentlich in Zukunft geholfen wird.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ziel: Benutzung der Fritzbox als Router für Internet und Telefon (mehrere Dect Telefone und auch ein analoges Telefon) hinter der Connect Box.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Vorgehen: Connect Box in den "Bridge Modus" versetzen. Der Bridge Modus wurde mir vom Kundendienst in einem kurzen Telefonat unkompliziert eingerichtet (ohne Anruf gings bei mir nicht). Wie die Einstellungen für Telefon sind, konnte mir dort allerdings nicht gesagt werden - geht verständlicherweise auch über den Support hinaus, wie man eine FB einrichtet.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Internetanschluss:
    </p>
-   <p>
+<p>
     Internetanbieter: "anderer Internetanbieter"
    </p>
-   <p>
+<p>
     Anschlussart: "Anschluss an Kabelmodem (Kabelanschluss)"
    </p>
-   <p>
+<p>
     physikalische Verbindung: Connect Box (Lan 1) zu Fritzbox (WAN) - normale RJ45 Kabel, 8 Polig
    </p>
-   <p>
-    <a href="https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7590/16_FRITZ-Box-fur-Betrieb-am-Kabelanschluss-einrichten/" rel="external nofollow">
+<p>
+<a href="https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7590/16_FRITZ-Box-fur-Betrieb-am-Kabelanschluss-einrichten/" rel="external nofollow">
      https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7590/16_FRITZ-Box-fur-Betrieb-am-Kabelanschluss-einrichten/
     </a>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Telefonanschluss:
    </p>
-   <p>
+<p>
     Connect Box (Tel 1) - zu Fritzbox (DSL) - 4 poliges Telefonkabel. Ja, das Telefonkabel (4 Pole) kann man auch in den RJ45 Anschluss (8 Pole) stecken.
    </p>
-   <p>
+<p>
     -&gt; Achtung. hier habe ich mit einer Crimpzange ein "spezialkabel" gemacht, dass die richtigen Ports belegt. Wahrscheinlich gibts es auch passende Adapter, aber ich war zu ungeduldig. Vorlage war das Schema das man auf der AVM Seite einsehen kann (ich versuche es hier in den Anhang zu geben). D.h. ich mit meinem 4 poligen Telefonkabel aus der Buchse Tel 1 in der Connect Box die Position 2 und 3 weitergeleitet an die Positionen 1 und 4 im DSL Anschluss der Fritzbox (die analogen, im Falle eines 8 poligen Steckers Position 3 und 6, siehe Schema unten).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Links Connect Box (Tel1), rechts Fritz Box (DSL Anschluss).
    </p>
-   <p>
+<p>
     x (leer) - Pol 1
    </p>
-   <p>
+<p>
     Pol 1    - x (leer)
    </p>
-   <p>
+<p>
     Pol 2    - x (leer)
    </p>
-   <p>
+<p>
     x (leer) - Pol 2
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     In den Einstellungen der Fritzbox muss man sich dann an folgen Anleitung von AVM halten (auch wenns für 7490 ist, bei mir hats funktioniert, wichtig ist nur aktivierung des "Festnetz" und einer entsprechend konfigurierten Rufnummer):
    </p>
-   <p>
-    <a href="https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7490/134_Mit-FRITZ-Box-uber-ein-Kabelmodem-telefonieren/" rel="external nofollow">
+<p>
+<a href="https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7490/134_Mit-FRITZ-Box-uber-ein-Kabelmodem-telefonieren/" rel="external nofollow">
      https://avm.de/service/wissensdatenbank/dok/FRITZ-Box-7490/134_Mit-FRITZ-Box-uber-ein-Kabelmodem-telefonieren/
     </a>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Das wars, danach ist die Einrichtung von Anrufbeantworter, Klingeltönen usw über die Benutzeroberfläche der FB wie gewohnt möglich. Interessanterweise geht bei mir an der Connect Box nur Tel 1 und Tel 2 nicht. Da bin ich heute jetzt zufällig drauf gekommen, als ich das getauscht habe. D.h. der Anschluss meines analogen Telefons erfolgt bei mir dann an der Fritzbox und nicht an der Connect Box (dort gehts wie gesagt nur über Tel 1, Tel 2 klingelt nicht). Ob das am Bridge Modus liegt oder nur an meiner Connect Box kann ich natürlich nicht sagen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hoffe das hilft, und es ist trotz bereits vielen gelesenen Beiträgen mein erster hier. Also bitte gnädig sein
     <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
-   </p>
-   <p>
+</p>
+<p>
     LG Technix
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="3649" href="images/uploads/33.png.f6172102bf2ee08474445f13bd090af4.png" rel="">
-     <img alt="33.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3649" src="images/uploads/33.png.f6172102bf2ee08474445f13bd090af4.png"/>
-    </a>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<p>
+</p>
+<p>
+</p>
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" data-fileid="3649" href="images/uploads/33.png.f6172102bf2ee08474445f13bd090af4.png" rel="">
+<img alt="33.png" class="ipsImage ipsImage_thumbnailed" data-fileid="3649" src="images/uploads/33.png.f6172102bf2ee08474445f13bd090af4.png"/>
+</a>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="3 yr" datetime="2022-01-22T09:42:40Z" title="2022-01-22 09:42 ">
       Januar 22, 2022
      </time>
      von technix
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-22T09:31:58Z" title="2022-01-22 09:31 ">
+<br/>
+<time class="3 yr" datetime="2022-01-22T09:31:58Z" title="2022-01-22 09:31 ">
    Januar 22, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Welche FRITZ!Box ist vorhanden?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    technix
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-22T09:41:58Z" title="2022-01-22 09:41 ">
+<br/>
+<time class="3 yr" datetime="2022-01-22T09:41:58Z" title="2022-01-22 09:41 ">
    Januar 22, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46133" data-ipsquote-contentid="7497" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1642843918" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46133" data-ipsquote-contentid="7497" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1642843918" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+<div class="ipsQuote_citation">
      vor 9 Minuten schrieb IT-Freak:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Welche FRITZ!Box ist vorhanden?
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Die 7590
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

@@ -1,436 +1,436 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Probleme mit Magenta Hybrid und HA35-22
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Probleme mit Magenta Hybrid und HA35-22
   </h1>
-  <span class="author">
+<span class="author">
    ciko
   </span>
-  <br/>
-  <time class="5 yr" datetime="2019-10-04T20:28:10Z" title="2019-10-04 20:28 ">
+<br/>
+<time class="5 yr" datetime="2019-10-04T20:28:10Z" title="2019-10-04 20:28 ">
    Oktober 4, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich bin Anfang September von A1 zu Magenta Hybrid gewechselt und habe besonders in den letzten Wochen immer wieder ein Problem. Nachdem alles für 3-4 Tage gut funktioniert hat zeigt das Modem ein rotes "MODE" Licht an. Power, DSL und LAN1 sind grün - der rest aus.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Mein Problem in der Situation ist, dass ich von außen nicht mehr über die Public dynamische IPv4 Adresse erreichbar bin. Das Modem antwortet in diesem Zustand auf Pings, reagiert aber nicht auf http/https anfragen am Management Interface. Der Internet-Zugang funktioniert, aber limitiert auf die Geschwindigkeit des DSL Anschlusses. WLAN funktioniert entgegen der LED-Anzeige immer noch.
    </p>
-   <blockquote class="ipsQuote" data-ipsquote="">
-    <div class="ipsQuote_citation">
+<blockquote class="ipsQuote" data-ipsquote="">
+<div class="ipsQuote_citation">
      Zitat
     </div>
-    <div class="ipsQuote_contents">
-     <p>
-     </p>
-     <p>
+<div class="ipsQuote_contents">
+<p>
+</p>
+<p>
       root@kronos:~# ping 192.168.1.1
      </p>
-     <p>
+<p>
       PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.
      </p>
-     <p>
+<p>
       64 bytes from 192.168.1.1: icmp_seq=1 ttl=63 time=0.965 ms
      </p>
-     <p>
+<p>
       64 bytes from 192.168.1.1: icmp_seq=2 ttl=63 time=0.833 ms
      </p>
-     <p>
+<p>
       64 bytes from 192.168.1.1: icmp_seq=3 ttl=63 time=0.964 ms
      </p>
-     <p>
+<p>
       ^C
      </p>
-     <p>
+<p>
       --- 192.168.1.1 ping statistics ---
      </p>
-     <p>
+<p>
       3 packets transmitted, 3 received, 0% packet loss, time 29ms
      </p>
-     <p>
+<p>
       rtt min/avg/max/mdev = 0.833/0.920/0.965/0.071 ms
      </p>
-     <p>
+<p>
       root@kronos:~# wget http://192.168.1.1 --timeout=60
      </p>
-     <p>
+<p>
       --2019-10-04 21:52:05--  http://192.168.1.1/
      </p>
-     <p>
+<p>
       Connecting to 192.168.1.1:80... connected.
      </p>
-     <p>
+<p>
       HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
      </p>
-     <p>
+<p>
       Retrying.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       --2019-10-04 21:53:06--  (try: 2)  http://192.168.1.1/
      </p>
-     <p>
+<p>
       Connecting to 192.168.1.1:80... connected.
      </p>
-     <p>
+<p>
       HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
      </p>
-     <p>
+<p>
       Retrying.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       root@kronos:~# wget https://192.168.1.1 --timeout=60
      </p>
-     <p>
+<p>
       --2019-10-04 21:55:18--  https://192.168.1.1/
      </p>
-     <p>
+<p>
       Connecting to 192.168.1.1:443... connected.
      </p>
-     <p>
+<p>
       Unable to establish SSL connection.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       root@kronos:~# ping 8.8.8.8
      </p>
-     <p>
+<p>
       PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
      </p>
-     <p>
+<p>
       64 bytes from 8.8.8.8: icmp_seq=1 ttl=54 time=28.8 ms
      </p>
-     <p>
+<p>
       64 bytes from 8.8.8.8: icmp_seq=2 ttl=54 time=28.4 ms
      </p>
-     <p>
+<p>
       ^C
      </p>
-     <p>
+<p>
       --- 8.8.8.8 ping statistics ---
      </p>
-     <p>
+<p>
       5 packets transmitted, 5 received, 0% packet loss, time 9ms
      </p>
-     <p>
+<p>
       rtt min/avg/max/mdev = 28.200/28.413/28.797/0.214 ms
      </p>
-     <p>
-     </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Meine Public-IP ist in der Zeit des "Ausfalls" aus dem Bereich 46.124.145.xx - nicht wie üblich aus 213.162.95.xx
    </p>
-   <p>
+<p>
     Die einzige Abhilfe ist ein Ein- und Ausschalten des Modems - danach ist wieder alles normal.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hier noch die Infos zum Modem direkt nach dem Reset
    </p>
-   <blockquote class="ipsQuote" data-ipsquote="">
-    <div class="ipsQuote_citation">
+<blockquote class="ipsQuote" data-ipsquote="">
+<div class="ipsQuote_citation">
      Zitat
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Produkttyp: HA35-22
      </p>
-     <p>
+<p>
       Ländercode: TMA
      </p>
-     <p>
+<p>
       Geräte-ID: xxxxxxxxxx
      </p>
-     <p>
+<p>
       Hardwareversion: AV1HA35M VER.A
      </p>
-     <p>
+<p>
       Softwareversion: V100R018C00SPC113
      </p>
-     <p>
+<p>
       Profilversion: DTEU001
      </p>
-     <p>
+<p>
       LTE-Version: 21.316.01.08.272
      </p>
-     <p>
+<p>
       IMEI: xxxxxxxxxx
      </p>
-     <p>
+<p>
       Systembetriebszeit: 0 Tage 0 Stunden 3 Minuten 27 Sekunden
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Im Systemprotokoll finden sich keine Anhaltspunkte - nur Accept / Drop Nachrichten der Firewall.  Die Firmware scheint aktuell zu sein - zumindest war es am 22.08 die aktuelle Version laut einem anderen Post hier im Forum.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Kennt jemand das Problem und ggf eine Lösung?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke + Grüße
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Michael
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    ciko
   </span>
-  <br/>
-  <time class="5 yr" datetime="2019-10-07T23:19:49Z" title="2019-10-07 23:19 ">
+<br/>
+<time class="5 yr" datetime="2019-10-07T23:19:49Z" title="2019-10-07 23:19 ">
    Oktober 7, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Heute ist das Problem schon wieder aufgetreten
     <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Hat jemand eine Idee?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke + Grüße
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Michael
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Christian_E
   </span>
-  <br/>
-  <time class="5 yr" datetime="2019-10-09T16:36:29Z" title="2019-10-09 16:36 ">
+<br/>
+<time class="5 yr" datetime="2019-10-09T16:36:29Z" title="2019-10-09 16:36 ">
    Oktober 9, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Also zusammengefasst - der LTE Part fällt bei dir aus.
     <br/>
     Hast du schon mal geprüft, ob evtl. die SIM nicht richtig sitzt?
     <br/>
-    <br/>
+<br/>
     Das Modem ansich ist sehr ausgereift aber vielleicht solltest du dich zusätzlich auch an die Hotline wenden. Evtl. gab es so einen Fall schon.
-    <br>
+    <br/>
      Ich hab davon noch nicht gehört aber check mal die SIM.
-     <br>
-      <br>
+     <br/>
+<br/>
        Achja - was bei mir schon passiert ist.
-       <br>
+       <br/>
         Wenn der Masten überbucht ist, kann man auch rausfliegen und die Verbindung ist weg.
-       </br>
-      </br>
-     </br>
-    </br>
+       
+      
+     
+    
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    ciko
   </span>
-  <br/>
-  <time class="5 yr" datetime="2019-10-10T15:29:04Z" title="2019-10-10 15:29 ">
+<br/>
+<time class="5 yr" datetime="2019-10-10T15:29:04Z" title="2019-10-10 15:29 ">
    Oktober 10, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Danke für deine Antwort.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich hatte mich gestern schon an die Hotline gewendet. Nach deren Empfehlung habe ich mich mit dem Modem zum Shop begeben um das Modem vor Ort überprüfen zu lassen. Wie erwartet wussten die Shop Mitarbeiter davon nichts. Auch ein Austausch ist gescheitert - beim ersten Mal weil ich den originalen Lieferschein nicht mit hatte - beim 2ten Mal weil das Gerät in der Reparaturdatenbank nicht vorhanden war.
    </p>
-   <p>
+<p>
     Die sehr freundliche Shop-Mitarbeiterin hat mich dann mit der Durchwahl der Technik-Hotline nach Hause geschickt - was sich als Glücksfall erwies: Angerufen - kurze Diagnose - es erfolgt ein Modemaustausch.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich hoffe es wird danach wieder besser
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Grüße
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Michael
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Christian_E
   </span>
-  <br/>
-  <time class="5 yr" datetime="2019-10-10T17:12:52Z" title="2019-10-10 17:12 ">
+<br/>
+<time class="5 yr" datetime="2019-10-10T17:12:52Z" title="2019-10-10 17:12 ">
    Oktober 10, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Wird sicher besser, weil das Modern ansich schon ausgereift ist.
    </p>
-   <p>
+<p>
     Halt uns bitte auf dem laufenden.
    </p>
-   <p>
+<p>
     LG Christian
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    ciko
   </span>
-  <br/>
-  <time class="5 yr" datetime="2019-10-22T00:04:21Z" title="2019-10-22 00:04 ">
+<br/>
+<time class="5 yr" datetime="2019-10-22T00:04:21Z" title="2019-10-22 00:04 ">
    Oktober 22, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Zusammen!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Nachdem der Modemtausch nun schon eine gute Woche zurückliegt und das Problem seither nicht mehr aufgetreten ist lag es wohl an einem Hardware-Defekt.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke + Grüße
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Michael
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Christian_E
   </span>
-  <br/>
-  <time class="5 yr" datetime="2019-10-22T04:28:36Z" title="2019-10-22 04:28 ">
+<br/>
+<time class="5 yr" datetime="2019-10-22T04:28:36Z" title="2019-10-22 04:28 ">
    Oktober 22, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Super!
-    <br>
+    <br/>
      Danke für die Rückmeldung.
-     <br>
+     <br/>
       LG
-      <br>
+      <br/>
        Christian
-      </br>
-     </br>
-    </br>
+      
+     
+    
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="5 yr" datetime="2019-10-23T07:16:24Z" title="2019-10-23 07:16 ">
+<br/>
+<time class="5 yr" datetime="2019-10-23T07:16:24Z" title="2019-10-23 07:16 ">
    Oktober 23, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="31624" data-ipsquote-contentid="5331" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1571702661" data-ipsquote-userid="79719" data-ipsquote-username="ciko">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="31624" data-ipsquote-contentid="5331" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1571702661" data-ipsquote-userid="79719" data-ipsquote-username="ciko">
+<div class="ipsQuote_citation">
      On 22.10.2019 at 2:04 AM, ciko said:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Hallo Zusammen!
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Nachdem der Modemtausch nun schon eine gute Woche zurückliegt und das Problem seither nicht mehr aufgetreten ist lag es wohl an einem Hardware-Defekt.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Danke + Grüße
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Michael
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Super, dass in deinem Fall ein Hardwaretausch geholfen hat
     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
     &amp; danke für die Rückmeldung
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Christian_E
   </span>
-  <br/>
-  <time class="5 yr" datetime="2019-10-23T07:46:12Z" title="2019-10-23 07:46 ">
+<br/>
+<time class="5 yr" datetime="2019-10-23T07:46:12Z" title="2019-10-23 07:46 ">
    Oktober 23, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Alles andere hätte mich gewundert, weil das Modem sehr stabil läuft.
-    <br>
+    <br/>
      Aber gut so.
      <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
-    </br>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>

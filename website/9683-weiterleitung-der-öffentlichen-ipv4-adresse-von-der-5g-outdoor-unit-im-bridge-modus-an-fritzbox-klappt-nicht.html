@@ -1,160 +1,161 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Weiterleitung der öffentlichen IPV4-Adresse von der 5G Outdoor-Unit im Bridge-Modus an Fritzbox klappt nicht
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Weiterleitung der öffentlichen IPV4-Adresse von der 5G Outdoor-Unit im Bridge-Modus an Fritzbox klappt nicht
   </h1>
-  <span class="author">
+<span class="author">
    frankdsl
   </span>
-  <br/>
-  <time class="Okt 23" datetime="2024-10-23T06:20:00Z" title="2024-10-23 06:20 ">
+<br/>
+<time class="Okt 23" datetime="2024-10-23T06:20:00Z" title="2024-10-23 06:20 ">
    Oktober 23, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
+<p>
     habe seit ein paar Tagen 5G mit der bekannten ODU die direkt im Bridge-Modus (DHCP noch aktiv) an meiner FritzBox 7490 hängt. Läuft grundsätzlich, aber da ich DynDns nutzen will um vom aussen auf mein Netztwerk zugreifen zu können, muss ich ja die APN-Einstellungen anpassen. Folgende Einstellungen habe ich vorgenommen:
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     APN: business.gprsinternet
    </p>
-   <p>
+<p>
     Benutzername: t-mobile
    </p>
-   <p>
+<p>
     Kennwort: tm
    </p>
-   <p>
+<p>
     Authentifizierungstyp: PAP
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wird auch akzeptiert, die ODU startet neu und alle Lampen leuchten grün. Nur ist die Box nicht mehr erreichbar (192.168.0.1) und natürlich wird über die FritzBox auch keine Internetverbindung mehr hergestellt. Es bleibt dann nur noch der Werksreset über die APP (Bluetooth). Hotline weiß auch keinen Rat.
    </p>
-   <p>
+<p>
     Kann mir jemdan helfen?
    </p>
-   <p>
+<p>
     Danke!
    </p>
-   <p>
+<p>
     Lg
    </p>
-   <p>
+<p>
     Frank
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Okt 23" datetime="2024-10-23T06:43:54Z" title="2024-10-23 06:43 ">
+<br/>
+<time class="Okt 23" datetime="2024-10-23T06:43:54Z" title="2024-10-23 06:43 ">
    Oktober 23, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99582-frankdsl/?do=hovercard" data-mentionid="99582" href="https://community.magenta.at/profile/99582-frankdsl/" rel="">
      @frankdsl
     </a>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Ich bin zwar kein Experte auf dem Gebiet aber ich versuche gerne mal zu helfen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wie ess scheint, liegt das Problem möglicherweise mit den APN-Einstellungen oder der Bridge-Konfiguration der ODU zusammenhängt, besonders wenn nach der Änderung die Verbindung zur FritzBox nicht mehr funktioniert.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hier einige Ansätze, die du ausprobieren könntest:
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      ODU im Bridge-Modus prüfen:
     </strong>
     Sicherstellen, dass die ODU wirklich im Bridge-Modus arbeitet und nicht im Router-Modus. Im Bridge-Modus sollte die FritzBox die öffentliche IP-Adresse vom Mobilfunkanbieter erhalten, während im Router-Modus die ODU eine interne IP vergibt.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      FritzBox IP-Konfiguration prüfen:
     </strong>
     Da die ODU im Bridge-Modus ist, sollte die FritzBox selbst die Internetverbindung managen. Stelle sicher, dass die FritzBox für den WAN-Anschluss richtig konfiguriert ist, insbesondere dass sie die IP-Adresse per DHCP bezieht und nicht eine statische IP festlegt.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      APN-Korrektheit:
     </strong>
     Du hast "business.gprsinternet" als APN und t-mobile als Benutzernamen und Passwort gewählt. Diese Daten sind korrekt für einen Business-Anschluss. Wenn du allerdings einen Standardanschluss nutzt, solltest du den APN eventuell auf „internet.t-mobile“ setzen und den Benutzernamen/Passwort weglassen, da diese oft leer bleiben. (-&gt;
     <strong>
-     <a href="https://www.magenta.at/faq/entry/~technische-anfrage~smartphone~funktionen%26dienste/~Internet_APN~master" rel="external nofollow">
+<a href="https://www.magenta.at/faq/entry/~technische-anfrage~smartphone~funktionen%26dienste/~Internet_APN~master" rel="external nofollow">
       APN Daten
      </a>
-    </strong>
+</strong>
     )
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      DynDNS-Konfiguration in der FritzBox:
     </strong>
     Wenn der Zugriff von außen das Hauptziel ist, sollte die FritzBox die öffentliche IP vom Mobilfunknetz empfangen. Stelle sicher, dass die DynDNS-Einstellungen in der FritzBox korrekt sind und die FritzBox die richtige IP-Adresse übermittelt.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Eventuell Firewall oder NAT-Einstellungen prüfen:
     </strong>
     Manchmal blockiert die ODU oder der Anbieter eingehenden Verkehr, besonders bei Mobilfunkverbindungen. Möglicherweise musst du zusätzlich eine statische IP oder einen APN mit öffentlicher IP anfordern. (-&gt; 0676 200 7777)
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      ODU IP-Reichweite überprüfen:
     </strong>
     Wenn du nicht mehr auf die ODU zugreifen kannst, könnte es sein, dass sie in einem anderen IP-Bereich ist als dein lokales Netzwerk. Stelle sicher, dass die FritzBox im gleichen IP-Bereich wie die ODU bleibt, oder setze die ODU auf eine statische IP, die du weiterhin erreichen kannst.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Teste diese Schritte einmal durch und gib mir Bescheid, ob eine der Maßnahmen das Problem gelöst hat!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Liebe Grüße, JD.
     <span class="ipsEmoji">
      🙂
     </span>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>

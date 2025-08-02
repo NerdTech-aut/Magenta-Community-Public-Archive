@@ -1,302 +1,303 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Probleme mit ZTE MC888 Pro im Bridge-Mode und UniFi Cloud Gateway – Private IPs und Routingfehler.
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Probleme mit ZTE MC888 Pro im Bridge-Mode und UniFi Cloud Gateway – Private IPs und Routingfehler.
   </h1>
-  <span class="author">
+<span class="author">
    mrphoenix
   </span>
-  <br/>
-  <time class="Jan 10" datetime="2025-01-10T17:16:40Z" title="2025-01-10 17:16 ">
+<br/>
+<time class="Jan 10" datetime="2025-01-10T17:16:40Z" title="2025-01-10 17:16 ">
    Januar 10
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Community,
    </p>
-   <p>
+<p>
     Ich bin seit Weihnachten stolzer Besitzer eines UI UCGs Ultra und eine ZTE mc888 Pro Routers.
    </p>
-   <p>
+<p>
     Der Router läuft im Bridge-Mode, das UCG ist am "WAN"-Port des Routers mit ihrem eigenen WAN-Port verbunden.
     <br/>
     Außerdem ist der Router auf den Business APN von Magenta eingestellt.
    </p>
-   <p>
+<p>
     Rebootet man den Router und DANACH das UCG, liegt eine offizielle IP an und WebServer Publishings funktionieren wunderbar.
    </p>
-   <p>
+<p>
     Verliert man die Internet-Verbindung bzw. rebootet man den Router, bleibt relativ oft die vorherige, offizielle IP am UCG stehen. Ein Routing ist allerdings nicht mehr möglich und der Webserver nicht mehr erreichbar.
    </p>
-   <p>
+<p>
     Oft kommt es auch vor, das nach einem Reboot des Routers, eine private IP (192.168.1.2) am UCG anliegt.
    </p>
-   <p>
+<p>
     Rebootet man das UCG in einem der beiden Fälle ist wieder alles gut und man sieht die offizielle IP am UCG und das Webpublishing läuft wieder problemlos.
    </p>
-   <p>
+<p>
     Leider tritt dieses Problem ein, maximal zweimal pro Tag auf, was etwas nervig ist.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Zum Einen: Wo kommt die private IP ohne Config-Änderung im Bridge-Mode her?
    </p>
-   <p>
+<p>
     Zum Anderen: Ein Outbound-Routing ist immer machbar, was mit einer privaten IP am WAN-Interface gar nicht möglich sein sollte!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hat von Euch vielleicht jemand eine Idee, was hier schief läuft?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     UCG-Version 4.1.13 (Network auf 9.0.108)
    </p>
-   <p>
+<p>
     ZTE-Router: Hardware-Version v1 auf aktueller Firmware.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Schöne Grüße,
     <br/>
     Philipp
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Jan 13" datetime="2025-01-13T11:28:47Z" title="2025-01-13 11:28 ">
+<br/>
+<time class="Jan 13" datetime="2025-01-13T11:28:47Z" title="2025-01-13 11:28 ">
    Januar 13
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94605-mrphoenix/?do=hovercard" data-mentionid="94605" href="https://community.magenta.at/profile/94605-mrphoenix/" rel="">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94605-mrphoenix/?do=hovercard" data-mentionid="94605" href="https://community.magenta.at/profile/94605-mrphoenix/" rel="">
      @mrphoenix
     </a>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Hallo Philipp,
     <span class="ipsEmoji">
      👋
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     vielen Dank für deine ausführliche Beschreibung des Problems. Es scheint, dass hier mehrere mögliche Ursachen in Betracht kommen, die wir gemeinsam analysieren können. Ich versuche, dir einige Ansätze zur Problemlösung zu geben:
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      1. Ursache der privaten IP-Adresse (192.168.x.x) im Bridge-Modus
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Im Bridge-Modus sollte der ZTE MC888 Pro Router eigentlich keine private IP-Adresse an das UniFi Cloud Gateway (UCG) weitergeben, sondern die öffentliche IP-Adresse direkt durchreichen. Wenn dennoch eine private IP erscheint, könnten folgende Ursachen infrage kommen:
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      - DHCP-Konflikt:
     </strong>
     Der Router könnte in bestimmten Situationen doch noch als DHCP-Server agieren und eine private IP vergeben. Dies könnte ein Firmware- oder Konfigurationsproblem sein.
    </p>
-   <p>
-    <strong>
+<p>
+<strong>
      - Zwischenzustand beim Neustart:
     </strong>
     Nach einem Neustart des Routers kann es passieren, dass die DHCP-Verbindung nicht korrekt aufgebaut wird und der Router temporär eine interne IP-Adresse vergibt.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      2. Outbound-Routing mit privater IP
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Dass Outbound-Traffic trotz einer privaten IP funktioniert, ist ungewöhnlich. Dies könnte darauf hindeuten, dass der Router im Hintergrund NAT verwendet oder dass es einen Fehler in der Bridge-Modus-Konfiguration gibt.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      3. Lösungsvorschläge
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Hier sind einige Schritte, die du ausprobieren kannst:
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Firmware und Einstellungen prüfen
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     - Stelle sicher, dass sowohl der ZTE MC888 Pro als auch das UCG auf der neuesten Firmware-Version laufen.
    </p>
-   <p>
+<p>
     - Überprüfe die Einstellungen im Bridge-Modus des ZTE-Routers. Deaktiviere ggf. den DHCP-Server manuell, falls diese Option verfügbar ist.
    </p>
-   <p>
-    <strong>
+<p>
+<strong>
      Reihenfolge beim Neustart
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     - Es scheint, dass die Reihenfolge beim Neustart entscheidend ist: Zuerst den Router neu starten und danach das UCG.
    </p>
-   <p>
+<p>
     - Du könntest versuchen, diese Reihenfolge automatisiert zu gestalten, z. B. mit einer programmierbaren Steckdose.
    </p>
-   <p>
-    <strong>
+<p>
+<strong>
      Statische IP-Adressen testen
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     - Falls möglich, weise dem WAN-Port des UCG eine statische öffentliche IP-Adresse zu (sofern dein Anbieter dies unterstützt). Alternativ kannst du den WAN-Port auf DHCP belassen und sicherstellen, dass der Router korrekt konfiguriert ist.
    </p>
-   <p>
-    <strong>
+<p>
+<strong>
      APN-Einstellungen überprüfen
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     - Stelle sicher, dass der
     <strong>
-     <a href="https://www.magenta.at/faq/entry/~technische-anfrage~smartphone~funktionen%26dienste/~Internet_APN~master" rel="external nofollow">
+<a href="https://www.magenta.at/faq/entry/~technische-anfrage~smartphone~funktionen%26dienste/~Internet_APN~master" rel="external nofollow">
       Business APN
      </a>
-    </strong>
+</strong>
     korrekt konfiguriert ist (z. B. IPv4-only). Ein fehlerhafter APN kann ebenfalls zu Problemen führen.
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      Support kontaktieren
     </strong>
     (0676 200 7777, täglich 8:00 bis 22:00 Uhr oder 24/7 Live-Chat in der Mein Magenta App)
    </p>
-   <p>
+<p>
     Sollte das Problem weiterhin bestehen, kontaktiere bitte den technischen Support von Magenta oder ZTE. Es könnte sich um ein spezifisches Problem mit der Hardware oder Firmware handeln.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich hoffe, diese Ansätze helfen dir weiter! Falls du weitere Fragen hast oder Unterstützung benötigst, lass es mich wissen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Beste Grüße, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    renecapo
   </span>
-  <br/>
-  <time class="Jan 16" datetime="2025-01-16T13:00:02Z" title="2025-01-16 13:00 ">
+<br/>
+<time class="Jan 16" datetime="2025-01-16T13:00:02Z" title="2025-01-16 13:00 ">
    Januar 16
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Habe exakt dasselbe Problem MC 888 pro vor Fritz box in Bride Mode.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bei IP Wechsel oder Neustart des Routers bekommt die Fritzbox  192.168.1.2   zugewiesen und keine öffentliche IP mehr.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     CR_TMOATMC888PROV1.0.1
     <br/>
     B01
    </p>
-   <p>
+<p>
     MC888 Pro_HWV1.0
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Erst durch abstecken des Netzwerkkabels am Wan Port und erneutes anstecken bekomm ich wieder die öffentliche IP.
    </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    Klaximaxi43
   </span>
-  <br/>
-  <time class="Mär 30" datetime="2025-03-30T06:18:28Z" title="2025-03-30 06:18 ">
+<br/>
+<time class="Mär 30" datetime="2025-03-30T06:18:28Z" title="2025-03-30 06:18 ">
    März 30
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Nimm mal die 3 apn ist die beste und schnellste auch siehe LTE Forum auch
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     1. internet.t-mobile.at -&gt; CGnat, IPv4&amp;iPv6
    </p>
-   <p>
+<p>
     2. business.gprsinternet -&gt; Public IP, IPv4
    </p>
-   <p>
+<p>
     3. business.t-mobile.at -&gt;Public IP, IPv6
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bzw vergesst doch jetzt alle mal den Bridge Modus verstehe die Welt nicht mehr hehe
     <span class="ipsEmoji">
      😂
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Mache doch einen AP draus easy und 100% Geschwindigkeit und passt immer alles ! Mfg
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="Mär 30" datetime="2025-03-30T06:20:02Z" title="2025-03-30 06:20 ">
       März 30
      </time>
      von Klaximaxi43
     </strong>
-   </span>
-  </div>
-  <hr/>
- </body>
+</span>
+</div>
+<hr/>
+</body>
 </html>

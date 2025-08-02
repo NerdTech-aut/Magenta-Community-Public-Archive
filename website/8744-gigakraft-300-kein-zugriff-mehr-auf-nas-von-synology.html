@@ -1,95 +1,96 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Gigakraft 300 - kein Zugriff mehr auf NAS von Synology
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Gigakraft 300 - kein Zugriff mehr auf NAS von Synology
   </h1>
-  <span class="author">
+<span class="author">
    grillchef
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-05-08T09:59:23Z" title="2023-05-08 09:59 ">
+<br/>
+<time class="timestamp" datetime="2023-05-08T09:59:23Z" title="2023-05-08 09:59 ">
    Mai 8, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo in die Runde!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe vor ca. 1,5 Monaten mein altes Internetprodukt auf Gigakraft 300 umgestellt.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Seit der Umstellung habe ich von extern keinen Zugriff mehr auf meine Synology NAS. Bis dahin war das nie ein Problem.
    </p>
-   <p>
+<p>
     Wenn ich mir meine externe IP Adresse anschaue dann sehe ich, dass ich keine eigenen IP mehr habe, sondern nur mehr mit der IP nach "außen" gehe, mit der wohl alle Magenta Kabelkunden nach außen gehen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Lange Rede, kurzer Sinn: Wie kann ich mit Gigakraft 300 wieder von extern auf meine Synology NAS zugreifen? Mein Anruf bei der technischen Hotline war dahingehend keine Hilfe.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Mein Modem ist das "Home Box Fiber" Ding.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Über Hilfe bin ich sehr dankbar.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     LG
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Grill
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-05-08T13:57:32Z" title="2023-05-08 13:57 ">
+<br/>
+<time class="timestamp" datetime="2023-05-08T13:57:32Z" title="2023-05-08 13:57 ">
    Mai 8, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/97231-grillchef/?do=hovercard" data-mentionid="97231" href="https://community.magenta.at/profile/97231-grillchef/" rel="">
      @grillchef
     </a>
-   </p>
-   <p>
+</p>
+<p>
     Ich schätze du meinst die IPv4 Adresse.
    </p>
-   <p>
+<p>
     Standardmäßig gibt es bei den Anschlüssen keine öffentliche IPv4 Adresse. Und in Kombination mit der Home Box Fiber wird es wahrscheinlich keine Möglichkeit geben von IPv6 auf IPv4 umzustellen. Mit IPv6 wäre es theoretisch möglich von extern zuzugreifen, falls der andere Internet-Anschluss auch IPv6 hat. Aber da auf der Home Box Fiber keine Port-Freigaben für IPv6 manuell konfiguriert werden können (nur W-Lan SSID und Passwort konfigurierbar) müsste die NAS dem Router bekannt geben welche Ports dieser freigeben soll (UPnP/PCP).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Falls du von allen Internet-Anschlüssen auf deine NAS zugreifen möchtest (egal ob IPv6 untersützt wird) müsstest du entweder auf eine Fiber Box 2 oder Fritz!Box 6660 Cable (letztere mit viel Glück in einem Shop im direkten Austausch gegen die aktuelle Box). Und nach dem Austausch den Anschluss über den technischen Kundenservice auf IPv4 umstellen lassen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Oder du verwendest so etwas wie
     <a href="https://www.twingate.com/" rel="external nofollow">
      Twingate
@@ -100,137 +101,137 @@
     </a>
     und der Connector kann z.B. auf einer Synology NAS installiert werden:
    </p>
-   <p>
-    <a href="https://www.twingate.com/docs/connector-deployment" rel="external nofollow">
+<p>
+<a href="https://www.twingate.com/docs/connector-deployment" rel="external nofollow">
      https://www.twingate.com/docs/connector-deployment
     </a>
-   </p>
-   <p>
+</p>
+<p>
     Die Lösung benötigt eine App am Gerät von welchem der Fernzugriff erfolgen soll.
    </p>
-   <p>
+<p>
     LG NTM
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2023-05-08T13:58:36Z" title="2023-05-08 13:58 ">
       Mai 8, 2023
      </time>
      von NTM
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    grillchef
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-05-08T18:46:09Z" title="2023-05-08 18:46 ">
+<br/>
+<time class="timestamp" datetime="2023-05-08T18:46:09Z" title="2023-05-08 18:46 ">
    Mai 8, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Vielen Dank für die ausführliche Rückmeldung. Leider gibt es für Synology kein Docker Paket mehr, das für die Installation von Twingate notwendig wäre.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Somit bleibt mir wohl nur der Umstieg auf ein anderes Modem und das Freischalten von IPv4.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ist das kostenfrei möglich? Weißt du das?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke und LG
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-05-08T20:36:38Z" title="2023-05-08 20:36 ">
+<br/>
+<time class="timestamp" datetime="2023-05-08T20:36:38Z" title="2023-05-08 20:36 ">
    Mai 8, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="53679" data-ipsquote-contentid="8744" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1683571569" data-ipsquote-userid="97231" data-ipsquote-username="grillchef">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="53679" data-ipsquote-contentid="8744" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1683571569" data-ipsquote-userid="97231" data-ipsquote-username="grillchef">
+<div class="ipsQuote_citation">
      vor 1 Stunde schrieb grillchef:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Ist das kostenfrei möglich? Weißt du das?
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Ja ist es.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Funkie
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-05-11T19:07:09Z" title="2023-05-11 19:07 ">
+<br/>
+<time class="timestamp" datetime="2023-05-11T19:07:09Z" title="2023-05-11 19:07 ">
    Mai 11, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo
    </p>
-   <p>
+<p>
     Ab kommenden Montag kann man IPv4 für die Home Box Fiber freischalten lassen.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    grillchef
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-05-11T19:31:52Z" title="2023-05-11 19:31 ">
+<br/>
+<time class="timestamp" datetime="2023-05-11T19:31:52Z" title="2023-05-11 19:31 ">
    Mai 11, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <img alt="&gt;:(" data-emoticon="" height="20" src="images/emoticons/tma_angry-o.png" srcset="images/emoticons/tma_angry-o@2x.png 2x" title="&gt;:(" width="20"/>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<img alt="&gt;:(" data-emoticon="" height="20" src="images/emoticons/tma_angry-o.png" srcset="images/emoticons/tma_angry-o@2x.png 2x" title="&gt;:(" width="20"/>
     Wirklich? Super!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe deswegen heute ein neues Modem zugeschickt bekommen, als Ersatz für meine Fiber Box.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    grillchef
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-05-11T19:57:43Z" title="2023-05-11 19:57 ">
+<br/>
+<time class="timestamp" datetime="2023-05-11T19:57:43Z" title="2023-05-11 19:57 ">
    Mai 11, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <img alt="&gt;:(" data-emoticon="" height="20" src="images/emoticons/tma_angry-o.png" srcset="images/emoticons/tma_angry-o@2x.png 2x" title="&gt;:(" width="20"/>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<img alt="&gt;:(" data-emoticon="" height="20" src="images/emoticons/tma_angry-o.png" srcset="images/emoticons/tma_angry-o@2x.png 2x" title="&gt;:(" width="20"/>
     Wirklich? Super!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe deswegen heute ein neues Modem zugeschickt bekommen, als Ersatz für meine Fiber Box.
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

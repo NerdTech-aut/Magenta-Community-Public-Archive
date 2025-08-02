@@ -1,89 +1,90 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    DHCP-Bug in Firmware 1.04, Fiber Box 2 (TG3492MT-AT, Arris)
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    DHCP-Bug in Firmware 1.04, Fiber Box 2 (TG3492MT-AT, Arris)
   </h1>
-  <span class="author">
+<span class="author">
    Erebos
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-08-26T11:24:34Z" title="2022-08-26 11:24 ">
+<br/>
+<time class="timestamp" datetime="2022-08-26T11:24:34Z" title="2022-08-26 11:24 ">
    August 26, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Magenta Gemeinde!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Firmware 1.04 DHCP-Bug: Mit aktiviertem DHCP-Server können keine IP-Adressen außerhalb des DHCP IP-Pools (Start der lokalen Adresse plus Anzahl der Geräte) unter Portweiterleitung (Erweiterte Einstellungen/Sicherheit) definiert werden (Fehlermeldung: ... ist keine gültige IP-Adresse, siehe Anhang). In der Regel werden Portweiterleitungen (port forwarding) für statische (fixe) IP-Adressen definiert. Ich könnte die MAC-Adressen in die "Reservierte Regel" hinzufügen, aber eine statische Vergabe der IP-Adressen außerhalb der DHCP-Range war auch vorher möglich. Dieses Verhalten ist sogar mit deaktiviertem (!) DHCP-Server reproduzierbar.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Meine Lösung: DHCP IP-Range (Pool) erweitern, Port-Forwarding einrichten und danach den IP-Pool wieder auf Ursprung verkleinern. Auf diesem Weg erfolgt keine Prüfung.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Besten Dank im Voraus
    </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4048" href="images/uploads/6308ad030280b_Bildschirmfotovon2022-08-2612-13-27_edit.png.a1a92ac05c71e0698b4ab15b88e6231d.png" rel="">
-     <img alt="Bildschirmfoto von 2022-08-26 12-13-27_edit.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4048" src="images/uploads/6308ad0369028_Bildschirmfotovon2022-08-2612-13-27_edit.thumb.png.3cf0e401533ff7a76d4de1fce8054a93.png"/>
-    </a>
-   </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4049" href="images/uploads/6308ad03b3bbe_Bildschirmfotovon2022-08-2612-15-19.png.4a552c235b1c1af5b3bd1400d56971de.png" rel="">
-     <img alt="Bildschirmfoto von 2022-08-26 12-15-19.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4049" src="images/uploads/6308ad0409cc8_Bildschirmfotovon2022-08-2612-15-19.thumb.png.5447d88aa736ab88db15973e49703abc.png"/>
-    </a>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" data-fileid="4048" href="images/uploads/6308ad030280b_Bildschirmfotovon2022-08-2612-13-27_edit.png.a1a92ac05c71e0698b4ab15b88e6231d.png" rel="">
+<img alt="Bildschirmfoto von 2022-08-26 12-13-27_edit.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4048" src="images/uploads/6308ad0369028_Bildschirmfotovon2022-08-2612-13-27_edit.thumb.png.3cf0e401533ff7a76d4de1fce8054a93.png"/>
+</a>
+</p>
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" data-fileid="4049" href="images/uploads/6308ad03b3bbe_Bildschirmfotovon2022-08-2612-15-19.png.4a552c235b1c1af5b3bd1400d56971de.png" rel="">
+<img alt="Bildschirmfoto von 2022-08-26 12-15-19.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4049" src="images/uploads/6308ad0409cc8_Bildschirmfotovon2022-08-2612-15-19.thumb.png.5447d88aa736ab88db15973e49703abc.png"/>
+</a>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2022-08-26T11:43:14Z" title="2022-08-26 11:43 ">
       August 26, 2022
      </time>
      von Erebos
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-08-30T08:43:21Z" title="2022-08-30 08:43 ">
+<br/>
+<time class="timestamp" datetime="2022-08-30T08:43:21Z" title="2022-08-30 08:43 ">
    August 30, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/94045-erebos/?do=hovercard" data-mentionid="94045" href="https://community.magenta.at/profile/94045-erebos/" rel="">
      @Erebos
     </a>
     ,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     danke für die Infos. Ich habe unsere Techniker*innen in Kenntnis gesetzt.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     LG JD.
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

@@ -1,82 +1,83 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Kann Tracking Area Code nicht finden
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Kann Tracking Area Code nicht finden
   </h1>
-  <span class="author">
+<span class="author">
    schpenza
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-07T11:48:53Z" title="2023-02-07 11:48 ">
+<br/>
+<time class="timestamp" datetime="2023-02-07T11:48:53Z" title="2023-02-07 11:48 ">
    Februar 7, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo in die Runde,
    </p>
-   <p>
+<p>
     ich nutze seit einiger Zeit den Speedport Pro Plus mit der LTE-Ausfallsicherung. Da ich an meinem Anschluss max. 50 MBit empfangen kann, hatte ich mir davon schon eine Geschwindigkeitssteigerung erhofft. Leider war das nicht der Fall, ich vermute vor allem wegen einer schlechten Signalqualität (-110). Ich bin was das angeht aber auch absoulter Laie...
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Nun ist ja die 5G-Option in Verbindung mit dem Speedport Smart 4 und der externen 5G-Antenne verfügbar. Da ich monatlich nur etwa 3 € mehr zahle, wollte ich das mal ausprobieren und erhoffe mir von der externen Antenne eine stabilere und schnellere Verbindung.
    </p>
-   <p>
+<p>
     Um die Antenne bestmöglich an der Außenwand anbringen zu können, wollte ich herausfinden, mit welchem Sendemast der Router sich verbindet. Leider kann ich auch über das "versteckte" Menü des Routers (...engineer/html/lte.html) nicht den Tracking Area Code finden.
    </p>
-   <p>
+<p>
     Könnt ihr mir sagen, wo ich den entdecken kann?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke schon im Voraus!
    </p>
-   <p>
-   </p>
-   <p>
-    <img alt="63e239d70acc1_Screenshot2023-02-07124514.png.e649e85724437c4b7d531466a41d9633.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4512" src="images/uploads/63e239d70acc1_Screenshot2023-02-07124514.png.e649e85724437c4b7d531466a41d9633.png"/>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+<p>
+<img alt="63e239d70acc1_Screenshot2023-02-07124514.png.e649e85724437c4b7d531466a41d9633.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4512" src="images/uploads/63e239d70acc1_Screenshot2023-02-07124514.png.e649e85724437c4b7d531466a41d9633.png"/>
+</p>
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-07T14:31:48Z" title="2023-02-07 14:31 ">
+<br/>
+<time class="timestamp" datetime="2023-02-07T14:31:48Z" title="2023-02-07 14:31 ">
    Februar 7, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96039-schpenza/?do=hovercard" data-mentionid="96039" href="https://community.magenta.at/profile/96039-schpenza/" rel="">
      @schpenza
     </a>
-   </p>
-   <p>
+</p>
+<p>
     Du bist hier im Forum der Magenta Telekom Österreich gelandet. Das Forum der Telekom Deutschland wäre dieses hier:
     <a href="https://telekomhilft.telekom.de/" rel="external nofollow">
      https://telekomhilft.telekom.de/
     </a>
     Aber da dieses Thema nicht nur speziell auf die Telekom Deutschland anzuwenden ist, hier meine Antwort dazu:
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Der Tracking Area Code (TAC) würde dir nicht helfen, da mehrere Sendemasten (eNodeB), welche der selben Region zugeordnet sind, denselben TAC verwenden. Damit könntest du also nicht bestimmen mit welchem Sendemasten dein Speedport Pro Plus genau verbunden ist.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Aber dieses Menü verrät bereits mit welchem Sendemast dein Speedport Pro Plus verbunden ist und zwar mit der Cell ID. Die Cell ID ist die genaue ID der Zelle mit welcher der Router verbunden. In diesem Fall handelt es sich um eine Band 3 Zelle (als Primäre Zelle aka. Primary Component Carrier). Der Speedport Pro Plus unterstützt auch zweifache Carrier Aggregation, aber wie bei vielen Geräten werden keine Informationen zur zusätzlichen Zelle (Secondary Component Carrier) ausgegeben. Von der Cell ID muss dann nur noch die eNodeB ID (die ID des gesamten Sendemasten) herausgefunden werden. Dies kann mit folgendem Tool erledigt werden:
     <a href="https://www.cellmapper.net/enbid" rel="external nofollow">
      https://www.cellmapper.net/enbid
@@ -87,38 +88,38 @@
     </a>
     im Menü (oben Links) unter "Search" -&gt; "Tower Search" suchen und wirst den Sendemasten mit der eNB ID 110368 erfolgreich finden.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     TLDR: Link zum Sendemast, mit welchem dein Speedport Pro Plus verbunden ist:
     <a href="https://www.cellmapper.net/map?MCC=262&amp;MNC=1&amp;type=LTE&amp;latitude=52.08775181227563&amp;longitude=8.726014234279681&amp;zoom=17.272210204429697&amp;showTowers=true&amp;showIcons=false&amp;showTowerLabels=true&amp;clusterEnabled=false&amp;tilesEnabled=true&amp;showOrphans=false&amp;showNoFrequencyOnly=false&amp;showFrequencyOnly=false&amp;showBandwidthOnly=false&amp;DateFilterType=Last&amp;showHex=false&amp;showVerifiedOnly=false&amp;showUnverifiedOnly=false&amp;showLTECAOnly=false&amp;showENDCOnly=false&amp;showBand=0&amp;showSectorColours=true&amp;mapType=roadmap&amp;darkMode=false" rel="external nofollow">
      https://www.cellmapper.net/map?MCC=262&amp;MNC=1&amp;type=LTE&amp;latitude=52.08775181227563&amp;longitude=8.726014234279681&amp;zoom=17.272210204429697
     </a>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Dank den angergierten Personen bei dir in Deutschland, soll der Sendemast n78 und n28 5G haben.
    </p>
-   <p>
-    <br/>
+<p>
+<br/>
     LG NTM
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Tipp: Auf Cellmapper ist der TAC als "Region" bei jedem Sendemasten (eNodeB) angegeben. Klicke ein paar Sendmasten an, um zu sehen, wie sich die TAC-Angabe ändert. Innerhalb der Ortschaft und südlich davon haben die Sendemasten denselben TAC. Nördlich auf der anderen Seite der A2 haben die Sendemasten einen anderen TAC.
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2023-02-07T14:34:35Z" title="2023-02-07 14:34 ">
       Februar 7, 2023
      </time>
      von NTM
     </strong>
-   </span>
-  </div>
-  <hr/>
- </body>
+</span>
+</div>
+<hr/>
+</body>
 </html>

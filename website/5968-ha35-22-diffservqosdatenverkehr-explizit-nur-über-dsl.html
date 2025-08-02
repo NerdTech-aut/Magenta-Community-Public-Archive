@@ -1,71 +1,72 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    HA35-22 DiffServ/QoS/Datenverkehr explizit nur über DSL ?
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    HA35-22 DiffServ/QoS/Datenverkehr explizit nur über DSL ?
   </h1>
-  <span class="author">
+<span class="author">
    Cebe
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-07-17T00:18:13Z" title="2020-07-17 00:18 ">
+<br/>
+<time class="4 yr" datetime="2020-07-17T00:18:13Z" title="2020-07-17 00:18 ">
    Juli 17, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo, habe seit einigen Monaten Magenta Hybrid mit dem HA35-22 Router. Weil der Ping seit einiger Zeit jetzt viel höher als früher ist, hab ich mich bereits an die hotline gewandt. Dort hats geheisen, mich wird ein Techniker anrufen, aber da ich schon eine Woche warte hab ich selber mal ein bisschen rumgesurft.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Sache ist die, anscheinend ist der Ping über Hybrid schlechter als über DSL. Das kann man testen wenn man die Sim mal rausnimmt, was ich auch getan habe, und tatsächlich, der Ping ist dann um fast 10ms geringer!
    </p>
-   <p>
+<p>
     Da ich jetzt natürlich keinen Bock habe jedesmal die Sim rausziehen wenn ich was zocken will, hab ich mich umgeschaut und es gibt anscheinend eine Methode, den Router anzudeuten dass er spezielle Pakete nur über die DSL-Verbindung schicken soll. Habe dazu auch eine tolle Anleitung in den deutschen Telekom Forum gefunden (für den speedport hybrid):
     <a href="https://telekomhilft.telekom.de/t5/Telefonie-Internet/HowTo-Game-Optimierung-an-Hybrid-Anschluessen/td-p/1427935" rel="external nofollow">
      https://telekomhilft.telekom.de/t5/Telefonie-Internet/HowTo-Game-Optimierung-an-Hybrid-Anschluessen/td-p/1427935
     </a>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Nur, Problem, ich finde nirgends die Möglichkeit, eine Regel in den Router-Einstellungen dafür zu erstellen. Bei "Bonding Tunnel" stehen lediglich Infos, genauso wie bei "Bonding-Informationen". Hab es ohne die Regel, also nur mit den Windows QoS versucht, aber kein Erfolg.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Public IP hab ich aktivieren lassen. Ich hab dabei auch gefragt, ob es eine Option gibt um ein QoS freizuschalten, aber der Angestellte meinte, es sehe lediglich eine Option zum Freischalten, und dass iss die public ip. Was komisch ist, da die offizielle Anleitung (v2.1) explizit einen qos support erwähnt, hier mal rauszitiert: "A powerful firewall is provided with a flexible network configuration and quality of service (QoS) strategy, enabling different home devices to enjoy high-speed and high-quality broadband services."
    </p>
-   <p>
+<p>
     (Der Rest der Anleitung iss leider nicht brauchbar)
     <br/>
     Also würde ich mal davon ausgehen, dass die Funktionen von Magenta aus nicht zugänglich sind bzw. dass man über die Standart-Firmware nicht darauf zugreifen kann?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wäre super wenn mir hier jemand etwas mehr Klarheit geben könnte!
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="4 yr" datetime="2020-07-17T00:48:37Z" title="2020-07-17 00:48 ">
       Juli 17, 2020
      </time>
      von Cebe
     </strong>
-    <br>
+<br/>
      -
-    </br>
+    
    </span>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

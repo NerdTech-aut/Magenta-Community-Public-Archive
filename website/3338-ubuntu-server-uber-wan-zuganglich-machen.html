@@ -1,400 +1,401 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Ubuntu Server uber Wan zugänglich machen
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Ubuntu Server uber Wan zugänglich machen
   </h1>
-  <span class="author">
+<span class="author">
    DominikPatrick P.
   </span>
-  <br/>
-  <time class="9 yr" datetime="2016-04-13T22:00:00Z" title="2016-04-13 22:00 ">
+<br/>
+<time class="9 yr" datetime="2016-04-13T22:00:00Z" title="2016-04-13 22:00 ">
    April 13, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo, ich habe seit einiger Zeit das Problem, dass ich meinen Ubuntu-Server nur aus den Lan und nicht aus dem Wan erreichen kann. Ich habe bei meinem MyHomeNet Router die in Frage kommenden Ports bereits weitergeleitet, trotzdem funktioniert es nicht.
    </p>
-   <p>
+<p>
     Hat jemand einen Lösungsvorschlag parat?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="9 yr" datetime="2016-04-14T22:00:00Z" title="2016-04-14 22:00 ">
+<br/>
+<time class="9 yr" datetime="2016-04-14T22:00:00Z" title="2016-04-14 22:00 ">
    April 14, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Was genau möchtest du denn zugänglich machen bzw. welche Ports willst du denn weiterleiten?
    </p>
-   <p>
+<p>
     Wie sieht deine Port-Fortwarding Konfiguration aus?
    </p>
-   <p>
+<p>
     Lg
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    DominikPatrick P.
   </span>
-  <br/>
-  <time class="9 yr" datetime="2016-04-17T22:00:00Z" title="2016-04-17 22:00 ">
+<br/>
+<time class="9 yr" datetime="2016-04-17T22:00:00Z" title="2016-04-17 22:00 ">
    April 17, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ich brauche diverse Ports für Anwendungen und Programme und den Zugriff von außen (80,443,9,22, ...)
     <br/>
     Die Ports für die Anwendungen sind bereits weitergeleiten
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="9 yr" datetime="2016-04-17T22:00:00Z" title="2016-04-17 22:00 ">
+<br/>
+<time class="9 yr" datetime="2016-04-17T22:00:00Z" title="2016-04-17 22:00 ">
    April 17, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Okay, wie sieht denn die Weiterleitung im Detail aus? Hast du noch einen Router hinter deiner HomeNet Box stehen, oder nur die Box?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    DominikPatrick P.
   </span>
-  <br/>
-  <time class="9 yr" datetime="2016-04-18T22:00:00Z" title="2016-04-18 22:00 ">
+<br/>
+<time class="9 yr" datetime="2016-04-18T22:00:00Z" title="2016-04-18 22:00 ">
    April 18, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Habe nur den HomeNet Router und dann direkt den Server dran
    </p>
-   <p>
+<p>
     So sieht die Konfiguration aus:
    </p>
-   <p>
-   </p>
-   <table border="1" cellpadding="0" cellspacing="0" id="service_list">
-    <tbody>
-     <tr>
-      <th height="30" width="84">
+<p>
+</p>
+<table border="1" cellpadding="0" cellspacing="0" id="service_list">
+<tbody>
+<tr>
+<th height="30" width="84">
        Name
       </th>
-      <th width="80">
+<th width="80">
        WAN-Port
       </th>
-      <th width="98">
+<th width="98">
        LAN-IP-Adresse
       </th>
-      <th width="80">
+<th width="80">
        LAN-Port
       </th>
-      <th width="80">
+<th width="80">
        Protokoll
       </th>
-      <th width="87">
+<th width="87">
        Status
       </th>
-      <th width="105">
+<th width="105">
        Optionen
       </th>
-     </tr>
-     <tr class="user_add_line">
-      <td width="85">
+</tr>
+<tr class="user_add_line">
+<td width="85">
        ftb-cloud9
       </td>
-      <td>
+<td>
        35569
       </td>
-      <td>
+<td>
        192.168.8.2
       </td>
-      <td>
+<td>
        25569
       </td>
-      <td>
+<td>
        TCP/UDP
       </td>
-      <td>
+<td>
        An
       </td>
-      <td class="user_options clr_blue_hover" width="105">
-       <span class="button_edit_list clr_blue">
+<td class="user_options clr_blue_hover" width="105">
+<span class="button_edit_list clr_blue">
         Bearbeiten
        </span>
-       <span class="button_delete_list clr_blue">
+<span class="button_delete_list clr_blue">
         Löschen
        </span>
-      </td>
-     </tr>
-     <tr class="user_add_line">
-      <td width="85">
+</td>
+</tr>
+<tr class="user_add_line">
+<td width="85">
        Server1
       </td>
-      <td>
+<td>
        80
       </td>
-      <td>
+<td>
        192.168.8.110
       </td>
-      <td>
+<td>
        80
       </td>
-      <td>
+<td>
        TCP/UDP
       </td>
-      <td>
+<td>
        An
       </td>
-      <td class="user_options clr_blue_hover" width="105">
-       <span class="button_edit_list clr_blue">
+<td class="user_options clr_blue_hover" width="105">
+<span class="button_edit_list clr_blue">
         Bearbeiten
        </span>
-       <span class="button_delete_list clr_blue">
+<span class="button_delete_list clr_blue">
         Löschen
        </span>
-      </td>
-     </tr>
-     <tr class="user_add_line">
-      <td width="85">
+</td>
+</tr>
+<tr class="user_add_line">
+<td width="85">
        Server2
       </td>
-      <td>
+<td>
        443
       </td>
-      <td>
+<td>
        192.168.8.110
       </td>
-      <td>
+<td>
        443
       </td>
-      <td>
+<td>
        TCP
       </td>
-      <td>
+<td>
        An
       </td>
-      <td class="user_options clr_blue_hover" width="105">
-       <span class="button_edit_list clr_blue">
+<td class="user_options clr_blue_hover" width="105">
+<span class="button_edit_list clr_blue">
         Bearbeiten
        </span>
-       <span class="button_delete_list clr_blue">
+<span class="button_delete_list clr_blue">
         Löschen
        </span>
-      </td>
-     </tr>
-     <tr class="user_add_line">
-      <td width="85">
+</td>
+</tr>
+<tr class="user_add_line">
+<td width="85">
        WoL Rechner
       </td>
-      <td>
+<td>
        46000
       </td>
-      <td>
+<td>
        192.168.8.110
       </td>
-      <td>
+<td>
        9
       </td>
-      <td>
+<td>
        TCP/UDP
       </td>
-      <td>
+<td>
        An
       </td>
-      <td class="user_options clr_blue_hover" width="105">
-       <span class="button_edit_list clr_blue">
+<td class="user_options clr_blue_hover" width="105">
+<span class="button_edit_list clr_blue">
         Bearbeiten
        </span>
-       <span class="button_delete_list clr_blue">
+<span class="button_delete_list clr_blue">
         Löschen
        </span>
-      </td>
-     </tr>
-     <tr class="user_add_line">
-      <td width="85">
+</td>
+</tr>
+<tr class="user_add_line">
+<td width="85">
        MC
       </td>
-      <td>
+<td>
        25565
       </td>
-      <td>
+<td>
        192.168.8.106
       </td>
-      <td>
+<td>
        6969
       </td>
-      <td>
+<td>
        TCP/UDP
       </td>
-      <td>
+<td>
        An
       </td>
-      <td class="user_options clr_blue_hover" width="105">
-       <span class="button_edit_list clr_blue">
+<td class="user_options clr_blue_hover" width="105">
+<span class="button_edit_list clr_blue">
         Bearbeiten
        </span>
-       <span class="button_delete_list clr_blue">
+<span class="button_delete_list clr_blue">
         Löschen
        </span>
-      </td>
-     </tr>
-     <tr class="user_add_line">
-      <td width="85">
+</td>
+</tr>
+<tr class="user_add_line">
+<td width="85">
        OpenSSH
       </td>
-      <td>
+<td>
        22
       </td>
-      <td>
+<td>
        192.168.8.106
       </td>
-      <td>
+<td>
        22
       </td>
-      <td>
+<td>
        TCP/UDP
       </td>
-      <td>
+<td>
        An
       </td>
-      <td class="user_options clr_blue_hover" width="105">
-       <span class="button_edit_list clr_blue">
+<td class="user_options clr_blue_hover" width="105">
+<span class="button_edit_list clr_blue">
         Bearbeiten
        </span>
-       <span class="button_delete_list clr_blue">
+<span class="button_delete_list clr_blue">
         Löschen
        </span>
-      </td>
-     </tr>
-     <tr class="user_add_line">
-      <td width="85">
+</td>
+</tr>
+<tr class="user_add_line">
+<td width="85">
        rcon.port
       </td>
-      <td>
+<td>
        7070
       </td>
-      <td>
+<td>
        192.168.8.106
       </td>
-      <td>
+<td>
        7070
       </td>
-      <td>
+<td>
        TCP/UDP
       </td>
-      <td>
+<td>
        An
       </td>
-      <td class="user_options clr_blue_hover" width="105">
-       <span class="button_edit_list clr_blue">
+<td class="user_options clr_blue_hover" width="105">
+<span class="button_edit_list clr_blue">
         Bearbeiten
        </span>
-       <span class="button_delete_list clr_blue">
+<span class="button_delete_list clr_blue">
         Löschen
        </span>
-      </td>
-     </tr>
-    </tbody>
-   </table>
-  </div>
-  <hr/>
-  <span class="author">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="9 yr" datetime="2016-04-18T22:00:00Z" title="2016-04-18 22:00 ">
+<br/>
+<time class="9 yr" datetime="2016-04-18T22:00:00Z" title="2016-04-18 22:00 ">
    April 18, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Okay, sieht so aus als hättest du unterschiedliche Server stehen? Weil du hast hier auch unterschiedliche IP Adressen eingegeben.
    </p>
-   <p>
+<p>
     Die öffentliche IP Adresse passt auch? Hast du da alles richtig eingestellt? DDNS?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    DominikPatrick P.
   </span>
-  <br/>
-  <time class="9 yr" datetime="2016-04-19T22:00:00Z" title="2016-04-19 22:00 ">
+<br/>
+<time class="9 yr" datetime="2016-04-19T22:00:00Z" title="2016-04-19 22:00 ">
    April 19, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ja es hängen mehrere Server am Netz, aber die relevanten Adressen sind die auf 110.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="9 yr" datetime="2016-04-20T22:00:00Z" title="2016-04-20 22:00 ">
+<br/>
+<time class="9 yr" datetime="2016-04-20T22:00:00Z" title="2016-04-20 22:00 ">
    April 20, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Okay, und DDNS hast du auch eingerichtet? Also die öffentliche IP Adresse kriegst du?
    </p>
-   <p>
+<p>
     Geht keiner dieser Portweiterleitungen, oder nur ein paar (z.B.: 80, 443)?
    </p>
-   <p>
+<p>
     Die Einträge sehen ja gut aus, da kann ich keinen Fehler finden.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    DominikPatrick P.
   </span>
-  <br/>
-  <time class="9 yr" datetime="2016-04-20T22:00:00Z" title="2016-04-20 22:00 ">
+<br/>
+<time class="9 yr" datetime="2016-04-20T22:00:00Z" title="2016-04-20 22:00 ">
    April 20, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Habe das Problem gelöst, war so gescheit und habe vergessen dass ich das DDNS einstellen muss.
    </p>
-   <p>
+<p>
     Danke für die Hilfe
     <img alt="Smiley" class="dynImage maxSize_23x23" height="23" src="http://forum.t-mobile.at/common/js/ckeditor/plugins/smiley/images/regular_smile.png" title="Smiley" width="23"/>
-    <img alt="ja" class="dynImage maxSize_23x23" height="23" src="http://forum.t-mobile.at/common/js/ckeditor/plugins/smiley/images/thumbs_up.png" title="ja" width="23"/>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<img alt="ja" class="dynImage maxSize_23x23" height="23" src="http://forum.t-mobile.at/common/js/ckeditor/plugins/smiley/images/thumbs_up.png" title="ja" width="23"/>
+</p>
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="9 yr" datetime="2016-04-20T22:00:00Z" title="2016-04-20 22:00 ">
+<br/>
+<time class="9 yr" datetime="2016-04-20T22:00:00Z" title="2016-04-20 22:00 ">
    April 20, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Super, freut mich, dass ich helfen konnte
     <img alt="ja" class="dynImage maxSize_23x23" height="23" src="http://forum.t-mobile.at/common/js/ckeditor/plugins/smiley/images/thumbs_up.png" title="ja" width="23"/>
-    <img alt="Zwinkern" class="dynImage maxSize_23x23" height="23" src="http://forum.t-mobile.at/common/js/ckeditor/plugins/smiley/images/wink_smile.png" title="Zwinkern" width="23"/>
-   </p>
-  </div>
-  <hr/>
- </body>
+<img alt="Zwinkern" class="dynImage maxSize_23x23" height="23" src="http://forum.t-mobile.at/common/js/ckeditor/plugins/smiley/images/wink_smile.png" title="Zwinkern" width="23"/>
+</p>
+</div>
+<hr/>
+</body>
 </html>

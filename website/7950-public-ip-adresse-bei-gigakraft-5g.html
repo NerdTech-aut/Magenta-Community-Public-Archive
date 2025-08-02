@@ -1,143 +1,144 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    public ip adresse bei gigakraft 5G
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    public ip adresse bei gigakraft 5G
   </h1>
-  <span class="author">
+<span class="author">
    mtp
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-07-30T14:27:24Z" title="2022-07-30 14:27 ">
+<br/>
+<time class="timestamp" datetime="2022-07-30T14:27:24Z" title="2022-07-30 14:27 ">
    Juli 30, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     hallo,
    </p>
-   <p>
+<p>
     versuche seit längerem meinen lokalen web-server via duckdns öffentlich zugänglich zu machen, vergeblich.
    </p>
-   <p>
+<p>
     gigakraft 5G 250 SIM in Fritzbox 6890 LTE
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     ich habe eine fritzbox welche mir als öffentliche IP adresse eine 10.179.176.xx Adresse anzeigt.
    </p>
-   <p>
+<p>
     die URL whatsmyip.org liefert mir aber die ipadresse 213.162.73.xx.
    </p>
-   <p>
+<p>
     warum sind da zwei unterschiedliche Adressen möglich, woher kommt das?
    </p>
-   <p>
+<p>
     danke
    </p>
-   <p>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<p>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2022-07-30T14:28:23Z" title="2022-07-30 14:28 ">
       Juli 30, 2022
      </time>
      von mtp
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-07-30T15:38:13Z" title="2022-07-30 15:38 ">
+<br/>
+<time class="timestamp" datetime="2022-07-30T15:38:13Z" title="2022-07-30 15:38 ">
    Juli 30, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey
     <span>
-     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/93860-mtp/?do=hovercard" data-mentionid="93860" href="https://community.magenta.at/profile/93860-mtp/" rel="">
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/93860-mtp/?do=hovercard" data-mentionid="93860" href="https://community.magenta.at/profile/93860-mtp/" rel="">
       @mtp
      </a>
-     <br/>
+<br/>
      Die zwei verschiedenen IP-Adressen lassen sich damit erklären, dass im Mobilfunk standardmäßig, wie auch bei den Routern zu Hause, Netzwerkadressübersetzung (NAT) in Verwendung ist, um öffentliche IP-Adressen zu sparen.
      <br/>
      Um das NAT auf Netzbetreiberebene zu umgehen (CG-NAT) und eine öffentlich erreichbare IP-Adresse zu bekommen muss bei Magenta ein anderer Zugangspunkt (APN) auf dem Router konfiguriert werden. Die folgenden Daten müssen bei der Fritz!Box unter "Internet" -&gt; "Zugangsdaten" -&gt; "Internetzugang" eingetragen werden:
     </span>
-   </p>
-   <ul>
-    <li>
+</p>
+<ul>
+<li>
      APN: business.gprsinternet
     </li>
-    <li>
-     <span>
+<li>
+<span>
       Benutzer: t-mobile
      </span>
-    </li>
-    <li>
-     <span>
+</li>
+<li>
+<span>
       Kennwort: tm
      </span>
-    </li>
-   </ul>
-   <p>
-    <span>
+</li>
+</ul>
+<p>
+<span>
      Dann wird der Fritz!Box eine öffentliche IP Adresse zugeteilt werden.
      <br/>
      LG NTM
     </span>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2022-08-01T11:46:35Z" title="2022-08-01 11:46 ">
       August 1, 2022
      </time>
      von NTM
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-08-01T11:13:36Z" title="2022-08-01 11:13 ">
+<br/>
+<time class="timestamp" datetime="2022-08-01T11:13:36Z" title="2022-08-01 11:13 ">
    August 1, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
      @NTM
     </a>
     ,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     tolle Erklärung. :-)
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     LG, JD.
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
- </body>
+<p>
+</p>
+<p>
+</p>
+</div>
+<hr/>
+</body>
 </html>

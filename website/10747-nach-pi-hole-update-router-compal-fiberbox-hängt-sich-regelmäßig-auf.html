@@ -1,227 +1,228 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Nach Pi-hole Update -  Router (Compal Fiberbox) hängt sich regelmäßig auf.
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Nach Pi-hole Update -  Router (Compal Fiberbox) hängt sich regelmäßig auf.
   </h1>
-  <span class="author">
+<span class="author">
    DeepBlue168
   </span>
-  <br/>
-  <time class="Mai 14" datetime="2025-05-14T11:21:58Z" title="2025-05-14 11:21 ">
+<br/>
+<time class="Mai 14" datetime="2025-05-14T11:21:58Z" title="2025-05-14 11:21 ">
    Mai 14
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi. Seit dem ich letztens das PiHole upgedatet habe, hängt sich der Router nach wenigen Stunden total auf. Ich kann keine Geräte mehr anpingen und auch über den Browser nicht mehr auf den Router zugreifen. Nur mehr ein Factory Reset und Neueinstellung helfen. Dann wiederholt ich das Spiel.
     <br/>
     Davor lief das PiHole jahrelang ohne Probleme.
     <br/>
-    <br/>
+<br/>
     Der Router ist eine Compal Fiberbox. Hat sonst noch jemand Probleme dieser Art?
-    <br>
-     <br>
+    <br/>
+<br/>
       Danke und lg.
-     </br>
-    </br>
+     
+    
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Karo
   </span>
-  <br/>
-  <time class="Mai 14" datetime="2025-05-14T13:30:52Z" title="2025-05-14 13:30 ">
+<br/>
+<time class="Mai 14" datetime="2025-05-14T13:30:52Z" title="2025-05-14 13:30 ">
    Mai 14
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/100323-deepblue168/?do=hovercard" data-mentionid="100323" href="https://community.magenta.at/profile/100323-deepblue168/" rel="">
      @DeepBlue168
     </a>
     , hast du schon direkt beim Hersteller das Thema seit dem Update gemeldet? Ich empfehle dir, das zu machen. Vielleicht ist nach dem Update eine andere Einstellung notwendig. LG Karo
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Mai 15" datetime="2025-05-15T12:11:24Z" title="2025-05-15 12:11 ">
+<br/>
+<time class="Mai 15" datetime="2025-05-15T12:11:24Z" title="2025-05-15 12:11 ">
    Mai 15
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/100323-deepblue168/?do=hovercard" data-mentionid="100323" href="https://community.magenta.at/profile/100323-deepblue168/" rel="">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/100323-deepblue168/?do=hovercard" data-mentionid="100323" href="https://community.magenta.at/profile/100323-deepblue168/" rel="">
      @DeepBlue168
     </a>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Hallo!
     <span class="ipsEmoji">
      👋
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Dein Problem klingt ganz danach, als ob das letzte Update von Pi-hole entweder auf Netzwerkebene oder durch DNS-Konflikte die Fiberbox (Compal) ins Straucheln bringt – gerade weil das Verhalten zeitverzögert nach einigen Stunden auftritt.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hier ein paar technische Ansätze, die du prüfen könntest:
    </p>
-   <p>
-   </p>
-   <p>
-    <span class="ipsEmoji">
+<p>
+</p>
+<p>
+<span class="ipsEmoji">
      🛠️
     </span>
-    <strong>
+<strong>
      1. DNS-Konflikt oder Loop durch Pi-hole
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Wenn dein Pi-hole als primärer DNS-Server im Netzwerk fungiert, aber gleichzeitig der Router noch eigene DNS-Auflösungen macht, kann das zu einem „DNS-Loop“ führen oder zu unerwartetem Verhalten bei bestimmten Geräten.
    </p>
-   <p>
+<p>
     Prüf das hier:
    </p>
-   <p>
+<p>
     Im Pi-hole: Welche IP ist als Upstream-DNS konfiguriert? Stelle sicher, dass nicht der Router selbst (z. B. 192.168.0.1) eingetragen ist.
    </p>
-   <p>
+<p>
     Im Router: Falls möglich, trage Pi-hole als DNS-Server ein und deaktiviere eigene DNS-Funktionen des Routers (wenn die Box das überhaupt erlaubt – viele ISPs limitieren das).
    </p>
-   <p>
-   </p>
-   <p>
-    <span class="ipsEmoji">
+<p>
+</p>
+<p>
+<span class="ipsEmoji">
      🔌
     </span>
-    <strong>
+<strong>
      2. DHCP doppelt aktiv?
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Hat Pi-hole eventuell nach dem Update den DHCP-Server wieder aktiviert? Wenn sowohl Router als auch Pi-hole IPs im Netz verteilen, kann das zu IP-Konflikten und Netzwerkinstabilität führen.
    </p>
-   <p>
-    <span class="ipsEmoji">
+<p>
+<span class="ipsEmoji">
      ➡️
     </span>
     Nur einer darf DHCP machen – entweder Pi-hole oder die Fiberbox.
    </p>
-   <p>
-   </p>
-   <p>
-    <span class="ipsEmoji">
+<p>
+</p>
+<p>
+<span class="ipsEmoji">
      🔄
     </span>
-    <strong>
+<strong>
      3. IPv6 macht Faxen
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Die Compal-Fiberboxen sind bekannt dafür, bei IPv6-Konfigurationen empfindlich zu reagieren, vor allem in Kombination mit benutzerdefinierten DNS-Einstellungen. Manche Firmware-Versionen reagieren sogar mit einem Totalabsturz, wenn IPv6 über Pi-hole geleitet wird.
    </p>
-   <p>
-    <span class="ipsEmoji">
+<p>
+<span class="ipsEmoji">
      ➡️
     </span>
     Testweise in Pi-hole und/oder Router IPv6 deaktivieren und beobachten, ob das Problem verschwindet.
    </p>
-   <p>
-   </p>
-   <p>
-    <span class="ipsEmoji">
+<p>
+</p>
+<p>
+<span class="ipsEmoji">
      🪛
     </span>
-    <strong>
+<strong>
      4. Log-Analyse &amp; Fehlerquellen
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Syslog aktivieren (z. B. im Pi-hole oder via Raspberry Pi Logging), um Abstürze zeitlich einzugrenzen.
    </p>
-   <p>
+<p>
     Fallback-DNS wie 1.1.1.1 oder 9.9.9.9 testweise eintragen, um DNS-Ausfälle durch die Fiberbox auszuschließen.
    </p>
-   <p>
+<p>
     Pi-hole testweise abschalten oder isoliert im Netzwerk laufen lassen – tritt der Fehler dann weiterhin auf?
    </p>
-   <p>
-   </p>
-   <p>
-    <span class="ipsEmoji">
+<p>
+</p>
+<p>
+<span class="ipsEmoji">
      📦
     </span>
-    <strong>
+<strong>
      Letzte Idee: Firmware-Bug?
     </strong>
-   </p>
-   <p>
+</p>
+<p>
     Die Compal Fiberbox ist berüchtigt für Firmware-Probleme, besonders bei exotischen Konfigurationen. Es ist gut möglich, dass das Pi-hole-Update eine Kleinigkeit verändert hat (z. B. Verhalten bei DNSSEC oder TCP-Fallbacks), die mit dem aktuellen Firmware-Stand nicht sauber läuft.
    </p>
-   <p>
-    <span class="ipsEmoji">
+<p>
+<span class="ipsEmoji">
      ➡️
     </span>
     Schau nach einem Firmware-Update der Box oder frag bei deinem Provider gezielt danach.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Du bist nicht allein mit so einem Verhalten – Kombinationen aus Pi-hole, eigenen DHCP-/DNS-Servern und Provider-Routern sind fehleranfällig, gerade nach Updates. Ich würde mit Punkt 1 und 2 anfangen und mich dann weiter vorarbeiten.
    </p>
-   <p>
+<p>
     Wenn du magst, poste gern:
    </p>
-   <p>
+<p>
     Pi-hole Setup (Version, OS, DNS-Provider)
    </p>
-   <p>
+<p>
     Netzwerkstruktur (Router, Switch, Geräte)
    </p>
-   <p>
+<p>
     Screenshot deiner Pi-hole DNS/DHCP Settings
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Dann kann man gezielter helfen. Viel Erfolg!
     <span class="ipsEmoji">
      👨‍💻
     </span>
-    <span class="ipsEmoji">
+<span class="ipsEmoji">
      🧰
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Liebe Grüße, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-   <p>
-    <span style="font-size:10px;">
+</p>
+<p>
+<span style="font-size:10px;">
      (in Zusammenarbeit mit Perplexity)
     </span>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>

@@ -1,81 +1,82 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    APN Einstellungen für Arduino SIM800L Modul
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    APN Einstellungen für Arduino SIM800L Modul
   </h1>
-  <span class="author">
+<span class="author">
    MrNice
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-08-12T20:14:18Z" title="2022-08-12 20:14 ">
+<br/>
+<time class="timestamp" datetime="2022-08-12T20:14:18Z" title="2022-08-12 20:14 ">
    August 12, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
+<p>
     weis jemand ob es einfach grundsätzliche APN Einstellungen von Magenta für 2G mit einer Prepayd Karte gibt?
    </p>
-   <p>
+<p>
     Würde dies für ein Elektronik Arduino Projekt benötigen wo dies einzugeben ist
    </p>
-   <p>
+<p>
     const char apn[]      = ""; // APN (example: internet.vodafone.pt) use
     <a href="https://wiki.apnchanger.org" rel="external nofollow">
      https://wiki.apnchanger.org
     </a>
-    <br/>
+<br/>
     const char gprsUser[] = ""; // GPRS User
     <br/>
     const char gprsPass[] = ""; // GPRS Password
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Lg
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-08-12T21:34:58Z" title="2022-08-12 21:34 ">
+<br/>
+<time class="timestamp" datetime="2022-08-12T21:34:58Z" title="2022-08-12 21:34 ">
    August 12, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey
     <span>
-     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/93986-mrnice/?do=hovercard" data-mentionid="93986" href="https://community.magenta.at/profile/93986-mrnice/" rel="">
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/93986-mrnice/?do=hovercard" data-mentionid="93986" href="https://community.magenta.at/profile/93986-mrnice/" rel="">
       @MrNice
      </a>
-     <br/>
+<br/>
      Mit einer Magenta Wertkarte würde der Magenta Standard-APN funktionieren (egal ob 2G/GSM, 3G/UMTS oder 4G/LTE):
-     <br>
+     <br/>
       const char apn[] = "
-     </br>
+     
     </span>
     internet.t-mobile.at
     <span>
      "; // APN
-     <br>
+     <br/>
       const char gprsUser[] = "
-     </br>
+     
     </span>
     t-mobile
     <span>
@@ -89,8 +90,8 @@
      <br/>
      LG NTM
     </span>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>

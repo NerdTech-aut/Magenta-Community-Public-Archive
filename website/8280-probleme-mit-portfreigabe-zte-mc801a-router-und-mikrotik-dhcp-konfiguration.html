@@ -1,163 +1,164 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Probleme mit Portfreigabe -  ZTE MC801A Router und MikroTik DHCP-Konfiguration
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Probleme mit Portfreigabe -  ZTE MC801A Router und MikroTik DHCP-Konfiguration
   </h1>
-  <span class="author">
+<span class="author">
    lpsenner
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-11-30T14:17:49Z" title="2022-11-30 14:17 ">
+<br/>
+<time class="timestamp" datetime="2022-11-30T14:17:49Z" title="2022-11-30 14:17 ">
    November 30, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     ich verwende den ZTE MC801A Router für den Internet empfang und dahinter steht eine MikroTik, die mein DHCP macht. Habe dort die Ports 443 und 80 freigeben die zu meinen Reverse Proxy führen, komme aber von außen nicht auf meine Web Server. Jetzt ist die Frage ob der ZTE Router meine Port Weiterleitung blockiert. Wenn ja, wie kann ich das machen, das der ZTE Router die Port Weiterleitung zulässt.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke schon für eure Hilfe
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    GruPa
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-01-03T20:29:08Z" title="2024-01-03 20:29 ">
+<br/>
+<time class="1 yr" datetime="2024-01-03T20:29:08Z" title="2024-01-03 20:29 ">
    Januar 3, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Abend :),
     <br/>
     habe aktuell dasselbe Problem mit dem Router. Wie hast du es dann gelöst?
    </p>
-   <p>
+<p>
     Danke schon im vorraus.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bg Grupa
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-01-04T12:20:37Z" title="2024-01-04 12:20 ">
+<br/>
+<time class="1 yr" datetime="2024-01-04T12:20:37Z" title="2024-01-04 12:20 ">
    Januar 4, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ich weiß nicht, ob das Problem gelöst wurde. Versuche aber gerne mal folgendes:
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Es ist möglich, dass der ZTE MC801A Router Ihre Portweiterleitung blockiert. Um dies zu überprüfen, können Sie folgende Schritte ausführen:
    </p>
-   <p>
+<p>
     - Öffnen Sie einen Webbrowser und geben Sie die IP-Adresse Ihres ZTE MC801A Routers ein.
    </p>
-   <p>
+<p>
     - Melden Sie sich mit Ihren Zugangsdaten an.
    </p>
-   <p>
+<p>
     - Navigieren Sie zu Advanced Settings &gt; Firewall &gt; Port forwarding.
    </p>
-   <p>
+<p>
     - Überprüfen Sie, ob die Ports 443 und 80 in der Liste der aktivierten Portweiterleitungen enthalten sind.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn die Ports 443 und 80 nicht in der Liste enthalten sind, müssen Sie diese manuell hinzufügen. Dazu gehen Sie wie folgt vor:
    </p>
-   <p>
+<p>
     - Klicken Sie auf Add.
    </p>
-   <p>
+<p>
     - Geben Sie den Port, den Sie weiterleiten möchten, in das Feld Local port ein.
    </p>
-   <p>
+<p>
     - Geben Sie die IP-Adresse des Geräts ein, auf das Sie die Portweiterleitung anwenden möchten, in das Feld Internal IP address ein.
    </p>
-   <p>
+<p>
     - Geben Sie den Port, den Sie auf dem Zielgerät weiterleiten möchten, in das Feld External port ein.
    </p>
-   <p>
+<p>
     - Klicken Sie auf Save.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn die Ports 443 und 80 in der Liste enthalten sind, aber Sie trotzdem nicht von außen auf Ihre Webserver zugreifen können, kann es sein, dass der ZTE MC801A Router eine Firewall-Regel enthält, die den Zugriff auf diese Ports blockiert. Um dies zu überprüfen, gehen Sie wie folgt vor:
    </p>
-   <p>
+<p>
     - Navigieren Sie zu Advanced Settings &gt; Firewall &gt; Rules.
    </p>
-   <p>
+<p>
     - Überprüfen Sie, ob eine Firewall-Regel vorhanden ist, die den Zugriff auf die Ports 443 und 80 blockiert.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn eine Firewall-Regel vorhanden ist, die den Zugriff auf die Ports 443 und 80 blockiert, müssen Sie diese löschen oder ändern. Dazu gehen Sie wie folgt vor:
    </p>
-   <p>
+<p>
     - Klicken Sie auf die Firewall-Regel, die Sie löschen oder ändern möchten.
    </p>
-   <p>
+<p>
     - Klicken Sie auf Delete oder Edit.
    </p>
-   <p>
+<p>
     - Wenn Sie die Firewall-Regel löschen möchten, klicken Sie auf Yes.
    </p>
-   <p>
+<p>
     - Wenn Sie die Firewall-Regel ändern möchten, ändern Sie die Einstellungen der Regel und klicken Sie auf Save.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn Sie alle oben genannten Schritte ausgeführt haben und Sie immer noch nicht von außen auf Ihre Webserver zugreifen können, ist es möglich, dass ein anderes Problem vorliegt. In diesem Fall sollten Sie sich an den technischen Support Magenta (0676 200 7777) wenden.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hier sind einige weitere Tipps, die Ihnen bei der Fehlerbehebung helfen können:
    </p>
-   <p>
+<p>
     - Stellen Sie sicher, dass die IP-Adresse Ihres Routers korrekt ist.
    </p>
-   <p>
+<p>
     - Stellen Sie sicher, dass die Ports 443 und 80 auf dem Zielgerät geöffnet sind.
    </p>
-   <p>
+<p>
     - Versuchen Sie, von einem anderen Gerät aus auf Ihre Webserver zuzugreifen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich hoffe, diese Informationen helfen Ihnen weiter. LG JD.
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

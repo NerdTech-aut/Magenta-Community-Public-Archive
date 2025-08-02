@@ -1,140 +1,141 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Portfreigabe bei Magenta -  Wird der eingehende Verkehr durch eine Firewall blockiert?
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Portfreigabe bei Magenta -  Wird der eingehende Verkehr durch eine Firewall blockiert?
   </h1>
-  <span class="author">
+<span class="author">
    sail3006
   </span>
-  <br/>
-  <time class="Nov 3" datetime="2024-11-03T10:30:40Z" title="2024-11-03 10:30 ">
+<br/>
+<time class="Nov 3" datetime="2024-11-03T10:30:40Z" title="2024-11-03 10:30 ">
    November 3, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo ich bin neu hier im Forum und auch kein Experte in Sachen Netzwerktechnik.
    </p>
-   <p>
+<p>
     Ich habe aber einen kleinen Home Server mit proxmox laufen auf welchem über einen LXC container wireguard lauft. um nun den Verkehr auf diesen Container zuzulassen und einen sicheren Tunnel zu öffnen muss ich einen Port freigeben. Ich habe dafür den APN umgestellt und habe auch definitiv eine dynamische öffentliche IP Adresse welche ich via DuckDNS laufend aktualisiere.
    </p>
-   <p>
+<p>
     Jedoch ist der Service trotz eingestellter Port Freigabe nicht erreichbar. Auch wenn ich die interne IP meines WireGuard Containers in die DMZ setzte geht es nicht.
    </p>
-   <p>
+<p>
     Kann es sein dass Magenta auf ihrer Seite des Netztes eine Firewall hat welche eingehenden Verkehr blockiert? Hat damit jemand Erfahrung?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bitte um Hilfe.
    </p>
-   <p>
+<p>
     LG und schönen Sonntag,
    </p>
-   <p>
+<p>
     Stefan!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Zusatzinfos: Ich verwende das mitgelieferte ZTE MC801a Modem
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="Nov 3" datetime="2024-11-03T10:39:56Z" title="2024-11-03 10:39 ">
       November 3, 2024
      </time>
      von sail3006
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Dez 3" datetime="2024-12-03T10:31:17Z" title="2024-12-03 10:31 ">
+<br/>
+<time class="Dez 3" datetime="2024-12-03T10:31:17Z" title="2024-12-03 10:31 ">
    Dezember 3, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Stefan!
     <span class="ipsEmoji">
      👋
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Herzlich willkommen im Forum!
     <span class="ipsEmoji">
      😊
     </span>
     Keine Sorge, hier wird dir geholfen – und es ist großartig, dass du so fleißig an deinem Home-Server-Projekt arbeitest!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Zu deiner Frage: Ja, es ist durchaus möglich, dass Magenta (oder auch dein Modem) auf ihrer Seite eine Art von Firewall hat, die den eingehenden Verkehr blockiert. Viele Internetanbieter setzen in ihren Routern eine gewisse Einschränkung, um unerwünschte Verbindungen von außen zu verhindern. Das könnte der Grund sein, warum der Port trotz der Portweiterleitung und DMZ-Einstellungen nicht funktioniert.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hier ein paar Dinge, die du noch überprüfen kannst:
    </p>
-   <p>
-    <strong>
+<p>
+<strong>
      Portweiterleitung:
     </strong>
     Hast du die Portweiterleitung direkt im ZTE MC801a Modem eingerichtet? Manchmal ist die Bedienoberfläche etwas verwirrend oder es gibt zusätzliche Einstellungen, die du beachten musst.
    </p>
-   <p>
-    <strong>
+<p>
+<strong>
      Firewall des Modems:
     </strong>
     Viele Router haben eine eingebaute Firewall, die eventuell den eingehenden Verkehr blockiert, auch wenn du die Portweiterleitung eingestellt hast. Überprüfe, ob du die Firewall im Modem deaktivieren oder so konfigurieren kannst, dass der Verkehr zu deinem LXC-Container durchkommt.
    </p>
-   <p>
-    <strong>
+<p>
+<strong>
      Magenta-Provider-Blockierungen:
     </strong>
     Es könnte sein, dass Magenta bestimmte Ports blockiert oder eine Art "Carrier-Grade NAT" nutzt, was bedeutet, dass deine öffentliche IP-Adresse für dich nur im lokalen Netzwerk sichtbar ist. In diesem Fall hilft es meist nur, den Anbieter zu kontaktieren und nach einer öffentlichen IPv4-Adresse zu fragen oder eine andere Lösung zu finden (z.B. VPN-Tunnel oder Portweiterleitungen).
    </p>
-   <p>
-    <strong>
+<p>
+<strong>
      WireGuard-Konfiguration:
     </strong>
     Auch die Konfiguration von WireGuard selbst solltest du nochmal auf korrekte Einstellungen durchgehen. Besonders wichtig ist, dass die richtigen IP-Adressen und Ports in der Konfiguration der Clients und Server eingestellt sind.
    </p>
-   <p>
+<p>
     Vielleicht hilft es auch, wenn du mal testweise ein anderes Modem verwendest oder die Einstellungen vom ZTE Modem genauer durchgehst, insbesondere die NAT- und Firewall-Einstellungen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Falls du weiterhin Schwierigkeiten hast, frag ruhig nach – wir finden sicher eine Lösung. Viel Erfolg und einen schönen Tag!
     <span class="ipsEmoji">
      🙂
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Liebe Grüße, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>

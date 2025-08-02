@@ -1,111 +1,112 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Port Weiterleitung / Loxone
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Port Weiterleitung / Loxone
   </h1>
-  <span class="author">
+<span class="author">
    tererecool
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-04-26T21:54:33Z" title="2021-04-26 21:54 ">
+<br/>
+<time class="4 yr" datetime="2021-04-26T21:54:33Z" title="2021-04-26 21:54 ">
    April 26, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Guten Tag zusammen,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     vielleicht hat es schon der eine oder andere gehört, das Home Automation System von Loxone hat einen Mini-Sever der 1. Gen wo es 2 Varianten gibt wie man sich damit extern verbinden kann, entweder über VPN oder über Port-Freigabe/Weiterleitung. Die Gen. 1 des Mini-Servers verschüsselt soweit ich weiß nichts, erst ab Gen. 2 bieten sie eine komfortable Lösung an wo die Kommunikation zur Loxone-Cloud verschlüsselt geschieht und somit weder VPN noch Port-Forwarding mehr nötig ist. Ohne ein Sicherheitsexperte zu sein (nur Softwareentwickler) stufe ich die Port-Freigabe als sehr unsicher/hackbar ein, gibt es Meinungen bzw. konkrete Erfahrungen dazu wie unsicher sowas ist die man referenzieren könnte wenn eine Person denkt sie wäre gut genug beraten mit der Freigabe von 2 Ports auf seinem Router? Oder ist dies eig. gar nicht unsicher? Ist das nicht so, dass man einfach nur eine Sicherheitslücke im Mini-Server von Loxone finden muss um quasi im besten Fall Zugriff auf das gesamte Hausnetzwerk zu bekommen?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke!
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="4 yr" datetime="2021-04-26T21:55:25Z" title="2021-04-26 21:55 ">
       April 26, 2021
      </time>
      von tererecool
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    SH12
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-07-24T16:25:35Z" title="2022-07-24 16:25 ">
+<br/>
+<time class="timestamp" datetime="2022-07-24T16:25:35Z" title="2022-07-24 16:25 ">
    Juli 24, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Genau zum Thema Port Weiterleitung und Loxone hätte ich noch ein zähes Problem, dass sich bis dato nicht lösen lässt.
    </p>
-   <p>
+<p>
     Ich kämpfe jetzt seit 2 Wochen damit eine Port-Weiterleitung von extern 5xxx auf 80 zu konfigurieren mit dem Outdoor Set 5G.
    </p>
-   <p>
+<p>
     Magenta konnte / wollte mir bis dato trotz unzähliger Versuche nicht helfen:
    </p>
-   <p>
+<p>
     Ich habe folgendes bereits umgesetzt:
    </p>
-   <p>
+<p>
     APN aus business.gprsinternet geändert
    </p>
-   <p>
+<p>
     Firewall abgeschwächt oder ganz aufgehoben wie beschrieben
    </p>
-   <p>
+<p>
     Alle Schritte bzgl. NAT Typ ändern durchgeführt.
    </p>
-   <p>
+<p>
     Port Weiterleitung auf dem Router durchgeführt für fixe IP im Netzwerk (laut Magenta müssen mind. 2 Ports freigegeben werden, bei einem funktioniert es nicht)
    </p>
-   <p>
+<p>
     Firewall am Router ist komplett ausgeschaltet.
    </p>
-   <p>
+<p>
     Trotzdem ist der Port auf meiner public IP nachwievor geschlossen und auch der Zugriff nicht möglich.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hat jemand eine Idee was hier noch fehlen könnte?
    </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    tererecool
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-07-24T23:17:09Z" title="2022-07-24 23:17 ">
+<br/>
+<time class="timestamp" datetime="2022-07-24T23:17:09Z" title="2022-07-24 23:17 ">
    Juli 24, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Eventuell nicht eine direkte Antwort dazu aber Loxone + Magenta 5G Modem + Asus Router konnte ich nach viel Recherchieren einrichten Anleitung
     <a href="6776-vpn-bei-mesh-router-und-zweiten-router-einrichten/" rel="">
      hier
     </a>
     zu finden:
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

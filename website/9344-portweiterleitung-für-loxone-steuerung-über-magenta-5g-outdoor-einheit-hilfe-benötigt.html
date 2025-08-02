@@ -1,499 +1,500 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Portweiterleitung für Loxone Steuerung über Magenta 5G Outdoor-Einheit -  Hilfe benötigt!
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Portweiterleitung für Loxone Steuerung über Magenta 5G Outdoor-Einheit -  Hilfe benötigt!
   </h1>
-  <span class="author">
+<span class="author">
    Stoffal80
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-01-12T17:00:32Z" title="2024-01-12 17:00 ">
+<br/>
+<time class="1 yr" datetime="2024-01-12T17:00:32Z" title="2024-01-12 17:00 ">
    Januar 12, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Zusammen
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich glaube das Thema wurde hier schon einige male durchgekaut. Ich habe auch schon einige Stunden in Recherche gesteckt, leider erfolglos
     <span class="ipsEmoji">
      😒
     </span>
-   </p>
-   <p>
+</p>
+<p>
     Also. Ich habe eine Magenta 5G Outdooreinheit. Das Ding funktioniert auch soweit super.
    </p>
-   <p>
+<p>
     Jetzt möchte ich eine Portweiterleitung einrichten, das ich meine Loxone Steuerung auch per App von Außen erreichen kann.
    </p>
-   <p>
+<p>
     Ich habe es soweit geschafft, das ich über die Öffentliche IP den Freigegeben Port des Server per Port Check offen ist.
    </p>
-   <p>
+<p>
     Über die Private Feste IP erreiche ich Ihn von Außen nicht.
    </p>
-   <p>
+<p>
     Ich komm hier einfach nicht weiter, oder bin ich zu b... dazu.
    </p>
-   <p>
+<p>
     Die ODU läuft noch im Router betrieb. Ich wollte hier nicht auf Bridge umstellen, da hier einige dann Geschwindigkeitsverlusste hatten.
    </p>
-   <p>
+<p>
     Hat hier noch wer einen Tipp, was ich falsch mache??
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Vielen Dank
    </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-01-14T00:56:43Z" title="2024-01-14 00:56 ">
+<br/>
+<time class="1 yr" datetime="2024-01-14T00:56:43Z" title="2024-01-14 00:56 ">
    Januar 14, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi
     <span>
-     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98505-stoffal80/?do=hovercard" data-mentionid="98505" href="https://community.magenta.at/profile/98505-stoffal80/" rel="">
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98505-stoffal80/?do=hovercard" data-mentionid="98505" href="https://community.magenta.at/profile/98505-stoffal80/" rel="">
       @Stoffal80
      </a>
-    </span>
-   </p>
-   <p>
-    <span>
+</span>
+</p>
+<p>
+<span>
      Wenn du auf die Loxone über einen anderen Internet-Anschluss zugreifen möchtest, musst du die öffentliche IP verwenden.
     </span>
-   </p>
-   <p>
-    <span>
+</p>
+<p>
+<span>
      Die private IP, welche du auf der Loxone oder der Indoor-Einheit festgelegt hast, kannst du nur in deinem Heimnetzwerk verwenden.
     </span>
-   </p>
-   <p>
-    <span>
+</p>
+<p>
+<span>
      Die öffentliche IP wird sich aber immer wieder ändern.
     </span>
-   </p>
-   <p>
-    <span>
+</p>
+<p>
+<span>
      Auf der Indoor-Einheit gäbe es die Möglichkeit DDNS einzurichten. Mit DDNS kann eine IP-Adresse mit einer URL verknüpft werden. Aber damit dieser richtig läuft muss die Outdoor-Einheit auf dem Bridge Mode umgestellt werden. Denn ansonsten kennt die Indoor-Einheit die öffentliche IP nicht.
     </span>
-   </p>
-   <p>
-    <span>
+</p>
+<p>
+<span>
      LG NTM
     </span>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    Stoffal80
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-01-14T08:10:22Z" title="2024-01-14 08:10 ">
+<br/>
+<time class="1 yr" datetime="2024-01-14T08:10:22Z" title="2024-01-14 08:10 ">
    Januar 14, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Das mit dem Bridge Mode hab ich ja Probiert. Das Funktioniert auch soweit. Der Port für die Loxone ist dann auch erreichbar.
    </p>
-   <p>
+<p>
     Nur das eben aus keine Ahnung welchem Grund, die Verbindungen dann sehr zäh werden. Auch der Upload zeitweise gar nicht Funktioniert. Muss ich da noch andere Einstellungen beachten??Hab ich da was Übersehen!?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Was ganz anderes. Die IDO würde ich eigentlich ja gar nicht benötigen, da mein Wlan über TP-Link Mesh aufgebaut ist. Und das von der IDO sowieso deaktiviert ist.
    </p>
-   <p>
+<p>
     Ich könnte ja die ODU so Konfigurieren!? Oder? Nach der ODU einen Switch, DHCB Bereich dann vergrößern, und das Gateway anpassen!?
    </p>
-   <p>
+<p>
     Würde das Funktionieren? Die Portweiterleitung kann ja dann auch über die ODU Eingerichtet werden.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke
    </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-01-14T15:01:39Z" title="2024-01-14 15:01 ">
+<br/>
+<time class="1 yr" datetime="2024-01-14T15:01:39Z" title="2024-01-14 15:01 ">
    Januar 14, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98505-stoffal80/?do=hovercard" data-mentionid="98505" href="https://community.magenta.at/profile/98505-stoffal80/" rel="">
      @Stoffal80
     </a>
-    <br/>
+<br/>
     Ja in deinem Fall würde ich die Indoor-Einheit komplett weglassen.
    </p>
-   <p>
+<p>
     Ist das TP-Link Mesh Set als Router oder nur als Access Point konfiguriert?
    </p>
-   <p>
+<p>
     Im Router Modus gibt es bei den TP-Link Mesh Systemen auch einen DDNS-Client, aber die Outdoor-Einheit muss auch hierbei im Bridge Mode sein.
    </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56386" data-ipsquote-contentid="9344" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1705219822" data-ipsquote-userid="98505" data-ipsquote-username="Stoffal80">
-    <div class="ipsQuote_citation">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56386" data-ipsquote-contentid="9344" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1705219822" data-ipsquote-userid="98505" data-ipsquote-username="Stoffal80">
+<div class="ipsQuote_citation">
      Am 14.1.2024 um 09:10 schrieb Stoffal80:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Ich könnte ja die ODU so Konfigurieren!? Oder? Nach der ODU einen Switch, DHCB Bereich dann vergrößern, und das Gateway anpassen!?
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Du kannst dies so konfigurieren hast dann aber kein DDNS, außer du hast eine NAS im Netzwerk (bei denen funktioniert DDNS etwas anders). Also Zugriff von außen nur möglich, solange du die aktuelle öffentliche IP kennst.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn du ein Windows, Linux oder macOS System, bzw. eine NAS mit Docker Unterstützung durchgehend laufen hast könntest du auch Twingate verwenden (keine Portweiterleitung oder öffentliche IP nötig).
    </p>
-   <p>
-    <a href="https://www.twingate.com/" rel="external nofollow">
+<p>
+<a href="https://www.twingate.com/" rel="external nofollow">
      https://www.twingate.com/
     </a>
-   </p>
-   <p>
-    <a href="https://youtu.be/IYmXPF3XUwo?si=HVno8UBqIX-Qnur1" rel="external nofollow">
+</p>
+<p>
+<a href="https://youtu.be/IYmXPF3XUwo?si=HVno8UBqIX-Qnur1" rel="external nofollow">
      https://youtu.be/IYmXPF3XUwo?si=HVno8UBqIX-Qnur1
     </a>
-   </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
     Es gäbe auch die Möglichkeit eine öffentliche statische IP zu erhalten, welche sich nicht ändert. Dies kostet aber wohl 5€ pro Monat zusätzlich.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn die Outdoor-Einheit im Bridge Mode ist, dürfte diese besser mit anderen Geräten als der Indoor-Einheit.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     LG NTM
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Stoffal80
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-01-14T16:55:34Z" title="2024-01-14 16:55 ">
+<br/>
+<time class="1 yr" datetime="2024-01-14T16:55:34Z" title="2024-01-14 16:55 ">
    Januar 14, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Vielen Dank
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Muss ich noch was beachten wenn ich die ODU in Bridge Modus umstelle?? Zweites PDN Profil anlegen? Angeblich funktioniert ja das Webinterface nicht mehr, wenn Bridge Modus beim PND1 aktiv ist!? Ist da was drann?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Stoffal80
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-01-25T18:34:56Z" title="2024-01-25 18:34 ">
+<br/>
+<time class="1 yr" datetime="2024-01-25T18:34:56Z" title="2024-01-25 18:34 ">
    Januar 25, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56387" data-ipsquote-contentid="9344" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1705244499" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="56387" data-ipsquote-contentid="9344" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1705244499" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+<div class="ipsQuote_citation">
      Am 14.1.2024 um 16:01 schrieb NTM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Hi
       <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98505-stoffal80/?do=hovercard" data-mentionid="98505" href="https://community.magenta.at/profile/98505-stoffal80/" rel="">
        @Stoffal80
       </a>
-      <br/>
+<br/>
       Ja in deinem Fall würde ich die Indoor-Einheit komplett weglassen.
      </p>
-     <p>
+<p>
       Ist das TP-Link Mesh Set als Router oder nur als Access Point konfiguriert?
      </p>
-     <p>
+<p>
       Im Router Modus gibt es bei den TP-Link Mesh Systemen auch einen DDNS-Client, aber die Outdoor-Einheit muss auch hierbei im Bridge Mode sein.
      </p>
-     <p>
+<p>
       Du kannst dies so konfigurieren hast dann aber kein DDNS, außer du hast eine NAS im Netzwerk (bei denen funktioniert DDNS etwas anders). Also Zugriff von außen nur möglich, solange du die aktuelle öffentliche IP kennst.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Wenn du ein Windows, Linux oder macOS System, bzw. eine NAS mit Docker Unterstützung durchgehend laufen hast könntest du auch Twingate verwenden (keine Portweiterleitung oder öffentliche IP nötig).
      </p>
-     <p>
-      <a href="https://www.twingate.com/" rel="external nofollow">
+<p>
+<a href="https://www.twingate.com/" rel="external nofollow">
        https://www.twingate.com/
       </a>
-     </p>
-     <p>
-      <a href="https://youtu.be/IYmXPF3XUwo?si=HVno8UBqIX-Qnur1" rel="external nofollow">
+</p>
+<p>
+<a href="https://youtu.be/IYmXPF3XUwo?si=HVno8UBqIX-Qnur1" rel="external nofollow">
        https://youtu.be/IYmXPF3XUwo?si=HVno8UBqIX-Qnur1
       </a>
-     </p>
-     <p>
-     </p>
-     <p>
-     </p>
-     <p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
       Es gäbe auch die Möglichkeit eine öffentliche statische IP zu erhalten, welche sich nicht ändert. Dies kostet aber wohl 5€ pro Monat zusätzlich.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Wenn die Outdoor-Einheit im Bridge Mode ist, dürfte diese besser mit anderen Geräten als der Indoor-Einheit.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       LG NTM
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Hallo Nochmal
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     So. Nun habe ich folgendes Probiert.
    </p>
-   <p>
+<p>
     Odu in Bridge Mode mit IDO   -   Das Funktioniert nur bedingt
    </p>
-   <p>
+<p>
     Odu in Bridge Mode mit TP-Link Deco  -  Katastrophe. Die Bedienung ist nur per App möglich.
    </p>
-   <p>
+<p>
     Odu in Bridge Mode mit Fritzbox 4040  -  Klapp alles soweit, auch die Portfreigabe. Download und Upload passt auch.
    </p>
-   <p>
+<p>
     Was mir aber auffällt. Ich habe immer wieder Aussetzer!? Das dauert ein paar Sekunden, dann läuft wieder alles normal. Das selbe habe ich auch in Kombination mit der Ido beobachtet.
    </p>
-   <p>
+<p>
     Ich habe Odu in Bridge Mode, business Account, jedoch ohne Pap usw.  und nur IPV4
    </p>
-   <p>
+<p>
     Habe ich was übersehen??
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Vielen Dank
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Stoffal80
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-02-12T17:16:57Z" title="2024-02-12 17:16 ">
+<br/>
+<time class="1 yr" datetime="2024-02-12T17:16:57Z" title="2024-02-12 17:16 ">
    Februar 12, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Zusammen
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe hier schon mal einen Betrag eröffnet, wegen Zugriff von Extern über die Outdoorbox.
    </p>
-   <p>
+<p>
     Ich habe alle erdenklichen Varianten durchprobiert. Vieles was hier im Forum schon als Lösung beschrieben wurde.
    </p>
-   <p>
+<p>
     Hab mir das Odu-Ido Set sogar schon im Shop austauschen lassen, da ich vermutete das meine einen weg hat.
    </p>
-   <p>
+<p>
     Aber alles vergebens.
    </p>
-   <p>
+<p>
     Zu meinen eigentlichen Problem. Ich möchte die Odu im Bridge Mode Betreiben, da mein Gesamtes Netzwerk eigentlich über eine FritzBox 4040 läuft. Und benötige für mein Smarthome zugriff von Außen.
    </p>
-   <p>
+<p>
     Umstellung auf Bridge Mode funktioniert zwar, aber ich bekomme hier immer Verbindungsaussetzer zur FritzBox. Mit der Ido ist es das Gleiche, wenn nicht sogar noch schlechter.
    </p>
-   <p>
+<p>
     Ich habe dann mal genau aufgepasst, der Download passt, nur der Upload erreicht nicht mal ein Mbit!!??
    </p>
-   <p>
+<p>
     Mache ich da was falsch?? Bzw. habe ich was Übersehen??
    </p>
-   <p>
+<p>
     Meine Idee war dann die Odu Stand Alone zu Betreiben. Was ja auch Super funktioniert. Leider habe ich dann aber das Problem, das die Portweiterleitung nicht will!!?? Unter dem Menüpunkt Virtualserver wird eine Wan IP verlangt? Naja, und die ändert sich ja!?
    </p>
-   <p>
+<p>
     Hab's dann auch wie von einen User hier beschrieben mit 0.0.0.0 Probiert. Geht auch nicht!?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     So. Jetzt waren die im Shop so nett, und haben mir einen Leihrouter (Xiaomi AX5400) zum Testen mitgegeben.
    </p>
-   <p>
+<p>
     Das Ding angestöpselt, Portweiterleitung eingerichtet. Und siehe da, Funktioniert wunderbar.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Nur leider, hat das Ding nicht annähernd die Leistung von der Odu!!! Ich habe mit dem Xiaomi Router vollen 5G Empfang, aber einen Ping zwischen 30-40 oder sogar mehr. Download bzw. Upload passt soweit.
    </p>
-   <p>
+<p>
     Wenn dann am Abend aber das Netz ein wenig mehr genutzt wird, dann geht alles in die Knie!! Das kenn ich von der Odu so nicht!!
    </p>
-   <p>
+<p>
     Also auch nicht das gelbe vom Ei.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Jetzt bin ich mit meinen Latein am Ende.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hat Irgendwer die Odu im Bridge Mode Laufen, die auch Funktioniert?? Der mir eventuell einen Tipp geben kann was ich vielleicht falsch mache??
    </p>
-   <p>
+<p>
     Oder kann mir wer sagen wie ich die Portweiterleitung an der Odu einrichte, sodass diese auch Funktioniert??
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Vielen Dank
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Sg, Christoph
    </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    Stoffal80
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-02-12T18:39:14Z" title="2024-02-12 18:39 ">
+<br/>
+<time class="1 yr" datetime="2024-02-12T18:39:14Z" title="2024-02-12 18:39 ">
    Februar 12, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ich glaub es nicht.
    </p>
-   <p>
+<p>
     Ich habe ja wie Beschrieben, die Odu derzeit im Standalone Betrieb laufen.
    </p>
-   <p>
+<p>
     Jetzt hab ich mich nochmals mit der Portfreigabe beschäftigt, und siehe da!!!
    </p>
-   <p>
+<p>
     Nur einen Port öffnen geht anscheinend nicht. mache ich aber 2 oder mehr auf, funktioniert das :--)
    </p>
-   <p>
+<p>
     Schon etwas seltsam die Router Software?? Aber egal. Problem nach zig Stunden gelöst!
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-02-14T13:01:35Z" title="2024-02-14 13:01 ">
+<br/>
+<time class="1 yr" datetime="2024-02-14T13:01:35Z" title="2024-02-14 13:01 ">
    Februar 14, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98505-stoffal80/?do=hovercard" data-mentionid="98505" href="https://community.magenta.at/profile/98505-stoffal80/" rel="">
      @Stoffal80
     </a>
     ,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     damit es weiterhin übersichtlich bleibt, habe ich deine Anfrage hierher verschoben.
    </p>
-   <p>
-   </p>
-   <p>
-    <a href="https://linktr.ee/kundenberater" rel="external nofollow">
+<p>
+</p>
+<p>
+<a href="https://linktr.ee/kundenberater" rel="external nofollow">
      LG JD.
     </a>
-   </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5351" href="images/uploads/image.png.6771ab49f6a6a2c41d664f3b191c2318.png" rel="">
-     <img alt="image.thumb.png.6dd5a7fd72eefa8c3b0be01729166d38.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5351" data-ratio="38.00" src="images/uploads/image.thumb.png.6dd5a7fd72eefa8c3b0be01729166d38.png" width="1000"/>
-    </a>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5351" href="images/uploads/image.png.6771ab49f6a6a2c41d664f3b191c2318.png" rel="">
+<img alt="image.thumb.png.6dd5a7fd72eefa8c3b0be01729166d38.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5351" data-ratio="38.00" src="images/uploads/image.thumb.png.6dd5a7fd72eefa8c3b0be01729166d38.png" width="1000"/>
+</a>
+</p>
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Dez 3" datetime="2024-12-03T12:22:25Z" title="2024-12-03 12:22 ">
+<br/>
+<time class="Dez 3" datetime="2024-12-03T12:22:25Z" title="2024-12-03 12:22 ">
    Dezember 3, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Sollten hier noch Fragen offen geblieben sein, empfehle ich vielleicht einen Netzwerker seines Vertrauens zu Rate zu ziehen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Liebe Grüße, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>

@@ -1,299 +1,299 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    IPv6 Port Forwarding funktioniert nicht
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    IPv6 Port Forwarding funktioniert nicht
   </h1>
-  <span class="author">
+<span class="author">
    flotschie
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-04-20T06:49:45Z" title="2021-04-20 06:49 ">
+<br/>
+<time class="4 yr" datetime="2021-04-20T06:49:45Z" title="2021-04-20 06:49 ">
    April 20, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Mein Freund hat ein Gerät per WIFI mit seinem Router (Internet Fiber Box) verbunden.
    </p>
-   <p>
+<p>
     Das Gerät hat eine interne IPv4 Adresse 192.168.0.xxx und eine IPv6 Adresse.
    </p>
-   <p>
+<p>
     Im Router habe ich für das Gerät einen Port Forward auf 44158 eingestellt (Inbound &amp; Outbound).
    </p>
-   <p>
+<p>
     Dieser Port Forward war nur für IPv6 möglich, eine Option für IPv4 gab es nicht.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Das Gerät war für eine Zeit übers Internet erreichbar. Dann auf einmal nicht mehr.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Was wir versucht haben:
    </p>
-   <p>
+<p>
     Gerät Neustart
    </p>
-   <p>
+<p>
     Router Neustart
    </p>
-   <p>
+<p>
     upnp deaktivieren
    </p>
-   <p>
+<p>
     Router Firewall deaktivieren
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Nichts hat geholfen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     WhatsimyIp zeigt dass der Router sowohl eine IPv4 als auch eine IPv6 Adresse hat.
     <br/>
-    <a href="http://www.ipv6scanner.com/cgi-bin/main.py" rel="external nofollow">
+<a href="http://www.ipv6scanner.com/cgi-bin/main.py" rel="external nofollow">
      http://www.ipv6scanner.com/cgi-bin/main.py
     </a>
     zeigt dass der port 44158 FILTERED ist, für die Ipv4 als auch die Ipv6 Adresse.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ein Anruf bei der Hotline war nicht sehr befriedigend, es wurde gesagt der Router kann nur Ipv6 und wir sollen auf IPv4 umstellen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Da stellen sich mir mehrere Fragen
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     1) Warum hat es dann schon funktioniert?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     2) Warum gibt dann überhaupt eine IPv6 Port Forward Option in dem Router wenn IPv6 port forwarding nicht funktioniert?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     3) Wenn der Router doch eine öffentliche IPv4 Adresse hat, warum schafft der Router nicht die Übersetzung von einem incoming 44158 call auf die Ipv6 Adresse?
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="4 yr" datetime="2021-04-20T06:51:00Z" title="2021-04-20 06:51 ">
       April 20, 2021
      </time>
      von flotschie
     </strong>
-    <br>
+<br/>
      Rechtschreibfehler
-    </br>
+    
    </span>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    vbps24
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-04-20T13:55:50Z" title="2021-04-20 13:55 ">
+<br/>
+<time class="4 yr" datetime="2021-04-20T13:55:50Z" title="2021-04-20 13:55 ">
    April 20, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ich stehe aktuell vor demselben Problem, dass Port Forwarding mit iPv6 nicht funktioniert (Connect Box bei mir). Ich wäre daher auch sehr interessiert an einer Antwort.
     <br/>
-    <br/>
+<br/>
     In anderen Foren findet man größtenteils als Lösung, die Box wegen Dual Stack Lite auf iPv4 umstellen zu lassen, aber es scheint ja auch ohne zu gehen, wie man hier sieht:
    </p>
-   <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed3087493823" scrolling="no" src="5914-ipv6-portfreigabe.html" style="height:370px;max-width:502px;">
-   </iframe>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<a href="5914-ipv6-portfreigabe.html">IPV6 Portfreigabe</a>
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    gunnar
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-05-21T08:09:46Z" title="2021-05-21 08:09 ">
+<br/>
+<time class="4 yr" datetime="2021-05-21T08:09:46Z" title="2021-05-21 08:09 ">
    Mai 21, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Die Connect-Box CH7465LG-LC hat im IPv6 / IPv4 DualStack-Lite Modus keine öffentliche IP-Adresse, sondern IPv4 wird über CGN (Carrier Grade NAT) realisiert. Im DS-Lite Modus ist somit auch kein IPv4 Port-Forwarding möglich. Eine solche Möglichkeit steht nur zur Verfügung wenn man sich das Modem vom Support auf reinen IPv4 (ohne IPv6)  Betriebsmodus umkonfigurieren lässt.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Für IPv6 benötigt man kein Port-Forwarding, sondern die in der Connect-Box konfigurierbare IPv6 Firewall muss einfach passend konfiguriert sein, dann ist das Endgerät aus dem Internet direkt über IPv6 erreichbar. Um einen Server oder ein Service über IPv6 aus dem Heimnetz verfügbar zu machen muss man dem betreffenden Gerät also nur eine fixe IPv6-Adresse aus der /64-Range konfigurieren und in der Connect-Box Firmware die IPv6-Firewall für die betreffende Ziel-IP-Adresse des Geräte freischalten.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich kann bestätigen, dass das über IPv6 im DS-Lite-Modus problemlos funktioniert, mein Home-Server ist aus dem Internet so über SSH per IPv6 erreichbar.
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="4 yr" datetime="2021-05-21T08:12:31Z" title="2021-05-21 08:12 ">
       Mai 21, 2021
      </time>
      von gunnar
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Magisthan
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-05T11:35:11Z" title="2022-01-05 11:35 ">
+<br/>
+<time class="3 yr" datetime="2022-01-05T11:35:11Z" title="2022-01-05 11:35 ">
    Januar 5, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42402" data-ipsquote-contentid="6831" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1621584586" data-ipsquote-userid="89625" data-ipsquote-username="gunnar">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="42402" data-ipsquote-contentid="6831" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1621584586" data-ipsquote-userid="89625" data-ipsquote-username="gunnar">
+<div class="ipsQuote_citation">
      Am 21.5.2021 um 10:09 schrieb gunnar:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Für IPv6 benötigt man kein Port-Forwarding, sondern die in der Connect-Box konfigurierbare IPv6 Firewall muss einfach passend konfiguriert sein, dann ist das Endgerät aus dem Internet direkt über IPv6 erreichbar. Um einen Server oder ein Service über IPv6 aus dem Heimnetz verfügbar zu machen muss man dem betreffenden Gerät also nur eine fixe IPv6-Adresse aus der /64-Range konfigurieren und in der Connect-Box Firmware die IPv6-Firewall für die betreffende Ziel-IP-Adresse des Geräte freischalten.
      </p>
-     <p>
-     </p>
-    </div>
-   </blockquote>
-   <p>
+<p>
+</p>
+</div>
+</blockquote>
+<p>
     Hallo Gunnar,
     <br/>
     ich habe hier auch das gleiche Problem. Kannst du ggf. noch mal schreiben was du mit "fixe IPv6 Adresse aus der /64 Range" meinst?
-    <br>
+    <br/>
      Ich habe hier eine Synology und würde gern FTP laufen lassen, bekomme aber keine externe Verbindung. Intern geht es. In der Synology habe ich eine DDNS von Synology mit IPv4 u. IPv6 Adresse, im Router unter den Filterregeln (Port Forwarding gibt es da nicht), habe ich versucht Port 20-22 freizuschalten. Laut Port Scanner ist 21 u. 22 offen, bei 20 steht dort das er closed ist.
-     <br>
-      <br>
+     <br/>
+<br/>
        Wäre um Hilfe dankbar.
-      </br>
-     </br>
-    </br>
+      
+     
+    
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    gunnar
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-05T13:04:48Z" title="2022-01-05 13:04 ">
+<br/>
+<time class="3 yr" datetime="2022-01-05T13:04:48Z" title="2022-01-05 13:04 ">
    Januar 5, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45868" data-ipsquote-contentid="6831" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641382511" data-ipsquote-userid="91931" data-ipsquote-username="Magisthan">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="45868" data-ipsquote-contentid="6831" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1641382511" data-ipsquote-userid="91931" data-ipsquote-username="Magisthan">
+<div class="ipsQuote_citation">
      vor 1 Stunde schrieb Magisthan:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       habe ich eine DDNS von Synology mit IPv4 u. IPv6 Adresse
      </p>
-     <p>
+<p>
       Laut Port Scanner ist 21 u. 22 offen, bei 20 steht dort das er closed ist.
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Ein DynDNS mit IPv4 ist im DS-Lite-Mode nicht möglich, du hast keine öffentliche IPv4 die hierfür nutzbar ist, das was nach außen hin sichtbar ist, ist die IPv4 des CGN.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ein DynDNS mit IPv6 ist freilich möglich, wenn Deine DynDNS-Lösung das unterstützt alles fein, dann musst du auch keine "fixe IPv6" konfigurieren sondern kannst Dir diese auch dynamisch zuweisen lassen, der DynDNS-Client sorgt dann für die Updates im DNS.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Was Dein "Portscanner" bezwecken soll weiß ich jetzt nicht genau, ich versuche mal ein paar Gedanken dazu zu ordnen:
    </p>
-   <p>
+<p>
     1. Wenn Du hier ernsthaft vor hast Klartext-FTP über Internet verfügbar zu machen, so ist es vielleicht besser Du lässt die Finger davon - oder willst Du wirklich Klartext-FTP im Jahr 2022 verwenden? Glaube nicht.
    </p>
-   <p>
+<p>
     2. Selbst wenn du aktives Klartext-FTP verwendest, warum denkst du auf Port 20 sollte etwas nicht "closed" sein? Port-20 ist der Data-Port, den öffnet bei aktivem FTP nicht Dein Server sondern der Client. Insofern wird der auf Deinem NAS niemals "listening / open" sein. Vielleicht möchtest Du Dir in Erinnerung rufen wie FTP funktioniert, siehe z.B. die Skizze
     <a href="https://www.elektronik-kompendium.de/sites/net/0902241.htm" rel="external nofollow">
      hier
     </a>
     .
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="3 yr" datetime="2022-01-05T13:05:19Z" title="2022-01-05 13:05 ">
       Januar 5, 2022
      </time>
      von gunnar
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Magisthan
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-05T13:25:23Z" title="2022-01-05 13:25 ">
+<br/>
+<time class="3 yr" datetime="2022-01-05T13:25:23Z" title="2022-01-05 13:25 ">
    Januar 5, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     @Gunnar
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     zunächst mal Danke das du geantwortet hast, in der Community hat bislang noch keiner auf meine Anfrage an anderer Stelle geantwortet.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Zu deinem geschriebenen.
    </p>
-   <p>
+<p>
     Mit dem Portscanner war lediglich eine Darstellung dessen was der Scanner anzeigt, nicht das es für mich nicht nachvollziehbar wäre. Das der Port 20 closed sein sollte ist mir durchaus bewusst.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Soweit scheint der FTP ja auch ansprechbar zu sein, lediglich hier scheitert es:
-    <br>
+    <br/>
      Status: Resolving address of xxxxxxxxxxxxxxxxxxx
-     <br>
+     <br/>
       Status: Connecting to [xxxx.xxxx.xxxx.xxxx.xxxx.xxxx.xxxx.xxxx]:xxxx
-      <br/>
+      <br>
       Status: Connection established, waiting for welcome message...
-      <br/>
+      <br>
       Status: Initializing TLS...
       <br/>
       Status: Verifying certificate...
@@ -328,46 +328,46 @@
       <br/>
       Error: Failed to retrieve directory listing
      </br>
-    </br>
-   </p>
-   <p>
-   </p>
-   <p>
+</br>
+</p>
+<p>
+</p>
+<p>
     Deshalb war meine Vermutung das IPv6 grundsätzlich funktioniert, aber anscheint liegt der Fehler irgendwo, wo ich ihn nicht sehe. Ich habe zum testen FTP genommen weil ich eben extern keinen Zugriff bekommen habe, nicht das ich vor hätte es später zu nutzen. Das FTP veraltet und mit Sicherheitslücken behaftete ist, ist schon klar.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    gunnar
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-05T13:48:23Z" title="2022-01-05 13:48 ">
+<br/>
+<time class="3 yr" datetime="2022-01-05T13:48:23Z" title="2022-01-05 13:48 ">
    Januar 5, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Dein erster FTP-Abbruch ist einer Firewall die dem CLIENT vorgeschaltet sein dürfte geschuldet.
    </p>
-   <p>
+<p>
     Im Passiven Modus freilich musst du auch die hierfür vorgesehenen dynamischen Port-Ranges in der Firewall des Modems freigeben - da reicht dann 21/tcp noch nicht aus.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Noch ein Nachtrag: Da man in der IPv6-Firewall des Modems ja vermutlich nicht "alles für jeden" freischalten möchte wäre die Nutzung einer statischen IP für Deinen "Server" dennoch ratsam. Wie gesagt, einfach am Endgerät die zuvor dynamisch bezogene (oder eine beliebige andere aus der gleichen /64er Range) statisch konfigurieren.
    </p>
-   <p>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<p>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="3 yr" datetime="2022-01-05T13:49:02Z" title="2022-01-05 13:49 ">
       Januar 5, 2022
      </time>
      von gunnar
     </strong>
-   </span>
-  </div>
-  <hr/>
- </body>
+</span>
+</div>
+<hr/>
+</body>
 </html>

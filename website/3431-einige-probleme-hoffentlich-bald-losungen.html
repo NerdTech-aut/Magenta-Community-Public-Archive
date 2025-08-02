@@ -1,563 +1,564 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Einige Probleme, hoffentlich bald Losungen
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Einige Probleme, hoffentlich bald Losungen
   </h1>
-  <span class="author">
+<span class="author">
    Immanuel L.
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-07-21T22:00:00Z" title="2016-07-21 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-07-21T22:00:00Z" title="2016-07-21 22:00 ">
    Juli 21, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo zusammen!
    </p>
-   <p>
+<p>
     Ich wollte hier vor allem einmal über meine bisherigen Erfahrungen mit T-Mobile im Rahmen meines My HomeNet unlimited Extreme Vertrags berichten.
    </p>
-   <p>
+<p>
     Als ich mir relativ spontan überlegte dieses Produkt von T-Mobile zuzulegen hatte ich schon im Vorfeld gewisse Bedenken. Nicht wegen T-Mobile, sondern weil ich davor kurz das Angebot von 3 getestet habe, welches einfach nur eine Katastrophe war. Zuhause mal ein wenig getestet - soweit sah es gut aus. Auch Steam hat mit den Standard-Einstellungen des Routers funktioniert (wird später noch wichtig). Router habe ich übrigens die schwarze Box - also den Huawei E5170s-22.
    </p>
-   <p>
+<p>
     Nur einen Tag später - nämlich 24 Stunden genau - schon das erste Problem. Zwangstrennung der Verbindung, danach nur mehr 3G, das Modem schaltet nicht automatisch wieder auf LTE um. Also gegoogelt, es hat sich recht schnell herausgestellt, dass es durchaus ein paar Probleme gibt - wie von T-Mobile empfohlen also das Netz auf LTE fixiert.
    </p>
-   <p>
+<p>
     24 Stunden später... na, wer weiß es? Zwangstrennung, Router findet kein Netz mehr. Bekanntes Problem, keine Lösung in Sicht, es hilft nur manuelles Eingreifen oder längeres Warten (Meiner Meinung nach ist beides absolut inakzeptabel!).
    </p>
-   <p>
+<p>
     So nebenbei - es kann ja wohl nur ein schlechter Scherz sein, dass es keine Übersicht über die verbundenen Netzwerkgeräte gibt oder? Ich kaufe mir z.B. einen Repeater, oder einen Web Managed Switch, und soll dann raten welche IP der hat oder wie? Wie genau stellt sich T-Mobile das vor?
    </p>
-   <p>
+<p>
     Ein paar Tage später... ich will von extern auf mein Netz zugreifen und merke dabei schnell, dass ich keine öffentliche IP bekomme. 1x Googeln später stelle ich also die APN um auf business.gprsinternet. Problem gelöst. Transferraten sind zwar etwas niedriger (statt ca. 110Mbit/s nur mehr ca. 90MBit/s) aber das war es mir dann schon Wert. Bis dahin hatte ich mich auch noch nicht ein einziges Mal aufgeregt oder den Support kontaktiert, doch der Frustlevel war sicher schon eher hoch.
    </p>
-   <p>
+<p>
     Ein paar Tage oder Wochen später, das weiß ich nicht mehr so genau, kaufe ich mir jedenfalls einen eigenen LTE-Modemrouter, eine FritzBox 6820 LTE, ich hatte auch davor immer FritzBoxen für DSL und war damit super zufrieden.
    </p>
-   <p>
+<p>
     Seitdem - oh welch Wunder - alle Probleme weg. Einziges Manko bei der FritzBox - ich kann mir nicht wie bei den DSL FritzBoxen aussuchen, wann er die tägliche Zwangstrennung durchführen soll. Nachdem sie aber danach nicht ewig braucht, um wieder ein Signal zu bekommen, stellt das nicht wirklich ein Problem dar.
    </p>
-   <p>
+<p>
     Also alles gut - bis vor ein paar Wochen. Plötzlich bekomme ich bei Steam-Downloads angezeigt "Download-Server nicht erreichbar". Natürlich schaue ich gleich mal nach ob es ein Problem bei Steam gibt - Fehlanzeige. Trotzdem habe ich mal versucht, die Download-Region zu wechseln. Ich hab mir sogar die Zeit genommen, alle möglichen Download-Regionen zu testen. Es gingen nicht viele - unter anderem Westafrika und spezielle LAN-Event Server. (Im A1-Netz ging es problemlos). Natürlich habe ich dann auch wieder testweise auf den T-Mobile Modemrouter gewechselt. E-Mail an T-Mobile geschickt, bin an die kostenpflichtige Technik-Hotline verwiesen worden. Habs dann vorerst gelassen da es ja noch irgendwie funktionierte und dachte mir - ok, mal schauen wie es da weitergeht.
    </p>
-   <p>
+<p>
     Etwa eine Woche später gingen gar keine Steam-Downloads mehr, egal von welcher Download-Region. (Im A1-Netz ging es immer noch problemlos). E-Mail an T-Mobile geschickt, weil ich nicht die kostenpflichtige Nummer anrufen wollte, hab dann im Endeffekt 5€ gutgeschrieben bekommen und die kostenpflichtige Hotline angerufen. Da wurden Einstellungen für den Router neu überspielt. Relativ sinnlos, da es nicht am Gerät liegt, mit der FritzBox gings ja auch nicht. Sonst könnten sie im Moment aber nichts tun hieß es, ich solle mich an einen Store wenden wenn das nichts bringt.
    </p>
-   <p>
+<p>
     Überraschung, Problem besteht weiter, im Store - das erzähl ich jetzt gar nicht, denn bei den Aussagen dort wurde mir fast schlecht - konnte mir auch nicht geholfen werden. Naja, zumindest konnte ich den Mitarbeiter mit dem Wortspiel "Mein Internet funktioniert leider nicht so - wie ich will" begrüßen.
    </p>
-   <p>
+<p>
     Weiter recherchiert, gelesen, dass bei Steam die Kommunikation über Proxy-Server nicht unterstützt wird - also die noproxy APN getestet und siehe da - es hat funktioniert, mit allen Download-Regionen. Dabei möchte ich nochmal darauf hinweisen - am Anfang ging es mit Proxy ohne Probleme, sonst hätte ich den Router nämlich noch während der Rücktrittsfrist zurückgegeben.
    </p>
-   <p>
+<p>
     Problem: noproxy-APN heißt keine öffentliche IP. Ich brauche beides. Also wieder bei der Technik-Hotline angerufen, die mir dann bestätigt hat, was ich bereits in älteren Beiträgen gelesen habe - beides geht nicht.
    </p>
-   <p>
+<p>
     So nebenbei - mich würde immer noch brennend interessieren, wofür ihr da eigentlich ein Proxy-Relay dazwischenschaltet... Ich hab mal gelesen, dass das nur zur Bildkompression dienen soll, aber natürlich nicht von einer offiziellen Quelle. Wenn das wirklich stimmen sollte kann ich nur sagen - WTF!?
    </p>
-   <p>
+<p>
     Also - T-Mobile meint, ein vorzeitiger Vertragsaustritt ist in diesem Fall nicht möglich, denn eine solche "spezielle" Funktionalität sei im Vertrag nicht vorgesehen. Also Steam Downloads durchführen können und gleichzeitig öffentlich erreichbar sein ist also zu speziell für T-Mobile? Dann hätten wir vielleicht nicht ISP werden sollen, oder?
    </p>
-   <p>
+<p>
     Ich könnte mir doch aber jemanden suchen, der mir den Vertrag abnimmt. Ja, das hättet ihr wohl gerne. Aber das werde ich sicher nicht machen. Vor allem weil alle meine Bekannten bereits vernünftiges Internet haben, also würds niemand nehmen.
    </p>
-   <p>
+<p>
     Gut, Geschichtsstunde ist um. Ein konstruktives Feedback von euch wäre echt wünschenswert, und vielleicht bekomme ich ja doch noch meine Vertragsauflösung. In jedem Fall soll das aber ein Denkanstoß für T-Mobile sein. So geht keine Kundenbindung. So verhält man sich nicht als kundenorientiertes Unternehmen. Und eigentlich bietet man auch keine Internetzugänge mit solchen Einschränkungen an, wenn man noch Gewissen hat. Aber zu sagen - ok, das geht so mit unserem Netz leider nicht, dann müssen Sie auch nicht bei uns bleiben - das ist anscheinend zu viel verlangt.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    JC3BCrgen H.
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-07-23T22:00:00Z" title="2016-07-23 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-07-23T22:00:00Z" title="2016-07-23 22:00 ">
    Juli 23, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     werde meine Vertrag auch wieder kündigen. der Support bei t-mobile ist echt der schlechteste den ich kenne!!!
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Zupporter
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-07-25T22:00:00Z" title="2016-07-25 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-07-25T22:00:00Z" title="2016-07-25 22:00 ">
    Juli 25, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     hallo  ,
    </p>
-   <p>
+<p>
     zum einen , sind die router vom jeweiligen netzbetreiber gebrandet .
    </p>
-   <p>
+<p>
     damit geht halt nicht alles wie bei einem " profigerät " .
    </p>
-   <p>
+<p>
     wegen steam , gibt es schon im forum ein statement , wo , wenn ich mich recht erinnere auch angemerkt wird das die leute von t-mobile schon dran sind es zu lösen .
    </p>
-   <p>
+<p>
     ich hoffe auch das es bald wieder richtig funkt .
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     grüße vom Zupporter
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    techsupport
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-07-25T22:00:00Z" title="2016-07-25 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-07-25T22:00:00Z" title="2016-07-25 22:00 ">
    Juli 25, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Immanuel
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     So wie ich das sehe hast Du alle derzeit denkbaren Situationen  ;)
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Zupporter hat recht ,  die meisten Deiner Fragen haben wir schon im Forum behandelt .
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich empfehle das Gerät entweder auf einen besseren Standort zu stellen , oder eine Außenantenne zu verwenden .
    </p>
-   <p>
+<p>
     Oder auf 4 g zu fixieren und den Einbuchvorgang auf einen Zeitpunkt zu verlegen wo es nicht stört wenn er länger dauert .
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bezüglich Steam sind wir dran es zu beheben , bitte noch ein wenig geduldig sein .
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
+</p>
+<p>
     Vg  Christian ( TSC T-Mobile)
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Immanuel L.
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-07-25T22:00:00Z" title="2016-07-25 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-07-25T22:00:00Z" title="2016-07-25 22:00 ">
    Juli 25, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Christian,
    </p>
-   <p>
+<p>
     das ist die erste wirklich vernünftige Antwort, die ich von euch bekomme, also danke erstmal dafür.
    </p>
-   <p>
+<p>
     Ich weiß, dass die meisten Punkte im Forum bereits behandelt wurden, aber wie bereits geschrieben, dass sollte eine Zusammenfassung von allen Problemen sein, die ich bis jetzt beobachten konnte.
    </p>
-   <p>
+<p>
     Was Steam angeht bin ich etwas überrascht, denn egal wen ich gefragt habe, sei es E-Mail, Technik-Hotline oder im Shop, niemand wusste auch nur von dem Problem, geschweige denn mir zu sagen, dass ich bitte noch ein wenig Geduld haben soll und es in Arbeit ist. Hätte man mir das früher gesagt, dann hätte ich einfach gewartet. Denn mit den anderen Problemen kann ich mich arrangieren, auch wenn es tlw. echt nervig ist.
    </p>
-   <p>
+<p>
     Vielleicht sind auch die extremen Geschwindigkeits-Schwankungen bei Benutzung des Proxy-Relays in Arbeit? Das wäre nämlich noch der einzige andere Punkt, der mich wirklich stört.
    </p>
-   <p>
+<p>
     Edit:
    </p>
-   <p>
+<p>
     Ok, habe gerade den techsupport-Kommentar vom 11.07.2016 in einem anderen Thread gelesen, wo gesagt wird, dass das Problem in Arbeit ist. Da hatte ich bei dem "besten" Kommentar vom T-Mobile Kundenservice aufgehört zu lesen.
    </p>
-   <p>
+<p>
     Aber wenn das Problem mindestens seit dem Zeitpunkt bekannt war, warum konnten die anderen Support-Kanäle mir das nicht mitteilen? Weder E-Mail, noch Shop, und auch nicht die kostenpflichtige Technik-Hotline.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Gregor M.
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-07-28T22:00:00Z" title="2016-07-28 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-07-28T22:00:00Z" title="2016-07-28 22:00 ">
    Juli 28, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ich häng mich hier kurz an, da Christian folgendes scheinbar nicht bewusst ist:
    </p>
-   <p>
+<p>
     Bei der Fixierung auf 4G kommt es bei den Huawei-Routern (mit eurer Firmware) sehr oft vor, dass sie nach der Zwangstrennung sich nicht mehr verbinden. Ein lapidares "Kein Service" ist alles was sie dann vor sich geben. Mann muss dann manuell auf 3G/neu verbinden/auf 4G umstellen... Dazu hätte ich gerne mal eine fundierte Antwort/Lösung.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     LG
    </p>
-   <p>
+<p>
     Gregor
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    techsupport
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-08-04T22:00:00Z" title="2016-08-04 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-08-04T22:00:00Z" title="2016-08-04 22:00 ">
    August 4, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
       Hallo ,
      </span>
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
-     </span>
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
-     </span>
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
+</span>
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
+</span>
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
       Wie wir schon mal im Forum angegeben haben , kann das tatsächlich vorkommen das es recht lange dauert bis sich der Router wieder einwählt .
      </span>
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
       Das hängt vom Standort ab .
      </span>
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
-     </span>
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
+</span>
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
       Was man in dem Fall machen kann , ist :
      </span>
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
       Den Standort bzw. die Antenne des Routers verbessern .
      </span>
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
       Den „ neu Einbuchungs Zeitpunkt „ auf eine Tageszeit zu manuell verschieben , an der es nicht stört wenn der Router lange braucht um wieder Netz zu bekommen .
      </span>
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
       Den Router durch eine Zeitschaltuhr zum Neustart zu zwingen .
      </span>
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
-     </span>
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
+</span>
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
       Performancefragen müssen wir einzeln Analysieren , das lässt sich nicht generell beantworten .
      </span>
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-    </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
-     <span style="font-size: medium;">
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+</span>
+</p>
+<p>
+<span lang="de" xml:lang="de">
+<span style="font-size: medium;">
       vg Christian ( TSC T-Mobile )
      </span>
-    </span>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</p>
+</div>
+<hr/>
+<span class="author">
    Immanuel L.
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-08-07T22:00:00Z" title="2016-08-07 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-08-07T22:00:00Z" title="2016-08-07 22:00 ">
    August 7, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Christian,
    </p>
-   <p>
+<p>
     auch wenn ich das Problem mit dem langen wieder Einwählen nach der Zwangstrennung durch mein alternatives Modem nicht habe, möchte ich trotzdem nochmal fragen - inwiefern kann ich denn den Standort meines Modems verbessern um dieses Problem zu beseitigen?
    </p>
-   <p>
+<p>
     Der LTE-Mast ist laut meiner FritzBox etwa 300m entfernt. Mit der HomeNet-Box von euch bekomme ich 100-120 Mbit/s zusammen. Meine Wohnung befindet sich im 2. Stock und das Modem steht in Fensternähe. Wenn das kein guter Standort ist, dann weiß ich es auch nicht.
    </p>
-   <p>
+<p>
     Wir hätten hier gerne einfach eine ehrliche Antwort - Wird dieses - offensichtlich geräteabhängige - Problem behoben werden oder nicht?
    </p>
-   <p>
+<p>
     Übrigens hatte ich heute Probleme beim Online-Gaming mit meiner Xbox One.
     <br/>
     Es dauerte sehr lange einer Party beizutreten, locker mehr als 30 Sekunden, und in Halo: The Master Chief Collection war es nicht möglich eine Gruppe mit anderen Spielern zu bilden. Beides getestet mit der noproxy und business.gprsinternet APN.
    </p>
-   <p>
+<p>
     Ich wollte es nicht glauben, ich hab mich fast nicht getraut es zu testen, aber ich habs dann doch getan...
     <br/>
     A1-SIM rein - beides geht wunderbar. Sobald möglich werde ich da noch ein bisschen weiter testen, aber wenn du oder jemand anders hier was weiß - bitte um Infos. Ich werde noch das Forum danach durchsuchen, und wenn nötig nach den nächsten Tests einen neuen Thread darüber erstellen.
    </p>
-   <p>
+<p>
     Dazu will ich noch sagen - ich will euch wirklich nicht schlecht dastehen lassen, sondern ich hoffe, dass diese Infos bei der Fehlerbewertung/-analyse/-behebung helfen können, aber ich erwarte mir, dass man sich solcher Probleme auch annimmt.
    </p>
-   <p>
+<p>
     Im Endeffekt will ich doch nur, dass ich keine Probleme mit meinem Internetzugang habe. Als Zeichen meines guten Willens werde ich den Thread-Titel ändern. Ich war da wirklich sehr sauer und musste meinem Ärger hier Platz schaffen, doch da sich die Diskussion hier konstruktiv entwickelt, ist das nicht mehr angebracht.
    </p>
-   <p>
+<p>
     LG
    </p>
-   <p>
+<p>
     Immanuel
    </p>
-   <p>
+<p>
     Edit: Naja, wenn man sich wirklich Zeit nimmt und selbst recherchiert, dann bekommt man ja doch ab und zu mehr Antworten. Laut einer Konversation auf Twitter ist - zumindest für den Router - ein Fix für das "LTE-zu-3G-Problem" in Arbeit -
     <a href="https://twitter.com/tmobileat/status/760454081114693633" target="_blank">
      https://twitter.com/tmobileat/status/760454081114693633
     </a>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    LRobert
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-08-07T22:00:00Z" title="2016-08-07 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-08-07T22:00:00Z" title="2016-08-07 22:00 ">
    August 7, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     laut twitter
    </p>
-   <p>
+<p>
     &gt;Nein - im Ernst. Das liegt an uns. Aber wir sind dran, den Fehler zu beheben. ^kersti
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     na endlich  wird mal zugegeben dass es an T-Mobile liegt, dass wir seit Monaten nicht die Leistung erhalten die wir Bezahlen..
    </p>
-   <p>
+<p>
     wie wärs mal mit einer (rückwirkenden) Beitragskürzung bis das Problem behoben ist
    </p>
-   <p>
+<p>
     ??
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Kundenservice_ALT
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-08-08T22:00:00Z" title="2016-08-08 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-08-08T22:00:00Z" title="2016-08-08 22:00 ">
    August 8, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Immanuel,
    </p>
-   <p>
+<p>
     ich möchte mich mal für deine sachliche Argumentation bedanken. Glaube mir, wir verstehen dich und wir möchten natürlich auch, dass das Internet natürlich funktioniert.
    </p>
-   <p>
+<p>
     Christian von unserem TSC wird sich deinen Beitrag natürlich nochmals ansehen. Bitte habe ein wenig Geduld. Er wird sich hier sicher melden.
    </p>
-   <p>
+<p>
     Bei der Twitter Konversation ist es tatsächlich nur um den "LTE-zu-3G-Bug!" gegangen. Dies möchte ich hier nochmals erwähnen.
     <img alt="Zwinkern" class="dynImage maxSize_23x23" height="23" src="http://forum.t-mobile.at/common/js/ckeditor/plugins/smiley/images/wink_smile.png" title="Zwinkern" width="23"/>
-   </p>
-   <p>
+</p>
+<p>
     vlG
     <br/>
     Kerstin
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Kundenservice_ALT
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-08-08T22:00:00Z" title="2016-08-08 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-08-08T22:00:00Z" title="2016-08-08 22:00 ">
    August 8, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Robert,
    </p>
-   <p>
+<p>
     bitte nicht einzelnen, aus dem Zusammenhang gerissene Tweets von mir hier Posten.
    </p>
-   <p>
+<p>
     Immanuel hat, zum einen den gesamten Twitter-Post gepostet, der für alle nach zu lesen ist und ebenfalls auch in seinem Beitrag erwähnt, dass es bei diesem Beitrag um den "LTE-zu-3G-Bug!" geht.
    </p>
-   <p>
+<p>
     Im Auto-Modus bleibt, bei der LTE-Zwangstrennung, der Router im 3G-Netz "hängen". Mit einem Neustart funkt es wieder. Dieser Fehler wird gerade behoben.
    </p>
-   <p>
+<p>
     Dies hat nichts mit einer nichterbrachten Leistung zu tun.
    </p>
-   <p>
+<p>
     Schönen Abend, wünsche ich dir noch.
    </p>
-   <p>
+<p>
     vlG
-    <br>
+    <br/>
      Kerstin
-    </br>
+    
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    LRobert
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-08-08T22:00:00Z" title="2016-08-08 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-08-08T22:00:00Z" title="2016-08-08 22:00 ">
    August 8, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     man zahlt LTE und bekommt 3G ,
    </p>
-   <p>
+<p>
     &gt;dass es bei diesem Beitrag um den "LTE-zu-3G-Bug!" geht.
    </p>
-   <p>
+<p>
     aha
    </p>
-   <p>
+<p>
     sondern um den "wenn man LTE fixiert, geht das Internet 1/4 Stunde überhaupt nicht mehr Mit einem Neustart funkt es wieder. " BUG den ihr ja wohl hoffentlich auch behebt?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     (ja in dem Thread geht es auch um andere Probleme, aber ich hab nur auf eine Teil geantwortet.. )
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Gregor M.
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-08-10T22:00:00Z" title="2016-08-10 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-08-10T22:00:00Z" title="2016-08-10 22:00 ">
    August 10, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Kerstin.
    </p>
-   <p>
+<p>
     Dieser Fehler ist mindestens seit 6 Monaten bei der technischen Hotline bekannt.
-    <br>
+    <br/>
      Kannst du mir bitte "wird gerade behoben" zeitlich definieren?
-    </br>
+    
    </p>
-   <p>
+<p>
     Danke und LG
-    <br>
+    <br/>
      Gregor
-    </br>
+    
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    techsupport
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-08-11T22:00:00Z" title="2016-08-11 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-08-11T22:00:00Z" title="2016-08-11 22:00 ">
    August 11, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <span lang="de" xml:lang="de">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<span lang="de" xml:lang="de">
      Hallo ,
     </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
+</p>
+<p>
+<span lang="de" xml:lang="de">
      Wir sind mit Huawei dran das Problem zu lösen .
     </span>
-   </p>
-   <p>
-    <span lang="de" xml:lang="de">
+</p>
+<p>
+<span lang="de" xml:lang="de">
      Ich kann noch nicht sagen wann es eine neue Wasserstandsmeldung gibt zu dem Einbuchthema , aber wir Tracen fleißig und Huawei arbeitet auch mit Hochdruck an der Lösung .
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     vg Christian ( TSC T-Mobile )
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Thomas B.
   </span>
-  <br/>
-  <time class="8 yr" datetime="2016-08-12T22:00:00Z" title="2016-08-12 22:00 ">
+<br/>
+<time class="8 yr" datetime="2016-08-12T22:00:00Z" title="2016-08-12 22:00 ">
    August 12, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Wo ist das Problem?
-    <br>
-     <br>
+    <br/>
+<br/>
       Gebt die original FW frei und ihr habt viele Probleme weniger ...
-     </br>
-    </br>
+     
+    
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

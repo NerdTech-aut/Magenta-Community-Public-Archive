@@ -1,109 +1,110 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Probleme mit VPN -  Internetgeschwindigkeit sinkt dramatisch (auch nicht VPN-Traffic betroffen).
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Probleme mit VPN -  Internetgeschwindigkeit sinkt dramatisch (auch nicht VPN-Traffic betroffen).
   </h1>
-  <span class="author">
+<span class="author">
    stm91
   </span>
-  <br/>
-  <time class="1 yr" datetime="2023-11-14T21:23:20Z" title="2023-11-14 21:23 ">
+<br/>
+<time class="1 yr" datetime="2023-11-14T21:23:20Z" title="2023-11-14 21:23 ">
    November 14, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     habe einen der populären VPN-Anbieter in Verwendung. Wenn ich nicht zusätzlich Schritte unternehme um zu verstecken, dass ich eine VPN-Verbindung nutze bricht mein gesamtes Internet auf wenige kBit ein (auch der nicht-VPN-Traffic). Sobald ich das deaktiviere oder verstecke geht wieder alles.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Was soll das?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="1 yr" datetime="2023-11-14T22:04:02Z" title="2023-11-14 22:04 ">
+<br/>
+<time class="1 yr" datetime="2023-11-14T22:04:02Z" title="2023-11-14 22:04 ">
    November 14, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Versteckst du den Tunnel etwa mit einem anderen Tunnel?
    </p>
-   <p>
+<p>
     Es kann sein, dass die Route zu dem verwendeten VPN-Server, welche im Magenta Netz verwendet wird, nicht gerade die beste ist.
    </p>
-   <p>
+<p>
     Besteht das Problem bei den VPN-Servern dieses Anbieters in mehreren Ländern?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    stm91
   </span>
-  <br/>
-  <time class="1 yr" datetime="2023-11-15T10:31:20Z" title="2023-11-15 10:31 ">
+<br/>
+<time class="1 yr" datetime="2023-11-15T10:31:20Z" title="2023-11-15 10:31 ">
    November 15, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hab es mit einer Vielzahl an Servern probiert. Jedes mal wenn ein paar mbit Auslastung erreicht werden bricht die Leitung komplett zusammen - also auch außerhalb der VPN-Verbindung da ich per split-tunneling nicht alles darüber laufen lasse. Selbst auf die Startseite von Google komme ich dann nur mehr mit Mühe und Not. Am Anbieter selbst liegt es offensichtlich nicht da es Wege drum herum gibt aber es nervt hier zusätzlichen Aufwand betreiben zu müssen.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="1 yr" datetime="2023-11-15T11:22:54Z" title="2023-11-15 11:22 ">
+<br/>
+<time class="1 yr" datetime="2023-11-15T11:22:54Z" title="2023-11-15 11:22 ">
    November 15, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Welcher VPN Anbieter, welches VPN Protokoll, welche Einstellungen, z.B. TCP/UDP/etc.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    stm91
   </span>
-  <br/>
-  <time class="1 yr" datetime="2023-11-16T19:17:43Z" title="2023-11-16 19:17 ">
+<br/>
+<time class="1 yr" datetime="2023-11-16T19:17:43Z" title="2023-11-16 19:17 ">
    November 16, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     PIA, openVPN mit TCP alles auf default
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="1 yr" datetime="2023-11-17T07:19:45Z" title="2023-11-17 07:19 ">
+<br/>
+<time class="1 yr" datetime="2023-11-17T07:19:45Z" title="2023-11-17 07:19 ">
    November 17, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Probiere Mal wireguard
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

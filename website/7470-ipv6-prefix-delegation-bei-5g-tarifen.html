@@ -1,99 +1,100 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    IPv6 Prefix Delegation bei 5G Tarifen
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    IPv6 Prefix Delegation bei 5G Tarifen
   </h1>
-  <span class="author">
+<span class="author">
    sebawern
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-14T14:14:13Z" title="2022-01-14 14:14 ">
+<br/>
+<time class="3 yr" datetime="2022-01-14T14:14:13Z" title="2022-01-14 14:14 ">
    Januar 14, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Sollte IPv6 Prefix Delegation auch bei 5G Tarifen schon funktionieren? Wenn ich meinen Laptop mit dem Huawei 5G CPE Pro 2 verbinde, bekomme ich eine IPv6 Adresse. Mein Router hinter der 5G Box allerdings nicht, auch nicht, wenn die 5G Box im Brückenmodus ist. Support vom Router sagt, ohne IPv6 PD gibts (natürlich) kein IPv6 hinter dem Router.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     An vielen Stellen kann man hier lesen, dass IPv6 PD für Kunden im Kabelnetz wohl schon aktiv ist. Weiß jemand, wie das bei LTE/5G Tarifen aussieht?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-14T14:27:53Z" title="2022-01-14 14:27 ">
+<br/>
+<time class="3 yr" datetime="2022-01-14T14:27:53Z" title="2022-01-14 14:27 ">
    Januar 14, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Voraussetzung dass der Huawei 5G CPE Pro 2 IPv6 PD machen könnte, ist dass der ein größeres Netz als ein /64 bekommt. z.B. ein /60 oder /56.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wie verhält sich das Ding im Bridge Modus? Ich habe mich da einmal mit einem LTE Stick gespielt und im Bridge Modus kein IPv6 hin bekommen, vielleicht funktioniert es aber mit dem Gerät.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    sebawern
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-01-14T14:49:04Z" title="2022-01-14 14:49 ">
+<br/>
+<time class="3 yr" datetime="2022-01-14T14:49:04Z" title="2022-01-14 14:49 ">
    Januar 14, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46035" data-ipsquote-contentid="7470" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1642170473" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="46035" data-ipsquote-contentid="7470" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1642170473" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+<div class="ipsQuote_citation">
      vor 19 Minuten schrieb IT-Freak:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Voraussetzung dass der Huawei 5G CPE Pro 2 IPv6 PD machen könnte, ist dass der ein größeres Netz als ein /64 bekommt. z.B. ein /60 oder /56.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Wie verhält sich das Ding im Bridge Modus? Ich habe mich da einmal mit einem LTE Stick gespielt und im Bridge Modus kein IPv6 hin bekommen, vielleicht funktioniert es aber mit dem Gerät.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Ja, die Präfix Größe ist wohl auch ein Problem. Im Bridge Modus wird IPv4 sauber durchgereicht, von IPv6 war nichts zu sehen.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    equinox_01
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-06-27T16:15:21Z" title="2024-06-27 16:15 ">
+<br/>
+<time class="1 yr" datetime="2024-06-27T16:15:21Z" title="2024-06-27 16:15 ">
    Juni 27, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Also es ist jetzt dann echt schon peinlich liebes Magenta-Team!
     <br/>
-    <br/>
+<br/>
     Im Jahre 2024 wird nur ein 64er Netz gereicht und damit kann man ein Modem im Bridge-Modus als Outdoor-Einheit und einem anständigen Router dahinter vergessen.
     <br/>
-    <br>
+<br/>
      Wann kommt ihr endlich im Jahre 2024 an?
-    </br>
+    
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

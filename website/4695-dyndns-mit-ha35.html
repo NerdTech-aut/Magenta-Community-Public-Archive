@@ -1,448 +1,447 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    DynDNS mit HA35
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    DynDNS mit HA35
   </h1>
-  <span class="author">
+<span class="author">
    hitch
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-09-15T10:24:56Z" title="2018-09-15 10:24 ">
+<br/>
+<time class="6 yr" datetime="2018-09-15T10:24:56Z" title="2018-09-15 10:24 ">
    September 15, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo!
    </p>
-   <p>
+<p>
     Ich habe seit ca. 2 Jahren meinen Internetzugang über LTE, wegen der stark schwankenden Bandbreite probiere ich momentan Hybrid mit dem Huawei HA 35-22 aus.
    </p>
-   <p>
+<p>
     Nachdem ich einige Smarthome-Geräte, eine Überwachungskamera und einen Server habe, würde ich DynDNS auch brauchen. Bisher benutze ich selfhost mit einem AVM-LTE Router, aber selfhost funktioniert mit dem Huawei ja leider nicht. Ich habe gelesen, dass es möglich wäre, hinter dem Hybrid-Router noch einen anderen Router zu betreiben, der das mit DynDNS übernimmt – nur müsste dieser Router die externe IP von einem Webdienst holen (z.B. wieistmeineip.at, checkip.dyndns.com). Das wäre eine gute Lösung für mich, weil ich so weiterhin selfhost nutzen könnte. Nur bietet ein Fritz-Router diese Möglichkeit mit der IP vom Webdienst meines Wissens nach nicht, Router von Draytek sollen das aber können. So ein Draytek-Router ist aber nicht gerade billig, kennt vielleicht irgendjemand eine Alternative?
    </p>
-   <p>
+<p>
     Würde theroretisch eine Fritzbox 6890 LTE statt des HA35 auch funktionieren?
    </p>
-   <p>
+<p>
     Das Thema Hybrid ist ganz neu für mich – soweit ich das verstanden habe, wird eine IP fürs DSL und eine fürs LTE vergeben, für die Kombination gibt es nochmals eine neue Bonding-IP. Ich gehe davon aus, dass diese Bonding-IP für DynDNS relevant ist. Eine freundliche T-Mobile Mitarbeiterin hat mir im Chat mitgeteilt, dass eine öffentliche IP zugeteilt wird – sind die DSL-, die LTE- und die Bonding-IP öffentlich? Die DSL-Leitung ist derzeit noch nicht eingerichtet bei mir, sollte DynDNS nur mit LTE  funktionieren (mein Versuch mit noip hat nicht geklappt)?
    </p>
-   <p>
+<p>
     Ist die Bonding-IP IPv4 oder IPv6? Wäre es egal, wenn die WAN-IP IPv6 wäre und meine Server IPv4 oder würde es mit der Erreichbarkeit von außen Probleme geben?
    </p>
-   <p>
+<p>
     Vielen Dank!
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-09-15T16:51:29Z" title="2018-09-15 16:51 ">
+<br/>
+<time class="6 yr" datetime="2018-09-15T16:51:29Z" title="2018-09-15 16:51 ">
    September 15, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Die öffentliche IP funktioniert, was ich so im Forum gelesen habe, erst nach der DSL Herstellung.
    </p>
-   <p>
+<p>
     Schau einmal die IP Adressen in der Hybrid Box durch, ob diese öffentliche sind oder private/CG NAT IPs.
    </p>
-   <p>
+<p>
     Wenn du dir unsicher bist, ob es sich dabei um eine öffentliche handelt, könntest du die Ziffern bis zum ersten . Posten.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Zu weit ich weis, sind nur IPv4 Adressen im Einsatz.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    hitch
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-09-15T17:26:45Z" title="2018-09-15 17:26 ">
+<br/>
+<time class="6 yr" datetime="2018-09-15T17:26:45Z" title="2018-09-15 17:26 ">
    September 15, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Danke für die Antwort!
    </p>
-   <p>
+<p>
     Laut canyouseeme ist meine externe Adresse 212..., also IPv4.
    </p>
-   <p>
+<p>
     Die Hybridbox meldet aber, dass der IPv4-Status bei LTE "nicht verbunden" ist und die IPv6 2001:... ist. Im Punkt Bonding-Tunnel steht, dass IPv4 100... ist und IPv6 2001:..., bei den Bonding-Informationen steht als IP-Adresse des Bonding-Servers auch IPv6.
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="6 yr" datetime="2018-09-15T19:34:18Z" title="2018-09-15 19:34 ">
       September 15, 2018
      </time>
      von hitch
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-09-15T17:47:32Z" title="2018-09-15 17:47 ">
+<br/>
+<time class="6 yr" datetime="2018-09-15T17:47:32Z" title="2018-09-15 17:47 ">
    September 15, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Yeah!
    </p>
-   <p>
+<p>
     Endlich IPv6!!!!!!
    </p>
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/69460-phil/?do=hovercard" data-mentionid="69460" href="https://community.magenta.at/profile/69460-phil/" rel="">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/69460-phil/?do=hovercard" data-mentionid="69460" href="https://community.magenta.at/profile/69460-phil/" rel="">
      @Phil
     </a>
     betrifft IPv6 nur Hybrid oder auch andere Dienst?
    </p>
-   <p>
+<p>
     OK. Dann wird die öffentliche IPv4 auf das DSL interface geschaltet.
    </p>
-   <p>
+<p>
     Da ist ein Router bei TMobile der die 100. Adresse und einige andere 100. Adressen auf eine öffentliche IP umsetzt. (CG-NAT)
    </p>
-   <p>
+<p>
     IPv4 Adressen sind Mangelware, deshalb muss auf CG Nat zurück gegriffen werden.
    </p>
-   <p>
+<p>
     Zu dem Thema mit selfhost.
    </p>
-   <p>
+<p>
     Wenn du unbedingt bei selfthost bleiben möchtest könntest du dies mit einem Raspberry Pi oder vergleichbaren updaten.
     <a href="http://selfhost.de/cgi-bin/selfhost?p=faq&amp;show=113" rel="external nofollow">
      http://selfhost.de/cgi-bin/selfhost?p=faq&amp;show=113
     </a>
-   </p>
-   <p>
+</p>
+<p>
     Die Box unterstützt aber andere DynDNS Anbieter. Vielleicht ist das ein DynDNS Anbieter Wechsel einfacher und günstiger.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    hitch
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-09-15T19:32:00Z" title="2018-09-15 19:32 ">
+<br/>
+<time class="6 yr" datetime="2018-09-15T19:32:00Z" title="2018-09-15 19:32 ">
    September 15, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ich werde wohl den DynDNS-Anbieter wechseln, dann muss ich keine neuen Geräte kaufen.
    </p>
-   <p>
+<p>
     Ok – Man bekommt also eine IPv6-Adresse über LTE. Es gibt aber auch eine private IPv4, diese 100… Adresse wird beim Übergang vom T-Mobile Netz ins Internet auf eine öffentliche Bonding-IPv4 umgesetzt. Diese öffentliche IP bekommt man aber über DSL und erst dann ist DynDNS möglich.
    </p>
-   <p>
+<p>
     Habe ich das richtig verstanden?
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="6 yr" datetime="2018-09-15T19:33:16Z" title="2018-09-15 19:33 ">
       September 15, 2018
      </time>
      von hitch
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    hitch
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-09-18T08:32:35Z" title="2018-09-18 08:32 ">
+<br/>
+<time class="6 yr" datetime="2018-09-18T08:32:35Z" title="2018-09-18 08:32 ">
    September 18, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo nochmal!
    </p>
-   <p>
+<p>
     Die DSL-Leitung ist mittlerweile freigeschaltet, der HA35 ist bei noip angemeldet.
    </p>
-   <p>
+<p>
     Ich habe eine neue Portzuordnung für den Server gemacht:
    </p>
-   <p>
+<p>
     interner port 50 - 50
     <br/>
     externer port 50 - 50
     <br/>
     protokoll tcp
    </p>
-   <p>
+<p>
     Trotzdem kann ich nicht auf meinen ftp-Server von außen zugreifen.
    </p>
-   <p>
+<p>
     Meine WAN-IP laut canyouseeme ist 212... Noip hat gleich nach dem Einrichten ebenfalls die 212... angezeigt bzw. aktualisiert. Nach 2- oder 3mal aus- und einschalten des Routers zeigt canyouseeme immer noch die 212..., noip zeigt aber jetzt die 100...-Adresse an, die auch im Bonding-Tunnel des Routers steht.
    </p>
-   <p>
+<p>
     Könntet ihr mir bitte helfen?
    </p>
-   <p>
+<p>
     Danke!
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-09-18T11:00:20Z" title="2018-09-18 11:00 ">
+<br/>
+<time class="6 yr" datetime="2018-09-18T11:00:20Z" title="2018-09-18 11:00 ">
    September 18, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Welche IPs tauchen wo im Modem auf?
    </p>
-   <p>
+<p>
     Da müsste sich doch was durch DSL geändert haben.
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="6 yr" datetime="2018-09-18T11:30:03Z" title="2018-09-18 11:30 ">
       September 18, 2018
      </time>
      von IT-Freak
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Gast
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-09-18T11:01:35Z" title="2018-09-18 11:01 ">
+<br/>
+<time class="6 yr" datetime="2018-09-18T11:01:35Z" title="2018-09-18 11:01 ">
    September 18, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26966" data-ipsquote-contentid="4695" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1537033652" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="26966" data-ipsquote-contentid="4695" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1537033652" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+<div class="ipsQuote_citation">
      Am 15.9.2018 um 19:47 schrieb IT-Freak:
     </div>
-    <div class="ipsQuote_contents ipsClearfix">
-     <p>
-      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/69460-phil/?do=hovercard" data-mentionid="69460" href="https://community.magenta.at/profile/69460-phil/" id="ips_uid_2419_2" rel="">
+<div class="ipsQuote_contents ipsClearfix">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/69460-phil/?do=hovercard" data-mentionid="69460" href="https://community.magenta.at/profile/69460-phil/" id="ips_uid_2419_2" rel="">
        @Phil
       </a>
       betrifft IPv6 nur Hybrid oder auch andere Dienst?
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Richtig, aktuell nur Hybrid.
    </p>
-   <p>
+<p>
     LG
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-09-18T11:27:32Z" title="2018-09-18 11:27 ">
+<br/>
+<time class="6 yr" datetime="2018-09-18T11:27:32Z" title="2018-09-18 11:27 ">
    September 18, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Schade. Kommt man ins Hybrid APN auch mit einer normalen SIM? (Welches wäre das?) Ist dort ein Nat64 Server im Einsatz?
     <br/>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    Fichtlwichtl
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-09-18T13:34:14Z" title="2018-09-18 13:34 ">
+<br/>
+<time class="6 yr" datetime="2018-09-18T13:34:14Z" title="2018-09-18 13:34 ">
    September 18, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27034" data-ipsquote-contentid="4695" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1537270052" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27034" data-ipsquote-contentid="4695" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1537270052" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+<div class="ipsQuote_citation">
      vor 2 Stunden schrieb IT-Freak:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Schade. Kommt man ins Hybrid APN auch mit einer normalen SIM? (Welches wäre das?) Ist dort ein Nat64 Server im Einsatz?
-      <br>
-      </br>
-     </p>
-     <p>
-     </p>
-    </div>
-   </blockquote>
-   <p>
+      <br/>
+</p>
+<p>
+</p>
+</div>
+</blockquote>
+<p>
     Das hab ich mal versucht, hat allerdings nicht funktioniert.
    </p>
-   <p>
+<p>
     Offenbar gibt´s bei den Hybrid Karten eine eigene Konfiguration.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    hitch
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-09-19T08:46:41Z" title="2018-09-19 08:46 ">
+<br/>
+<time class="6 yr" datetime="2018-09-19T08:46:41Z" title="2018-09-19 08:46 ">
    September 19, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27032" data-ipsquote-contentid="4695" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1537268420" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="27032" data-ipsquote-contentid="4695" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1537268420" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+<div class="ipsQuote_citation">
      vor 21 Stunden schrieb IT-Freak:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Welche IPs tauchen wo im Modem auf?
      </p>
-     <p>
+<p>
       Da müsste sich doch was durch DSL geändert haben.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Nachdem die Bonding-IP 100... eindeutig privat ist, habe ich gestern einen Techniker angerufen - es ist so, dass eine öffentliche IP nichts extra kostet, man die aber extra bestellen muss.
    </p>
-   <p>
+<p>
     Nach 10 Minuten ist das umgestellt gewesen - ich habe noch keine Zeit gehabt, den Zugriff aus dem WAN zu testen, ich gehe aber davon aus, dass es funktioniert.
    </p>
-   <p>
+<p>
     Danke nochmal an alle für die Hilfe!
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Robert T.
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-09-22T04:54:42Z" title="2018-09-22 04:54 ">
+<br/>
+<time class="6 yr" datetime="2018-09-22T04:54:42Z" title="2018-09-22 04:54 ">
    September 22, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Wenn du einen Server 24h am laufen hast damm ist vielleicht
     <a href="http://noeld.com/dynsite.asp" rel="external nofollow">
      Dynsite
     </a>
     eine Lösung für dich.
    </p>
-   <p>
+<p>
     Ich habe es für diverse Problemlösungen am Laufen und hat mir echt geholfen.
    </p>
-   <p>
+<p>
     lg.
-    <br>
+    <br/>
      Robert
-    </br>
+    
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Waldemar
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-11-15T10:56:52Z" title="2018-11-15 10:56 ">
+<br/>
+<time class="6 yr" datetime="2018-11-15T10:56:52Z" title="2018-11-15 10:56 ">
    November 15, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Liebes Forum.
    </p>
-   <p>
+<p>
     Ich habe seit gestern meinen HA35-22 im Einsatz. DSL ist eingerichtet und läuft zusammen mit LTE (der Router steht z.Z. an einem anderen Ort ohne DSL). Öffentliche IP beantragt und Router neu gestartet.
    </p>
-   <p>
+<p>
     Ich bekomme die DDNS Konfiguration nicht zu Laufen, der Status ist immer "getrennt" und die IP wird bei NO-IP auch nicht erneuert.
    </p>
-   <p>
+<p>
     Die Softwareversion ist V100R018C00SPC108.
    </p>
-   <p>
+<p>
     Was mache ich falsch?
    </p>
-   <p>
+<p>
     Danke für Eure Hilfe
    </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/DDNS.png.109f17fa7e6cddc7563d7ec54d5a2cca.png">
-     <img alt="DDNS.png" class="ipsImage ipsImage_thumbnailed" data-fileid="1185" src="images/uploads/DDNS.thumb.png.8d23b96895dbc5e52fac3328c7897ef8.png"/>
-    </a>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/DDNS.png.109f17fa7e6cddc7563d7ec54d5a2cca.png">
+<img alt="DDNS.png" class="ipsImage ipsImage_thumbnailed" data-fileid="1185" src="images/uploads/DDNS.thumb.png.8d23b96895dbc5e52fac3328c7897ef8.png"/>
+</a>
+</p>
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-11-15T11:08:38Z" title="2018-11-15 11:08 ">
+<br/>
+<time class="6 yr" datetime="2018-11-15T11:08:38Z" title="2018-11-15 11:08 ">
    November 15, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hast du eine öffentliche IP über den Support angefordert?
    </p>
-   <p>
+<p>
     (
    </p>
-   <iframe allowfullscreen="" data-controller="core.front.core.autosizeiframe" data-embedcontent="" data-embedid="embed6969474907" scrolling="no" src="4411-homenet-hybrid-ha35-22-online-spiele-ps4-nintendo-switch-funktioniert-nicht.html" style="height:213px;max-width:502px;">
-   </iframe>
-   <p>
+<a href="4411-homenet-hybrid-ha35-22-online-spiele-ps4-nintendo-switch-funktioniert-nicht.html">Homenet Hybrid HA35-22 - Online Spiele (PS4; Nintendo Switch) funktioniert nicht</a>
+<p>
     )
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Waldemar
   </span>
-  <br/>
-  <time class="6 yr" datetime="2018-11-15T11:26:21Z" title="2018-11-15 11:26 ">
+<br/>
+<time class="6 yr" datetime="2018-11-15T11:26:21Z" title="2018-11-15 11:26 ">
    November 15, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ja habe ich (ungefähr vor 3h). Meine IP startet mit 213.
-    <br>
+    <br/>
      lt. Support ist das bereits eine öffentliche IP.
-    </br>
+    
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="6 yr" datetime="2018-11-15T11:27:15Z" title="2018-11-15 11:27 ">
       November 15, 2018
      </time>
      von Waldemar
     </strong>
-   </span>
-  </div>
-  <hr/>
- </body>
+</span>
+</div>
+<hr/>
+</body>
 </html>

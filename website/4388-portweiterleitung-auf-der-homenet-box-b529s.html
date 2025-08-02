@@ -1,441 +1,429 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Portweiterleitung auf der HomeNet Box B529s
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Portweiterleitung auf der HomeNet Box B529s
   </h1>
-  <span class="author">
+<span class="author">
    schokomueller
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-02-13T18:45:52Z" title="2018-02-13 18:45 ">
+<br/>
+<time class="7 yr" datetime="2018-02-13T18:45:52Z" title="2018-02-13 18:45 ">
    Februar 13, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo beisammen.
    </p>
-   <p>
+<p>
     Seit ein paar Tagen steht bei mit o.g. Box und verrichtet bisher gute Arbeit. Ich hatte in meinem alten Netzwerk einen Raspberry laufen, der natürlich auch von außen angesurft werden konnte (DynDNS, Portweiterleitung, etc).
    </p>
-   <p>
+<p>
     Bestehendes Setup wurde übernommen, die Portweiterleitung im Router hinterlegt, aber: Fehlanzeige, keine Verbindung. Auch kein Ping ist möglich, auch beim Versuch, die IP direkt anzusurfen. Lokal funktioniert alles (Also: 192.168.0.132 kann ich aufrufen, die öffentliche IP liefert mir aber den timeout).
     <br/>
     Also kurzerhand xampp auf Windows gestartet, die Portweiterleitung auf den Rechner umgeschrieben (192.168.0.102), bisschen gewartet  und getestet: Wieder ein timeout.
    </p>
-   <p>
+<p>
     Nun die Frage aller Fragen: Woran liegt das?
     <br/>
     An den Geräten liegt es wohl eher nicht, da sie ja im alten Netzwerk funktioniert haben. Den Router habe ich auch schon neu gestartet, da tut sich auch nichts. Fehler in der config kann ich nicht erkennen.
    </p>
-   <p>
+<p>
     Vielleicht kann mir ja jemand weiterhelfen
     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
-    <br/>
+<br/>
     Danke &amp; lg Daniel
    </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/screencapture-192-168-0-100-html-virtualserver-html-1518547480776.png.e0d38a09c6638073e7d1d93411ab7725.png">
-     <img alt="screencapture-192-168-0-100-html-virtualserver-html-1518547480776.png" class="ipsImage ipsImage_thumbnailed" data-fileid="759" src="images/uploads/screencapture-192-168-0-100-html-virtualserver-html-1518547480776.thumb.png.d5e3bfda9074fc58252a74a2d8922559.png"/>
-    </a>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/screencapture-192-168-0-100-html-virtualserver-html-1518547480776.png.e0d38a09c6638073e7d1d93411ab7725.png">
+<img alt="screencapture-192-168-0-100-html-virtualserver-html-1518547480776.png" class="ipsImage ipsImage_thumbnailed" data-fileid="759" src="images/uploads/screencapture-192-168-0-100-html-virtualserver-html-1518547480776.thumb.png.d5e3bfda9074fc58252a74a2d8922559.png"/>
+</a>
+</p>
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-02-13T19:28:50Z" title="2018-02-13 19:28 ">
+<br/>
+<time class="7 yr" datetime="2018-02-13T19:28:50Z" title="2018-02-13 19:28 ">
    Februar 13, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hast du das APN auf das Business APN umgestellt:
    </p>
-   <iframe data-embedcontent="" frameborder="0" src="2532-apn-aenderung-homenet-router-box.html">
-   </iframe>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<a href="2532-apn-aenderung-homenet-router-box.html">2532-apn-aenderung-homenet-router-box.html</a>
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    schokomueller
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-02-13T19:47:19Z" title="2018-02-13 19:47 ">
+<br/>
+<time class="7 yr" datetime="2018-02-13T19:47:19Z" title="2018-02-13 19:47 ">
    Februar 13, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Danke schonmal!
-    <br>
+    <br/>
      Das hab ich jetzt gemacht und ich bekomme beim Aufruf der IP immerhin schon das Webinterface vom Router angezeigt. Das will ich ja aber gar nicht, sondern das des Pi's. Weiterleitung ist immernoch drin.
-     <br>
+     <br/>
       Und dass das offene Interface vom Router ein kleines Sicherheitsrisiko ist brauch ich wohl nicht sagen
       <img alt=":/" data-emoticon="" height="20" src="images/emoticons/tma_crying-o.png" srcset="images/emoticons/tma_crying-o@2x.png 2x" title=":/" width="20"/>
-     </br>
-    </br>
-   </p>
-   <p>
+</p>
+<p>
     Noch eine Idee, wie ich das genauer einstellen kann?
    </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/screencapture-192-168-0-100-html-profilesmgr-html-1518551084687.png.298610344fe3a6b8237144d0c113365a.png">
-     <img alt="screencapture-192-168-0-100-html-profilesmgr-html-1518551084687.png" class="ipsImage ipsImage_thumbnailed" data-fileid="760" src="images/uploads/screencapture-192-168-0-100-html-profilesmgr-html-1518551084687.thumb.png.60eeb8e2fdcc8b0536054b3e797158db.png"/>
-    </a>
-   </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/screencapture-192-168-0-100-html-virtualserver-html-1518551197176.png.7fe234ceb762ac3be6fb65ee270138e7.png">
-     <img alt="screencapture-192-168-0-100-html-virtualserver-html-1518551197176.png" class="ipsImage ipsImage_thumbnailed" data-fileid="761" src="images/uploads/screencapture-192-168-0-100-html-virtualserver-html-1518551197176.thumb.png.6ef209c66d08a0e8b2e52756bd322085.png"/>
-    </a>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/screencapture-192-168-0-100-html-profilesmgr-html-1518551084687.png.298610344fe3a6b8237144d0c113365a.png">
+<img alt="screencapture-192-168-0-100-html-profilesmgr-html-1518551084687.png" class="ipsImage ipsImage_thumbnailed" data-fileid="760" src="images/uploads/screencapture-192-168-0-100-html-profilesmgr-html-1518551084687.thumb.png.60eeb8e2fdcc8b0536054b3e797158db.png"/>
+</a>
+</p>
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/screencapture-192-168-0-100-html-virtualserver-html-1518551197176.png.7fe234ceb762ac3be6fb65ee270138e7.png">
+<img alt="screencapture-192-168-0-100-html-virtualserver-html-1518551197176.png" class="ipsImage ipsImage_thumbnailed" data-fileid="761" src="images/uploads/screencapture-192-168-0-100-html-virtualserver-html-1518551197176.thumb.png.6ef209c66d08a0e8b2e52756bd322085.png"/>
+</a>
+</p>
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-02-14T06:21:40Z" title="2018-02-14 06:21 ">
+<br/>
+<time class="7 yr" datetime="2018-02-14T06:21:40Z" title="2018-02-14 06:21 ">
    Februar 14, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Beim Gäste WLAN wäre das ein Problem, sonst nicht. (Es ist eine schlechte Implementierung von NAT Loop Back)
    </p>
-   <p>
+<p>
     Versuche von außen (z.B. übers Handy ohne WLAN) dann müsste der RPI auf scheinen. Wenn du nicht unbedingt HTTP braucht würde ich darauf verzichten und nur HTTPS nutzen. Zertifikat dafür hast sicherlich schon. (Wenn nicht Let's Encrypt ist eine Lösung dafür)
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    schokomueller
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-02-14T07:35:55Z" title="2018-02-14 07:35 ">
+<br/>
+<time class="7 yr" datetime="2018-02-14T07:35:55Z" title="2018-02-14 07:35 ">
    Februar 14, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Phew stimmt, von außen komm ich direkt auf den Pi. Wer geht denn bitte von sowas aus...
-    <br>
+    <br/>
      Port 80 lass ich offen, weil ich ne Weiterleitung auf https eingerichtet habe. Bin einfach schreibfaul, was das Protokoll angeht
      <img alt=":D" data-emoticon="" height="20" src="images/emoticons/tma_laughing-o.png" srcset="images/emoticons/tma_laughing-o@2x.png 2x" title=":D" width="20"/>
-     <br>
+<br/>
       Let's encrypt ist natürlich schon länger drinnen.
-     </br>
-    </br>
+     
+    
    </p>
-   <p>
+<p>
     Nun aber noch ein Problem – wenn ich von außen via DynDns auf den Pi komme, von innen mit derselben Domain aber auf das WI vom Router. Und wenn ich weiterhin den Laptop im und außerhalb des WLANs verwende (auf dem PI läuft u.a. owncloud). Dann kann ich ja nicht in beiden Fällen (im &amp; außerhalb des WLANs) meine Daten synchronisieren? Ich brauch ja dann drinnen zwingend die 192.168.0.132 und außerhalb die Dyn-Domain.
    </p>
-   <p>
+<p>
     Heißt das ergo, ich muss mich für einen "Arbeitsplatz" jetzt entscheiden? Wär schon ziemlich doof... auf dem Handy ist es ja das gleiche...
    </p>
-   <p>
+<p>
     Aber danke bis hierhin schonmal, allein das hat mich schon sehr viel weitergebracht!
    </p>
-   <p>
+<p>
     PS: Beim Aufruf der Dyn-Domain werde ich auf "https://meineip:8443/html/index.html?origin=aHR0cHM6Ly9waXJpbmNpbmVzcy56YXB0by5xxxxx" weitergeleitet,falls das irgendwie von Interesse ist
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-02-14T07:57:23Z" title="2018-02-14 07:57 ">
+<br/>
+<time class="7 yr" datetime="2018-02-14T07:57:23Z" title="2018-02-14 07:57 ">
    Februar 14, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25476" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518593755" data-ipsquote-userid="75485" data-ipsquote-username="schokomueller">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25476" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518593755" data-ipsquote-userid="75485" data-ipsquote-username="schokomueller">
+<div class="ipsQuote_citation">
      vor 21 Minuten schrieb schokomueller:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Nun aber noch ein Problem – wenn ich von außen via DynDns auf den Pi komme, von innen mit derselben Domain aber auf das WI vom Router.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Ist klar, wenn man sich genau ansieht, wie DNS funktioniert.
    </p>
-   <p>
+<p>
     Du kannst dir entweder am Router die Route/Weiterleitung eintragen (sofern unterstützt) oder du hast bei dir im internen Netz einen DNS Server laufen, der das ganze auflöst. Oder du trägst das für jeden Computer in der Hosts Datei ein ...
    </p>
-   <p>
+<p>
     Lg
    </p>
-   <p>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<p>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="7 yr" datetime="2018-02-14T07:58:08Z" title="2018-02-14 07:58 ">
       Februar 14, 2018
      </time>
      von MarioM
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    schokomueller
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-02-14T08:18:50Z" title="2018-02-14 08:18 ">
+<br/>
+<time class="7 yr" datetime="2018-02-14T08:18:50Z" title="2018-02-14 08:18 ">
    Februar 14, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25477" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518595043" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25477" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518595043" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+<div class="ipsQuote_citation">
      vor 17 Minuten schrieb MarioM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Ist klar, wenn man sich genau ansieht, wie DNS funktioniert.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Ist vielleicht klar, aber die Praxis sagt bei mir etwas anderes. Mit der Fritzbox hat das alles super einfach und ohne Probleme funktioniert...
    </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25477" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518595043" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
-    <div class="ipsQuote_citation">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25477" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518595043" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+<div class="ipsQuote_citation">
      vor 18 Minuten schrieb MarioM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Du kannst dir entweder am Router die Route/Weiterleitung eintragen
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Mhm wäre eine Option. Ich finde dazu aber keine Einstellungen und Google spuckt mir bei "route" nur Router und bei "Weiterleitung" nur mehr Portweiterleitung aus.
-    <br>
+    <br/>
      Also falls da einer von euch für  meinen Router mehr weiß... bitte sagen.
-    </br>
+    
    </p>
-   <p>
+<p>
     Den Weg der hosts würde ich nur ungerne gehen, da mein Handy das ja leider nicht kann
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-02-14T08:37:05Z" title="2018-02-14 08:37 ">
+<br/>
+<time class="7 yr" datetime="2018-02-14T08:37:05Z" title="2018-02-14 08:37 ">
    Februar 14, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25479" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518596330" data-ipsquote-userid="75485" data-ipsquote-username="schokomueller">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25479" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518596330" data-ipsquote-userid="75485" data-ipsquote-username="schokomueller">
+<div class="ipsQuote_citation">
      vor 17 Minuten schrieb schokomueller:
     </div>
-    <div class="ipsQuote_contents">
-     <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25477" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518595043" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
-      <div class="ipsQuote_citation">
+<div class="ipsQuote_contents">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25477" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518595043" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+<div class="ipsQuote_citation">
        vor 39 Minuten schrieb MarioM:
       </div>
-      <div class="ipsQuote_contents">
-       <p>
+<div class="ipsQuote_contents">
+<p>
         Ist klar, wenn man sich genau ansieht, wie DNS funktioniert.
        </p>
-      </div>
-     </blockquote>
-     <p>
+</div>
+</blockquote>
+<p>
       Ist vielleicht klar, aber die Praxis sagt bei mir etwas anderes. Mit der Fritzbox hat das alles super einfach und ohne Probleme funktioniert...
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Klar, das meinte ich ja mit, es gibt Router, die das können.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-02-14T11:28:12Z" title="2018-02-14 11:28 ">
+<br/>
+<time class="7 yr" datetime="2018-02-14T11:28:12Z" title="2018-02-14 11:28 ">
    Februar 14, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25479" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518596330" data-ipsquote-userid="75485" data-ipsquote-username="schokomueller">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25479" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518596330" data-ipsquote-userid="75485" data-ipsquote-username="schokomueller">
+<div class="ipsQuote_citation">
      vor 3 Stunden schrieb schokomueller:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Also falls da einer von euch für  meinen Router mehr weiß... bitte sagen.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Leider sind eben die Standardrouter die man bekommt nicht sehr gut was solche Dinge betrifft.
    </p>
-   <p>
+<p>
     Hast du nicht noch einen anderen Router den du dahinterschalten kannst?
    </p>
-   <p>
+<p>
     Lg
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    schokomueller
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-02-14T11:29:52Z" title="2018-02-14 11:29 ">
+<br/>
+<time class="7 yr" datetime="2018-02-14T11:29:52Z" title="2018-02-14 11:29 ">
    Februar 14, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Naja, ich hab nur diesen für LTE-Empfang, die Fritzbox ist für DSL und in der neuen Wohnung gibt eben kein DSL. Sieht also eher mau aus leider...
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="7 yr" datetime="2018-02-14T11:41:22Z" title="2018-02-14 11:41 ">
+<br/>
+<time class="7 yr" datetime="2018-02-14T11:41:22Z" title="2018-02-14 11:41 ">
    Februar 14, 2018
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hm das ist dann blöd. Fällt mir nur mehr ein Raspi mit DNS Server ein ...
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Fäb
   </span>
-  <br/>
-  <time class="6 yr" datetime="2019-03-04T17:06:38Z" title="2019-03-04 17:06 ">
+<br/>
+<time class="6 yr" datetime="2019-03-04T17:06:38Z" title="2019-03-04 17:06 ">
    März 4, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Gibt es dazu ein statement vom tmobile support warum das nicht korrekt implementiert ist? Ich habe das selbe problem und leider so ein unbauchbares gerät zuhause.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="6 yr" datetime="2019-03-05T16:07:10Z" title="2019-03-05 16:07 ">
+<br/>
+<time class="6 yr" datetime="2019-03-05T16:07:10Z" title="2019-03-05 16:07 ">
    März 5, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="28485" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1551719198" data-ipsquote-userid="77469" data-ipsquote-username="Fäb">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="28485" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1551719198" data-ipsquote-userid="77469" data-ipsquote-username="Fäb">
+<div class="ipsQuote_citation">
      22 hours ago, Fäb said:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Gibt es dazu ein statement vom tmobile support warum das nicht korrekt implementiert ist? Ich habe das selbe problem und leider so ein unbauchbares gerät zuhause.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Soweit ich weiß nicht
     <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    christian11
   </span>
-  <br/>
-  <time class="5 yr" datetime="2020-01-22T09:59:51Z" title="2020-01-22 09:59 ">
+<br/>
+<time class="5 yr" datetime="2020-01-22T09:59:51Z" title="2020-01-22 09:59 ">
    Januar 22, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25485" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518608482" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="25485" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1518608482" data-ipsquote-userid="64518" data-ipsquote-username="MarioM">
+<div class="ipsQuote_citation">
      Am 14.2.2018 um 12:41 schrieb MarioM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Hm das ist dann blöd. Fällt mir nur mehr ein Raspi mit DNS Server ein ...
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     So habe ich das Problem mittlerweile auch behoben.
-    <br>
+    <br/>
      Pi-hole ist da eine recht gute Lösung, die gleichzeitig auch noch als Adblocker fungiert.
-     <br>
-      <br>
+     <br/>
+<br/>
        Anleitung habe ich hier gefunden:
-       <br>
-        <a href="https://www.guschlbauer.dev/private-dns-server-in-3-steps/" rel="external nofollow">
+       <br/>
+<a href="https://www.guschlbauer.dev/private-dns-server-in-3-steps/" rel="external nofollow">
          https://www.guschlbauer.dev/private-dns-server-in-3-steps/
         </a>
-        <br>
-         <a href="https://hub.docker.com/r/pihole/pihole/" rel="external nofollow">
+<br/>
+<a href="https://hub.docker.com/r/pihole/pihole/" rel="external nofollow">
           https://hub.docker.com/r/pihole/pihole/
          </a>
-        </br>
-       </br>
-      </br>
-     </br>
-    </br>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="5 yr" datetime="2020-01-22T12:16:38Z" title="2020-01-22 12:16 ">
+<br/>
+<time class="5 yr" datetime="2020-01-22T12:16:38Z" title="2020-01-22 12:16 ">
    Januar 22, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33067" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1579687191" data-ipsquote-userid="81864" data-ipsquote-username="christian11">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="33067" data-ipsquote-contentid="4388" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1579687191" data-ipsquote-userid="81864" data-ipsquote-username="christian11">
+<div class="ipsQuote_citation">
      2 hours ago, christian11 said:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       So habe ich das Problem mittlerweile auch behoben.
-      <br>
+      <br/>
        Pi-hole ist da eine recht gute Lösung, die gleichzeitig auch noch als Adblocker fungiert.
-       <br>
-        <br>
+       <br/>
+<br/>
          Anleitung habe ich hier gefunden:
-         <br>
-          <a href="https://www.guschlbauer.dev/private-dns-server-in-3-steps/" rel="external nofollow">
+         <br/>
+<a href="https://www.guschlbauer.dev/private-dns-server-in-3-steps/" rel="external nofollow">
            https://www.guschlbauer.dev/private-dns-server-in-3-steps/
           </a>
-          <br>
-           <a href="https://hub.docker.com/r/pihole/pihole/" rel="external nofollow">
+<br/>
+<a href="https://hub.docker.com/r/pihole/pihole/" rel="external nofollow">
             https://hub.docker.com/r/pihole/pihole/
            </a>
-          </br>
-         </br>
-        </br>
-       </br>
-      </br>
-     </p>
-    </div>
-   </blockquote>
-   <p>
+</p>
+</div>
+</blockquote>
+<p>
     Sehr cool
     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
     Danke für die Antwort ...
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

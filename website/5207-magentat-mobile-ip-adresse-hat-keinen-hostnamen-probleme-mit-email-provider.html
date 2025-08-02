@@ -1,121 +1,122 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Magenta/T-Mobile IP-Adresse hat keinen Hostnamen - Probleme mit eMail-Provider
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Magenta/T-Mobile IP-Adresse hat keinen Hostnamen - Probleme mit eMail-Provider
   </h1>
-  <span class="author">
+<span class="author">
    Berni78
   </span>
-  <br/>
-  <time class="5 yr" datetime="2019-08-14T13:21:38Z" title="2019-08-14 13:21 ">
+<br/>
+<time class="5 yr" datetime="2019-08-14T13:21:38Z" title="2019-08-14 13:21 ">
    August 14, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     ich habe leider mit Magenta (T-Mobile) das Problem, dass ich öfters eine IP-Adresse zugewiesen bekomme (Mobile Daten-Verbindung), die anscheinend eine Fehlkonfiguration aufweist. Dadurch ist es nicht möglich, eMails über meinen eMail-Provider zu senden (SMTP), da bei seinem eMail-Server meine IP-Adresse nicht akzeptiert wird. In so einem Fall muss ich den Router neu starten, um eine neue IP-Adresse zu erhalten. Mit dieser gibt es dann überhaupt keine Probleme. Das ist natürlich äußerst lästig, da ich leider recht häufig diesen Adressbereich zugewiesen bekomme.
    </p>
-   <p>
+<p>
     Hier nun das Technische (wurde auch so von meinem eMail-Provider bestätigt):
     <br/>
     Das Problem tritt auf, wenn ich z.B. die IP-Adresse 46.125.249.23 bekommen (aus dem Pool 46.124.0.0/15).
     <br/>
     Wenn man ein NsLookup macht, erhält man eine Fehler --&gt; Response code: NameError. Hier fehlt also der Hostname und daher wird die IP vom Mailserver des Providers abgelehnt (Fehlermeldung beim Server: reject: RCPT from unknown[46.125.249.23]:450 4.7.25 Client host rejected: cannot find your hostname). Die Ausgabe mit einer funktionierenden IP wie 212.95.5.72 ergibt keine Fehler - hier gibt es einen Hostnamen.
    </p>
-   <p>
+<p>
     Man kann es sich selber bei centralops.net anschauen (habe aber auch die Screenshots angehängt).
    </p>
-   <p>
-    <br/>
+<p>
+<br/>
     Ich habe das Problem nun schon vor Monaten telefonisch beim T-Mobile Support gemeldet. Dort wurde mir auch bestätigt, dass das Problem bekannt ist, aber passiert ist seitdem nichts. Es kann doch nicht sein, dass hier Magenta als großer Anbieter nichts macht/machen kann?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     lg
    </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/46_125_249_23.JPG.10ef6d661151bf68d0d1fffe0c42b3fd.JPG">
-     <img alt="46.125.249.23.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="1624" src="images/uploads/46_125_249_23.JPG.10ef6d661151bf68d0d1fffe0c42b3fd.JPG"/>
-    </a>
-   </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/212_95.5_72.JPG.f8f8ff20693fcf76a9a2299763bbfb04.JPG">
-     <img alt="212.95.5.72.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="1625" src="images/uploads/212_95.5_72.JPG.f8f8ff20693fcf76a9a2299763bbfb04.JPG"/>
-    </a>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/46_125_249_23.JPG.10ef6d661151bf68d0d1fffe0c42b3fd.JPG">
+<img alt="46.125.249.23.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="1624" src="images/uploads/46_125_249_23.JPG.10ef6d661151bf68d0d1fffe0c42b3fd.JPG"/>
+</a>
+</p>
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/212_95.5_72.JPG.f8f8ff20693fcf76a9a2299763bbfb04.JPG">
+<img alt="212.95.5.72.JPG" class="ipsImage ipsImage_thumbnailed" data-fileid="1625" src="images/uploads/212_95.5_72.JPG.f8f8ff20693fcf76a9a2299763bbfb04.JPG"/>
+</a>
+</p>
+</div>
+<hr/>
+<span class="author">
    MarioM
   </span>
-  <br/>
-  <time class="5 yr" datetime="2019-08-19T06:53:48Z" title="2019-08-19 06:53 ">
+<br/>
+<time class="5 yr" datetime="2019-08-19T06:53:48Z" title="2019-08-19 06:53 ">
    August 19, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="30766" data-ipsquote-contentid="5207" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1565788898" data-ipsquote-userid="79394" data-ipsquote-username="Berni78">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="30766" data-ipsquote-contentid="5207" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1565788898" data-ipsquote-userid="79394" data-ipsquote-username="Berni78">
+<div class="ipsQuote_citation">
      On 8/14/2019 at 3:21 PM, Berni78 said:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Ich habe das Problem nun schon vor Monaten telefonisch beim T-Mobile Support gemeldet.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Ich würde nochmal anrufen und schauen, wie der Status derzeit aussieht.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Sowas ist wirklich bedauerlich
     <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
     und sollte eigentlich nicht passieren, bzw. schnell behoben werden ...
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Karo
   </span>
-  <br/>
-  <time class="5 yr" datetime="2019-08-19T13:24:26Z" title="2019-08-19 13:24 ">
+<br/>
+<time class="5 yr" datetime="2019-08-19T13:24:26Z" title="2019-08-19 13:24 ">
    August 19, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi, eine allgemeine Störung ist uns diesbezüglich nicht bekannt. Bitte melde dich dazu bei unseren Kolleginnen und Kollegen der Technikhotline (
     <a href="https://www.magenta.at/service#" rel="external nofollow">
      https://www.magenta.at/service#
     </a>
     ). Sie können dann deiner Meldung nochmals nachgehen, bzw. neu aufrollen. LG, Karo
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="3 yr" datetime="2022-03-02T08:47:55Z" title="2022-03-02 08:47 ">
       März 2, 2022
      </time>
      von Georgie
     </strong>
-    <br>
+<br/>
      URL nicht mehr aktuell
-    </br>
+    
    </span>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

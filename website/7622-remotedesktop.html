@@ -1,99 +1,100 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Remotedesktop
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Remotedesktop
   </h1>
-  <span class="author">
+<span class="author">
    migru
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-02-28T07:24:46Z" title="2022-02-28 07:24 ">
+<br/>
+<time class="3 yr" datetime="2022-02-28T07:24:46Z" title="2022-02-28 07:24 ">
    Februar 28, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     ich habe auf meinem Rechner Remotedesktop eingerichtet. Wenn ich nun extern verbinden will, geht es nur, wenn ich es zB vom Handy aus mache (LTE) und das Handy ebenfalls das Netz von Magenta nutzt. Sobald ich es von einem anderen Anbieter versuche (zB in der Arbeit -&gt; Glasfaser A1), geht es nicht.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Mir ist auch aufgefallen, dass mir 2 WAN IP Adressen angezeigt werden (im Router Interface wird eine andere angezeigt als auf wieistmeineip).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ports sind im Router freigegeben, auch die Firewall Regeln wurden dementsprechend angepasst.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Habt ihr da vielleicht eine Idee?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Liebe Grüße
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-02-28T09:15:12Z" title="2022-02-28 09:15 ">
+<br/>
+<time class="3 yr" datetime="2022-02-28T09:15:12Z" title="2022-02-28 09:15 ">
    Februar 28, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Stelle den Router auf das Business APN um, dann sollte es funktionieren.
    </p>
-   <p>
-    <a href="2532-apn-%C3%A4nderung-homenet-router-box/" rel="">
+<p>
+<a href="2532-apn-%C3%A4nderung-homenet-router-box/" rel="">
      2532-apn-änderung-homenet-router-box/
     </a>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-02-28T09:16:36Z" title="2022-02-28 09:16 ">
+<br/>
+<time class="3 yr" datetime="2022-02-28T09:16:36Z" title="2022-02-28 09:16 ">
    Februar 28, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey
     <span>
-     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/92570-migru/?do=hovercard" data-mentionid="92570" href="https://community.magenta.at/profile/92570-migru/" rel="">
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/92570-migru/?do=hovercard" data-mentionid="92570" href="https://community.magenta.at/profile/92570-migru/" rel="">
       @migru
      </a>
-     <br/>
+<br/>
      Ich schätze du hast am Router nur die Portweiterleitungen eingerichtet?
     </span>
-   </p>
-   <p>
-    <span>
+</p>
+<p>
+<span>
      Die zwei unterschiedlichen WAN IPv4 Adressen kommen von der Carrier Grade Network Address Translation (Abgekürzt: CG-NAT, zu Deutsch Netzwerkadressübersetzung auf Netzbetreiber Ebene), welches die Standardeinstellung ist im Mobilfunknetz von Magenta ist. Dies wird genutzt, um IPv4 Adressen einzusparen, denn so kommen viele Geräte auch eine öffentliche IPv4 Adresse. Also innerhalb vom Magenta Mobilfunknetz hat dein Router eine IPv4 Adresse und aus sicht aller anderen eine andere IPv4 Adresse. Deswegen kannst du über dein Handy im Magenta Mobilfunknetz auf den Remotedesktop zugreifen, aber von anderen Anschlüssen nicht.
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
-    <span>
+</p>
+<p>
+</p>
+<p>
+<span>
      Die Lösung hier wäre am Router den Business APN einzurichten (ist für alle Mobilfunkkunden nutzbar, egal ob Privat oder Business). Mit diesem APN wird deinem Router eine öffentliche IPv4 Adresse zugeteilt. Damit hat der Router nur mehr eine einzige öffentliche IPv4 Adresse, welche für alle gilt. Je nach Modell sind die APN-Einstellungen an anderen Stellen zu finden. Hier sind die
      <a href="https://www.magenta.at/hilfe-service/services/hardwaresupport/devices/router+mobile-broadband/internet-flex" rel="external nofollow">
       Magenta Flex 4G/LTE Router
@@ -106,38 +107,38 @@
     </span>
     APN / NAT-Typ ändern" und folge dieser. Sollte dein Router nicht gelistet sein, schreib am besten welchen du hast, falls du Hilfe damit benötigst.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Der Nachteil davon ist, dass auf deinem Handy wahrscheinlich auch der Business APN dann nötig wäre, da soweit ich weiß keine Kommunikation zwischen Magenta Mobilfunkanschlüssen hinter dem CG-NAT und Magenta Mobilfunkanschlüssen mit einer öffentlichen IPv4 Adresse Kommunikation möglich ist. Allerdings kann sich die öffentliche IPv4 Adresse negativ auf die Akkulaufzeit auswirken.
    </p>
-   <p>
+<p>
     LG NTM
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="3 yr" datetime="2022-02-28T09:17:45Z" title="2022-02-28 09:17 ">
       Februar 28, 2022
      </time>
      von NTM
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    migru
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-02-28T09:26:03Z" title="2022-02-28 09:26 ">
+<br/>
+<time class="3 yr" datetime="2022-02-28T09:26:03Z" title="2022-02-28 09:26 ">
    Februar 28, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Danke für eure Hilfe, nun klappt alles
     <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>

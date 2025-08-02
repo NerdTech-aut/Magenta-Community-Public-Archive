@@ -1,297 +1,298 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    DNS einstellen
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    DNS einstellen
   </h1>
-  <span class="author">
+<span class="author">
    here_is_a_question_for_you
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-19T13:50:55Z" title="2023-02-19 13:50 ">
+<br/>
+<time class="timestamp" datetime="2023-02-19T13:50:55Z" title="2023-02-19 13:50 ">
    Februar 19, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Guten Tag,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     ich würde gerne ein Pi-Hole in meinem Netzwerk als DNS Server einrichten. Wie kann ich den DNS Verkehr der Internet 5G Box Pro2 auf diesen umleiten?
    </p>
-   <p>
+<p>
     Ich habe bereits versucht, ein neues Profil anzulegen (APN: business.gprsinternet, Username: t-mobile, Passwort: tm), das funktioniert jedoch nicht.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn ich hingegen Pi-Hole als DHCP Server einrichte und die IP des Routers statisch vergebe, ist der Router nach einem Neustart gar nicht erreichbar. Dann kommt zwar der ganze DNS Traffic über den Pi-Hole, aber keines schafft es ins Internet
     <img alt=":(" data-emoticon="" height="20" src="images/emoticons/tma_sad-o.png" srcset="images/emoticons/tma_sad-o@2x.png 2x" title=":(" width="20"/>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Wie kann man dieses Problem lösen?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Liebe Grüße
    </p>
-   <p>
+<p>
     Adrian
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2023-02-19T13:51:58Z" title="2023-02-19 13:51 ">
       Februar 19, 2023
      </time>
      von here_is_a_question_for_you
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-19T19:13:13Z" title="2023-02-19 19:13 ">
+<br/>
+<time class="timestamp" datetime="2023-02-19T19:13:13Z" title="2023-02-19 19:13 ">
    Februar 19, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96194-here_is_a_question_for_you/?do=hovercard" data-mentionid="96194" href="https://community.magenta.at/profile/96194-here_is_a_question_for_you/" rel="">
      @here_is_a_question_for_you
     </a>
-    <br/>
+<br/>
     Der Business APN hat mit dem Konfigurieren eines eigenen DNS-Server nichts zu tun.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Um Pi Hole zu verwenden gäbe es zwei Ansätze.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Zum einen kann Pi Hole DHCP- und DNS-Server spielen. Dafür sollte der DHCP-Server am Router deaktiviert werden. Am 5G CPE Pro 2 kann dies unter "Erweitert" (oben rechts) -&gt; "Router" (links) -&gt; "DHCP" erfolgen. Wichtig ist, dass dieselben Einstellungen wie am 5G CPE Pro 2 auch am Pi Hole eingetragen werden. Also die Router (Gateway) Adresse (standard: 192.168.8.1) und dieselbe IP-Range (192.168.8.100 bis 192.168.8.200).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Alternativ kann Pi Hole auch nur als DNS-Server verwendet werden. Dazu muss am 5G CPE Pro 2 die Option zum Konfigurieren des DNS-Server aktiviert werden. Zuerst navigiere am 5G CPE Pro 2 auf "Erweitert" (oben rechts) -&gt; "Router" (links) -&gt; "DHCP". Dann irgendwo auf der Seite rechts klicken und den letzten Punkt "Untersuchen" auswählen, um die Entwicklertools des Browsers zu öffnen. Im Anschluss in den Entwicklertools oben in der Leiste die Funktion Konsole (bzw. Console) öffnen. In der Konsole dann den folgenden Text einfügen und mit Enter bestätigen:
    </p>
-   <blockquote class="ipsQuote" data-ipsquote="">
-    <div class="ipsQuote_citation">
+<blockquote class="ipsQuote" data-ipsquote="">
+<div class="ipsQuote_citation">
      Zitat
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       $('#dhcp_dns').show();
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Die Entwicklertools des Browsers können danach geschlossen werden. Nun erscheint auf der Seite mit den DHCP-Einstellungen die Checkbox "DNS-Server manuell festlegen". Einmal auf die Checkbox klicken und schon erscheinen zwei Felder, um einen DNS-Server einzutragen.
     <a href="https://www.lteforum.at/mobilfunk/b525s-23a-manueller-dns-server.13899/" rel="external nofollow">
      Quelle
     </a>
-    <br/>
-    <br/>
+<br/>
+<br/>
     LG NTM
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    here_is_a_question_for_you
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-19T21:03:34Z" title="2023-02-19 21:03 ">
+<br/>
+<time class="timestamp" datetime="2023-02-19T21:03:34Z" title="2023-02-19 21:03 ">
    Februar 19, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Danke für die schnelle Antwort!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Kurze Rückfrage zu der zweiten Methode: woher bekomme ich die Zugangsdaten von den APN Profilen "homenet" und "Internet.t-mobile.at"?
    </p>
-   <p>
+<p>
     Den DNS über die versteckte Einstellung zu setzen wird zwar mit einer Erfolgsmeldung belohnt, aber nicht wirksam gespeichert. Aus dem Grund muss der DNS (bei mir jedenfalls) über das Profil kommen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Beste Grüße
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-19T23:25:01Z" title="2023-02-19 23:25 ">
+<br/>
+<time class="timestamp" datetime="2023-02-19T23:25:01Z" title="2023-02-19 23:25 ">
    Februar 19, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Die Daten für den internet.t-mobile.at APN sind dieselben wie für den Business APN.
    </p>
-   <p>
+<p>
     Benutzername: t-mobile
    </p>
-   <p>
+<p>
     Kennwort: tm
    </p>
-   <p>
+<p>
     Authentifizierung: PAP
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ja vom Mobilfunknetz bekommt der Router einen oder mehrere DNS-Server mitgeteilt. Der Router betreibt dann einen lokalen DNS-Server. Wenn der DNS-Server vom Router keine Antwort hat, dann wird die Anfrage nochmal an den DNS-Server von Magenta gestellt.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     In den DHCP-Einstellungen des Routers kannst du einstellen ob deinen Geräten mitgeteilt werden soll, dass der DNS-Server des Routers verwendet werden soll (und in weiterer Folge der DNS-Server von Magenta) oder ein anderer (lokal, wie der Pi Hole oder direkt ein öffentlicher im Internet).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe auch ein Testsetup mit einem Huawei B535 (Internet über den LAN/WAN Port) und einem Pi Zero als Pi-Hole DNS Server aufgebaut.
    </p>
-   <p>
+<p>
     Ich musste dabei feststellen, dass bei beiden Varianten das lokale IPv6 einen Strich durch die Rechnung macht. Der Huawei Router bewirbt seinen eigenen DNS-Server weiterhin via IPv6 und dieser wird oft bevorzugt. Teilweise landen Anfragen auf dem Pi-Hole DNS Server und teilweise weiterhin am DNS-Server des Huawei Routers. Leider habe ich keine Möglichkeit gefunden IPv6 am Huawei Router komplett abzuschalten (über die APN-Einstellungen kann IPv6 auch nicht deaktiviert werden).
    </p>
-   <p>
+<p>
     Bei den Desktop-Betriebssystemen gibt es immerhin die Möglichkeit IPv6 zu deaktivieren, aber auf Mobilgeräten müsste eine statische IPv4 Konfiguration vorgenommen werden.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hier ein kleiner Auszug aus Wireshark:
    </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2023_02/image.png.f74800078a2f830c2060d2caedd2e4f1.png" rel="external nofollow">
-     <img alt="image.thumb.png.ab715ff4fd22538e8b938a0a79c77fa2.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4577" src="images/uploads/image.thumb.png.ab715ff4fd22538e8b938a0a79c77fa2.png" style="width:300px;height:auto;"/>
-    </a>
-   </p>
-   <p>
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2023_02/image.png.f74800078a2f830c2060d2caedd2e4f1.png" rel="external nofollow">
+<img alt="image.thumb.png.ab715ff4fd22538e8b938a0a79c77fa2.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4577" src="images/uploads/image.thumb.png.ab715ff4fd22538e8b938a0a79c77fa2.png" style="width:300px;height:auto;"/>
+</a>
+</p>
+<p>
     Die fe80::c2b5:cdff:fed7:69ee ist der Huawei Router.
-    <br>
+    <br/>
      Der 192.168.8.8 ist der PiHole.
-    </br>
+    
    </p>
-   <p>
+<p>
     Der fe80::cec:79b0:a890:2fe5 und der 192.168.8.64 ist mein Computer.
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2023-02-19T23:28:21Z" title="2023-02-19 23:28 ">
       Februar 19, 2023
      </time>
      von NTM
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    here_is_a_question_for_you
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-20T09:03:34Z" title="2023-02-20 09:03 ">
+<br/>
+<time class="timestamp" datetime="2023-02-20T09:03:34Z" title="2023-02-20 09:03 ">
    Februar 20, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
      @NTM
     </a>
     danke für deine Mühe!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn ich ersatzweise Pihole als DHCP mit einer IP-Range von 192.168.8.100 bis .200 und Router auf .1 einrichte sowie die .1 statisch vergebe (basierend auf der MAC-Adresse des Routers) und den Router neu starte (bzw. die Lease-Zeit abwarte), ist der Router nicht mehr erreichbar. Woran kann das liegen?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Der Router ist kabelgebunden im selben Netz. Erst wenn ich den Router resette (und somit das DHCP Service des Routers aktiviere) weist er sich selbst die .1 IP Adresse zu und ist wieder erreichbar. Wie kann man herausfinden, was bei der Adressvergabe schiefgelaufen ist? Liegt das Problem wirklich bei Pihole? Bei Clients schafft er es auch, statische IPs zu vergeben.
    </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Bild.png.56f4d0de718eec1500ddea07774f8c52.png">
-     <img alt="Bild.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4584" src="images/uploads/Bild.thumb.png.dd070061c841fa81127198d0bdd471c9.png"/>
-    </a>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" href="images/uploads/Bild.png.56f4d0de718eec1500ddea07774f8c52.png">
+<img alt="Bild.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4584" src="images/uploads/Bild.thumb.png.dd070061c841fa81127198d0bdd471c9.png"/>
+</a>
+</p>
+</div>
+<hr/>
+<span class="author">
    here_is_a_question_for_you
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-20T09:31:02Z" title="2023-02-20 09:31 ">
+<br/>
+<time class="timestamp" datetime="2023-02-20T09:31:02Z" title="2023-02-20 09:31 ">
    Februar 20, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Interessanterweise scheint der Router mit der richtigen IP Adresse bei den DHCP Leases von Pihole auf. Ich kann anhand meines Laptops bestätigen, dass die IP auch tatsächlich wirksam zugewiesen wird.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Trotzdem ist der Router komplett unerreichbar, die IP hat keinen offenen Port.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-21T00:26:51Z" title="2023-02-21 00:26 ">
+<br/>
+<time class="timestamp" datetime="2023-02-21T00:26:51Z" title="2023-02-21 00:26 ">
    Februar 21, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Mit diesen Einstellungen kann ich zumindest am B535 auf die Web-UI des Huawei zugreifen, wenn der Pi-Hole als DHCP-Server arbeitet.
    </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2023_02/image.png.86c177ba74ef9ae46fcdf24b2acc9791.png" rel="external nofollow">
-     <img alt="image.thumb.png.a3687c0b6f905ebfab211bc6599366a7.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4591" src="images/uploads/image.thumb.png.a3687c0b6f905ebfab211bc6599366a7.png" style="width:300px;height:auto;"/>
-    </a>
-   </p>
-   <p>
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" href="https://s3.mito.hu/telekom-at/monthly_2023_02/image.png.86c177ba74ef9ae46fcdf24b2acc9791.png" rel="external nofollow">
+<img alt="image.thumb.png.a3687c0b6f905ebfab211bc6599366a7.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4591" src="images/uploads/image.thumb.png.a3687c0b6f905ebfab211bc6599366a7.png" style="width:300px;height:auto;"/>
+</a>
+</p>
+<p>
     IPv6 Support kann auch aktiviert werden und es funktioniert weiterhin.
    </p>
-   <p>
+<p>
     Mit der IP-Range 192.168.8.100 bis 192.168.8.200 funktioniert es ebenfalls.
    </p>
-   <p>
+<p>
     Eine statische IP-Adresse muss dem Router nicht über den DHCP-Server vergeben werden, da die IP vom Router im Lan sowieso statisch ist.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Am Router ist der DHCP-Server derweilen deaktiviert.
    </p>
-   <p>
-    <img alt="image.png.7503d1c49cd6b948c3784e4607b8b354.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4592" src="images/uploads/image.png.7503d1c49cd6b948c3784e4607b8b354.png"/>
-   </p>
-  </div>
-  <hr/>
- </body>
+<p>
+<img alt="image.png.7503d1c49cd6b948c3784e4607b8b354.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4592" src="images/uploads/image.png.7503d1c49cd6b948c3784e4607b8b354.png"/>
+</p>
+</div>
+<hr/>
+</body>
 </html>

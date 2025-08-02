@@ -1,605 +1,602 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    5G Outdoor Router Bridge Mode Probleme
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    5G Outdoor Router Bridge Mode Probleme
   </h1>
-  <span class="author">
+<span class="author">
    thaZalega
   </span>
-  <br/>
-  <time class="Aug 19" datetime="2024-08-19T14:01:30Z" title="2024-08-19 14:01 ">
+<br/>
+<time class="Aug 19" datetime="2024-08-19T14:01:30Z" title="2024-08-19 14:01 ">
    August 19, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     habe seit kurzem einen 5G Internettarif 300Mbit/s mit Outdoor Box geholt.
    </p>
-   <p>
+<p>
     Wenn ich das Internet mit den Werkseinstellungen der Indoor und Outdoor Einheit verwende funktioniert alles Super da ich anscheinend mir
    </p>
-   <p>
+<p>
     mit nur wenigen die Internetbandbreite teilen muss:
    </p>
-   <p>
-   </p>
-   <p>
-    <img alt="Screenshot2024-08-11174217.png.2c884dae0e278674348f73617309f434.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5803" data-ratio="47.28" src="images/uploads/Screenshot2024-08-11174217.png.2c884dae0e278674348f73617309f434.png" width="736"/>
-   </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
+<img alt="Screenshot2024-08-11174217.png.2c884dae0e278674348f73617309f434.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5803" data-ratio="47.28" src="images/uploads/Screenshot2024-08-11174217.png.2c884dae0e278674348f73617309f434.png" width="736"/>
+</p>
+<p>
+</p>
+<p>
     Jetzt aber zu meinen Problemen:
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Da das Internet von Magenta in Zukunft das Hybrid Internet von A1 ersetzen soll (da mittlerweile bei uns in der Umgebung schneller und stabiler und das am Land)
    </p>
-   <p>
+<p>
     muss ich die Outdoor Unit im Bridge Mode betreiben damit der Indoor Router (wird später durch TP-Link ER707-M2 Router ersetzt) die öffentliche IPv4 Adresse bekommt und es möglich ist Ports zu öffnen.(Brauche das weil: 2x Wechselrichter, 1x Energiemanagement System, 1x Heizungssteuerung über App, 1xHeizungssteuerung über VNC, 1x Synology NAS für Daten und Videoüberwachung, und in Zukunft auch noch DynDNS und eigenes VPN)
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Leider kommt es nach der Umstellung auf "Business APN" und "Bridge Mode" zu Problemen egal ob ich es als einziges hinterlegtes Profile verwende oder als zweites mit Aktivierten VLan.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Probleme nach der Umstellung:
    </p>
-   <p>
+<p>
     - Internetverbindung bricht in kurzen Zeitabständen zusammen. (scheint aber kein Problem des Mobilfunks zu sein sondern zwischen Indoor und Outdoor Unit auch zwei Minuten vom Netz nehmen beider Geräte hilft nicht)
    </p>
-   <p>
+<p>
     - Nach der Änderung der DNS Server in der Indoor Unit ist keine Namensauflösung mehr möglich.(mit nslookup: DNS request timed out. timeout was 2 seconds.)
    </p>
-   <p>
+<p>
     - Komischerweise wenn das Internet mal geht kriege ich keine 30Mbit/s am Rechner über Lan aber wenn ich Lan Controller deaktiviere und es über WLAN versuche habe ich die volle Bandbreite bis die Internetverbindung wieder abbricht.
    </p>
-   <p>
+<p>
     - Habe es auch mit einer Fritzbox 4040 als Indoor Unit versucht, gleiches Problem (bis auf das WLan - Lan Problem oberhalb beschrieben) nur das die erst nach ca. 5h angefangen haben und nicht sofort.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Falls jemand ähnliche Probleme hatte, wie habt ihr diese gelöst?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke schonmal im Voraus und Sorry falls ich einen Beitrag der das gleiche Problem beschreibt übersehen habe.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Outdoor Unit Version:
    </p>
-   <p>
+<p>
     Software version: v01.06.10.06_perf
    </p>
-   <p>
+<p>
     Modemversion: UMC-A15QE_v13.08
    </p>
-   <p>
+<p>
     Hardwareversion: v11.42
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Indoor Unit:
    </p>
-   <p>
+<p>
     Current Firmware Version: 1.0.2.240613
    </p>
-   <p>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<p>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="Aug 19" datetime="2024-08-19T14:05:09Z" title="2024-08-19 14:05 ">
       August 19, 2024
      </time>
      von thaZalega
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    equinox_01
   </span>
-  <br/>
-  <time class="Aug 23" datetime="2024-08-23T09:37:12Z" title="2024-08-23 09:37 ">
+<br/>
+<time class="Aug 23" datetime="2024-08-23T09:37:12Z" title="2024-08-23 09:37 ">
    August 23, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Welche Outdoor-Box? Hersteller/Modellbezeichnung bitte
     <span>
-     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
-    </span>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
+</span>
+</p>
+</div>
+<hr/>
+<span class="author">
    Klaximaxi43
   </span>
-  <br/>
-  <time class="Aug 24" datetime="2024-08-24T14:17:47Z" title="2024-08-24 14:17 ">
+<br/>
+<time class="Aug 24" datetime="2024-08-24T14:17:47Z" title="2024-08-24 14:17 ">
    August 24, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Er meint die wnc af55
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Aber wie schon beschrieben mit den Script was ich gepostet habe auf Bridge umstellen oder mit der console ab ändern aber
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     NOCHMALS
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     egal mit welchem Gerät man verliert an Geschwindigkeit etc im Bridge Modus ist bei allen so ! Vergesst einfach den Bridge Modus
     <span class="ipsEmoji">
      😉
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Einfach normal lassen und gut ist es also so lassen und einfach anderen dran wie ich zum Beispiel den Xiaomi ax3000t und läuft tadellos
     <span class="ipsEmoji">
      😃
     </span>
     mfg
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="Aug 24" datetime="2024-08-24T14:18:21Z" title="2024-08-24 14:18 ">
       August 24, 2024
      </time>
      von Klaximaxi43
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    thaZalega
   </span>
-  <br/>
-  <time class="Aug 27" datetime="2024-08-27T18:13:37Z" title="2024-08-27 18:13 ">
+<br/>
+<time class="Aug 27" datetime="2024-08-27T18:13:37Z" title="2024-08-27 18:13 ">
    August 27, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58054" data-ipsquote-contentid="9626" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1724509067" data-ipsquote-userid="98130" data-ipsquote-username="Klaximaxi43">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58054" data-ipsquote-contentid="9626" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1724509067" data-ipsquote-userid="98130" data-ipsquote-username="Klaximaxi43">
+<div class="ipsQuote_citation">
      Am 24.8.2024 um 16:17 schrieb Klaximaxi43:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Er meint die wnc af55
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Aber wie schon beschrieben mit den Script was ich gepostet habe auf Bridge umstellen oder mit der console ab ändern aber
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       NOCHMALS
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       egal mit welchem Gerät man verliert an Geschwindigkeit etc im Bridge Modus ist bei allen so ! Vergesst einfach den Bridge Modus
       <span class="ipsEmoji">
        😉
       </span>
-     </p>
-     <p>
-     </p>
-     <p>
+</p>
+<p>
+</p>
+<p>
       Einfach normal lassen und gut ist es also so lassen und einfach anderen dran wie ich zum Beispiel den Xiaomi ax3000t und läuft tadellos
       <span class="ipsEmoji">
        😃
       </span>
       mfg
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Danke!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hab das Script schon gesehen nur das bringt mir nicht viel da ich in meiner ODU bridge mode ohne probleme auswählen kann ohne ein weiteres Profil anzulegen.
    </p>
-   <p>
+<p>
     Habe es jetzt so gelöst das ich auf business.gprsinternet im Router Modus umgestellt habe mit vlan id und mac-dmz.
    </p>
-   <p>
+<p>
     Damit scheint es zu funktionieren bis auf das ich die public ip dadurch nicht durchgereicht bekomme.
    </p>
-   <p>
+<p>
     Portweiterleitung scheint zu funktionieren nachdem ich testweiße seit ein paar tagen auf einem Raspberry ein tor-relay betreibe.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Der Bridge-mode funktioniert anscheinend nicht stabil bzw. nicht so wie es soll.
    </p>
-   <p>
+<p>
     Die fritzbox kriegt zwar die richtige public ip nur das meine Requests die rausgeschickt werden anscheinend von der ODU rausgefiltert werden und die fritzbox nach umstellen auf bridge-mode nicht mehr von der ODU erkannt wird weshalb trotz mac-dmz das nix bringt.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Habe mit der fritzbox die pakete aufgezeichnet und sehr oft Einträge mit der Bezeichnung "Communication administratively filterd" bekommen.
    </p>
-   <p>
+<p>
     Wahrscheinlich wird die Firmware der ODU das Problem sein bin aber kein Profi weshalb ich mir da auch nicht wirklich sicher bin.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Vielleicht hole ich mir die Nebula FWA710 von Zyxel kostet zwar ca. 500€ aber die sollte das dann können und nachdem ich nicht damit rechne das ich irgendwann in den nächsten 5 Jahren Glasfaser bekomme lohnt sich es dann schon.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Aber trotzdem danke für eure Antworten.
     <span class="ipsEmoji">
      🙂
     </span>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    Klaximaxi43
   </span>
-  <br/>
-  <time class="Aug 28" datetime="2024-08-28T13:12:57Z" title="2024-08-28 13:12 ">
+<br/>
+<time class="Aug 28" datetime="2024-08-28T13:12:57Z" title="2024-08-28 13:12 ">
    August 28, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Das Problem im Bridge Modus wurde ihr schon beschrieben damit es Probleme gibt ! Aber ja mit vlan sollte es ja passen !
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wie kannst du es ohne Script umstellen das geht eigentlich nicht bei der odu wnc außer du hast eine erste Firmware noch drauf eine alte was aber auch nicht viel Sinn hat dann !
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Da bist der einzige mit der wnc das du es so umstellen kannst !
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Das business.gprsinternet ist halt ohne ipv6 dann !
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Kann nur sagen ich habe keine Probleme habe es einfach so belassen und nur die idu aus getauscht und fertig ! Mehr Speed als vorher sogar über den Tarif drüber
     <span class="ipsEmoji">
      😄
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Bridge Modus ist keine Lösung egal bei welchem Router da man immer Speed verliert da ist Fakt !
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Selbe wie das ganze Mesh system nur Verlust solange kein triband (nicht geteiltes) !
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ob ein Tausch einen Sinn hat ist immer die Frage das kann man e nur testen mal !
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Trotzdem viel Erfolg mfg
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    thaZalega
   </span>
-  <br/>
-  <time class="Sep 2" datetime="2024-09-02T15:36:49Z" title="2024-09-02 15:36 ">
+<br/>
+<time class="Sep 2" datetime="2024-09-02T15:36:49Z" title="2024-09-02 15:36 ">
    September 2, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58063" data-ipsquote-contentid="9626" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1724850777" data-ipsquote-userid="98130" data-ipsquote-username="Klaximaxi43">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58063" data-ipsquote-contentid="9626" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1724850777" data-ipsquote-userid="98130" data-ipsquote-username="Klaximaxi43">
+<div class="ipsQuote_citation">
      Am 28.8.2024 um 15:12 schrieb Klaximaxi43:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Wie kannst du es ohne Script umstellen das geht eigentlich nicht bei der odu wnc außer du hast eine erste Firmware noch drauf eine alte was aber auch nicht viel Sinn hat dann !
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     So sieht es bei mir aus ohne Script:
     <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5818" href="images/uploads/Screenshot2024-09-02165348.png.e54b26501c89d3253a95ba437cb2ff56.png" rel="">
-     <img alt="Screenshot2024-09-02165348.thumb.png.f9b76f3ac86415f3ad5b6b365b8b3c53.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5818" data-ratio="45.20" src="images/uploads/Screenshot2024-09-02165348.thumb.png.f9b76f3ac86415f3ad5b6b365b8b3c53.png" width="1000"/>
-    </a>
-    <a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5819" href="images/uploads/Screenshot2024-09-02165355.png.f0a1cd2c500415d03af34b34cbd68f31.png" rel="">
-     <img alt="Screenshot2024-09-02165355.thumb.png.3d0a024044734c24ed2b548b3d56a63e.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5819" data-ratio="45.00" src="images/uploads/Screenshot2024-09-02165355.thumb.png.3d0a024044734c24ed2b548b3d56a63e.png" width="1000"/>
-    </a>
-   </p>
-   <p>
+<img alt="Screenshot2024-09-02165348.thumb.png.f9b76f3ac86415f3ad5b6b365b8b3c53.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5818" data-ratio="45.20" src="images/uploads/Screenshot2024-09-02165348.thumb.png.f9b76f3ac86415f3ad5b6b365b8b3c53.png" width="1000"/>
+</a>
+<a class="ipsAttachLink ipsAttachLink_image" data-fileext="png" data-fileid="5819" href="images/uploads/Screenshot2024-09-02165355.png.f0a1cd2c500415d03af34b34cbd68f31.png" rel="">
+<img alt="Screenshot2024-09-02165355.thumb.png.3d0a024044734c24ed2b548b3d56a63e.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5819" data-ratio="45.00" src="images/uploads/Screenshot2024-09-02165355.thumb.png.3d0a024044734c24ed2b548b3d56a63e.png" width="1000"/>
+</a>
+</p>
+<p>
     Das ist die Version der ODU:
    </p>
-   <p>
-   </p>
-   <p>
-    <img alt="Screenshot2024-09-02165825.png.0faa2f0c2937faaf6dc48ebf443051d3.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5820" data-ratio="45.97" src="images/uploads/Screenshot2024-09-02165825.png.0faa2f0c2937faaf6dc48ebf443051d3.png" width="757"/>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58063" data-ipsquote-contentid="9626" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1724850777" data-ipsquote-userid="98130" data-ipsquote-username="Klaximaxi43">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<p>
+<img alt="Screenshot2024-09-02165825.png.0faa2f0c2937faaf6dc48ebf443051d3.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5820" data-ratio="45.97" src="images/uploads/Screenshot2024-09-02165825.png.0faa2f0c2937faaf6dc48ebf443051d3.png" width="757"/>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58063" data-ipsquote-contentid="9626" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1724850777" data-ipsquote-userid="98130" data-ipsquote-username="Klaximaxi43">
+<div class="ipsQuote_citation">
      Am 28.8.2024 um 15:12 schrieb Klaximaxi43:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Kann nur sagen ich habe keine Probleme habe es einfach so belassen und nur die idu aus getauscht und fertig ! Mehr Speed als vorher sogar über den Tarif drüber
       <span class="ipsEmoji">
        😄
       </span>
-     </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Ist bei mir gleich.
    </p>
-   <p>
+<p>
     Mit
    </p>
-   <p>
+<p>
     CGNAT: ca. 300-350Mbit/s
    </p>
-   <p>
+<p>
     Public IP: ca. 290-300Mbit/s
    </p>
-   <p>
+<p>
     und für die kurze Zeit die der Bridge Mode geht mit Public IP: 240-300Mbit
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Aber wie du schon geschrieben hast muss man testen ob es mit einer anderen ODU besser oder schlechter geht kann ja eh die ODU von Zyxel im Zweifelsfall zurückschicken aber ich denke mir halt das Zyxel Router schon mehr können sollten nachdem die Geld mit Router und den Zusatz Features machen und nicht mit Mobilfunk Verträgen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     LG
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    equinox_01
   </span>
-  <br/>
-  <time class="Sep 8" datetime="2024-09-08T16:28:53Z" title="2024-09-08 16:28 ">
+<br/>
+<time class="Sep 8" datetime="2024-09-08T16:28:53Z" title="2024-09-08 16:28 ">
    September 8, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Der Zyxel NR7302 hat bei mir in Bridge-Mode deutlich mehr Durchsatz.
     <br/>
     Zuerst max. der Funkzelle und pendelt dann auf Tariflimit +50Mbit.
     <br/>
-    <br/>
+<br/>
     Im Routermodus hat der NR7302 durchschnittlich 150Mbit. Generell kann man also nicht sagen, dass Bridge-Modus langsamer ist. Was auch technisch nicht korrekt ist, da der Router dahinter ja gewisse Aufgaben abnimmt und so die CPU des Modems entlastet.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Michael2000
   </span>
-  <br/>
-  <time class="Okt 12" datetime="2024-10-12T20:44:44Z" title="2024-10-12 20:44 ">
+<br/>
+<time class="Okt 12" datetime="2024-10-12T20:44:44Z" title="2024-10-12 20:44 ">
    Oktober 12, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58026" data-ipsquote-contentid="9626" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1724076090" data-ipsquote-userid="99412" data-ipsquote-username="thaZalega">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58026" data-ipsquote-contentid="9626" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1724076090" data-ipsquote-userid="99412" data-ipsquote-username="thaZalega">
+<div class="ipsQuote_citation">
      Am 19.8.2024 um 16:01 schrieb thaZalega:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Hallo,
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       habe seit kurzem einen 5G Internettarif 300Mbit/s mit Outdoor Box geholt.
      </p>
-     <p>
+<p>
       Wenn ich das Internet mit den Werkseinstellungen der Indoor und Outdoor Einheit verwende funktioniert alles Super da ich anscheinend mir
      </p>
-     <p>
+<p>
       mit nur wenigen die Internetbandbreite teilen muss:
      </p>
-     <p>
-     </p>
-     <p>
-      <a data-fileext="png" data-fileid="5803" href="images/uploads/Screenshot2024-08-11174217.png.2c884dae0e278674348f73617309f434.png" rel="" title="Bild vergrößern">
-       <img alt="Screenshot2024-08-11174217.png.2c884dae0e278674348f73617309f434.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5803" data-ratio="47.28" src="images/uploads/Screenshot2024-08-11174217.png.2c884dae0e278674348f73617309f434.png" width="736"/>
-      </a>
-     </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
+<a data-fileext="png" data-fileid="5803" href="images/uploads/Screenshot2024-08-11174217.png.2c884dae0e278674348f73617309f434.png" rel="" title="Bild vergrößern">
+<img alt="Screenshot2024-08-11174217.png.2c884dae0e278674348f73617309f434.png" class="ipsImage ipsImage_thumbnailed" data-fileid="5803" data-ratio="47.28" src="images/uploads/Screenshot2024-08-11174217.png.2c884dae0e278674348f73617309f434.png" width="736"/>
+</a>
+</p>
+<p>
+</p>
+<p>
       Jetzt aber zu meinen Problemen:
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Da das Internet von Magenta in Zukunft das Hybrid Internet von A1 ersetzen soll (da mittlerweile bei uns in der Umgebung schneller und stabiler und das am Land)
      </p>
-     <p>
+<p>
       muss ich die Outdoor Unit im Bridge Mode betreiben damit der Indoor Router (wird später durch TP-Link ER707-M2 Router ersetzt) die öffentliche IPv4 Adresse bekommt und es möglich ist Ports zu öffnen.(Brauche das weil: 2x Wechselrichter, 1x Energiemanagement System, 1x Heizungssteuerung über App, 1xHeizungssteuerung über VNC, 1x Synology NAS für Daten und Videoüberwachung, und in Zukunft auch noch DynDNS und eigenes VPN)
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Leider kommt es nach der Umstellung auf "Business APN" und "Bridge Mode" zu Problemen egal ob ich es als einziges hinterlegtes Profile verwende oder als zweites mit Aktivierten VLan.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Probleme nach der Umstellung:
      </p>
-     <p>
+<p>
       - Internetverbindung bricht in kurzen Zeitabständen zusammen. (scheint aber kein Problem des Mobilfunks zu sein sondern zwischen Indoor und Outdoor Unit auch zwei Minuten vom Netz nehmen beider Geräte hilft nicht)
      </p>
-     <p>
+<p>
       - Nach der Änderung der DNS Server in der Indoor Unit ist keine Namensauflösung mehr möglich.(mit nslookup: DNS request timed out. timeout was 2 seconds.)
      </p>
-     <p>
+<p>
       - Komischerweise wenn das Internet mal geht kriege ich keine 30Mbit/s am Rechner über Lan aber wenn ich Lan Controller deaktiviere und es über WLAN versuche habe ich die volle Bandbreite bis die Internetverbindung wieder abbricht.
      </p>
-     <p>
+<p>
       - Habe es auch mit einer Fritzbox 4040 als Indoor Unit versucht, gleiches Problem (bis auf das WLan - Lan Problem oberhalb beschrieben) nur das die erst nach ca. 5h angefangen haben und nicht sofort.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Falls jemand ähnliche Probleme hatte, wie habt ihr diese gelöst?
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Danke schonmal im Voraus und Sorry falls ich einen Beitrag der das gleiche Problem beschreibt übersehen habe.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Outdoor Unit Version:
      </p>
-     <p>
+<p>
       Software version: v01.06.10.06_perf
      </p>
-     <p>
+<p>
       Modemversion: UMC-A15QE_v13.08
      </p>
-     <p>
+<p>
       Hardwareversion: v11.42
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Indoor Unit:
      </p>
-     <p>
+<p>
       Current Firmware Version: 1.0.2.240613
      </p>
-     <p>
-     </p>
-    </div>
-   </blockquote>
-   <p>
+<p>
+</p>
+</div>
+</blockquote>
+<p>
     Hallo!
-    <br>
-     <br>
+    <br/>
+<br/>
       Es scheint so als würde es tatsächlich an der ODU liegen, ich hab nun die V2 und diese macht das selbe wie du es beschreibst... Ich benötige ebenso die IP an der UDM. Hab nun die alte ODU wieder angehängt mit neuer Sim Karte und siehe da die volle Geschwindigkeit wieder da....
-      <br>
-       <br>
+      <br/>
+<br/>
         Hoffentlich ist dass ganze mit einem Softwareupdate in Zukunft irgendwann mal erledigt
         <span>
-         <img alt=":/" data-emoticon="" height="20" src="images/emoticons/tma_crying-o.png" srcset="images/emoticons/tma_crying-o@2x.png 2x" title=":/" width="20"/>
-        </span>
-       </br>
-      </br>
-     </br>
-    </br>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<img alt=":/" data-emoticon="" height="20" src="images/emoticons/tma_crying-o.png" srcset="images/emoticons/tma_crying-o@2x.png 2x" title=":/" width="20"/>
+</span>
+</p>
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="Okt 13" datetime="2024-10-13T17:24:15Z" title="2024-10-13 17:24 ">
+<br/>
+<time class="Okt 13" datetime="2024-10-13T17:24:15Z" title="2024-10-13 17:24 ">
    Oktober 13, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58026" data-ipsquote-contentid="9626" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1724076090" data-ipsquote-userid="99412" data-ipsquote-username="thaZalega">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="58026" data-ipsquote-contentid="9626" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1724076090" data-ipsquote-userid="99412" data-ipsquote-username="thaZalega">
+<div class="ipsQuote_citation">
      Am 19.8.2024 um 16:01 schrieb thaZalega:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Da das Internet von Magenta in Zukunft das Hybrid Internet von A1 ersetzen soll (da mittlerweile bei uns in der Umgebung schneller und stabiler und das am Land)
      </p>
-     <p>
+<p>
       muss ich die Outdoor Unit im Bridge Mode betreiben damit der Indoor Router (wird später durch TP-Link ER707-M2 Router ersetzt) die öffentliche IPv4 Adresse bekommt und es möglich ist Ports zu öffnen.(Brauche das weil: 2x Wechselrichter, 1x Energiemanagement System, 1x Heizungssteuerung über App, 1xHeizungssteuerung über VNC, 1x Synology NAS für Daten und Videoüberwachung, und in Zukunft auch noch DynDNS und eigenes VPN)
      </p>
-     <p>
-     </p>
-     <p>
-     </p>
-     <p>
-     </p>
-    </div>
-   </blockquote>
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99412-thazalega/?do=hovercard" data-mentionid="99412" href="https://community.magenta.at/profile/99412-thazalega/" rel="">
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+</div>
+</blockquote>
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/99412-thazalega/?do=hovercard" data-mentionid="99412" href="https://community.magenta.at/profile/99412-thazalega/" rel="">
      @thaZalega
     </a>
-    <s>
+<s>
      Bitte
     </s>
     keinen Welchserichter über Portweiterleitung ins Internet lassen!
    </p>
-   <p>
+<p>
     Lass am besten nur das VPN über eine Portweiterleitung erreichbar sein. Wireguard geht auch über doppelt NAT, dazu auf der ODU die Portweiterleitung für die UDP Port von Wireguard einrichten.
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
- </body>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+</div>
+<hr/>
+</body>
 </html>

@@ -1,160 +1,161 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Synchronisationsproblem mit Tenda Nova MW6 Mesh WLAN System
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Synchronisationsproblem mit Tenda Nova MW6 Mesh WLAN System
   </h1>
-  <span class="author">
+<span class="author">
    Oachkatzl
   </span>
-  <br/>
-  <time class="Aug 15" datetime="2024-08-15T08:34:00Z" title="2024-08-15 08:34 ">
+<br/>
+<time class="Aug 15" datetime="2024-08-15T08:34:00Z" title="2024-08-15 08:34 ">
    August 15, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Liebe Magenta Community,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wir haben in unserem Haus folgendes Setup:
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Das Magenta Kabel ist von der Straße in den Technikraum eingeleitet. Dort gibt es mehrere Geräte, die inzwischen ohne Probleme mit dem Internet verbunden sind. Nach ursprünglichen Magenta-Problemen haben wir ein neues Modem bekommen. Dieses funktioniert stabil. Der Magenta Speedtest  über Modem --&gt; LAN Kabel --&gt; Laptop entspricht dem Vertrag.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Vom Modem weg ist eine CAT6 Verkabelung durch das gesamte Haus aufgesetzt. Für den WLAN Zugriff im Haus sind zwei Mesh Cubes (Tenda Nova MW6 Mesh WLAN System) in Verwendung. Die Mesh Cubes selbst sind ausschließlich über eine LAN-Verbindung verbunden (und nicht über WLAN). Das Setup ist also wie folgt: Magenta Modem --&gt; LAN (CAT6) --&gt; Primary Mesh Cube --&gt; LAN (CAT6) --&gt; Secondary Mesh Cube. Die Mesh Cubes wurden mit der Tenda Wifi App konfiguriert und funktionieren sehr gut (Magenta Speedtest entspricht dem Vertrag). Seitens Magenta wurde das Internet-Protokoll nach dem Modem von IPv6 auf IPv4 geändert. Ich habe alle LAN-Verbindungen ausgemessen und diese sind in Ordnung.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Das Problem ist, dass die Mesh Cubes nach regelmäßigen kurzen Interrupts des Magenta-Netzwerks (ca. 1x / Tag) die Verfügbarkeit des Internets zwar anzeigen (grünes Licht) aber nicht mit dem Internet verbunden sind. Das Problem lässt sich beheben, indem der Primary Mesh Cube vom Stromnetz genommen wird und wieder angesteckt wird.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Was kann das Problem sein? Was kann ich noch überprüfen bzw. korrigieren? Was schlagt ihr zur Lösung vor?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Vielen Dank für jeglichen Hinweis!
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Oachkatzl
   </span>
-  <br/>
-  <time class="Aug 16" datetime="2024-08-16T18:58:00Z" title="2024-08-16 18:58 ">
+<br/>
+<time class="Aug 16" datetime="2024-08-16T18:58:00Z" title="2024-08-16 18:58 ">
    August 16, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hat irgendwer eine Idee dazu? Liegt es vielleicht an den Internet Settings der Tenda Nova MW6 Mesh Cubes? Welche Einstellungen sind hier empfohlen? Default war Dynamic IP. Andere Optionen sind Static IP, PPPoE (und Bridge).
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="Aug 16" datetime="2024-08-16T20:57:29Z" title="2024-08-16 20:57 ">
       August 16, 2024
      </time>
      von Oachkatzl
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    sNakesheesh
   </span>
-  <br/>
-  <time class="Sep 1" datetime="2024-09-01T19:59:34Z" title="2024-09-01 19:59 ">
+<br/>
+<time class="Sep 1" datetime="2024-09-01T19:59:34Z" title="2024-09-01 19:59 ">
    September 1, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ich habe momentan das selbe Problem. Ich verwende die MW6 Mesh Cubes seit bisschen mehr als einem Jahr und hatte bisher nie schwerwiegende Probleme. Nun aber machen die Boxen seit zwei-drei Wochen faxen. Ich habe noch keine Lösung für das Problem gefunden, außer jede 20-30min die Haupt-Mesh-Box vom Netz zu nehmen und wieder anzuschließen. Dann funktionierts wieder für einen kurzen Zeitraum bis die Boxen, warum auch immer, die Verbindung verlieren und eigenständig keine aufbauen wollen.
     <br/>
-    <br/>
+<br/>
     Falls ich Neuigkeiten habe, würde ich dich infomieren.
    </p>
-   <p>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<p>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="Sep 1" datetime="2024-09-01T20:00:03Z" title="2024-09-01 20:00 ">
       September 1, 2024
      </time>
      von sNakesheesh
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    667
   </span>
-  <br/>
-  <time class="Feb 5" datetime="2025-02-05T09:17:05Z" title="2025-02-05 09:17 ">
+<br/>
+<time class="Feb 5" datetime="2025-02-05T09:17:05Z" title="2025-02-05 09:17 ">
    Februar 5
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Zusammen,
    </p>
-   <p>
+<p>
     ich habe das Tenda Nova MW6 seit Jahren im Einsatz. Bis vor kurzem auch ohne Probleme. Dann habe ich meinen Vertrag von 50 Mbit auf 100Mbit geändert und dafür einen neuen Speedport bekommen.
    </p>
-   <p>
+<p>
     Ich habe den Telekom Speedport Smart 4 Typ A.
    </p>
-   <p>
+<p>
     6x Würfel von Tenda wobei 3x via 1Gbit Switch per cat 7 Kabel eingespeist werden auf einer Fläche von ca. 200qm. In der Übersicht sind alle Würfel grün und ich habe überall vollen WLAN Empfang. Die Teilnehmer sind mit teilweise 2.4 und 5ghz verbunden.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     zuvor hatte ich Downloadraten beim Speedtest von ca. 50Mbit. Jetzt ist es sehr unterschiedlich. Pendelt zwischen 10-60Mbit und manchmal sogar nur 1-2Mbit.
    </p>
-   <p>
+<p>
     Der Upload ist proportional zum Download gleich, manchmal auch deutlich besser.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bei den Einstellungen des Tenda hatte ich zuvor immer dynamische IP. Habe jetzt das WLAN vom Speedport ausgeschaltet und auf Bridge am Tenda umgestellt.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Werde das jetzt mal beobachten.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe den Telekom Speedport Smart 4 Typ A.
    </p>
-   <p>
+<p>
     6x Würfel von Tenda wobei 3x via 1Gbit Switch per cat 7 Kabel eingespeist wird auf einer Fläche von ca. 200qm. In der Übersicht sind alle Würfel grün und ich habe überall vollen WLAN Empfang. Die Teilnehmer sind mit teilweise 2.4 und 5ghz verbunden.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Meine Vermutung: Da sich nur der Speedport verändert hat, gehe ich davon aus, dass dieser nicht mit dem Tenda zurecht kommt oder halt umgekehrt.
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

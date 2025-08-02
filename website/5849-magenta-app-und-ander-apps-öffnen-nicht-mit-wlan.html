@@ -1,180 +1,181 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Magenta App und ander Apps öffnen nicht mit WLAN
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Magenta App und ander Apps öffnen nicht mit WLAN
   </h1>
-  <span class="author">
+<span class="author">
    Benutzer001
   </span>
-  <br/>
-  <time class="5 yr" datetime="2020-05-22T12:23:39Z" title="2020-05-22 12:23 ">
+<br/>
+<time class="5 yr" datetime="2020-05-22T12:23:39Z" title="2020-05-22 12:23 ">
    Mai 22, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo liebe community,
    </p>
-   <p>
+<p>
     ich habe vor kurzem mir den neuen TV M + gigakraft 250 Tarif geholt und habe auch dabei einen neuen Router(Internet Fiber Box) bekommen. Ich wollte dann auf meinem Smartphone (Samsung Galaxy S8) mit dem neuen Wlan z.B. die Mein Magenta App oder die Magenta TV App öffnen, die beiden Apps laden bei mir nicht, aber mit den Mobilen Daten schon. Außerdem ist mir aufgefallen, dass Dateien von z.B. Emails nicht herunterladen aber mit den Mobilen Daten schon. Andere Apps wie YouTube, Netflix, Instagram funktionieren mit dem WLAN ohne Probleme. Dasselbe Problem, das manche Apps/Spiele mit dem WLAN nicht laden aber mit den Mobilen Daten schon, habe ich auch auf anderen Smartphones festgestellt.
    </p>
-   <p>
+<p>
     Daraufhin habe ich mehrere Speedtests(mit der Speedtest App von Speedtest.net) von der WLAN Internet Geschwindigkeit und der Mobilen Daten Internet Geschwindigkeit gemacht.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Dabei kamen folgende Ergebnisse raus:
    </p>
-   <p>
+<p>
     WLAN: Ping 11ms, Jitter 1ms, Download 140Mbps, Upload 48Mbps, Verlust 0%
    </p>
-   <p>
+<p>
     Mobile Daten: Ping 14ms, Jitter 6ms, Download 57,5Mbps, Upload 19,1Mbps, Verlust 0%
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Mir ist noch aufgefallen, dass auf dem Pc in cmd bei dem nslookup Befehl aus irgendeinem Grund der IPv6 DNS-Server statt dem IPv4 DNS-Server verwendet wird und deshalb die nslookup Anfrage nicht geht.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wie man sieht ist die WLAN Internet Geschwindigkeit um einiges schneller als die der Mobilen Daten, ich verstehe nicht, warum dann die erwähnten Sachen nicht Laden.
    </p>
-   <p>
+<p>
     Ist das irgendein Problem mit dem Router? Liegt es vielleicht an dem IPv6 DNS-Server? Muss ich vielleicht irgendetwas in den Einstellungen des Routers umstellen oder muss ich den Router umtauschen?
    </p>
-   <p>
+<p>
     Kann mir jemand bei diesem Problem helfen?
    </p>
-   <p>
+<p>
     LG
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="5 yr" datetime="2020-05-24T09:23:17Z" title="2020-05-24 09:23 ">
+<br/>
+<time class="5 yr" datetime="2020-05-24T09:23:17Z" title="2020-05-24 09:23 ">
    Mai 24, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Welche Netzwerkgeräte hängen im Netzwerk? (Sprich Router, AccessPoints, misteriöse Boxen)
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich kann mir Grundsätzlich nur schwer vorstellen, dass es ein Problem sein sollte, wenn der DNS Server über das IPv6 Protokoll angesprochen wird. Der sollte trotzdem, wenn gefragt, die IPv4 Adresse zurück liefern.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Was sagt den der Server bei : nslookup ipv4only.arpa
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Funktioniert ping 1.1.1.1
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Was durch aus sein könnte, ist dass der DNS Server von einem falsch konfigurierten Netzwerkgerät stammt und deshalb Probleme macht.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Benutzer001
   </span>
-  <br/>
-  <time class="5 yr" datetime="2020-05-24T12:34:26Z" title="2020-05-24 12:34 ">
+<br/>
+<time class="5 yr" datetime="2020-05-24T12:34:26Z" title="2020-05-24 12:34 ">
    Mai 24, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="34685" data-ipsquote-contentid="5849" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1590312197" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="34685" data-ipsquote-contentid="5849" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1590312197" data-ipsquote-userid="72107" data-ipsquote-username="IT-Freak">
+<div class="ipsQuote_citation">
      vor 1 Stunde schrieb IT-Freak:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Welche Netzwerkgeräte hängen im Netzwerk? (Sprich Router, AccessPoints, misteriöse Boxen)
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Ich kann mir Grundsätzlich nur schwer vorstellen, dass es ein Problem sein sollte, wenn der DNS Server über das IPv6 Protokoll angesprochen wird. Der sollte trotzdem, wenn gefragt, die IPv4 Adresse zurück liefern.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Was sagt den der Server bei : nslookup ipv4only.arpa
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Funktioniert ping 1.1.1.1
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Was durch aus sein könnte, ist dass der DNS Server von einem falsch konfigurierten Netzwerkgerät stammt und deshalb Probleme macht.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Es sind nur Smartphones, Laptops, ein Fernseher und die Entertain Box 4K mit dem Router(Internet Fiber Box) über WLAN verbunden, es sind keine Netzwerkgeräte wie AccessPoints verbunden.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     nslookup ipv4only.arpa funktioniert auch nicht (Bild im Anhang)
    </p>
-   <p>
-    <img alt="5eca60b8d65c8_nslookupipv4only_arpa.PNG.dcd14fbb23de35a4fbe915176fbdd0ae.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="2208" src="images/uploads/5eca60b8d65c8_nslookupipv4only_arpa.PNG.dcd14fbb23de35a4fbe915176fbdd0ae.PNG"/>
-   </p>
-   <p>
-   </p>
-   <p>
+<p>
+<img alt="5eca60b8d65c8_nslookupipv4only_arpa.PNG.dcd14fbb23de35a4fbe915176fbdd0ae.PNG" class="ipsImage ipsImage_thumbnailed" data-fileid="2208" src="images/uploads/5eca60b8d65c8_nslookupipv4only_arpa.PNG.dcd14fbb23de35a4fbe915176fbdd0ae.PNG"/>
+</p>
+<p>
+</p>
+<p>
     ping 1.1.1.1 ja es funktioniert
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Meine eigentliche Frage war, warum manche Apps/Spiele nicht mit WLAN auf den Smartphones funktionieren aber mit Mobilen Daten schon, obwohl laut dem Speedtest von Speedtest.net ist die Internet Geschwindigkeit der Mobilen Daten eigentlich um einiges langsamer.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Mustafa Mahmoud
   </span>
-  <br/>
-  <time class="4 yr" datetime="2020-08-28T21:40:45Z" title="2020-08-28 21:40 ">
+<br/>
+<time class="4 yr" datetime="2020-08-28T21:40:45Z" title="2020-08-28 21:40 ">
    August 28, 2020
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ich habe auch das selbe Problem. Ich kann zwar Videos auf dem Fernsehr schauen. Jedoch funktionieren die meisten Apps auf dem Handy nicht. Ich kann keine Flüge auf Checkfelix checken, YouTube braucht. ewig um die Thumbnails bzw die Videos zu laden und lauter solche Sachen. Bis ich zum mobilen Netz schalte dann funkioniert alles super.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe dort bei der Hotline angerufen und die erzählten dass ich das Gerät ein und ausschalten sollte, oder die Frequenz ändern soll. All das hat nicht geholfen. Ich habe auch Skripts programmiert die in einem anderen WLAN im Schnitt 5 Minuten brauchen bis sie gewisse Sachen im Inet durchführen aber bei mir dauert das über 90 Minuten. Weil so viele Pakete rejected werden von der Box... Konntest du es lösen?
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
- </body>
+<p>
+</p>
+<p>
+</p>
+</div>
+<hr/>
+</body>
 </html>

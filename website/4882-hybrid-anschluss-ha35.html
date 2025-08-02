@@ -1,255 +1,256 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Hybrid Anschluss HA35
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Hybrid Anschluss HA35
   </h1>
-  <span class="author">
+<span class="author">
    alexanm
   </span>
-  <br/>
-  <time class="6 yr" datetime="2019-04-15T17:33:34Z" title="2019-04-15 17:33 ">
+<br/>
+<time class="6 yr" datetime="2019-04-15T17:33:34Z" title="2019-04-15 17:33 ">
    April 15, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Leute,
    </p>
-   <p>
+<p>
     ich stelle hier nun auch meine Frage. Habe vorher das Forum durchsucht aber nicht wirklich eine befriedigende Antwort gefunden.
    </p>
-   <p>
+<p>
     Bei einem Kunden von mir ist über DSL nur die Minimalbandbreite von 10MBit verfügbar, also bin ich mal zu den drei großen Anbietern gegangen um die Möglichkeiten auszuloten. Das Gesamtpaket hat bei T-Mobile am besten gepasst, also haben wir uns entschieden vom alten Anbieter zu T-Mobile Hybrid zu wechseln, da der LTE Empfang auch sehr gut ist.
    </p>
-   <p>
+<p>
     Es wurde dann parallel zur bestehenden Installation die neue Leitung gemacht und ich habe es auch grundsätzlich ausprobiert. Internet geht, Public IPAdresse ist vorhanden und auch am Router beim Bonding vorhanden. Menüpunkt zum Portforwarding ist auch da, also war ich der Meinung: Passt alles. Heute dann der große Tag die Rufnummer und alles wird portiert, also habe ich am vorher das Internet auf den neuen Hybrid Router umgesteckt, IPAdresse vergeben, Portforwardings eingerichtet und gedacht, das passt nun. Leider musste ich feststellen, dass ich nun zwei Themen habe:
    </p>
-   <p>
+<p>
     1. Der Kollege Hybrid Router hat einen DHCP Server an Bord, wobei mir aus der Hilfe nicht wirklich klar ist in welchen Netzen er die Adresse vergibt: Nur am WLAN oder auch am LAN. Dass er sich im LAN meldet ist mir relativ schnell aufgefallen, da der DHCP Server von meinem Windows Server gleich nachdem ich den Hybrid Router angesteckt habe vom Netz gegangen ist. kein Problem denke ich, einfach den DHCP Server in den IPV4 Einstellungen deaktiviert. Bringt aber nur zum Teil was, denn der für IPv6 bleibt weiterhin aktiv und der Windows DHCP geht trotzdem vom Netz. Hat da irgendwer eine Idee was ich noch tun könnte?
    </p>
-   <p>
+<p>
     2. Portforwarding: Auch das funktioniert nicht (zumindest mit IPv4). Aus den bereits gefundenen Threads hier geht meiner Meinung nach nicht eindeutig hervor ob das nun geht oder nicht. Die Angaben sind etwas widersprüchlich. Auch den Server in die DMZ geben hat nichts gebracht. Ich bekomme keinerlei Verbindung hin. Wäre toll wenn mir da jemand eine definive Aussage machen kann ob das nun geht oder nicht.
    </p>
-   <p>
+<p>
     Ein Anruf bei der T-Mobile hat nur ergeben, dass ihrerseits alles korrekt konfiguriert ist und es wurde für beide Themen ein Ticket aufgemacht.
    </p>
-   <p>
+<p>
     Mein Problem ist nun, dass ich relativ unter Zeitdruck stehe, da ja heute meine Nummer vom alten Provider portiert wurde und dadurch auch die alte Internetleitung nicht mehr funktioniert. Naja, da ich jemadem aus dem Netz kenne, hat er mir den Anschluß noch mal aktiviert, aber sobald das in allen Systemen durch ist, ist sense mit dem Anschluß. Er meinte das wird sicher morgen oder übermorgen passieren.
    </p>
-   <p>
+<p>
     Vielen Dank für Eure Unterstützung.
    </p>
-   <p>
+<p>
     Markus
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="6 yr" datetime="2019-04-15T18:13:20Z" title="2019-04-15 18:13 ">
+<br/>
+<time class="6 yr" datetime="2019-04-15T18:13:20Z" title="2019-04-15 18:13 ">
    April 15, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Wegen der IPv4 Weiterleitung:
    </p>
-   <p>
+<p>
     Öffentliche IP über die hotline wurde angefordert?
    </p>
-   <p>
+<p>
     Welche Serverdienst? Hat es mit der vorherigen Leitung funktioniert?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wegen DHCP:
    </p>
-   <p>
+<p>
     Ich kenne den Windows DHCP nicht, aber die Server die ich kenne lassen sich erzwingen, sprich sie schalten sich nicht weg,wenn ein anderer DHCP verkannt wurde.
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="6 yr" datetime="2019-04-16T17:31:00Z" title="2019-04-16 17:31 ">
       April 16, 2019
      </time>
      von IT-Freak
     </strong>
-    <br>
+<br/>
      Tippfehler
-    </br>
+    
    </span>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    alexanm
   </span>
-  <br/>
-  <time class="6 yr" datetime="2019-04-15T18:29:41Z" title="2019-04-15 18:29 ">
+<br/>
+<time class="6 yr" datetime="2019-04-15T18:29:41Z" title="2019-04-15 18:29 ">
    April 15, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
+<p>
     Ja öffentliche IP wurde angefordert. Ist laut T-Mobile auch korrekt konfiguriert. Habe extra nochmal wegen dem APN usw. gefragt.
    </p>
-   <p>
+<p>
     Ich möchte gerne SMTP, SMTPS, HTTP und HTTPS forwarden. Ja mit der vorigen Leitung hat es funktioniert. Funktioniert auch jetzt noch wenn ich die Leitung wechsle. Sehe ich da irgendwas im Systemprotokoll darüber ob ein forward passiert ist oder nicht?
    </p>
-   <p>
+<p>
     DHCP:
    </p>
-   <p>
+<p>
     Ist zwar nicht gerade schön, aber ich werde mal schauen ob das bei windows geht. Theoretisch hätte ich ja auch kein Problem wenn der DHCP über die HybridBox geht, aber anders ist das mit dem DNs einfach schöner ;-)
    </p>
-   <p>
+<p>
     Danke
    </p>
-   <p>
+<p>
     Markus
    </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    Fabey
   </span>
-  <br/>
-  <time class="6 yr" datetime="2019-04-16T13:22:33Z" title="2019-04-16 13:22 ">
+<br/>
+<time class="6 yr" datetime="2019-04-16T13:22:33Z" title="2019-04-16 13:22 ">
    April 16, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Wie wärs wenn du einfach in den Netzwerkadapteroptionen IPV6 deaktivierst dann ist der Ipv6 dhcp deaktiviert. Die Ranges für IPv4 kannst du manuell einstellen ich habe bei mir zuhhause z.B. 172.16.10.2- 172.16.10.255.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Portfarwarding geht sowieso nur mit einer Öffentlichen IP-Adresse aber die hast du ja bereits schon. Eine Detailierte Anleitung kann ich dir später schicken (bin derzeit noch in der Arbeit). Das Portfarwarding macht aber auch probleme musste ich selbst schon feststellen. Du musst UPNP deaktivieren und wieder aktivieren zumindest dann ging es und den Router nocheinmal neustarten aber nicht über das Webinterface sondern über den Button an der Rückseite.
    </p>
-   <p>
+<p>
     HTTP: Port 80 TCP alternativport: 8080 auch TCP
    </p>
-   <p>
+<p>
     HTTPS: Port 443 TCP
    </p>
-   <p>
+<p>
     SMTP: 25 TCP
    </p>
-   <p>
+<p>
     SMTPS: 465 TCP
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     So müsste es passen
     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Wenn du das eingestellt hast und es geht nicht dann lass über die Hotline ein Softwareupdate machen (leider geht das nur so). Das dauert ca. 20-30min dann 1x Router neustarten und die Firmware Version davor aufschreiben und kontrollieren ob sich wirklich was getan hat
     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+</p>
+</div>
+<hr/>
+<span class="author">
    alexanm
   </span>
-  <br/>
-  <time class="6 yr" datetime="2019-05-24T05:07:58Z" title="2019-05-24 05:07 ">
+<br/>
+<time class="6 yr" datetime="2019-05-24T05:07:58Z" title="2019-05-24 05:07 ">
    Mai 24, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     sorry für die späte Antwort aber es war viel los.
    </p>
-   <p>
+<p>
     Zum Thema IP V6: Ich habe das nun lokal deaktiviert. Das scheint zu funktionieren.
    </p>
-   <p>
+<p>
     Portforwarding: Das funktioniert irgendwie immer noch nicht. ich habe die Schritte die du vorgeschlagen hast gemacht, aber es geht nicht. Laut Magenta habe ich die neueste Version drauf (V100R018C00SPC113).
    </p>
-   <p>
+<p>
     Ich habe auch versucht meinen Server als DMZ Host am Modem zu konfigurieren, leider auch kein Erfolg.
    </p>
-   <p>
+<p>
     Noch irgendwelche Ideen?
    </p>
-   <p>
+<p>
     Danke
    </p>
-   <p>
+<p>
     Markus
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="6 yr" datetime="2019-05-24T05:11:00Z" title="2019-05-24 05:11 ">
       Mai 24, 2019
      </time>
      von alexanm
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    alexanm
   </span>
-  <br/>
-  <time class="6 yr" datetime="2019-05-31T06:23:04Z" title="2019-05-31 06:23 ">
+<br/>
+<time class="6 yr" datetime="2019-05-31T06:23:04Z" title="2019-05-31 06:23 ">
    Mai 31, 2019
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo nochmal,
    </p>
-   <p>
-   </p>
-   <p>
-    <span>
-     <span>
+<p>
+</p>
+<p>
+<span>
+<span>
       @Fabey: Könntest du mir bitte, wie oben geschrieben, die Anleitung zukommen lassen?
      </span>
-    </span>
-   </p>
-   <p>
-    <span>
-     <span>
+</span>
+</p>
+<p>
+<span>
+<span>
       Irgendwie schaffe ich es nicht das korrekt einzurichten und schön langsam läuft mir die Zeit davon.
      </span>
-    </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</span>
+</p>
+<p>
+</p>
+<p>
     Vielen Dank
    </p>
-   <p>
+<p>
     Markus
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
- </body>
+<p>
+</p>
+<p>
+</p>
+</div>
+<hr/>
+</body>
 </html>

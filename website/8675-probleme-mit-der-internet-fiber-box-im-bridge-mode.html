@@ -1,121 +1,122 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Probleme mit der Internet Fiber Box im Bridge Mode
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Probleme mit der Internet Fiber Box im Bridge Mode
   </h1>
-  <span class="author">
+<span class="author">
    ThoKoch
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-04-02T11:49:32Z" title="2023-04-02 11:49 ">
+<br/>
+<time class="timestamp" datetime="2023-04-02T11:49:32Z" title="2023-04-02 11:49 ">
    April 2, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Seit ca. 2 Wochen habe ich extreme Probleme mit meiner Magenta Internet Fiber Box im gigakraft 500 + TV L Tarif mit 2 Festnetz Telefonnummern.
    </p>
-   <p>
+<p>
     Die Verbindung wird alle 2-4 Stunden unterbrochen, weil die Box den DHCP lease beendet, das für auf meine Routern zu folgendem fehl Verhalten:
    </p>
-   <p>
-    <em>
-     <strong>
+<p>
+<em>
+<strong>
       FritzBox:
      </strong>
-    </em>
-   </p>
-   <p>
-    <em>
-     <strong>
+</em>
+</p>
+<p>
+<em>
+<strong>
       Internetverbindung wurde erfolgreich hergestellt. IP-Adresse: 192.168.100.43, DNS-Server: 0.0.0.0 und 0.0.0.0, Gateway: -
      </strong>
-    </em>
-   </p>
-   <p>
-    <em>
-     <strong>
+</em>
+</p>
+<p>
+<em>
+<strong>
       Mikrotik:
      </strong>
-    </em>
-   </p>
-   <p>
-    <strong>
+</em>
+</p>
+<p>
+<strong>
      dhcp-client on ether1 lost IP address 80.x.x.x - lease stopped locally
     </strong>
-   </p>
-   <p>
-    <em>
-     <strong>
+</p>
+<p>
+<em>
+<strong>
       dhcp-client on ether1 got IP address 192.168.100.10
      </strong>
-    </em>
-   </p>
-   <p>
-   </p>
-   <p>
+</em>
+</p>
+<p>
+</p>
+<p>
     Was natürlich Blödsinn ist, das ist das Netzwerk um die Box im Bridge Mode zu erreichen. Ziemlich genau 30 Sekunden später expired dann der lease und ich kriege eine öffentlich IP zugeteilt. Es gibt keinen Server der anderweitig 192.168.100.0/24 IPs vergibt. Da das Problem sowohl mit der FritzBox als auch mit dem Mikrotik router auftritt gehe ich mal davon aus, dass das Problem die Internet Fiber Box ist.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Das ganze geht zeitlich einher mit einem merkwürdigen Verhalten der Fiber Box:
    </p>
-   <p>
+<p>
     02-04-2023 12:28:43    warning    [90:5C:44:xx:xx:xx][DFS] Radar signal detected, DFS sequence applied, channel changed from 120 to 36
     <em>
-     <strong>
+<strong>
       [wenn das WLAN im Bridge Mode. nicht an ist würde ich gerne verstehen, warum das passiert, aber das ist ein anderes Thema]
      </strong>
-    </em>
-    <br/>
+</em>
+<br/>
     02-04-2023 12:26:29    notice    REGISTRATION COMPLETE - Waiting for Operational status;CM-MAC=90:5c:44:xx:xx:xx;CMTS-MAC=00:01:5c::xx:xx:xx;CM-QOS=1.1;CM-VER=3.0;
     <br/>
     02-04-2023 12:26:15    notice    TLV-11 - unrecognized OID;CM-MAC=90:5c:44:xx:xx:xx;CMTS-MAC=00:01:5c:xx:xx:xx;CM-QOS=1.1;CM-VER=3.0;
     <br/>
     02-04-2023 12:26:15    warning    MIMO Event MIMO: Stored MIMO=-1 post cfg file MIMO=-1;CM-MAC=90:5c:44:xx:xx:xx;CMTS-MAC=00:01:5c:xx:xx:xx;CM-QOS=1.1;CM-VER=3.0;
-    <br>
+    <br/>
      01-01-1970 00:01:43    critical    No Ranging Response received - T3 time-out;CM-MAC=90:5c:44:xx:xx:xx;CMTS-MAC=00:01:5c:xx:xx:xx;CM-QOS=1.1;CM-VER=3.0;
-     <br>
+     <br/>
       01-01-1970 00:01:25    notice
       <strong>
        Cable Modem Reboot - due to power reset
       </strong>
       ;CM-MAC=90:5c:44:xx:xx:xx;CMTS-MAC=00:00:00:00:00:00;CM-QOS=1.1;CM-VER=3.0;
-     </br>
-    </br>
+     
+    
    </p>
-   <p>
-    <em>
-     <strong>
+<p>
+<em>
+<strong>
       [davor keine Auffälligkeiten]
      </strong>
-    </em>
-   </p>
-   <p>
-   </p>
-   <p>
-    <b>
-     <i>
+</em>
+</p>
+<p>
+</p>
+<p>
+<b>
+<i>
       Box:
      </i>
-    </b>
-    <br/>
+</b>
+<br/>
     Konform zur Standardspezifikation    :    DOCSIS 3.0
     <br/>
     Hardware Version    :    5.01
     <br/>
-    <strong>
+<strong>
      Software Version    :    CH7465LG-NCIP-6.15.32p2TM-GA-NOSH
     </strong>
-    <br/>
+<br/>
     Kabel MAC Adresse    :    90:5C:44:xx:xx:xx
     <br/>
     Kabelmodem Seriennummer    :    DEAP63xxxxxx
@@ -124,116 +125,116 @@
     <br/>
     Netzwerkzugang    :    Erlaubt
    </p>
-   <p>
-   </p>
-   <p>
-    <em>
-     <strong>
+<p>
+</p>
+<p>
+<em>
+<strong>
       Das Modem ist bereits getauscht und kann als Fehlerquelle wohl ausgeschlossen werden. Auch gab es keine Stromunterbrechungen in den fraglichen Zeiträumen.
      </strong>
-    </em>
-   </p>
-   <p>
-   </p>
-   <p>
+</em>
+</p>
+<p>
+</p>
+<p>
     Prinzipielle wäre ich völlig OK mit den kurzen Unterbrechungen (auch wenn ich von einem Provider eine Trennung max. einmal täglich erwarten würde), wenn nur das erste Telefon nach dem Reconnect nicht immer wieder klingeln würde. ;-)
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hier meine Fragen:
    </p>
-   <ol>
-    <li>
-     <em>
-      <strong>
+<ol>
+<li>
+<em>
+<strong>
        Brauche ich ggf. nach einem der letzten SW updates der Box ein VLAN für die Verbindung um zu unterbinden die lokale IP zu bekommen?
       </strong>
-     </em>
-    </li>
-    <li>
-     <em>
-      <strong>
+</em>
+</li>
+<li>
+<em>
+<strong>
        Lässt sich das lästige Klingel nach dem Reconnect abstellen?
       </strong>
-     </em>
-    </li>
-    <li>
-     <em>
-      <strong>
+</em>
+</li>
+<li>
+<em>
+<strong>
        Hat noch jemand das Problem und hat ggf. einen Workaround gefunden?
       </strong>
-     </em>
-    </li>
-   </ol>
-   <p>
-   </p>
-   <p>
+</em>
+</li>
+</ol>
+<p>
+</p>
+<p>
     Any Help welcome!
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2023-04-02T14:58:57Z" title="2023-04-02 14:58 ">
       April 2, 2023
      </time>
      von ThoKoch
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    outofrange
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-04-20T13:43:17Z" title="2023-04-20 13:43 ">
+<br/>
+<time class="timestamp" datetime="2023-04-20T13:43:17Z" title="2023-04-20 13:43 ">
    April 20, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe sehr ähnliche Probleme - ich weiß nicht genau seit wann, schätze aber Ende Februar oder Anfang März.
    </p>
-   <p>
+<p>
     Allerdings muss ich die Fiber Box immer neu starten, bei
     <span>
-     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/83813-thokoch/?do=hovercard" data-mentionid="83813" href="https://community.magenta.at/profile/83813-thokoch/" rel="">
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/83813-thokoch/?do=hovercard" data-mentionid="83813" href="https://community.magenta.at/profile/83813-thokoch/" rel="">
       @ThoKoch
      </a>
      scheint sichs nach ein paar Minuten von selbst wieder zu verbinden?
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Meine Fiber Box läuft im Bridge Mode; dahinter steht ein TP-Link Archer A7 v5 mit OpenWRT.
    </p>
-   <p>
+<p>
     Meistens tritt der Verbindungsverlust nach 1-2 Tagen auf, selten aber auch mehrmals am Tag.
    </p>
-   <p>
+<p>
     Mit 03.04.2023 habe ich begonnen Protokoll zu führen. Die Zeiten sind aber der Zeitpunkt, wo mir das Problem
     <strong>
      augefallen
     </strong>
     ist. Bei den meisten Zeiten war das eh zB. direkt während dem Streamen, manchmal aber auch erst wenn ich nach dem Wochenende heim gekommen bin - da kann der Ausfall natürlich schon länger bestanden haben.
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="">
+<div class="ipsQuote_citation">
      Zitat
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       03-04-2023 20:41
-      <br>
+      <br/>
        03-04-2023 21:04
-       <br/>
+       <br>
        03-04-2023 21:43
        <br/>
        04-04-2023 18:10
@@ -256,138 +257,138 @@
        <br/>
        19-04-2023 18:16
       </br>
-     </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Ich hab aber nicht das Gefühl, dass es mit ablaufenden DHCP Leases zu tun hätte: einerseits sind die Abstände dafür zu unterschiedlich, andererseits bekommt mein Archer Router immer noch eine DHCP Adresse zugewiesen, auch nach einem Neustart des Interfaces oder des gesamten Routers:
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="">
+<div class="ipsQuote_citation">
      Zitat
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       udhcpc: lease of 84.11x.xxx.xxx obtained from 10.34.111.5, lease time 271239
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     In ähnlicher Häufigkeit wie die Ausfälle, aber zu anderen Uhrzeiten, seh ich T3 Time-Outs im Eventlog der Fiber Box.
    </p>
-   <p>
+<p>
     Kenn mich mit DOCSIS kaum/gar nicht aus - falls eine fehlende Ranging Response erst nach ein paar Stunden zu einem Problem führen kann, kanns natürlich damit zusammenhängen, hab aber eher das Gefühl, dass es sporadische time-outs zwischendurch sind, und folgende Requests dann eh funktionieren, nachdem die Meldung nie mehrmals hintereinander auftritt?
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="">
+<div class="ipsQuote_citation">
      Zitat
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       No Ranging Response received - T3 time-out;CM-MAC=68:02:b8:xx:xx:xx;CMTS-MAC=00:01:5c:xx:xx:xx;CM-QOS=1.1;CM-VER=3.0;
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
+</p>
+<p>
     Die Fiber Box selbst zeigt zu dem Zeitpunkt funktionsfähiges Internet und Telefonie an, am daran hängenden Archer geht aber keine Pings oder sonstiger Traffic durch - bis zu einem Neustart der Fiber Box.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Da ich auf die Verbindung angewiesen bin, ist ein so häufiger Verbindungsverlust nicht akzeptabel - würde mich sehr freuen, falls hier jemand eine Idee hat
     <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
-   </p>
-   <p>
+</p>
+<p>
     Beim nächsten Auftreten zu Geschäftszeiten werde ich auch mal die Technik-Hotline anrufen. Bis jetzt wars leider meistens am Abend, oder kurz vor Terminen im Home-Office...
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Edit: gerade gesehen, dass die Hotline Mo-So, bis 22:00 erreichbar ist, damit habe ich nicht gerechnet - finde ich sehr gut, und werde berichten, wie mir dort geholfen werden kann!
    </p>
-   <p>
-   </p>
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/83813-thokoch/?do=hovercard" data-mentionid="83813" href="https://community.magenta.at/profile/83813-thokoch/" rel="">
+<p>
+</p>
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/83813-thokoch/?do=hovercard" data-mentionid="83813" href="https://community.magenta.at/profile/83813-thokoch/" rel="">
      @ThoKoch
     </a>
     das mit dem Klingeln kann ich dir nicht beantworten, aber die Meldung mit dem aktivierten Radio könnt mit UPC Wi-Free zu tun haben?
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2023-04-20T14:39:06Z" title="2023-04-20 14:39 ">
       April 20, 2023
      </time>
      von outofrange
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-05-25T10:12:19Z" title="2023-05-25 10:12 ">
+<br/>
+<time class="timestamp" datetime="2023-05-25T10:12:19Z" title="2023-05-25 10:12 ">
    Mai 25, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/97022-outofrange/?do=hovercard" data-mentionid="97022" href="https://community.magenta.at/profile/97022-outofrange/" rel="">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/97022-outofrange/?do=hovercard" data-mentionid="97022" href="https://community.magenta.at/profile/97022-outofrange/" rel="">
      @outofrange
     </a>
     ,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     hat sich das technische Problem nach dem Anruf bei unseren Techniker*innen erledigt?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     LG JD.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    MLehmann
   </span>
-  <br/>
-  <time class="1 yr" datetime="2023-10-04T01:30:57Z" title="2023-10-04 01:30 ">
+<br/>
+<time class="1 yr" datetime="2023-10-04T01:30:57Z" title="2023-10-04 01:30 ">
    Oktober 4, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi,
    </p>
-   <p>
-    <br>
+<p>
+<br/>
      Wurde dieses Problem schon gelöst ? Wir haben selbst seit einigen Wochen dieses Probleme. Jeden Tag in der Früh Reboot des Magenta LTE Modems und es geht ein paar Stunden wieder, aber dann fängt das ganze wieder von vorne an
-    </br>
+    
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="1 yr" datetime="2023-10-04T01:31:42Z" title="2023-10-04 01:31 ">
       Oktober 4, 2023
      </time>
      von MLehmann
     </strong>
-   </span>
-  </div>
-  <hr/>
- </body>
+</span>
+</div>
+<hr/>
+</body>
 </html>

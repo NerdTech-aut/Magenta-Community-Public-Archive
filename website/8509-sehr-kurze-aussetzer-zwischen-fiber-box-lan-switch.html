@@ -1,831 +1,832 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    (sehr) kurze Aussetzer zwischen Fiber Box &amp; LAN-Switch
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    (sehr) kurze Aussetzer zwischen Fiber Box &amp; LAN-Switch
   </h1>
-  <span class="author">
+<span class="author">
    RiZa
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-05T19:01:35Z" title="2023-02-05 19:01 ">
+<br/>
+<time class="timestamp" datetime="2023-02-05T19:01:35Z" title="2023-02-05 19:01 ">
    Februar 5, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Liebe Magenta Community,
    </p>
-   <p>
+<p>
     ich benutze - wie in der Bedienungsanleitung der Fiber Box beschrieben - einen LAN-Switch (TL-SG105PE), da es die Gegebenheiten (Anzahl der Geräte, dicke Betonwände) erfordern und eine WLAN-Verbindung für mich nicht ausreicht.
     <u>
      Verschiedene
     </u>
     Geräte die über den LAN-Switch mit der Fiber Box verbunden sind, haben über den Tag verteilt sehr kurze Verbindungsaussetzer:
    </p>
-   <p>
-   </p>
-   <ul>
-    <li>
+<p>
+</p>
+<ul>
+<li>
      Das äußert sich in (Video-)Calls öfter (~1-5 pro Stunde) durch Aussetzer von ~2 Sekunden (Call bleibt idR bestehen, aber Video+Audio setzt eben aus)
     </li>
-    <li>
+<li>
      Wenn ich die Fiber Box pinge (ping 192.168.0.1 -t), äußert sich das durch einzelne verlorene Pakete - in selteneren Fällen mehrere hintereinander. Manchmal schnellt dann auch die Antwortzeit der einzelnen Pings stark in die Höhe.
     </li>
-    <li>
+<li>
      Wenn ich zur gleichen Zeit ein anderes Gerät, direkt über LAN an der Fiber Box angehängt (z.B.: mein NAS), pinge sehe ich diese Aussetzer hier nicht.
     </li>
-    <li>
+<li>
      gepatchte LAN-Kabel/-Buchsen wurden mehrfach von Elektriker mit Testgerät geprüft -&gt; alles perfekt
     </li>
-    <li>
+<li>
      LAN-Switch Hardware kann als Fehlerquelle auch ausgeschlossen werden, da bei Tausch dasselbe Problem zu beobachten war
     </li>
-    <li>
+<li>
      Bei längeren Abbrüchen, erscheint im Browser unter 192.168.0.1 nicht mehr die Fiber Box, sondern die Webmaske des Switches
     </li>
-   </ul>
-   <p>
-   </p>
-   <p>
+</ul>
+<p>
+</p>
+<p>
     Es scheint, als würde die Fiber Box manchmal die "Kommunikation mit dem Switch vorrübergehend einstellen" (irgendwas mit dem DHCP-Server?). Bitte um Hilfe, Tipps, etc. da dieses Problem bei wichtigen (Video-)Calls im Home-Office sehr lästig ist.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Vielen Dank!
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2023-02-05T19:02:14Z" title="2023-02-05 19:02 ">
       Februar 5, 2023
      </time>
      von RiZa
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Maverick
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-06T11:43:02Z" title="2023-02-06 11:43 ">
+<br/>
+<time class="timestamp" datetime="2023-02-06T11:43:02Z" title="2023-02-06 11:43 ">
    Februar 6, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96011-riza/?do=hovercard" data-mentionid="96011" href="https://community.magenta.at/profile/96011-riza/" rel="">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96011-riza/?do=hovercard" data-mentionid="96011" href="https://community.magenta.at/profile/96011-riza/" rel="">
      @RiZa
     </a>
     , willkommen in der User helfen User Magenta Community.
    </p>
-   <p>
+<p>
     Hast du dich schon mal an die Technikline 0676 200 7777 gewendet?.
    </p>
-   <p>
+<p>
     Da kann auch gleich aus der Ferne das Modem und deine Leitungswerte überprüft werden.
    </p>
-   <p>
+<p>
     Möglicherweise ist da auch ein Modem Tausch notwendig, falls ein Defekt vorliegen sollte.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    RiZa
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-17T09:34:42Z" title="2023-02-17 09:34 ">
+<br/>
+<time class="timestamp" datetime="2023-02-17T09:34:42Z" title="2023-02-17 09:34 ">
    Februar 17, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51492" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1675683782" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51492" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1675683782" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
+<div class="ipsQuote_citation">
      Am 6.2.2023 um 12:43 schrieb Rasputin:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
-      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96011-riza/?do=hovercard" data-mentionid="96011" href="https://community.magenta.at/profile/96011-riza/" rel="">
+<div class="ipsQuote_contents">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96011-riza/?do=hovercard" data-mentionid="96011" href="https://community.magenta.at/profile/96011-riza/" rel="">
        @RiZa
       </a>
       , willkommen in der User helfen User Magenta Community.
      </p>
-     <p>
+<p>
       Hast du dich schon mal an die Technikline 0676 200 7777 gewendet?.
      </p>
-     <p>
+<p>
       Da kann auch gleich aus der Ferne das Modem und deine Leitungswerte überprüft werden.
      </p>
-     <p>
+<p>
       Möglicherweise ist da auch ein Modem Tausch notwendig, falls ein Defekt vorliegen sollte.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Vielen Dank für die Rückmeldung. Ich habe mit der Technikline telefoniert, wobei die Person im Gespräch mit den technischen Details überfordert war.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Die erste Rückmeldung war, dass es an der zu niedrigen Geschwindigkeit (75Mbit) meines Tarifs liegt. Leider ist das definitiv nicht das Problem, da die Geschwindigkeit des lokalen LANs nichts mit dem WAN/Internet zu tun hat.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Der zweite Vorschlag war die FiberBox in den Bridge-Modus zu wechseln. Auf meine Frage ob ich dann noch einen DHCP-Server in meinem LAN habe, bekam ich keine Antwort.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Also insgesamt leider keine Hilfe von der Technikline. Ich würde mich sehr über Hilfe von hier freuen!
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Maverick
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-17T10:03:05Z" title="2023-02-17 10:03 ">
+<br/>
+<time class="timestamp" datetime="2023-02-17T10:03:05Z" title="2023-02-17 10:03 ">
    Februar 17, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96011-riza/?do=hovercard" data-mentionid="96011" href="https://community.magenta.at/profile/96011-riza/" rel="">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96011-riza/?do=hovercard" data-mentionid="96011" href="https://community.magenta.at/profile/96011-riza/" rel="">
      @RiZa
     </a>
     , du erwähnst die "Fiber Box", welche nutzt du genau?.
    </p>
-   <p>
+<p>
     Alte Fiber Box 1 (UPC Interface) Bridge Modus selbst auswählbar
    </p>
-   <p>
+<p>
     Alte Fiber Box 2? (UPC Interface) Bridge Modus selbst auswählbar.
    </p>
-   <p>
+<p>
     Neue Home Box Fiber? (Kein Interface nutzbar) kein Bridge Modus möglich
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Etwas mehr Input währe gut.
    </p>
-   <p>
+<p>
     Wenn du die IP-Adressierung meinst, die kommen bei Magenta über DHCP, und sind nicht statisch (Fix).
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51841" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676626482" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51841" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676626482" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      vor 20 Minuten schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Die erste Rückmeldung war, dass es an der zu niedrigen Geschwindigkeit (75Mbit) meines Tarifs liegt. Leider ist das definitiv nicht das Problem, da die Geschwindigkeit des lokalen LANs nichts mit dem WAN/Internet zu tun hat.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Bei nur 75mb down kann aber dennoch die Bandbreite fallen wenn sich viele Geräte zur selben Zeit (Lan, Wlan) im Netzt sind.
    </p>
-   <p>
+<p>
     Da kann es schon auch mal zu Schwankungen oder Verbindungsabbrüche kommen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wende dich nochmal an die Serviceline Technik 0676 200 7777, und lasse mal deine Leitungswerte checken ob da alles in Ordnung ist.
    </p>
-   <p>
+<p>
     Wie geschrieben, können diese aus der Ferne erfolgen.
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    RiZa
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-17T11:38:20Z" title="2023-02-17 11:38 ">
+<br/>
+<time class="timestamp" datetime="2023-02-17T11:38:20Z" title="2023-02-17 11:38 ">
    Februar 17, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51842" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676628185" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51842" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676628185" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
+<div class="ipsQuote_citation">
      vor einer Stunde schrieb Rasputin:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
-      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96011-riza/?do=hovercard" data-mentionid="96011" href="https://community.magenta.at/profile/96011-riza/" rel="">
+<div class="ipsQuote_contents">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96011-riza/?do=hovercard" data-mentionid="96011" href="https://community.magenta.at/profile/96011-riza/" rel="">
        @RiZa
       </a>
       , du erwähnst die "Fiber Box", welche nutzt du genau?.
      </p>
-     <p>
+<p>
       Alte Fiber Box 1 (UPC Interface) Bridge Modus selbst auswählbar
      </p>
-     <p>
+<p>
       Alte Fiber Box 2? (UPC Interface) Bridge Modus selbst auswählbar.
      </p>
-     <p>
+<p>
       Neue Home Box Fiber? (Kein Interface nutzbar) kein Bridge Modus möglich
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Etwas mehr Input währe gut.
      </p>
-     <p>
+<p>
       Wenn du die IP-Adressierung meinst, die kommen bei Magenta über DHCP, und sind nicht statisch (Fix).
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Bei nur 75mb down kann aber dennoch die Bandbreite fallen wenn sich viele Geräte zur selben Zeit (Lan, Wlan) im Netzt sind.
      </p>
-     <p>
+<p>
       Da kann es schon auch mal zu Schwankungen oder Verbindungsabbrüche kommen.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Wende dich nochmal an die Serviceline Technik 0676 200 7777, und lasse mal deine Leitungswerte checken ob da alles in Ordnung ist.
      </p>
-     <p>
+<p>
       Wie geschrieben, können diese aus der Ferne erfolgen.
      </p>
-     <p>
-     </p>
-     <p>
-     </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
+</p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Ich nutze Fiber Box 1 oder 2. Auszug Interface-Info:
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Konform zur Standardspezifikation:DOCSIS 3.0
    </p>
-   <p>
+<p>
     Hardware Version:5.01
    </p>
-   <p>
+<p>
     Software Version: CH7465LG-NCIP-6.15.32p2TM-GA-NOSH
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Mit der IP-Adressierung meine ich das lokale LAN, also die Verbindung zwischen Fiber Box und LAN/WLAN-Geräten bei mir im Haus. Im Normalmodus ist die Fiber Box mein DHCP-Server und vergibt die IPs an meine LAN/WLAN-Geräte. Wenn ich auf den Bridge Modus wechsle, bekommen meine Geräte dann noch IP-Adressen? (Ich habe dann ja keinen lokalen DHCP-Server mehr...)
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Die Unterbrechungen scheinen unabhängig von der Auslastung zu sein. Also es kommt ca. genauso häufig vor, wenn ich quasi nichts mache außer "ping 192.198.0.1 - t".
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Leitungswerte sind in Ordnung.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Maverick
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-17T12:14:06Z" title="2023-02-17 12:14 ">
+<br/>
+<time class="timestamp" datetime="2023-02-17T12:14:06Z" title="2023-02-17 12:14 ">
    Februar 17, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Nach den Spezifikation angaben dürfte deine die Fiber Box 2 sein.
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51853" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676633900" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51853" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676633900" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      vor 38 Minuten schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Wenn ich auf den Bridge Modus wechsle, bekommen meine Geräte dann noch IP-Adressen?
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Deine Geräte sollten auch nach der Bridge Modus Auswahl weiterhin eine IP Adresse nutzen können, den das währe mir neu das es nicht mehr möglich währe.
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51853" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676633900" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51853" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676633900" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      vor 38 Minuten schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Mit der IP-Adressierung meine ich das lokale LAN, also die Verbindung zwischen Fiber Box und LAN/WLAN-Geräten bei mir im Haus.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Deine Genutzten Geräte per Lan/Wlan nutzen alle weiterhin eine Eigene IP-Adresse.
    </p>
-   <p>
+<p>
     Nur in wie weit bei diesen Geräten auch das DHCP im Spiel ist, kann ich dir nicht beantworten.
    </p>
-   <p>
+<p>
     Gehe aber davon aus, dass die Geräte da eine Statische IP-Adressierung nutzen, und nur das Modem/Router selber vom Dienstanbieter eine DHCP IP-Adressierung - die sich Wechseln kann - zugewiesen bekommt.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     PS: Hast du schon auch mal die Lan-Kabel auf Cat 6 gewechselt?, den möglicherweise hilft da ein Austausch.
    </p>
-   <p>
+<p>
     Weiters könnten auch die Unterbrechungen und Ausfälle vom Lan-Switch selber kommen, eventuell einen Anderen nutzen falls notwendig.
    </p>
-   <p>
+<p>
     Ist jetzt nur eine Mögliche Option die ich dir vorschlagen würde, den manchmal kann auch ein Equipment daran schuld sein.
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2023-02-17T12:17:11Z" title="2023-02-17 12:17 ">
       Februar 17, 2023
      </time>
      von Rasputin
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    RiZa
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-17T12:26:27Z" title="2023-02-17 12:26 ">
+<br/>
+<time class="timestamp" datetime="2023-02-17T12:26:27Z" title="2023-02-17 12:26 ">
    Februar 17, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51856" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676636046" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51856" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676636046" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
+<div class="ipsQuote_citation">
      vor 4 Minuten schrieb Rasputin:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       PS: Hast du schon auch mal die Lan-Kabel auf Cat 6 gewechselt?, den möglicherweise hilft da ein Austausch.
      </p>
-     <p>
+<p>
       Weiters könnten auch die Unterbrechungen und Ausfälle vom Lan-Switch selber kommen, eventuell einen Anderen nutzen falls notwendig.
      </p>
-     <p>
+<p>
       Ist jetzt nur eine Mögliche Option die ich dir vorschlagen würde.
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Kabel ist CAT6 und wurde auch getauscht, ohne Auswirkungen auf das Problem. Auch Switch wurde, wie bereits am Anfang erwähnt, getauscht, ohne Auswirkungen auf das Problem.
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51856" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676636046" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51856" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676636046" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
+<div class="ipsQuote_citation">
      vor 7 Minuten schrieb Rasputin:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Deine Geräte sollten auch nach der Bridge Modus Auswahl eine IP Adresse zugewiesen bekommen, den das währe mir neu das es nicht mehr möglich währe.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Das heißt der DHCP-Server der Fiber Box 2 ist auch im Bridge Modus an?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Übernimmt die Fiber Box 2 im Bridge Modus dann auch die NAT? (Ich habe außer der Fiber Box 2 keinen Router...)
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Maverick
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-17T12:45:40Z" title="2023-02-17 12:45 ">
+<br/>
+<time class="timestamp" datetime="2023-02-17T12:45:40Z" title="2023-02-17 12:45 ">
    Februar 17, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51858" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676636787" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51858" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676636787" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      vor 5 Minuten schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Das heißt der DHCP-Server der Fiber Box 2 ist auch im Bridge Modus an?
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Das war schon unter UPC so, und dürfte jetzt bei Magenta nicht anders sein.
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51858" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676636787" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51858" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676636787" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      vor 6 Minuten schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Übernimmt die Fiber Box 2 im Bridge Modus dann auch die NAT?....
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Das Kann ich dir beim Besten Willen nicht beantworten, da ich "NAT" bis dato nicht nutze.
    </p>
-   <p>
+<p>
     Da diese "Box" noch das Interface von UPC nutzt obwohl von Magenta, könnten diese "Boxen" irgendwann keinen Support und Updates mehr bekommen (vermutlich).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Andere Frage: Wenn du "nur" 75mb nutzen kannst laut deinem Tarif, warum wechselst du nicht auf die Fritzbox 6660 Wifi 6?.
    </p>
-   <p>
+<p>
     Diese währe eine Aktuelle Hardware für deinen Tarif, und kann auch auf den Bridge Modus gewechselt werden, die aber offiziell von Magenta nicht mehr ausgegeben wird.
    </p>
-   <p>
+<p>
     Würde auch da mal bei der Serviceline Technik anfragen ob diese Box noch zu haben ist, und einen Austausch anstoßen lassen, den du danach in einem Magenta Shop durchziehen kannst.
    </p>
-   <p>
+<p>
     Währe jetzt eine Überlegung meinerseits.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    RiZa
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-21T10:07:45Z" title="2023-02-21 10:07 ">
+<br/>
+<time class="timestamp" datetime="2023-02-21T10:07:45Z" title="2023-02-21 10:07 ">
    Februar 21, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51860" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676637940" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51860" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676637940" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
+<div class="ipsQuote_citation">
      Am 17.2.2023 um 13:45 schrieb Rasputin:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Das Kann ich dir beim Besten Willen nicht beantworten, da ich "NAT" bis dato nicht nutze.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     NAT (Network Address Translation) ist eine Basis Funktion eines jeden Routers. Es übersetzt zwischen den lokalen IP-Adressen deines WLAN/LAN mit den globalen IP-Adressen ins Internet (WAN).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     D. h. ich dachte der ganze Sinn am Bridge-Modus ist es die Router-Funktionen (NAT, Firewall, DHCP, etc.) zu deaktivieren, damit ein anderer (WLAN-)Router sie übernehmen kann. (Ich habe leider außer der Fiber Box keinen weiteren Router).
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51860" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676637940" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51860" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676637940" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
+<div class="ipsQuote_citation">
      Am 17.2.2023 um 13:45 schrieb Rasputin:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Andere Frage: Wenn du "nur" 75mb nutzen kannst laut deinem Tarif, warum wechselst du nicht auf die Fritzbox 6660 Wifi 6?.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Die Antwort der Technik-Hotline war leider nein, nicht möglich.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bitte entschuldige meine lästigen Rückmeldungen. Aber du bist die beste Hilfe dich ich bekomme
     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
     Bei der Technik-Hotline kommt leider immer nur sowas wie "Modem-Neustart/-Reset" oder "wir können leider nichts für sie machen"...
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-21T11:00:38Z" title="2023-02-21 11:00 ">
+<br/>
+<time class="timestamp" datetime="2023-02-21T11:00:38Z" title="2023-02-21 11:00 ">
    Februar 21, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51853" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676633900" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51853" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676633900" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      Am 17.2.2023 um 12:38 schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Konform zur Standardspezifikation:DOCSIS 3.0
      </p>
-     <p>
+<p>
       Hardware Version:5.01
      </p>
-     <p>
+<p>
       Software Version: CH7465LG-NCIP-6.15.32p2TM-GA-NOSH
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Du hast eine Fiber Box 1.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Wenn die Fiber Box im Bridge Mode ist, bekommt ein Gerät (ein Router) eine öffentliche IP-Adresse.
    </p>
-   <p>
+<p>
     Wenn die Fiber Box im Router Modus ist, wird die öffentliche IP-Adresse dem WAN-Interface der Fiber Box zugewiesen.
    </p>
-   <p>
+<p>
     Der Bridge Mode ist nur verfügbar, wenn der Anschluss auf IPv4 umgestellt wurde (über die Technikhotline).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Also würde der Bridge Mode in einem Fall nichts bringen, außer du kauft noch einen Router.
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51980" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676974065" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51980" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676974065" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      vor 53 Minuten schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51860" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676637940" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
-      <div class="ipsQuote_citation">
+<div class="ipsQuote_contents">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51860" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676637940" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
+<div class="ipsQuote_citation">
        Am 17.2.2023 um 13:45 schrieb Rasputin:
       </div>
-      <div class="ipsQuote_contents">
-       <p>
+<div class="ipsQuote_contents">
+<p>
         Andere Frage: Wenn du "nur" 75mb nutzen kannst laut deinem Tarif, warum wechselst du nicht auf die Fritzbox 6660 Wifi 6?.
        </p>
-      </div>
-     </blockquote>
-     <p>
+</div>
+</blockquote>
+<p>
       Die Antwort der Technik-Hotline war leider nein, nicht möglich.
      </p>
-    </div>
-    <div>
-    </div>
-   </blockquote>
-   <p>
+</div>
+<div>
+</div>
+</blockquote>
+<p>
     Die gab es fast nie über die Hotline, sondern nur mit viel Glück in einem Shop (im direkten Austausch gegen die aktuelle Box). Und dann auch nur in einem Tarif mit DOCSIS 3.1 (gigakraft gaming 300 und gigakraft 1000).
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51482" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1675623695" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51482" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1675623695" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      Am 5.2.2023 um 20:01 schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Bei längeren Abbrüchen, erscheint im Browser unter 192.168.0.1 nicht mehr die Fiber Box, sondern die Webmaske des Switches
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Bei so einer Weiterleitung ändert sich dann aber die IP/URL im Browser, oder nicht?
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2023-02-21T11:01:39Z" title="2023-02-21 11:01 ">
       Februar 21, 2023
      </time>
      von NTM
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Maverick
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-21T11:03:27Z" title="2023-02-21 11:03 ">
+<br/>
+<time class="timestamp" datetime="2023-02-21T11:03:27Z" title="2023-02-21 11:03 ">
    Februar 21, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51980" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676974065" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51980" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676974065" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      vor 35 Minuten schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       NAT (Network Address Translation) ist eine Basis Funktion eines jeden Routers. Es übersetzt zwischen den lokalen IP-Adressen deines WLAN/LAN mit den globalen IP-Adressen ins Internet (WAN).
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Habe mich wohl etwas schlecht ausgedrückt zum Thema NAT.
    </p>
-   <p>
+<p>
     Meinte eher dazu, dass ich mich bis dato nicht damit auseinander gesetzt habe
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51980" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676974065" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51980" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676974065" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      vor 37 Minuten schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       D. h. ich dachte der ganze Sinn am Bridge-Modus ist es die Router-Funktionen (NAT, Firewall, DHCP, etc.) zu deaktivieren, damit ein anderer (WLAN-)Router sie übernehmen kann. (Ich habe leider außer der Fiber Box keinen weiteren Router).
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Das ist schon richtig, den der Bridge Modus soll ja eher ermöglichen, dass man einen "anderen" Router dazu schalten kann um gewisse Aufgaben zu übernehmen.
    </p>
-   <p>
+<p>
     Nur wie ein eigener Router bei einem Koaxial Kabel Modem/Router ermöglicht werden kann, habe ich noch nicht versucht.
    </p>
-   <p>
+<p>
     Das hatte ich mal per (V)DSL von A1 genutzt, den da war es in der Tat sehr hilfreich gewesen einen Eigenen Router dazu geschaltet zu haben.
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51980" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676974065" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51980" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676974065" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      vor 46 Minuten schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Die Antwort der Technik-Hotline war leider nein, nicht möglich.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Hat die Technikline dies auch begründet warum nicht möglich?.
    </p>
-   <p>
+<p>
     Wüste jetzt keinen Grund warum die Fritzbox 6660 nicht für 75mb down nutzbar sein sollte, sofern man auch Wifi 6 nutzen kann.
    </p>
-   <p>
+<p>
     Bei der Neuen Schwarzen Home Box Fiber lasse ich mir dies einreden, dass dies nicht geht, den bei dieser kann man absolut nichts mehr selber einstellen.
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51980" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676974065" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51980" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676974065" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      vor 50 Minuten schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Bitte entschuldige meine lästigen Rückmeldungen. Aber du bist die beste Hilfe dich ich bekomme
       <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
       Bei der Technik-Hotline kommt leider immer nur sowas wie "Modem-Neustart/-Reset" oder "wir können leider nichts für sie machen"...
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Dafür bedarf es keiner Entschuldigung, den dafür ist ja eine User helfen User Community gedacht.
     <img alt=";)" data-emoticon="" height="20" src="images/emoticons/tma_winking-o.png" srcset="images/emoticons/tma_winking-o@2x.png 2x" title=";)" width="20"/>
-   </p>
-   <p>
+</p>
+<p>
     Man versucht wenigstens etwas zu helfen, und wenn einem das gelingt, Freud sich der Geholfene und der Helfer.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Maverick
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-21T11:13:54Z" title="2023-02-21 11:13 ">
+<br/>
+<time class="timestamp" datetime="2023-02-21T11:13:54Z" title="2023-02-21 11:13 ">
    Februar 21, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
      @NTM
     </a>
     ,
    </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51983" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676977238" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
-    <div class="ipsQuote_citation">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51983" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676977238" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+<div class="ipsQuote_citation">
      vor 16 Minuten schrieb NTM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Die gab es fast nie über die Hotline, sondern nur mit viel Glück in einem Shop (im direkten Austausch gegen die aktuelle Box). Und dann auch nur in einem Tarif mit DOCSIS 3.1 (gigakraft gaming 300 und gigakraft 1000).
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Dachte das ein Austausch nur über die Technikline ermöglicht werden kann, da diese den Austausch imitiert und im System vermerkt, damit der Austausch dann im Shop erfolgen kann.
    </p>
-   <p>
+<p>
     Hat sich da jetzt an dem was geändert?.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bei Gigakraft 1000 bekommt man nur noch die Home Box Fiber, was ich so mitbekommen habe.
    </p>
-   <p>
+<p>
     Ich nutze den Gigakraft 1000 Tarif, und bekam nur noch die "Schwarze" Box.
    </p>
-   <p>
-   </p>
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96011-riza/?do=hovercard" data-mentionid="96011" href="https://community.magenta.at/profile/96011-riza/" rel="">
+<p>
+</p>
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/96011-riza/?do=hovercard" data-mentionid="96011" href="https://community.magenta.at/profile/96011-riza/" rel="">
      @RiZa
     </a>
     ,
    </p>
-   <p>
+<p>
     Währe es bei dir möglich auf den Gaming 300 Tarif aufzuspringen, den da liege der Fritzbox 6660 nichts im Wege.
    </p>
-   <p>
+<p>
     Ist jetzt nur so eine Gedankenspielerei meinerseits.
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<p>
+</p>
+<p>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2023-02-21T11:19:53Z" title="2023-02-21 11:19 ">
       Februar 21, 2023
      </time>
      von Rasputin
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    RiZa
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-21T11:24:28Z" title="2023-02-21 11:24 ">
+<br/>
+<time class="timestamp" datetime="2023-02-21T11:24:28Z" title="2023-02-21 11:24 ">
    Februar 21, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51983" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676977238" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51983" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676977238" data-ipsquote-userid="74626" data-ipsquote-username="NTM">
+<div class="ipsQuote_citation">
      vor 11 Minuten schrieb NTM:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Bei so einer Weiterleitung ändert sich dann aber die IP/URL im Browser, oder nicht?
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     jein, unter 192.168.0.1 meldet sich plötzlich der Switch statt dem Router/Fiber Box. Nach 2-30 Sekunden ist das wieder vorbei und die Fiber Box meldet sich wieder.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Könnte ein laufender VPN-Client am Notebook, die Fiber Box dazu bringen die Kommunikation (mit dem Switch+Notebook mit VPN) kurzzeitig einzustellen?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Durch die Umstellung sehe ich jetzt plötzlich mehr Einstellungsmöglichkeiten bei der Fiber Box. Ich beschäftige mich gerade mit der DM-Option und MTU Grösse...
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    RiZa
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-21T11:31:18Z" title="2023-02-21 11:31 ">
+<br/>
+<time class="timestamp" datetime="2023-02-21T11:31:18Z" title="2023-02-21 11:31 ">
    Februar 21, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51985" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676978034" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51985" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676978034" data-ipsquote-userid="95416" data-ipsquote-username="Rasputin">
+<div class="ipsQuote_citation">
      vor 12 Minuten schrieb Rasputin:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
-      <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+<div class="ipsQuote_contents">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
        @NTM
       </a>
       ,
@@ -834,82 +835,82 @@
       </a>
       ,Währe es bei dir möglich auf den Gaming 300 Tarif aufzuspringen, den da liege der Fritzbox 6660 nichts im Wege.
      </p>
-     <p>
-     </p>
-     <p>
+<p>
+</p>
+<p>
       Ist jetzt nur so eine Gedankenspielerei meinerseits
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Wohl eher nicht. Eine Vetragsumstellung auf ein teureres Service, wo ich dann evtl. wieder genau dasselbe Problem habe, nur mehr dafür zahle.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Maverick
   </span>
-  <br/>
-  <time class="timestamp" datetime="2023-02-21T11:40:23Z" title="2023-02-21 11:40 ">
+<br/>
+<time class="timestamp" datetime="2023-02-21T11:40:23Z" title="2023-02-21 11:40 ">
    Februar 21, 2023
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51988" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676979078" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="51988" data-ipsquote-contentid="8509" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1676979078" data-ipsquote-userid="96011" data-ipsquote-username="RiZa">
+<div class="ipsQuote_citation">
      vor 19 Minuten schrieb RiZa:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Wohl eher nicht. Eine Vetragsumstellung auf ein teureres Service, wo ich dann evtl. wieder genau dasselbe Problem habe, nur mehr dafür zahle.
      </p>
-    </div>
-   </blockquote>
-   <p>
+</div>
+</blockquote>
+<p>
     Wie geschrieben war dies eher nur eine Gedankenspielerei.
    </p>
-   <p>
+<p>
     Bei diesem Argument wohl verständlich das du beim derzeitigen Tarif bleibst.
     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Das sich zuerst die Lan-Switch meldet, könnte daran liegen, dass diese Switch wohl als Brücke zwischen Modem und Endgerät welche per Lan verbunden ist dient (Vermutlich).
    </p>
-   <p>
+<p>
     In wie weit die Lan-Switch auch die IP-Adressierung zu den Geräten betreut, kann ich nicht beurteilen.
    </p>
-   <p>
-   </p>
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
+<p>
+</p>
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/74626-ntm/?do=hovercard" data-mentionid="74626" href="https://community.magenta.at/profile/74626-ntm/" rel="">
      @NTM
     </a>
     ,
    </p>
-   <p>
-    <em>
+<p>
+<em>
      ZITAT: "Also würde der Bridge Mode in einem Fall nichts bringen, außer du kauft noch einen Router."
     </em>
-   </p>
-   <p>
+</p>
+<p>
     Das war auch mein Gedanke das der Bridge Mode eher was bringt, wenn man einen Zweiten Router dahinter schalten will.
    </p>
-   <p>
+<p>
     Dabei würde es zu einer IP-Adressen Änderung kommen.
    </p>
-   <p>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<p>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2023-02-21T11:55:07Z" title="2023-02-21 11:55 ">
       Februar 21, 2023
      </time>
      von Rasputin
     </strong>
-   </span>
-  </div>
-  <hr/>
- </body>
+</span>
+</div>
+<hr/>
+</body>
 </html>

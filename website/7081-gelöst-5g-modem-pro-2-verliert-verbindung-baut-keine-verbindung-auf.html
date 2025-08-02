@@ -1,128 +1,129 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Gelöst - 5G Modem Pro 2 verliert Verbindung / baut keine Verbindung auf
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Gelöst - 5G Modem Pro 2 verliert Verbindung / baut keine Verbindung auf
   </h1>
-  <span class="author">
+<span class="author">
    Lg42
   </span>
-  <br/>
-  <time class="3 yr" datetime="2021-08-07T19:00:47Z" title="2021-08-07 19:00 ">
+<br/>
+<time class="3 yr" datetime="2021-08-07T19:00:47Z" title="2021-08-07 19:00 ">
    August 7, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Zusammen,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe seit gestern das Huawei Pro2 Modem als Upgrade für die 4G Box. Leider seit gestern immer wieder komplette Verbindungsausfälle, die bis heute Abend eher unspezifisch waren.
    </p>
-   <p>
+<p>
     Tatsächlich war es ein Fehler, der auf eine falsche Auskunft vom t-mobile Mitarbeiter entstanden ist.
    </p>
-   <p>
+<p>
     Auf meine Frage im Shop, ob das Pro2 Modem mehr als einen LAN-Port hat, antwortete der Kollege mit ja - sogar 3. Ich hab das leider initial nicht näher hinterfragt und 2 Ports einfach belegt, was letztlich das Problem ausgelöst hat. (Der dritte Port ist kein LAN-Port - zur Vollständigkeit) Der unterste Port ist ein LAN/WAN Port und sofern dieser belegt ist, versucht das Modem darüber ins Internet zu gehen. Erkennbar auch in der Konfig-App am Router. Dort wird zwischen Internet und Router nur noch „Verbunden“ angezeigt und nicht mehr die Geschwindigkeit. Das Icon fürs Internet sieht auch anders aus. Untersten Port wieder ausstecken und es läuft wieder über 4G/5G. In der Anleitung ist der Port auch als LAN/WAN ausgewiesen - die Implikation, dass dann nix mehr geht steht dort aber nicht.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hoffe, dass die Info noch für andere hilfreich ist - ich war schon am verzweifeln nach mehrfachem Reset auf Werkseinstellungen. Der Support hatte leider überhaupt keinen Plan und hat auch wenig zur Fehlereingrenzung oder Lösung beigetragen. Rückruf-Service war eher zum Lachen, da unmittelbar im ersten Läuten der Anruf von Seiten Magenta beendet wird. (Bei 2 Anrufen) Hilft nur in der Warteschlage warten.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Schönen Abend noch
    </p>
-   <p>
+<p>
     LG42
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="3 yr" datetime="2021-08-07T20:56:25Z" title="2021-08-07 20:56 ">
+<br/>
+<time class="3 yr" datetime="2021-08-07T20:56:25Z" title="2021-08-07 20:56 ">
    August 7, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hey
     <span>
-     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/90347-lg42/?do=hovercard" data-mentionid="90347" href="https://community.magenta.at/profile/90347-lg42/" rel="">
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/90347-lg42/?do=hovercard" data-mentionid="90347" href="https://community.magenta.at/profile/90347-lg42/" rel="">
       @Lg42
      </a>
-    </span>
-   </p>
-   <p>
+</span>
+</p>
+<p>
     Beim 5G CPE Pro 2 sind zwei Lan Ports und ein Telefon-Port vorhanden. Der eine Lan Port kann auch als Wan Port genutzt werden. Standardmäßig soll der 5G CPE Pro 2 automatisch erkennen ob am Lan/Wan Port eine Internetquelle angeschlossen wurde und dann automatisch diese nutzen, statt dem eingebauten Modem.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Leider funktioniert die Automatik zur Erkennung nicht immer richtig. Allerdings kann man die automatische Erkennung deaktivieren.
    </p>
-   <p>
+<p>
     Gehe dazu auf
     <a href="http://192.168.8.1" rel="">
      192.168.8.1
     </a>
     (das Passwort für den ersten Login steht am Sticker auf der Unterseite) -&gt; "Netzwerkeinstellungen" -&gt; "Ethernet" -&gt; "Ethernet-Einstellungen" -&gt; "Verbindungsmodus". Der "Verbindungsmodus" ist standardmäßig auf "Automatisch" konfiguriert. Wenn man den Lan/Wan Port als Lan Port nutzen möchte, sollte man die Option "Nur Lan" auswählen. Wenn man den Router über den Port mit einer Internetquelle verbinden möchte, sollte man je nach der benötigten Konfiguration "Statische IP", "Dynamische IP", "PPPoE" oder "PPPoE + Dynamische IP" auswählen.
    </p>
-   <p>
+<p>
     LG NTM
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="3 yr" datetime="2021-08-07T21:00:12Z" title="2021-08-07 21:00 ">
       August 7, 2021
      </time>
      von NTM
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    Lg42
   </span>
-  <br/>
-  <time class="3 yr" datetime="2021-08-07T21:07:49Z" title="2021-08-07 21:07 ">
+<br/>
+<time class="3 yr" datetime="2021-08-07T21:07:49Z" title="2021-08-07 21:07 ">
    August 7, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Danke für die Info, das werde ich morgen ausprobieren, dann spare ich mir den LAN-Hub dahinter.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Lg42
   </span>
-  <br/>
-  <time class="3 yr" datetime="2021-08-10T09:43:08Z" title="2021-08-10 09:43 ">
+<br/>
+<time class="3 yr" datetime="2021-08-10T09:43:08Z" title="2021-08-10 09:43 ">
    August 10, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Klappt ausgezeichnet - danke für den Tipp.
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

@@ -1,168 +1,169 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    VOIP
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    VOIP
   </h1>
-  <span class="author">
+<span class="author">
    Robert S.
   </span>
-  <br/>
-  <time class="10 yr" datetime="2014-07-28T22:00:00Z" title="2014-07-28 22:00 ">
+<br/>
+<time class="10 yr" datetime="2014-07-28T22:00:00Z" title="2014-07-28 22:00 ">
    Juli 28, 2014
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo, ich brauche Eure hilfe.
    </p>
-   <p>
+<p>
     Ich würde gerne VOIP über HOME NET installieren.
    </p>
-   <p>
+<p>
     sipcall.at sagt es liegt am T-Mobile, T-Mobile sagt es wird kein Port gesperrt, es ist möglich, darum bin ich auch auf HOME-NET umgestiegen. Aber keiner kann mir wirklich helfen. Bei der Technick habe ich auch schon rund € 10,- liegen gelassen. Trotzdem funktioniert VOIP nicht. Ich versuche es mit einer FritzBox Fon 7140SL. Hat jemand erfahrung mit welchen Gerät es funktionieren könnte? Oder kann mir jemand die Einstellungen nennen.
    </p>
-   <p>
+<p>
     Bin für jeden Vorschlag dankbar
    </p>
-   <p>
+<p>
     Gruß
    </p>
-   <p>
+<p>
     Robert
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Zali
   </span>
-  <br/>
-  <time class="10 yr" datetime="2014-07-29T22:00:00Z" title="2014-07-29 22:00 ">
+<br/>
+<time class="10 yr" datetime="2014-07-29T22:00:00Z" title="2014-07-29 22:00 ">
    Juli 29, 2014
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Morgen,
    </p>
-   <p>
+<p>
     vorab damit ich es richtig verstehe:
    </p>
-   <p>
+<p>
     Hast du die Home Net Simkarte in der FritzBox, oder hast du die Fritzbox via Lan mit dem Home Net Router verbunden?
    </p>
-   <p>
+<p>
     Welche Ports werden benötigt?
    </p>
-   <p>
+<p>
     Eventuell müssen die Ports auch auf der FritzBox freigegeben werden.
    </p>
-   <p>
+<p>
     so long,
    </p>
-   <p>
+<p>
     zali
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Robert S.
   </span>
-  <br/>
-  <time class="10 yr" datetime="2014-08-21T22:00:00Z" title="2014-08-21 22:00 ">
+<br/>
+<time class="10 yr" datetime="2014-08-21T22:00:00Z" title="2014-08-21 22:00 ">
    August 21, 2014
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
+<p>
     Die Fritzbox wurde über Port 1 konfiguriert. (siehe FritzBox Anleitung)
    </p>
-   <p>
+<p>
     Die internen tests funktionieren, Ping test zum
    </p>
-   <p>
+<p>
     SIP-Server: free2.voipgateway.org geht auch.
    </p>
-   <p>
+<p>
     Trotzdem kommt keine Verbindung rein.
    </p>
-   <p>
+<p>
     Die Ports im HOME NET wurden alle freigeschalten.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Robert S.
   </span>
-  <br/>
-  <time class="10 yr" datetime="2014-08-25T22:00:00Z" title="2014-08-25 22:00 ">
+<br/>
+<time class="10 yr" datetime="2014-08-25T22:00:00Z" title="2014-08-25 22:00 ">
    August 25, 2014
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     STUN-Server:
    </p>
-   <ul>
-    <li>
+<ul>
+<li>
      Tragen Sie
      <strong>
       keinen
      </strong>
      STUN-Server ein.
     </li>
-   </ul>
-   <p>
+</ul>
+<p>
     Das war der Fehler, der mich seit Monaten geärgert hat.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Zali
   </span>
-  <br/>
-  <time class="10 yr" datetime="2014-08-28T22:00:00Z" title="2014-08-28 22:00 ">
+<br/>
+<time class="10 yr" datetime="2014-08-28T22:00:00Z" title="2014-08-28 22:00 ">
    August 28, 2014
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Robert,
    </p>
-   <p>
+<p>
     magst du uns Unwissenden mitteilen was STUN ist?
    </p>
-   <p>
+<p>
     so long
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Roland H.
   </span>
-  <br/>
-  <time class="9 yr" datetime="2016-03-02T23:00:00Z" title="2016-03-02 23:00 ">
+<br/>
+<time class="9 yr" datetime="2016-03-02T23:00:00Z" title="2016-03-02 23:00 ">
    März 2, 2016
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo Robert!
    </p>
-   <p>
+<p>
     Funktioniert dein Voip Anschluss noch? Wenn ja mit welchen Komponenten?
    </p>
-   <p>
+<p>
     Bitte um Info!
    </p>
-   <p>
+<p>
     Roland
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

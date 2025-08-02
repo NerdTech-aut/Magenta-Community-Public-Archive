@@ -1,111 +1,112 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Kabel Connect Box - LAN Verbindung - Probleme mit Konfiguration
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Kabel Connect Box - LAN Verbindung - Probleme mit Konfiguration
   </h1>
-  <span class="author">
+<span class="author">
    thomas4239
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-02-10T15:51:10Z" title="2022-02-10 15:51 ">
+<br/>
+<time class="3 yr" datetime="2022-02-10T15:51:10Z" title="2022-02-10 15:51 ">
    Februar 10, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe einen 300/30 MBit Kabelanschluss, und hatte die Connect Box seit 2 Jahren problemlos in Betrieb. In meinem Netzwerk nutze ich Port Forwarding für einen Server (hat auch immer problemlos funktioniert) und einen eigenen DHCP Server (PiHole).
    </p>
-   <p>
+<p>
     Vor 2 Tagen hatte ich einen kompletten Internet Ausfall (keine externe Störung).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe die Box dann mehrmals neu gestartet, mehrmals resettet. Dabei ist mir aufgefallen, dass die Bedienoberfläche (Webserver auf 192.168.0.1) anders ist, die Software wurde also irgendwann upgedated. Mir ist auch aufgefallen, dass plötzlich IPv6 Adressen (zusätzlich?) genutzt werden, möglicherweise wurde da auch etwas umgestellt. Mit dem Telefonsupport war ich einige Stunden in Kontakt. Laut dem funktioniert alles.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich habe dann 2 Laptops (beide mit Ubuntu) zum Testen geholt, und die Verbindung völlig ohne mein restliches Netzwerk getestet. Ergebnis: Verbindung über das in der Connect Box eingebaute WLAN hat funktioniert, Verbindung über ein LAN Kabel (mehrere getestet) hat NICHT funktioniert, konnte einfach nicht aufgebaut werden. Die LAN Verbindung benötige ich aber, um mein Netzwerk anzuschließen/das ganze Haus zu versorgen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Heute habe ich eine
     <strong>
      neue Connect Box
     </strong>
     bekommen, ich habe auch zuerst mit dem Laptop (unabhängig vom restlichen Netzwerk) getestet. Ich habe dieses mal NUR eine LAN Verbindung hergestellt, und das eingebaute WLAN nicht genutzt. Nach einiger Zeit (etwa 10 Min Wartezeit bis die LAN Verbindung hergestellt wurde...) habe ich tatsächlich eine LAN Verbindung bekommen, der Ping zu 192.168.0.1 war plötzlich möglich, und ich konnte das Web Interface aufrufen. Ich wollte die Box nach meinen Bedürfnissen konfigurieren, und habe als ersten Schritt das WLAN komplett deaktiviert (da es ja nicht genutzt werden soll). Nach dem Speichern dieser EInstellung war das Interface nicht mehr nutzbar, man konnte keine neuen Einstellungen mehr öffnen. Die LAN Verbindung hat nicht mehr funktioniert, kein Ping mehr möglich etc. (irgendwie hat das Abschalten vom WLAN also auch den LAN Zugang deaktiviert?)
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Das ganze ist wie verhext. Ich vermute ein Softwareproblem in der Connect Box und Probleme mit IPv6 - so dass meine Geräte (inkl. den Laptops) plötzlich nicht mehr mit der Connect Box kommunizieren können. Der Magenta Support hat versichert, dass
     <strong>
      IPv4
     </strong>
     bei mir eingestellt ist, aber ich vertraue dieser Aussage nicht ganz.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Hat hier jemand Ansatzpunkte, wie ich das Problem lösen kann (problemloser IPv4 Betrieb in meinem Netzwerk, wie in den letzten 2 Jahren auch)?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Gibt es bei den Magenta Kabel Tarifen eventuell die Möglichkeit einen anderen Kabel-Router (selbst gekauft) zu verwenden?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     danke,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     lg Thomas
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-02-11T14:48:24Z" title="2022-02-11 14:48 ">
+<br/>
+<time class="3 yr" datetime="2022-02-11T14:48:24Z" title="2022-02-11 14:48 ">
    Februar 11, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo
     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/92392-thomas4239/?do=hovercard" data-mentionid="92392" href="https://community.magenta.at/profile/92392-thomas4239/" rel="">
      @thomas4239
     </a>
     ,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     bei den Kabelanschlüssen von Magenta kannst du nur einen eigenen Router hinter das Modem von Magenta anschließen. Am besten aktivierst du dabei den "Bridge Mode". Wenn du auf der Modemoberfläche diese Option findest, ist das zudem auch ein Fakt, dass du eine IPv4 Adresse beziehst. Mit IPv6 wäre diese Option nicht freigeschaltet.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ein eigenes Modem statt dem Magenta Modem zu verwenden, geht leider nicht. Liebe Grüße, Jonathan
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

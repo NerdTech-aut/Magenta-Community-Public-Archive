@@ -1,182 +1,183 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Fixe IP für ipv6 per dhcpv6
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Fixe IP für ipv6 per dhcpv6
   </h1>
-  <span class="author">
+<span class="author">
    prof_zmike
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-04-11T14:54:41Z" title="2021-04-11 14:54 ">
+<br/>
+<time class="4 yr" datetime="2021-04-11T14:54:41Z" title="2021-04-11 14:54 ">
    April 11, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
+<p>
     ich habe eine Connect Box und würde nun eigentlich gerne alles über IPv6 im Netzwerk betreiben, ohne IPv4 Adressen zu vergeben (da ein Portforwarding laut Web-Oberfläche nicht möglich ist und nur noch mit IPv6 funktioniert).
    </p>
-   <p>
+<p>
     Leider sehe ich nur eine Möglichkeit IPv6-Adressen mit einem Portforwarding zu versehen, allerdings sehe ich keine Möglichkeit über den DHCPv6 feste IPv6-Adressen zu vergeben.
    </p>
-   <p>
+<p>
     Scheint somit eine Pattsituation zu sein.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Nun meine Frage: Wie weise ich fixe IPv6-Adressen über DHCPv6 zu oder wie öffne ich Ports für IPv4?
    </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="4 yr" datetime="2021-04-11T14:59:54Z" title="2021-04-11 14:59 ">
       April 11, 2021
      </time>
      von prof_zmike
     </strong>
-    <br>
+<br/>
      Titelanpassung
-    </br>
+    
    </span>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-04-11T15:11:20Z" title="2021-04-11 15:11 ">
+<br/>
+<time class="4 yr" datetime="2021-04-11T15:11:20Z" title="2021-04-11 15:11 ">
    April 11, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ganz einfach, den Geräte sagen, dass sie sich eine statische IP gönnen sollen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Je nach OS bekommt ein Gerät eine oder mehrere IP Adressen. Da gibt es IPs die auf Basis der privacy extension erstellt werden und sich somit regelmäßig ändern oder welche auf EUI-64 Basis. Für die Freigabe die EUI-64 IPs verwenden. Wenn das Gerät keine EUI-64 IP hat, dann muss man im Gerät/Server das umstellen.
    </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    prof_zmike
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-04-11T15:31:44Z" title="2021-04-11 15:31 ">
+<br/>
+<time class="4 yr" datetime="2021-04-11T15:31:44Z" title="2021-04-11 15:31 ">
    April 11, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     aaaah ok, das heißt bei IPv6 kann ich das nicht mehr fest über den DHCP machen, wie bei IPv4?
    </p>
-   <p>
+<p>
     Das geht also nur noch über den Client und muss dort fest zugewiesen werden, richtig?
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-04-11T16:49:14Z" title="2021-04-11 16:49 ">
+<br/>
+<time class="4 yr" datetime="2021-04-11T16:49:14Z" title="2021-04-11 16:49 ">
    April 11, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Mehr oder weniger ja. Der Client legt nur einen Teil der IP fest und den anderen Teil bekommt der Client vom Anbieter vorgegeben.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Am besten einmal einen Einstiegs Kurs in IPv6 ansehen.
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
-  <span class="author">
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+</div>
+<hr/>
+<span class="author">
    prof_zmike
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-04-11T17:56:46Z" title="2021-04-11 17:56 ">
+<br/>
+<time class="4 yr" datetime="2021-04-11T17:56:46Z" title="2021-04-11 17:56 ">
    April 11, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ich habe es mir zwar angesehen, aber anscheinend muss man sich ja tatsächlich von fast allen IPv4 gängigen vorgehensweisen verabschieden und diese bei IPv6 ausblenden, war mir in dem umfang nicht bewusst.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke dir.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Eine letzte frage habe ich allerdings noch.
    </p>
-   <p>
+<p>
     Laut Handbuch der Connect Box sollte es auf der Weboberfläche einen Portweiterleitungs-Punkt geben, habe aber nur "IP und Port Filter" gefunden, ist das das selbe?
    </p>
-   <p>
+<p>
     Wenn ich dort einen Port weiterleite, scheint dieser auf ipv6scanner (
     <a href="http://www.ipv6scanner.com/cgi-bin/main.py" rel="external nofollow">
      http://www.ipv6scanner.com/cgi-bin/main.py
     </a>
     ) nicht mehr als "Closed" auf aber denoch als "Filtered" statt als "Open".
    </p>
-   <p>
+<p>
     Übersehe ich da etwas? Was kann ich hier machen?
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Danke für deine Hilfe soweit. =)
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    IT-Freak
   </span>
-  <br/>
-  <time class="4 yr" datetime="2021-04-11T18:01:36Z" title="2021-04-11 18:01 ">
+<br/>
+<time class="4 yr" datetime="2021-04-11T18:01:36Z" title="2021-04-11 18:01 ">
    April 11, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ja, für die Portweiterleitungen braucht man die IPv4 Umstellung, dann kann man IPv4 Weiterleitungen erstellen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bei IP und Port Filter kann man die IPv6 Freigaben erstellen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Es kann sein, dass es etwas dauert bis die Freigabe funktioniert, siehe Minecraft Thema.
    </p>
-   <p>
-   </p>
-   <p>
-   </p>
-  </div>
-  <hr/>
- </body>
+<p>
+</p>
+<p>
+</p>
+</div>
+<hr/>
+</body>
 </html>

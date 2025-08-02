@@ -1,105 +1,106 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    VPN Server - B535-232
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    VPN Server - B535-232
   </h1>
-  <span class="author">
+<span class="author">
    Tobs
   </span>
-  <br/>
-  <time class="3 yr" datetime="2021-11-23T16:40:16Z" title="2021-11-23 16:40 ">
+<br/>
+<time class="3 yr" datetime="2021-11-23T16:40:16Z" title="2021-11-23 16:40 ">
    November 23, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
     <br/>
-    <br/>
+<br/>
     Ich stehe aktuell vor einem Problem mit meinem VPN Server.
     <br/>
     Ich habe eine Eingehende Verbindung im Netzwerk- und Freigabecenter erstellt in Windows, ebenso den Port 1723 freigegeben (jedoch mit Schwierigkeiten, die Lösung ist keinesfalls praktisch: Der Port öffnet sich nicht allein mit der Portweiterleitung, ich musste den Port meines Minecraft Servers auf 1723 ändern - nicht sonderlich die beste Lösung, der Port öffnet sich nur dann, wenn der Server läuft.)
    </p>
-   <p>
+<p>
     Ebenso habe ich 2 Ausgehende Port - Regeln in der Firewall erstellt, die den Port 1723 haben (1x UDP, 1x TCP)
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bei einem Verbindungsversuch bekomme ich jedoch eine Fehlermeldung:
    </p>
-   <p>
+<p>
     (VPN - Typ: Point-to-Point-Tunneling-Protokoll (PPTP), andere VPN Typen ebenso ohne Erfolg)
    </p>
-   <p>
-    <em>
+<p>
+<em>
      "Die Netzwerkverbindung zwischen Ihrem Computer und dem VPN - Server wurde unterbrochen. Dies kann auf einen VPN - Übertragungsfehler zurückzuführen sein, der vermutlich durch eine Internetwartezeit oder einfach durch das Erreichen der maximalen VPN - Serverkapazität verursacht wurde. Stellen Sie erneut eine Verbindung zum VPN - Server her. Wenn dieses Problem weiterhin besteht, wenden Sie sich an den VPN - Administrator, und prüfen Sie die Qualität der Netzwerkverbindung."
     </em>
-   </p>
-   <p>
+</p>
+<p>
     Diesen Versuch habe ich einerseits mit IP aber andererseits mit DDNS getestet, gleiches Ergebnis.
    </p>
-   <p>
-    <br>
+<p>
+<br/>
      Ich habe folgenden Huawei - Router:
-    </br>
+    
    </p>
-   <p>
+<p>
     B535-232
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Bin mir jedoch nicht sicher, ob ich mit diesem einen VPN - Server aufsetzen kann - der Router hat eine VPN Client Funktion, jedoch bin ich mir dessen bewusst, dass dies kein Server ist.
     <br/>
-    <br/>
+<br/>
     Vielleicht merkt man anhand dieses Beitrags, dass ich in dieser Ebene nicht sonderlich erfahren bin, deswegen würde ich mich über Ratschläge und eventuelle Lösungsansätze freuen, mein Ziel wäre es, dass ich mich bspw. von der Schule aus nach Hause verbinden kann via VPN und dort auf Daten zugreifen kann und eventuell sogar die Einschränkungen des Schulnetzes umgehen kann.
     <br/>
-    <br/>
+<br/>
     MfG
     <br/>
     Tobs
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    NTM
   </span>
-  <br/>
-  <time class="3 yr" datetime="2021-11-23T18:50:43Z" title="2021-11-23 18:50 ">
+<br/>
+<time class="3 yr" datetime="2021-11-23T18:50:43Z" title="2021-11-23 18:50 ">
    November 23, 2021
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi
     <span>
-     <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/91448-tobs/?do=hovercard" data-mentionid="91448" href="https://community.magenta.at/profile/91448-tobs/" rel="">
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/91448-tobs/?do=hovercard" data-mentionid="91448" href="https://community.magenta.at/profile/91448-tobs/" rel="">
       @Tobs
      </a>
-    </span>
-    <br>
-     <span>
+</span>
+<br/>
+<span>
       Wenn du einen VPN Server in einem Netzwerk haben möchtest, musst du diesen auf einem anderen Gerät aufsetzten oder den B535 durch ein anderes entsprechendes Gerät ersetzen. Wenn kein Magenta Kabel (gigakraft und gigakraft gaming), aber dafür brauchbares DSL/FTTH könntest du vielleicht auf einen DSL-Anschluss von Magenta wechseln, denn da bekommst du eine Fritz!Box mit der Möglichkeit einen VPN Server aufzusetzen. Der Magenta-Verfügbarkeitscheck kann die Verfügbarkeit von DSL/FTTH nicht ausgeben, daher würde ich
       <a href="https://www.telematica.at/internet/verfuegbarkeitscheck" rel="external nofollow">
        diesen Verfügbarkeitscheck
       </a>
       empfehlen. Beim Ergebnis gibt es die Möglichkeit über den Punkt "Für Technik-Verliebte - Alle Herstellungsdetails basierend auf Ihrem Standort" eine Tabelle mit allen Details zu bekommen (bei Frage kannst du diese gerne hier posten).
-      <br/>
-      <br/>
+      <br>
+<br/>
       Ein Port kann von außen nur als offen erkannt werden, wenn ein Dienst über diesen erreichbar ist.
       <br/>
       LG NTM
-     </span>
-    </br>
-   </p>
-  </div>
-  <hr/>
- </body>
+     </br></span>
+
+</p>
+</div>
+<hr/>
+</body>
 </html>

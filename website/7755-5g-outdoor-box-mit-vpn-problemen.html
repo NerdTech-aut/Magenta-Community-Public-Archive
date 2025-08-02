@@ -1,298 +1,299 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    5G Outdoor Box mit VPN Problemen
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    5G Outdoor Box mit VPN Problemen
   </h1>
-  <span class="author">
+<span class="author">
    matthias_a
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-05-20T13:29:37Z" title="2022-05-20 13:29 ">
+<br/>
+<time class="3 yr" datetime="2022-05-20T13:29:37Z" title="2022-05-20 13:29 ">
    Mai 20, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo liebe Community, liebe ModeratorInnen,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     wir haben uns vor kurzem für die 5G Outdoor Box (Gigakraft 250 5G) entschieden und sind wirklich sehr zufrieden damit (Ping 19-25ms, Download 150-230Mbit, Upload fast konstant 25Mbit, sogar Geforce Now 4K@60 ist manchmal sehr brauchbar). Letzte Woche hatten meine Frau und ich wieder Home-Office, welches der eigentliche Grund war, warum wir nun von HOT 30Mbit gewechselt sind. Frustriert müssen wir aber feststellen, dass gerade VPN (nach draußen in die Firma) unbrauchbar ist. Wir bekommen zwar beide eine Verbindung (ich, OpenVPN, sie mit einem Cisco-Client), aber beim wechseln von Ordnern von Samba-Shares im Windows-Explorer freezed der Explorer bei mir alle 20 Sekunden, kopieren von Dateien schlägt wegen "Netzwerkfehlern" regelmäßig fehl, bei meiner Frau ist das Outlook mit Verbindung zum Exchange so langsam, dass man es nicht verwenden kann (negativ ist hier leider dass sich die Postfachdatei auch am Server befindet), Outlook meldet regelmäßig dass es keine Verbindung zum imap-Endpunkt hat. Warum wir glauben, dass es mit der neuen Box zu tun hat, ist leicht erklärt: Verbindung über den HOT 4G Router 30Mbit, sowie Handy-Hotspots über HOT und A1 machen 0 Probleme.
     <br/>
-    <br/>
+<br/>
     Nun habe ich mit dem Technischen Support telefoniert, was ich ausprobieren könnte um die Situation zu verbessern, und hab Vorschläge erwähnt die ich hier im Forum zu anderen Problemen gelesen habe. Was ich ein wenig doof fand ist dass sie mir gleich mal die statische IP verkaufen wollte, obwohl das rein gar nix zur Lösung meines Problems beiträgt, aber sie meinte ich könnte auf die Business APN bzw. den Bridge-Mode wechseln.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Leider bringen beide Änderungen keine Lösung. Ich hab die Business-APN mit PAP sowie "t-mobile" und "tm" Passwort eingestellt, leider hat das gar nix gebracht. Den Bridge Modus hab ich dann einfach über das Dropdown aktiviert (vorher über Inspector das Feld editierbar gemacht).
    </p>
-   <p>
+<p>
     Was mich total wundert, ist dass der Bridge Modus in Verbindung mit der IDU ja überhaupt nicht funktioniert, Verbindung bleibt nur ein paar Sekunden stabil, dann fängt das Netzwerk LED an der IDU zum blinken an, nach ein paar Sekunden steht das LED und die Verbindung geht. Überraschend ist dass wenns eine Verbindung gibt, ich plötzlich einen Ping von 11-14ms hab, Browser fühlt sich tatsächlich schneller an, Bilder und Ads werden schneller geladen, aber das hält halt nur alle paar Sekunden.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Nun hab ich dann noch einige andere Einstellungen ausprobiert, wie MAC-DMZ für die IDU, DHCP, Firewall an der ODU ausschalten, das einzige was ich nicht hinbekommen hab (weil ich diese Technik nicht verstehe) war ein VLAN einrichten.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Gibts irgendwas, was ich übersehen hab, was ich ausprobieren könnte? Ich kanns ehrlich gesagt nicht glauben dass es an der MTU Size liegen kann (die ich leider weder an der ODU nach der IDU einstellen kann)? Oder soll ich mal den Bridge-Modus an der ODU mit einem anderen Router probieren wo ich mehr Möglichkeiten hab? Kann doch nicht sein dass sowas essenzielles wie VPN (nach draußen) mit einem Netzwerk-Produkt aus dem Jahr 2021 nicht funktioniert
     <img alt=":)" data-emoticon="" height="20" src="images/emoticons/tma_smile-o.png" srcset="images/emoticons/tma_smile-o@2x.png 2x" title=":)" width="20"/>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Aja, manche haben geschrieben dass auch ein aktiviertes Security-Paket am Account Probleme machen könnte, aber ich glaub das gilt ja nur wenn ich einen VPN Server bei mir daheim betreiben will.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich bin dankbar für jeden Hinweis! LG, Matthias
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    freaky-guy
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-05-24T07:09:55Z" title="2022-05-24 07:09 ">
+<br/>
+<time class="3 yr" datetime="2022-05-24T07:09:55Z" title="2022-05-24 07:09 ">
    Mai 24, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
+<p>
     ich habe die ODU problemlos mit VPN im Einsatz, hatta aber anfangs Probleme mit eingehenden VPN. Nach Umstellung von Brdige-Mode und business APN sind diese aber gelöst! Ich habe allerdings lediglich den Zugangspunkt business.gprsinternet ohne Authentifizierung eingetragen.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    matthias_a
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-05-24T14:54:05Z" title="2022-05-24 14:54 ">
+<br/>
+<time class="3 yr" datetime="2022-05-24T14:54:05Z" title="2022-05-24 14:54 ">
    Mai 24, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo!
    </p>
-   <p>
+<p>
     Bei mir gehts tatsächlich nur ums VPN raus, Client am PC, Server im Büro.
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="47587" data-ipsquote-contentid="7755" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1653376195" data-ipsquote-userid="92530" data-ipsquote-username="freaky-guy">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="47587" data-ipsquote-contentid="7755" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1653376195" data-ipsquote-userid="92530" data-ipsquote-username="freaky-guy">
+<div class="ipsQuote_citation">
      vor 7 Stunden schrieb freaky-guy:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Nach Umstellung von
       <strong>
        Brdige-Mode
       </strong>
       und business APN sind diese aber gelöst!
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Dh. du verwendest den Bridge Mode, mit der IDU? Oder eigenem Router?
     <br/>
-    <br>
+<br/>
      ...bei mir verliert leider die IDU alle paar Sekunden die "Verbindung zum Internet" (Network LED blinkt) wenn ich die ODU im Bridge Modus hab. VLAN Konfiguration hab ich auch letztens hinbekommen, funkt aber genauso schlecht wenn ich den MDPN im Bridge Modus verwende (egal mit welcher APN), mit dem Default MDPN im Router Modus gibts keine Unterbrechungen.
-    </br>
+    
    </p>
-   <p>
-   </p>
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="47587" data-ipsquote-contentid="7755" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1653376195" data-ipsquote-userid="92530" data-ipsquote-username="freaky-guy">
-    <div class="ipsQuote_citation">
+<p>
+</p>
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="47587" data-ipsquote-contentid="7755" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1653376195" data-ipsquote-userid="92530" data-ipsquote-username="freaky-guy">
+<div class="ipsQuote_citation">
      vor 7 Stunden schrieb freaky-guy:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Ich habe allerdings lediglich den Zugangspunkt business.gprsinternet ohne Authentifizierung eingetragen.
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Das ist interessant, alle Bsp. (auch andere Magenta Produkte) geben den Business APN mit Authentifizierung an.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Muss ich dann nächste Woche ausprobieren, ist zumindest gut zu wissen dass der Bridge Mode bei jemandem mit der ODU funktioniert.
    </p>
-   <p>
+<p>
     Danke!
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    freaky-guy
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-05-24T17:13:17Z" title="2022-05-24 17:13 ">
+<br/>
+<time class="3 yr" datetime="2022-05-24T17:13:17Z" title="2022-05-24 17:13 ">
    Mai 24, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hi,
    </p>
-   <p>
+<p>
     ich habe die ODU im Bridge-Modus, VLAN's vergeben, und das mit meiner Firewall verbunden. Die macht dann den Rest. Aber die ganze Angelegenheit war auch bei mit etwas Tricky und Zeitaufwendig. Schade dass hier die Firmware der ODU nicht besser ist...
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    matthias_a
   </span>
-  <br/>
-  <time class="3 yr" datetime="2022-05-24T17:15:44Z" title="2022-05-24 17:15 ">
+<br/>
+<time class="3 yr" datetime="2022-05-24T17:15:44Z" title="2022-05-24 17:15 ">
    Mai 24, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Dank dir! Wird wohl vernünftig sein das ganze mal mit einem anderen/besseren Router als der IDU zu testen.
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    matthias_a
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-10-21T13:50:18Z" title="2022-10-21 13:50 ">
+<br/>
+<time class="timestamp" datetime="2022-10-21T13:50:18Z" title="2022-10-21 13:50 ">
    Oktober 21, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Nach längerer Resignation hab ich doch noch mal recherchiert und es sieht so aus als hätten wir die Lösung gefunden:
    </p>
-   <p>
-   </p>
-   <p>
-    <strong>
+<p>
+</p>
+<p>
+<strong>
      OutdoorBox (ODU, Outdoor Unit) auf IPv4 (nur) umgestellt
     </strong>
     (Business APN) und VPN in die Organisation meiner Frau funktioniert!
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Zuvor war es IPv4 und IPv6 eingestellt. In ein paar ausländischen (T-Mobile) Foren lass ich, dass "5G meist (intern?) über IPv6 läuft" (ich kann das leider nur sehr laienhaft ausdrücken) und IPv6 deswegen auch am VPN Server konfiguriert sein muss. Bei einer Nachfrage sagte die IT Abteilung dass IPv6 definitiv NICHT konfiguriert ist.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Das einzige was ich dann noch testen muss, ob nun auch die IDU (IndoorUnit, WLAN-Router) funktioniert wenn die ODU im BridgeMode läuft (obowhl mir das jetzt eigentlich egal ist).
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Grundsätzlich sind wir nach 5 Monaten super zufrieden, selbst in der Primetime (Fr/Sa 20h) haben wir nie unter 100Mbit (bei 250Mbit Vertrag), das einzige was einbricht ist die Latenz, die liegt dann meist über 50ms (sonst durchschnittlich bei 18ms)
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Jetzt bin ich dann mal auf die Standalone Umstellung gespannt die dann hoffentlich recht bald kommt...
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    freaky-guy
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-10-24T05:50:33Z" title="2022-10-24 05:50 ">
+<br/>
+<time class="timestamp" datetime="2022-10-24T05:50:33Z" title="2022-10-24 05:50 ">
    Oktober 24, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
+<p>
     wie hast du die ODU auf IPv4 umgestellt? Ich habe hier noch gar kein IPv6 und ich habe auch noch keine Möglichkeit gefunden, dieses zu aktivieren!
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    matthias_a
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-10-31T10:41:27Z" title="2022-10-31 10:41 ">
+<br/>
+<time class="timestamp" datetime="2022-10-31T10:41:27Z" title="2022-10-31 10:41 ">
    Oktober 31, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49235" data-ipsquote-contentid="7755" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1666590633" data-ipsquote-userid="92530" data-ipsquote-username="freaky-guy">
-    <div class="ipsQuote_citation">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<blockquote class="ipsQuote" data-ipsquote="" data-ipsquote-contentapp="forums" data-ipsquote-contentclass="forums_Topic" data-ipsquote-contentcommentid="49235" data-ipsquote-contentid="7755" data-ipsquote-contenttype="forums" data-ipsquote-timestamp="1666590633" data-ipsquote-userid="92530" data-ipsquote-username="freaky-guy">
+<div class="ipsQuote_citation">
      Am 24.10.2022 um 07:50 schrieb freaky-guy:
     </div>
-    <div class="ipsQuote_contents">
-     <p>
+<div class="ipsQuote_contents">
+<p>
       Hallo,
      </p>
-     <p>
+<p>
       wie hast du die ODU auf IPv4 umgestellt? Ich habe hier noch gar kein IPv6 und ich habe auch noch keine Möglichkeit gefunden, dieses zu aktivieren!
      </p>
-    </div>
-   </blockquote>
-   <p>
-   </p>
-   <p>
+</div>
+</blockquote>
+<p>
+</p>
+<p>
     Du kannst in der Administration der ODU unter Settings &gt; Dial-Up &gt; MPDN Management die IP-Type ändern:
    </p>
-   <p>
-    <a class="ipsAttachLink ipsAttachLink_image" data-fileid="4196" href="images/uploads/image.png.e49f436724520004a3039eb71bb676c8.png" rel="">
-     <img alt="image.thumb.png.270c6cd452dd014a213ac61579ea09ae.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4196" src="images/uploads/image.thumb.png.270c6cd452dd014a213ac61579ea09ae.png"/>
-    </a>
-   </p>
-   <p>
-   </p>
-   <p>
-   </p>
-   <span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
-    <strong>
+<p>
+<a class="ipsAttachLink ipsAttachLink_image" data-fileid="4196" href="images/uploads/image.png.e49f436724520004a3039eb71bb676c8.png" rel="">
+<img alt="image.thumb.png.270c6cd452dd014a213ac61579ea09ae.png" class="ipsImage ipsImage_thumbnailed" data-fileid="4196" src="images/uploads/image.thumb.png.270c6cd452dd014a213ac61579ea09ae.png"/>
+</a>
+</p>
+<p>
+</p>
+<p>
+</p>
+<span class="ipsType_reset ipsType_medium ipsType_light" data-excludequote="">
+<strong>
      Bearbeitet
      <time data-short="2 yr" datetime="2022-10-31T10:42:47Z" title="2022-10-31 10:42 ">
       Oktober 31, 2022
      </time>
      von matthias_a
     </strong>
-   </span>
-  </div>
-  <hr/>
-  <span class="author">
+</span>
+</div>
+<hr/>
+<span class="author">
    freaky-guy
   </span>
-  <br/>
-  <time class="timestamp" datetime="2022-11-01T09:15:16Z" title="2022-11-01 09:15 ">
+<br/>
+<time class="timestamp" datetime="2022-11-01T09:15:16Z" title="2022-11-01 09:15 ">
    November 1, 2022
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Ok... diese Einstellung hatte ich vergessen.
    </p>
-   <p>
+<p>
     Nachdem die ODU IPv6 im LAN nicht unterstützt und damit auch nicht durchreicht, ist diese auf WAN-Seite eh relativ nutzlos...
    </p>
-   <p>
+<p>
     Außerdem gibt es meines Wissens nach bei einer public-IP eh kein IPv6....
    </p>
-  </div>
-  <hr/>
- </body>
+</div>
+<hr/>
+</body>
 </html>

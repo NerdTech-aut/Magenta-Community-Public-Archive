@@ -1,122 +1,123 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    Fritzbox 6890 mit 5G Outdoor Box kombinieren – Probleme mit VoIP und DMZ-Einstellung
   </title>
-  <meta charset="utf-8"/>
-  <link href="style/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <h1>
+<meta charset="utf-8"/>
+<link href="style/style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>
    Fritzbox 6890 mit 5G Outdoor Box kombinieren – Probleme mit VoIP und DMZ-Einstellung
   </h1>
-  <span class="author">
+<span class="author">
    HaraldEdras
   </span>
-  <br/>
-  <time class="1 yr" datetime="2024-03-02T10:01:38Z" title="2024-03-02 10:01 ">
+<br/>
+<time class="1 yr" datetime="2024-03-02T10:01:38Z" title="2024-03-02 10:01 ">
    März 2, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
     Hallo,
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     ich bin dabei meine 5G Outdoor Box mit meiner Fritzbox 6890 zu kombinieren.
    </p>
-   <p>
+<p>
     Die Fritzbox war vorher schon über LTE und Außenantennen einige Jahre problemlos im Betrieb.
    </p>
-   <p>
+<p>
     Verbindung Fritzbox-Outdoor Box funktioniert, doch bei VoIP Telefonie über das 3CX System hatte ich letztens Probleme.
    </p>
-   <p>
+<p>
     Anrufer wurden nicht gehört oder sie konnten nichts hören, wir wissen es nicht mehr da es schon längere Zeit her ist, mussten dann wieder schnell auf LTE zurückstellen damit wir weiterarbeiten konnten
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Jetzt will ich wieder die 5G Outdoor Box aktivieren, genügt es wenn ich bei der Outdoor-Box die Fritzbox ins DMZ mit der MAC-Adresse stelle?
    </p>
-   <p>
+<p>
     Sollte ja dann alles ungefilter durchgelassen werden, Firewall der Fritzbox bleibt aktiviert.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     LG
    </p>
-   <p>
+<p>
     Harald
    </p>
-  </div>
-  <hr/>
-  <span class="author">
+</div>
+<hr/>
+<span class="author">
    Jonathan Dorian
   </span>
-  <br/>
-  <time class="Nov 19" datetime="2024-11-19T10:49:44Z" title="2024-11-19 10:49 ">
+<br/>
+<time class="Nov 19" datetime="2024-11-19T10:49:44Z" title="2024-11-19 10:49 ">
    November 19, 2024
   </time>
-  <div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
-   <p>
-    <a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98739-haraldedras/?do=hovercard" data-mentionid="98739" href="https://community.magenta.at/profile/98739-haraldedras/" rel="">
+<div class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" data-role="commentContent">
+<p>
+<a contenteditable="false" data-ipshover="" data-ipshover-target="https://community.magenta.at/profile/98739-haraldedras/?do=hovercard" data-mentionid="98739" href="https://community.magenta.at/profile/98739-haraldedras/" rel="">
      @HaraldEdras
     </a>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     Hallo,
     <span class="ipsEmoji">
      👋
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     die Idee, die Fritzbox ins DMZ der 5G Outdoor Box zu setzen, ist grundsätzlich ein sinnvoller Ansatz, um sicherzustellen, dass die Fritzbox mit möglichst wenig Einschränkungen arbeitet und alle eingehenden Verbindungen ungehindert durchgelassen werden. Dabei wird die Fritzbox sozusagen von der Firewall der Outdoor Box „befreit“, was in vielen Fällen zu einer besseren Performance führt.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Allerdings solltest du beachten, dass das Setzen der Fritzbox ins DMZ nur sicher ist, wenn du die Firewall der Fritzbox selbst aktiv lässt. Dadurch bleibt deine Fritzbox weiterhin geschützt, und du hast trotzdem die Möglichkeit, die 5G-Verbindung ohne Filter oder NAT-Probleme zu nutzen.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Da VoIP-Anrufe oft durch NAT-Probleme (Network Address Translation) beeinträchtigt werden, könnte das Setzen der Fritzbox ins DMZ helfen, solche Probleme zu vermeiden. Wenn du jedoch weiterhin Probleme mit der VoIP-Telefonie hast, solltest du zusätzlich sicherstellen, dass die Ports für VoIP korrekt weitergeleitet werden und keine weiteren Netzwerksperren aktiv sind.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Eine andere Möglichkeit wäre, die VoIP-Einstellungen der Fritzbox und des 3CX-Systems zu überprüfen, um sicherzustellen, dass alle notwendigen Ports und Protokolle für die Telefonie geöffnet sind. Falls du die Fritzbox wieder auf LTE umschalten musstest, könnte es auch an der Verbindungsqualität über 5G liegen, also überprüfe die Stabilität der Verbindung bei verschiedenen Szenarien.
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Ich hoffe, das hilft dir weiter!
     <span class="ipsEmoji">
      😊
     </span>
-   </p>
-   <p>
-   </p>
-   <p>
+</p>
+<p>
+</p>
+<p>
     (Quelle KI.)
    </p>
-   <p>
-   </p>
-   <p>
+<p>
+</p>
+<p>
     Liebe Grüße, JD.
     <span class="ipsEmoji">
      🌻
     </span>
-   </p>
-  </div>
-  <hr/>
- </body>
+</p>
+</div>
+<hr/>
+</body>
 </html>
