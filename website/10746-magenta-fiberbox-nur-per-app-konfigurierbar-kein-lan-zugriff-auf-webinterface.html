@@ -40,17 +40,17 @@
       netcat: connect to 192.168.0.1 port 23 (tcp) timed out: Operation now in progress
       <br/>
        netcat: connect to 192.168.0.1 port 24 -&gt;52 (tcp) failed: Connection refused
-       <br>
+       <br/>
        Connection to 192.168.0.1 53 port [tcp/domain] succeeded!
-       <br>
+       <br/>
        netcat: connect to 192.168.0.1 port 54 -&gt;79 (tcp) failed: Connection refused
-       <br>
+       <br/>
        netcat: connect to 192.168.0.1 port 80 (tcp) timed out: Operation now in progress
-       <br/>
+       <br>
        netcat: connect to 192.168.0.1 port 81 -&gt;110 (tcp) failed: Connection refused
-       <br/>
+       <br>
        netcat: connect to 192.168.0.1 port 111 (tcp) timed out: Operation now in progress
-       <br/>
+       <br>
        netcat: connect to 192.168.0.1 port 112 -&gt;443 (tcp) failed: Connection refused
        <br/>
        netcat: connect to 192.168.0.1 port 443 (tcp) timed out: Operation now in progress
@@ -381,12 +381,12 @@
     <br/>
 <br/>
       Aber laut ntm ist für eine Portweiterleitung NAT, überhaupt eine IP4 Umstellung beim Support notwendig.
-      <br>
-<br>
+      <br/>
+<br/>
       Bei IP6 gibt es keine Portweiterleitung mehr, weil IP6 genug Adressspielraum hat um jedem Kundengerät (Fernseher, tablet, smartphone) eine eigenständig globale IP im Netz zuzuordnen. Dabei gibt es einen Provider Präfix der normal  32bit ist in der IP6-IP.
-      <br/>
+      <br>
       Der Provider müsste 2^(128-32) mögliche globale IP Adressen in seinen subnetz vergeben können. Das ist eine unvorstellbare Große Zahl.
-      <br/>
+      <br>
       Also der Provider hat eine /32bit subnetz maske.
       <br/>
       Meistens wird die MAC Adresse der Geräte noch zusätzlich in die IP integriert. Also die globale IP6 Adresse, wäre die ersten 32bit Provider präfix. dann noch ein paar bits für kundenerkennung. und dann die 64 bit mac adresse. ergibt eine globale IP für ein Gerät im lokalen Netzwerk.
